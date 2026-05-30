@@ -1,0 +1,22 @@
+2026-05-30 10:39:09,194 [INFO] __main__: Apostila : apostila-historia-midia
+2026-05-30 10:39:09,194 [INFO] __main__: Agentes  : 1, 2
+2026-05-30 10:39:09,195 [INFO] __main__: Forçar   : não
+2026-05-30 10:39:09,195 [INFO] __main__: Capítulo : 2 (somente)
+2026-05-30 10:39:09,198 [INFO] __main__: CSV carregado: 5 capítulos
+2026-05-30 10:39:09,198 [INFO] __main__: Unidades : 1
+2026-05-30 10:39:09,199 [INFO] __main__: Capítulos: 5
+2026-05-30 10:39:09,201 [INFO] __main__: Unidade 1: Unidade 1 — Meios de Comunicação e Cidadania
+2026-05-30 10:39:09,205 [INFO] __main__: Cap. 2/5  [1.2] Capítulo 2: A revolução da prensa — Gutenberg e a democratização do conhecimento
+2026-05-30 10:39:09,217 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2: A revolução da prensa — Gutenberg e a democratização do conhecimento
+2026-05-30 10:39:11,226 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:39:15,912 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:41:35,199 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:41:49,495 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2: A revolução da prensa — Gutenberg e a democratização do conhecimento
+2026-05-30 10:41:50,513 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:41:53,925 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:43:45,717 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:44:01,446 [INFO] __main__: Pipeline concluído.
+2026-05-30 10:44:01,447 [INFO] __main__: Outputs em: output/apostila-historia-midia/
+2026-05-30 10:44:01,448 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260530_103908.log

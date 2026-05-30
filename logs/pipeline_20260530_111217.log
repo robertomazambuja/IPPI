@@ -1,0 +1,17 @@
+2026-05-30 11:12:17,947 [INFO] __main__: Apostila : apostila-historia-midia
+2026-05-30 11:12:17,948 [INFO] __main__: Agentes  : 4
+2026-05-30 11:12:17,948 [INFO] __main__: Forçar   : não
+2026-05-30 11:12:17,949 [INFO] __main__: Capítulo : 2 (somente)
+2026-05-30 11:12:17,953 [INFO] __main__: CSV carregado: 5 capítulos
+2026-05-30 11:12:17,953 [INFO] __main__: Unidades : 1
+2026-05-30 11:12:17,953 [INFO] __main__: Capítulos: 5
+2026-05-30 11:12:17,957 [INFO] __main__: Unidade 1: Unidade 1 — Meios de Comunicação e Cidadania
+2026-05-30 11:12:17,959 [INFO] __main__: Cap. 2/5  [1.2] Capítulo 2: A revolução da prensa — Gutenberg e a democratização do conhecimento
+2026-05-30 11:12:17,964 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2: A revolução da prensa — Gutenberg e a democratização do conhecimento
+2026-05-30 11:12:19,476 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 11:12:22,372 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 11:14:02,975 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 11:14:20,974 [INFO] __main__: Pipeline concluído.
+2026-05-30 11:14:20,974 [INFO] __main__: Outputs em: output/apostila-historia-midia/
+2026-05-30 11:14:20,974 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260530_111217.log

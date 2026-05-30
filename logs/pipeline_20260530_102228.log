@@ -1,0 +1,22 @@
+2026-05-30 10:22:29,185 [INFO] __main__: Apostila : apostila-historia-midia
+2026-05-30 10:22:29,185 [INFO] __main__: Agentes  : 1, 2
+2026-05-30 10:22:29,185 [INFO] __main__: Forçar   : não
+2026-05-30 10:22:29,186 [INFO] __main__: Capítulo : 1 (somente)
+2026-05-30 10:22:29,190 [INFO] __main__: CSV carregado: 5 capítulos
+2026-05-30 10:22:29,190 [INFO] __main__: Unidades : 1
+2026-05-30 10:22:29,191 [INFO] __main__: Capítulos: 5
+2026-05-30 10:22:29,194 [INFO] __main__: Unidade 1: Unidade 1 — Meios de Comunicação e Cidadania
+2026-05-30 10:22:29,201 [INFO] __main__: Cap. 1/5  [1.1] Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+2026-05-30 10:22:29,206 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+2026-05-30 10:22:31,318 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:22:34,507 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:24:05,509 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:24:18,020 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+2026-05-30 10:24:19,020 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:24:21,978 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:25:43,563 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 10:25:59,612 [INFO] __main__: Pipeline concluído.
+2026-05-30 10:25:59,613 [INFO] __main__: Outputs em: output/apostila-historia-midia/
+2026-05-30 10:25:59,613 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260530_102228.log

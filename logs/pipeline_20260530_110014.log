@@ -1,0 +1,14 @@
+2026-05-30 11:00:15,308 [INFO] __main__: Apostila : apostila-historia-midia
+2026-05-30 11:00:15,308 [INFO] __main__: Agentes  : 3, 4
+2026-05-30 11:00:15,308 [INFO] __main__: Forçar   : não
+2026-05-30 11:00:15,309 [INFO] __main__: Capítulo : 1 (somente)
+2026-05-30 11:00:15,315 [INFO] __main__: CSV carregado: 5 capítulos
+2026-05-30 11:00:15,315 [INFO] __main__: Unidades : 1
+2026-05-30 11:00:15,315 [INFO] __main__: Capítulos: 5
+2026-05-30 11:00:15,318 [INFO] __main__: Unidade 1: Unidade 1 — Meios de Comunicação e Cidadania
+2026-05-30 11:00:15,323 [INFO] __main__: Cap. 1/5  [1.1] Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+2026-05-30 11:00:15,332 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+2026-05-30 11:00:16,795 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 11:00:20,971 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 11:00:24,262 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
