@@ -80,13 +80,25 @@ Além disso será necessário um agente 5 que será o diagramador que prepara o 
 
 ---
 
-## O CSV — input do professor
+## O CSV — input do professor (NOVO FORMATO COM ANDAIME)
 
 **Colunas obrigatórias:**  
-`disciplina`, `unidade`, `pergunta_unidade`, `capitulo`, `habilidade`,  
-`conteudos_nucleares`, `autores`, `elementos_obrigatorios`
+- `disciplina`, `unidade`, `pergunta_unidade`, `capitulo`
+- `habilidade_principal` (código BNCC + texto completo)
+- `micro_hab_1`, `operacao_secao_1`, `micro_hab_2`, `operacao_secao_2`, `micro_hab_3`, `operacao_secao_3`, `micro_hab_4`, `operacao_secao_4` (mínimo 4 seções)
+- `conteudos_nucleares`, `autores`
 
-Cada linha é um capítulo. Capítulos da mesma unidade compartilham os campos `unidade` e `pergunta_unidade`. O pipeline organiza o output por unidade (slug gerado automaticamente) e por capítulo dentro da unidade.
+**Colunas opcionais:**
+- `micro_hab_5`, `operacao_secao_5`, `micro_hab_6`, `operacao_secao_6` (até 6 seções)
+- `elementos_desejáveis` (direcionamentos didáticos específicos)
+
+**Validação:**
+- Operações devem ser um de: Definir, Classificar, Comparar, Sequenciar, Mapear causalidade, Reconhecer perspectiva, Aplicar
+- O CSV é validado automaticamente pelo pipeline
+
+Cada linha é um capítulo. Capítulos da mesma unidade compartilham `unidade` e `pergunta_unidade`. O pipeline organiza o output por unidade e por capítulo.
+
+📖 **Documentação completa:** Ver arquivo `NOVO_FORMATO_CSV.md`
 
 ---
 
@@ -185,7 +197,20 @@ Modo placeholder: se imagens.md não existe (ex: --agentes 1,2,3,6), insere uma 
 Histórico de modificações
 (mantenha as entradas anteriores conforme necessário; aqui apenas um exemplo da transição)
 
-2026-05-30 – Reformulação para pipeline funcional (eliminação do Agente 4, novo paradigma)
+2026-05-30 (tarde) – Implementação do novo formato CSV com andaime de habilidades
+Mudanças:
+
+CSV expandido agora prescreve o andaime didático completo (4-6 seções, operações, micro-habilidades).
+Novas colunas: `habilidade_principal`, `micro_hab_1|2|3|4|5|6`, `operacao_secao_1|2|3|4|5|6`, `elementos_desejáveis`.
+Removida coluna: `elementos_obrigatorios` → `elementos_desejáveis` (opcional).
+Validação do CSV expandida: operações validadas contra os 7 tipos elementares.
+User message do Agente 1 reformulado: recebe andaime explicitamente, não precisa inventar estrutura.
+Novo arquivo: `NOVO_FORMATO_CSV.md` (documentação completa do formato).
+Novo exemplo: `input/apostila-sociologia-em1/instrucoes.csv` (2 capítulos de Sociologia EM1).
+
+Impacto: Agente 1 mantém agência (exemplos, pesos, fontes), mas trabalha com blueprint estrutural pré-definido. Reduz ambiguidade, facilita validação, melhora reusabilidade.
+
+2026-05-30 (manhã) – Reformulação para pipeline funcional (eliminação do Agente 4, novo paradigma)
 Mudanças fundamentais:
 
 Abandono da simulação de voz humana. Princípio pedagógico agora é artificialidade funcional.

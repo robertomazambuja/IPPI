@@ -326,7 +326,24 @@ def run_agente1(
             cores_anteriores_section += "\n"
             arquivos_a_ler += "3. Os cores dos capítulos anteriores (listados acima)\n"
 
-    user_message = f"""Sua tarefa: arquitetar o capítulo abaixo a partir dos dados do professor.
+    # Monta andaime de seções
+    andaime_secoes = []
+    for sec in range(1, 7):
+        micro_hab_col = f'micro_hab_{sec}'
+        op_col = f'operacao_secao_{sec}'
+
+        micro_hab = row.get(micro_hab_col, '').strip()
+        operacao = row.get(op_col, '').strip()
+
+        if micro_hab:  # Apenas adiciona se preenchida
+            andaime_secoes.append(f"  Seção {sec}: [{operacao}] {micro_hab}")
+
+    andaime_str = "\n".join(andaime_secoes) if andaime_secoes else "(Não informado)"
+
+    elementos_desejáveis = row.get('elementos_desejáveis', '').strip()
+    elementos_str = elementos_desejáveis if elementos_desejáveis else "(Nenhum)"
+
+    user_message = f"""Sua tarefa: arquitetar o capítulo abaixo a partir do andaime prescrito pelo professor.
 
 CONTEXTO DA UNIDADE:
 - Unidade {unidade_idx}: {unidade}
@@ -341,13 +358,28 @@ TODAS AS UNIDADES DA APOSTILA (para referência de encadeamento macro):
 DADOS DO CAPÍTULO ATUAL:
 - Disciplina: {disciplina}
 - Capítulo: {capitulo}
-- Habilidade: {row['habilidade']}
-- Conteúdos nucleares: {row['conteudos_nucleares']}
-- Autores: {row['autores']}
-- Elementos obrigatórios: {row['elementos_obrigatorios']}
+- Habilidade principal: {row['habilidade_principal']}
+
+ANDAIME PRESCRITO PELO PROFESSOR (progressão de seções):
+{andaime_str}
+
+CONTEÚDOS NUCLEARES A COBRIR:
+{row['conteudos_nucleares']}
+
+AUTORES DISPONÍVEIS (você distribui nas seções conforme julgar):
+{row['autores']}
+
+ELEMENTOS DIDÁTICOS DESEJÁVEIS:
+{elementos_str}
 
 ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR (nesta ordem):
 {arquivos_a_ler}
+
+IMPORTANTE:
+- O andaime acima já prescreve as operações e a progressão de micro-habilidades
+- Você NÃO precisa inventar a estrutura — ela já está definida
+- Seu trabalho é CONCRETIZAR: escolher exemplos âncora, pesos das seções, fontes primárias, verificações
+- Garanta que cada micro-habilidade seja alcançável e progressiva em relação à anterior
 
 ONDE SALVAR O OUTPUT:
 {output_rel}
@@ -501,10 +533,25 @@ sidebars (verificações com resposta oculta) e rodapé (encadeamento).
 # ============================================================================
 
 def parse_csv(csv_path: Path) -> List[Dict]:
-    """Lê e valida CSV."""
+    """Lê e valida CSV com novo formato de andaime."""
     COLUNAS_OBRIGATORIAS = [
-        'disciplina', 'unidade', 'pergunta_unidade', 'capitulo', 'habilidade',
-        'conteudos_nucleares', 'autores', 'elementos_obrigatorios'
+        'disciplina', 'unidade', 'pergunta_unidade', 'capitulo', 'habilidade_principal',
+        'micro_hab_1', 'operacao_secao_1',
+        'micro_hab_2', 'operacao_secao_2',
+        'micro_hab_3', 'operacao_secao_3',
+        'micro_hab_4', 'operacao_secao_4',
+        'conteudos_nucleares', 'autores'
+    ]
+
+    OPERACOES_VALIDAS = {
+        'Definir', 'Classificar', 'Comparar', 'Sequenciar',
+        'Mapear causalidade', 'Reconhecer perspectiva', 'Aplicar'
+    }
+
+    COLUNAS_OPCIONAIS = [
+        'micro_hab_5', 'operacao_secao_5',
+        'micro_hab_6', 'operacao_secao_6',
+        'elementos_desejáveis'
     ]
 
     if not csv_path.exists():
@@ -516,8 +563,8 @@ def parse_csv(csv_path: Path) -> List[Dict]:
         if not reader.fieldnames:
             raise ValueError("CSV vazio ou sem cabeçalho")
 
-        # Validar colunas
-        faltando = set(COLUNAS_OBRIGATORIAS) - set(reader.fieldnames)
+        # Validar colunas obrigatórias
+        faltando = set(COLUNAS_OBRIGATORIAS) - set(reader.fieldnames or [])
         if faltando:
             raise ValueError(f"Colunas obrigatórias faltando: {faltando}")
 
@@ -526,9 +573,21 @@ def parse_csv(csv_path: Path) -> List[Dict]:
             for col in COLUNAS_OBRIGATORIAS:
                 if not row[col].strip():
                     raise ValueError(f"Célula vazia na linha {idx}, coluna '{col}'")
+
+            # Validar operações (apenas as preenchidas)
+            for sec in range(1, 7):
+                op_col = f'operacao_secao_{sec}'
+                if op_col in reader.fieldnames:
+                    op_value = row[op_col].strip()
+                    if op_value and op_value not in OPERACOES_VALIDAS:
+                        raise ValueError(
+                            f"Operação inválida na linha {idx}, coluna '{op_col}': '{op_value}'. "
+                            f"Deve ser um de: {', '.join(sorted(OPERACOES_VALIDAS))}"
+                        )
+
             rows.append(row)
 
-    logger.info(f"CSV carregado: {len(rows)} capítulos")
+    logger.info(f"CSV carregado: {len(rows)} capítulos (novo formato com andaime)")
     return rows
 
 def run_pipeline(

@@ -1,0 +1,12 @@
+2026-05-30 17:09:28,831 [INFO] __main__: Apostila : apostila-sociologia-em1
+2026-05-30 17:09:28,831 [INFO] __main__: Agentes  : 1, 2, 4
+2026-05-30 17:09:28,832 [INFO] __main__: Forçar   : não
+2026-05-30 17:09:28,839 [INFO] __main__: CSV carregado: 2 capítulos (novo formato com andaime)
+2026-05-30 17:09:28,839 [INFO] __main__: Unidades : 1
+2026-05-30 17:09:28,839 [INFO] __main__: Capítulos: 2
+2026-05-30 17:09:28,876 [INFO] __main__: Unidade 1: Unidade 1 — Estrutura social e desigualdade — classe raça e gênero no Brasil
+2026-05-30 17:09:28,881 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1: Estrutura social e estratificação social
+2026-05-30 17:09:28,898 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-05-30 17:09:30,528 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:09:33,490 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
