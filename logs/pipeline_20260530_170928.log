@@ -10,3 +10,35 @@
 [Agente 1] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
 2026-05-30 17:09:30,528 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
 2026-05-30 17:09:33,490 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:11:40,494 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:11:52,622 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-05-30 17:11:53,912 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:12:00,386 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:12:02,627 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:13:45,748 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:13:56,118 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-05-30 17:13:57,444 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:14:00,057 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:15:43,371 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:15:46,615 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:16:02,461 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2: Desigualdade, raça e gênero no Brasil
+2026-05-30 17:16:02,494 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2: Desigualdade, raça e gênero no Brasil
+2026-05-30 17:16:03,634 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:16:07,654 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:18:27,968 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:18:42,214 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2: Desigualdade, raça e gênero no Brasil
+2026-05-30 17:18:57,687 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:19:00,773 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:21:19,974 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:21:33,172 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2: Desigualdade, raça e gênero no Brasil
+2026-05-30 17:21:34,237 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:21:41,104 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:24:00,784 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-30 17:24:16,715 [INFO] __main__: Pipeline concluído.
+2026-05-30 17:24:16,715 [INFO] __main__: Outputs em: output/apostila-sociologia-em1/
+2026-05-30 17:24:16,716 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260530_170928.log

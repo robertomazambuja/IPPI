@@ -1,0 +1,22 @@
+2026-06-01 15:30:00,087 [INFO] __main__: Apostila : apostila-sociologia-em1
+2026-06-01 15:30:00,087 [INFO] __main__: Agentes  : 1, 2, 4
+2026-06-01 15:30:00,088 [INFO] __main__: Forçar   : não
+2026-06-01 15:30:00,095 [INFO] __main__: CSV carregado: 2 capítulos (novo formato com andaime)
+2026-06-01 15:30:00,096 [INFO] __main__: Unidades : 1
+2026-06-01 15:30:00,096 [INFO] __main__: Capítulos: 2
+2026-06-01 15:30:00,104 [INFO] __main__: Unidade 1: Unidade 1 — Estrutura social e desigualdade — classe raça e gênero no Brasil
+2026-06-01 15:30:00,116 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1: Estrutura social e estratificação social
+2026-06-01 15:30:00,196 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-06-01 15:30:02,658 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:30:06,380 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:31:59,785 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:32:11,875 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-06-01 15:32:13,971 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:32:19,677 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:34:26,509 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:34:40,003 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-06-01 15:34:41,807 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-01 15:34:45,046 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
