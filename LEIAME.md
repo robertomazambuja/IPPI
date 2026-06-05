@@ -55,7 +55,8 @@ orientacoes/
 
 contexto/
   principios-pedagogicos-agente1.md  — governa as decisões do Agente 1 (funcional)
-  matriz-enem.json                   — base de conhecimento H1–H30
+  matriz-enem.json                   — base de conhecimento H1–H30 (uso do Decompositor)
+  matriz-conteudosenem.json          — conteúdos prioritários e por disciplina H1–H30 (uso do Agente 1)
   disciplinas/
     historia-contexto-funcional.md   — conceitos, autores, regras para História
     sociologia-contexto-funcional.md — conceitos, autores, regras para Sociologia
@@ -175,7 +176,7 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 **Recebe:** linha do CSV + contexto da unidade + lista de todas as unidades + cores de capítulos anteriores (se houver).
 
-**Consulta:** `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[disciplina]-contexto-funcional.md`+ `contexto\matriz-conteudosenem.json
+**Consulta:** `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[disciplina]-contexto-funcional.md` + `contexto/matriz-conteudosenem.json` (localiza a habilidade pelo código, filtra conteúdos pela disciplina do capítulo, prioriza itens em `conteudos_prioritarios`)
 
 **Produz:** `core.md` – arquitetura do capítulo baseada em operações elementares. O core contém:
 - Cabeçalho: habilidade, operação principal, pergunta do capítulo, contribuição à unidade
@@ -291,7 +292,7 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 ## Estado dos componentes
 
 **Implementado e integrado:**
-- Agente 1 (Arquiteto Curricular) — `agente1-skill.md`, `agente1-orientacao.md`
+- Agente 1 (Arquiteto Curricular) — `agente1-skill.md`, `agente1-orientacao.md`, `contexto/matriz-conteudosenem.json`
 - Agente 2 (Redator Funcional) — `agente2-skill.md`, `agente2-orientacao.md`
 - Agente 3 (Validador Técnico) — `agente3-skill.md`, `agente3-orientacao.md`
 - Agente 4 (Redator de Estilo) — `agente4-skill.md`, `agente4-orientacao.md`

@@ -2,10 +2,11 @@
 
 ## Leitura obrigatória antes de iniciar
 
-Antes de qualquer decisão, consulte:
+Antes de qualquer decisão, consulte na ordem:
 
-- `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões. Se este arquivo não existir, use o documento de princípios pedagógicos fornecido na orientação do Agente 1.
-- `contexto/disciplinas/[disciplina].md` — define os conteúdos e convenções específicas da disciplina.
+1. `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões estruturais. Prevalece sobre qualquer outro arquivo.
+2. `contexto/disciplinas/[disciplina]-contexto-funcional.md` — convenções e cânones da disciplina do capítulo.
+3. `contexto/matriz-conteudosenem.json` — matriz de conteúdos prioritários por habilidade. Consulte **antes de definir qualquer seção**.
 
 Em caso de conflito entre qualquer instrução desta skill e os princípios pedagógicos, os princípios prevalecem.
 
@@ -78,6 +79,26 @@ A **operação principal** do capítulo é aquela que corresponde ao verbo da ha
 ---
 
 ## Estrutura do core (passos obrigatórios)
+
+### PASSO -1 – CONSULTA À MATRIZ DE CONTEÚDOS
+
+Antes de preencher qualquer campo do core, execute esta consulta:
+
+1. Identifique o código da habilidade recebida do CSV (ex: `H9`).
+2. Abra `contexto/matriz-conteudosenem.json` e localize a entrada correspondente.
+3. Leia o campo `conteudos_por_disciplina` e extraia **apenas** a lista da disciplina do capítulo (ex: se a disciplina for `Sociologia`, use somente `conteudos_por_disciplina.Sociologia`). Nunca use conteúdos de outra disciplina.
+4. Dentro dessa lista, identifique quais itens também aparecem em `conteudos_prioritarios` — esses têm precedência na seleção.
+5. Combine com os `conteudos_nucleares` do CSV (que sempre prevalecem e devem ser incluídos).
+6. Registre mentalmente a lista resultante — ela guiará a escolha de conteúdos em cada seção.
+
+**Resultado esperado do PASSO -1:** uma lista de conteúdos selecionados, ordenados por prioridade:
+- Primeiro: itens do CSV (`conteudos_nucleares`)
+- Segundo: itens em `conteudos_prioritarios` da habilidade que pertencem à disciplina
+- Terceiro: demais itens de `conteudos_por_disciplina[disciplina]`
+
+Você usará essa lista no PASSO 1 ao atribuir `CONTEUDO_NUCLEAR` a cada seção.
+
+---
 
 ### PASSO 0 – METADADOS DO CAPÍTULO
 
@@ -246,6 +267,8 @@ Nunca invente tipos de operação fora da lista.
 Verificação final (checklist obrigatório)
 Antes de entregar o core, responda a cada item. Se qualquer resposta for não, corrija.
 
+A consulta ao `matriz-conteudosenem.json` foi realizada e os conteúdos foram filtrados pela disciplina do capítulo.
+
 O cabeçalho contém HABILIDADE_BNCC, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
 
 OPERACAO_PRINCIPAL está na lista de operações elementares.
@@ -263,6 +286,8 @@ Toda seção com PESO = Principal ou Secundário tem EXEMPLO_ANCOLA preenchido.
 Nenhuma seção usa palavras como “tensão”, “mobilização”, “situação-problema”.
 
 Todos os conteúdos nucleares do CSV aparecem em pelo menos uma seção.
+
+Nenhum conteúdo de disciplina diferente da disciplina do capítulo foi utilizado (verificar via `conteudos_por_disciplina`).
 
 Todos os autores do CSV aparecem no campo AUTOR de alguma seção (com nome, datas, filiação).
 
