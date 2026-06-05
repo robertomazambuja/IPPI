@@ -8,7 +8,7 @@ Pipeline com paradigma **funcional** (texto rotulado, sem narrativa, sem simula�
 
 ## O que é este projeto
 
-Pipeline de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades da BNCC. O propósito é que o aluno pratique **operações cognitivas elementares** (definir, classificar, comparar, sequenciar, mapear causalidade, reconhecer perspectiva, aplicar) aplicadas a conteúdos nucleares. O texto não tenta soar humano – é uma **interface funcional clara e rastreável**.
+Pipeline de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades da BNCC ou da Matriz de Referência ENEM. O propósito é que o aluno pratique **operações cognitivas elementares** (definir, classificar, comparar, sequenciar, mapear causalidade, reconhecer perspectiva, aplicar) aplicadas a conteúdos nucleares. O texto não tenta soar humano – é uma **interface funcional clara e rastreável**.
 
 O professor define os parâmetros em um briefing JSON. O Agente 0 (Decompositor) lê esse briefing e gera o `instrucoes.csv`. O pipeline lê o CSV e aciona os agentes em sequência. Cada agente produz um output que serve de input para o seguinte. Os agentes são construídos em Python e usam a API da Anthropic (modelo claude-sonnet/opus). Os agentes operam em modo agêntico: leem os arquivos de instrução por conta própria a partir dos caminhos que o pipeline informa – não há injeção de prompt via código.
 
@@ -16,7 +16,7 @@ O professor define os parâmetros em um briefing JSON. O Agente 0 (Decompositor)
 
 ## Princípio pedagógico central
 
-O texto final não conta uma história – ele executa um **algoritmo de ensino**. Cada habilidade da BNCC é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
+O texto final não conta uma história – ele executa um **algoritmo de ensino**. Cada habilidade da BNCC ou matriz do ENEM é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
 
 As sete operações elementares são:
 - **Definir** – apresentar um conceito com seus elementos essenciais
@@ -42,7 +42,7 @@ skills/
   agente1-skill.md                   — como o Agente 1 (Arquiteto) executa
   agente2-skill.md                   — como o Agente 2 (Redator Funcional) executa
   agente3-skill.md                   — como o Agente 3 (Validador Técnico) executa
-  agente4-skill.md                   — como o Agente 4 (Redator de Estilo) executa [ver nota]
+  agente4-skill.md                   — como o Agente 4 (Redator de Estilo) executa
   agente5-skill.md                   — como o Agente 5 (Diagramador) executa
 
 orientacoes/
@@ -50,7 +50,7 @@ orientacoes/
   agente1-orientacao.md              — identidade e papel do Agente 1
   agente2-orientacao.md              — identidade e papel do Agente 2
   agente3-orientacao.md              — identidade e papel do Agente 3
-  agente4-orientacao.md              — identidade e papel do Agente 4 [ver nota]
+  agente4-orientacao.md              — identidade e papel do Agente 4
   agente5-orientacao.md              — identidade e papel do Agente 5
 
 contexto/
@@ -72,8 +72,6 @@ output/
     validacao/[unidade-slug]/[idx]-[idx]-[nome].md
     formatado/[unidade-slug]/[idx]-[idx]-[nome].xml
 ```
-
-**Nota sobre Agente 4:** O Agente 4 (Redator de Estilo) foi arquitetado para uma fase anterior do projeto em que o texto buscava "naturalização" da prosa. No paradigma funcional atual, não há estilo a revisar — os rótulos são intencionais. O código existe mas está fora do fluxo padrão. Não use sem necessidade específica.
 
 ---
 
@@ -118,7 +116,7 @@ O Agente 0 lê esse briefing, consulta a `contexto/matriz-enem.json`, e gera o `
 - Operações devem ser um de: Definir, Classificar, Comparar, Sequenciar, Mapear causalidade, Reconhecer perspectiva, Aplicar
 - O CSV é validado automaticamente pelo pipeline antes de acionar qualquer agente
 
-Cada linha é um capítulo. Capítulos da mesma unidade compartilham `unidade` e `pergunta_unidade`.
+Cada linha é um capítulo. Capítulos da mesma unidade compartilham `unidade`, `pergunta_unidade` e, se for o caso, habilidades. 
 
 📖 **Documentação completa:** Ver arquivo `NOVO_FORMATO_CSV.md`
 
@@ -146,9 +144,9 @@ python pipeline.py input/apostila-sociologia/instrucoes.csv --cap 1
 python pipeline.py --briefing input/apostila-sociologia/briefing.json --apostila apostila-sociologia --agentes 0
 ```
 
-**Ordem padrão dos agentes (modo manual):** 1 → 2 → 3 → 5
+**Ordem padrão dos agentes (modo manual):** 1 → 2 → 3 → 4 → 5
 
-O Agente 3 valida o texto produzido pelo Agente 2 antes de seguir para diagramação.
+O Agente 3 valida o texto produzido pelo Agente 2. O Agente 4 reescreve o texto validado em prosa fluida antes de seguir para diagramação.
 
 **Chave de API:** o pipeline lê automaticamente o arquivo `.env` na raiz do projeto:
 ```
@@ -165,7 +163,7 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 **Consulta:** `contexto/matriz-enem.json` + `contexto/disciplinas/[disciplina].md`
 
-**Produz:** `instrucoes.csv` – arquivo estruturado que prescreve a progressão pedagógica de cada capítulo (operações cognitivas, micro-habilidades, conteúdos nucleares, autores).
+**Produz:** `instrucoes.csv` – arquivo estruturado que prescreve a progressão pedagógica de cada capítulo (operações cognitivas, micro-habilidades, conteúdos nucleares sugeridos pelo professor, autores sugeridos pelo professor).
 
 **Responsabilidade:** garantir que o CSV gerado seja válido e respeite as regras obrigatórias (progressão, operações, micro-habilidades, conteúdos). É o agente que materializa a decomposição pedagógica autônoma — o professor não prescreve *como* ensinar, apenas *o que* ensinar.
 
@@ -177,7 +175,7 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 **Recebe:** linha do CSV + contexto da unidade + lista de todas as unidades + cores de capítulos anteriores (se houver).
 
-**Consulta:** `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[disciplina]-contexto-funcional.md`
+**Consulta:** `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[disciplina]-contexto-funcional.md`+ `contexto\matriz-conteudosenem.json
 
 **Produz:** `core.md` – arquitetura do capítulo baseada em operações elementares. O core contém:
 - Cabeçalho: habilidade, operação principal, pergunta do capítulo, contribuição à unidade
@@ -224,15 +222,25 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ---
 
-### Agente 4 — Redator de Estilo *(fora do fluxo padrão)*
+### Agente 4 — Redator de Estilo
 
-Disponível no código mas não utilizado no paradigma funcional atual. Ver nota acima.
+**Recebe:** `texto.md` validado pelo Agente 3 (com rótulos explícitos visíveis: `[PERSPECTIVA 1]`, `[VERIFICAÇÃO]`, etc.).
+
+**Produz:** versão reescrita do `texto.md`, sobrescrevendo o original, com:
+- Prosa fluida e legível, sem rótulos visíveis ao leitor
+- Estrutura funcional preservada em HTML comments (`<!-- [PERSPECTIVA] -->`, `<!-- [EXEMPLO] -->`, etc.) para uso pelo Agente 5
+
+**Responsabilidade:** tornar invisível a engenharia estrutural sem alterar conteúdo. Não humaniza nem dramatiza — reduz o tom excessivamente maquinal do texto do Agente 2, dando fluidez à leitura, sem abandonar o paradigma funcional.
+
+**O que preserva:** argumento de cada seção, ordem das seções, exemplos, autores, perguntas de verificação, síntese final.
+
+**O que nunca faz:** alterar ordem ou conteúdo das seções, adicionar metáforas, exclamações ou padrões artificiais ("não é X: é Y"), remover os HTML comments.
 
 ---
 
 ### Agente 5 — Diagramador
 
-**Recebe:** `texto.md` + `core.md` (para identificar tipos de operação).
+**Recebe:** `texto.md` reescrito pelo Agente 4 + `core.md` (para identificar tipos de operação).
 
 **Produz:**
 - `[capitulo].xml` – capítulo estruturado para InDesign, com tags como `<secao tipo="Definir">`, `<bloco tipo="VERIFICACAO">`, `<indicacao-imagem>`
@@ -250,6 +258,7 @@ Disponível no código mas não utilizado no paradigma funcional atual. Ver nota
 - Nova flag `--apostila [nome]` define o diretório da apostila quando usando `--briefing`
 - Fluxo padrão (modo manual) ajustado: Agentes 1 → 2 → 3 → 5 (Agente 4 removido do padrão)
 - LEIAME.md reorganizado: inconsistências removidas, arquitetura documentada de forma coerente
+- Excluídas - modificações do Agente 0
 
 ### 2026-06-03 – Criação dos arquivos do Agente 0
 
@@ -257,6 +266,7 @@ Disponível no código mas não utilizado no paradigma funcional atual. Ver nota
 - Criação de `decompositor-orientacao.md`: define identidade, papel e posição do Agente 0 no pipeline
 - Criação de `decompositor-skill.md`: guia executivo completo com 9 passos
 - Criação de `decompositor-briefing.md`: especificação do briefing de entrada
+- Excluídas - modificações do Agente 0
 
 ### 2026-05-30 (tarde) – Implementação do novo formato CSV com andaime de habilidades
 
@@ -281,15 +291,12 @@ Disponível no código mas não utilizado no paradigma funcional atual. Ver nota
 ## Estado dos componentes
 
 **Implementado e integrado:**
-- Agente 0 (Decompositor) — `decompositor-skill.md`, `decompositor-orientacao.md`, integrado ao `pipeline.py`
 - Agente 1 (Arquiteto Curricular) — `agente1-skill.md`, `agente1-orientacao.md`
 - Agente 2 (Redator Funcional) — `agente2-skill.md`, `agente2-orientacao.md`
 - Agente 3 (Validador Técnico) — `agente3-skill.md`, `agente3-orientacao.md`
+- Agente 4 (Redator de Estilo) — `agente4-skill.md`, `agente4-orientacao.md`
 - Agente 5 (Diagramador) — `agente5-skill.md`, `agente5-orientacao.md`
 - `pipeline.py` com flags `--briefing`, `--apostila`, `--agentes`, `--force`, `--cap`
-
-**Disponível mas fora do fluxo padrão:**
-- Agente 4 (Redator de Estilo) — `agente4-skill.md`, `agente4-orientacao.md`
 
 **Disciplinas com contexto funcional completo:**
 - História — `historia-contexto-funcional.md`
@@ -301,7 +308,6 @@ Disponível no código mas não utilizado no paradigma funcional atual. Ver nota
 **Em avaliação:**
 - Qualidade das verificações fechadas (se realmente testam a habilidade)
 - Precisão do Agente 3 na detecção de violações
-- Necessidade de um Agente de reescrita separado (Agente 4 revisitado?)
 
 **Ainda não existe:**
 - Contexto funcional para Filosofia e Geografia
