@@ -84,17 +84,28 @@ A **operação principal** do capítulo é aquela que corresponde ao verbo da ha
 
 Antes de preencher qualquer campo do core, execute estas duas consultas:
 
-**1. Consulta de conteúdos**
+**1. Conteúdos mandatórios do professor**
+
+Verifique se o CSV contém a coluna `conteudos_nucleares`. Se sim e não estiver vazia:
+- Esses conteúdos foram definidos pelo professor e são **obrigatórios** — devem aparecer em pelo menos uma seção do capítulo.
+- Registre-os separadamente como LISTA_OBRIGATÓRIA.
+- Nenhum pode ser ignorado.
+
+**2. Conteúdos complementares da matriz**
 
 1. Identifique o código da habilidade recebida do CSV (ex: `H14`).
 2. Abra `contexto/matriz-conteudosenem.json` e localize a entrada correspondente.
-3. Leia o campo `conteudos_por_disciplina` e extraia **apenas** a lista da disciplina do capítulo (ex: se a disciplina for `Sociologia`, use somente `conteudos_por_disciplina.Sociologia`). Nunca use conteúdos de outra disciplina.
+3. Leia o campo `conteudos_por_disciplina` e extraia **apenas** a lista da disciplina do capítulo. Nunca use conteúdos de outra disciplina.
 4. Dentro dessa lista, identifique quais itens também aparecem em `conteudos_prioritarios` — esses têm precedência.
-5. Registre a lista resultante ordenada por prioridade:
+5. Registre a lista resultante como LISTA_COMPLEMENTAR, ordenada por prioridade:
    - Primeiro: itens em `conteudos_prioritarios` da habilidade para a disciplina
    - Segundo: demais itens de `conteudos_por_disciplina[disciplina]`
 
-Você usará essa lista no PASSO 1 ao atribuir `CONTEUDO_NUCLEAR` a cada seção.
+**Resultado esperado do PASSO -1 (conteúdos):**
+
+Você terá duas listas para usar no PASSO 1:
+- **LISTA_OBRIGATÓRIA** — do CSV do professor. Todos devem aparecer no capítulo.
+- **LISTA_COMPLEMENTAR** — da matriz. Usados para enriquecer e mostrar múltiplas aplicações da habilidade. O aluno precisa ver a habilidade aplicada a vários conteúdos para internalizá-la.
 
 **2. Distribuição de autores**
 
@@ -131,9 +142,12 @@ O CSV prescreve a sequência de micro-habilidades e operações. Você não inve
 
 Para cada micro-habilidade do CSV (micro_hab_1 a micro_hab_4, ou até 6):
 1. Leia o objeto conceitual da micro-habilidade (ex: "Comparar perspectivas teóricas sobre estratificação")
-2. Selecione, da lista de conteúdos do PASSO -1, quais conteúdos específicos materializam esse objeto conceitual
-3. Atribua o autor distribuído no PASSO -1 para essa seção
-4. Preencha o template correspondente à operação prescrita
+2. Selecione os conteúdos que materializam esse objeto conceitual, priorizando assim:
+   - Primeiro: itens da LISTA_OBRIGATÓRIA do PASSO -1 que têm afinidade com a micro-habilidade
+   - Segundo: itens da LISTA_COMPLEMENTAR que enriquecem a micro-habilidade
+3. Distribua os itens obrigatórios entre as seções de forma que todos apareçam ao menos uma vez no capítulo
+4. Atribua o autor distribuído no PASSO -1 para essa seção
+5. Preencha o template correspondente à operação prescrita
 
 Para cada seção, use o template correspondente ao seu tipo.
 
@@ -300,7 +314,9 @@ Toda seção com PESO = Principal ou Secundário tem EXEMPLO_ANCOLA preenchido.
 
 Nenhuma seção usa palavras como “tensão”, “mobilização”, “situação-problema”.
 
-Os conteúdos selecionados da matriz cobrem o objeto conceitual de cada micro-habilidade.
+Todos os itens da LISTA_OBRIGATÓRIA (conteudos_nucleares do professor) aparecem em pelo menos uma seção.
+
+Os conteúdos complementares da matriz enriquecem as seções sem sobrepor os obrigatórios.
 
 Nenhum conteúdo de disciplina diferente da disciplina do capítulo foi utilizado (verificar via `conteudos_por_disciplina`).
 

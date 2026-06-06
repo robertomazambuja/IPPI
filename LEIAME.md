@@ -251,6 +251,11 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 4/6)
+
+**Mudanças:**
+- `skills/agente1-skill.md`: PASSO -1 expandido para duas listas distintas — LISTA_OBRIGATÓRIA (conteudos_nucleares do professor, todos devem aparecer no capítulo) e LISTA_COMPLEMENTAR (da matriz, para enriquecer). PASSO 1 atualizado para priorizar obrigatórios na distribuição entre seções. Checklist atualizado.
+
 ### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 3/6)
 
 **Mudanças:**
