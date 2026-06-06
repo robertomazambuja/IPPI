@@ -251,6 +251,15 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Atualização do NOVO_FORMATO_CSV.md
+
+**Mudanças:**
+- Coluna `conteudos_nucleares` removida do CSV — Agente 1 obtém conteúdos de `contexto/matriz-conteudosenem.json`
+- Descrição das micro-habilidades atualizada: formato agora é operação + objeto conceitual, sem autores ou fontes específicas
+- Campo `habilidade_principal` atualizado para código ENEM (H1–H30) + enunciado, não mais código BNCC
+- Campo `autores` documentado como lista completa do briefing, idêntica em todos os capítulos
+- Exemplo atualizado com os dois capítulos do briefing H14
+
 ### 2026-06-06 – Criação dos arquivos do Agente 0 (versão revisada)
 
 **Mudanças:**
