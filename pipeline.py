@@ -299,9 +299,9 @@ ONDE SALVAR O OUTPUT:
 
 Siga os passos da sua skill (skills/decompositor-skill.md):
 1. Leia o briefing ({briefing_rel})
-2. Consulte contexto/matriz-enem.json para a habilidade identificada
-3. Consulte contexto/disciplinas/[disciplina].md
-4. Para cada capítulo: construa progressão de operações, micro-habilidades, conteúdos e autores
+2. Consulte contexto/matriz-enem.json para a habilidade identificada — extraia sequencia_pedagogica, enunciado e foco_cognitivo
+3. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
+4. Passe autores_preferidos e elementos_desejáveis do briefing integralmente para todos os capítulos
 5. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
 """
 
@@ -401,13 +401,10 @@ DADOS DO CAPÍTULO ATUAL:
 - Capítulo: {capitulo}
 - Habilidade principal: {row['habilidade_principal']}
 
-ANDAIME PRESCRITO PELO PROFESSOR (progressão de seções):
+MICRO-HABILIDADES PRESCRITAS (operação + objeto conceitual — você materializa com conteúdo específico):
 {andaime_str}
 
-CONTEÚDOS NUCLEARES A COBRIR:
-{row['conteudos_nucleares']}
-
-AUTORES DISPONÍVEIS (você distribui nas seções conforme julgar):
+AUTORES DISPONÍVEIS (você distribui entre capítulos e seções por afinidade com o objeto conceitual):
 {row['autores']}
 
 ELEMENTOS DIDÁTICOS DESEJÁVEIS:
@@ -581,7 +578,7 @@ def parse_csv(csv_path: Path) -> List[Dict]:
         'micro_hab_2', 'operacao_secao_2',
         'micro_hab_3', 'operacao_secao_3',
         'micro_hab_4', 'operacao_secao_4',
-        'conteudos_nucleares', 'autores'
+        'autores'
     ]
 
     OPERACOES_VALIDAS = {

@@ -251,6 +251,13 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Atualização do pipeline.py
+
+**Mudanças:**
+- `conteudos_nucleares` removido de `COLUNAS_OBRIGATORIAS` na validação do CSV
+- User message do Agente 0 atualizado: instrui a usar `sequencia_pedagogica` do JSON e escrever micro-habilidades no nível operação + objeto conceitual
+- User message do Agente 1 atualizado: substituído "CONTEÚDOS NUCLEARES A COBRIR" por "MICRO-HABILIDADES PRESCRITAS"; autores descritos como lista a distribuir por afinidade com objeto conceitual
+
 ### 2026-06-06 – Atualização do agente1-skill.md
 
 **Mudanças:**
