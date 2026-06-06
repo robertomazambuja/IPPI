@@ -251,6 +251,14 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Atualização do agente1-skill.md
+
+**Mudanças:**
+- "O que você recebe" atualizado: Agent 1 agora recebe `micro_hab_1-6` e `operacao_secao_1-6` do CSV; `conteudos_nucleares` removido
+- PASSO -1 expandido: inclui agora distribuição de autores (lista completa do CSV → seções por afinidade com objeto conceitual)
+- PASSO 1 reescrito: Agent 1 materializa as micro-habilidades prescritas, não inventa a progressão de operações
+- Checklist atualizado: referências a `conteudos_nucleares` do CSV removidas; itens de validação da sequência prescrita adicionados
+
 ### 2026-06-06 – Atualização do NOVO_FORMATO_CSV.md
 
 **Mudanças:**
