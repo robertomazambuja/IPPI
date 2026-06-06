@@ -32,9 +32,8 @@ Extraia e normalize as seguintes variáveis:
 | UNIDADE | `unidade` | Sim |
 | PERGUNTA | `pergunta_unidade` | Sim |
 | CAPÍTULOS | `capitulos` | Sim (mínimo 1) |
-| AUTORES | `autores_preferidos` | Não |
-| CONTEUDOS | `conteudos_nucleares` | Não |
-| ELEMENTOS | `elementos_desejáveis` | Não |
+| AUTORES_POR_CAPITULO | `autores_por_capitulo` | Não |
+| CONTEUDOS_POR_CAPITULO | `conteudos_por_capitulo` | Não |
 
 Se qualquer campo obrigatório estiver ausente ou ambíguo, interrompa e solicite correção.
 
@@ -148,11 +147,10 @@ Para cada capítulo, monte a linha completa:
 | `micro_hab_2` | micro-habilidade da operação 2 |
 | `operacao_secao_2` | operação 2 |
 | ... | até micro_hab_6 / operacao_secao_6 |
-| `autores` | lista completa de `autores_preferidos` do briefing, separada por `; ` |
-| `conteudos_nucleares` | lista completa de `conteudos_nucleares` do briefing, separada por `; ` (se presente) |
-| `elementos_desejáveis` | campo `elementos_desejáveis` do briefing (se presente) |
+| `autores` | `autores_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
+| `conteudos_nucleares` | `conteudos_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
 
-**Atenção:** `autores` e `conteudos_nucleares` são idênticos em todos os capítulos — cópia direta do briefing, sem modificação. O Agente 1 é responsável por distribuir e usar esses conteúdos.
+**Atenção:** `autores` e `conteudos_nucleares` variam por capítulo — cada linha do CSV recebe os dados específicos do seu capítulo, exatamente como o professor definiu. O Agente 1 decide como usar cada item dentro das seções.
 
 ---
 
@@ -175,7 +173,7 @@ Para cada linha do CSV, confirme:
 **CSV:**
 - [ ] Nenhuma célula obrigatória está vazia?
 - [ ] Nenhuma célula contém quebra de linha?
-- [ ] `autores`, `conteudos_nucleares` e `elementos_desejáveis` passaram direto do briefing?
+- [ ] `autores` e `conteudos_nucleares` de cada capítulo vieram do dict correto do briefing?
 
 Se qualquer validação falhar, corrija antes de salvar.
 
@@ -216,7 +214,7 @@ Certo: copiar a lista completa para todos os capítulos
 - [ ] Usei a `sequencia_pedagogica` como template de operações?
 - [ ] Escrevi micro-habilidades no nível correto (operação + objeto conceitual)?
 - [ ] Nenhuma micro-habilidade nomeia autores ou fontes específicas?
-- [ ] `autores`, `conteudos_nucleares` e `elementos_desejáveis` passaram integralmente do briefing?
+- [ ] `autores` e `conteudos_nucleares` de cada capítulo foram mapeados corretamente do briefing?
 - [ ] Validei todas as operações e micro-habilidades antes de salvar?
 - [ ] CSV salvo em `input/[apostila]/instrucoes.csv`?
 

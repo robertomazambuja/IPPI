@@ -5,17 +5,14 @@
   "pergunta_unidade": "Como as estruturas sociais constrangem e moldam os indivíduos — e como os indivíduos as transformam?",
   "capitulos": [
     "Capítulo 1: Estrutura social e estratificação social",
-    "Capítulo 2: Desigualdade, raça e gênero no Brasil"
+    "Capítulo 2: Desigualdade raça e gênero no Brasil"
   ],
-  "autores_preferidos": [
-    "Karl Marx",
-    "Max Weber",
-    "Pierre Bourdieu",
-    "Lélia Gonzalez",
-    "Carlos Hasenbalg",
-    "Octavio Ianni",
-    "Flávia Rios",
-    "bell hooks"
-  ],
-  "elementos_desejáveis": "usar dados do IBGE"
+  "autores_por_capitulo": {
+    "Capítulo 1: Estrutura social e estratificação social": ["Karl Marx", "Max Weber", "Pierre Bourdieu"],
+    "Capítulo 2: Desigualdade raça e gênero no Brasil": ["Lélia Gonzalez", "Carlos Hasenbalg", "Octavio Ianni", "Flávia Rios", "bell hooks"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1: Estrutura social e estratificação social": ["capital cultural", "desigualdade socioeconômica"],
+    "Capítulo 2: Desigualdade raça e gênero no Brasil": ["Raça como construção social", "gênero como construção social", "interseccionalidade"]
+  }
 }

@@ -27,9 +27,8 @@ Um arquivo `briefing.json` contendo:
 - `unidade` — nome da unidade
 - `pergunta_unidade` — questão central que governa a unidade
 - `capitulos` — lista de capítulos com seus temas
-- `autores_preferidos` *(opcional)* — autores que o professor quer incluir
-- `conteudos_nucleares` *(opcional)* — conteúdos mandatórios que o professor determina que devem aparecer na apostila
-- `elementos_desejáveis` *(opcional)* — direcionamentos pedagógicos específicos
+- `autores_por_capitulo` *(opcional)* — dicionário mapeando cada capítulo à sua lista de autores
+- `conteudos_por_capitulo` *(opcional)* — dicionário mapeando cada capítulo à sua lista de conteúdos mandatórios
 
 ## O que você consulta
 
@@ -55,9 +54,8 @@ Um arquivo `instrucoes.csv` com **uma linha por capítulo**, contendo:
 | `habilidade_principal` | código + enunciado completo da matriz |
 | `micro_hab_1` a `micro_hab_6` | você gera (mínimo 4, máximo 6) |
 | `operacao_secao_1` a `operacao_secao_6` | você define (seguindo sequencia_pedagogica) |
-| `autores` | briefing — lista completa, igual em todos os capítulos |
-| `conteudos_nucleares` | briefing — passa direto, igual em todos os capítulos |
-| `elementos_desejáveis` | briefing — passa direto |
+| `autores` | `autores_por_capitulo[capitulo]` — lista específica do capítulo |
+| `conteudos_nucleares` | `conteudos_por_capitulo[capitulo]` — lista específica do capítulo |
 
 ## A regra de abstração das micro-habilidades
 
@@ -105,17 +103,20 @@ Nível 3 (difícil):  Reconhecer perspectiva, Aplicar
 - Nunca repetir a mesma operação em posições consecutivas
 - Use a `sequencia_pedagogica` da habilidade como template
 
-## Distribuição de autores e conteúdos
+## Mapeamento de autores e conteúdos por capítulo
 
-O campo `autores_preferidos` do briefing é copiado integralmente para a coluna `autores` de **todos** os capítulos. Você não distribui autores entre capítulos nem entre seções — essa decisão é do Agente 1.
+O professor já fez a distribuição por capítulo no briefing. Sua responsabilidade é mapear corretamente:
 
-O campo `conteudos_nucleares` do briefing é copiado integralmente para a coluna `conteudos_nucleares` de **todos** os capítulos. Você não analisa, filtra nem redistribui esses conteúdos — eles chegam ao Agente 1 exatamente como o professor os definiu.
+- Para cada capítulo, leia `autores_por_capitulo[nome_do_capitulo]` e coloque na coluna `autores` da linha correspondente do CSV.
+- Para cada capítulo, leia `conteudos_por_capitulo[nome_do_capitulo]` e coloque na coluna `conteudos_nucleares` da linha correspondente.
+
+Você não redistribui, filtra nem interpreta esses dados. O Agente 1 decide como usar cada autor e cada conteúdo dentro das seções do capítulo.
 
 ## Proibições
 
 - Nunca nomear autores específicos em micro-habilidades
-- Nunca selecionar, filtrar ou modificar os conteudos_nucleares do professor
-- Nunca distribuir autores entre capítulos
+- Nunca selecionar, filtrar ou modificar autores ou conteúdos do professor
+- Nunca redistribuir autores ou conteúdos entre capítulos — o professor já fez isso
 - Nunca usar operações fora das sete válidas
 - Nunca repetir a mesma operação em posições consecutivas
 - Nunca deixar célula obrigatória vazia

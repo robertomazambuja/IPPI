@@ -37,8 +37,7 @@ O CSV é o documento de passagem entre o Agente 0 (Decompositor) e o Agente 1 (A
 | `operacao_secao_5` | Operação elementar da seção 5 |
 | `micro_hab_6` | Micro-habilidade da seção 6 (se houver 6 seções) |
 | `operacao_secao_6` | Operação elementar da seção 6 |
-| `conteudos_nucleares` | Conteúdos mandatórios definidos pelo professor — o Agente 1 é obrigado a cobri-los. Separados por `; `. Idêntico em todos os capítulos da unidade. |
-| `elementos_desejáveis` | Direcionamentos pedagógicos específicos do professor |
+| `conteudos_nucleares` | Conteúdos mandatórios do professor para este capítulo. Separados por `; `. Varia por capítulo. |
 
 ---
 
@@ -119,6 +118,5 @@ O `pipeline.py` valida:
 
 ## Notas
 
-- **`autores`** é a lista completa do briefing, idêntica em todos os capítulos da mesma unidade. O Agente 1 distribui por seção.
-- **`elementos_desejáveis`** é opcional. Se ausente no briefing, deixar em branco.
-- **`conteudos_nucleares`** é opcional. Quando presente, contém os conteúdos mandatórios que o professor definiu no briefing — o Agente 1 é obrigado a cobri-los em pelo menos uma seção. O Agente 1 complementa com conteúdos adicionais de `contexto/matriz-conteudosenem.json`.
+- **`autores`** varia por capítulo — cada linha recebe a lista de autores que o professor atribuiu àquele capítulo em `autores_por_capitulo`. O Agente 1 distribui entre as seções.
+- **`conteudos_nucleares`** varia por capítulo — cada linha recebe a lista de conteúdos mandatórios que o professor atribuiu àquele capítulo em `conteudos_por_capitulo`. Quando ausente, o Agente 1 usa apenas a matriz. Quando presente, todos os itens devem aparecer em pelo menos uma seção.

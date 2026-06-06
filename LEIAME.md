@@ -251,6 +251,17 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Migração para autores_por_capitulo e conteudos_por_capitulo
+
+**Mudanças:**
+- Formato do briefing JSON atualizado: `autores_preferidos` → `autores_por_capitulo` (dict por capítulo); `conteudos_nucleares` → `conteudos_por_capitulo` (dict por capítulo); `elementos_desejáveis` removido
+- `orientacoes/decompositor-orientacao.md`: novos campos documentados; seção de distribuição atualizada — professor já distribui por capítulo, Decompositor apenas mapeia
+- `skills/decompositor-skill.md`: PASSO 1 e PASSO 4 atualizados para leitura de dicts; checklists atualizados
+- `NOVO_FORMATO_CSV.md`: notas de `autores` e `conteudos_nucleares` atualizadas (variam por capítulo); `elementos_desejáveis` removido
+- `skills/agente1-skill.md`: distribuição de autores simplificada — apenas entre seções, não entre capítulos
+- `pipeline.py`: `elementos_desejáveis` removido de COLUNAS_OPCIONAIS e do user message do Agente 1; instruções do Agente 0 atualizadas para mapeamento de dicts; null bytes corrigidos
+- `input/apostila-h14-teste/briefing.json`: atualizado para novo formato
+
 ### 2026-06-06 – Adição de conteudos_nucleares do professor (passos 5 e 6/6)
 
 **Mudanças:**

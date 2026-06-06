@@ -301,7 +301,7 @@ Siga os passos da sua skill (skills/decompositor-skill.md):
 1. Leia o briefing ({briefing_rel})
 2. Consulte contexto/matriz-enem.json para a habilidade identificada — extraia sequencia_pedagogica, enunciado e foco_cognitivo
 3. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
-4. Passe autores_preferidos e elementos_desejáveis do briefing integralmente para todos os capítulos
+4. Para cada capítulo: mapeie autores_por_capitulo[capitulo] → coluna autores; mapeie conteudos_por_capitulo[capitulo] → coluna conteudos_nucleares
 5. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
 """
 
@@ -384,9 +384,6 @@ def run_agente1(
     conteudos_nucleares = row.get('conteudos_nucleares', '').strip()
     conteudos_str = conteudos_nucleares if conteudos_nucleares else "(Nenhum)"
 
-    elementos_desejáveis = row.get('elementos_desejáveis', '').strip()
-    elementos_str = elementos_desejáveis if elementos_desejáveis else "(Nenhum)"
-
     user_message = f"""Sua tarefa: arquitetar o capítulo abaixo a partir do andaime prescrito pelo professor.
 
 CONTEXTO DA UNIDADE:
@@ -410,11 +407,8 @@ MICRO-HABILIDADES PRESCRITAS (operação + objeto conceitual — você materiali
 CONTEÚDOS OBRIGATÓRIOS DO PROFESSOR (todos devem aparecer em pelo menos uma seção):
 {conteudos_str}
 
-AUTORES DISPONÍVEIS (você distribui entre seções por afinidade com o objeto conceitual):
+AUTORES DISPONÍVEIS PARA ESTE CAPÍTULO (distribua entre as seções por afinidade com o objeto conceitual):
 {row['autores']}
-
-ELEMENTOS DIDÁTICOS DESEJÁVEIS:
-{elementos_str}
 
 ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR (nesta ordem):
 {arquivos_a_ler}
@@ -596,7 +590,6 @@ def parse_csv(csv_path: Path) -> List[Dict]:
         'micro_hab_5', 'operacao_secao_5',
         'micro_hab_6', 'operacao_secao_6',
         'conteudos_nucleares',
-        'elementos_desejáveis'
     ]
 
     if not csv_path.exists():

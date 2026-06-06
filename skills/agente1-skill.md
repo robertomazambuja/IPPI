@@ -107,15 +107,14 @@ Você terá duas listas para usar no PASSO 1:
 - **LISTA_OBRIGATÓRIA** — do CSV do professor. Todos devem aparecer no capítulo.
 - **LISTA_COMPLEMENTAR** — da matriz. Usados para enriquecer e mostrar múltiplas aplicações da habilidade. O aluno precisa ver a habilidade aplicada a vários conteúdos para internalizá-la.
 
-**2. Distribuição de autores**
+**2. Distribuição de autores entre seções**
 
-O CSV traz a lista completa de `autores` do briefing do professor — igual em todos os capítulos da unidade. Sua responsabilidade é distribuí-los entre as seções deste capítulo.
+O CSV traz a lista de `autores` já atribuída pelo professor a este capítulo específico. O professor já fez a distribuição entre capítulos — sua responsabilidade é distribuir esses autores entre as seções deste capítulo.
 
 Critérios de distribuição:
 - Leia o tema de cada micro-habilidade do CSV e identifique qual autor tem afinidade direta com aquele objeto conceitual.
 - Distribua um autor principal por seção de peso Principal ou Secundário.
-- Evite repetir autores já usados em capítulos anteriores da mesma unidade (consulte os cores anteriores se disponíveis).
-- Autores sem seção adequada neste capítulo podem ficar reservados para capítulos seguintes.
+- Todos os autores da lista devem aparecer em alguma seção do capítulo.
 
 ---
 
