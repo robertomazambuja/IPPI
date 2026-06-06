@@ -10,37 +10,73 @@
       "codigo": "C1",
       "titulo": "Compreender os elementos culturais que constituem as identidades",
       "descricao": "Eixo central: leitura da cultura como construção histórica e social. O ENEM mobiliza fontes visuais, textos filosóficos, manifestações artísticas, documentos históricos, patrimônio, memória e identidade para avaliar a capacidade do estudante de interpretar representações culturais em seus contextos.",
-      "habilidades": ["H1", "H2", "H3", "H4", "H5"]
+      "habilidades": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ]
     },
     {
       "codigo": "C2",
       "titulo": "Compreender as transformações dos espaços geográficos como produto das relações socioeconômicas e culturais de poder",
       "descricao": "O ENEM relaciona espaço, território, Estado, poder, fluxos e conflitos. A leitura cartográfica aparece ao lado de temas como geopolítica, migrações, imperialismo, desigualdades regionais, movimentos sociais e disputas territoriais.",
-      "habilidades": ["H6", "H7", "H8", "H9", "H10"]
+      "habilidades": [
+        "H6",
+        "H7",
+        "H8",
+        "H9",
+        "H10"
+      ]
     },
     {
       "codigo": "C3",
       "titulo": "Compreender a produção e o papel histórico das instituições sociais, políticas e econômicas, associando-as aos diferentes grupos, conflitos e movimentos sociais",
       "descricao": "Esta competência concentra o estudo das instituições e dos conflitos. O ENEM associa Estado, justiça, família, trabalho, economia, religião, movimentos sociais, revoluções, guerras e disputas políticas, sempre exigindo leitura crítica e comparação de interpretações.",
-      "habilidades": ["H11", "H12", "H13", "H14", "H15"]
+      "habilidades": [
+        "H11",
+        "H12",
+        "H13",
+        "H14",
+        "H15"
+      ]
     },
     {
       "codigo": "C4",
       "titulo": "Entender as transformações técnicas e tecnológicas e seu impacto nos processos de produção, no desenvolvimento do conhecimento e na vida social",
       "descricao": "Organiza conteúdos ligados à técnica, trabalho, produção, ciência, capitalismo e transformação do espaço. O ENEM cobra Revolução Industrial, urbanização, redes, transportes, mundo do trabalho, agronegócio, automação, tecnologia digital e desigualdades produzidas pelos sistemas técnicos.",
-      "habilidades": ["H16", "H17", "H18", "H19", "H20"]
+      "habilidades": [
+        "H16",
+        "H17",
+        "H18",
+        "H19",
+        "H20"
+      ]
     },
     {
       "codigo": "C5",
       "titulo": "Utilizar os conhecimentos históricos para compreender e valorizar os fundamentos da cidadania e da democracia, favorecendo uma atuação consciente do indivíduo na sociedade",
       "descricao": "A competência mais diretamente ligada a cidadania, democracia, direitos, participação e inclusão. O ENEM cobra meios de comunicação, opinião pública, ética, direitos humanos, políticas públicas, Constituição de 1988, movimentos sociais e formas de combate à exclusão.",
-      "habilidades": ["H21", "H22", "H23", "H24", "H25"]
+      "habilidades": [
+        "H21",
+        "H22",
+        "H23",
+        "H24",
+        "H25"
+      ]
     },
     {
       "codigo": "C6",
       "titulo": "Compreender a sociedade e a natureza, reconhecendo suas interações no espaço em diferentes contextos históricos e geográficos",
       "descricao": "Articula sociedade, natureza, técnica, recursos naturais e crise ambiental. O ENEM cobra paisagem, ocupação do espaço, impactos ambientais, energia, mineração, agropecuária, mudanças climáticas, biomas, sustentabilidade e conflitos socioambientais.",
-      "habilidades": ["H26", "H27", "H28", "H29", "H30"]
+      "habilidades": [
+        "H26",
+        "H27",
+        "H28",
+        "H29",
+        "H30"
+      ]
     }
   ],
   "habilidades": {
@@ -90,6 +126,24 @@
         "Nietzsche",
         "Merleau-Ponty",
         "Camus"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        }
       ]
     },
     "H2": {
@@ -129,6 +183,24 @@
         "Paul Ricoeur",
         "Jacques Le Goff",
         "Paul Claval"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H3": {
@@ -170,6 +242,24 @@
         "Adorno",
         "Horkheimer",
         "Walter Benjamin"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H4": {
@@ -208,6 +298,24 @@
         "Roger Chartier",
         "Carlo Ginzburg",
         "Clifford Geertz"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        }
       ]
     },
     "H5": {
@@ -246,6 +354,24 @@
         "Sérgio Buarque de Holanda",
         "Mário de Andrade",
         "Stuart Hall"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Classificar"
+        }
       ]
     },
     "H6": {
@@ -282,6 +408,28 @@
         "Milton Santos",
         "Yves Lacoste",
         "David Harvey"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H7": {
@@ -327,6 +475,28 @@
         "Immanuel Wallerstein",
         "Samuel Huntington",
         "Edward Said"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Reconhecer perspectiva"
+        }
       ]
     },
     "H8": {
@@ -368,6 +538,24 @@
         "Saskia Sassen",
         "Milton Santos",
         "Hannah Arendt"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H9": {
@@ -411,6 +599,24 @@
         "Celso Furtado",
         "Milton Santos",
         "Immanuel Wallerstein"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        }
       ]
     },
     "H10": {
@@ -454,6 +660,24 @@
         "Charles Tilly",
         "Alain Touraine",
         "Manuel Castells"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        }
       ]
     },
     "H11": {
@@ -495,6 +719,24 @@
         "Norbert Elias",
         "Michel de Certeau",
         "Gilberto Freyre"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Classificar"
+        }
       ]
     },
     "H12": {
@@ -543,6 +785,24 @@
         "Montesquieu",
         "John Rawls",
         "Michel Foucault"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H13": {
@@ -588,6 +848,24 @@
         "Angela Davis",
         "Florestan Fernandes",
         "Lélia Gonzalez"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H14": {
@@ -631,6 +909,24 @@
         "Norberto Bobbio",
         "Sérgio Buarque de Holanda",
         "Raymundo Faoro"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        }
       ]
     },
     "H15": {
@@ -673,6 +969,28 @@
         "Frantz Fanon",
         "Achille Mbembe",
         "Milton Santos"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H16": {
@@ -718,6 +1036,24 @@
         "E. P. Thompson",
         "Lewis Mumford",
         "Milton Santos"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Classificar"
+        }
       ]
     },
     "H17": {
@@ -761,6 +1097,24 @@
         "David Harvey",
         "Manuel Castells",
         "Saskia Sassen"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H18": {
@@ -804,6 +1158,24 @@
         "Celso Furtado",
         "Immanuel Wallerstein",
         "David Harvey"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        }
       ]
     },
     "H19": {
@@ -847,6 +1219,28 @@
         "Henri Lefebvre",
         "David Harvey",
         "Josué de Castro"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H20": {
@@ -893,6 +1287,24 @@
         "Horkheimer",
         "Byung-Chul Han",
         "Shoshana Zuboff"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        }
       ]
     },
     "H21": {
@@ -936,6 +1348,24 @@
         "Jürgen Habermas",
         "Marshall McLuhan",
         "Manuel Castells"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        }
       ]
     },
     "H22": {
@@ -984,6 +1414,24 @@
         "Lélia Gonzalez",
         "Florestan Fernandes",
         "Nancy Fraser"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H23": {
@@ -1029,6 +1477,24 @@
         "John Stuart Mill",
         "Norberto Bobbio",
         "Hannah Arendt"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        }
       ]
     },
     "H24": {
@@ -1078,6 +1544,28 @@
         "Montesquieu",
         "Alexis de Tocqueville",
         "Norberto Bobbio"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H25": {
@@ -1125,6 +1613,28 @@
         "Axel Honneth",
         "Paulo Freire",
         "Sueli Carneiro"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H26": {
@@ -1170,6 +1680,24 @@
         "Aziz Ab'Saber",
         "Paul Claval",
         "Darcy Ribeiro"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Classificar"
+        }
       ]
     },
     "H27": {
@@ -1213,6 +1741,24 @@
         "Ulrich Beck",
         "Henri Acselrad",
         "David Harvey"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H28": {
@@ -1259,6 +1805,24 @@
         "Rachel Carson",
         "Milton Santos",
         "Bruno Latour"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Mapear causalidade"
+        }
       ]
     },
     "H29": {
@@ -1305,6 +1869,28 @@
         "Celso Furtado",
         "Aziz Ab'Saber",
         "Enrique Leff"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Classificar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Mapear causalidade"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     },
     "H30": {
@@ -1353,6 +1939,28 @@
         "Ailton Krenak",
         "Vandana Shiva",
         "Enrique Leff"
+      ],
+      "sequencia_pedagogica": [
+        {
+          "ordem": 1,
+          "operacao": "Definir"
+        },
+        {
+          "ordem": 2,
+          "operacao": "Sequenciar"
+        },
+        {
+          "ordem": 3,
+          "operacao": "Comparar"
+        },
+        {
+          "ordem": 4,
+          "operacao": "Reconhecer perspectiva"
+        },
+        {
+          "ordem": 5,
+          "operacao": "Aplicar"
+        }
       ]
     }
   }

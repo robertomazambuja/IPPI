@@ -251,6 +251,25 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Criação dos arquivos do Agente 0 (versão revisada)
+
+**Mudanças:**
+- Criação de `orientacoes/decompositor-orientacao.md`: define identidade, escopo, regra de abstração das micro-habilidades e proibições do Decompositor
+- Criação de `skills/decompositor-skill.md`: guia de execução em 5 passos com exemplos, tabela de validação e armadilhas comuns
+- Escopo definido: Decompositor escreve micro-habilidades no nível operação + objeto conceitual — nunca nomeia autores, fontes ou exemplos específicos (território do Agente 1)
+- `autores_preferidos` e `elementos_desejáveis` do briefing passam integralmente para todos os capítulos do CSV, sem distribuição pelo Decompositor
+- Campo `conteudos_nucleares` removido do CSV — responsabilidade do Agente 1 via `matriz-conteudosenem.json`
+
+### 2026-06-06 – Adição de sequencia_pedagogica ao matriz-enem.json
+
+**Mudanças:**
+- Campo `sequencia_pedagogica` adicionado às 30 habilidades (H1–H30) em `contexto/matriz-enem.json`
+- Cada entrada contém uma lista de 4 a 5 operações cognitivas ordenadas (`ordem` + `operacao`), sem conteúdo específico
+- A sequência segue as regras do paradigma: primeira operação sempre Nível 1 (Definir, Classificar ou Sequenciar); última operação sempre igual à `operacao_predominante` da habilidade; sem repetição de operação em posições consecutivas
+- Objetivo: servir de template estrutural para o Agente 0 (Decompositor) ao decompor uma habilidade em micro-habilidades para o CSV
+
+
+
 ### 2026-06-03 – Integração do Agente 0 ao pipeline.py
 
 **Mudanças:**
