@@ -251,6 +251,11 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 2/6)
+
+**Mudanças:**
+- `skills/decompositor-skill.md`: `conteudos_nucleares` adicionado na tabela de extração do briefing (PASSO 1), na tabela de montagem do CSV (PASSO 4) e no checklist final
+
 ### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 1/6)
 
 **Mudanças:**

@@ -33,6 +33,7 @@ Extraia e normalize as seguintes variáveis:
 | PERGUNTA | `pergunta_unidade` | Sim |
 | CAPÍTULOS | `capitulos` | Sim (mínimo 1) |
 | AUTORES | `autores_preferidos` | Não |
+| CONTEUDOS | `conteudos_nucleares` | Não |
 | ELEMENTOS | `elementos_desejáveis` | Não |
 
 Se qualquer campo obrigatório estiver ausente ou ambíguo, interrompa e solicite correção.
@@ -148,9 +149,10 @@ Para cada capítulo, monte a linha completa:
 | `operacao_secao_2` | operação 2 |
 | ... | até micro_hab_6 / operacao_secao_6 |
 | `autores` | lista completa de `autores_preferidos` do briefing, separada por `; ` |
+| `conteudos_nucleares` | lista completa de `conteudos_nucleares` do briefing, separada por `; ` (se presente) |
 | `elementos_desejáveis` | campo `elementos_desejáveis` do briefing (se presente) |
 
-**Atenção:** `autores` é idêntico em todos os capítulos — cópia direta do briefing. O Agente 1 distribui por capítulo e por seção.
+**Atenção:** `autores` e `conteudos_nucleares` são idênticos em todos os capítulos — cópia direta do briefing, sem modificação. O Agente 1 é responsável por distribuir e usar esses conteúdos.
 
 ---
 
@@ -173,7 +175,7 @@ Para cada linha do CSV, confirme:
 **CSV:**
 - [ ] Nenhuma célula obrigatória está vazia?
 - [ ] Nenhuma célula contém quebra de linha?
-- [ ] `autores` e `elementos_desejáveis` passaram direto do briefing?
+- [ ] `autores`, `conteudos_nucleares` e `elementos_desejáveis` passaram direto do briefing?
 
 Se qualquer validação falhar, corrija antes de salvar.
 
@@ -214,7 +216,7 @@ Certo: copiar a lista completa para todos os capítulos
 - [ ] Usei a `sequencia_pedagogica` como template de operações?
 - [ ] Escrevi micro-habilidades no nível correto (operação + objeto conceitual)?
 - [ ] Nenhuma micro-habilidade nomeia autores ou fontes específicas?
-- [ ] `autores` e `elementos_desejáveis` passaram integralmente do briefing?
+- [ ] `autores`, `conteudos_nucleares` e `elementos_desejáveis` passaram integralmente do briefing?
 - [ ] Validei todas as operações e micro-habilidades antes de salvar?
 - [ ] CSV salvo em `input/[apostila]/instrucoes.csv`?
 
