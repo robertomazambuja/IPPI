@@ -251,6 +251,12 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Correção de desalinhamento de colunas no CSV
+
+**Mudanças:**
+- `skills/decompositor-skill.md`: aviso crítico adicionado sobre os 4 slots opcionais — quando a sequência tem 4 seções, obrigatório escrever 4 vírgulas vazias antes de `autores`, não 3
+- `pipeline.py`: mensagem de erro aprimorada para detectar e nomear o desalinhamento de colunas quando `operacao_secao_6` recebe valor de autores
+
 ### 2026-06-06 – Migração para autores_por_capitulo e conteudos_por_capitulo
 
 **Mudanças:**

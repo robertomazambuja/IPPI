@@ -152,6 +152,16 @@ Para cada capítulo, monte a linha completa:
 
 **Atenção:** `autores` e `conteudos_nucleares` variam por capítulo — cada linha do CSV recebe os dados específicos do seu capítulo, exatamente como o professor definiu. O Agente 1 decide como usar cada item dentro das seções.
 
+**CRÍTICO — alinhamento de colunas:** O CSV sempre tem as 6 colunas opcionais (`micro_hab_5`, `operacao_secao_5`, `micro_hab_6`, `operacao_secao_6`), mesmo quando a sequência tem só 4 seções. Quando não usadas, deixe-as vazias com vírgulas explícitas. Exemplo correto para 4 seções:
+
+```
+...,micro_hab_4_valor,Comparar,,,,Karl Marx; Max Weber,capital cultural
+                                ↑↑↑↑
+                     4 vírgulas para os 4 slots vazios
+```
+
+Se escrever apenas 3 vírgulas, `autores` cai em `operacao_secao_6` e o pipeline falha.
+
 ---
 
 ## PASSO 5 — VALIDAR ANTES DE SALVAR

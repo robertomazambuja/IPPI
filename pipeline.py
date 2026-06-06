@@ -618,9 +618,13 @@ def parse_csv(csv_path: Path) -> List[Dict]:
                 if op_col in reader.fieldnames:
                     op_value = row[op_col].strip()
                     if op_value and op_value not in OPERACOES_VALIDAS:
+                        # Detecta desalinhamento de colunas
+                        dica = ""
+                        if any(c in op_value for c in [';', ' e ', 'Marx', 'Weber']):
+                            dica = " PROVÁVEL CAUSA: desalinhamento de colunas — o Decompositor escreveu 3 vírgulas vazias em vez de 4 para os slots opcionais (micro_hab_5/6, operacao_secao_5/6)."
                         raise ValueError(
                             f"Operação inválida na linha {idx}, coluna '{op_col}': '{op_value}'. "
-                            f"Deve ser um de: {', '.join(sorted(OPERACOES_VALIDAS))}"
+                            f"Deve ser um de: {', '.join(sorted(OPERACOES_VALIDAS))}.{dica}"
                         )
 
             rows.append(row)

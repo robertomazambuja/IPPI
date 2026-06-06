@@ -1,0 +1,11 @@
+2026-06-06 02:42:10,936 [INFO] __main__: Agente 0 — Decompositor
+2026-06-06 02:42:10,937 [INFO] __main__: Briefing : C:\Users\Roberto\Desktop\IPPI\input\apostila-h14-teste\briefing.json
+2026-06-06 02:42:10,937 [INFO] __main__: Output   : input/apostila-h14-teste/instrucoes.csv
+2026-06-06 02:42:10,939 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-h14-teste/instrucoes.csv
+2026-06-06 02:42:12,259 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:42:17,842 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:42:50,914 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:42:59,242 [INFO] __main__: Apostila : apostila-h14-teste
+2026-06-06 02:42:59,242 [INFO] __main__: Agentes  : 0, 1
+2026-06-06 02:42:59,242 [INFO] __main__: Forçar   : não
