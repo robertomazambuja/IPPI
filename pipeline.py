@@ -381,6 +381,9 @@ def run_agente1(
 
     andaime_str = "\n".join(andaime_secoes) if andaime_secoes else "(Não informado)"
 
+    conteudos_nucleares = row.get('conteudos_nucleares', '').strip()
+    conteudos_str = conteudos_nucleares if conteudos_nucleares else "(Nenhum)"
+
     elementos_desejáveis = row.get('elementos_desejáveis', '').strip()
     elementos_str = elementos_desejáveis if elementos_desejáveis else "(Nenhum)"
 
@@ -404,7 +407,10 @@ DADOS DO CAPÍTULO ATUAL:
 MICRO-HABILIDADES PRESCRITAS (operação + objeto conceitual — você materializa com conteúdo específico):
 {andaime_str}
 
-AUTORES DISPONÍVEIS (você distribui entre capítulos e seções por afinidade com o objeto conceitual):
+CONTEÚDOS OBRIGATÓRIOS DO PROFESSOR (todos devem aparecer em pelo menos uma seção):
+{conteudos_str}
+
+AUTORES DISPONÍVEIS (você distribui entre seções por afinidade com o objeto conceitual):
 {row['autores']}
 
 ELEMENTOS DIDÁTICOS DESEJÁVEIS:
@@ -589,6 +595,7 @@ def parse_csv(csv_path: Path) -> List[Dict]:
     COLUNAS_OPCIONAIS = [
         'micro_hab_5', 'operacao_secao_5',
         'micro_hab_6', 'operacao_secao_6',
+        'conteudos_nucleares',
         'elementos_desejáveis'
     ]
 

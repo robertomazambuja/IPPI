@@ -251,6 +251,12 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Adição de conteudos_nucleares do professor (passos 5 e 6/6)
+
+**Mudanças:**
+- `pipeline.py`: `conteudos_nucleares` adicionado a `COLUNAS_OPCIONAIS`; variável `conteudos_str` extraída do CSV; user message do Agente 1 inclui bloco "CONTEÚDOS OBRIGATÓRIOS DO PROFESSOR"
+- Arquivo estava truncado na linha 903 — restaurado
+
 ### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 4/6)
 
 **Mudanças:**
