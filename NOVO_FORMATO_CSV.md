@@ -29,7 +29,7 @@ O CSV é o documento de passagem entre o Agente 0 (Decompositor) e o Agente 1 (A
 | `operacao_secao_4` | Operação elementar da seção 4 | `Comparar` |
 | `autores` | Lista completa de autores do briefing | `Karl Marx; Max Weber; Pierre Bourdieu; Lélia Gonzalez` |
 
-### Colunas opcionais
+### Colunas opcionais (presentes quando o professor as informou no briefing)
 
 | Coluna | Descrição |
 |--------|-----------|
@@ -37,6 +37,7 @@ O CSV é o documento de passagem entre o Agente 0 (Decompositor) e o Agente 1 (A
 | `operacao_secao_5` | Operação elementar da seção 5 |
 | `micro_hab_6` | Micro-habilidade da seção 6 (se houver 6 seções) |
 | `operacao_secao_6` | Operação elementar da seção 6 |
+| `conteudos_nucleares` | Conteúdos mandatórios definidos pelo professor — o Agente 1 é obrigado a cobri-los. Separados por `; `. Idêntico em todos os capítulos da unidade. |
 | `elementos_desejáveis` | Direcionamentos pedagógicos específicos do professor |
 
 ---
@@ -94,7 +95,8 @@ O Agente 1 recebe as micro-habilidades como **estrutura cognitiva prescrita** e 
 
 **O que o Agente 1 decide:**
 - Quais autores da lista vão em quais seções
-- Quais conteúdos de `matriz-conteudosenem.json` cobrir em cada seção
+- Quais conteúdos de `matriz-conteudosenem.json` cobrir em cada seção (complementares)
+- Como distribuir os `conteudos_nucleares` do professor entre as seções (obrigatório cobri-los todos)
 - Exemplo-âncora de cada seção
 - Peso de cada seção (Principal / Secundário / Passagem)
 - Quais autores merecem box biográfico
@@ -119,4 +121,4 @@ O `pipeline.py` valida:
 
 - **`autores`** é a lista completa do briefing, idêntica em todos os capítulos da mesma unidade. O Agente 1 distribui por seção.
 - **`elementos_desejáveis`** é opcional. Se ausente no briefing, deixar em branco.
-- **`conteudos_nucleares` foi removido.** O Agente 1 obtém os conteúdos diretamente de `contexto/matriz-conteudosenem.json`, filtrados por habilidade e disciplina.
+- **`conteudos_nucleares`** é opcional. Quando presente, contém os conteúdos mandatórios que o professor definiu no briefing — o Agente 1 é obrigado a cobri-los em pelo menos uma seção. O Agente 1 complementa com conteúdos adicionais de `contexto/matriz-conteudosenem.json`.

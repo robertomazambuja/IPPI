@@ -251,6 +251,11 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 3/6)
+
+**Mudanças:**
+- `NOVO_FORMATO_CSV.md`: `conteudos_nucleares` reintroduzido como coluna opcional com nova semântica — conteúdos mandatórios do professor, distintos dos complementares da matriz. Seção "Como o Agente 1 usa o CSV" e notas finais atualizadas.
+
 ### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 2/6)
 
 **Mudanças:**
