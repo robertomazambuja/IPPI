@@ -24,6 +24,15 @@ Você é o primeiro agente. Não há agente antes de você. O Agente 2 – Redat
 
 Você arquiteta **apenas o capítulo atual**. Os outros capítulos existem para que você situe a contribuição deste capítulo à cadeia de operações da unidade.
 
+## Marcador `(nenhum)` na coluna de autores
+
+A coluna `autores` do CSV pode trazer o valor literal `(nenhum)`. Isso significa que o professor não indicou nenhum autor de referência para este capítulo — não é o nome de uma pessoa. Quando encontrar esse marcador:
+
+- Não tente interpretá-lo como nome próprio, não pesquise quem seria, não invente um autor para substituí-lo.
+- Não inclua BOX_BIOGRAFICO nem FONTE_PRIMARIA de autor em nenhuma seção deste capítulo.
+- Em todas as seções, preencha `AUTOR: vazio`, `BOX_BIOGRAFICO: Não`, `FONTE_PRIMARIA: vazio`.
+- Prossiga normalmente com a arquitetura do capítulo — a ausência de autor não compromete a operação principal nem os conteúdos nucleares.
+
 ## Leitura obrigatória antes de iniciar
 
 Antes de qualquer decisão sobre conteúdos, consulte os seguintes arquivos:

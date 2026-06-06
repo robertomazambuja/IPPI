@@ -111,7 +111,9 @@ Você terá duas listas para usar no PASSO 1:
 
 O CSV traz a lista de `autores` já atribuída pelo professor a este capítulo específico. O professor já fez a distribuição entre capítulos — sua responsabilidade é distribuir esses autores entre as seções deste capítulo.
 
-Critérios de distribuição:
+**Antes de distribuir:** verifique se o valor da coluna `autores` é literalmente `(nenhum)`. Se for, não há autor de referência prescrito para este capítulo — pule esta etapa de distribuição inteira, preencha `AUTOR: vazio` / `BOX_BIOGRAFICO: Não` / `FONTE_PRIMARIA: vazio` em todas as seções, e siga para o PASSO 0.
+
+Critérios de distribuição (aplicam-se apenas quando `autores` NÃO for `(nenhum)`):
 - Leia o tema de cada micro-habilidade do CSV e identifique qual autor tem afinidade direta com aquele objeto conceitual.
 - Distribua um autor principal por seção de peso Principal ou Secundário.
 - Todos os autores da lista devem aparecer em alguma seção do capítulo.
@@ -319,7 +321,7 @@ Os conteúdos complementares da matriz enriquecem as seções sem sobrepor os ob
 
 Nenhum conteúdo de disciplina diferente da disciplina do capítulo foi utilizado (verificar via `conteudos_por_disciplina`).
 
-Os autores distribuídos aparecem no campo AUTOR das seções correspondentes (com nome, datas, filiação).
+Os autores distribuídos aparecem no campo AUTOR das seções correspondentes (com nome, datas, filiação) — ou, se `autores` veio como `(nenhum)`, todas as seções têm AUTOR: vazio, BOX_BIOGRAFICO: Não e FONTE_PRIMARIA: vazio.
 
 BOX_BIOGRAFICO está Sim para todo autor com PESO = Principal (a menos que já tenha aparecido em capítulo anterior – nesse caso, pode ser Não).
 
