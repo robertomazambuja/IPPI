@@ -251,6 +251,18 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Inclusão da matriz-conteudosenem.json na lista de leitura do Agente 1
+
+**Mudanças:**
+- `pipeline.py` (`run_agente1`, construção de `arquivos_a_ler`): adicionada `contexto/matriz-conteudosenem.json` à lista de "ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR" enviada ao Agente 1 — a lista informava apenas `principios-pedagogicos-agente1.md` e o contexto disciplinar, mas `agente1-orientacao.md` e `agente1-skill.md` já tratavam a matriz de conteúdos como leitura obrigatória (PASSO -1, consulta a `conteudos_por_disciplina` e `conteudos_prioritarios`). A lista do pipeline estava desalinhada com a própria orientação do agente
+
+### 2026-06-06 – Alinhamento do Agente 1 ao marcador `(nenhum)` de autores
+
+**Mudanças:**
+- `orientacoes/agente1-orientacao.md`: nova seção "Marcador `(nenhum)` na coluna de autores" — instrui o Agente 1 a reconhecer o valor literal `(nenhum)` na coluna `autores` do CSV como "nenhum autor de referência prescrito para este capítulo" (não um nome próprio), preenchendo `AUTOR: vazio`, `BOX_BIOGRAFICO: Não` e `FONTE_PRIMARIA: vazio` em todas as seções
+- `skills/agente1-skill.md`: PASSO -1 (distribuição de autores) recebe checagem prévia do marcador — quando presente, pula a distribuição inteira e segue direto para o PASSO 0; checklist final atualizado para contemplar o caso sem autor prescrito
+- Fecha a lacuna apontada no handoff Mediador ↔ Decompositor ↔ Agente 1: o Mediador já registra listas vazias `[]` quando o professor diz "nenhum", e o Decompositor já as converte em `(nenhum)` na célula `autores` do CSV (ver seção "Regra para listas de autores vazias" em `decompositor-orientacao.md`) — faltava o Agente 1 saber interpretar esse marcador em vez de tentar tratá-lo como autor real
+
 ### 2026-06-06 – Correção de desalinhamento de colunas no CSV
 
 **Mudanças:**
