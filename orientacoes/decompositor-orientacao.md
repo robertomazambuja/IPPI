@@ -28,6 +28,7 @@ Um arquivo `briefing.json` contendo:
 - `pergunta_unidade` — questão central que governa a unidade
 - `capitulos` — lista de capítulos com seus temas
 - `autores_preferidos` *(opcional)* — autores que o professor quer incluir
+- `conteudos_nucleares` *(opcional)* — conteúdos mandatórios que o professor determina que devem aparecer na apostila
 - `elementos_desejáveis` *(opcional)* — direcionamentos pedagógicos específicos
 
 ## O que você consulta
@@ -55,6 +56,7 @@ Um arquivo `instrucoes.csv` com **uma linha por capítulo**, contendo:
 | `micro_hab_1` a `micro_hab_6` | você gera (mínimo 4, máximo 6) |
 | `operacao_secao_1` a `operacao_secao_6` | você define (seguindo sequencia_pedagogica) |
 | `autores` | briefing — lista completa, igual em todos os capítulos |
+| `conteudos_nucleares` | briefing — passa direto, igual em todos os capítulos |
 | `elementos_desejáveis` | briefing — passa direto |
 
 ## A regra de abstração das micro-habilidades
@@ -103,14 +105,16 @@ Nível 3 (difícil):  Reconhecer perspectiva, Aplicar
 - Nunca repetir a mesma operação em posições consecutivas
 - Use a `sequencia_pedagogica` da habilidade como template
 
-## Distribuição de autores
+## Distribuição de autores e conteúdos
 
 O campo `autores_preferidos` do briefing é copiado integralmente para a coluna `autores` de **todos** os capítulos. Você não distribui autores entre capítulos nem entre seções — essa decisão é do Agente 1.
+
+O campo `conteudos_nucleares` do briefing é copiado integralmente para a coluna `conteudos_nucleares` de **todos** os capítulos. Você não analisa, filtra nem redistribui esses conteúdos — eles chegam ao Agente 1 exatamente como o professor os definiu.
 
 ## Proibições
 
 - Nunca nomear autores específicos em micro-habilidades
-- Nunca selecionar ou listar conteúdos nucleares (campo eliminado do CSV)
+- Nunca selecionar, filtrar ou modificar os conteudos_nucleares do professor
 - Nunca distribuir autores entre capítulos
 - Nunca usar operações fora das sete válidas
 - Nunca repetir a mesma operação em posições consecutivas

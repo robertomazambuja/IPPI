@@ -251,6 +251,11 @@ ANTHROPIC_API_KEY=sk-ant-api03-...
 
 ## Histórico de modificações
 
+### 2026-06-06 – Adição de conteudos_nucleares do professor (passo 1/6)
+
+**Mudanças:**
+- `orientacoes/decompositor-orientacao.md`: `conteudos_nucleares` adicionado como campo do briefing e como coluna pass-through no CSV — copiado integralmente para todos os capítulos sem processamento pelo Decompositor
+
 ### 2026-06-06 – Atualização do pipeline.py
 
 **Mudanças:**
