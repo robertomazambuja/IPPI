@@ -1,0 +1,21 @@
+{
+  "disciplina": "Sociologia",
+  "habilidade_enem": "H14",
+  "unidade": "Unidade 1 — Estrutura social e desigualdade — classe raça e gênero no Brasil",
+  "pergunta_unidade": "Como as estruturas sociais constrangem e moldam os indivíduos — e como os indivíduos as transformam?",
+  "capitulos": [
+    "Capítulo 1: Estrutura social e estratificação social",
+    "Capítulo 2: Desigualdade, raça e gênero no Brasil"
+  ],
+  "autores_preferidos": [
+    "Karl Marx",
+    "Max Weber",
+    "Pierre Bourdieu",
+    "Lélia Gonzalez",
+    "Carlos Hasenbalg",
+    "Octavio Ianni",
+    "Flávia Rios",
+    "bell hooks"
+  ],
+  "elementos_desejáveis": "usar dados do IBGE"
+}

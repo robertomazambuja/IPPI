@@ -1,0 +1,23 @@
+2026-06-06 02:01:57,474 [INFO] __main__: Apostila : apostila-h14-teste
+2026-06-06 02:01:57,475 [INFO] __main__: Agentes  : 1
+2026-06-06 02:01:57,475 [INFO] __main__: Forçar   : não
+2026-06-06 02:01:57,478 [INFO] __main__: CSV carregado: 2 capítulos (novo formato com andaime)
+2026-06-06 02:01:57,478 [INFO] __main__: Unidades : 1
+2026-06-06 02:01:57,478 [INFO] __main__: Capítulos: 2
+2026-06-06 02:01:57,481 [INFO] __main__: Unidade 1: Unidade 1 — Estrutura social e desigualdade — classe raça e gênero no Brasil
+2026-06-06 02:01:57,550 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1: Estrutura social e estratificação social
+2026-06-06 02:01:57,579 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1: Estrutura social e estratificação social
+2026-06-06 02:01:59,090 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:02:04,506 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:03:55,839 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:04:08,541 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2: Desigualdade raça e gênero no Brasil
+2026-06-06 02:04:08,544 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2: Desigualdade raça e gênero no Brasil
+2026-06-06 02:04:09,525 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:04:14,376 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:06:13,639 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 02:06:25,923 [INFO] __main__: Pipeline concluído.
+2026-06-06 02:06:25,923 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260606_020157.log
+2026-06-06 02:06:25,923 [INFO] __main__: ======================================================================
+
