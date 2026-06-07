@@ -159,6 +159,10 @@ acessar a informação. Isso amplia quem pode participar da esfera pública.
 
 ## Procedimento
 
+### Passo 0: Confirmar normalização
+
+O texto recebido do Agente 3 já tem CONTEXTO_OPERACAO, FONTE e AUTOR normalizados. Se ainda houver FONTE em Formato A ou B, ou AUTOR sem ancoragem, normalize antes de prosseguir (o Agente 3 pode ter falhado em casos extremos).
+
 ### Passo 1: Leitura completa
 
 Leia o texto inteiro. Mapeie:
@@ -202,34 +206,79 @@ Salve o texto reescrito no mesmo caminho, sobrescrevendo o original.
 
 ## Formato de Comentários — Referência Completa
 
+Preserve todos os comentários abaixo exatamente como estão — o Agente 5 depende deles.
+
 ```markdown
-<!-- [PERSPECTIVA: Nome/Filiação] -->
-Texto da perspectiva aqui...
-<!-- [/PERSPECTIVA] -->
+<!-- [CONTEXTO_OPERACAO] -->          ← metadado de abertura, não reescrever
+**Habilidade:** ...
+**Operação principal:** ...
+**Pergunta do capítulo:** ...
+**Por que importa:** ...
+<!-- [/CONTEXTO_OPERACAO] -->
 
 <!-- [DEFINICAO] -->
 Definição aqui...
 <!-- [/DEFINICAO] -->
 
+<!-- [CLASSIFICACAO] -->
+Introdução dos critérios de classificação...
+<!-- [/CLASSIFICACAO] -->
+
+<!-- [SUBTIPO: Nome] -->
+Texto do subtipo...
+<!-- [/SUBTIPO] -->
+
+<!-- [PERSPECTIVA: Nome (datas)] -->
+Texto da perspectiva aqui...
+<!-- [/PERSPECTIVA] -->
+
 <!-- [EXEMPLO: Descrição breve] -->
 Exemplo integrado aqui...
 <!-- [/EXEMPLO] -->
 
-<!-- [AUTOR: Nome (datas) Nacionalidade] -->
-Contribuição do autor aqui... (ou box biográfico)
+<!-- [CAUSA] -->
+Descrição narrativa das causas...
+<!-- [/CAUSA] -->
+
+<!-- [CONSEQUENCIA] -->
+Descrição narrativa das consequências...
+<!-- [/CONSEQUENCIA] -->
+
+<!-- [RELACAO_CAUSAL] -->
+Síntese da relação causal...
+<!-- [/RELACAO_CAUSAL] -->
+
+<!-- [INTRODUCAO_COMPARACAO] -->
+Introdução da seção comparativa...
+<!-- [/INTRODUCAO_COMPARACAO] -->
+
+<!-- [COMPARACAO] -->
+Comparação explícita...
+<!-- [/COMPARACAO] -->
+
+<!-- [APLICACAO: Descrição] -->
+Aplicação ao contexto concreto...
+<!-- [/APLICACAO] -->
+
+<!-- [CONCLUSAO_PARCIAL] -->
+Síntese parcial da seção...
+<!-- [/CONCLUSAO_PARCIAL] -->
+
+<!-- [RESULTADO] -->
+Resultado da aplicação comparativa...
+<!-- [/RESULTADO] -->
+
+<!-- [AUTOR: Nome (datas) País | ref=tipo] -->
+Box biográfico...
 <!-- [/AUTOR] -->
+
+<!-- [FONTE] -->
+SOBRENOME, Nome. *Título*. Cidade: Editora, Ano.
+<!-- [/FONTE] -->
 
 <!-- [FONTE_PRIMARIA: Obra, Autor, Ano] -->
 Mediação e citação parafrazeada aqui...
 <!-- [/FONTE_PRIMARIA] -->
-
-<!-- [CAUSAS] -->
-Descrição narrativa das causas...
-<!-- [/CAUSAS] -->
-
-<!-- [CONSEQUENCIAS] -->
-Descrição narrativa das consequências...
-<!-- [/CONSEQUENCIAS] -->
 
 <!-- [VERIFICACAO: Q1] -->
 1. Pergunta?
@@ -237,6 +286,10 @@ Descrição narrativa das consequências...
    (b) Opção
    Resposta: (b)
 <!-- [/VERIFICACAO] -->
+
+<!-- [SINTESE] -->
+Síntese final do capítulo...
+<!-- [/SINTESE] -->
 
 <!-- [ENCADEAMENTO] -->
 Transição para próximo capítulo...
