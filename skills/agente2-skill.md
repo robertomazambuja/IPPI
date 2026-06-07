@@ -59,7 +59,9 @@ O core define para cada seção um `TIPO_OPERACAO`. Você deve gerar os parágra
 
 [EXEMPLO] [Use o EXEMPLO_ANCOLA do core. Se for uma situação concreta, descreva em 1-2 frases.]
 
-[AUTOR] (se houver) [Nome completo, datas, filiação. Ex: “Pierre Bourdieu (1930–2002), sociólogo francês.”] – se BOX_BIOGRAFICO = Sim, adicione uma segunda frase com a contribuição relevante (máx 20 palavras).
+[AUTOR: Nome Completo (datas) País/Filiação] (se BOX_BIOGRAFICO = Sim)
+Texto biográfico: função, obra principal. Máximo 20 palavras. Sem adjetivos.
+[/AUTOR]
 
 text
 
@@ -140,19 +142,56 @@ text
 
 ## Boxes especiais
 
-### Box biográfico (se `BOX_BIOGRAFICO = Sim`)
+### Box biográfico — AUTOR (se `BOX_BIOGRAFICO = Sim`)
 
-Imediatamente após a primeira menção do autor, em uma nova linha, entre colchetes ou em itálico:
+Escreva sempre como bloco com abertura e fechamento explícitos. Inclua nome e datas na tag de abertura:
 
-`> *[Karl Marx (1818–1883), filósofo alemão, autor de O Capital.]*`
+```
+[AUTOR: Nome Completo (datas) País/Filiação]
+Texto biográfico: função, obra principal. Máximo 20 palavras. Sem adjetivos.
+[/AUTOR]
+```
 
-Máximo 20 palavras. Sem adjetivos.
+Quando o `[AUTOR]` está **aninhado** dentro do bloco temático, nenhum atributo extra é necessário:
 
-### Fonte primária (se `FONTE_PRIMARIA` preenchida)
+```
+[DEFINIÇÃO]
+...texto...
+  [AUTOR: Karl Marx (1818–1883) Alemanha]
+  Filósofo e economista, autor de O Capital (1867).
+  [/AUTOR]
+[/DEFINIÇÃO]
+```
 
-Use o formato:
+Quando o `[AUTOR]` está **fora** do bloco temático (após o fechamento), adicione `ref=tipo`:
 
-`[FONTE] [Identificação: autor, obra, ano.] “[Trecho direto com aspas, se for breve]” – ou – [Paráfrase em nossa voz.]`
+```
+[/DEFINIÇÃO]
+[AUTOR: Karl Marx (1818–1883) Alemanha | ref=definicao]
+Filósofo e economista, autor de O Capital (1867).
+[/AUTOR]
+```
+
+Use como `ref=` o tipo do bloco fechado imediatamente antes: `definicao`, `perspectiva`, `classificacao`, `causa`, `relacao-causal`, etc.
+
+### Fonte
+
+Escreva sempre como bloco com abertura e fechamento explícitos:
+
+```
+[FONTE]
+SOBRENOME, Nome. *Título*. Cidade: Editora, Ano.
+[/FONTE]
+```
+
+Se houver trecho direto, inclua-o dentro do bloco, após a referência:
+
+```
+[FONTE]
+SOBRENOME, Nome. *Título*. Cidade: Editora, Ano.
+“Trecho citado diretamente.”
+[/FONTE]
+```
 
 A citação direta é permitida **apenas como evidência**, não como recurso estilístico.
 
@@ -177,9 +216,10 @@ Antes de entregar `texto.md`, confirme:
 - [ ] Cada seção tem um cabeçalho idêntico ao `CABECALHO` do core.
 - [ ] Dentro de cada seção, o primeiro rótulo corresponde ao `TIPO_OPERACAO` (ex: `[DEFINIÇÃO]`).
 - [ ] Todos os `EXEMPLO_ANCOLA` do core foram usados.
-- [ ] Todos os `AUTOR` foram introduzidos com nome, datas e filiação.
+- [ ] Todos os `[AUTOR]` foram escritos como bloco com `[/AUTOR]` de fechamento, com nome e datas na tag de abertura.
+- [ ] `[AUTOR]` aninhado dentro do bloco pai sempre que possível; quando fora, inclui `ref=tipo`.
 - [ ] Os boxes biográficos (se `Sim`) estão logo após a primeira menção, com ≤20 palavras.
-- [ ] As `FONTE_PRIMARIA` foram incluídas conforme formato.
+- [ ] As fontes foram incluídas como bloco `[FONTE]` / `[/FONTE]` com a referência bibliográfica dentro.
 - [ ] As verificações estão presentes exatamente onde `VERIFICACAO: Sim` e ausentes onde `Não`.
 - [ ] Cada pergunta de verificação tem sua resposta indicada.
 - [ ] Nenhuma frase contém metáfora, exclamação, advérbio de opinião ou “nós”.
