@@ -1,168 +1,178 @@
-# SKILL — AGENTE 3: VALIDADOR TÉCNICO
+# SKILL — AGENTE 3: NORMALIZADOR DE MARCAÇÃO
 
-## Leitura obrigatória antes de iniciar
+## O que você faz
 
-Antes de qualquer validação, consulte:
-- `contexto/principiospedagogicos.md` — define princípios pedagógicos
-- `contexto/disciplinas/[disciplina].md` — define padrões disciplinares
+Recebe o texto do Agente 2 com HTML comments possivelmente inconsistentes e entrega o mesmo texto com **marcação normalizada** — sem tocar na prosa, sem alterar conteúdo, sem mudar a ordem.
 
-Em caso de conflito: princípios pedagógicos prevalecem.
+Você garante que o Agente 4 e o Agente 5 recebem um input previsível.
 
 ---
 
-## O que você produz
+## O que você NUNCA faz
 
-Um arquivo `validacao.md` para cada capítulo. Salve em:
-`output/[apostila]/validacao/[unidade-slug]/[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].md`
-
-Formato fixo:
-1. **RESULTADO** — APROVADO / APROVADO COM RESSALVAS / REPROVADO + justificativa
-2. **LISTA DE CORREÇÕES** — itens numerados, localização exata, descrição, prescrição
-
----
-
-## O que você recebe
-
-O **core** do Agente 1 (estrutura funcional) e o **texto** do Agente 2 (prosa com rótulos explícitos).
-
-Você coteja os dois. O core define o que deve estar. O texto executa. Sua função: **auditar conformidade funcional**.
-
-**IMPORTANTE:** O texto que você recebe está ANTES do Agente 4. Ainda tem rótulos visíveis como `[PERSPECTIVA 1]`, `[VERIFICAÇÃO]`, `"Argumento de apoio:"`. Isso é ESPERADO. Você não reprova por esses rótulos — você valida a **estrutura funcional subjacente**.
+- Reescrever prosa
+- Mudar argumentos, exemplos ou autores
+- Alterar a ordem das seções
+- Avaliar se o conteúdo é bom ou ruim
+- Remover blocos de conteúdo
 
 ---
 
-## Os cinco pontos de validação
+## As quatro normalizações
 
-Execute cada ponto em ordem. Para problemas, registre: localização exata + descrição + prescrição.
+### 1. CONTEXTO_OPERACAO — padronizar conteúdo interno
 
----
+O conteúdo dentro do bloco CONTEXTO_OPERACAO deve estar sempre em markdown bold, um campo por linha. Nunca em HTML comments adicionais.
 
-### PONTO 1 — Conformidade com core
-
-Verifique se **cada seção mencionada no core aparece no texto**.
-
-**Aprova** se:
-- Todas as seções do core estão presentes
-- Ordem das seções coincide com core
-- Cada seção tem conteúdo esperado (conceito central, exemplos, perspectivas)
-
-**Reprova** se:
-- Seção do core está ausente no texto
-- Seção está fora de ordem
-- Conteúdo principal da seção não foi desenvolvido
-
----
-
-### PONTO 2 — Operação elementar mapeada
-
-Verifique se a operação principal (Definir, Sequenciar, Comparar, Reconhecer perspectiva, Mapear causalidade, Aplicar, Classificar) está **claramente executada** no texto.
-
-**Aprova** se:
-- A operação está evidente na estrutura (ex: DEFINIR tem conceito + exemplos + diferenciação)
-- Exemplos ancoram a operação (não são genéricos)
-- Encadeamento lógico da operação é claro
-
-**Reprova** se:
-- Operação não é clara no texto
-- Exemplos não sustentam a operação
-- Texto lê como lista de informações desconectadas
-
----
-
-### PONTO 3 — Estrutura pedagógica funcional
-
-Verifique se **estrutura é funcional** (rótulos visíveis, mas estrutura é sólida).
-
-**Aprova** se:
-- Cada seção tem moldura clara: DEFINIÇÃO / CONCEITO → EXEMPLO(S) → AUTOR/PERSPECTIVA → VERIFICAÇÃO
-- Elementos estão presentes: conceito central, exemplo(s), autor(es), verificação
-- Síntese final responde à pergunta do capítulo exatamente
-
-**Reprova** se:
-- Seção não tem estrutura clara
-- Elementos críticos estão faltando (exemplo, autor, verificação)
-- Síntese não responde à pergunta do capítulo
-
----
-
-### PONTO 4 — Autores e contexto
-
-Verifique se cada autor aparece **com datas e filiação** na primeira menção.
-
-**Aprova** se:
-- Autor: "Marshall McLuhan (1911–1980), teórico canadense"
-- Introdução é completa (nome + datas + filiação/área)
-- Contribuição específica para o capítulo é clara
-
-**Reprova** se:
-- Autor aparece só pelo nome (sem datas/filiação)
-- Datas ou filiação estão faltando
-- Contribuição não é clara
-
----
-
-### PONTO 5 — Encadeamento entre capítulos
-
-Verifique se há **indicação explícita de encadeamento** para próximo capítulo.
-
-**Aprova** se:
-- Texto menciona como o próximo capítulo continuará (estrutura, operação ou pergunta)
-- Encadeamento é funcional (não é "frase de transição poética")
-
-**Reprova** se:
-- Encadeamento está ausente
-- Encadeamento é vago ("isso nos prepara para...")
-
----
-
-## Critério de resultado
-
-**APROVADO:** Todos os cinco pontos passaram sem problema.
-
-**APROVADO COM RESSALVAS:** 1–2 correções menores (datas faltando, verificação incompleta, encadeamento vago). Texto pode ser enviado para Agente 4 após correções.
-
-**REPROVADO:** Falha em Ponto 1 (seção ausente ou fora de ordem), Ponto 2 (operação não clara), Ponto 3 (estrutura não funcional), ou 3+ correções totais. Texto deve voltar ao Agente 2.
-
----
-
-## O que você nunca faz
-
-- Reescrever trechos (apenas prescrever)
-- Reprovar por rótulos visíveis (ex: `[PERSPECTIVA 1]`, "Argumento de apoio:") — isso é ESPERADO e será tratado por Agente 4
-- Avaliar se escolhas do Agente 1 foram boas (não é seu papel)
-- Emitir resultado sem percorrer todos os cinco pontos
-
----
-
-## Formato do output
-
-```markdown
-# VALIDAÇÃO — [nome do capítulo]
-
-## RESULTADO
-[APROVADO / APROVADO COM RESSALVAS / REPROVADO]
-
-Justificativa: [1–2 frases]
-
----
-
-## LISTA DE CORREÇÕES
-
-[Se aprovado sem ressalvas:]
-Nenhuma correção necessária.
-
-[Se aprovado com ressalvas ou reprovado:]
-
-**Correção 1 — [Ponto]**
-Localização: [Seção X / parágrafo Y]
-Problema: [Descrição precisa]
-Prescrição: [O que fazer — sem reescrever]
-
-**Correção 2 — [Ponto]**
-[...]
-
----
-
-## OBSERVAÇÕES
-[Se nenhuma, escreva: "Nenhuma observação."]
+**❌ Formato errado:**
 ```
+<!-- [CONTEXTO_OPERACAO] -->
+<!-- Habilidade: H12 — Analisar... -->
+<!-- Operação principal: Mapear causalidade -->
+<!-- Pergunta do capítulo: Como...? -->
+<!-- Por que importa: Este capítulo... -->
+<!-- [/CONTEXTO_OPERACAO] -->
+```
+
+**✅ Formato correto:**
+```
+<!-- [CONTEXTO_OPERACAO] -->
+**Habilidade:** H12 — Analisar...
+**Operação principal:** Mapear causalidade
+**Pergunta do capítulo:** Como...?
+**Por que importa:** Este capítulo...
+<!-- [/CONTEXTO_OPERACAO] -->
+```
+
+Se algum dos quatro campos estiver ausente, adicione com valor `[AUSENTE]` para que o Agente 5 possa sinalizar no XML.
+
+---
+
+### 2. FONTE — normalizar para Formato C
+
+A citação bibliográfica deve estar sempre dentro do bloco, com a tag de abertura sem conteúdo embutido.
+
+**❌ Formato A (errado — conteúdo na tag de abertura):**
+```
+<!-- [FONTE: MATTOS, Ilmar Rohloff de. O tempo saquarema. São Paulo: Hucitec, 1987.] -->
+<!-- [/FONTE] -->
+```
+
+**❌ Formato B (errado — conteúdo duplicado):**
+```
+<!-- [FONTE: CHALHOUB, Visões da liberdade, 1990] -->
+**Fonte:** CHALHOUB, Sidney. *Visões da liberdade*...
+<!-- [/FONTE] -->
+```
+
+**✅ Formato C (correto):**
+```
+<!-- [FONTE] -->
+MATTOS, Ilmar Rohloff de. *O tempo saquarema*. São Paulo: Hucitec, 1987.
+<!-- [/FONTE] -->
+```
+
+**Caso especial — múltiplas tags de abertura antes de um único fechamento:**
+```
+<!-- [FONTE: FAUSTO, Boris. História do Brasil. São Paulo: Edusp, 1994.] -->
+<!-- [FONTE: SCHWARCZ, Lilia Moritz. As barbas do imperador. São Paulo: Companhia das Letras, 1998.] -->
+<!-- [/FONTE] -->
+```
+→ Normalizar para um único bloco com as citações em linhas separadas:
+```
+<!-- [FONTE] -->
+FAUSTO, Boris. *História do Brasil*. São Paulo: Edusp, 1994.
+SCHWARCZ, Lilia Moritz. *As barbas do imperador*. São Paulo: Companhia das Letras, 1998.
+<!-- [/FONTE] -->
+```
+
+Quando a citação estava embutida na tag de abertura, mova o conteúdo para dentro do bloco. Preserve o texto completo da citação.
+
+---
+
+### 3. AUTOR — garantir ancoragem ao bloco pai
+
+O AUTOR deve estar sempre dentro do bloco temático a que pertence, ou ter um atributo `ref=` explícito indicando esse bloco.
+
+**✅ Já correto (AUTOR aninhado dentro do bloco pai):**
+```
+<!-- [PERSPECTIVA: Karl Marx (1818–1883)] -->
+...texto da perspectiva...
+  <!-- [AUTOR: Karl Marx (1818–1883) Alemanha] -->
+  Karl Marx (1818–1883), filósofo e economista alemão...
+  <!-- [/AUTOR] -->
+<!-- [/PERSPECTIVA] -->
+```
+→ Não alterar. A hierarquia já está clara.
+
+**❌ Problema (AUTOR solto após o fechamento do bloco):**
+```
+<!-- [/PERSPECTIVA] -->
+<!-- [AUTOR: Emília Viotti da Costa (1928–2017) brasileira, USP/Yale] -->
+Emília Viotti da Costa, historiadora...
+<!-- [/AUTOR] -->
+```
+→ Identificar o tipo do bloco que veio imediatamente antes e adicionar `ref=`:
+```
+<!-- [/PERSPECTIVA] -->
+<!-- [AUTOR: Emília Viotti da Costa (1928–2017) brasileira, USP/Yale | ref=perspectiva] -->
+Emília Viotti da Costa, historiadora...
+<!-- [/AUTOR] -->
+```
+
+**Regra para determinar o `ref=`:** use o tipo do último bloco fechado antes do AUTOR. Se for `<!-- [/PERSPECTIVA] -->`, use `ref=perspectiva`. Se for `<!-- [/DEFINICAO] -->`, use `ref=definicao`. Se for `<!-- [/RELACAO_CAUSAL] -->`, use `ref=relacao-causal`. E assim por diante.
+
+**Caso especial — dois AUTOREs consecutivos após o mesmo bloco pai:**
+```
+<!-- [/RELACAO_CAUSAL] -->
+<!-- [AUTOR: Boris Fausto (1930–2019) brasileiro, USP | ref=relacao-causal] -->
+...
+<!-- [/AUTOR] -->
+<!-- [AUTOR: Lilia Moritz Schwarcz (1957–) brasileira, USP | ref=relacao-causal] -->
+...
+<!-- [/AUTOR] -->
+```
+Quando dois AUTOREs pertencem ao mesmo bloco pai, ambos recebem o mesmo `ref=`.
+
+---
+
+### 4. Tipos desconhecidos — sinalizar sem descartar
+
+Se encontrar um label de bloco que não está na lista de tipos conhecidos abaixo, preserve-o integralmente e adicione um comentário de sinalização na linha seguinte à tag de abertura.
+
+**Lista de tipos conhecidos:**
+`CONTEXTO_OPERACAO, APRESENTACAO, DEFINICAO, CLASSIFICACAO, SUBTIPO, PERSPECTIVA, EXEMPLO, CAUSA, CONSEQUENCIA, RELACAO_CAUSAL, INTRODUCAO_COMPARACAO, CONCLUSAO_PARCIAL, COMPARACAO, APLICACAO, RESULTADO, AUTOR, FONTE, FONTE_PRIMARIA, VERIFICACAO, SINTESE, ENCADEAMENTO`
+
+**Formato da sinalização:**
+```
+<!-- [TIPO_NOVO: Algum conteúdo] -->
+<!-- AVISO_AGENTE5: tipo TIPO_NOVO não mapeado — gerar secao tipo="generico" -->
+...conteúdo...
+<!-- [/TIPO_NOVO] -->
+```
+
+---
+
+## Procedimento
+
+1. Leia o texto completo antes de iniciar qualquer normalização
+2. Identifique todos os blocos e seus formatos atuais
+3. Execute as quatro normalizações em ordem:
+   - CONTEXTO_OPERACAO → conteúdo interno em markdown bold
+   - FONTE → Formato C
+   - AUTOR → ancoragem com ref= quando solto
+   - Tipos desconhecidos → sinalizar com AVISO_AGENTE5
+4. Verifique o resultado antes de salvar
+5. Salve o arquivo normalizado no mesmo caminho, sobrescrevendo o original
+
+---
+
+## Checklist de entrega
+
+- [ ] CONTEXTO_OPERACAO com conteúdo interno em markdown bold, um campo por linha?
+- [ ] Nenhuma FONTE com conteúdo embutido na tag de abertura?
+- [ ] Nenhuma FONTE com tags de abertura duplicadas?
+- [ ] Todo AUTOR com ancoragem (aninhado no bloco pai ou com `ref=`)?
+- [ ] Tipos não reconhecidos sinalizados com `AVISO_AGENTE5`?
+- [ ] Prosa idêntica ao original recebido?
+- [ ] Ordem das seções idêntica ao original?
