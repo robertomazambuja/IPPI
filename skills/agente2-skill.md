@@ -21,6 +21,33 @@ O texto segue a estrutura definida na orientação (Contexto de Operação, seç
 
 ---
 
+## Bloco de abertura — CONTEXTO_OPERACAO
+
+Todo capítulo abre com este bloco de metadados. Ele é escrito diretamente em HTML comment — não é prosa, não passa pelo processo de reescrita do Agente 4.
+
+**Formato único obrigatório — um campo por linha:**
+
+```
+<!-- [CONTEXTO_OPERACAO] -->
+**Habilidade:** H12 — Texto completo da habilidade BNCC.
+**Operação principal:** Mapear causalidade
+**Pergunta do capítulo:** Como a centralização...?
+**Por que importa:** Este capítulo fornece a estrutura que será usada no próximo para...
+<!-- [/CONTEXTO_OPERACAO] -->
+```
+
+Os quatro campos são obrigatórios. Cada campo ocupa sua própria linha. Nenhum pode ser omitido.
+
+❌ NUNCA usar HTML comments para o conteúdo interno:
+```
+<!-- [CONTEXTO_OPERACAO] -->
+<!-- Habilidade: H12 — ... -->
+<!-- Operação principal: Mapear causalidade -->
+<!-- [/CONTEXTO_OPERACAO] -->
+```
+
+---
+
 ## Como processar cada tipo de operação
 
 O core define para cada seção um `TIPO_OPERACAO`. Você deve gerar os parágrafos e rótulos correspondentes.
@@ -146,7 +173,7 @@ A citação direta é permitida **apenas como evidência**, não como recurso es
 
 Antes de entregar `texto.md`, confirme:
 
-- [ ] O texto começa com `**CONTEXTO DE OPERAÇÃO**` e os quatro subitens preenchidos.
+- [ ] O texto começa com o bloco `<!-- [CONTEXTO_OPERACAO] -->` com os quatro campos em markdown bold, um por linha.
 - [ ] Cada seção tem um cabeçalho idêntico ao `CABECALHO` do core.
 - [ ] Dentro de cada seção, o primeiro rótulo corresponde ao `TIPO_OPERACAO` (ex: `[DEFINIÇÃO]`).
 - [ ] Todos os `EXEMPLO_ANCOLA` do core foram usados.

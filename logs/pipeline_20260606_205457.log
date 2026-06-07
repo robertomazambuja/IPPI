@@ -1,0 +1,10 @@
+2026-06-06 20:54:58,154 [INFO] __main__: Agente 0 — Decompositor
+2026-06-06 20:54:58,154 [INFO] __main__: Briefing : C:\Users\Roberto\Desktop\IPPI\input\apostila-historia-em2\briefing.json
+2026-06-06 20:54:58,155 [INFO] __main__: Output   : input/apostila-historia-em2/instrucoes.csv
+2026-06-06 20:54:58,157 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-historia-em2/instrucoes.csv
+2026-06-06 20:55:00,176 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 20:55:04,166 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 20:55:42,587 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-06 20:55:54,582 [INFO] __main__: 
+Agente 0 concluído. Para continuar: python pipeline.py C:\Users\Roberto\Desktop\IPPI\input\apostila-historia-em2\instrucoes.csv
