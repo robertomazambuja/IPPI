@@ -2,10 +2,11 @@
 
 ## Leitura obrigatória antes de iniciar
 
-Antes de qualquer decisão, consulte:
+Antes de qualquer decisão, consulte na ordem:
 
-- `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões. Se este arquivo não existir, use o documento de princípios pedagógicos fornecido na orientação do Agente 1.
-- `contexto/disciplinas/[disciplina].md` — define os conteúdos e convenções específicas da disciplina.
+1. `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões estruturais. Prevalece sobre qualquer outro arquivo.
+2. `contexto/disciplinas/[disciplina].md` — convenções e cânones da disciplina do capítulo.
+3. `contexto/matriz-conteudosenem.json` — matriz de conteúdos prioritários por habilidade. Consulte **antes de definir qualquer seção**.
 
 Em caso de conflito entre qualquer instrução desta skill e os princípios pedagógicos, os princípios prevalecem.
 
@@ -28,13 +29,13 @@ O core é um conjunto de dados estruturados. O Agente 2 o transformará em texto
 - Lista de todos os capítulos desta unidade (nomes e ordem)
 - Lista de todas as unidades da apostila (para encadeamento macro)
 
-**Dados do capítulo atual (do CSV do professor):**
+**Dados do capítulo atual (do CSV gerado pelo Decompositor):**
 - Disciplina
 - Nome do capítulo
-- Habilidade (código BNCC + texto)
-- Conteúdos nucleares (lista)
-- Autores (lista com nomes)
-- Elementos obrigatórios (lista)
+- Habilidade (código ENEM + enunciado completo)
+- Micro-habilidades prescritas (`micro_hab_1` a `micro_hab_6`) com suas operações (`operacao_secao_1` a `operacao_secao_6`)
+- Autores (lista completa do briefing do professor)
+- Conteúdos nucleares (lista, quando fornecidos pelo professor)
 
 Você arquiteta **apenas o capítulo atual**. Os outros capítulos servem para você situar a contribuição deste capítulo à cadeia de operações da unidade.
 
@@ -79,6 +80,46 @@ A **operação principal** do capítulo é aquela que corresponde ao verbo da ha
 
 ## Estrutura do core (passos obrigatórios)
 
+### PASSO -1 – CONSULTA À MATRIZ DE CONTEÚDOS E DISTRIBUIÇÃO DE AUTORES
+
+Antes de preencher qualquer campo do core, execute estas duas consultas:
+
+**1. Conteúdos mandatórios do professor**
+
+Verifique se o CSV contém a coluna `conteudos_nucleares`. Se sim e não estiver vazia:
+- Esses conteúdos foram definidos pelo professor e são **obrigatórios** — devem aparecer em pelo menos uma seção do capítulo.
+- Registre-os separadamente como LISTA_OBRIGATÓRIA.
+- Nenhum pode ser ignorado.
+
+**2. Conteúdos complementares da matriz**
+
+1. Identifique o código da habilidade recebida do CSV (ex: `H14`).
+2. Abra `contexto/matriz-conteudosenem.json` e localize a entrada correspondente.
+3. Leia o campo `conteudos_por_disciplina` e extraia **apenas** a lista da disciplina do capítulo. Nunca use conteúdos de outra disciplina.
+4. Dentro dessa lista, identifique quais itens também aparecem em `conteudos_prioritarios` — esses têm precedência.
+5. Registre a lista resultante como LISTA_COMPLEMENTAR, ordenada por prioridade:
+   - Primeiro: itens em `conteudos_prioritarios` da habilidade para a disciplina
+   - Segundo: demais itens de `conteudos_por_disciplina[disciplina]`
+
+**Resultado esperado do PASSO -1 (conteúdos):**
+
+Você terá duas listas para usar no PASSO 1:
+- **LISTA_OBRIGATÓRIA** — do CSV do professor. Todos devem aparecer no capítulo.
+- **LISTA_COMPLEMENTAR** — da matriz. Usados para enriquecer e mostrar múltiplas aplicações da habilidade.
+
+**3. Distribuição de autores entre seções**
+
+O CSV traz a lista de `autores` já atribuída pelo professor a este capítulo específico. O professor já fez a distribuição entre capítulos — sua responsabilidade é distribuir esses autores entre as seções deste capítulo.
+
+**Antes de distribuir:** verifique se o valor da coluna `autores` é literalmente `(nenhum)`. Se for, não há autor de referência prescrito para este capítulo — pule esta etapa de distribuição inteira, preencha `AUTOR: vazio` / `BOX_BIOGRAFICO: Não` / `FONTE_PRIMARIA: vazio` em todas as seções, e siga para o PASSO 0.
+
+Critérios de distribuição (aplicam-se apenas quando `autores` NÃO for `(nenhum)`):
+- Leia o tema de cada micro-habilidade do CSV e identifique qual autor tem afinidade direta com aquele objeto conceitual.
+- Distribua um autor principal por seção de peso Principal ou Secundário.
+- Todos os autores da lista devem aparecer em alguma seção do capítulo.
+
+---
+
 ### PASSO 0 – METADADOS DO CAPÍTULO
 
 Preencha os seguintes campos no início do core:
@@ -96,8 +137,18 @@ PERGUNTA_DO_CAPITULO deve ser respondível apenas após executar a operação pr
 
 CONTRIBUICAO_A_UNIDADE deve indicar qual peça da resposta da unidade este capítulo fornece.
 
-PASSO 1 – SEQUÊNCIA DE SEÇÕES
-Estruture de 3 a 5 seções. Cada seção tem um tipo de operação (qualquer um da lista). A primeira seção deve ter a operação mais elementar (ex: Definir, Classificar ou Sequenciar). A última seção deve ter a OPERACAO_PRINCIPAL. A dificuldade da operação aumenta gradualmente.
+PASSO 1 – MATERIALIZAR AS SEÇÕES A PARTIR DAS MICRO-HABILIDADES
+
+O CSV prescreve a sequência de micro-habilidades e operações. Você não inventa a progressão — você a recebe e a executa.
+
+Para cada micro-habilidade do CSV (micro_hab_1 a micro_hab_4, ou até 6):
+1. Leia o objeto conceitual da micro-habilidade (ex: "Comparar perspectivas teóricas sobre estratificação")
+2. Selecione os conteúdos que materializam esse objeto conceitual, priorizando assim:
+   - Primeiro: itens da LISTA_OBRIGATÓRIA do PASSO -1 que têm afinidade com a micro-habilidade
+   - Segundo: itens da LISTA_COMPLEMENTAR que enriquecem a micro-habilidade
+3. Distribua os itens obrigatórios entre as seções de forma que todos apareçam ao menos uma vez no capítulo
+4. Atribua o autor distribuído no PASSO -1 para essa seção
+5. Preencha o template correspondente à operação prescrita
 
 Para cada seção, use o template correspondente ao seu tipo.
 
@@ -246,25 +297,29 @@ Nunca invente tipos de operação fora da lista.
 Verificação final (checklist obrigatório)
 Antes de entregar o core, responda a cada item. Se qualquer resposta for não, corrija.
 
+A consulta ao `contexto/matriz-conteudosenem.json` foi realizada e os conteúdos foram filtrados pela disciplina do capítulo.
+
+Os autores do CSV foram distribuídos entre as seções conforme afinidade com o objeto conceitual de cada micro-habilidade (ou, se `autores` for `(nenhum)`, todas as seções têm AUTOR: vazio, BOX_BIOGRAFICO: Não e FONTE_PRIMARIA: vazio).
+
 O cabeçalho contém HABILIDADE_BNCC, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
 
 OPERACAO_PRINCIPAL está na lista de operações elementares.
 
-O capítulo tem de 3 a 5 seções.
+O número de seções corresponde ao número de micro-habilidades prescritas no CSV (4 a 6).
 
-Cada seção tem TIPO_OPERACAO válido e o template correspondente preenchido.
+Cada seção tem TIPO_OPERACAO idêntico à operação prescrita no CSV para aquela posição.
 
-A primeira seção tem tipo elementar (Definir, Classificar ou Sequenciar).
-
-A última seção tem TIPO_OPERACAO idêntico à OPERACAO_PRINCIPAL.
+A sequência de operações segue a prescrição do CSV — não foi alterada.
 
 Toda seção com PESO = Principal ou Secundário tem EXEMPLO_ANCOLA preenchido.
 
 Nenhuma seção usa palavras como “tensão”, “mobilização”, “situação-problema”.
 
-Todos os conteúdos nucleares do CSV aparecem em pelo menos uma seção.
+Todos os itens da LISTA_OBRIGATÓRIA (conteudos_nucleares do professor) aparecem em pelo menos uma seção.
 
-Todos os autores do CSV aparecem no campo AUTOR de alguma seção (com nome, datas, filiação).
+Os conteúdos complementares da matriz enriquecem as seções sem sobrepor os obrigatórios.
+
+Nenhum conteúdo de disciplina diferente da disciplina do capítulo foi utilizado (verificar via `conteudos_por_disciplina`).
 
 BOX_BIOGRAFICO está Sim para todo autor com PESO = Principal (a menos que já tenha aparecido em capítulo anterior – nesse caso, pode ser Não).
 

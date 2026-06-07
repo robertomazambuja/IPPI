@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
 """
-Pipeline de geração de apostilas didáticas — VERSÃO 4 (FUNCIONAL + ESTILO + FORMATO)
+Pipeline de geração de apostilas didáticas — VERSÃO 5 (FUNCIONAL + NORMALIZAÇÃO + ESTILO + FORMATO)
 
 Combina:
 - Loop agêntico com tools (read_file, write_file)
 - Cache ephemeral para reduzir custo de tokens
 - Streaming para respostas longas
 - Retry com backoff exponencial para erros transitórios
-- 4 agentes automáticos: Arquiteto → Redator Funcional → Redator de Estilo → Formatador
+- 6 agentes: Decompositor → Arquiteto → Redator Funcional → Normalizador → Redator de Estilo → Formatador
 - Validação rigorosa de CSV
 - Logging estruturado com arquivo
-- Estrutura OOP clara e extensível
 
-Ordem de execução: 1 → 2 → 4 → 5
-
-Agente 3 (Validador) disponível sob demanda (muito custoso, normalmente desnecessário).
+Ordem de execução padrão (modo manual):  1 → 2 → 3 → 4 → 5
+Modo briefing (com Agente 0):            0 → 1 → 2 → 3 → 4 → 5
 
 Uso:
+    # Modo briefing: Agente 0 gera o CSV, depois roda 1-5
+    python pipeline.py --briefing input/apostila-sociologia/briefing.json --apostila apostila-sociologia
+
+    # Modo briefing: só gera o CSV (Agente 0)
+    python pipeline.py --briefing input/apostila-sociologia/briefing.json --apostila apostila-sociologia --agentes 0
+
+    # Modo manual: professor já tem o CSV
     python pipeline.py input/apostila-historia-midia/instrucoes.csv
     python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2
-    python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2,4,5
     python pipeline.py input/apostila-historia-midia/instrucoes.csv --force
     python pipeline.py input/apostila-historia-midia/instrucoes.csv --cap 1
 """
@@ -271,6 +275,40 @@ def build_system_prompt(orientation_file: str, skill_file: str) -> str:
 # AGENTES INDIVIDUAIS
 # ============================================================================
 
+def run_agente0(
+    client: anthropic.Anthropic,
+    briefing_path: Path,
+    apostila_name: str,
+) -> Optional[Path]:
+    """Agente 0 — Decompositor. Produz instrucoes.csv a partir de um briefing JSON."""
+
+    output_rel = f"input/{apostila_name}/instrucoes.csv"
+    briefing_rel = str(briefing_path.relative_to(BASE_DIR))
+
+    system = build_system_prompt("decompositor-orientacao.md", "decompositor-skill.md")
+
+    user_message = f"""Sua tarefa: transformar o briefing do professor em instrucoes.csv válido.
+
+ARQUIVO DE BRIEFING:
+{briefing_rel}
+
+ONDE SALVAR O OUTPUT:
+{output_rel}
+
+Siga os passos da sua skill (skills/decompositor-skill.md):
+1. Leia o briefing ({briefing_rel})
+2. Consulte contexto/matriz-enem.json para a habilidade identificada — extraia sequencia_pedagogica, enunciado e foco_cognitivo
+3. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
+4. Para cada capítulo: mapeie autores_por_capitulo[capitulo] → coluna autores; mapeie conteudos_por_capitulo[capitulo] → coluna conteudos_nucleares
+5. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
+"""
+
+    log_print(f"\n[Agente 0] Decompositor — gerando {output_rel}")
+    run_agent(client, system, user_message, "Agente 0")
+
+    full_path = BASE_DIR / output_rel
+    return full_path if full_path.exists() else None
+
 def run_agente1(
     client: anthropic.Anthropic,
     row: dict,
@@ -395,7 +433,6 @@ ONDE SALVAR O OUTPUT:
 
 def run_agente3(
     client: anthropic.Anthropic,
-    core_path: Path,
     texto_path: Path,
     unidade_idx: int,
     capitulo_idx: int,
@@ -403,31 +440,26 @@ def run_agente3(
     capitulo: str,
     apostila_name: str,
 ) -> Optional[Path]:
-    """Agente 3 — Validador Técnico. Produz validacao.md."""
+    """Agente 3 — Normalizador de Marcação. Normaliza HTML comments no texto.md."""
 
-    filename = capitulo_filename(unidade_idx, capitulo_idx, capitulo)
-    output_rel = f"output/{apostila_name}/validacao/{unidade_slug}/{filename}"
-    core_rel = str(core_path.relative_to(BASE_DIR))
     texto_rel = str(texto_path.relative_to(BASE_DIR))
 
     system = build_system_prompt("agente3-orientacao.md", "agente3-skill.md")
 
-    user_message = f"""Sua tarefa: validar o texto funcional do capítulo.
+    user_message = f"""Sua tarefa: normalizar a marcação estrutural HTML do texto do capítulo.
 
-ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR:
-1. {core_rel}
-2. {texto_rel}
-3. contexto/principios-pedagogicos-agente1.md
+ARQUIVO QUE VOCÊ DEVE NORMALIZAR:
+{texto_rel}
 
-ONDE SALVAR O OUTPUT:
-{output_rel}
+Leia o arquivo, aplique as quatro normalizações (skill/agente3-skill.md) e salve
+de volta no mesmo caminho, sobrescrevendo o original.
+Não altere a prosa nem a ordem das seções.
 """
 
     log_print(f"\n[Agente 3] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
     run_agent(client, system, user_message, "Agente 3")
 
-    full_path = BASE_DIR / output_rel
-    return full_path if full_path.exists() else None
+    return texto_path if texto_path.exists() else None
 
 def run_agente4(
     client: anthropic.Anthropic,
@@ -649,21 +681,15 @@ def run_pipeline(
                 if expected.exists():
                     texto_path = expected
 
-            # ─ Agente 3 (opcional) ─
-            # Agente 3 removido do fluxo automático (muito custoso)
-            # Use --agentes 1,2,3,4 se quiser validação explícita
+            # ─ Agente 3 — Normalizador de Marcação ─
             if 3 in agentes:
-                if not core_path or not texto_path:
-                    log_print("✗  Core ou texto não disponível. Pulando Agente 3.", indent=1)
+                if not texto_path:
+                    log_print("✗  Texto não disponível. Pulando Agente 3.", indent=1)
                 else:
-                    expected = BASE_DIR / f"output/{apostila_name}/validacao/{unidade_slug}/{filename}"
-                    if expected.exists() and not force:
-                        log_print("[Agente 3] Validação já existe — pulando.", indent=1)
-                    else:
-                        run_agente3(
-                            client, core_path, texto_path, u_idx, c_idx,
-                            unidade_slug, capitulo, apostila_name,
-                        )
+                    run_agente3(
+                        client, texto_path, u_idx, c_idx,
+                        unidade_slug, capitulo, apostila_name,
+                    )
 
             # ─ Agente 4 ─
             if 4 in agentes:
@@ -705,38 +731,60 @@ def parse_agentes(value: str) -> List[int]:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Pipeline de geração de apostilas didáticas (funcional + estilo + formato).",
+        description="Pipeline de geração de apostilas didáticas (V5).",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Agentes:
-  1 = Arquiteto Curricular (core.md)
-  2 = Redator Funcional (texto.md com rótulos)
-  3 = Validador Técnico (validacao.md) — opcional, muito custoso
+  0 = Decompositor (briefing.json → instrucoes.csv) — requer --briefing e --apostila
+  1 = Arquiteto Curricular (instrucoes.csv → core.md)
+  2 = Redator Funcional (core.md → texto.md com rótulos)
+  3 = Normalizador de Marcação (normaliza HTML comments no texto.md)
   4 = Redator de Estilo (qualifica prosa, preserva rótulos em comments)
   5 = Formatador (extrai estrutura → XML para InDesign)
 
-Ordem padrão: 1,2,4,5 (rápido, completo)
+Ordem padrão (modo manual): 1,2,3,4,5
+Ordem padrão (modo briefing): 0,1,2,3,4,5
 
 Exemplos:
+  # Modo briefing: gera CSV e roda pipeline completo
+  python pipeline.py --briefing input/apostila-sociologia/briefing.json --apostila apostila-sociologia
+
+  # Modo briefing: só gera o CSV
+  python pipeline.py --briefing input/apostila-sociologia/briefing.json --apostila apostila-sociologia --agentes 0
+
+  # Modo manual: professor já tem o CSV
   python pipeline.py input/apostila-historia-midia/instrucoes.csv
   python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2
-  python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2,4
-  python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2,4,5
-  python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 1,2,3,4,5 (com validação)
   python pipeline.py input/apostila-historia-midia/instrucoes.csv --force
   python pipeline.py input/apostila-historia-midia/instrucoes.csv --cap 1
         """,
     )
     parser.add_argument(
         "csv",
+        nargs="?",
         type=Path,
-        help="Caminho para o CSV (ex: input/apostila-historia-midia/instrucoes.csv)",
+        default=None,
+        help="Caminho para o CSV (modo manual). Omitir quando usar --briefing.",
+    )
+    parser.add_argument(
+        "--briefing",
+        type=Path,
+        default=None,
+        metavar="BRIEFING_JSON",
+        help="Caminho para o briefing.json. Ativa o modo briefing (Agente 0).",
+    )
+    parser.add_argument(
+        "--apostila",
+        type=str,
+        default=None,
+        metavar="NOME",
+        help="Nome da apostila (ex: apostila-sociologia). Obrigatório no modo briefing.",
     )
     parser.add_argument(
         "--agentes",
         type=parse_agentes,
-        default=[1, 2, 4, 5],
-        help="Agentes a executar (padrão: 1,2,4,5)",
+        default=None,
+        help="Agentes a executar. Padrão: 1,2,3,4,5 (manual) ou 0,1,2,3,4,5 (briefing).",
     )
     parser.add_argument(
         "--force",
@@ -753,13 +801,51 @@ Exemplos:
 
     args = parser.parse_args()
 
-    csv_path = args.csv if args.csv.is_absolute() else BASE_DIR / args.csv
+    # ── Modo briefing ──────────────────────────────────────────────────────────
+    if args.briefing:
+        if not args.apostila:
+            log_print("ERRO: --apostila é obrigatório no modo briefing.")
+            sys.exit(1)
 
-    if not csv_path.exists():
-        log_print(f"ERRO: CSV não encontrado: {csv_path}")
-        sys.exit(1)
+        briefing_path = args.briefing if args.briefing.is_absolute() else BASE_DIR / args.briefing
+        if not briefing_path.exists():
+            log_print(f"ERRO: briefing não encontrado: {briefing_path}")
+            sys.exit(1)
 
-    run_pipeline(csv_path, args.agentes, args.force, args.cap)
+        agentes = args.agentes if args.agentes is not None else [0, 1, 2, 3, 4, 5]
+        apostila_name = args.apostila
+        csv_path = BASE_DIR / f"input/{apostila_name}/instrucoes.csv"
+
+        client = anthropic.Anthropic(api_key=API_KEY)
+
+        if 0 in agentes:
+            csv_path = run_agente0(client, briefing_path, apostila_name)
+            if not csv_path:
+                log_print("✗  Agente 0 não produziu o CSV. Abortando.")
+                sys.exit(1)
+
+        agentes_pipeline = [a for a in agentes if a != 0]
+        if agentes_pipeline:
+            if not csv_path.exists():
+                log_print(f"ERRO: CSV não encontrado: {csv_path}")
+                sys.exit(1)
+            run_pipeline(csv_path, agentes_pipeline, args.force, args.cap)
+
+    # ── Modo manual ────────────────────────────────────────────────────────────
+    else:
+        if not args.csv:
+            log_print("ERRO: informe o CSV ou use --briefing para modo automatico.")
+            parser.print_help()
+            sys.exit(1)
+
+        agentes = args.agentes if args.agentes is not None else [1, 2, 3, 4, 5]
+        csv_path = args.csv if args.csv.is_absolute() else BASE_DIR / args.csv
+
+        if not csv_path.exists():
+            log_print(f"ERRO: CSV nao encontrado: {csv_path}")
+            sys.exit(1)
+
+        run_pipeline(csv_path, agentes, args.force, args.cap)
 
 if __name__ == "__main__":
     main()
