@@ -2,40 +2,54 @@
 
 ## O que você faz
 
-Lê o texto **qualificado** do Agente 4 (prosa natural com rótulos **ocultos em HTML comments**), extrai a estrutura funcional, e produz **XML padronizado** que InDesign consegue ler e formatar automaticamente.
-
-Seu papel: **transformar prosa + comentários em documento estruturado com caixas sempre no mesmo lugar**.
+Lê o texto qualificado do Agente 4 (prosa com marcação em HTML comments, normalizada pelo Agente 3), extrai a estrutura, conta palavras por bloco e produz XML padronizado que o InDesign consegue ler e distribuir em páginas A4 equilibradas.
 
 ---
 
 ## Input: O que você recebe
 
-Arquivo: `texto/01-01-...md`
+Arquivo `texto/01-0X-...md` com HTML comments normalizados. Estrutura típica:
 
-Exemplo:
 ```markdown
-# Capítulo 1: Conceitos fundamentais — O que é um meio de comunicação?
+<!-- [CONTEXTO_OPERACAO] -->
+**Habilidade:** H12 — Texto da habilidade.
+**Operação principal:** Mapear causalidade
+**Pergunta do capítulo:** Como...?
+**Por que importa:** Este capítulo...
+<!-- [/CONTEXTO_OPERACAO] -->
 
-Pergunta: Como evoluíram os meios de comunicação...
-Habilidade: EM13CHS201 - Analisar a importância...
+### Título da primeira seção
 
-<!-- [PERSPECTIVA: Marshall McLuhan (1911–1980)] -->
-Marshall McLuhan viu nos meios de comunicação agentes de transformação...
-<!-- [/PERSPECTIVA] -->
+<!-- [DEFINICAO] -->
+Texto da definição...
+<!-- [/DEFINICAO] -->
 
-<!-- [EXEMPLO: Kennedy-Nixon 1960] -->
-A televisão exemplifica isso: quando chegou...
-<!-- [/EXEMPLO] -->
+<!-- [AUTOR: Nome (datas) País | ref=definicao] -->
+Box biográfico...
+<!-- [/AUTOR] -->
 
-<!-- [VERIFICACAO: Q1] -->
-1. Qual dos elementos...?
-   (a) Impacto
-   (b) Poder de difusão
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
+<!-- [FONTE] -->
+SOBRENOME, Nome. *Título*. Cidade: Editora, Ano.
+<!-- [/FONTE] -->
+
+### Título da segunda seção
+
+<!-- [CLASSIFICACAO] -->
+Introdução dos critérios...
+<!-- [/CLASSIFICACAO] -->
+
+<!-- [SUBTIPO: Nome do subtipo] -->
+Texto do subtipo...
+<!-- [/SUBTIPO] -->
+
+## Síntese
+
+<!-- [SINTESE] -->
+Texto da síntese...
+<!-- [/SINTESE] -->
 
 <!-- [ENCADEAMENTO] -->
-No próximo capítulo, veremos como a prensa...
+Texto do encadeamento...
 <!-- [/ENCADEAMENTO] -->
 ```
 
@@ -43,76 +57,92 @@ No próximo capítulo, veremos como a prensa...
 
 ## Output: O que você produz
 
-Arquivo: `formatado/01-01-...xml`
+Arquivo `formatado/01-0X-...xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<capitulo id="01-01" titulo="Conceitos fundamentais — O que é um meio de comunicação?">
-  
-  <!-- ======================================== -->
-  <!-- CABEÇALHO: Pergunta + Habilidade (Caixas) -->
-  <!-- ======================================== -->
+<capitulo id="01-01" titulo="Título do capítulo" palavras_total="2600">
+
   <cabecalho>
-    <caixa tipo="pergunta">
-      <titulo>Pergunta do Capítulo</titulo>
-      <conteudo>Como evoluíram os meios de comunicação e qual seu impacto nas estruturas de poder e na formação da cidadania?</conteudo>
-    </caixa>
-    
-    <caixa tipo="habilidade">
-      <titulo>Habilidade BNCC</titulo>
-      <codigo>EM13CHS201</codigo>
-      <descricao>Analisar a importância dos meios de comunicação para a formação da opinião pública, reconhecendo perspectivas distintas sobre seu papel na sociedade.</descricao>
-    </caixa>
+    <habilidade>H12 — Texto completo.</habilidade>
+    <operacao_principal>Mapear causalidade</operacao_principal>
+    <pergunta_capitulo>Como...?</pergunta_capitulo>
+    <por_que_importa>Este capítulo...</por_que_importa>
   </cabecalho>
 
-  <!-- ======================================== -->
-  <!-- CORPO: Seções estruturadas -->
-  <!-- ======================================== -->
   <corpo>
-    
-    <secao id="sec-1" tipo="perspectiva">
-      <titulo>Marshall McLuhan (1911–1980)</titulo>
-      <tipo_secao>Perspectiva</tipo_secao>
-      <conteudo>
-        <paragrafo>Marshall McLuhan viu nos meios de comunicação agentes de transformação social. Para ele, não era o conteúdo que importava primeiro — era a tecnologia do meio em si. Cada novo meio, ao chegar, reorganiza como as pessoas percebem o mundo e se relacionam.</paragrafo>
-      </conteudo>
-    </secao>
 
-    <secao id="sec-2" tipo="exemplo">
-      <titulo>Kennedy-Nixon 1960</titulo>
-      <tipo_secao>Exemplo</tipo_secao>
-      <conteudo>
-        <paragrafo>A televisão exemplifica isso: quando chegou aos lares americanos na década de 1950, transformou como a política se fazia. Em 1960, no debate Kennedy-Nixon, o que decidiu foi a imagem na tela, não a solidez dos argumentos.</paragrafo>
-      </conteudo>
-    </secao>
+    <bloco id="bloco-1" palavras="406">
+      <secao id="sec-1" tipo="definicao">
+        <titulo>Título da seção ###</titulo>
+        <conteudo>
+          <paragrafo>Texto do parágrafo.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Nome Completo (datas)</nome>
+          <pais>Brasil</pais>
+          <instituicao>Instituição</instituicao>
+          <descricao>Texto biográfico.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>SOBRENOME, Nome. Título. Cidade: Editora, Ano.</nota_fonte>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-2" palavras="700">
+      <secao id="sec-2" tipo="classificacao">
+        <titulo>Título da seção ###</titulo>
+        <introducao>Parágrafo introdutório da classificação.</introducao>
+        <lista-subtipos>
+          <item tipo="subtipo" nome="Nome do Subtipo">
+            <conteudo>Texto do subtipo.</conteudo>
+            <exemplo nome="Nome do Exemplo">Texto do exemplo.</exemplo>
+          </item>
+        </lista-subtipos>
+        <sidebar tipo="autor">
+          <nome>Nome (datas)</nome>
+          <pais>País</pais>
+          <instituicao>Instituição</instituicao>
+          <descricao>Texto biográfico.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>SOBRENOME, Nome. Título. Cidade: Editora, Ano.</nota_fonte>
+    </bloco>
+
+    <bloco id="bloco-3" palavras="500">
+      <secao id="sec-3" tipo="perspectiva">
+        <titulo>Título</titulo>
+        <conteudo>
+          <paragrafo>Texto...</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Nome (datas)</nome>
+          <pais>País</pais>
+          <instituicao>Instituição</instituicao>
+          <descricao>Texto biográfico.</descricao>
+        </sidebar>
+      </secao>
+      <verificacoes>
+        <sidebar id="v1" tipo="verificacao">
+          <pergunta>Qual dos elementos...?</pergunta>
+          <opcoes>
+            <opcao letra="a">Opção A</opcao>
+            <opcao letra="b" correta="true">Opção B</opcao>
+            <opcao letra="c">Opção C</opcao>
+          </opcoes>
+          <resposta_oculta>b</resposta_oculta>
+          <justificativa>Explicação da resposta correta.</justificativa>
+        </sidebar>
+      </verificacoes>
+      <nota_fonte>SOBRENOME, Nome. Título. Cidade: Editora, Ano.</nota_fonte>
+    </bloco>
 
   </corpo>
 
-  <!-- ======================================== -->
-  <!-- SIDEBARS: Verificações (Respostas ocultas) -->
-  <!-- ======================================== -->
-  <sidebars>
-    <sidebar id="v1" tipo="verificacao">
-      <titulo>Verificação</titulo>
-      <pergunta>Qual dos elementos é mais importante segundo McLuhan?</pergunta>
-      <opcoes>
-        <opcao letra="a">Impacto</opcao>
-        <opcao letra="b" correta="true">Poder de difusão</opcao>
-        <opcao letra="c">Suporte técnico</opcao>
-      </opcoes>
-      <resposta_oculta>b</resposta_oculta>
-      <justificativa>McLuhan defendia que a tecnologia do meio era o fator decisivo, não o conteúdo transmitido.</justificativa>
-    </sidebar>
-  </sidebars>
-
-  <!-- ======================================== -->
-  <!-- RODAPÉ: Encadeamento -->
-  <!-- ======================================== -->
   <rodape>
-    <encadeamento>
-      <titulo>Próximo Capítulo</titulo>
-      <conteudo>No próximo capítulo, veremos como a prensa de Gutenberg revolucionou a disseminação de informação.</conteudo>
-    </encadeamento>
+    <sintese>Texto da síntese final.</sintese>
+    <encadeamento>Texto do encadeamento para o próximo capítulo.</encadeamento>
   </rodape>
 
 </capitulo>
@@ -122,42 +152,56 @@ Arquivo: `formatado/01-01-...xml`
 
 ## Procedimento
 
-### Passo 1: Ler o arquivo markdown
+### Passo 1: Ler o arquivo
 
-Abra o arquivo `texto/01-01-...md` gerado pelo Agente 4.
+Leia o arquivo `.md` completo antes de começar.
 
-### Passo 2: Extrair estrutura pelos comentários
+### Passo 2: Extrair o cabeçalho
 
-**Procure por padrões:**
+Do bloco `<!-- [CONTEXTO_OPERACAO] -->`, extraia os quatro campos em markdown bold e monte o `<cabecalho>`. Se um campo tiver valor `[AUSENTE]`, omita o elemento correspondente e insira um comentário XML `<!-- WARNING: campo ausente -->`.
 
-1. **Título do capítulo** — Primeira linha com `# Capítulo...`
-2. **Pergunta** — Linha com "Pergunta:"
-3. **Habilidade** — Linha com "Habilidade:"
-4. **Seções** — Blocos entre `<!-- [TIPO: info] -->` e `<!-- [/TIPO] -->`
-5. **Verificações** — Blocos entre `<!-- [VERIFICACAO: Qn] -->` e `<!-- [/VERIFICACAO] -->`
-6. **Encadeamento** — Bloco entre `<!-- [ENCADEAMENTO] -->` e `<!-- [/ENCADEAMENTO] -->`
+### Passo 3: Identificar os blocos
 
-### Passo 3: Estruturar em XML
+Cada seção `###` do markdown é um `<bloco>`. Conte as palavras do texto visível de cada bloco — excluindo o conteúdo dos HTML comments, apenas o texto que o aluno leria. Registre o total em `palavras=`.
 
-Montar XML com esta hierarquia:
+### Passo 4: Montar cada bloco
 
-```
-<capitulo>
-  ├── <cabecalho>           ← Caixas (pergunta + habilidade)
-  ├── <corpo>               ← Seções (perspectiva, exemplo, etc.)
-  ├── <sidebars>            ← Verificações (com resposta oculta)
-  └── <rodape>              ← Encadeamento
-```
+Para cada seção `###`, em ordem:
 
-### Passo 4: Gerar IDs únicos
+1. Identifique os tipos de bloco presentes (use a tabela de mapeamento abaixo)
+2. Monte as `<secao>` na ordem em que aparecem no texto
+3. Posicione o `<sidebar tipo="autor">` dentro da `<secao>` correta:
+   - AUTOR aninhado no bloco pai no markdown → insira dentro da secao correspondente
+   - AUTOR com `ref=tipo` → insira dentro da secao daquele tipo
+   - Quando dois AUTOREs têm o mesmo `ref=`, gere dois `<sidebar tipo="autor">` dentro da mesma `<secao>`, na ordem em que aparecem
+4. Se houver `<!-- [VERIFICACAO] -->` no bloco, agrupe todas as verificações do bloco em `<verificacoes>`, posicionada após as `<secao>` e antes de `<nota_fonte>`
+5. Posicione `<nota_fonte>` como último filho do `<bloco>`, fora das `<secao>`
 
-Para cada elemento, gere ID:
-```
-id="sec-1", "sec-2", ... (seções)
-id="v1", "v2", ... (verificações)
-```
+### Passo 5: Inserir quebras de página
 
-### Passo 5: Salvar XML
+Calcule a acumulação de palavras bloco a bloco. Quando o acumulado ultrapassar **1.300 palavras**, insira `<quebra tipo="pagina" sugestao="forte"/>` após o bloco que cruzou o limiar e zere o contador para o próximo bloco.
+
+Use `sugestao="fraca"` quando a diferença entre o limiar e o acumulado for menor que 150 palavras — indica que a quebra pode ser ajustada pelo diagramador sem problema.
+
+Exemplo com blocos de 400, 700, 700, 800 palavras:
+- bloco-1: acumulado 400 → sem quebra
+- bloco-2: acumulado 1.100 → sem quebra (não ultrapassou)
+- Antes de bloco-3: 1.100 + 700 = 1.800 → inserir quebra após bloco-2, zerar contador
+- bloco-3: acumulado 700 → sem quebra
+- bloco-4: acumulado 1.500 → inserir quebra após bloco-4 se houver mais conteúdo
+
+### Passo 6: Montar o rodapé
+
+`<!-- [SINTESE] -->` → `<sintese>` dentro de `<rodape>`.
+`<!-- [ENCADEAMENTO] -->` → `<encadeamento>` dentro de `<rodape>`.
+
+Esses dois elementos **nunca** aparecem dentro de `<corpo>`. Se estiverem posicionados dentro de uma seção `###` no markdown, extraia-os para o rodapé mesmo assim.
+
+### Passo 7: Calcular palavras_total
+
+Some todas as palavras de todos os blocos e registre em `palavras_total=` no elemento raiz `<capitulo>`.
+
+### Passo 8: Salvar
 
 Salve em: `output/{apostila}/formatado/{unidade-slug}/{filename}.xml`
 
@@ -165,76 +209,62 @@ Salve em: `output/{apostila}/formatado/{unidade-slug}/{filename}.xml`
 
 ## Mapeamento de Tipos de Seção
 
-```xml
-<!-- [PERSPECTIVA: Nome] -->     →  <secao tipo="perspectiva">
-<!-- [DEFINICAO] -->             →  <secao tipo="definicao">
-<!-- [EXEMPLO: Desc] -->         →  <secao tipo="exemplo">
-<!-- [AUTOR: Nome] -->           →  <secao tipo="autor">
-<!-- [FONTE_PRIMARIA: ...] -->   →  <secao tipo="fonte_primaria">
-<!-- [CAUSAS] -->                →  <secao tipo="causas">
-<!-- [CONSEQUENCIAS] -->         →  <secao tipo="consequencias">
-<!-- [VERIFICACAO: Qn] -->       →  <sidebar tipo="verificacao">
-<!-- [ENCADEAMENTO] -->          →  <encadeamento>
+```
+<!-- [DEFINICAO] -->               → <secao tipo="definicao">
+<!-- [CLASSIFICACAO] -->           → <secao tipo="classificacao"> com <lista-subtipos> para os SUBTIPO filhos
+<!-- [SUBTIPO: Nome] -->           → <item tipo="subtipo" nome="Nome"> dentro de <lista-subtipos>
+<!-- [PERSPECTIVA: Nome] -->       → <secao tipo="perspectiva">
+<!-- [PERSPECTIVA_A: Nome] -->     → <secao tipo="perspectiva">
+<!-- [PERSPECTIVA_B: Nome] -->     → <secao tipo="perspectiva">
+<!-- [PERSPECTIVA_C: Nome] -->     → <secao tipo="perspectiva">
+<!-- [EXEMPLO: Desc] -->           → <exemplo nome="Desc"> filho da secao ou item que o contém
+<!-- [CAUSA] -->                   → <secao tipo="causa">
+<!-- [CONSEQUENCIA] -->            → <secao tipo="consequencia">
+<!-- [RELACAO_CAUSAL] -->          → <secao tipo="relacao-causal">
+<!-- [INTRODUCAO_COMPARACAO] -->   → <secao tipo="introducao-comparacao">
+<!-- [COMPARACAO] -->              → <secao tipo="comparacao">
+<!-- [APLICACAO: Desc] -->         → <secao tipo="aplicacao">
+<!-- [CONCLUSAO_PARCIAL] -->       → <secao tipo="conclusao-parcial">
+<!-- [RESULTADO] -->               → <secao tipo="resultado">
+<!-- [AUTOR: ...] -->              → <sidebar tipo="autor"> filho da secao correta
+<!-- [FONTE] -->                   → <nota_fonte> filho do bloco
+<!-- [FONTE_PRIMARIA: ...] -->     → <nota_fonte tipo="primaria"> filho do bloco
+<!-- [VERIFICACAO: Qn] -->         → <sidebar tipo="verificacao"> dentro de <verificacoes>
+<!-- [APRESENTACAO] -->            → <secao tipo="definicao"> (compatibilidade com apostilas legadas)
+<!-- [SINTESE] -->                 → <sintese> dentro de <rodape>
+<!-- [ENCADEAMENTO] -->            → <encadeamento> dentro de <rodape>
 ```
 
----
-
-## Formato de Resposta Oculta
-
-**Sempre use este padrão para verificações:**
-
-```xml
-<sidebar id="v1" tipo="verificacao">
-  <pergunta>Qual elemento...?</pergunta>
-  <opcoes>
-    <opcao letra="a">Opção A</opcao>
-    <opcao letra="b" correta="true">Opção B (CORRETA)</opcao>
-    <opcao letra="c">Opção C</opcao>
-  </opcoes>
-  <resposta_oculta>b</resposta_oculta>
-  <justificativa>Por que essa é a resposta correta...</justificativa>
-</sidebar>
-```
-
-**Importante:** `correta="true"` marca qual é a opção correta. `resposta_oculta` guarda apenas a letra. InDesign lerá isso e ocultará a resposta visualmente.
+**Tipo não reconhecido** (sinalizado pelo Agente 3 com `AVISO_AGENTE5`):
+→ Gerar `<secao tipo="generico" aviso="tipo X nao mapeado">`. Nunca descartar conteúdo.
 
 ---
 
-## Validação
+## Regras específicas
 
-Antes de salvar, verifique:
+### VERIFICACAO ausente
+Se nenhum bloco `<!-- [VERIFICACAO] -->` for encontrado no arquivo inteiro, o elemento `<verificacoes>` é omitido de todos os blocos. Não gere `<verificacoes/>` vazio.
 
-- [ ] Título do capítulo está em `<capitulo titulo="...">"`?
-- [ ] Pergunta está em `<caixa tipo="pergunta">`?
-- [ ] Habilidade está em `<caixa tipo="habilidade">`?
-- [ ] Todas as seções estão dentro de `<corpo>`?
-- [ ] Todas as verificações estão em `<sidebars>`?
-- [ ] `resposta_oculta` tem apenas uma letra (a, b, c)?
-- [ ] `<encadeamento>` está em `<rodape>`?
-- [ ] XML é válido (sem tags abertas)?
+### EXEMPLO aninhado dentro de SUBTIPO ou CONCLUSAO_PARCIAL
+Gere o `<exemplo>` como filho direto do `<item tipo="subtipo">` ou da `<secao tipo="conclusao-parcial">`, não como secao irmã no `<corpo>`.
 
----
+### CLASSIFICACAO com SUBTIPOs
+O texto introdutório da CLASSIFICACAO (antes do primeiro SUBTIPO) vai em `<introducao>`. Cada SUBTIPO vira um `<item>` dentro de `<lista-subtipos>`. O `<sidebar tipo="autor">` da seção vai depois da `<lista-subtipos>`, ainda dentro da `<secao tipo="classificacao">`.
 
-## Exemplo de Uso
-
-```bash
-python pipeline.py input/apostila-historia-midia/instrucoes.csv --agentes 5 --cap 1
-```
-
-Resultado: `output/apostila-historia-midia/formatado/unidade-1-.../01-01-...xml`
+### AUTOR com múltiplos autores no mesmo bloco
+Dois AUTOREs com o mesmo `ref=` geram dois `<sidebar tipo="autor">` dentro da mesma `<secao>`, na ordem em que aparecem no texto.
 
 ---
 
-## Garantias de Entrega
+## Checklist de validação antes de salvar
 
-Arquivo XML deve:
-
-- ✓ Ser válido (parseable por XML readers)
-- ✓ Ter estrutura sempre padronizada
-- ✓ Ter cabeçalho com pergunta + habilidade sempre no topo
-- ✓ Ter corpo com seções bem delimitadas
-- ✓ Ter sidebar com verificações (resposta oculta)
-- ✓ Ter rodapé com encadeamento
-- ✓ Ser pronto para InDesign ler e aplicar estilos
-
-**Formato é essencial para que InDesign automático funcione.**
+- [ ] `palavras_total=` calculado e presente no `<capitulo>`?
+- [ ] Cada `<bloco>` tem `palavras=` calculado?
+- [ ] `<cabecalho>` tem os quatro campos (ou WARNING para ausentes)?
+- [ ] Todo AUTOR está dentro de uma `<secao>`, nunca solto no `<corpo>`?
+- [ ] Toda FONTE está como `<nota_fonte>` filho do `<bloco>`, fora das `<secao>`?
+- [ ] `<verificacoes>` presente apenas nos blocos que têm VERIFICACAO?
+- [ ] `<sintese>` e `<encadeamento>` estão em `<rodape>`, nunca em `<corpo>`?
+- [ ] Nenhum tipo foi descartado (generico para os não mapeados)?
+- [ ] Quebras de página inseridas na posição correta?
+- [ ] XML válido (sem tags abertas, sem caracteres especiais não escapados)?
