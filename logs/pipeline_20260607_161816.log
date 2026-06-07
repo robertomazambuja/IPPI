@@ -1,0 +1,11 @@
+2026-06-07 16:18:17,085 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:18:19,108 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:18:20,745 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/briefing.json
+2026-06-07 16:18:20,747 [INFO] __main__:     →  read_file: contexto/matriz-enem.json
+2026-06-07 16:18:22,499 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:18:57,023 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:18:57,025 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:18:58,627 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:19:08,921 [INFO] __main__:   ✓  Agente 0 concluiu (3 iteração(ões))
+2026-06-07 16:19:08,922 [INFO] __main__: ✗  CSV gerado com schema inválido: Célula vazia na linha 2, coluna 'elementos_obrigatorios'. Abortando.
