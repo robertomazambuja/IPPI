@@ -1,5 +1,18 @@
 # Handover — Refatoração do Pipeline de Geração de Apostilas
 
+> **STATUS: CONCLUÍDO — 07 de junho de 2026**
+>
+> Todas as 24 ações da auditoria `Auditoria_IPPI_Plano_Refatoracao.docx` foram aplicadas nesta sessão.
+> Resumo das mudanças implementadas:
+>
+> **Fase 1 (Crítico):** agente4-skill-v2.md criado; schema CSV do Decompositor corrigido (habilidade_principal → habilidade + elementos_obrigatorios); micro_hab/operacao_secao passados ao Agente 1; RateLimitError adicionado ao retry.
+>
+> **Fase 2 (Alto):** validação de path traversal em execute_tool; write_file com try/except; validação de schema CSV pós-Agente 0; encoding UTF-8 no FileHandler; filosofia.md e geografia.md criados em contexto/disciplinas/.
+>
+> **Fase 3 (Médio):** retornos de run_agente3/4/5 verificados; cliente Anthropic unificado; run_agente4 simplificado; MODEL/MAX_TOKENS/AGENTE_MAX_ITERATIONS expostos via env; Tuple removido; python-slugify removido; requirements.txt atualizado.
+>
+> **Fase 4 (Baixo):** nome "Normalizador de Marcação" padronizado; LEIAME.md atualizado; HANDOVER arquivado; pastas input/ vazias removidas; .gitignore atualizado; testes unitários criados.
+
 Este documento descreve o diagnóstico, as decisões arquiteturais e as mudanças exatas a implementar nos arquivos do projeto IPPI. Foi produzido para permitir que outro agente re-implemente as mesmas transformações a partir do estado original dos arquivos.
 
 ---

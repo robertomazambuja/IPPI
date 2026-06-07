@@ -47,8 +47,10 @@ agente2-orientacao.md — identidade e papel do Agente 2
 contexto/
 principios-pedagogicos-agente1.md — governa as decisões do Agente 1 (funcional)
 disciplinas/
-historia-contexto-funcional.md — conceitos, autores, regras para História
-sociologia-contexto-funcional.md — conceitos, autores, regras para Sociologia
+historia.md — conceitos, autores, regras para História
+sociologia.md — conceitos, autores, regras para Sociologia
+filosofia.md — conceitos, autores, regras para Filosofia
+geografia.md — conceitos, autores, regras para Geografia
 
 input/
 [nome-da-apostila]/
@@ -115,11 +117,11 @@ Chave de API: o pipeline lê automaticamente o arquivo .env na raiz do projeto. 
 
 text
 ANTHROPIC_API_KEY=sk-ant-api03-...
-Os cinco agentes
+Os seis agentes (0–5)
 Agente 1 — Arquiteto Curricular (funcional)
 Recebe: linha do CSV + contexto da unidade + lista de todas as unidades + cores de capítulos anteriores (se houver).
 
-Consulta: contexto/principios-pedagogicos-agente1.md + contexto/disciplinas/[disciplina]-contexto-funcional.md
+Consulta: contexto/principios-pedagogicos-agente1.md + contexto/disciplinas/[disciplina].md
 
 Produz: core.md – arquitetura do capítulo baseada em operações elementares. O core contém:
 
@@ -136,7 +138,7 @@ Regra: o core nunca contém campos como TENSAO, MOBILIZACAO, PERGUNTA_RETORICA. 
 Agente 2 — Redator Funcional
 Recebe: core.md do Agente 1.
 
-Consulta: apenas o documento de contexto disciplinar funcional (ex: historia-contexto-funcional.md) – não consulta os princípios pedagógicos.
+Consulta: apenas o documento de contexto disciplinar funcional (ex: historia.md) – não consulta os princípios pedagógicos.
 
 Produz: texto.md – capítulo em texto funcional rotulado, sem narrativa, sem metáforas, sem perguntas retóricas.
 
@@ -152,24 +154,15 @@ Síntese final responde exatamente à pergunta do capítulo.
 
 Proibições: nenhum recurso narrativo, nenhum “nós”, nenhum andaime, nenhuma exclamação, nenhuma metáfora, nenhum advérbio de opinião.
 
-Agente 3 e 4 — Validador Técnico
-Recebe: core.md (Agente 1) e texto.md (Agente 2).
+Agente 3 — Normalizador de Marcação
+Recebe: texto.md (Agente 2).
 
-Produz: validacao.md – relatório com status Aprovado / Reprovado e lista de erros (com localização) e correções obrigatórias.
+Produz: texto.md normalizado — aplica as quatro normalizações de marcação HTML estrutural e salva de volta no mesmo caminho. Não altera prosa nem a ordem das seções.
 
-O que verifica:
+Agente 4 — Redator de Estilo
+Recebe: texto.md (normalizado pelo Agente 3).
 
-Estrutura geral (CONTEXTO DE OPERAÇÃO, ## SÍNTESE)
-
-Cada seção: cabeçalho, rótulos corretos, presença de EXEMPLO_ANCOLA
-
-Autores: nome completo, datas, filiação (boxes biográficos ≤20 palavras)
-
-Verificações fechadas com respostas
-
-Proibições (metáforas, exclamações, “nós”, andaime, etc.)
-
-Não faz: reescrever trechos, avaliar escolhas do Agente 1, sugerir melhorias estilísticas.
+Produz: texto.md reescrito em prosa natural — os rótulos estruturais desaparecem, tornando invisível a engenharia funcional para o leitor final.
 
 Agente 5 — Diagramador
 Recebe: texto.md + core.md (para identificar tipos de operação) + imagens.md (se existir).
@@ -196,7 +189,7 @@ Eliminação do Agente 4 (Revisor de Estilo) – texto funcional não tem estilo
 
 Agente 3 transformado em Validador Técnico (não reescreve, apenas certifica).
 
-Novos documentos de contexto: principios-pedagogicos-agente1.md, historia-contexto-funcional.md, sociologia-contexto-funcional.md.
+Novos documentos de contexto: principios-pedagogicos-agente1.md, historia.md, sociologia.md (renomeados de historia-contexto-funcional.md e sociologia-contexto-funcional.md).
 
 Skills e orientações do Agente 1 e Agente 2 completamente reescritas.
 
@@ -235,9 +228,13 @@ pipeline.py com flags --agentes, --force, --cap
 
 Disciplinas com contexto funcional completo:
 
-História – historia-contexto-funcional.md
+História – historia.md
 
-Sociologia – sociologia-contexto-funcional.md
+Sociologia – sociologia.md
+
+Filosofia – filosofia.md
+
+Geografia – geografia.md
 
 Em avaliação:
 
@@ -248,8 +245,6 @@ Precisão do Agente 3 na detecção de violações e se necessário outro agente
 
 Ainda não existe:
 
-Contexto funcional para Filosofia e Geografia
-
-Correção automática a partir do output do Agente 3 e 4 e reescrita (hoje é manual)
+Correção automática a partir do output do Agente 3 e reescrita (hoje é manual)
 
 Interface web para o professor preencher o CSV

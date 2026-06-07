@@ -62,3 +62,11 @@ npm-debug.log
 # Documentos e arquivos grandes
 exemplos_apostilas/
 .tmp.driveupload/
+
+# Google Drive / sincronização
+*.gdoc
+*.gsheet
+*.gslides
+*\ (1).md
+*\ (2).md
+instrucoes.gsheet

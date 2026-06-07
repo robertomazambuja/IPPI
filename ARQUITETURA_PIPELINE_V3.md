@@ -17,7 +17,7 @@ Agente 1 (Arquiteto)
    ↓
 Agente 2 (Redator Funcional)
    ↓
-Agente 3 (Validador Técnico) ← opcional, muito custoso
+Agente 3 (Normalizador de Marcação) ← opcional, muito custoso
    ↓
 Agente 4 (Redator de Estilo)
 ```
@@ -48,7 +48,7 @@ Agente 4 (Redator de Estilo)
 
 ---
 
-### **Agente 3 — Validador Técnico (OPCIONAL)**
+### **Agente 3 — Normalizador de Marcação (OPCIONAL)**
 - **Input**: `core.md` + `texto.md` (com rótulos ainda visíveis)
 - **Output**: `validacao.md` (relatório)
 - **Função**: Audita conformidade funcional (QA)

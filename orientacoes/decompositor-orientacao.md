@@ -51,11 +51,12 @@ Um arquivo `instrucoes.csv` com **uma linha por capítulo**, contendo:
 | `unidade` | briefing |
 | `pergunta_unidade` | briefing |
 | `capitulo` | briefing |
-| `habilidade_principal` | código + enunciado completo da matriz |
+| `habilidade` | código + enunciado completo da matriz |
 | `micro_hab_1` a `micro_hab_6` | você gera (mínimo 4, máximo 6) |
 | `operacao_secao_1` a `operacao_secao_6` | você define (seguindo sequencia_pedagogica) |
 | `autores` | `autores_por_capitulo[capitulo]` — lista específica do capítulo |
 | `conteudos_nucleares` | `conteudos_por_capitulo[capitulo]` — lista específica do capítulo |
+| `elementos_obrigatorios` | elementos que o Agente 1 deve incluir no capítulo (exemplos, dados, perspectivas); extraia de `elementos_por_capitulo[capitulo]` no briefing, ou deixe vazio se ausente |
 
 ## A regra de abstração das micro-habilidades
 

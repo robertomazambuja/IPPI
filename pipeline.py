@@ -38,7 +38,7 @@ import sys
 import time
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from dotenv import load_dotenv
 
 # ============================================================================
@@ -46,9 +46,9 @@ from dotenv import load_dotenv
 # ============================================================================
 
 BASE_DIR = Path(__file__).parent
-MODEL = "claude-opus-4-6"
-MAX_TOKENS = 32000
-AGENTE_MAX_ITERATIONS = 30
+MODEL = os.environ.get("IPPI_MODEL", "claude-opus-4-6")
+MAX_TOKENS = int(os.environ.get("IPPI_MAX_TOKENS", "32000"))
+AGENTE_MAX_ITERATIONS = int(os.environ.get("IPPI_MAX_ITERATIONS", "30"))
 
 # Diretórios
 INPUT_DIR = BASE_DIR / "input"
@@ -62,7 +62,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(name)s: %(message)s',
     handlers=[
-        logging.FileHandler(LOG_FILE),
+        logging.FileHandler(LOG_FILE, encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
@@ -154,11 +154,26 @@ TOOLS = [
     }
 ]
 
+def _validate_path(path: Path) -> Optional[str]:
+    """Retorna mensagem de erro se o path escapar do BASE_DIR, None se seguro."""
+    try:
+        resolved = path.resolve()
+        if not str(resolved).startswith(str(BASE_DIR.resolve())):
+            return f"ERRO: acesso negado — caminho fora do projeto: {path}"
+    except Exception as e:
+        return f"ERRO: caminho inválido: {e}"
+    return None
+
+
 def execute_tool(tool_name: str, tool_input: dict) -> str:
     """Executa uma ferramenta e retorna o resultado como string."""
 
     if tool_name == "read_file":
         path = BASE_DIR / tool_input["path"]
+        err = _validate_path(path)
+        if err:
+            log_print(f"⚠  {err}", indent=2)
+            return err
         result = read_file_safe(path)
         if result.startswith("ERRO:"):
             log_print(f"⚠  {result}", indent=2)
@@ -166,10 +181,19 @@ def execute_tool(tool_name: str, tool_input: dict) -> str:
 
     if tool_name == "write_file":
         path = BASE_DIR / tool_input["path"]
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(tool_input["content"], encoding="utf-8")
-        log_print(f"✓  Salvo: {tool_input['path']}", indent=2)
-        return f"Arquivo salvo: {tool_input['path']}"
+        err = _validate_path(path)
+        if err:
+            log_print(f"⚠  {err}", indent=2)
+            return err
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(tool_input["content"], encoding="utf-8")
+            log_print(f"✓  Salvo: {tool_input['path']}", indent=2)
+            return f"Arquivo salvo: {tool_input['path']}"
+        except OSError as e:
+            msg = f"ERRO ao salvar {tool_input['path']}: {e}"
+            log_print(f"⚠  {msg}", indent=2)
+            return msg
 
     return f"Ferramenta desconhecida: {tool_name}"
 
@@ -216,6 +240,7 @@ def run_agent(
                 anthropic.InternalServerError,
                 anthropic.APITimeoutError,
                 anthropic.APIConnectionError,
+                anthropic.RateLimitError,
             ) as e:
                 if attempt == 3:
                     raise
@@ -384,6 +409,15 @@ DADOS DO CAPÍTULO ATUAL:
 - Autores: {row['autores']}
 - Elementos obrigatórios: {row['elementos_obrigatorios']}
 
+MICRO-HABILIDADES E SEQUÊNCIA DE OPERAÇÕES (geradas pelo Decompositor):
+- Seção 1: {row.get('operacao_secao_1', '')} — {row.get('micro_hab_1', '')}
+- Seção 2: {row.get('operacao_secao_2', '')} — {row.get('micro_hab_2', '')}
+- Seção 3: {row.get('operacao_secao_3', '')} — {row.get('micro_hab_3', '')}
+- Seção 4: {row.get('operacao_secao_4', '')} — {row.get('micro_hab_4', '')}
+- Seção 5: {row.get('operacao_secao_5', '')} — {row.get('micro_hab_5', '')}
+- Seção 6: {row.get('operacao_secao_6', '')} — {row.get('micro_hab_6', '')}
+(Seções com valor vazio devem ser ignoradas)
+
 ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR (nesta ordem):
 {arquivos_a_ler}
 
@@ -472,10 +506,9 @@ def run_agente4(
 ) -> Optional[Path]:
     """Agente 4 — Redator de Estilo. Qualifica prosa, torna invisível rótulos."""
 
-    filename = capitulo_filename(unidade_idx, capitulo_idx, capitulo)
     texto_rel = str(texto_path.relative_to(BASE_DIR))
 
-    system = build_system_prompt("agente4-orientacao.md", "agente4-skill.md")
+    system = build_system_prompt("agente4-orientacao.md", "agente4-skill-v2.md")
 
     user_message = f"""Sua tarefa: qualificar o texto funcional, tornando invisível a engenharia estrutural.
 
@@ -489,8 +522,7 @@ e salve de volta no mesmo caminho.
     log_print(f"\n[Agente 4] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
     run_agent(client, system, user_message, "Agente 4")
 
-    full_path = BASE_DIR / f"output/{apostila_name}/texto/{unidade_slug}/{filename}"
-    return full_path if full_path.exists() else None
+    return texto_path if texto_path.exists() else None
 
 def run_agente5(
     client: anthropic.Anthropic,
@@ -568,10 +600,12 @@ def run_pipeline(
     agentes: List[int],
     force: bool = False,
     cap_filter: Optional[int] = None,
+    client: Optional[anthropic.Anthropic] = None,
 ):
     """Executa o pipeline completo para uma apostila."""
 
-    client = anthropic.Anthropic(api_key=API_KEY)
+    if client is None:
+        client = anthropic.Anthropic(api_key=API_KEY)
 
     apostila_name = csv_path.parent.name
 
@@ -686,30 +720,38 @@ def run_pipeline(
                 if not texto_path:
                     log_print("✗  Texto não disponível. Pulando Agente 3.", indent=1)
                 else:
-                    run_agente3(
+                    texto_path = run_agente3(
                         client, texto_path, u_idx, c_idx,
                         unidade_slug, capitulo, apostila_name,
-                    )
+                    ) or texto_path
+                    if not texto_path:
+                        log_print("✗  Agente 3 não produziu output. Pulando agentes posteriores.", indent=1)
+                        continue
 
             # ─ Agente 4 ─
             if 4 in agentes:
                 if not texto_path:
                     log_print("✗  Texto não disponível. Pulando Agente 4.", indent=1)
                 else:
-                    run_agente4(
+                    resultado4 = run_agente4(
                         client, texto_path, u_idx, c_idx,
                         unidade_slug, capitulo, apostila_name,
                     )
+                    if not resultado4:
+                        log_print("✗  Agente 4 não produziu output. Pulando Agente 5.", indent=1)
+                        continue
+                    texto_path = resultado4
 
             # ─ Agente 5 ─
             if 5 in agentes:
                 if not texto_path:
                     log_print("✗  Texto não disponível. Pulando Agente 5.", indent=1)
                 else:
-                    run_agente5(
+                    if not run_agente5(
                         client, texto_path, u_idx, c_idx,
                         unidade_slug, capitulo, apostila_name,
-                    )
+                    ):
+                        log_print("✗  Agente 5 não produziu output.", indent=1)
 
     log_print(f"\n{'═' * 70}")
     log_print(f"Pipeline concluído.")
@@ -823,13 +865,20 @@ Exemplos:
             if not csv_path:
                 log_print("✗  Agente 0 não produziu o CSV. Abortando.")
                 sys.exit(1)
+            # Validar schema do CSV gerado antes de continuar
+            try:
+                parse_csv(csv_path)
+                log_print("✓  Schema do CSV validado.")
+            except (ValueError, FileNotFoundError) as e:
+                log_print(f"✗  CSV gerado com schema inválido: {e}. Abortando.")
+                sys.exit(1)
 
         agentes_pipeline = [a for a in agentes if a != 0]
         if agentes_pipeline:
             if not csv_path.exists():
                 log_print(f"ERRO: CSV não encontrado: {csv_path}")
                 sys.exit(1)
-            run_pipeline(csv_path, agentes_pipeline, args.force, args.cap)
+            run_pipeline(csv_path, agentes_pipeline, args.force, args.cap, client)
 
     # ── Modo manual ────────────────────────────────────────────────────────────
     else:
@@ -845,7 +894,8 @@ Exemplos:
             log_print(f"ERRO: CSV nao encontrado: {csv_path}")
             sys.exit(1)
 
-        run_pipeline(csv_path, agentes, args.force, args.cap)
+        client = anthropic.Anthropic(api_key=API_KEY)
+        run_pipeline(csv_path, agentes, args.force, args.cap, client)
 
 if __name__ == "__main__":
     main()
