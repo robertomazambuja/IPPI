@@ -1,240 +1,175 @@
-## Capítulo 2 — Escravidão, Direitos e Crise do Império
+## Escravidão, Direitos e Crise do Império
 
 <!-- [CONTEXTO_OPERACAO] -->
 **Habilidade:** H12 — Analisar o papel da justiça como instituição na organização das sociedades.
 **Operação principal:** Mapear causalidade
-**Pergunta do capítulo:** De que modo a escravidão como instituição jurídica, as formas de resistência e as transformações legais do Segundo Reinado produziram a crise que levou ao fim do regime imperial?
-**Por que importa:** Este capítulo demonstra como o aparato jurídico-institucional descrito no capítulo anterior foi progressivamente contestado por dentro (leis abolicionistas) e por fora (resistência negra, movimento abolicionista, dissidência militar), gerando as contradições que levaram à queda do Império.
+**Pergunta do capítulo:** Como a legislação sobre escravidão e as disputas por direitos no interior do arcabouço jurídico imperial conduziram à desagregação do regime monárquico?
+**Por que importa:** Este capítulo encerra a unidade mostrando como as disputas jurídicas em torno da escravidão desagregaram o regime imperial, abrindo a questão sobre que tipo de ordem jurídica e política substituiu o Império.
 <!-- [/CONTEXTO_OPERACAO] -->
 
 ---
 
-### Escravidão como instituição jurídica no Brasil Imperial
+### Escravidão como instituição jurídica no Império brasileiro
+
+<!-- [TIPO_OPERACAO: Definir] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
 <!-- [DEFINICAO] -->
-No Brasil Imperial, a escravidão era uma instituição regulada por lei. A Constituição de 1824, o Código Criminal de 1830 e o Código de Processo Criminal de 1832 definiam o escravizado como propriedade privada, excluído da condição de cidadão. Essas normas submetiam a população escravizada a um regime penal específico, com punições como açoites e pena de morte, que não se aplicavam a pessoas livres. A condição jurídica do escravizado era, portanto, distinta da condição jurídica do homem livre em todos os aspectos: direitos civis, direitos políticos e tratamento penal.
+No Brasil imperial, a escravidão era uma instituição regulada por lei. O ordenamento jurídico definia o escravizado como propriedade privada, estabelecia os mecanismos legais de compra, venda, herança e alforria, e determinava os limites dos direitos civis dos libertos. A escravidão não existia à margem do Estado: estava integrada ao funcionamento do sistema de justiça, dos cartórios, dos tribunais e da própria Constituição.
 
-A Constituição de 1824 não mencionava a palavra "escravo" diretamente, mas seus dispositivos sobre cidadania e direitos políticos excluíam os escravizados ao restringir a condição de cidadão brasileiro a pessoas livres. Os escravizados não eram sujeitos de direitos; eram objeto de direito de propriedade de seus senhores.
+A Constituição de 1824 não mencionava a palavra "escravo", mas garantia o direito de propriedade de forma irrestrita, o que incluía juridicamente a posse de pessoas escravizadas. Na prática, isso significava que um senhor podia registrar a compra de um escravizado em cartório, hipotecá-lo como garantia de dívida e transmiti-lo por testamento. Perante a lei, o escravizado era um bem patrimonial.
 
-O Código Criminal de 1830 consolidou o tratamento penal diferenciado. Enquanto réus livres estavam sujeitos a prisão, multa ou degredo, os escravizados condenados por crimes podiam receber pena de açoites, aplicada publicamente. Essa distinção tornava o sistema de justiça imperial um instrumento de controle direto sobre a população escravizada, reforçando a hierarquia social por meio da lei.
+O mesmo ordenamento, contudo, previa a possibilidade de alforria, isto é, a passagem da condição de escravizado à de liberto. Um escravizado que obtivesse carta de alforria adquiria personalidade jurídica, mas a Constituição restringia seus direitos políticos: libertos podiam votar como votantes de primeiro grau, porém não podiam ser eleitores de segundo grau nem candidatos a cargos eletivos. A liberdade formal, portanto, não equivalia à cidadania plena.
 
-<!-- [EXEMPLO: Código Criminal de 1830 e Lei de 1835] -->
-O artigo 60 do Código Criminal de 1830 determinava que escravizados condenados por crimes fossem punidos com açoites, pena que não se aplicava a réus livres. Em 1835, a Lei nº 4 de 10 de junho estabeleceu que escravizados que matassem ou ferissem gravemente seus senhores seriam condenados à morte, sem direito a recurso. Essas disposições legais demonstram que o sistema de justiça do Império operava com categorias jurídicas distintas conforme a condição social do indivíduo.
-<!-- [/EXEMPLO] -->
+Essa dupla condição, em que o escravizado figurava como propriedade e o liberto como cidadão de direitos reduzidos, fazia da justiça imperial um campo de disputa. Escravizados utilizavam os tribunais e as leis de alforria para reivindicar a liberdade, enquanto senhores recorriam ao mesmo aparato legal para defender seus direitos de propriedade. A escravidão era cotidianamente negociada e contestada dentro das instituições legais.
+<!-- [/DEFINICAO] -->
 
-<!-- [AUTOR: Sidney Chalhoub (1957–) Brasil] -->
-Historiador, professor na Universidade de Harvard e na Unicamp, autor de *Visões da Liberdade* (1990).
+<!-- [AUTOR: Sidney Chalhoub (1957–) Brasil | ref=definicao] -->
+Sidney Chalhoub (1957–), historiador brasileiro vinculado à Universidade de Harvard (anteriormente à Universidade Estadual de Campinas), demonstrou em *Visões da Liberdade* (1990) que os escravizados utilizavam o sistema jurídico imperial, especialmente os tribunais e as leis de alforria, como campo de disputa por sua liberdade.
 <!-- [/AUTOR] -->
 
 <!-- [FONTE] -->
 CHALHOUB, Sidney. *Visões da Liberdade: uma história das últimas décadas da escravidão na Corte*. São Paulo: Companhia das Letras, 1990.
-Chalhoub argumenta que a escravidão no Brasil era uma instituição sustentada por um aparato jurídico que regulava as relações entre senhores e escravizados, e que os próprios escravizados utilizavam brechas nesse aparato, como ações de liberdade nos tribunais, para contestar sua condição.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q1] -->
-1. O Código Criminal de 1830 aplicava a pena de açoites a:
-   (a) todos os réus condenados, independentemente de sua condição social
-   (b) apenas réus escravizados
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q2] -->
-2. Verdadeiro ou falso: A Constituição de 1824 reconhecia os escravizados como cidadãos brasileiros com direitos civis restritos.
-   Resposta: Falso. A Constituição de 1824 excluía os escravizados da condição de cidadão, tratando-os como propriedade.
-<!-- [/VERIFICACAO] -->
-<!-- [/DEFINICAO] -->
 
 ---
 
-### Formas de resistência e mecanismos legais na crise da ordem escravista
+### Formas de resistência e estratégias de luta pela liberdade
+
+<!-- [TIPO_OPERACAO: Classificar] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
 <!-- [CLASSIFICACAO] -->
-As ações que contestaram a ordem escravista no Brasil Imperial podem ser classificadas em três categorias, conforme a natureza da ação, a relação com o aparato jurídico e o efeito sobre a instituição da escravidão.
+A resistência à escravidão no Brasil assumiu formas diversas, que se distinguem pelo tipo de ação (individual ou coletiva), pela relação com o sistema jurídico (dentro da legalidade ou fora dela) e pelo objetivo imediato (liberdade individual, ruptura coletiva ou mudança legislativa). A combinação desses critérios permite identificar três grandes tipos de resistência, cada um com lógica e alcance próprios.
+<!-- [/CLASSIFICACAO] -->
 
-<!-- [SUBTIPO: Resistência direta dos escravizados] -->
-A primeira categoria é a resistência direta dos escravizados. Fugas individuais e coletivas, formação de quilombos (como o Quilombo do Jabaquara, em Santos, na década de 1880), revoltas (como a Revolta dos Malês, em Salvador, em 1835) e sabotagem de instrumentos de trabalho constituem exemplos dessa forma de ação. Todas operavam contra a legalidade vigente e produziam efeito de ruptura direta com a ordem escravista.
+<!-- [SUBTIPO: Resistência individual dentro da legalidade] -->
+**Resistência individual dentro da legalidade**
+
+A primeira forma de resistência era exercida por indivíduos dentro dos marcos legais. Escravizados acumulavam pecúlio para comprar a própria alforria ou recorriam aos tribunais para questionar a legitimidade de sua escravização. A base legal para essas ações variou ao longo do século XIX: a Lei de 1831, que proibia o tráfico atlântico de escravizados, e a Lei do Ventre Livre de 1871, que libertava os filhos de escravizadas nascidos a partir daquela data, forneceram instrumentos jurídicos concretos para essas disputas.
+
+O caso de Luís Gama (1830–1882) ilustra o alcance dessa forma de resistência. Ilegalmente escravizado na infância, Gama tornou-se advogado autodidata e atuou nos tribunais de São Paulo nas décadas de 1860 e 1870. Utilizando a Lei de 1831, argumentou em juízo que escravizados importados ilegalmente após aquela data tinham direito à liberdade. Estima-se que tenha obtido a libertação de mais de 500 pessoas por via judicial. Pela escala e pela repercussão pública, a atuação de Gama mostra como a resistência individual dentro da legalidade podia se converter em instrumento do movimento abolicionista organizado.
 <!-- [/SUBTIPO] -->
 
-<!-- [SUBTIPO: Mecanismos legais do Estado] -->
-A segunda categoria reúne os mecanismos legais do Estado. A Lei Eusébio de Queirós (1850), que proibiu o tráfico atlântico de escravizados, a Lei do Ventre Livre (1871), que declarou livres os filhos de mulheres escravizadas nascidos a partir daquela data, a Lei dos Sexagenários (1885), que concedeu liberdade aos escravizados com mais de 60 anos, e a Lei Áurea (1888), que aboliu a escravidão, são as medidas centrais dessa categoria. Todas operavam dentro da legalidade e tinham efeito de manutenção parcial da ordem, por meio de concessões graduais.
+<!-- [SUBTIPO: Resistência coletiva fora da legalidade] -->
+**Resistência coletiva fora da legalidade**
+
+Nem toda resistência, porém, operava dentro da lei. Uma segunda forma de luta funcionava de modo coletivo e fora dos marcos legais. Escravizados fugidos formavam quilombos, comunidades autônomas em que organizavam formas próprias de produção e convivência. O Quilombo dos Palmares (século XVII) permanece como referência histórica dessa prática, mas quilombos continuaram a existir no século XIX, como os do Vale do Ribeira, na província de São Paulo.
+
+Revoltas armadas constituíram outra via de resistência coletiva extralegal. A Revolta dos Malês, ocorrida em Salvador em 1835, foi organizada por escravizados e libertos de origem muçulmana que planejaram uma insurreição urbana com objetivos de liberdade coletiva e autonomia religiosa. A revolta foi reprimida, mas revelou redes de solidariedade, letramento em árabe e capacidade de planejamento coletivo entre os escravizados, desmentindo a visão de que a resistência escrava era apenas espontânea ou desorganizada.
+
+<!-- [AUTOR: João José Reis (1952–) Brasil] -->
+João José Reis (1952–), historiador vinculado à Universidade Federal da Bahia, reconstituiu a organização da Revolta dos Malês em *Rebelião Escrava no Brasil* (1986), demonstrando a complexidade das redes de articulação entre escravizados e libertos em Salvador.
+<!-- [/AUTOR] -->
 <!-- [/SUBTIPO] -->
 
 <!-- [SUBTIPO: Movimento abolicionista organizado] -->
-A terceira categoria é o movimento abolicionista organizado. As campanhas públicas de Joaquim Nabuco, José do Patrocínio e André Rebouças, as redes clandestinas de auxílio a fugitivos (os caifazes, em São Paulo) e a imprensa abolicionista compõem esse grupo. O movimento combinava legalidade (petições, discursos parlamentares) e ilegalidade (auxílio a fugas), exercendo pressão crescente sobre o regime.
+**Movimento abolicionista organizado**
+
+A terceira forma de resistência articulava elementos das duas anteriores. O movimento abolicionista organizado combinava ação individual e coletiva, operava dentro e fora da legalidade, e tinha como objetivo a mudança legislativa. Figuras como Luís Gama, José do Patrocínio (1853–1905) e André Rebouças (1838–1898) atuavam simultaneamente nos tribunais, na imprensa, no parlamento e em associações civis para pressionar por leis abolicionistas. O movimento utilizava os instrumentos jurídicos da resistência individual e canalizava a pressão das fugas e revoltas coletivas em demanda por transformação legal.
+
+A historiografia posterior analisou como essas formas de resistência foram representadas na memória social brasileira. Florestan Fernandes (1920–1995), sociólogo vinculado à Universidade de São Paulo, argumentou em *A Integração do Negro na Sociedade de Classes* (1965) que a abolição não foi acompanhada de políticas de integração social dos ex-escravizados, e que as formas de resistência negra, individuais e coletivas, foram historicamente invisibilizadas pela narrativa de uma abolição concedida pela elite branca.
+
+<!-- [AUTOR: Florestan Fernandes (1920–1995) Brasil] -->
+Florestan Fernandes (1920–1995), sociólogo da Universidade de São Paulo, investigou os efeitos da abolição sobre a população negra e a construção de uma narrativa oficial que apagava o protagonismo dos escravizados.
+<!-- [/AUTOR] -->
 <!-- [/SUBTIPO] -->
 
-<!-- [EXEMPLO: Lei do Ventre Livre de 1871] -->
-A Lei do Ventre Livre de 1871 determinou que os filhos de mulheres escravizadas nascidos a partir daquela data seriam considerados livres, mas permaneceriam sob tutela do senhor até os 21 anos (ou sob tutela do Estado a partir dos 8 anos, mediante indenização). Essa lei exemplifica a categoria de mecanismo legal do Estado: operou dentro da legalidade, concedeu liberdade futura sem libertar imediatamente nenhum escravizado adulto e adiou a abolição efetiva, funcionando como concessão gradual destinada a preservar a ordem pelo maior tempo possível.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: João José Reis (1952–) Brasil] -->
-Historiador, professor na Universidade Federal da Bahia, autor de *Rebelião Escrava no Brasil* (1986).
-<!-- [/AUTOR] -->
-
 <!-- [FONTE] -->
-REIS, João José. *Rebelião Escrava no Brasil: a história do Levante dos Malês em 1835*. São Paulo: Brasiliense, 1986.
-Reis demonstra que a Revolta dos Malês em Salvador foi organizada por escravizados e libertos de origem africana, muitos deles muçulmanos letrados, que planejaram uma insurreição armada contra a ordem escravista. A repressão ao levante resultou em condenações à morte, açoites e deportações, evidenciando que o aparato jurídico imperial tratava a resistência escrava como crime a ser punido, não como demanda a ser ouvida.
+REIS, João José. *Rebelião Escrava no Brasil: a história do levante dos malês em 1835*. São Paulo: Brasiliense, 1986.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q3] -->
-1. A formação de quilombos se enquadra em qual categoria de ação contra a escravidão?
-   (a) Mecanismo legal do Estado
-   (b) Resistência direta dos escravizados
-   (c) Movimento abolicionista organizado
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q4] -->
-2. Qual é a principal diferença entre os mecanismos legais do Estado e a resistência direta dos escravizados, segundo os critérios de classificação?
-   (a) Os mecanismos legais operavam dentro da legalidade e tinham efeito de concessão gradual; a resistência direta operava contra a legalidade e tinha efeito de ruptura
-   (b) Os mecanismos legais foram mais eficazes do que a resistência direta
-   (c) A resistência direta contava com apoio parlamentar e os mecanismos legais não
-   Resposta: (a)
-<!-- [/VERIFICACAO] -->
-<!-- [/CLASSIFICACAO] -->
-
----
-
-### Abolicionismo parlamentar e abolicionismo popular — estratégias e projetos políticos na crise do Império
-
-<!-- [COMPARACAO] -->
-<!-- [INTRODUCAO_COMPARACAO] -->
-O abolicionismo brasileiro não foi um movimento único. Duas vertentes distintas disputaram os caminhos para acabar com a escravidão, com métodos, bases sociais e projetos políticos diferentes. De um lado, o abolicionismo parlamentar e institucional, liderado por políticos como Joaquim Nabuco e juristas que atuavam dentro das instituições do Império, defendia a abolição por meio de reformas legais graduais, com indenização aos proprietários, e a incorporação dos libertos como trabalhadores assalariados dentro da ordem monárquica vigente. De outro, o abolicionismo popular e de ação direta, praticado por redes como os caifazes (liderados por Antonio Bento em São Paulo), por jornalistas como José do Patrocínio, por comunidades quilombolas e por escravizados que abandonavam as fazendas em massa na década de 1880, exigia a abolição imediata e incondicional, sem indenização, e frequentemente vinculava a causa abolicionista à crítica da monarquia.
-<!-- [/INTRODUCAO_COMPARACAO] -->
-
-<!-- [PERSPECTIVA: Método de ação] -->
-No que diz respeito ao método, o abolicionismo parlamentar operava por meio de reforma legal dentro do Parlamento: projetos de lei, discursos, publicações. O abolicionismo popular operava por meio de desobediência civil e ação direta: organização de fugas, acolhimento de fugitivos em quilombos urbanos, esvaziamento da mão de obra das fazendas.
-<!-- [/PERSPECTIVA] -->
-
-<!-- [PERSPECTIVA: Posição sobre indenização aos senhores] -->
-Quanto à questão da indenização, o abolicionismo parlamentar era favorável à compensação dos proprietários que colaborassem com o processo de transição para o trabalho livre. O abolicionismo popular era contrário a qualquer indenização, por considerar que a propriedade sobre seres humanos era ilegítima e não gerava direito a compensação.
-<!-- [/PERSPECTIVA] -->
-
-<!-- [PERSPECTIVA: Relação com o regime monárquico] -->
-As duas vertentes também divergiam em relação ao regime. O abolicionismo parlamentar buscava preservar a monarquia, conduzindo a abolição como reforma dentro da ordem institucional existente. O abolicionismo popular questionava o regime monárquico, associando a escravidão à própria estrutura do Império.
-<!-- [/PERSPECTIVA] -->
-
-<!-- [PERSPECTIVA: Visão sobre o destino dos libertos após a abolição] -->
-Por fim, as concepções sobre o futuro dos libertos diferiam. O abolicionismo parlamentar propunha a integração dos libertos como trabalhadores assalariados, com medidas de transição. O abolicionismo popular não apresentava um projeto sistemático de integração, mas incluía demandas por acesso à terra e reconhecimento da cidadania plena.
-<!-- [/PERSPECTIVA] -->
-
-<!-- [CONCLUSAO_PARCIAL] -->
-Os dois abolicionismos divergiam no método (reforma legal versus ação direta), na posição sobre indenização (favorável versus contrária) e na relação com o regime monárquico (preservação versus questionamento). Ambos contribuíram para tornar a escravidão insustentável na década de 1880, mas por vias distintas.
-<!-- [/CONCLUSAO_PARCIAL] -->
-<!-- [/COMPARACAO] -->
-
-<!-- [EXEMPLO: Nabuco e os caifazes na década de 1880] -->
-Em 1883, Joaquim Nabuco publicou *O Abolicionismo*, defendendo a abolição como reforma conduzida pelo Parlamento e pelo Estado, com medidas de transição para o trabalho livre e indenização aos proprietários que colaborassem. No mesmo período, Antonio Bento organizou em São Paulo os caifazes, grupos que auxiliavam escravizados a fugir das fazendas para o Quilombo do Jabaquara em Santos, esvaziando a mão de obra das propriedades rurais paulistas sem aguardar decisão legislativa. Enquanto Nabuco operava dentro das instituições, Bento operava contra a legalidade escravista, usando a fuga em massa como instrumento de pressão.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: Angela Alonso (1966–) Brasil | ref=comparacao] -->
-Socióloga e historiadora, professora na Universidade de São Paulo, autora de *Flores, Votos e Balas* (2015).
-<!-- [/AUTOR] -->
-
-<!-- [FONTE] -->
-ALONSO, Angela. *Flores, Votos e Balas: o movimento abolicionista brasileiro (1868–1888)*. São Paulo: Companhia das Letras, 2015.
-Alonso sustenta que o movimento abolicionista não foi um bloco uniforme, mas um conjunto de repertórios de ação distintos (parlamentar, jornalístico, jurídico e de ação direta) que convergiram na década de 1880 para tornar a escravidão insustentável, cada um operando com estratégias, bases sociais e relações diferentes com o aparato institucional do Império.
-<!-- [/FONTE] -->
-
-<!-- [AUTOR: Florestan Fernandes (1920–1995) Brasil | ref=comparacao] -->
-Sociólogo, professor na Universidade de São Paulo, autor de *A Integração do Negro na Sociedade de Classes* (1965).
-<!-- [/AUTOR] -->
 
 <!-- [FONTE] -->
 FERNANDES, Florestan. *A Integração do Negro na Sociedade de Classes*. São Paulo: Dominus/Edusp, 1965.
-Fernandes argumenta que a abolição de 1888 não foi acompanhada de medidas de incorporação dos ex-escravizados à sociedade de classes: não houve distribuição de terras, acesso à educação formal nem políticas de emprego, o que resultou na marginalização da população negra no período pós-abolição.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q5] -->
-1. Qual aspecto diferencia mais claramente o abolicionismo parlamentar do abolicionismo popular?
-   (a) O período em que atuaram
-   (b) O método de ação (reforma legal versus ação direta e desobediência civil)
-   (c) A região do país em que se concentraram
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q6] -->
-2. Verdadeiro ou falso: O abolicionismo parlamentar e o abolicionismo popular compartilhavam a mesma posição sobre a indenização aos proprietários de escravizados.
-   Resposta: Falso. O abolicionismo parlamentar era favorável à indenização; o abolicionismo popular era contrário.
-<!-- [/VERIFICACAO] -->
 
 ---
 
-### Da crise da escravidão ao fim do Império — relações causais entre transformações jurídicas e colapso do regime
+### Grupos sociais nos processos de crise e transformação do Império
 
-<!-- [RELACAO_CAUSAL] -->
+<!-- [TIPO_OPERACAO: Comparar] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
-<!-- [CAUSA] -->
-Cinco processos convergiram para minar as bases de sustentação do Império.
+A resistência à escravidão e o avanço do abolicionismo desestabilizaram o Império, mas a queda do regime não se explica por um único fator. Dois grupos sociais desempenharam papéis distintos nesse processo: a elite civil dos cafeicultores e os oficiais do Exército. Comparar suas trajetórias permite entender como a crise resultou da convergência de projetos políticos diferentes, e não de um movimento unificado.
 
-As leis abolicionistas graduais, aprovadas entre 1850 e 1885, desestabilizaram a base econômica dos proprietários escravistas sem oferecer alternativa consolidada de mão de obra, gerando ressentimento das elites agrárias contra a monarquia.
+<!-- [PERSPECTIVA: Elite cafeicultora] -->
+#### A elite cafeicultora e o republicanismo federalista
 
-As fugas em massa de escravizados na década de 1880, especialmente nas províncias de São Paulo, Rio de Janeiro e Minas Gerais, tornaram o controle da mão de obra escravizada inviável na prática, antecedendo a abolição legal.
+Os cafeicultores do Oeste Paulista constituíam a fração mais dinâmica da elite agrária brasileira nas décadas de 1870 e 1880. Sua relação com a escravidão era ambígua: dependiam do trabalho escravizado, mas já investiam na transição para o trabalho assalariado de imigrantes europeus. Reunidos no Partido Republicano Paulista (fundado em 1873), passaram a defender a república e o federalismo como mecanismos para controlar a política provincial sem a intermediação do governo central.
 
-A Lei Áurea, de 13 de maio de 1888, aboliu a escravidão sem indenização, rompendo o pacto entre a Coroa e os proprietários rurais que sustentavam politicamente o regime.
+A abolição de 1888, realizada sem indenização aos proprietários de escravizados, rompeu o vínculo dessa elite com a monarquia. Os cafeicultores não se opuseram à abolição em si (muitos já haviam transitado para o trabalho livre), mas consideraram a ausência de indenização uma violação de seus direitos de propriedade. A forma de atuação desse grupo era institucional e parlamentar: partidos, jornais e assembleias provinciais.
+<!-- [/PERSPECTIVA] -->
 
-Setores do Exército, fortalecidos após a Guerra do Paraguai (1864–1870) e insatisfeitos com a subordinação ao poder civil e com o uso das forças armadas para capturar escravizados fugidos, passaram a se alinhar com o movimento republicano.
+<!-- [PERSPECTIVA: Oficiais do Exército] -->
+#### O Exército após a Guerra do Paraguai: positivismo e Questão Militar
 
-A Igreja Católica, que historicamente legitimara a monarquia, entrou em conflito com o Estado na Questão Religiosa (1872–1875), enfraquecendo outra base de sustentação do Império.
-<!-- [/CAUSA] -->
+Os oficiais do Exército constituíam o segundo grupo decisivo na crise do Império, com formação, origem social e projeto político bastante distintos dos da elite civil. A Guerra do Paraguai (de 1864 a 1870) transformou o Exército brasileiro: os oficiais que retornaram do conflito haviam acumulado prestígio militar, consciência corporativa e contato com ideias positivistas, que valorizavam a ordem, o progresso e a administração técnica do Estado.
 
-<!-- [CONSEQUENCIA] -->
-Esses processos produziram consequências encadeadas.
-
-Os proprietários rurais, especialmente os cafeicultores do Vale do Paraíba, retiraram seu apoio à monarquia após a abolição sem indenização, aderindo ao movimento republicano.
-
-O Exército, liderado por oficiais como Deodoro da Fonseca e Benjamin Constant, executou o golpe de 15 de novembro de 1889 que depôs Dom Pedro II.
-
-A Proclamação da República (1889) encerrou o regime monárquico sem participação popular significativa, substituindo o aparato jurídico-institucional do Império por uma nova ordem constitucional republicana.
-
-A população negra recém-liberta foi excluída das estruturas de poder da nova República, sem terra, sem acesso à educação formal e sem políticas de integração social.
-<!-- [/CONSEQUENCIA] -->
+A relação desse grupo com a escravidão era de distanciamento: o Exército contava com soldados negros e libertos em suas fileiras, e oficiais como o marechal Deodoro da Fonseca resistiam a utilizar tropas para recapturar escravizados fugidos. O conflito com o governo imperial, no entanto, teve motivação institucional própria: a Questão Militar (de 1884 a 1887), em que oficiais foram punidos por se manifestarem publicamente sobre política, radicalizou a oposição dos militares ao regime.
+<!-- [/PERSPECTIVA] -->
 
 <!-- [CONCLUSAO_PARCIAL] -->
-A crise da escravidão desencadeou uma reação em cadeia sobre as bases de sustentação do Império. As leis abolicionistas graduais enfraqueceram o controle sobre a mão de obra escravizada sem satisfazer os abolicionistas nem os proprietários. A abolição sem indenização rompeu o pacto entre a Coroa e as elites agrárias. Simultaneamente, o Exército e setores urbanos já insatisfeitos com a monarquia encontraram na crise pós-abolição a oportunidade para depor o regime, consumando o golpe republicano de 1889. As instituições de justiça que durante décadas sustentaram a ordem escravista, ao regulamentar a propriedade sobre pessoas, punir a resistência e graduar a abolição, foram tanto o instrumento de manutenção do regime quanto o vetor de sua desestabilização.
-<!-- [/CONCLUSAO_PARCIAL] -->
-<!-- [/RELACAO_CAUSAL] -->
+Os dois grupos convergiam na oposição à monarquia e na defesa de um novo regime, mas divergiam em quase tudo o mais. Quanto à relação com a escravidão, os cafeicultores perderam patrimônio com a abolição e romperam com o trono por interesse econômico; os militares se distanciaram da escravidão por razões institucionais e ideológicas. Quanto à forma de atuação, os cafeicultores operavam por meios parlamentares e partidários; os militares recorreram ao golpe de força. Quanto ao projeto para o novo regime, os cafeicultores desejavam uma república federalista que garantisse autonomia provincial; os militares defendiam um Estado centralizado e orientado pelo positivismo. O golpe de 15 de novembro de 1889, liderado pelo marechal Deodoro da Fonseca com apoio de setores republicanos civis, uniu temporariamente esses dois projetos incompatíveis.
 
-<!-- [EXEMPLO: Petição do Clube Militar em 1887] -->
-Em outubro de 1887, o Exército brasileiro, por meio do Clube Militar presidido por Deodoro da Fonseca, enviou petição à Princesa Isabel solicitando que as forças armadas fossem dispensadas da função de capturar escravizados fugidos. A petição foi atendida. Sem o braço armado para impor a lei escravista, as fugas se intensificaram e a abolição tornou-se inevitável em maio de 1888. Menos de 18 meses depois, o mesmo Exército depôs o Império. A sequência evidencia como a recusa militar em executar a lei escravista acelerou a abolição, que por sua vez rompeu a aliança entre Coroa e proprietários, criando as condições para o golpe republicano.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: Décio Saes (1945–2020) Brasil | ref=relacao-causal] -->
-Cientista político e historiador, professor na Unicamp, autor de *A Formação do Estado Burguês no Brasil* (1985).
+<!-- [AUTOR: Décio Saes (1945–2017) Brasil] -->
+Décio Saes (1945–2017), cientista político vinculado à Universidade Estadual de Campinas, argumentou em *A Formação do Estado Burguês no Brasil* (1985) que a Proclamação da República resultou de uma crise de hegemonia no bloco de poder imperial, em que diferentes frações da classe dominante disputaram o controle do Estado, cada uma com projetos institucionais distintos.
 <!-- [/AUTOR] -->
 
+Lilia Moritz Schwarcz (1957–), historiadora e antropóloga da Universidade de São Paulo, acrescentou em *As Barbas do Imperador* (1998) que a imagem pública de Dom Pedro II se desgastou nas décadas de 1870 e 1880, com o envelhecimento do imperador e as críticas crescentes de republicanos, abolicionistas e militares, que questionavam a capacidade da monarquia de conduzir a modernização do país.
+<!-- [/CONCLUSAO_PARCIAL] -->
+
 <!-- [FONTE] -->
-SAES, Décio. *A Formação do Estado Burguês no Brasil (1888–1891)*. Rio de Janeiro: Paz e Terra, 1985.
-Saes argumenta que a crise do Império resultou da incompatibilidade entre a estrutura jurídico-política imperial, baseada na escravidão e no poder pessoal do monarca, e as novas forças sociais emergentes: a burguesia cafeicultora do Oeste Paulista, os militares profissionalizados e as camadas médias urbanas.
+SAES, Décio. *A Formação do Estado Burguês no Brasil*. Rio de Janeiro: Paz e Terra, 1985.
 <!-- [/FONTE] -->
 
 <!-- [FONTE] -->
-SCHWARCZ, Lilia Moritz. *O Espetáculo das Raças: cientistas, instituições e questão racial no Brasil (1870–1930)*. São Paulo: Companhia das Letras, 1993.
-Schwarcz demonstra que nas décadas finais do Império, instituições como faculdades de Direito, museus e institutos históricos incorporaram teorias raciais europeias para justificar hierarquias sociais, evidenciando que o aparato institucional do Estado não apenas regulava a escravidão por meio de leis, mas também produzia justificativas intelectuais para a desigualdade racial.
+SCHWARCZ, Lilia M. *As Barbas do Imperador: D. Pedro II, um monarca nos trópicos*. São Paulo: Companhia das Letras, 1998.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q7] -->
-1. Qual foi o efeito imediato da abolição sem indenização (Lei Áurea, 1888) sobre a base política do Império?
-   (a) Fortaleceu a aliança entre a Coroa e os proprietários rurais
-   (b) Rompeu o pacto entre a Coroa e os proprietários rurais, que aderiram ao movimento republicano
-   (c) Provocou uma guerra civil entre abolicionistas e escravistas
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q8] -->
-2. A petição do Clube Militar em 1887, solicitando dispensa da função de capturar escravizados fugidos, teve qual consequência para a ordem escravista?
-   (a) Reforçou o controle sobre a população escravizada
-   (b) Não teve efeito prático sobre as fugas
-   (c) Removeu o braço armado de imposição da lei escravista, intensificando as fugas e acelerando a abolição
-   Resposta: (c)
-<!-- [/VERIFICACAO] -->
 
 ---
 
-<!-- [SINTESE] -->
-A escravidão no Brasil Imperial era uma instituição sustentada por um aparato jurídico que definia o escravizado como propriedade, aplicava punições diferenciadas conforme a condição social e excluía a maioria da população dos direitos de cidadania. A crise desse sistema resultou da convergência entre três processos: a resistência dos escravizados (fugas, revoltas, quilombos), a pressão do movimento abolicionista (dentro e fora das instituições) e a legislação gradualista que, ao tentar administrar o fim da escravidão sem alterar a estrutura de poder, acabou desestabilizando as bases políticas do Império, a aliança com os proprietários rurais e a obediência do Exército. A abolição de 1888 e o golpe republicano de 1889 evidenciam que as instituições de justiça do Império foram simultaneamente o instrumento de manutenção da ordem escravista e o vetor de sua desintegração.
-<!-- [/SINTESE] -->
+### Legislação abolicionista, pressão social e desagregação do Império
+
+<!-- [TIPO_OPERACAO: Mapear causalidade] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
+
+<!-- [CAUSA] -->
+A desagregação do Império brasileiro entre as décadas de 1850 e 1880 resultou da convergência de pressões externas, resistência interna e contradições produzidas pela própria legislação gradualista.
+
+No plano internacional, a Inglaterra pressionou o Brasil a encerrar o tráfico atlântico de escravizados. A Lei Bill Aberdeen (1845) autorizou a Marinha britânica a apreender navios negreiros em águas brasileiras. Em resposta, o Parlamento imperial aprovou a Lei Eusébio de Queirós (1850), que efetivou a proibição do tráfico. Com a interrupção do fornecimento externo, a dinâmica econômica da escravidão se alterou: o preço dos escravizados subiu, e a reprodução do sistema passou a depender exclusivamente do crescimento interno e do tráfico interprovincial.
+
+Enquanto isso, no plano interno, a resistência dos escravizados exercia pressão contínua sobre o sistema. Fugas em massa, formação de quilombos, ações judiciais e crescente insubordinação nas fazendas, especialmente na província de São Paulo nas décadas de 1880, tornaram o controle senhorial cada vez mais custoso e instável. O movimento abolicionista organizado, composto por advogados, jornalistas e parlamentares, canalizou essa pressão em demandas por mudança legislativa.
+<!-- [/CAUSA] -->
+
+<!-- [RELACAO_CAUSAL] -->
+Essas forças conjugadas produziram uma sequência de leis que restringiram progressivamente a reprodução do sistema escravista. A Lei do Ventre Livre (1871) declarou livres os filhos de escravizadas nascidos a partir daquela data, eliminando a principal fonte de reposição interna da mão de obra escravizada. A Lei dos Sexagenários (1885) libertou escravizados com mais de 60 anos. Cada lei reduziu o número de escravizados e elevou os custos de manutenção da escravidão, sem compensar os proprietários de forma que considerassem suficiente.
+
+O efeito acumulado foi a erosão da base material do regime escravista. Entre 1885 e 1888, milhares de escravizados abandonaram as fazendas do Oeste Paulista sem autorização, refugiando-se em quilombos urbanos como o Jabaquara, em Santos, organizado com apoio de abolicionistas locais. Os fazendeiros, incapazes de conter as fugas e sem apoio eficaz das forças policiais, passaram a conceder alforrias em massa para reter a mão de obra. A escravidão desagregava-se nas fazendas antes de ser formalmente extinta pela lei.
+<!-- [/RELACAO_CAUSAL] -->
+
+<!-- [CONSEQUENCIA] -->
+A Lei Áurea, assinada em 13 de maio de 1888, formalizou juridicamente um processo de desagregação que já estava em curso. Ao extinguir a escravidão, a lei removeu a base jurídica que sustentava o regime de trabalho e a estrutura de propriedade da elite imperial.
+
+A consequência política foi imediata. A monarquia perdeu sua base de sustentação: os proprietários escravistas abandonaram o trono por não terem recebido indenização; os abolicionistas, que haviam pressionado por décadas, já se encontravam distanciados do regime; os militares mantinham conflitos próprios com o governo. Em menos de 18 meses após a abolição, o regime monárquico foi derrubado pelo golpe militar de 15 de novembro de 1889, sem que nenhuma força política significativa se levantasse em defesa do trono. A Proclamação da República não foi uma revolução popular, mas o desfecho de um processo em que a escravidão, ao ser abolida, removeu a última estrutura que articulava os diferentes grupos de poder em torno da monarquia.
+
+<!-- [AUTOR: Angela Alonso (1966–) Brasil] -->
+Angela Alonso (1966–), socióloga e historiadora vinculada à Universidade de São Paulo, demonstrou em *Flores, Votos e Balas* (2015) que o abolicionismo brasileiro não foi obra de uma elite benevolente, mas um movimento social com múltiplas frentes de atuação (jurídica, parlamentar, jornalística e de ação direta) que pressionou o Estado imperial até tornar a manutenção da escravidão politicamente insustentável.
+<!-- [/AUTOR] -->
+<!-- [/CONSEQUENCIA] -->
+
+<!-- [FONTE] -->
+ALONSO, Angela. *Flores, Votos e Balas: o movimento abolicionista brasileiro, 1868–1888*. São Paulo: Companhia das Letras, 2015.
+<!-- [/FONTE] -->
+
+---
+
+## Síntese
+
+<!-- [SINTESE_FINAL] -->
+<!-- AVISO_AGENTE5: tipo SINTESE_FINAL não mapeado — gerar secao tipo="generico" -->
+A escravidão era sustentada pelo ordenamento jurídico do Império, que definia o escravizado como propriedade e regulava os mecanismos de compra, venda e alforria. A resistência dos escravizados, por via judicial, fugas e revoltas, somada à atuação do movimento abolicionista, pressionou o Estado a produzir legislação gradualista que corroeu progressivamente a base do sistema escravista. Quando a abolição de 1888 removeu a instituição jurídica que articulava os interesses da elite agrária ao trono, a monarquia ficou politicamente isolada, abrindo caminho para a Proclamação da República em 1889.
+<!-- [/SINTESE_FINAL] -->
 
 <!-- [ENCADEAMENTO] -->
-Este é o último capítulo da Unidade 1. A análise de como as instituições de justiça do Brasil imperial funcionaram como instrumentos de organização do poder e de manutenção da hierarquia social escravista, e de como suas contradições levaram à crise do regime, abre a questão de como o novo aparato jurídico republicano (Constituição de 1891, federalismo, exclusão do voto dos analfabetos) reorganizou as relações de poder sem incorporar a população negra recém-liberta.
+A questão que permanece em aberto para a próxima unidade é: que tipo de ordem jurídica e política substituiu o Império, e em que medida a República alterou ou reproduziu os padrões de exclusão herdados do período monárquico.
 <!-- [/ENCADEAMENTO] -->

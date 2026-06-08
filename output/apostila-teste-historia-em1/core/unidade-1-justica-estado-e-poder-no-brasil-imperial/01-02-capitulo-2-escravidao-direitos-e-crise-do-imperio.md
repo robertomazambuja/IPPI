@@ -5,38 +5,11 @@
 ## METADADOS DO CAPÍTULO
 
 ```yaml
-HABILIDADE_BNCC: H12 — Analisar o papel da justiça como instituição na organização das sociedades.
+HABILIDADE_ENEM: "H12 — Analisar o papel da justiça como instituição na organização das sociedades."
 OPERACAO_PRINCIPAL: Mapear causalidade
-PERGUNTA_DO_CAPITULO: De que modo a escravidão como instituição jurídica, as formas de resistência e as transformações legais do Segundo Reinado produziram a crise que levou ao fim do regime imperial?
-CONTRIBUICAO_A_UNIDADE: Este capítulo demonstra como o aparato jurídico-institucional descrito no capítulo anterior — projetado para manter a ordem escravista — foi progressivamente contestado por dentro (leis abolicionistas) e por fora (resistência negra, movimento abolicionista, dissidência militar), gerando as contradições que levaram à queda do Império e respondendo à pergunta central da unidade sobre o papel das instituições de justiça na organização política e social do Brasil imperial.
+PERGUNTA_DO_CAPITULO: "Como a legislação sobre escravidão e as disputas por direitos no interior do arcabouço jurídico imperial conduziram à desagregação do regime monárquico?"
+CONTRIBUICAO_A_UNIDADE: "Este capítulo demonstra como a justiça imperial, ao regular a escravidão e responder às pressões por sua abolição, produziu contradições que levaram à crise e ao fim do Império, completando a resposta sobre o papel das instituições de justiça na organização política e social do Brasil entre a Independência e a Proclamação da República."
 ```
-
----
-
-## LISTAS DE CONTEÚDOS (resultado do PASSO -1)
-
-**LISTA_OBRIGATÓRIA (professor):**
-1. Justiça e sociedade escravista no século XIX
-2. Leis abolicionistas e crise da escravidão
-3. Resistência negra quilombos e movimento abolicionista
-4. Relações entre elite Exército e poder político
-5. Crise do Império
-
-**LISTA_COMPLEMENTAR (matriz H12 — História, por prioridade):**
-1. Direito e Estado (prioritário — já utilizado no capítulo anterior; reutilizável com recorte sobre escravidão)
-2. Constituições (prioritário — aplicável ao enquadramento jurídico da escravidão na Constituição de 1824)
-3. Cidadania (prioritário — aplicável à exclusão dos escravizados e libertos do estatuto de cidadão)
-4. Direitos humanos (prioritário — não diretamente aplicável ao recorte temporal, mas tangenciável via abolicionismo)
-5. Punição e controle social (prioritário — aplicável ao funcionamento da justiça sobre a população escravizada)
-
----
-
-## DISTRIBUIÇÃO DE AUTORES ENTRE SEÇÕES
-
-- **Seção 1 (Definir — escravidão como instituição jurídica):** Sidney Chalhoub — especialista em escravidão, direito e cotidiano no Brasil imperial.
-- **Seção 2 (Classificar — formas de resistência e mecanismos legais):** João José Reis — especialista em revoltas escravas e formas de resistência no Brasil escravista.
-- **Seção 3 (Comparar — estratégias de luta e projetos políticos):** Angela Alonso — especialista no movimento abolicionista e na crise do Império; Florestan Fernandes — análise da integração do negro na sociedade de classes.
-- **Seção 4 (Mapear causalidade — crise da escravidão e fim do Império):** Décio Saes — análise das bases sociais e políticas da crise imperial; Lilia Moritz Schwarcz — teorias raciais e transformações institucionais no fim do Império.
 
 ---
 
@@ -44,21 +17,22 @@ CONTRIBUICAO_A_UNIDADE: Este capítulo demonstra como o aparato jurídico-instit
 
 ```yaml
 TIPO_OPERACAO: Definir
-CABECALHO: Escravidão como instituição jurídica no Brasil Imperial
-CONTEUDO_NUCLEAR: Justiça e sociedade escravista no século XIX; Direito e Estado; Constituições; Cidadania; Punição e controle social
+CABECALHO: "Escravidão como instituição jurídica no Império brasileiro"
+CONTEUDO_NUCLEAR: "Justiça e sociedade escravista no século XIX; Direito e Estado"
 PESO: Principal
 
-CONCEITO_CENTRAL: Escravidão como instituição jurídica
-DEFINICAO_EM_UMA_LINHA: No Brasil Imperial, a escravidão era uma instituição regulada por lei — a Constituição de 1824, o Código Criminal de 1830 e o Código de Processo Criminal de 1832 definiam o escravizado como propriedade privada, excluído da condição de cidadão e submetido a normas penais específicas que previam punições como açoites e pena de morte, inexistentes para pessoas livres.
-EXEMPLO_ANCOLA: O artigo 60 do Código Criminal de 1830 determinava que escravizados condenados por crimes fossem punidos com açoites — pena que não se aplicava a réus livres. Em 1835, a Lei nº 4 de 10 de junho estabeleceu que escravizados que matassem ou ferissem gravemente seus senhores seriam condenados à morte, sem direito a recurso. Essas disposições legais demonstram que o sistema de justiça do Império operava com categorias jurídicas distintas conforme a condição social do indivíduo.
+CONCEITO_CENTRAL: "Escravidão como instituição jurídica"
+DEFINICAO_EM_UMA_LINHA: "No Brasil imperial, a escravidão era uma instituição regulada por lei: o ordenamento jurídico definia o escravizado como propriedade privada, estabelecia os mecanismos legais de compra, venda, herança e alforria, e determinava os limites dos direitos civis dos libertos, integrando a escravidão ao funcionamento do Estado e do sistema de justiça."
+EXEMPLO_ANCOLA: "A Constituição de 1824 não mencionava a palavra 'escravo', mas garantia o direito de propriedade de forma irrestrita, o que incluía juridicamente a posse de pessoas escravizadas. Um senhor podia registrar a compra de um escravizado em cartório, hipotecá-lo como garantia de dívida e transmiti-lo por testamento. Ao mesmo tempo, um escravizado que obtivesse carta de alforria passava à condição de liberto, mas a Constituição restringia seus direitos políticos: libertos podiam votar como votantes de primeiro grau, mas não podiam ser eleitores de segundo grau nem candidatos a cargos eletivos."
 
-AUTOR: Sidney Chalhoub (1957–), historiador brasileiro, professor da Universidade de Harvard e da Universidade Estadual de Campinas (Unicamp)
+AUTOR: "Sidney Chalhoub (1957–), historiador, Universidade de Harvard (anteriormente Universidade Estadual de Campinas)"
 BOX_BIOGRAFICO: Sim
-FONTE_PRIMARIA: Sidney Chalhoub, "Visões da Liberdade: uma história das últimas décadas da escravidão na Corte" (1990). Chalhoub argumenta que a escravidão no Brasil não era apenas um regime de trabalho forçado, mas uma instituição sustentada por um aparato jurídico que regulava minuciosamente as relações entre senhores e escravizados, e que os próprios escravizados utilizavam brechas nesse aparato — como ações de liberdade nos tribunais — para contestar sua condição.
+FONTE_PRIMARIA: "CHALHOUB, Sidney. Visões da Liberdade: uma história das últimas décadas da escravidão na Corte (1990). Chalhoub demonstra que os escravizados utilizavam o sistema jurídico imperial — especialmente os tribunais e as leis de alforria — como campo de disputa por sua liberdade, e que a escravidão não era simplesmente imposta de fora, mas cotidianamente negociada e contestada dentro das instituições legais. Referência: CHALHOUB, Sidney. Visões da Liberdade. São Paulo: Companhia das Letras, 1990."
+
 SUBSEÇÕES:
-  - A condição jurídica do escravizado na Constituição de 1824
-  - Código Criminal de 1830 e tratamento penal diferenciado
-  - A justiça como instrumento de controle da população escravizada
+  - "O escravizado como propriedade: base jurídica da escravidão"
+  - "Alforria, libertos e os limites dos direitos civis"
+  - "A justiça como campo de disputa sobre a condição escrava"
 VERIFICACAO: Sim
 ```
 
@@ -68,27 +42,33 @@ VERIFICACAO: Sim
 
 ```yaml
 TIPO_OPERACAO: Classificar
-CABECALHO: Formas de resistência e mecanismos legais na crise da ordem escravista
-CONTEUDO_NUCLEAR: Resistência negra quilombos e movimento abolicionista; Leis abolicionistas e crise da escravidão; Punição e controle social
+CABECALHO: "Formas de resistência e estratégias de luta pela liberdade"
+CONTEUDO_NUCLEAR: "Resistência negra quilombos e movimento abolicionista; Direitos humanos"
 PESO: Principal
 
 CRITERIOS:
-  - Natureza da ação (resistência direta dos escravizados / ação jurídico-legal do Estado / mobilização organizada da sociedade civil)
-  - Relação com o aparato jurídico (ação dentro da legalidade / ação contra a legalidade vigente)
-  - Efeito sobre a instituição escravista (manutenção parcial com concessões / ruptura direta com a ordem)
+  - "Tipo de ação (individual ou coletiva)"
+  - "Relação com o sistema jurídico (dentro da legalidade ou fora dela)"
+  - "Objetivo imediato (liberdade individual, ruptura coletiva ou mudança legislativa)"
 ELEMENTOS_A_CLASSIFICAR:
-  - Resistência direta dos escravizados: fugas individuais e coletivas, formação de quilombos (ex: Quilombo do Jabaquara, Santos, década de 1880), revoltas (ex: Revolta dos Malês, Salvador, 1835), sabotagem de instrumentos de trabalho — ações contra a legalidade vigente, com efeito de ruptura direta
-  - Mecanismos legais do Estado: Lei Eusébio de Queirós (1850, proibição do tráfico atlântico), Lei do Ventre Livre (1871, liberdade dos filhos de escravizadas nascidos a partir daquela data), Lei dos Sexagenários (1885, liberdade dos escravizados com mais de 60 anos), Lei Áurea (1888, abolição) — ações dentro da legalidade, com efeito de manutenção parcial e concessões graduais
-  - Movimento abolicionista organizado: campanhas públicas de Joaquim Nabuco, José do Patrocínio e André Rebouças; redes clandestinas de auxílio a fugitivos (caifazes em São Paulo); imprensa abolicionista — ações que combinavam legalidade (petições, discursos parlamentares) e ilegalidade (auxílio a fugas), com efeito de pressão crescente sobre o regime
-EXEMPLO_ANCOLA: A Lei do Ventre Livre de 1871 determinou que os filhos de mulheres escravizadas nascidos a partir daquela data seriam considerados livres, mas permaneceriam sob tutela do senhor até os 21 anos (ou sob tutela do Estado a partir dos 8 anos, mediante indenização). Essa lei exemplifica a categoria de mecanismo legal do Estado: operou dentro da legalidade, concedeu liberdade futura sem libertar imediatamente nenhum escravizado adulto e adiou a abolição efetiva, funcionando como concessão gradual destinada a preservar a ordem pelo maior tempo possível.
+  - "Resistência individual dentro da legalidade: escravizados que acumulavam pecúlio para comprar a própria alforria ou que recorriam aos tribunais para questionar a legitimidade de sua escravização, invocando leis como a Lei de 1831 (proibição do tráfico) ou a Lei do Ventre Livre de 1871."
+  - "Resistência coletiva fora da legalidade: formação de quilombos como comunidades autônomas de escravizados fugidos, em que se organizavam formas próprias de produção e convivência. Exemplos: Quilombo dos Palmares (século XVII, como referência histórica) e quilombos do Vale do Ribeira (século XIX)."
+  - "Revoltas escravas: levantes armados como a Revolta dos Malês em Salvador (1835), organizada por escravizados e libertos de origem muçulmana, que planejaram uma insurreição urbana com objetivos de liberdade coletiva e autonomia religiosa."
+  - "Movimento abolicionista organizado: campanha pública pela abolição conduzida por figuras como Luís Gama (1830–1882), advogado negro e ex-escravizado que usou os tribunais para libertar centenas de escravizados, José do Patrocínio (1853–1905) e André Rebouças (1838–1898), que atuavam na imprensa, no parlamento e em associações civis para pressionar por mudanças legislativas."
+EXEMPLO_ANCOLA: "Luís Gama, que havia sido ilegalmente escravizado na infância, tornou-se advogado autodidata e atuou nos tribunais de São Paulo nas décadas de 1860 e 1870. Ele usou a Lei de 1831 — que declarava livres todos os africanos trazidos ao Brasil após aquela data — para argumentar em juízo que escravizados importados ilegalmente após 1831 tinham direito à liberdade. Estima-se que Gama tenha obtido a libertação de mais de 500 pessoas por via judicial. Sua atuação exemplifica a categoria de resistência individual dentro da legalidade que, pela escala e pela repercussão pública, tornou-se instrumento do movimento abolicionista organizado."
 
-AUTOR: João José Reis (1952–), historiador brasileiro, professor da Universidade Federal da Bahia (UFBA)
+AUTOR: "João José Reis (1952–), historiador, Universidade Federal da Bahia"
 BOX_BIOGRAFICO: Sim
-FONTE_PRIMARIA: João José Reis, "Rebelião Escrava no Brasil: a história do Levante dos Malês em 1835" (1986). Reis demonstra que a Revolta dos Malês em Salvador foi organizada por escravizados e libertos de origem africana, muitos deles muçulmanos letrados, que planejaram uma insurreição armada contra a ordem escravista. A repressão ao levante resultou em condenações à morte, açoites e deportações, evidenciando que o aparato jurídico imperial tratava a resistência escrava como crime a ser punido, não como demanda legítima a ser ouvida.
+FONTE_PRIMARIA: "REIS, João José. Rebelião Escrava no Brasil: a história do levante dos malês em 1835 (1986). Reis reconstrói a organização da Revolta dos Malês em Salvador, demonstrando que os escravizados muçulmanos possuíam redes de solidariedade, letramento em árabe e capacidade de planejamento coletivo, desmentindo a visão de que a resistência escrava era apenas espontânea ou desorganizada. Referência: REIS, João José. Rebelião Escrava no Brasil. São Paulo: Brasiliense, 1986."
+
+AUTOR_SECUNDARIO: "Florestan Fernandes (1920–1995), sociólogo, Universidade de São Paulo"
+BOX_BIOGRAFICO_SECUNDARIO: Sim
+FONTE_PRIMARIA_SECUNDARIA: "FERNANDES, Florestan. A Integração do Negro na Sociedade de Classes (1965). Fernandes argumenta que a abolição não foi acompanhada de políticas de integração social dos ex-escravizados, e que as formas de resistência negra — individuais e coletivas — foram historicamente invisibilizadas pela narrativa de uma abolição concedida pela elite branca. Referência: FERNANDES, Florestan. A Integração do Negro na Sociedade de Classes. São Paulo: Dominus/Edusp, 1965."
+
 SUBSEÇÕES:
-  - Resistência direta — fugas, quilombos e revoltas
-  - Mecanismos legais — leis abolicionistas graduais (1850–1888)
-  - Movimento abolicionista — campanhas, redes e imprensa
+  - "Resistência individual e uso dos tribunais"
+  - "Quilombos e revoltas: resistência coletiva fora da legalidade"
+  - "O movimento abolicionista: imprensa, parlamento e tribunais"
 VERIFICACAO: Sim
 ```
 
@@ -98,30 +78,31 @@ VERIFICACAO: Sim
 
 ```yaml
 TIPO_OPERACAO: Comparar
-CABECALHO: Abolicionismo parlamentar e abolicionismo popular — estratégias e projetos políticos na crise do Império
-CONTEUDO_NUCLEAR: Resistência negra quilombos e movimento abolicionista; Leis abolicionistas e crise da escravidão; Crise do Império; Cidadania
+CABECALHO: "Grupos sociais nos processos de crise e transformação do Império"
+CONTEUDO_NUCLEAR: "Relações entre elite Exército e poder político; Crise do Império"
 PESO: Principal
 
-ELEMENTO_A: Abolicionismo parlamentar e institucional — liderado por políticos como Joaquim Nabuco e juristas que atuavam dentro das instituições do Império, defendendo a abolição por meio de reformas legais graduais, com indenização aos proprietários, e a incorporação dos libertos como trabalhadores assalariados dentro da ordem monárquica vigente
-ELEMENTO_B: Abolicionismo popular e de ação direta — praticado por redes como os caifazes (liderados por Antonio Bento em São Paulo), por jornalistas como José do Patrocínio, por comunidades quilombolas e por escravizados que abandonavam as fazendas em massa na década de 1880, exigindo a abolição imediata e incondicional, sem indenização, e frequentemente vinculando a causa abolicionista à crítica da monarquia
+ELEMENTO_A: "Elite civil (cafeicultores do Oeste Paulista, parte da classe política imperial): grupo que, após a abolição de 1888, perdeu a base econômica sustentada pelo trabalho escravizado e rompeu com a monarquia, aderindo ao republicanismo como forma de reorganizar o poder político em favor de seus interesses regionais e econômicos."
+ELEMENTO_B: "Oficiais do Exército (especialmente a geração formada após a Guerra do Paraguai, 1864–1870): grupo que acumulou prestígio militar, adotou ideias positivistas e entrou em conflito com o governo imperial por questões de autonomia institucional e participação política, culminando no golpe de 15 de novembro de 1889."
 ASPECTOS_DA_COMPARACAO:
-  - Método de ação (reforma legal dentro do Parlamento vs. desobediência civil e ação direta)
-  - Posição sobre indenização aos senhores (favorável vs. contrária)
-  - Relação com o regime monárquico (preservação da monarquia vs. questionamento do regime)
-  - Visão sobre o destino dos libertos após a abolição (integração como trabalhadores assalariados vs. ausência de projeto sistemático de integração, mas com demandas por terra e cidadania)
-EXEMPLO_ANCOLA: Em 1883, Joaquim Nabuco publicou "O Abolicionismo", defendendo a abolição como reforma conduzida pelo Parlamento e pelo Estado, com medidas de transição para o trabalho livre e indenização aos proprietários que colaborassem. No mesmo período, Antonio Bento organizou em São Paulo os caifazes, grupos que auxiliavam escravizados a fugir das fazendas para o Quilombo do Jabaquara em Santos, esvaziando a mão de obra das propriedades rurais paulistas sem aguardar decisão legislativa. Enquanto Nabuco operava dentro das instituições, Bento operava contra a legalidade escravista, usando a fuga em massa como instrumento de pressão.
+  - "Relação com a escravidão e a abolição"
+  - "Motivação para a oposição ao regime imperial"
+  - "Forma de atuação política (institucional-parlamentar vs. militar)"
+  - "Projeto para o regime que substituiria a monarquia"
+EXEMPLO_ANCOLA: "Os cafeicultores do Oeste Paulista, reunidos no Partido Republicano Paulista (fundado em 1873), passaram a defender a república e o federalismo como mecanismo para controlar a política provincial sem a intermediação do governo central. Após a abolição sem indenização em 1888, muitos deles retiraram o apoio à monarquia. Os oficiais do Exército, por sua vez, entraram em conflito direto com o governo imperial a partir da Questão Militar (1884–1887), quando oficiais foram punidos por se manifestarem publicamente sobre política. O marechal Deodoro da Fonseca liderou o golpe de 15 de novembro de 1889 com apoio de setores republicanos civis, mas o projeto dos militares — um Estado centralizado e positivista — diferia do projeto federalista dos cafeicultores paulistas."
 
-AUTOR: Angela Alonso (1966–), socióloga e historiadora brasileira, professora da Universidade de São Paulo (USP)
+AUTOR: "Décio Saes (1945–2017), cientista político, Universidade Estadual de Campinas"
 BOX_BIOGRAFICO: Sim
-FONTE_PRIMARIA: Angela Alonso, "Flores, Votos e Balas: o movimento abolicionista brasileiro (1868–1888)" (2015). Alonso sustenta que o movimento abolicionista não foi um bloco uniforme, mas um conjunto de repertórios de ação distintos — parlamentar, jornalístico, jurídico e de ação direta — que convergiram na década de 1880 para tornar a escravidão insustentável, cada um operando com estratégias, bases sociais e relações diferentes com o aparato institucional do Império.
+FONTE_PRIMARIA: "SAES, Décio. A Formação do Estado Burguês no Brasil (1985). Saes argumenta que a Proclamação da República resultou de uma crise de hegemonia no bloco de poder imperial, em que diferentes frações da classe dominante — cafeicultores, militares, burocracia estatal — disputaram o controle do Estado, cada uma com projetos institucionais distintos. Referência: SAES, Décio. A Formação do Estado Burguês no Brasil. Rio de Janeiro: Paz e Terra, 1985."
 
-AUTOR_COMPLEMENTAR: Florestan Fernandes (1920–1995), sociólogo brasileiro, professor da Universidade de São Paulo (USP)
-BOX_BIOGRAFICO_COMPLEMENTAR: Sim
-FONTE_PRIMARIA_COMPLEMENTAR: Florestan Fernandes, "A Integração do Negro na Sociedade de Classes" (1965). Fernandes argumenta que a abolição de 1888 não foi acompanhada de medidas de incorporação dos ex-escravizados à sociedade de classes — não houve distribuição de terras, acesso à educação formal nem políticas de emprego —, o que resultou na marginalização da população negra no período pós-abolição.
+AUTOR_SECUNDARIO: "Lilia Moritz Schwarcz (1957–), historiadora e antropóloga, Universidade de São Paulo"
+BOX_BIOGRAFICO_SECUNDARIO: Não
+FONTE_PRIMARIA_SECUNDARIA: "SCHWARCZ, Lilia Moritz. As Barbas do Imperador (1998). Schwarcz analisa como a imagem pública de Dom Pedro II se desgastou nas décadas de 1870 e 1880, com o envelhecimento do imperador e as críticas crescentes de republicanos, abolicionistas e militares, que questionavam a capacidade da monarquia de conduzir a modernização do país. Referência: SCHWARCZ, Lilia M. As Barbas do Imperador: D. Pedro II, um monarca nos trópicos. São Paulo: Companhia das Letras, 1998."
+
 SUBSEÇÕES:
-  - Abolicionismo parlamentar — Joaquim Nabuco e a via institucional
-  - Abolicionismo popular — caifazes, quilombos urbanos e fugas em massa
-  - Dois projetos em confronto — reforma gradual vs. ruptura imediata
+  - "A elite cafeicultora e o republicanismo federalista"
+  - "O Exército após a Guerra do Paraguai: positivismo e Questão Militar"
+  - "Dois projetos para substituir a monarquia"
 VERIFICACAO: Sim
 ```
 
@@ -131,36 +112,32 @@ VERIFICACAO: Sim
 
 ```yaml
 TIPO_OPERACAO: Mapear causalidade
-CABECALHO: Da crise da escravidão ao fim do Império — relações causais entre transformações jurídicas e colapso do regime
-CONTEUDO_NUCLEAR: Crise do Império; Leis abolicionistas e crise da escravidão; Relações entre elite Exército e poder político; Direito e Estado
+CABECALHO: "Legislação abolicionista, pressão social e desagregação do Império"
+CONTEUDO_NUCLEAR: "Leis abolicionistas e crise da escravidão; Crise do Império; Constituições"
 PESO: Principal
 
 CAUSAS:
-  - As leis abolicionistas graduais (1850–1885) desestabilizaram a base econômica dos proprietários escravistas sem oferecer alternativa consolidada de mão de obra, gerando ressentimento das elites agrárias contra a monarquia
-  - As fugas em massa de escravizados na década de 1880, especialmente nas províncias de São Paulo, Rio de Janeiro e Minas Gerais, tornaram o controle da mão de obra escravizada inviável na prática, antecedendo a abolição legal
-  - A Lei Áurea (13 de maio de 1888) aboliu a escravidão sem indenização, rompendo o pacto entre a Coroa e os proprietários rurais que sustentavam politicamente o regime
-  - Setores do Exército — fortalecidos após a Guerra do Paraguai (1864–1870) e insatisfeitos com a subordinação ao poder civil e com o uso das forças armadas para capturar escravizados fugidos — passaram a se alinhar com o movimento republicano
-  - A Igreja Católica, que historicamente legitimara a monarquia, entrou em conflito com o Estado na Questão Religiosa (1872–1875), enfraquecendo outra base de sustentação do Império
+  - "Pressão internacional: a Inglaterra proibiu o tráfico atlântico de escravizados (Lei Bill Aberdeen, 1845) e pressionou o Brasil a fazer o mesmo, resultando na Lei Eusébio de Queirós (1850), que efetivou a proibição do tráfico"
+  - "Resistência dos escravizados: fugas em massa, quilombos, ações judiciais e a crescente insubordinação nas fazendas, especialmente na província de São Paulo nas décadas de 1880"
+  - "Movimento abolicionista organizado: atuação de advogados, jornalistas e parlamentares que pressionaram por legislação gradualista (Lei do Ventre Livre, 1871; Lei dos Sexagenários, 1885) e pela abolição total"
+  - "Legislação gradualista e seus efeitos acumulados: cada lei restringiu a reprodução do sistema escravista, reduzindo o número de escravizados e elevando os custos de manutenção da escravidão"
+  - "Perda de apoio dos cafeicultores: após a abolição de 1888 sem indenização, a elite agrária escravista rompeu com a monarquia"
 CONSEQUENCIAS:
-  - Os proprietários rurais, especialmente os cafeicultores do Vale do Paraíba, retiraram seu apoio à monarquia após a abolição sem indenização, aderindo ao movimento republicano
-  - O Exército, liderado por oficiais como Deodoro da Fonseca e Benjamin Constant, executou o golpe de 15 de novembro de 1889 que depôs Dom Pedro II
-  - A Proclamação da República (1889) encerrou o regime monárquico sem participação popular significativa, substituindo o aparato jurídico-institucional do Império por uma nova ordem constitucional republicana
-  - A população negra recém-liberta foi excluída das estruturas de poder da nova República — sem terra, sem acesso à educação formal e sem políticas de integração social
-RELACAO: A crise da escravidão desencadeou uma reação em cadeia sobre as bases de sustentação do Império: as leis abolicionistas graduais (causa inicial) enfraqueceram o controle sobre a mão de obra escravizada sem satisfazer os abolicionistas nem os proprietários (efeito intermediário); a abolição sem indenização (causa decisiva) rompeu o pacto entre a Coroa e as elites agrárias (efeito sobre a base política); simultaneamente, o Exército e setores urbanos já insatisfeitos com a monarquia encontraram na crise pós-abolição a oportunidade para depor o regime (efeito final: golpe republicano de 1889). As instituições de justiça que durante décadas sustentaram a ordem escravista — ao regulamentar a propriedade sobre pessoas, punir a resistência e graduar a abolição — foram, portanto, tanto o instrumento de manutenção do regime quanto o vetor de sua desestabilização.
-EXEMPLO_ANCOLA: Em outubro de 1887, o Exército brasileiro, por meio do Clube Militar presidido por Deodoro da Fonseca, enviou petição à Princesa Isabel solicitando que as forças armadas fossem dispensadas da função de capturar escravizados fugidos. A petição foi atendida. Sem o braço armado para impor a lei escravista, as fugas se intensificaram e a abolição tornou-se inevitável em maio de 1888. Menos de 18 meses depois, o mesmo Exército depôs o Império. A sequência evidencia como a recusa militar em executar a lei escravista (causa) acelerou a abolição (consequência imediata), que por sua vez rompeu a aliança entre Coroa e proprietários (consequência mediata), criando as condições para o golpe republicano (consequência final).
+  - "A Lei Áurea (13 de maio de 1888) extinguiu a escravidão, removendo a base jurídica que sustentava o regime de trabalho e a estrutura de propriedade da elite imperial"
+  - "A monarquia perdeu sua base de sustentação política: os escravistas abandonaram o trono por não terem recebido indenização; os abolicionistas já haviam se distanciado; os militares tinham conflitos próprios com o governo"
+  - "A Proclamação da República (15 de novembro de 1889) ocorreu por golpe militar, sem resistência significativa ao regime que já se encontrava politicamente isolado"
+RELACAO: "Pressão internacional + resistência dos escravizados + movimento abolicionista → legislação gradualista (1850, 1871, 1885) → erosão da base escravista → Lei Áurea (1888) → perda de apoio da elite agrária → isolamento político da monarquia → Proclamação da República (1889)."
+EXEMPLO_ANCOLA: "Entre 1885 e 1888, milhares de escravizados abandonaram as fazendas do Oeste Paulista sem autorização, refugiando-se em quilombos urbanos como o Jabaquara, em Santos, organizado com apoio de abolicionistas locais. Os fazendeiros, incapazes de conter as fugas e sem apoio eficaz das forças policiais, passaram a conceder alforrias em massa para reter a mão de obra. A Lei Áurea de 1888 formalizou juridicamente um processo de desagregação que já ocorria nas fazendas. Em menos de 18 meses após a abolição, o regime monárquico foi derrubado pelo golpe militar de 15 de novembro de 1889, sem que nenhuma força política significativa se levantasse em defesa do trono."
 
-AUTOR: Décio Saes (1945–2020), cientista político e historiador brasileiro, professor da Universidade Estadual de Campinas (Unicamp)
+AUTOR: "Angela Alonso (1966–), socióloga e historiadora, Universidade de São Paulo"
 BOX_BIOGRAFICO: Sim
-FONTE_PRIMARIA: Décio Saes, "A Formação do Estado Burguês no Brasil (1888–1891)" (1985). Saes argumenta que a crise do Império resultou da incompatibilidade entre a estrutura jurídico-política imperial — baseada na escravidão e no poder pessoal do monarca — e as novas forças sociais emergentes: a burguesia cafeicultora do Oeste Paulista, os militares profissionalizados e as camadas médias urbanas. A abolição e a República não foram concessões do Estado, mas respostas a pressões que o aparato institucional imperial não conseguiu mais conter.
+FONTE_PRIMARIA: "ALONSO, Angela. Flores, Votos e Balas: o movimento abolicionista brasileiro, 1868–1888 (2015). Alonso demonstra que o abolicionismo brasileiro não foi obra de uma elite benevolente, mas um movimento social com múltiplas frentes de atuação — jurídica, parlamentar, jornalística e de ação direta —, que pressionou o Estado imperial até tornar a manutenção da escravidão politicamente insustentável. Referência: ALONSO, Angela. Flores, Votos e Balas. São Paulo: Companhia das Letras, 2015."
 
-AUTOR_COMPLEMENTAR: Lilia Moritz Schwarcz (1957–), historiadora e antropóloga brasileira, professora da Universidade de São Paulo (USP)
-BOX_BIOGRAFICO_COMPLEMENTAR: Não
-FONTE_PRIMARIA_COMPLEMENTAR: Lilia Moritz Schwarcz, "O Espetáculo das Raças: cientistas, instituições e questão racial no Brasil (1870–1930)" (1993). Schwarcz demonstra que nas décadas finais do Império, instituições como faculdades de Direito, museus e institutos históricos incorporaram teorias raciais europeias para justificar hierarquias sociais, evidenciando que o aparato institucional do Estado não apenas regulava a escravidão por meio de leis, mas também produzia justificativas intelectuais para a desigualdade racial.
 SUBSEÇÕES:
-  - Leis abolicionistas e erosão da base econômica do Império
-  - Abolição sem indenização e ruptura do pacto Coroa-proprietários
-  - O Exército e a recusa de executar a lei escravista
-  - 15 de novembro de 1889 — golpe republicano e fim do aparato imperial
+  - "Do fim do tráfico à Lei do Ventre Livre: legislação gradualista"
+  - "Fugas, quilombos urbanos e a crise do controle senhorial na década de 1880"
+  - "A Lei Áurea e a ruptura do pacto político imperial"
+  - "Da abolição à República: 1888–1889"
 VERIFICACAO: Sim
 ```
 
@@ -169,9 +146,9 @@ VERIFICACAO: Sim
 ## SÍNTESE FINAL E ENCADEAMENTO
 
 ```yaml
-SINTESE_FINAL: A escravidão no Brasil Imperial era uma instituição sustentada por um aparato jurídico que definia o escravizado como propriedade, aplicava punições diferenciadas conforme a condição social e excluía a maioria da população dos direitos de cidadania. A crise desse sistema resultou da convergência entre três processos: a resistência dos escravizados (fugas, revoltas, quilombos), a pressão do movimento abolicionista (dentro e fora das instituições) e a legislação gradualista que, ao tentar administrar o fim da escravidão sem alterar a estrutura de poder, acabou desestabilizando as bases políticas do Império — a aliança com os proprietários rurais e a obediência do Exército. A abolição de 1888 e o golpe republicano de 1889 evidenciam que as instituições de justiça do Império foram simultaneamente o instrumento de manutenção da ordem escravista e o vetor de sua desintegração.
+SINTESE_FINAL: "A escravidão era sustentada pelo ordenamento jurídico do Império, que definia o escravizado como propriedade e regulava os mecanismos de compra, venda e alforria. A resistência dos escravizados — por via judicial, fugas e revoltas — e a atuação do movimento abolicionista pressionaram o Estado a produzir legislação gradualista que corroeu progressivamente a base do sistema escravista. A abolição de 1888, ao remover a instituição jurídica que articulava os interesses da elite agrária ao trono, isolou politicamente a monarquia e abriu caminho para a Proclamação da República em 1889."
 
-ENCADEAMENTO: Este é o último capítulo da Unidade 1. A resposta construída ao longo dos dois capítulos — que as instituições de justiça do Brasil imperial funcionaram como instrumentos de organização do poder, manutenção da hierarquia social escravista e, por fim, como vetores da própria crise do regime — abre a questão de como o novo aparato jurídico republicano (Constituição de 1891, federalismo, exclusão do voto dos analfabetos) reorganizou as relações de poder sem incorporar a população negra recém-liberta, tema que poderá ser desenvolvido na próxima unidade.
+ENCADEAMENTO: "Este capítulo encerra a unidade mostrando como as disputas jurídicas em torno da escravidão desagregaram o regime imperial. A questão que permanece em aberto para a próxima unidade é: que tipo de ordem jurídica e política substituiu o Império, e em que medida a República alterou ou reproduziu os padrões de exclusão herdados do período monárquico."
 ```
 
 ---
@@ -180,32 +157,31 @@ ENCADEAMENTO: Este é o último capítulo da Unidade 1. A resposta construída a
 
 ```
 ERROS_COMUNS:
-- Tratar a abolição como resultado exclusivo da bondade da Princesa Isabel ou da pressão internacional, ignorando a agência dos escravizados e do movimento abolicionista como forças causais decisivas.
-- Apresentar as leis abolicionistas graduais (1850, 1871, 1885) como etapas de um progresso linear rumo à liberdade, quando cada lei foi produto de disputas políticas específicas e tinha como objetivo preservar a ordem pelo maior tempo possível.
-- Confundir a Proclamação da República com uma revolução popular, quando foi um golpe militar sem participação significativa da população — e desconectar a queda do Império da crise da escravidão, como se fossem processos independentes.
+- Tratar a abolição como ato isolado de generosidade da Princesa Isabel: a Lei Áurea foi resultado de décadas de resistência escrava, pressão abolicionista e legislação gradualista que tornaram a escravidão juridicamente insustentável.
+- Confundir o fim formal da escravidão com a integração social dos ex-escravizados: a abolição extinguiu a instituição jurídica, mas não foi acompanhada de políticas de acesso à terra, educação ou cidadania plena para os libertos.
+- Apresentar a Proclamação da República como revolução popular: o golpe de 15 de novembro de 1889 foi conduzido por militares com apoio de setores civis republicanos, sem participação popular significativa.
 ```
 
 ---
 
-## CHECKLIST DE VERIFICAÇÃO
+## CHECKLIST DE ENTREGA
 
-- [x] A consulta ao `contexto/matriz-conteudosenem.json` foi realizada e os conteúdos foram filtrados pela disciplina História (H12).
-- [x] Os autores do CSV foram distribuídos entre as seções conforme afinidade com o objeto conceitual de cada micro-habilidade (Sidney Chalhoub — Seção 1; João José Reis — Seção 2; Angela Alonso e Florestan Fernandes — Seção 3; Décio Saes e Lilia Moritz Schwarcz — Seção 4).
-- [x] Todos os seis autores do CSV aparecem em alguma seção do capítulo.
-- [x] O cabeçalho contém HABILIDADE_BNCC, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
+- [x] A consulta ao `contexto/matriz-conteudosenem.json` foi realizada e os conteúdos foram filtrados pela disciplina História.
+- [x] Os autores do CSV foram distribuídos entre as seções conforme afinidade com o objeto conceitual de cada micro-habilidade.
+- [x] O cabeçalho contém HABILIDADE_ENEM, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
 - [x] OPERACAO_PRINCIPAL (Mapear causalidade) está na lista de operações elementares.
 - [x] O número de seções (4) corresponde ao número de micro-habilidades prescritas no CSV.
 - [x] Cada seção tem TIPO_OPERACAO idêntico à operação prescrita no CSV (Definir, Classificar, Comparar, Mapear causalidade).
 - [x] A sequência de operações segue a prescrição do CSV — não foi alterada.
-- [x] Toda seção com PESO = Principal tem EXEMPLO_ANCOLA preenchido.
+- [x] Toda seção com PESO = Principal ou Secundário tem EXEMPLO_ANCOLA preenchido.
 - [x] Nenhuma seção usa palavras proibidas ("tensão", "mobilização", "situação-problema").
-- [x] Todos os itens da LISTA_OBRIGATÓRIA aparecem em pelo menos uma seção: Justiça e sociedade escravista no século XIX (Seção 1); Leis abolicionistas e crise da escravidão (Seções 2, 3, 4); Resistência negra quilombos e movimento abolicionista (Seções 2, 3); Relações entre elite Exército e poder político (Seção 4); Crise do Império (Seções 3, 4).
-- [x] Os conteúdos complementares da matriz (Direito e Estado, Constituições, Cidadania, Punição e controle social) enriquecem as seções sem sobrepor os obrigatórios.
+- [x] Todos os itens da LISTA_OBRIGATÓRIA aparecem em pelo menos uma seção: Justiça e sociedade escravista no século XIX (Seção 1); Leis abolicionistas e crise da escravidão (Seção 4); Resistência negra quilombos e movimento abolicionista (Seção 2); Relações entre elite Exército e poder político (Seção 3); Crise do Império (Seções 3 e 4).
+- [x] Os conteúdos complementares da matriz (Direito e Estado, Constituições, Direitos humanos) enriquecem as seções sem sobrepor os obrigatórios.
 - [x] Nenhum conteúdo de disciplina diferente de História foi utilizado.
-- [x] BOX_BIOGRAFICO está Sim para todo autor com PESO = Principal, exceto Lilia Moritz Schwarcz (já apareceu com BOX_BIOGRAFICO: Sim no capítulo anterior — Seção 3 do Capítulo 1).
+- [x] BOX_BIOGRAFICO está Sim para todo autor com PESO = Principal (Lilia Moritz Schwarcz na Seção 3 tem Não porque já apareceu no Capítulo 1, Seção 1).
 - [x] FONTE_PRIMARIA está preenchida em todas as seções.
-- [x] SINTESE_FINAL responde diretamente à PERGUNTA_DO_CAPITULO.
-- [x] ENCADEAMENTO está preenchido e indica contribuição para a próxima unidade (último capítulo da unidade).
+- [x] SINTESE_FINAL responde diretamente a PERGUNTA_DO_CAPITULO.
+- [x] ENCADEAMENTO está preenchido.
 - [x] Nenhuma das proibições da seção "Proibições absolutas" foi violada.
-- [x] O capítulo responde à pergunta deixada em aberto pelo ENCADEAMENTO do Capítulo 1 (como a escravidão e as demandas por direitos foram tratadas dentro do aparato jurídico-institucional e como suas contradições contribuíram para a crise do regime imperial).
-- [x] Nenhum autor do Capítulo 1 foi reutilizado como autor principal, exceto Lilia Moritz Schwarcz (como complementar, sem box biográfico repetido), conforme prescrito no CSV.
+- [x] Todos os 6 autores disponíveis aparecem no capítulo: Sidney Chalhoub (Seção 1), João José Reis (Seção 2), Florestan Fernandes (Seção 2), Décio Saes (Seção 3), Lilia Moritz Schwarcz (Seção 3), Angela Alonso (Seção 4).
+- [x] Nenhum autor do Capítulo 1 foi reutilizado como autor principal neste capítulo (Lilia Moritz Schwarcz aparece apenas como autora secundária, com BOX_BIOGRAFICO: Não, pois já teve box no capítulo anterior).

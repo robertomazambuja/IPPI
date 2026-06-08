@@ -1,0 +1,51 @@
+2026-06-08 15:49:28,442 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:49:30,557 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:49:32,016 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/briefing.json
+2026-06-08 15:49:32,019 [INFO] __main__:     →  read_file: contexto/matriz-enem.json
+2026-06-08 15:49:33,938 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:50:08,780 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:50:08,787 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:50:10,537 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:50:20,199 [INFO] __main__:   ✓  Agente 0 concluiu (3 iteração(ões))
+2026-06-08 15:50:20,350 [INFO] __main__:     ⚠  Alinhamento corrigido: linha tinha 19 campos (esperado 20).
+2026-06-08 15:50:20,351 [INFO] __main__:     ⚠  Alinhamento corrigido: linha tinha 19 campos (esperado 20).
+2026-06-08 15:50:20,354 [INFO] __main__:   ⚠  CSV corrigido automaticamente (desalinhamento de colunas).
+2026-06-08 15:50:20,377 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-08 15:50:20,378 [INFO] __main__: ✓  Schema do CSV validado.
+2026-06-08 15:50:20,378 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 15:50:20,378 [INFO] __main__: Apostila : apostila-teste-historia-em1
+2026-06-08 15:50:20,378 [INFO] __main__: Agentes  : 1, 2, 3, 4
+2026-06-08 15:50:20,378 [INFO] __main__: Forçar   : não
+2026-06-08 15:50:20,379 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-08 15:50:20,379 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-08 15:50:20,380 [INFO] __main__: Unidades : 1
+2026-06-08 15:50:20,380 [INFO] __main__: Capítulos: 2
+2026-06-08 15:50:20,381 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 15:50:20,381 [INFO] __main__: Unidade 1: Unidade 1 — Justiça Estado e Poder no Brasil Imperial
+2026-06-08 15:50:20,382 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-08 15:50:20,382 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-08 15:50:20,382 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:50:20,382 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-08 15:50:20,383 [INFO] __main__:   [Agente 1] Core já existe — pulando. (--force para regenerar)
+2026-06-08 15:50:20,383 [INFO] __main__:   [Agente 2] Texto já existe — pulando.
+2026-06-08 15:50:20,386 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:50:22,017 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:50:23,377 [INFO] __main__:     →  read_file: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:50:25,234 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:52:23,807 [INFO] __main__:     →  write_file: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:52:23,832 [INFO] __main__:     ✓  Salvo: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:52:26,030 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:52:39,094 [INFO] __main__:   ✓  Agente 3 concluiu (3 iteração(ões))
+2026-06-08 15:52:39,302 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:52:40,492 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:52:41,792 [INFO] __main__:     →  read_file: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:52:43,795 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:52:45,214 [INFO] __main__:     →  read_file: skills/agente4-skill-v2.md
+2026-06-08 15:52:45,216 [INFO] __main__:     ⚠  ERRO: Arquivo não encontrado: C:\Users\Roberto\Desktop\IPPI\skills\agente4-skill-v2.md
+2026-06-08 15:52:47,089 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"

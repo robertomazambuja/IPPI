@@ -31,6 +31,7 @@ Uso:
 import anthropic
 import argparse
 import csv
+import httpx
 import logging
 import os
 import re
@@ -241,6 +242,8 @@ def run_agent(
                 anthropic.APITimeoutError,
                 anthropic.APIConnectionError,
                 anthropic.RateLimitError,
+                httpx.ReadError,
+                httpx.RemoteProtocolError,
             ) as e:
                 if attempt == 3:
                     raise
@@ -522,15 +525,18 @@ def run_agente4(
 
     texto_rel = str(texto_path.relative_to(BASE_DIR))
 
-    system = build_system_prompt("agente4-orientacao.md", "agente4-skill-v2.md")
+    system = build_system_prompt("agente4-orientacao.md", "agente4-skill.md")
 
-    user_message = f"""Sua tarefa: qualificar o texto funcional, tornando invisível a engenharia estrutural.
+    user_message = f"""Sua tarefa: polir a prosa do capítulo para leitura fluida por alunos do Ensino Médio.
 
 ARQUIVO QUE VOCÊ DEVE EDITAR:
 {texto_rel}
 
-Leia o arquivo, reescreva para prosa natural (rótulos desaparecem),
-e salve de volta no mesmo caminho.
+O Agente 3 já converteu todos os rótulos estruturais em HTML comments — não toque neles.
+Sua tarefa é exclusivamente melhorar a prosa: adicione transições entre blocos onde soam abruptos,
+reescreva frases mecânicas para que fluam naturalmente, encadeie parágrafos do mesmo bloco.
+Siga o procedimento da skill (skills/agente4-skill.md).
+Salve de volta no mesmo caminho, sobrescrevendo o original.
 """
 
     log_print(f"\n[Agente 4] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")

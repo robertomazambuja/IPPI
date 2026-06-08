@@ -1,0 +1,58 @@
+2026-06-08 15:32:15,322 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:32:17,428 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:32:19,224 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/briefing.json
+2026-06-08 15:32:19,227 [INFO] __main__:     →  read_file: contexto/matriz-enem.json
+2026-06-08 15:32:21,021 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:33:28,484 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:33:28,487 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-08 15:33:30,176 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:33:38,070 [INFO] __main__:   ✓  Agente 0 concluiu (3 iteração(ões))
+2026-06-08 15:33:38,078 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-08 15:33:38,078 [INFO] __main__: ✓  Schema do CSV validado.
+2026-06-08 15:33:38,079 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 15:33:38,079 [INFO] __main__: Apostila : apostila-teste-historia-em1
+2026-06-08 15:33:38,079 [INFO] __main__: Agentes  : 1, 2, 3, 4
+2026-06-08 15:33:38,079 [INFO] __main__: Forçar   : não
+2026-06-08 15:33:38,079 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-08 15:33:38,080 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-08 15:33:38,080 [INFO] __main__: Unidades : 1
+2026-06-08 15:33:38,080 [INFO] __main__: Capítulos: 2
+2026-06-08 15:33:38,082 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-08 15:33:38,082 [INFO] __main__: Unidade 1: Unidade 1 — Justiça Estado e Poder no Brasil Imperial
+2026-06-08 15:33:38,082 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-08 15:33:38,082 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-08 15:33:38,083 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:33:38,083 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-08 15:33:38,494 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:33:39,797 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:33:41,895 [INFO] __main__:     →  read_file: contexto/principios-pedagogicos-agente1.md
+2026-06-08 15:33:41,924 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-08 15:33:41,952 [INFO] __main__:     →  read_file: contexto/matriz-conteudosenem.json
+2026-06-08 15:33:45,266 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:35:32,132 [INFO] __main__:     →  write_file: output/apostila-teste-historia-em1/core/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:35:32,145 [INFO] __main__:     ✓  Salvo: output/apostila-teste-historia-em1/core/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:35:33,792 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:35:45,214 [INFO] __main__:   ✓  Agente 1 concluiu (3 iteração(ões))
+2026-06-08 15:35:46,108 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:35:47,770 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:35:49,566 [INFO] __main__:     →  read_file: output/apostila-teste-historia-em1/core/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:35:49,569 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-08 15:35:51,256 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:37:35,609 [INFO] __main__:     →  write_file: output/apostila-teste-historia-em1/texto/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:37:35,615 [INFO] __main__:     ✓  Salvo: output/apostila-teste-historia-em1/texto/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:37:37,299 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:37:51,704 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões))
+2026-06-08 15:37:51,716 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — Formação do Estado Imperial e Organização da Justiça
+2026-06-08 15:38:00,845 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:38:02,145 [INFO] __main__:     →  read_file: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:38:03,925 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-08 15:39:23,371 [INFO] __main__:     →  write_file: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:39:23,374 [INFO] __main__:     ✓  Salvo: output\apostila-teste-historia-em1\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.md
+2026-06-08 15:39:23,703 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"

@@ -3,202 +3,171 @@
 <!-- [CONTEXTO_OPERACAO] -->
 **Habilidade:** H12 — Analisar o papel da justiça como instituição na organização das sociedades.
 **Operação principal:** Mapear causalidade
-**Pergunta do capítulo:** Como a organização jurídico-política do Estado imperial brasileiro contribuiu para estruturar e manter uma determinada ordem social entre 1822 e 1840?
-**Por que importa:** Este capítulo fornece a base institucional (definindo, classificando e comparando as estruturas de poder e justiça do Império) para que o capítulo seguinte analise como essas mesmas instituições operaram sobre a escravidão, os direitos e a crise do regime.
+**Pergunta do capítulo:** De que modo a organização jurídico-política do Estado imperial brasileiro determinou quem participava da vida política e quem era dela excluído?
+**Por que importa:** Este capítulo fornece a base institucional que permite entender como as instituições de justiça organizaram a vida política e social do Brasil entre a Independência e a Proclamação da República.
 <!-- [/CONTEXTO_OPERACAO] -->
 
 ---
 
-### O Estado imperial brasileiro
+### O Estado imperial brasileiro e sua estrutura jurídica
+
+<!-- [TIPO_OPERACAO: Definir] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
 <!-- [DEFINICAO] -->
-Após a independência de 1822, o Brasil adotou como forma de organização política a monarquia constitucional. O poder se concentrava na figura do imperador, que dispunha de um instrumento exclusivo: o Poder Moderador. As províncias ficavam subordinadas ao governo central, e essa configuração resultou da necessidade de manter a unidade territorial e política do antigo domínio português na América. A Constituição de 1824 formalizou essa estrutura ao criar quatro poderes — Legislativo, Executivo, Judiciário e Moderador —, sendo o último exercido exclusivamente pelo imperador.
+A Independência de 1822 colocou um problema imediato: o novo Estado precisava de uma ordem jurídica própria, capaz de organizar o exercício do poder e definir quem governava, como governava e com quais limites. A resposta veio com a Constituição de 1824, que estabeleceu o Brasil como monarquia constitucional e criou uma arquitetura de quatro poderes: Executivo, Legislativo, Judiciário e Moderador.
+
+Essa divisão em quatro poderes distinguia o modelo brasileiro dos modelos republicanos de três poderes adotados nas Américas no mesmo período. O Poder Moderador, exercido exclusivamente pelo imperador, conferia-lhe prerrogativas específicas: dissolver a Câmara dos Deputados, nomear senadores vitalícios a partir de listas tríplices e suspender magistrados. Na prática, o imperador funcionava como árbitro dos conflitos entre os demais poderes, concentrando em suas mãos a capacidade de definir os rumos da política institucional. Como acumulava a chefia do Executivo e a titularidade do Poder Moderador, o arranjo imperial configurava um caso singular na América do século XIX.
+
+Essa concentração de atribuições não resultou de um processo neutro. Segundo a análise de Ilmar Rohloff de Mattos em *O Tempo Saquarema* (1987), a classe senhorial conduziu a organização das instituições jurídicas e administrativas para consolidar sua própria hegemonia política e social. A estrutura jurídica do Estado imperial refletia, assim, os interesses dos grupos que o organizaram, e não um arranjo imparcial de distribuição de poder.
+
+<!-- [AUTOR: Ilmar Rohloff de Mattos (1944–) Brasil] -->
+Ilmar Rohloff de Mattos, historiador brasileiro vinculado à Pontifícia Universidade Católica do Rio de Janeiro, investigou os mecanismos pelos quais a elite imperial construiu e manteve sua dominação por meio das instituições do Estado.
+<!-- [/AUTOR] -->
+
+A hegemonia da classe senhorial, contudo, não se sustentava apenas por mecanismos jurídicos. Lilia Moritz Schwarcz, em *As Barbas do Imperador* (1998), analisa como rituais, títulos nobiliárquicos e a organização da corte reforçavam a centralidade do imperador na estrutura do Estado. Esses dispositivos simbólicos complementavam os mecanismos previstos na Constituição, produzindo uma legitimidade que operava simultaneamente no plano legal e no plano cultural.
+
+<!-- [AUTOR: Lilia Moritz Schwarcz (1957–) Brasil] -->
+Lilia Moritz Schwarcz, historiadora e antropóloga da Universidade de São Paulo, estuda as dimensões simbólicas e culturais do poder político no Brasil imperial.
+<!-- [/AUTOR] -->
 <!-- [/DEFINICAO] -->
 
-<!-- [EXEMPLO: Poder Moderador de Dom Pedro I] -->
-A Constituição de 1824 atribuiu ao imperador Dom Pedro I (1798–1834) o exercício do Poder Moderador. Isso significava, na prática, que ele podia dissolver a Câmara dos Deputados, suspender magistrados e vetar decisões do Legislativo. Nenhum dos outros três poderes constitucionais dispunha de competências equivalentes.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: José Murilo de Carvalho (1939–) Brasil | ref=definicao] -->
-Historiador, professor da UFRJ, autor de *A Construção da Ordem* (1980).
-<!-- [/AUTOR] -->
-
 <!-- [FONTE] -->
-CARVALHO, José Murilo de. *A Construção da Ordem: a elite política imperial*. Rio de Janeiro: Campus, 1980.
-Carvalho argumenta que o Estado imperial foi construído por uma elite política homogênea, formada nas faculdades de Direito de Coimbra, São Paulo e Olinda, que compartilhava valores e interesses comuns. Essa homogeneidade permitiu que a centralização política se consolidasse de modo relativamente estável, diferentemente das repúblicas vizinhas.
+MATTOS, Ilmar R. *O Tempo Saquarema*. São Paulo: Hucitec, 1987.
 <!-- [/FONTE] -->
 
-<!-- [VERIFICACAO: Q1] -->
-1. O Poder Moderador, conforme a Constituição de 1824, era exercido por:
-   (a) O Senado vitalício
-   (b) O imperador
-   (c) O Conselho de Estado em conjunto com o Legislativo
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q2] -->
-2. Verdadeiro ou falso: A Constituição de 1824 estabeleceu três poderes, seguindo o modelo de Montesquieu sem alterações.
-   Resposta: Falso. A Constituição de 1824 estabeleceu quatro poderes, incluindo o Poder Moderador, que não fazia parte do modelo clássico de Montesquieu.
-<!-- [/VERIFICACAO] -->
+<!-- [FONTE] -->
+SCHWARCZ, Lilia M. *As Barbas do Imperador: D. Pedro II, um monarca nos trópicos*. São Paulo: Companhia das Letras, 1998.
+<!-- [/FONTE] -->
 
 ---
 
-### Instituições políticas e jurídicas do Império
+### Formas de participação e exclusão política no Império
+
+<!-- [TIPO_OPERACAO: Classificar] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
 <!-- [CLASSIFICACAO] -->
-As instituições políticas e jurídicas do Império podem ser organizadas a partir de três critérios: a função que exerciam na estrutura de poder (legislar, executar, julgar ou moderar), o alcance territorial de sua atuação (nacional ou provincial) e a relação com a participação política (quais grupos incluíam ou excluíam).
-
-O **Poder Legislativo**, composto pelo Senado vitalício e pela Câmara dos Deputados, tinha a função de legislar em âmbito nacional. O acesso a ele era restrito por critérios de renda, através do voto censitário.
-
-O **Poder Executivo**, formado pelo Conselho de Estado e pelos ministérios, governava e administrava em escala nacional. Seus membros eram nomeados pelo imperador.
-
-O **Poder Judiciário** reunia juízes de paz, juízes de direito e tribunais de relação. Sua função era julgar, com alcance provincial e local. Os magistrados eram nomeados ou eleitos conforme o período.
-
-O **Poder Moderador**, exercido pelo imperador, tinha a função de arbitrar conflitos entre os demais poderes. Seu alcance era nacional e não previa qualquer forma de participação popular.
+A Constituição de 1824 não apenas organizou os poderes do Estado, mas também definiu quem podia participar da vida política e em que condições. O acesso à participação dependia de três critérios combinados: a renda anual mínima do indivíduo (critério censitário), sua condição jurídica (livre, liberta ou escravizada) e o tipo de eleição em que podia atuar (votante de primeiro grau, eleitor de segundo grau ou candidato a cargo eletivo). Conforme esses critérios se tornavam mais exigentes, o número de pessoas habilitadas diminuía, e a maioria da população ficava excluída de todos os níveis.
 <!-- [/CLASSIFICACAO] -->
 
-<!-- [EXEMPLO: Voto censitário e exclusão política] -->
-O voto censitário estabelecido pela Constituição de 1824 exigia renda mínima anual de 100 mil-réis para ser votante e de 200 mil-réis para ser eleitor de segundo grau. Na prática, isso excluía a maioria da população — escravizados, mulheres, homens livres pobres e libertos sem renda suficiente — da participação nas decisões legislativas. Os habitantes do Império ficavam assim distribuídos em categorias com graus distintos de direitos políticos.
-<!-- [/EXEMPLO] -->
+<!-- [SUBTIPO: Cidadãos ativos votantes de primeiro grau] -->
+**Cidadãos ativos votantes de primeiro grau**
 
-<!-- [AUTOR: Ilmar Rohloff de Mattos (1944–) Brasil | ref=classificacao] -->
-Historiador, professor da PUC-Rio, autor de *O Tempo Saquarema* (1987).
+No nível mais amplo de participação estava o votante de primeiro grau. Para ocupar essa posição, era necessário ser homem livre, maior de 25 anos e possuir renda anual mínima de 100 mil-réis. Esses votantes compareciam às assembleias paroquiais, onde escolhiam os eleitores de segundo grau. Não elegiam diretamente nenhum representante político.
+<!-- [/SUBTIPO] -->
+
+<!-- [SUBTIPO: Eleitores de segundo grau] -->
+**Eleitores de segundo grau**
+
+Um degrau acima, o segundo nível exigia renda anual mínima de 200 mil-réis. Esses eleitores tinham a função de escolher os deputados provinciais e gerais. A eleição, portanto, era indireta: o votante de primeiro grau escolhia quem votaria de fato nos representantes legislativos.
+<!-- [/SUBTIPO] -->
+
+<!-- [SUBTIPO: Elegíveis a deputado] -->
+**Elegíveis a deputado**
+
+Para candidatar-se a deputado, o critério de renda subia para 400 mil-réis anuais, e o candidato devia ainda ser homem livre e católico. Esse patamar restringia drasticamente o número de pessoas aptas a disputar cargos legislativos.
+<!-- [/SUBTIPO] -->
+
+<!-- [SUBTIPO: Elegíveis a senador] -->
+**Elegíveis a senador**
+
+No topo da hierarquia, o acesso ao Senado exigia renda anual mínima de 800 mil-réis e idade mínima de 40 anos. Os senadores eram vitalícios e nomeados pelo imperador a partir de listas tríplices, o que combinava critério censitário com a prerrogativa do Poder Moderador.
+<!-- [/SUBTIPO] -->
+
+<!-- [SUBTIPO: Excluídos] -->
+**Excluídos de qualquer participação**
+
+Abaixo de todos esses níveis havia os grupos completamente excluídos do sistema político: mulheres, escravizados, menores de 25 anos (salvo exceções legais), religiosos regulares e criados de servir. Para esses grupos, nenhum critério de renda ou mérito abria acesso ao voto ou à candidatura. Um escravizado que trabalhasse na mesma rua que um comerciante votante não possuía qualquer direito político, independentemente de qualquer outro fator.
+<!-- [/SUBTIPO] -->
+
+Dados concretos permitem dimensionar o funcionamento desse sistema e suas transformações ao longo do tempo. Na década de 1840, um pequeno comerciante de paróquia urbana com renda de 150 mil-réis anuais podia comparecer à assembleia paroquial como votante de primeiro grau, mas não atingia o patamar de 200 mil-réis necessário para ser eleitor de segundo grau. Décadas depois, a Lei Saraiva de 1881 alterou as regras: o voto passou a ser direto, porém a exigência de renda subiu para 200 mil-réis e os analfabetos foram excluídos. O resultado foi uma redução do eleitorado de cerca de 10% para aproximadamente 1,5% da população, tornando a participação política ainda mais restrita.
+
+Essa configuração da cidadania no Império é analisada por José Murilo de Carvalho em *Cidadania no Brasil: o longo caminho* (2001). Carvalho demonstra que a cidadania brasileira foi construída de modo invertido em relação ao modelo europeu: direitos políticos foram concedidos antes dos direitos civis e sociais, mas com restrições censitárias e escravistas que limitavam drasticamente o corpo de cidadãos efetivos. O resultado foi um sistema em que a participação política existia formalmente, mas estava reservada a uma fração mínima da população.
+
+<!-- [AUTOR: José Murilo de Carvalho (1939–) Brasil | ref=subtipo] -->
+José Murilo de Carvalho, historiador e cientista político da Universidade Federal do Rio de Janeiro, é referência central nos estudos sobre cidadania e formação política no Brasil.
 <!-- [/AUTOR] -->
 
 <!-- [FONTE] -->
-MATTOS, Ilmar Rohloff de. *O Tempo Saquarema: a formação do Estado Imperial*. São Paulo: Hucitec, 1987.
-Mattos sustenta que a organização do Estado imperial se estruturou a partir de três esferas (o mundo do governo, o mundo da ordem e o mundo da desordem) e que as instituições políticas foram desenhadas para expandir o controle do governo sobre as províncias e sobre os grupos que ameaçavam a estabilidade do regime.
+CARVALHO, José Murilo de. *Cidadania no Brasil: o longo caminho*. Rio de Janeiro: Civilização Brasileira, 2001.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q3] -->
-1. Qual dos quatro poderes do Império tinha a função de arbitrar conflitos entre os demais e não previa participação popular?
-   (a) Poder Legislativo
-   (b) Poder Judiciário
-   (c) Poder Moderador
-   Resposta: (c)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q4] -->
-2. O voto censitário do Império classificava a população segundo:
-   (a) Nível de escolaridade
-   (b) Renda anual
-   (c) Local de nascimento
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
 
 ---
 
-### Centralização e descentralização do poder: do Primeiro Reinado à Regência
+### Centralização e descentralização na organização do Estado imperial
 
-<!-- [COMPARACAO] -->
-<!-- [INTRODUCAO_COMPARACAO] -->
-Entre 1822 e 1840, o Brasil experimentou dois modelos opostos de organização do poder. O Primeiro Reinado (1822–1831) concentrava as decisões no imperador por meio do Poder Moderador, com presidentes de província nomeados pelo governo central e a Constituição outorgada de 1824 como fundamento legal. O Período Regencial (1831–1840) seguiu na direção contrária: o Ato Adicional de 1834 criou assembleias legislativas provinciais, o Poder Moderador ficou suspenso e juízes de paz eleitos localmente passaram a acumular amplas atribuições. Três aspectos permitem comparar esses dois modelos.
-<!-- [/INTRODUCAO_COMPARACAO] -->
+<!-- [TIPO_OPERACAO: Comparar] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
 
-<!-- [ASPECTO: Distribuição de poder entre governo central e províncias] -->
-No que diz respeito à distribuição de poder, o contraste é direto. No Primeiro Reinado, o governo central controlava as províncias por meio de presidentes nomeados pelo imperador. No Período Regencial, o Ato Adicional de 1834 transferiu parte das competências legislativas para assembleias provinciais, reduzindo o controle direto do governo central sobre os assuntos locais.
-<!-- [/ASPECTO] -->
+A organização do Estado imperial não permaneceu estável ao longo do século XIX. Dois períodos apresentaram modelos opostos de distribuição do poder entre o governo central e as províncias. Comparar esses dois momentos permite identificar como o controle sobre a administração da justiça foi o eixo central da disputa entre centralização e autonomia provincial.
 
-<!-- [ASPECTO: Papel do Poder Judiciário na manutenção da ordem] -->
-O papel do Judiciário também se alterou. No Primeiro Reinado, a estrutura judiciária operava sob supervisão do governo central, com magistrados vinculados ao poder imperial. Durante a Regência, os juízes de paz, eleitos localmente, acumularam atribuições policiais e judiciárias, descentralizando a administração da justiça e do controle social.
-<!-- [/ASPECTO] -->
+<!-- [PERSPECTIVA: Período regencial (1831–1840)] -->
+#### Período regencial: a experiência de descentralização
 
-<!-- [ASPECTO: Grau de autonomia provincial] -->
-Quanto à autonomia provincial, o Primeiro Reinado não concedia legislativos próprios às províncias, e seus presidentes respondiam diretamente ao imperador. Após 1834, as assembleias legislativas provinciais podiam legislar sobre assuntos locais, incluindo a organização do judiciário provincial.
-<!-- [/ASPECTO] -->
-<!-- [/COMPARACAO] -->
+Após a abdicação de Dom Pedro I em 1831, o Brasil foi governado por regentes que conduziram uma experiência de descentralização administrativa. O Ato Adicional de 1834 criou assembleias legislativas provinciais, suprimiu o Conselho de Estado e ampliou a autonomia das províncias na administração da justiça e da polícia. No plano judiciário, o Código de Processo Criminal de 1832 atribuiu aos juízes de paz, eleitos localmente, amplos poderes, incluindo a condução de processos criminais. As províncias passaram a exercer controle significativo sobre a nomeação de autoridades judiciais e policiais.
+<!-- [/PERSPECTIVA] -->
+
+<!-- [PERSPECTIVA: Segundo Reinado (1840–1889)] -->
+#### Segundo Reinado: o retorno à centralização
+
+O governo que se formou após a declaração da maioridade de Dom Pedro II em 1840 seguiu caminho oposto, promovendo um retorno à centralização. A Lei de Interpretação do Ato Adicional (1840) restringiu as competências das assembleias provinciais, e a recriação do Conselho de Estado (1841) devolveu ao governo central a capacidade de orientar as decisões políticas e jurídicas. No mesmo ano, a reforma do Código de Processo Criminal transferiu as atribuições dos juízes de paz a delegados e subdelegados nomeados pelo governo imperial, retirando das localidades o controle sobre a aplicação da justiça. A nomeação de juízes e chefes de polícia voltou a ser prerrogativa do poder central.
+<!-- [/PERSPECTIVA] -->
 
 <!-- [CONCLUSAO_PARCIAL] -->
-Esses dois modelos produziram resultados distintos. A experiência descentralizadora da Regência, acompanhada de revoltas em diversas províncias, mostrou os limites desse arranjo e conduziu à restauração da centralização com o Golpe da Maioridade em 1840.
+Os dois períodos compartilham a mesma questão de fundo: quem controla a administração da justiça nas províncias. Divergem na resposta. Durante a Regência, o controle pertencia a autoridades locais eleitas; após 1840, passou a pertencer a autoridades nomeadas pelo governo central. O Conselho de Estado, suprimido em 1834 e recriado em 1841, é o indicador institucional mais claro dessa oscilação. Boris Fausto, em *História do Brasil* (1994), descreve o período regencial como um laboratório político em que a descentralização gerou instabilidades que foram usadas pelos conservadores como argumento para recentralizar o poder a partir de 1840.
 <!-- [/CONCLUSAO_PARCIAL] -->
 
-<!-- [EXEMPLO: Pernambuco e as revoltas regenciais] -->
-Um caso concreto ilustra essa diferença. Durante o Primeiro Reinado, o presidente da província de Pernambuco era nomeado diretamente pelo imperador e respondia ao governo central. Após o Ato Adicional de 1834, a província passou a contar com assembleia legislativa própria, que podia legislar sobre assuntos locais, incluindo a organização do judiciário provincial. Quando eclodiram revoltas como a Cabanagem (1835–1840) e a Balaiada (1838–1841), o governo regencial não dispunha dos mesmos instrumentos de controle que o imperador concentrava antes de 1831.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: Lilia Moritz Schwarcz (1957–) Brasil | ref=comparacao] -->
-Historiadora e antropóloga, professora da USP, autora de *As Barbas do Imperador* (1998).
-<!-- [/AUTOR] -->
-
-<!-- [FONTE] -->
-SCHWARCZ, Lilia Moritz. *As Barbas do Imperador: D. Pedro II, um monarca nos trópicos*. São Paulo: Companhia das Letras, 1998.
-Schwarcz analisa como a figura do imperador funcionava como símbolo de unidade nacional e como a centralização do poder se apoiava tanto em mecanismos institucionais quanto em representações simbólicas que legitimavam a autoridade monárquica perante as elites provinciais.
-<!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q5] -->
-1. Em qual dos dois modelos (Primeiro Reinado ou Regência) as províncias tinham assembleias legislativas próprias?
-   (a) Primeiro Reinado
-   (b) Período Regencial
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q6] -->
-2. A transferência de atribuições policiais e judiciárias para juízes de paz eleitos localmente ocorreu durante:
-   (a) O Primeiro Reinado, por determinação da Constituição de 1824
-   (b) O Período Regencial, como parte da experiência descentralizadora
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
----
-
-### Como a organização jurídico-política manteve a ordem social
-
-<!-- [CAUSA] -->
-Quatro elementos da organização imperial contribuíram para sustentar a estrutura social vigente. Primeiro, a Constituição de 1824 estabeleceu uma hierarquia de cidadania baseada em renda, excluindo escravizados, mulheres e homens livres pobres dos direitos políticos. Segundo, o Poder Moderador concentrou no imperador a capacidade de arbitrar conflitos entre os poderes, permitindo que ele intervisse sobre o Judiciário e o Legislativo. Terceiro, a estrutura judiciária do Império (juízes de paz, juízes de direito, tribunais de relação) operava sob influência direta do poder central, especialmente após a reforma do Código de Processo Criminal de 1841. Quarto, o voto censitário garantiu que apenas proprietários e comerciantes abastados participassem das decisões legislativas, alinhando o aparato legal aos interesses das elites agrárias.
-<!-- [/CAUSA] -->
-
-<!-- [CONSEQUENCIA] -->
-Esse conjunto de fatores produziu consequências identificáveis. A ordem social escravista permaneceu juridicamente sustentada durante todo o período imperial, de 1822 a 1889. As revoltas regenciais — Cabanagem, Balaiada, Farroupilha, Sabinada — foram reprimidas por meio de instrumentos jurídico-militares do Estado, consolidando a centralização após 1840. A exclusão política da maioria da população impediu que demandas por reforma social chegassem às instâncias legislativas por vias institucionais. E o Golpe da Maioridade, em 1840, restaurou o Poder Moderador como mecanismo de estabilização, encerrando a experiência descentralizadora.
-<!-- [/CONSEQUENCIA] -->
-
-<!-- [RELACAO_CAUSAL] -->
-Esses elementos não operavam de forma isolada. A organização jurídico-política do Império — Constituição de 1824, Poder Moderador, voto censitário e estrutura judiciária hierarquizada — criou um sistema em que leis e instituições de justiça funcionavam como instrumentos de manutenção da ordem social existente. O aparato legal excluía a maioria da população da participação política, o que impedia reformas estruturais por vias institucionais, o que por sua vez resultava na preservação da hierarquia social escravista e na repressão de movimentos contestatórios. A exclusão política sustentava a ausência de reformas, que reforçava a estrutura de poder que produzia a exclusão.
-<!-- [/RELACAO_CAUSAL] -->
-
-<!-- [EXEMPLO: Reforma do Código de Processo Criminal de 1841] -->
-Após as revoltas regenciais da década de 1830, o governo imperial promulgou a reforma do Código de Processo Criminal em 1841. A medida retirou dos juízes de paz (eleitos localmente) suas atribuições policiais e judiciárias, transferindo-as para delegados e juízes nomeados pelo governo central. Essa reforma evidencia a relação entre instabilidade social provocada pelas revoltas e o fortalecimento do controle jurídico centralizado como resposta do Estado.
-<!-- [/EXEMPLO] -->
-
-<!-- [AUTOR: Emília Viotti da Costa (1928–2017) Brasil | ref=relacao-causal] -->
-Historiadora, professora da USP e da Yale University, autora de *Da Monarquia à República* (1977).
-<!-- [/AUTOR] -->
-
-<!-- [FONTE] -->
-COSTA, Emília Viotti da. *Da Monarquia à República: momentos decisivos*. São Paulo: Grijalbo, 1977.
-Viotti da Costa argumenta que as instituições do Império foram moldadas para atender aos interesses das elites agrárias escravistas, e que a justiça imperial funcionava menos como garantia de direitos individuais e mais como mecanismo de controle social, assegurando a continuidade das relações de poder estabelecidas desde o período colonial.
-<!-- [/FONTE] -->
-
-<!-- [AUTOR: Boris Fausto (1930–2019) Brasil | ref=relacao-causal] -->
-Historiador, professor da USP, autor de *História do Brasil* (1994).
+<!-- [AUTOR: Boris Fausto (1930–2019) Brasil | ref=conclusao-parcial] -->
+Boris Fausto, historiador vinculado à Universidade de São Paulo, é autor de uma das obras de referência sobre a história política brasileira.
 <!-- [/AUTOR] -->
 
 <!-- [FONTE] -->
 FAUSTO, Boris. *História do Brasil*. São Paulo: Edusp, 1994.
-Fausto sintetiza que a combinação entre centralização política e exclusão da maioria da população dos direitos de cidadania configurou um Estado que, embora constitucional na forma, operava de modo autoritário na prática, usando o aparato jurídico para conter ameaças à ordem social vigente.
 <!-- [/FONTE] -->
-
-<!-- [VERIFICACAO: Q7] -->
-1. A reforma do Código de Processo Criminal de 1841 transferiu atribuições dos juízes de paz para:
-   (a) Assembleias legislativas provinciais
-   (b) Delegados e juízes nomeados pelo governo central
-   (c) O Senado vitalício
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
-
-<!-- [VERIFICACAO: Q8] -->
-2. Segundo a relação causal apresentada, a exclusão da maioria da população da participação política resultava em:
-   (a) Maior número de revoltas bem-sucedidas
-   (b) Impedimento de reformas estruturais por vias institucionais
-   (c) Fortalecimento dos juízes de paz eleitos localmente
-   Resposta: (b)
-<!-- [/VERIFICACAO] -->
 
 ---
 
-<!-- [SINTESE] -->
-A organização jurídico-política do Estado imperial brasileiro, estruturada pela Constituição de 1824, pelo Poder Moderador, pelo voto censitário e por uma hierarquia judiciária subordinada ao poder central, funcionou como instrumento de manutenção da ordem social entre 1822 e 1840. As instituições de justiça do Império não operavam como garantia de direitos para toda a população, mas como mecanismos de controle que excluíam a maioria dos habitantes da participação política e reprimiam movimentos contestatórios, assegurando a continuidade da estrutura social escravista e hierarquizada.
-<!-- [/SINTESE] -->
+### Organização jurídico-política do Império e manutenção da ordem social
+
+<!-- [TIPO_OPERACAO: Mapear causalidade] -->
+<!-- AVISO_AGENTE5: tipo TIPO_OPERACAO não mapeado — gerar secao tipo="generico" -->
+
+<!-- [CAUSA] -->
+A descentralização do período regencial produziu efeitos que ultrapassaram o plano administrativo. Ao transferir às províncias o controle sobre a justiça e a polícia, o Ato Adicional de 1834 abriu espaço para dois processos simultâneos. Em primeiro lugar, as elites regionais passaram a disputar entre si o controle de cargos e recursos provinciais, gerando conflitos que o governo central tinha dificuldade em arbitrar. Em segundo lugar, grupos que até então estavam excluídos de qualquer canal de participação política (escravizados, libertos, indígenas, soldados, camponeses) encontraram nas fissuras da autoridade central condições para expressar sua insatisfação com a exclusão política e as condições de vida a que eram submetidos.
+<!-- [/CAUSA] -->
+
+<!-- [RELACAO_CAUSAL] -->
+Essas duas forças, disputas entre elites regionais e insatisfação dos grupos excluídos, convergiram na eclosão de múltiplas revoltas durante o período regencial: a Cabanagem no Pará (de 1835 a 1840), a Balaiada no Maranhão (de 1838 a 1841), a Farroupilha no Rio Grande do Sul (de 1835 a 1845) e a Sabinada na Bahia (de 1837 a 1838). As revoltas tinham composição social e motivações distintas entre si: a Farroupilha era liderada por elites regionais que disputavam autonomia; a Cabanagem envolvia majoritariamente populações indígenas, mestiças e escravizadas que contestavam a própria ordem social.
+
+A escala da violência pode ser medida pelo caso da Cabanagem. O movimento reuniu indígenas, mestiços e escravizados que chegaram a tomar a capital Belém e assassinar o presidente da província. A repressão pelo governo central resultou em cerca de 30 mil mortes, estimativa que corresponde a aproximadamente 20% da população da província do Grão-Pará.
+<!-- [/RELACAO_CAUSAL] -->
+
+<!-- [CONSEQUENCIA] -->
+A resposta do governo central às revoltas não foi apenas militar. As instabilidades do período regencial serviram como justificativa para reformas jurídicas que recentralizaram o controle sobre a administração da justiça. A Lei de Interpretação do Ato Adicional (1840) e a reforma do Código de Processo Criminal (1841) devolveram ao governo imperial a nomeação de juízes, delegados e chefes de polícia nas províncias. Após a derrota dos cabanos, o governo reforçou a presença de forças militares e de juízes nomeados centralmente na região amazônica, consolidando o controle direto sobre a aplicação da justiça local.
+
+No longo prazo, essas medidas consolidaram um modelo em que a organização da justiça servia como instrumento de controle territorial e de manutenção da ordem social. A descentralização gerou disputas de poder regional e revoltas populares; a repressão centralizada a essas revoltas sustentou reformas jurídicas que concentraram a administração da justiça no governo imperial; e essa concentração serviu à manutenção da ordem social escravista e hierárquica.
+<!-- [/CONSEQUENCIA] -->
+
+Essa dinâmica é analisada por Emília Viotti da Costa em *Da Monarquia à República: momentos decisivos* (1977). Viotti da Costa argumenta que o liberalismo adotado pelas elites imperiais foi seletivo: as instituições jurídicas garantiam liberdades para os proprietários e mantinham a exclusão e o controle sobre escravizados e pobres livres. A organização do Estado imperial servia para preservar a estrutura social vigente, não para transformá-la.
+
+<!-- [AUTOR: Emília Viotti da Costa (1928–2017) Brasil | ref=consequencia] -->
+Emília Viotti da Costa, historiadora formada na Universidade de São Paulo e professora na Universidade Yale, é referência nos estudos sobre o liberalismo e a escravidão no Brasil imperial.
+<!-- [/AUTOR] -->
+
+<!-- [FONTE] -->
+COSTA, Emília Viotti da. *Da Monarquia à República: momentos decisivos*. São Paulo: Brasiliense, 1977.
+<!-- [/FONTE] -->
+
+---
+
+## Síntese
+
+<!-- [SINTESE_FINAL] -->
+<!-- AVISO_AGENTE5: tipo SINTESE_FINAL não mapeado — gerar secao tipo="generico" -->
+A organização jurídico-política do Estado imperial brasileiro, estruturada pela Constituição de 1824, concentrou o poder no imperador por meio do Poder Moderador e estabeleceu critérios censitários e escravistas que excluíam a maioria da população da participação política. Quando a descentralização do período regencial gerou instabilidade e revoltas, o governo central recentralizou a administração da justiça, transformando-a em instrumento de controle territorial e de manutenção da ordem social hierárquica e escravista.
+<!-- [/SINTESE_FINAL] -->
 
 <!-- [ENCADEAMENTO] -->
-Se as instituições de justiça do Império foram desenhadas para manter a ordem social escravista, resta examinar como a escravidão e as demandas por direitos foram tratadas dentro desse mesmo aparato jurídico-institucional ao longo do Segundo Reinado, e de que modo suas contradições contribuíram para a crise do regime imperial.
+Este capítulo demonstrou como as instituições jurídicas do Império organizaram a exclusão política e o controle social. O próximo capítulo examina como a escravidão e as disputas por direitos dentro desse mesmo arcabouço jurídico conduziram à crise e ao fim do regime imperial.
 <!-- [/ENCADEAMENTO] -->

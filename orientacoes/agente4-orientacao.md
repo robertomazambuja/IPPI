@@ -103,4 +103,4 @@ Quando você terminar, o texto deve:
 - [✓] Mantém argumento idêntico
 - [✓] Pronto para Agente 5 extrair estrutura pelos comentários
 
-Para como fazer, consulte: `skills/agente4-skill-v2.md`
+Para como fazer, consulte: `skills/agente4-skill.md`
