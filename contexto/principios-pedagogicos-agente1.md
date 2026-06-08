@@ -36,6 +36,14 @@ Você deve, para cada capítulo, escolher **uma operação principal** (o verbo 
 
 ---
 
+## 2.1 LISTA_COMPLEMENTAR — princípio de uso
+
+Trabalhar uma habilidade é aplicá-la a diferentes conteúdos. O aluno internaliza a habilidade vendo a mesma operação cognitiva executada sobre conteúdos distintos.
+
+A LISTA_COMPLEMENTAR contém os conteúdos de maior incidência no ENEM para a habilidade trabalhada. Use itens dessa lista como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal do capítulo puder ser demonstrada sobre eles com a mesma precisão.
+
+---
+
 ## 3. Estrutura do core (o que você produz para cada capítulo)
 
 O core.md de cada capítulo deve conter os seguintes campos obrigatórios, nesta ordem.

@@ -1,101 +1,92 @@
-# LEIAME — PIPELINE DE APOSTILAS DIDÁTICAS (VERSÃO FUNCIONAL)
+# LEIAME — PIPELINE DE APOSTILAS DIDÁTICAS
 
 ## Estado atual do projeto
 
-Pipeline de **dois** tem um paradigma **funcional** (texto rotulado, sem narrativa, sem simulação de voz humana). Precisamos fazer o código rodar e o foco atual é ajustar as skills, reduzir custo de tokens via prompt caching e validar a clareza didática do formato funcional. O desafio é fazer uma apostila criada por IA que não busque ser como uma apostila feita por humano mas que seja extremamente funcional justamente por ter sido feita por máquinas. 
+Pipeline funcional de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades do ENEM. O texto produzido não simula voz humana — é uma interface funcional clara e rastreável, escrita por máquinas para ser lida por humanos.
+
+O foco atual é validar a qualidade didática do output e testar o pipeline completo com capítulos reais.
 
 ---
 
 ## O que é este projeto
 
-Pipeline de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades da BNCC. O propósito é que o aluno pratique **operações cognitivas elementares** (definir, classificar, comparar, sequenciar, mapear causalidade, reconhecer perspectiva, aplicar) aplicadas a conteúdos nucleares. O texto não tenta soar humano – é uma **interface funcional clara e rastreável**.
-
-O professor define os parâmetros de cada capítulo em um CSV. O pipeline lê esse CSV e aciona os agentes em sequência. Cada agente produz um output que serve de input para o seguinte. Os agentes são construídos em Python e usam a API da Anthropic (modelo claude-sonnet/opus). Os agentes operam em modo agêntico: leem os arquivos de instrução por conta própria a partir dos caminhos que o pipeline informa – não há injeção de prompt via código.
+O professor define os parâmetros de cada capítulo em um CSV. O pipeline lê esse CSV e aciona os agentes em sequência. Cada agente produz um output que serve de input para o seguinte. Os agentes são construídos em Python e usam a API da Anthropic (modelo claude-sonnet/opus). Os agentes operam em modo agêntico: leem os arquivos de instrução por conta própria a partir dos caminhos que o pipeline informa.
 
 ---
 
 ## Princípio pedagógico central
 
-O texto final não conta uma história – ele executa um **algoritmo de ensino**. Cada habilidade da BNCC é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
+O texto final não conta uma história — ele executa um **algoritmo de ensino**. Cada habilidade do ENEM é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
 
 As sete operações elementares são:
-- **Definir** – apresentar um conceito com seus elementos essenciais
-- **Classificar** – atribuir itens a categorias segundo critérios explícitos
-- **Comparar** – listar diferenças e semelhanças entre elementos
-- **Sequenciar** – ordenar eventos no tempo
-- **Mapear causalidade** – identificar relações de causa‑consequência
-- **Reconhecer perspectiva** – identificar visão de mundo ou posição de um autor/grupo
-- **Aplicar** – usar um conceito para analisar um caso novo
 
-**Não há** “situação-problema narrativa”, “tensão”, “mobilização”, “pergunta retórica” ou qualquer recurso de simulação humana.
+- **Definir** — apresentar um conceito com seus elementos essenciais
+- **Classificar** — atribuir itens a categorias segundo critérios explícitos
+- **Comparar** — listar diferenças e semelhanças entre elementos
+- **Sequenciar** — ordenar eventos no tempo
+- **Mapear causalidade** — identificar relações de causa-consequência
+- **Reconhecer perspectiva** — identificar visão de mundo ou posição de um autor/grupo
+- **Aplicar** — usar um conceito para analisar um caso novo
+
+**Não há** situação-problema narrativa, tensão, mobilização, pergunta retórica ou qualquer recurso de simulação humana.
 
 ---
 
 ## Arquitetura de pastas
-pipeline.py — orquestrador principal
-teste_cache.py — script para testar prompt caching da API
-.env — chave de API (ANTHROPIC_API_KEY=...) — não versionar
+
+```
+pipeline.py                  — orquestrador principal
+.env                         — chave de API (não versionar)
 
 skills/
-agente1-skill.md — como o Agente 1 executa (arquiteto funcional)
-agente2-skill.md — como o Agente 2 executa (redator funcional)
+  agente1-skill.md
+  agente2-skill.md
+  agente3-skill.md
+  agente4-skill.md
+  agente5-skill.md
+  decompositor-skill.md
 
 orientacoes/
-agente1-orientacao.md — identidade e papel do Agente 1
-agente2-orientacao.md — identidade e papel do Agente 2
+  agente1-orientacao.md
+  agente2-orientacao.md
 
 contexto/
-principios-pedagogicos-agente1.md — governa as decisões do Agente 1 (funcional)
-disciplinas/
-historia.md — conceitos, autores, regras para História
-sociologia.md — conceitos, autores, regras para Sociologia
-filosofia.md — conceitos, autores, regras para Filosofia
-geografia.md — conceitos, autores, regras para Geografia
+  principios-pedagogicos-agente1.md
+  disciplinas/
+    historia.md
+    sociologia.md
+    filosofia.md
+    geografia.md
 
 input/
-[nome-da-apostila]/
-instrucoes.csv — preenchido pelo professor; uma linha por capítulo
+  [nome-da-apostila]/
+    instrucoes.csv
 
 output/
-[nome-da-apostila]/
-core/
-[unidade-slug]/
-[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].md
-texto/
-[unidade-slug]/
-[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].md
-validacao/
-[unidade-slug]/
-[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].md
-imagens/
-[unidade-slug]/
-[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].md
-xml/
-[unidade-slug]/
-[unidade_idx]-[capitulo_idx]-[nome-do-capitulo].xml
-estilos-indesign.md — gerado uma só vez; lista os estilos InDesign
-
-text
-
-**Nota:** Ainda é necessário considerar a criação de um Agente 3 (Revisor de Estilo) que opere mesmo sob um texto ao mesmo tempo que é um **Validador Técnico** que apenas certifica conformidade, não reescreve. Pensar se vamos ter Agente 3 e Agente 4, um para analisar conformidade e outro para reescrever.
-Além disso será necessário um agente 5 que será o diagramador que prepara o arquivo para ser um xml para ser usado no indesign 
+  [nome-da-apostila]/
+    core/[unidade-slug]/[idx]-[capitulo].md
+    texto/[unidade-slug]/[idx]-[capitulo].md
+    validacao/[unidade-slug]/[idx]-[capitulo].md
+    xml/[unidade-slug]/[idx]-[capitulo].xml
+    estilos-indesign.md
+```
 
 ---
 
 ## O CSV — input do professor
 
-**Colunas obrigatórias:**  
-`disciplina`, `unidade`, `pergunta_unidade`, `capitulo`, `habilidade`,  
-`micro_hab_1`, `operacao_secao_1`, `micro_hab_2`, `operacao_secao_2`,  
-`micro_hab_3`, `operacao_secao_3`, `micro_hab_4`, `operacao_secao_4`,  
+**Colunas obrigatórias:**
+`disciplina`, `unidade`, `pergunta_unidade`, `capitulo`, `habilidade`,
+`micro_hab_1`, `operacao_secao_1`, `micro_hab_2`, `operacao_secao_2`,
+`micro_hab_3`, `operacao_secao_3`, `micro_hab_4`, `operacao_secao_4`,
 `autores`
 
-**Colunas opcionais:**  
+**Colunas opcionais:**
 `micro_hab_5`, `operacao_secao_5`, `micro_hab_6`, `operacao_secao_6`, `conteudos_nucleares`
 
-Total: 19 colunas (header fixo). Os slots opcionais devem estar presentes no header mesmo quando vazios — o Agente 0 gerencia isso automaticamente.
+Total: 19 colunas (header fixo). Os slots opcionais devem estar presentes no header mesmo quando vazios.
 
-Cada linha é um capítulo. Capítulos da mesma unidade compartilham os campos `unidade` e `pergunta_unidade`. O pipeline organiza o output por unidade (slug gerado automaticamente) e por capítulo dentro da unidade.
+Cada linha é um capítulo. Capítulos da mesma unidade compartilham `unidade` e `pergunta_unidade`.
 
 **Operações válidas** para `operacao_secao_*`: `Definir`, `Classificar`, `Comparar`, `Sequenciar`, `Mapear causalidade`, `Reconhecer perspectiva`, `Aplicar`.
 
@@ -107,164 +98,169 @@ Cada linha é um capítulo. Capítulos da mesma unidade compartilham os campos `
 # Roda todos os agentes em todos os capítulos
 python pipeline.py input/teste-sociologia/instrucoes.csv
 
-# Roda apenas agentes específicos (ex: 1,2,3)
-python pipeline.py input/teste-sociologia/instrucoes.csv --agentes 1,2,3
+# Roda apenas agentes específicos
+python pipeline.py input/teste-sociologia/instrucoes.csv --agentes 1,2,3,4
 
-# Força regeneração mesmo que o arquivo de output já exista
+# Força regeneração mesmo que o output já exista
 python pipeline.py input/teste-sociologia/instrucoes.csv --force
 
 # Roda apenas o capítulo N (por ordem no CSV, começando em 1)
 python pipeline.py input/teste-sociologia/instrucoes.csv --cap 1
+```
 
-# Pular Agente 5 (curador de imagens) – o Agente 6 opera em modo placeholder
-python pipeline.py input/teste-sociologia/instrucoes.csv --agentes 1,2,3,6
-Ordem padrão dos agentes: 1 → 2 → 3 → 5 → 6
+Chave de API: o pipeline lê automaticamente o arquivo `.env` na raiz do projeto.
 
-O Agente 3 valida o texto produzido pelo Agente 2 antes de seguir para imagens e diagramação.
+---
 
-Chave de API: o pipeline lê automaticamente o arquivo .env na raiz do projeto. Formato:
+## Os agentes
 
-text
-ANTHROPIC_API_KEY=sk-ant-api03-...
-Os seis agentes (0–5)
-Agente 1 — Arquiteto Curricular (funcional)
-Recebe: linha do CSV + contexto da unidade + lista de todas as unidades + cores de capítulos anteriores (se houver).
+### Agente 1 — Arquiteto Curricular
 
-Consulta: contexto/principios-pedagogicos-agente1.md + contexto/disciplinas/[disciplina].md
+Recebe: linha do CSV + contexto da unidade + lista de todas as unidades + cores de capítulos anteriores.
 
-Produz: core.md – arquitetura do capítulo baseada em operações elementares. O core contém:
+Consulta: `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[disciplina].md`
 
-Cabeçalho: habilidade, operação principal, pergunta do capítulo, contribuição à unidade
+Produz: `core.md` — estrutura do capítulo com operações elementares, campos específicos por tipo de operação, síntese final e encadeamento. O core é um conjunto de dados estruturados, nunca narrativa.
 
-Sequência de 3 a 5 seções, cada uma com TIPO_OPERACAO (Definir, Classificar, etc.), campos específicos (ex: para Comparar: ELEMENTO_A, ELEMENTO_B, ASPECTOS_DA_COMPARACAO, EXEMPLO_ANCOLA)
+O campo `VERIFICACAO: Sim/Não` existe no core mas é ignorado pelos agentes subsequentes — a verificação foi removida do pipeline de texto.
 
-Síntese final (resposta direta à pergunta) e encadeamento
+---
 
-Checklist de verificação interna
+### Agente 2 — Redator Funcional
 
-Regra: o core nunca contém campos como TENSAO, MOBILIZACAO, PERGUNTA_RETORICA. É um conjunto de dados estruturados.
+Recebe: `core.md` do Agente 1.
 
-Agente 2 — Redator Funcional
-Recebe: core.md do Agente 1.
+Consulta: `contexto/disciplinas/[disciplina].md`
 
-Consulta: apenas o documento de contexto disciplinar funcional (ex: historia.md) – não consulta os princípios pedagógicos.
-
-Produz: texto.md – capítulo em texto funcional rotulado, sem narrativa, sem metáforas, sem perguntas retóricas.
+Produz: `texto.md` — prosa didática integrada com marcação estrutural em **HTML comments invisíveis**. Não usa rótulos visíveis. Não gera blocos de verificação.
 
 Formato obrigatório:
+- Abre com `<!-- [CONTEXTO_OPERACAO] -->` (quatro campos)
+- Cada seção tem cabeçalho idêntico ao core e marcação em HTML comments
+- Definição e exemplo integrados em parágrafo único com transição denotativa
+- Síntese final responde exatamente à pergunta do capítulo
 
-Começa com **CONTEXTO DE OPERAÇÃO** (habilidade, operação principal, pergunta, opcional “por que importa”)
+Responsabilidade do Agente 2: **didática e conteúdo**. Formatação exata da marcação é responsabilidade do Agente 3.
 
-Cada seção tem cabeçalho idêntico ao core e blocos rotulados ([DEFINIÇÃO], [COMPARAÇÃO], [EXEMPLO], [VERIFICAÇÃO], etc.)
+---
 
-Onde VERIFICACAO: Sim, há perguntas fechadas (múltipla escolha ou V/F) com a resposta correta indicada.
+### Agente 3 — Normalizador de Marcação
 
-Síntese final responde exatamente à pergunta do capítulo.
+Recebe: `texto.md` do Agente 2.
 
-Proibições: nenhum recurso narrativo, nenhum “nós”, nenhum andaime, nenhuma exclamação, nenhuma metáfora, nenhum advérbio de opinião.
+Produz: `texto.md` normalizado — aplica quatro normalizações de marcação e salva de volta no mesmo caminho. **Não altera prosa, não avalia conteúdo, não reordena seções.**
 
-Agente 3 — Normalizador de Marcação
-Recebe: texto.md (Agente 2).
+As quatro normalizações:
+1. **CONTEXTO_OPERACAO** — garante os quatro campos em markdown bold, um por linha
+2. **FONTE** — garante citação bibliográfica dentro do bloco, tag de abertura sem conteúdo embutido
+3. **AUTOR** — garante ancoragem ao bloco pai (aninhado ou com `ref=tipo`)
+4. **Tipos desconhecidos** — sinaliza com `AVISO_AGENTE5` sem descartar o conteúdo
 
-Produz: texto.md normalizado — aplica as quatro normalizações de marcação HTML estrutural e salva de volta no mesmo caminho. Não altera prosa nem a ordem das seções.
+O Agente 3 é o contrato de interface entre a zona criativa (Agentes 2 e 4) e a zona estrutural (Agente 5). Ele existe porque modelos de linguagem não são consistentes em formatação — e isso é esperado.
 
-Agente 4 — Redator de Estilo
-Recebe: texto.md (normalizado pelo Agente 3).
+---
 
-Produz: texto.md reescrito em prosa natural — os rótulos estruturais desaparecem, tornando invisível a engenharia funcional para o leitor final.
+### Agente 4 — Polidor de Prosa
 
-Agente 5 — Diagramador
-Recebe: texto.md + core.md (para identificar tipos de operação) + imagens.md (se existir).
+Recebe: `texto.md` normalizado pelo Agente 3.
 
-Produz dois arquivos:
+Produz: `texto.md` com prosa aprimorada — melhora transições entre blocos, naturalidade das frases e encadeamento entre parágrafos. **Não toca nos HTML comments. Não cria conteúdo novo.**
 
-[capitulo].xml – capítulo estruturado para InDesign, com tags como <secao tipo="Definir">, <bloco tipo="VERIFICACAO">, <indicacao-imagem>.
+Responsabilidade do Agente 4: **fluência da prosa**. Estrutura e conteúdo chegam intocados ao Agente 5.
 
-estilos-indesign.md – gerado uma vez por apostila; lista os estilos de parágrafo necessários.
+---
 
-Modo placeholder: se imagens.md não existe (ex: --agentes 1,2,3,6), insere uma tag genérica <indicacao-imagem ref="?"/> por seção Principal.
+### Agente 5 — Diagramador
+
+Recebe: `texto.md` (processado pelo Agente 4) + `core.md`.
+
+Produz:
+- `[capitulo].xml` — capítulo estruturado para InDesign, com tags como `<secao tipo="Definir">`, `<bloco tipo="AUTOR">`, `<indicacao-imagem>`
+- `estilos-indesign.md` — gerado uma vez por apostila; lista os estilos de parágrafo necessários
+
+---
+
+## Fluxo resumido
+
+```
+Agente 2  →  conteúdo + HTML comments + prosa aproximada
+Agente 3  →  normaliza marcação, não toca na prosa
+Agente 4  →  aprimora prosa, não toca na marcação
+Agente 5  →  lê marcação limpa, gera XML determinístico
+```
+
+---
 
 ## Bugs conhecidos e mitigações
 
-**Bug: desalinhamento de colunas no CSV gerado pelo Agente 0**  
-O Decompositor (Agente 0) escreve consistentemente 3 campos vazios de trailing após a última seção preenchida, independente de quantas seções foram usadas. O número correto varia:
-- 4 seções preenchidas → precisa de 4 campos vazios (`micro_hab_5`, `op_5`, `micro_hab_6`, `op_6`)
-- 5 seções preenchidas → precisa de 2 campos vazios (`micro_hab_6`, `op_6`)
+**Bug: desalinhamento de colunas no CSV gerado pelo Agente 0**
+O Decompositor (Agente 0) escreve consistentemente 3 campos vazios de trailing após a última seção preenchida. O número correto varia:
+- 4 seções preenchidas → precisa de 4 campos vazios
+- 5 seções preenchidas → precisa de 2 campos vazios
 
-**Mitigação implementada (07/06/2026):** função `fix_csv_alignment()` em `pipeline.py` executa automaticamente após o Agente 0 salvar o CSV e antes da validação. Ela detecta linhas com contagem de campos errada e insere/remove campos vazios antes de `autores` para corrigir o alinhamento. O pipeline loga `⚠  CSV corrigido automaticamente` quando a correção é aplicada.
+**Mitigação implementada (07/06/2026):** função `fix_csv_alignment()` em `pipeline.py` executa automaticamente após o Agente 0 salvar o CSV. Detecta linhas com contagem de campos errada e corrige antes da validação. O pipeline loga `⚠ CSV corrigido automaticamente` quando a correção é aplicada.
 
 ---
 
 ## Histórico de modificações
-(mantenha as entradas anteriores conforme necessário; aqui apenas um exemplo da transição)
 
-2026-05-30 – Reformulação para pipeline funcional (eliminação do Agente 4, novo paradigma)
-Mudanças fundamentais:
+**2026-06-08 — Reformulação do Agente 2 e redefinição do Agente 4**
 
-Abandono da simulação de voz humana. Princípio pedagógico agora é artificialidade funcional.
+Problema identificado: a skill do Agente 2 pedia formatação exata de AUTOR, FONTE e CONTEXTO_OPERACAO — responsabilidade que pertence ao Agente 3. Além disso, gerava blocos `[VERIFICAÇÃO]` visíveis e usava rótulos explícitos, conflitando com a arquitetura de HTML comments.
 
-Substituição dos tipos de seção (Argumentativa/Demonstrativa/Expositiva) por sete operações elementares.
+Mudanças realizadas:
+- `agente2-skill.md` reescrito: HTML comments diretos, exemplos antes/depois para todas as 7 operações, banco de transições denotativas, sem VERIFICACAO, sem exigências de formatação exata
+- `agente4-skill.md` reescrito: papel redefinido de "conversor de rótulos" para "polidor de prosa"
+- `agente4-skill-v2.md` excluído — um único arquivo por agente
+- Campo `VERIFICACAO: Sim/Não` do core mantido mas ignorado pelo Agente 2
 
-Eliminação do Agente 4 (Revisor de Estilo) – texto funcional não tem estilo a revisar.
+**2026-06-08 — Princípio pedagógico da LISTA_COMPLEMENTAR definido**
+Decisão: trabalhar uma habilidade é aplicá-la a diferentes conteúdos. O Agente 1 deve usar itens da LISTA_COMPLEMENTAR como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal puder ser demonstrada sobre eles com a mesma precisão.
 
-Agente 3 transformado em Validador Técnico (não reescreve, apenas certifica).
+**2026-06-08 — Correção de campo: HABILIDADE_BNCC → HABILIDADE_ENEM**
+Corrigido em `skills/agente1-skill.md` e `contexto/principios-pedagogicos-agente1.md`.
 
-Novos documentos de contexto: principios-pedagogicos-agente1.md, historia.md, sociologia.md (renomeados de historia-contexto-funcional.md e sociologia-contexto-funcional.md).
+**2026-05-30 — Reformulação para pipeline funcional**
+Abandono da simulação de voz humana. Princípio pedagógico: artificialidade funcional. Substituição dos tipos de seção por sete operações elementares. Skills e orientações do Agente 1 e Agente 2 completamente reescritas.
 
-Skills e orientações do Agente 1 e Agente 2 completamente reescritas.
+---
 
-Impacto esperado: redução de custo (menos agentes, prompts mais curtos), maior clareza didática, eliminação do “vale da estranheza” de textos que tentam soar humanos.
+## Decisões de arquitetura
 
-Decisões de arquitetura (relevantes para a versão funcional)
-Decisão 1 – Eliminação do Agente 4
-Motivo: revisão de estilo pressupunha uma “voz” a ser polida. No texto funcional rotulado, não há voz – apenas blocos de informação. A verificação estrutural foi incorporada ao Agente 3.
+**Separação de responsabilidades entre Agentes 2, 3 e 4**
+O Agente 2 é responsável por conteúdo e didática — não por formatação exata. Pedir ao redator que acerte `ref=tipo` no AUTOR ou o formato exato de FONTE é pedir ao agente errado. O Agente 3 existe precisamente porque modelos de linguagem são inconsistentes em formatação, e isso é esperado. O Agente 4 existe porque fluência de prosa é uma operação separada de estrutura de conteúdo.
 
-Decisão 2 – Processamento capítulo a capítulo (mantida)
-Motivo: simplicidade e inspeção incremental. O custo de coerência entre capítulos é mitigado pelo Agente 1 que lê cores anteriores e pelo encadeamento explícito no core.
+**VERIFICACAO removida do texto**
+A verificação após cada seção foi removida do output do Agente 2. O campo `VERIFICACAO: Sim/Não` permanece no core (gerado pelo Agente 1) mas é ignorado pelos agentes de texto. A decisão pode ser revisitada se houver necessidade pedagógica futura.
 
-Decisão 3 – Prompt caching (mantida)
-Motivo: reduz custo de input nas iterações internas de cada agente. Implementado via cache_control no system prompt.
+**Processamento capítulo a capítulo**
+Simplicidade e inspeção incremental. O custo de coerência entre capítulos é mitigado pelo Agente 1, que lê cores anteriores, e pelo encadeamento explícito no core.
 
-Distinção entre orientação e skill (mantida)
-Orientação (orientacoes/): quem é o agente, sua função no processo, como se relaciona com os outros.
-Skill (skills/): como o agente executa – passos, critérios, formatos.
+**Prompt caching**
+Reduz custo de input nas iterações internas. Implementado via `cache_control` no system prompt.
 
-Em caso de conflito, os princípios pedagógicos funcionais prevalecem.
+**Distinção entre orientação e skill**
+`orientacoes/`: quem é o agente, sua função no processo, como se relaciona com os outros.
+`skills/`: como o agente executa — passos, critérios, formatos.
+Em caso de conflito, os princípios pedagógicos prevalecem.
 
-Estado dos componentes
-Implementado e integrado:
+---
 
-Agente 1 (Arquiteto Curricular funcional) – agente1-skill.md, agente1-orientacao.md
+## Estado dos componentes
 
-Agente 2 (Redator Funcional) – agente2-skill.md, agente2-orientacao.md
+**Implementado e integrado:**
+- Agente 1 (Arquiteto Curricular) — `agente1-skill.md`, `agente1-orientacao.md`
+- Agente 2 (Redator Funcional) — `agente2-skill.md`, `agente2-orientacao.md`
+- Agente 3 (Normalizador de Marcação) — `agente3-skill.md`
+- Agente 4 (Polidor de Prosa) — `agente4-skill.md`
+- Agente 5 (Diagramador) — `agente5-skill.md`
+- `pipeline.py` com flags `--agentes`, `--force`, `--cap`
+- Contexto disciplinar completo: `historia.md`, `sociologia.md`, `filosofia.md`, `geografia.md`
 
-Agente 3 e 4 (Validador Técnico e redator) - analisar necessidade e como fazer
+**Em avaliação:**
+- Qualidade didática do output do Agente 2 com exemplos reais
+- Precisão do Agente 3 na detecção de variações de marcação não previstas
 
-Agente 5 (Diagramador) – agente5-skill.md, agente5-orientacao.md
-
-pipeline.py com flags --agentes, --force, --cap
-
-.env e teste_cache.py
-
-Disciplinas com contexto funcional completo:
-
-História – historia.md
-
-Sociologia – sociologia.md
-
-Filosofia – filosofia.md
-
-Geografia – geografia.md
-
-Em avaliação:
-
-Qualidade das verificações fechadas (se realmente testam a habilidade)
-
-Precisão do Agente 3 na detecção de violações e se necessário outro agente para redator, 
-
-
-Ainda não existe:
-
-Correção automática a partir do output do Agente 3 e reescrita (hoje é manual)
-
-Interface web para o professor preencher o CSV
+**Ainda não existe:**
+- Correção automática a partir do output do Agente 3 (hoje é manual)
+- Interface web para o professor preencher o CSV

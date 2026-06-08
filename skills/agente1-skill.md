@@ -105,7 +105,7 @@ Verifique se o CSV contém a coluna `conteudos_nucleares`. Se sim e não estiver
 
 Você terá duas listas para usar no PASSO 1:
 - **LISTA_OBRIGATÓRIA** — do CSV do professor. Todos devem aparecer no capítulo.
-- **LISTA_COMPLEMENTAR** — da matriz. Usados para enriquecer e mostrar múltiplas aplicações da habilidade.
+- **LISTA_COMPLEMENTAR** — da matriz. Trabalhar uma habilidade é aplicá-la a diferentes conteúdos: o aluno internaliza a habilidade vendo a mesma operação cognitiva executada sobre conteúdos distintos. Use itens dessa lista como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal do capítulo puder ser demonstrada sobre eles com a mesma precisão.
 
 **3. Distribuição de autores entre seções**
 
