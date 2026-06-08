@@ -149,7 +149,6 @@ Para cada capítulo, monte a linha completa:
 | ... | até micro_hab_6 / operacao_secao_6 |
 | `autores` | `autores_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
 | `conteudos_nucleares` | `conteudos_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
-| `elementos_obrigatorios` | elementos que o Agente 1 deve incluir (exemplos, dados, perspectivas); extraia de `elementos_por_capitulo[nome_do_capitulo]` no briefing, ou deixe vazio se ausente |
 
 **Atenção:** `autores` e `conteudos_nucleares` variam por capítulo — cada linha do CSV recebe os dados específicos do seu capítulo, exatamente como o professor definiu. O Agente 1 decide como usar cada item dentro das seções.
 

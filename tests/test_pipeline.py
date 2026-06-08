@@ -86,9 +86,37 @@ class TestCapituloFilename:
 # ─── parse_csv ───────────────────────────────────────────────────────────────
 
 COLUNAS = [
-    "disciplina", "unidade", "pergunta_unidade", "capitulo",
-    "habilidade", "conteudos_nucleares", "autores", "elementos_obrigatorios",
+    "disciplina", "unidade", "pergunta_unidade", "capitulo", "habilidade",
+    "micro_hab_1", "operacao_secao_1",
+    "micro_hab_2", "operacao_secao_2",
+    "micro_hab_3", "operacao_secao_3",
+    "micro_hab_4", "operacao_secao_4",
+    "autores",
 ]
+
+# Valores válidos para operacao_secao_*
+_OP = "Definir"
+
+def _make_row(**overrides):
+    """Cria linha válida para o schema atual."""
+    row = {
+        "disciplina": "História",
+        "unidade": "Unidade 1",
+        "pergunta_unidade": "Pergunta?",
+        "capitulo": "Capítulo 1",
+        "habilidade": "H12 — Enunciado",
+        "micro_hab_1": "Definir conceito X",
+        "operacao_secao_1": _OP,
+        "micro_hab_2": "Classificar formas de Y",
+        "operacao_secao_2": _OP,
+        "micro_hab_3": "Comparar perspectivas sobre Z",
+        "operacao_secao_3": _OP,
+        "micro_hab_4": "Mapear relações causais entre A e B",
+        "operacao_secao_4": "Mapear causalidade",
+        "autores": "Autor A; Autor B",
+    }
+    row.update(overrides)
+    return row
 
 
 def _make_csv(directory: Path, rows: list, fieldnames=None) -> Path:
@@ -104,14 +132,14 @@ def _make_csv(directory: Path, rows: list, fieldnames=None) -> Path:
 
 class TestParseCsv:
     def test_csv_valido(self, tmp):
-        row = {col: f"valor_{col}" for col in COLUNAS}
+        row = _make_row()
         path = _make_csv(tmp, [row])
         result = pipeline.parse_csv(path)
         assert len(result) == 1
-        assert result[0]["disciplina"] == "valor_disciplina"
+        assert result[0]["disciplina"] == "História"
 
     def test_multiplas_linhas(self, tmp):
-        rows = [{col: f"v{i}_{col}" for col in COLUNAS} for i in range(3)]
+        rows = [_make_row(capitulo=f"Capítulo {i}") for i in range(3)]
         path = _make_csv(tmp, rows)
         result = pipeline.parse_csv(path)
         assert len(result) == 3
@@ -122,24 +150,27 @@ class TestParseCsv:
 
     def test_coluna_faltando(self, tmp):
         colunas_incompletas = [c for c in COLUNAS if c != "habilidade"]
-        row = {col: "x" for col in colunas_incompletas}
+        row = {col: _make_row().get(col, "x") for col in colunas_incompletas}
         path = _make_csv(tmp, [row], fieldnames=colunas_incompletas)
         with pytest.raises(ValueError, match="habilidade"):
             pipeline.parse_csv(path)
 
-    def test_schema_antigo_habilidade_principal_rejeitado(self, tmp):
-        """Garante que o schema antigo (habilidade_principal) é rejeitado."""
-        colunas_antigas = [
-            c if c != "habilidade" else "habilidade_principal" for c in COLUNAS
-        ]
-        row = {col: "x" for col in colunas_antigas}
-        path = _make_csv(tmp, [row], fieldnames=colunas_antigas)
+    def test_habilidade_principal_rejeitado(self, tmp):
+        """Garante que o nome antigo habilidade_principal é rejeitado."""
+        colunas = [c if c != "habilidade" else "habilidade_principal" for c in COLUNAS]
+        row = {col: "x" for col in colunas}
+        path = _make_csv(tmp, [row], fieldnames=colunas)
         with pytest.raises(ValueError):
             pipeline.parse_csv(path)
 
+    def test_operacao_invalida(self, tmp):
+        row = _make_row(operacao_secao_1="OperacaoInexistente")
+        path = _make_csv(tmp, [row])
+        with pytest.raises(ValueError, match="Operação inválida"):
+            pipeline.parse_csv(path)
+
     def test_celula_vazia_obrigatoria(self, tmp):
-        row = {col: "x" for col in COLUNAS}
-        row["capitulo"] = "   "
+        row = _make_row(capitulo="   ")
         path = _make_csv(tmp, [row])
         with pytest.raises(ValueError, match="capitulo"):
             pipeline.parse_csv(path)

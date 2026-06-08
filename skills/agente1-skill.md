@@ -125,7 +125,7 @@ Critérios de distribuição (aplicam-se apenas quando `autores` NÃO for `(nenh
 Preencha os seguintes campos no início do core:
 
 ```yaml
-HABILIDADE_BNCC: [código e texto completo]
+HABILIDADE_ENEM: [código e texto completo]
 OPERACAO_PRINCIPAL: [um dos verbos da lista acima]
 PERGUNTA_DO_CAPITULO: [enunciado que será respondido exatamente na SINTESE_FINAL]
 CONTRIBUICAO_A_UNIDADE: [uma frase ligando a resposta à pergunta central da unidade]
@@ -301,7 +301,7 @@ A consulta ao `contexto/matriz-conteudosenem.json` foi realizada e os conteúdos
 
 Os autores do CSV foram distribuídos entre as seções conforme afinidade com o objeto conceitual de cada micro-habilidade (ou, se `autores` for `(nenhum)`, todas as seções têm AUTOR: vazio, BOX_BIOGRAFICO: Não e FONTE_PRIMARIA: vazio).
 
-O cabeçalho contém HABILIDADE_BNCC, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
+O cabeçalho contém HABILIDADE_ENEM, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE.
 
 OPERACAO_PRINCIPAL está na lista de operações elementares.
 

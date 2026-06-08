@@ -1,0 +1,21 @@
+2026-06-07 16:33:57,912 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:33:59,826 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:34:01,565 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/briefing.json
+2026-06-07 16:34:01,567 [INFO] __main__:     →  read_file: contexto/matriz-enem.json
+2026-06-07 16:34:03,593 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:34:38,078 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:34:38,081 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:34:39,960 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:34:41,611 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:34:44,365 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:35:00,184 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:35:00,186 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:35:03,255 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:35:05,501 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:35:08,261 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:35:18,657 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:35:18,659 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:35:20,236 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:35:42,617 [INFO] __main__:   ✓  Agente 0 concluiu (7 iteração(ões))
+2026-06-07 16:35:42,619 [INFO] __main__: ✗  CSV gerado com schema inválido: Colunas obrigatórias faltando: {'habilidade_principal'}. Abortando.

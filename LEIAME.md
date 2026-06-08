@@ -86,9 +86,18 @@ Além disso será necessário um agente 5 que será o diagramador que prepara o 
 
 **Colunas obrigatórias:**  
 `disciplina`, `unidade`, `pergunta_unidade`, `capitulo`, `habilidade`,  
-`conteudos_nucleares`, `autores`, `elementos_obrigatorios`
+`micro_hab_1`, `operacao_secao_1`, `micro_hab_2`, `operacao_secao_2`,  
+`micro_hab_3`, `operacao_secao_3`, `micro_hab_4`, `operacao_secao_4`,  
+`autores`
+
+**Colunas opcionais:**  
+`micro_hab_5`, `operacao_secao_5`, `micro_hab_6`, `operacao_secao_6`, `conteudos_nucleares`
+
+Total: 19 colunas (header fixo). Os slots opcionais devem estar presentes no header mesmo quando vazios — o Agente 0 gerencia isso automaticamente.
 
 Cada linha é um capítulo. Capítulos da mesma unidade compartilham os campos `unidade` e `pergunta_unidade`. O pipeline organiza o output por unidade (slug gerado automaticamente) e por capítulo dentro da unidade.
+
+**Operações válidas** para `operacao_secao_*`: `Definir`, `Classificar`, `Comparar`, `Sequenciar`, `Mapear causalidade`, `Reconhecer perspectiva`, `Aplicar`.
 
 ---
 
@@ -175,7 +184,18 @@ estilos-indesign.md – gerado uma vez por apostila; lista os estilos de parágr
 
 Modo placeholder: se imagens.md não existe (ex: --agentes 1,2,3,6), insere uma tag genérica <indicacao-imagem ref="?"/> por seção Principal.
 
-Histórico de modificações
+## Bugs conhecidos e mitigações
+
+**Bug: desalinhamento de colunas no CSV gerado pelo Agente 0**  
+O Decompositor (Agente 0) escreve consistentemente 3 campos vazios de trailing após a última seção preenchida, independente de quantas seções foram usadas. O número correto varia:
+- 4 seções preenchidas → precisa de 4 campos vazios (`micro_hab_5`, `op_5`, `micro_hab_6`, `op_6`)
+- 5 seções preenchidas → precisa de 2 campos vazios (`micro_hab_6`, `op_6`)
+
+**Mitigação implementada (07/06/2026):** função `fix_csv_alignment()` em `pipeline.py` executa automaticamente após o Agente 0 salvar o CSV e antes da validação. Ela detecta linhas com contagem de campos errada e insere/remove campos vazios antes de `autores` para corrigir o alinhamento. O pipeline loga `⚠  CSV corrigido automaticamente` quando a correção é aplicada.
+
+---
+
+## Histórico de modificações
 (mantenha as entradas anteriores conforme necessário; aqui apenas um exemplo da transição)
 
 2026-05-30 – Reformulação para pipeline funcional (eliminação do Agente 4, novo paradigma)

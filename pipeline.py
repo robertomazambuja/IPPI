@@ -415,7 +415,7 @@ TODAS AS UNIDADES DA APOSTILA (para referência de encadeamento macro):
 DADOS DO CAPÍTULO ATUAL:
 - Disciplina: {disciplina}
 - Capítulo: {capitulo}
-- Habilidade principal: {row['habilidade_principal']}
+- Habilidade principal: {row['habilidade']}
 
 MICRO-HABILIDADES PRESCRITAS (operação + objeto conceitual — você materializa com conteúdo específico):
 {andaime_str}
@@ -578,10 +578,74 @@ sidebars (verificações com resposta oculta) e rodapé (encadeamento).
 # PIPELINE PRINCIPAL
 # ============================================================================
 
+def fix_csv_alignment(csv_path: Path) -> bool:
+    """
+    Corrige o bug consistente do Decompositor: sempre escreve exatamente 3 campos
+    vazios de trailing, independente de quantas seções foram usadas.
+
+    O header tem 19 colunas. Se uma linha de dados tiver != 19 campos, calcula
+    a diferença e insere/remove campos vazios imediatamente antes de 'autores'.
+
+    Retorna True se alguma linha foi corrigida.
+    """
+    with open(csv_path, encoding='utf-8', newline='') as f:
+        raw = list(csv.reader(f))
+
+    if len(raw) < 2:
+        return False
+
+    header = raw[0]
+    expected = len(header)
+
+    if 'autores' not in header:
+        return False
+
+    autores_pos = header.index('autores')
+    changed = False
+    new_rows = [header]
+
+    for row in raw[1:]:
+        if len(row) == expected:
+            new_rows.append(row)
+            continue
+
+        diff = expected - len(row)  # positivo = curto demais; negativo = longo demais
+
+        if abs(diff) > 4:
+            new_rows.append(row)  # discrepância grande demais — não toca
+            continue
+
+        current_autores_pos = autores_pos - diff
+
+        if not (0 <= current_autores_pos < len(row)):
+            new_rows.append(row)
+            continue
+
+        if diff > 0:
+            fixed = row[:current_autores_pos] + [''] * diff + row[current_autores_pos:]
+        else:
+            remove_from = current_autores_pos - abs(diff)
+            fixed = row[:remove_from] + row[current_autores_pos:]
+
+        if len(fixed) == expected:
+            new_rows.append(fixed)
+            changed = True
+            log_print(f"⚠  Alinhamento corrigido: linha tinha {len(row)} campos (esperado {expected}).", indent=2)
+        else:
+            new_rows.append(row)
+
+    if changed:
+        with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(new_rows)
+
+    return changed
+
+
 def parse_csv(csv_path: Path) -> List[Dict]:
     """Lê e valida CSV com formato de andaime."""
     COLUNAS_OBRIGATORIAS = [
-        'disciplina', 'unidade', 'pergunta_unidade', 'capitulo', 'habilidade_principal',
+        'disciplina', 'unidade', 'pergunta_unidade', 'capitulo', 'habilidade',
         'micro_hab_1', 'operacao_secao_1',
         'micro_hab_2', 'operacao_secao_2',
         'micro_hab_3', 'operacao_secao_3',
@@ -903,6 +967,9 @@ Exemplos:
             if not csv_path:
                 log_print("✗  Agente 0 não produziu o CSV. Abortando.")
                 sys.exit(1)
+            # Corrigir alinhamento de colunas antes de validar
+            if fix_csv_alignment(csv_path):
+                log_print("⚠  CSV corrigido automaticamente (desalinhamento de colunas).", indent=1)
             # Validar schema do CSV gerado antes de continuar
             try:
                 parse_csv(csv_path)

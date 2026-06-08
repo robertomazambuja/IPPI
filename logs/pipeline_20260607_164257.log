@@ -1,0 +1,11 @@
+2026-06-07 16:42:57,801 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:42:59,670 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:43:01,158 [INFO] __main__:     →  read_file: input/apostila-teste-historia-em1/briefing.json
+2026-06-07 16:43:01,160 [INFO] __main__:     →  read_file: contexto/matriz-enem.json
+2026-06-07 16:43:02,312 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:43:31,345 [INFO] __main__:     →  write_file: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:43:31,346 [INFO] __main__:     ✓  Salvo: input/apostila-teste-historia-em1/instrucoes.csv
+2026-06-07 16:43:32,956 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-07 16:43:42,727 [INFO] __main__:   ✓  Agente 0 concluiu (3 iteração(ões))
+2026-06-07 16:43:42,745 [INFO] __main__: ✗  CSV gerado com schema inválido: Operação inválida na linha 2, coluna 'operacao_secao_6': 'José Murilo de Carvalho; Boris Fausto; Emília Viotti da Costa; Ilmar Rohloff de Mattos; Lilia Moritz Schwarcz'. Deve ser um de: Aplicar, Classificar, Comparar, Definir, Mapear causalidade, Reconhecer perspectiva, Sequenciar. PROVÁVEL CAUSA: desalinhamento de colunas — o Decompositor escreveu 3 vírgulas vazias em vez de 4 para os slots opcionais (micro_hab_5/6, operacao_secao_5/6).. Abortando.
