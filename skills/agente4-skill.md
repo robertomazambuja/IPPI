@@ -118,17 +118,30 @@ Para cada trecho identificado:
 - [ ] A prosa flui de forma contínua entre os blocos?
 - [ ] Nenhuma das proibições de estilo foi violada?
 
-### Passo 4: Salvar
+### Passo 4: Devolver as trocas em JSON
 
-Salve no mesmo caminho, sobrescrevendo o original.
+**Não use `write_file`.** Devolva apenas um array JSON com as substituições que você fez, no seguinte formato:
+
+```json
+[
+  {"original": "trecho exato como está no arquivo", "novo": "trecho reescrito"},
+  {"original": "outro trecho exato", "novo": "versão melhorada"}
+]
+```
+
+Regras do JSON de saída:
+- `original` deve ser copiado **exatamente** do arquivo — incluindo espaços e pontuação. O pipeline usa busca literal para aplicar a troca.
+- `novo` contém apenas a prosa reescrita — nunca HTML comments.
+- Se não houver nenhuma melhoria necessária, devolva um array vazio: `[]`
+- Não inclua nada além do JSON na sua resposta (sem texto antes ou depois).
 
 ---
 
 ## Garantias de entrega
 
-Quando você salva o arquivo:
+Quando você devolve o JSON:
 
-- ✓ Prosa é natural e fluida
-- ✓ HTML comments intocados — estrutura preservada para o Agente 5
+- ✓ Prosa é natural e fluida nos trechos alterados
+- ✓ Nenhum HTML comment aparece em nenhum campo do JSON
 - ✓ Conteúdo idêntico ao recebido — nenhum argumento adicionado ou removido
-- ✓ Pronto para o Agente 5 extrair e gerar XML
+- ✓ Cada `original` existe literalmente no arquivo recebido

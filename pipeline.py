@@ -36,22 +36,40 @@ import logging
 import os
 import re
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from dotenv import load_dotenv
 from normalizador import normalizar_texto
 from formatador import formatar_capitulo
+from verificador import gerar_verificacoes
 
 # ============================================================================
 # CONFIGURAÇÃO
 # ============================================================================
 
 BASE_DIR = Path(__file__).parent
-MODEL = os.environ.get("IPPI_MODEL", "claude-opus-4-6")
 MAX_TOKENS = int(os.environ.get("IPPI_MAX_TOKENS", "32000"))
 AGENTE_MAX_ITERATIONS = int(os.environ.get("IPPI_MAX_ITERATIONS", "30"))
+
+# Modelos por agente — sobrescrevíveis via env var (ex: IPPI_MODEL_A1=claude-opus-4-6)
+_DEFAULT_MODELS = {
+    0: "claude-sonnet-4-6",   # Decompositor: tarefa estruturada, Sonnet suficiente
+    1: "claude-opus-4-6",     # Arquiteto: decisões pedagógicas — Opus paga seu preço
+    2: "claude-opus-4-6",     # Redator: qualidade da prosa é o produto
+    3: None,                  # Normalizador: código Python, sem LLM
+    4: "claude-sonnet-4-6",   # Polidor: reescrita local, sem criação de conteúdo
+    5: None,                  # Formatador: código Python, sem LLM
+}
+AGENT_MODELS: dict = {
+    agente: os.environ.get(f"IPPI_MODEL_A{agente}", modelo)
+    for agente, modelo in _DEFAULT_MODELS.items()
+}
+# Fallback global para agentes não mapeados
+_FALLBACK_MODEL = os.environ.get("IPPI_MODEL", "claude-sonnet-4-6")
 
 # Diretórios
 INPUT_DIR = BASE_DIR / "input"
@@ -63,6 +81,7 @@ LOG_DIR.mkdir(exist_ok=True)
 _RUN_TS = datetime.now().strftime('%Y%m%d_%H%M%S')
 LOG_FILE = LOG_DIR / f"pipeline_{_RUN_TS}.log"
 USAGE_CSV = LOG_DIR / f"usage_{_RUN_TS}.csv"
+_USAGE_CSV_LOCK = threading.Lock()   # protege escrita concorrente no CSV de usage
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(name)s: %(message)s',
@@ -133,18 +152,19 @@ def extract_habilidade(matrix_path: Path, codigo: str) -> str:
         return f"ERRO ao ler {matrix_path.name}: {e}"
 
 def _write_usage_csv(row: dict):
-    """Grava uma linha no CSV de usage (cria header se necessário)."""
+    """Grava uma linha no CSV de usage (thread-safe)."""
     import csv as _csv
-    file_exists = USAGE_CSV.exists()
-    with open(USAGE_CSV, "a", encoding="utf-8", newline="") as f:
-        writer = _csv.DictWriter(f, fieldnames=[
-            "timestamp", "apostila", "agente", "capitulo",
-            "iteracoes", "input_tokens", "output_tokens",
-            "cache_creation_tokens", "cache_read_tokens",
-        ])
-        if not file_exists:
-            writer.writeheader()
-        writer.writerow(row)
+    with _USAGE_CSV_LOCK:
+        file_exists = USAGE_CSV.exists()
+        with open(USAGE_CSV, "a", encoding="utf-8", newline="") as f:
+            writer = _csv.DictWriter(f, fieldnames=[
+                "timestamp", "apostila", "agente", "capitulo",
+                "iteracoes", "input_tokens", "output_tokens",
+                "cache_creation_tokens", "cache_read_tokens",
+            ])
+            if not file_exists:
+                writer.writeheader()
+            writer.writerow(row)
 
 # ============================================================================
 # FERRAMENTAS DOS AGENTES
@@ -243,6 +263,7 @@ def run_agent(
     max_iterations: int = AGENTE_MAX_ITERATIONS,
     chapter_label: str = "",
     apostila_label: str = "",
+    model: str = _FALLBACK_MODEL,
 ) -> Optional[str]:
     """
     Executa um agente em loop até end_turn ou limite de iterações.
@@ -264,7 +285,7 @@ def run_agent(
         for attempt in range(4):
             try:
                 with client.messages.stream(
-                    model=MODEL,
+                    model=model,
                     max_tokens=MAX_TOKENS,
                     system=[
                         {
@@ -427,7 +448,8 @@ Siga os passos da sua skill:
 
     log_print(f"\n[Agente 0] Decompositor — gerando {output_rel}")
     run_agent(client, system, user_message, "Agente 0",
-              chapter_label="briefing", apostila_label=apostila_name)
+              chapter_label="briefing", apostila_label=apostila_name,
+              model=AGENT_MODELS.get(0, _FALLBACK_MODEL))
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -559,7 +581,8 @@ ONDE SALVAR O OUTPUT:
 
     log_print(f"\n[Agente 1] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
     run_agent(client, system, user_message, "Agente 1",
-              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name,
+              model=AGENT_MODELS.get(1, _FALLBACK_MODEL))
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -599,7 +622,8 @@ ONDE SALVAR O OUTPUT:
 
     log_print(f"\n[Agente 2] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
     run_agent(client, system, user_message, "Agente 2",
-              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name,
+              model=AGENT_MODELS.get(2, _FALLBACK_MODEL))
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -634,6 +658,51 @@ def run_agente3(
         logger.exception("[Agente 3] Falha ao normalizar %s", texto_path)
         return None
 
+def _apply_diffs(texto_path: Path, json_response: str) -> Tuple[int, List[str]]:
+    """
+    Recebe o JSON devolvido pelo Agente 4 e aplica as substituições no arquivo.
+    Retorna (n_aplicadas, avisos).
+    """
+    import json as _json
+
+    # Extrai o bloco JSON da resposta (pode haver texto residual antes/depois)
+    raw = json_response.strip()
+    # Tenta encontrar o array JSON na resposta
+    start = raw.find("[")
+    end   = raw.rfind("]") + 1
+    if start == -1 or end == 0:
+        return 0, ["Agente 4 não devolveu JSON válido — arquivo não alterado"]
+
+    try:
+        trocas = _json.loads(raw[start:end])
+    except _json.JSONDecodeError as e:
+        return 0, [f"JSON inválido do Agente 4: {e} — arquivo não alterado"]
+
+    if not trocas:
+        return 0, []
+
+    texto = texto_path.read_text(encoding="utf-8")
+    avisos: List[str] = []
+    aplicadas = 0
+
+    for item in trocas:
+        original = item.get("original", "")
+        novo     = item.get("novo", "")
+        if not original:
+            avisos.append("Troca sem campo 'original' — ignorada")
+            continue
+        if original not in texto:
+            avisos.append(f"Trecho não encontrado no arquivo (ignorado): {original[:60]}…")
+            continue
+        texto = texto.replace(original, novo, 1)
+        aplicadas += 1
+
+    if aplicadas:
+        texto_path.write_text(texto, encoding="utf-8")
+
+    return aplicadas, avisos
+
+
 def run_agente4(
     client: anthropic.Anthropic,
     texto_path: Path,
@@ -643,31 +712,35 @@ def run_agente4(
     capitulo: str,
     apostila_name: str,
 ) -> Optional[Path]:
-    """Agente 4 — Redator de Estilo. Qualifica prosa, torna invisível rótulos."""
+    """Agente 4 — Polidor de prosa. Devolve JSON de diffs; pipeline aplica."""
 
     texto_rel = str(texto_path.relative_to(BASE_DIR))
-
     system = build_system_prompt("agente4-orientacao.md", "agente4-skill.md")
-
     texto_content_a4 = read_file_safe(texto_path)
 
     user_message = f"""Sua tarefa: polir a prosa do capítulo para leitura fluida por alunos do Ensino Médio.
 
-CONTEÚDO DO ARQUIVO A POLIR ({texto_rel}):
+CONTEÚDO DO ARQUIVO ({texto_rel}):
 {texto_content_a4}
 
-Os HTML comments já estão normalizados — não os toque.
-Sua tarefa é exclusivamente melhorar a prosa: adicione transições entre blocos onde soam abruptos,
-reescreva frases mecânicas para que fluam naturalmente, encadeie parágrafos do mesmo bloco.
-Sua skill já está no seu system prompt.
-Salve o resultado de volta em:
-{texto_rel}
-(sobrescrevendo o original)
+Os HTML comments já estão normalizados — não os toque e não os inclua no JSON.
+Siga o procedimento da sua skill (já está no seu system prompt).
+Devolva apenas o array JSON de trocas — sem nenhum texto antes ou depois.
 """
 
     log_print(f"\n[Agente 4] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 4",
-              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
+    resposta = run_agent(client, system, user_message, "Agente 4",
+                         chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}",
+                         apostila_label=apostila_name,
+                         model=AGENT_MODELS.get(4, _FALLBACK_MODEL))
+
+    if resposta:
+        n, avisos = _apply_diffs(texto_path, resposta)
+        log_print(f"  ✓ {n} troca(s) aplicada(s) pelo Agente 4", indent=1)
+        for av in avisos:
+            log_print(f"  ⚠  {av}", indent=2)
+    else:
+        log_print("  ⚠  Agente 4 não devolveu resposta — arquivo não alterado", indent=1)
 
     return texto_path if texto_path.exists() else None
 
@@ -679,19 +752,35 @@ def run_agente5(
     unidade_slug: str,
     capitulo: str,
     apostila_name: str,
+    core_path: Optional[Path] = None,
 ) -> Optional[Path]:
     """Agente 5 — Formatador XML (determinístico, sem LLM).
 
-    Substitui a chamada ao LLM por formatar_capitulo() do formatador.py,
-    eliminando latência e custo para esta etapa de conversão estrutural.
+    Se core_path for fornecido, gera verificações fechadas e "Aplicar agora"
+    via verificador.py (chamada Haiku) e os injeta no XML.
     """
-    filename = capitulo_filename(unidade_idx, capitulo_idx, capitulo)
     output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
-
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
 
+    # Gera verificações se o core estiver disponível
+    verificacoes = None
+    aplicar_agora = None
+    if core_path and core_path.exists():
+        try:
+            verificacoes, aplicar_agora = gerar_verificacoes(core_path, client,
+                model=AGENT_MODELS.get(0, "claude-haiku-4-5-20251001"))
+            log_print(
+                f"  ✓ Verificações: {len(verificacoes or {})} seção(ões) | "
+                f"aplicar_agora={'sim' if aplicar_agora else 'não'}",
+                indent=1,
+            )
+        except Exception as e:
+            log_print(f"  ⚠  Verificador falhou ({e}) — XML sem verificações", indent=1)
+
     try:
-        out_path = formatar_capitulo(texto_path, output_dir)
+        out_path = formatar_capitulo(texto_path, output_dir,
+                                     verificacoes=verificacoes,
+                                     aplicar_agora=aplicar_agora)
         if out_path:
             log_print(f"  ✓ XML gerado: {out_path.name}", indent=1)
             return out_path
@@ -826,29 +915,122 @@ def parse_csv(csv_path: Path) -> List[Dict]:
     logger.info(f"CSV carregado: {len(rows)} capítulos (formato com andaime)")
     return rows
 
+def _run_cap_stages_2_5(
+    cap_info: dict,
+    agentes: List[int],
+    force: bool,
+    apostila_name: str,
+) -> None:
+    """
+    Executa os estágios 2→5 para um único capítulo.
+    Cada chamada usa seu próprio cliente Anthropic (thread-safe).
+    """
+    client = anthropic.Anthropic(api_key=API_KEY)
+    core_path   = cap_info["core_path"]
+    u_idx       = cap_info["u_idx"]
+    c_idx       = cap_info["c_idx"]
+    cap_global  = cap_info["cap_global"]
+    total_caps  = cap_info["total_caps"]
+    unidade_slug= cap_info["unidade_slug"]
+    capitulo    = cap_info["capitulo"]
+    disciplina  = cap_info["disciplina"]
+    filename    = cap_info["filename"]
+
+    log_print(f"\n{'─' * 70}")
+    log_print(f"Cap. {cap_global}/{total_caps}  [{u_idx}.{c_idx}] {capitulo}  [estágios 2–5]")
+    log_print(f"{'─' * 70}")
+
+    texto_path = None
+
+    # ─ Agente 2 ─
+    if 2 in agentes:
+        if not core_path:
+            log_print("✗  Core não disponível. Pulando Agente 2.", indent=1)
+            return
+        expected = BASE_DIR / f"output/{apostila_name}/texto/{unidade_slug}/{filename}"
+        if expected.exists() and not force:
+            log_print("[Agente 2] Texto já existe — pulando.", indent=1)
+            texto_path = expected
+        else:
+            texto_path = run_agente2(
+                client, core_path, u_idx, c_idx,
+                unidade_slug, capitulo, disciplina, apostila_name,
+            )
+            if not texto_path:
+                log_print("✗  Agente 2 não produziu output. Pulando agentes posteriores.", indent=1)
+                return
+    else:
+        expected = BASE_DIR / f"output/{apostila_name}/texto/{unidade_slug}/{filename}"
+        if expected.exists():
+            texto_path = expected
+
+    # ─ Agente 3 ─
+    if 3 in agentes:
+        if not texto_path:
+            log_print("✗  Texto não disponível. Pulando Agente 3.", indent=1)
+        else:
+            texto_path = run_agente3(
+                client, texto_path, u_idx, c_idx,
+                unidade_slug, capitulo, apostila_name,
+            ) or texto_path
+
+    # ─ Agente 4 ─
+    if 4 in agentes:
+        if not texto_path:
+            log_print("✗  Texto não disponível. Pulando Agente 4.", indent=1)
+        else:
+            resultado4 = run_agente4(
+                client, texto_path, u_idx, c_idx,
+                unidade_slug, capitulo, apostila_name,
+            )
+            if not resultado4:
+                log_print("✗  Agente 4 não produziu output. Pulando Agente 5.", indent=1)
+                return
+            texto_path = resultado4
+
+    # ─ Agente 5 ─
+    if 5 in agentes:
+        if not texto_path:
+            log_print("✗  Texto não disponível. Pulando Agente 5.", indent=1)
+        else:
+            if not run_agente5(
+                client, texto_path, u_idx, c_idx,
+                unidade_slug, capitulo, apostila_name,
+                core_path=core_path,
+            ):
+                log_print("✗  Agente 5 não produziu output.", indent=1)
+
+
 def run_pipeline(
     csv_path: Path,
     agentes: List[int],
     force: bool = False,
     cap_filter: Optional[int] = None,
     client: Optional[anthropic.Anthropic] = None,
+    workers: int = 1,
 ):
-    """Executa o pipeline completo para uma apostila."""
+    """
+    Executa o pipeline completo para uma apostila.
 
+    Quando workers > 1:
+      - Fase 1 (sequencial): Agente 1 para todos os capítulos (dependência de cores anteriores)
+      - Fase 2 (paralela):   Agentes 2→5 para cada capítulo em ThreadPoolExecutor
+    """
     if client is None:
         client = anthropic.Anthropic(api_key=API_KEY)
 
     apostila_name = csv_path.parent.name
+    workers = max(1, workers)
 
     log_print(f"\n{'═' * 70}")
     log_print(f"Apostila : {apostila_name}")
     log_print(f"Agentes  : {', '.join(str(a) for a in sorted(agentes))}")
+    log_print(f"Workers  : {workers}")
     log_print(f"Forçar   : {'sim' if force else 'não'}")
     if cap_filter is not None:
         log_print(f"Capítulo : {cap_filter} (somente)")
     log_print(f"{'═' * 70}")
 
-    # Parse CSV com validação
     rows = parse_csv(csv_path)
 
     # Agrupa capítulos por unidade
@@ -861,7 +1043,6 @@ def run_pipeline(
             unidades_map[unidade] = []
         unidades_map[unidade].append(row)
 
-    # Sumário de todas as unidades
     todas_unidades = [
         {
             "unidade_idx": u_idx + 1,
@@ -875,9 +1056,10 @@ def run_pipeline(
     log_print(f"Unidades : {len(unidades_ordenadas)}")
     log_print(f"Capítulos: {total_caps}")
 
+    # ── FASE 1: Agente 1 — sempre sequencial ────────────────────────────────
+    caps_prontos: List[dict] = []   # capítulos com core_path definido
     cap_global = 0
 
-    # Processa unidade por unidade
     for u_idx, unidade_nome in enumerate(unidades_ordenadas, start=1):
         unidade_slug = slugify(unidade_nome)
         caps = unidades_map[unidade_nome]
@@ -890,26 +1072,21 @@ def run_pipeline(
         for c_idx, row in enumerate(caps, start=1):
             cap_global += 1
 
-            # Filtro por capítulo específico
             if cap_filter is not None and cap_global != cap_filter:
                 continue
 
-            capitulo = row["capitulo"].strip()
-            disciplina = row["disciplina"].strip()
-            filename = capitulo_filename(u_idx, c_idx, capitulo)
-
-            log_print(f"\n{'─' * 70}")
-            log_print(f"Cap. {cap_global}/{total_caps}  [{u_idx}.{c_idx}] {capitulo}")
-            log_print(f"{'─' * 70}")
-
+            capitulo  = row["capitulo"].strip()
+            disciplina= row["disciplina"].strip()
+            filename  = capitulo_filename(u_idx, c_idx, capitulo)
             core_path = None
-            texto_path = None
 
-            # ─ Agente 1 ─
             if 1 in agentes:
+                log_print(f"\n{'─' * 70}")
+                log_print(f"Cap. {cap_global}/{total_caps}  [{u_idx}.{c_idx}] {capitulo}  [Agente 1]")
+                log_print(f"{'─' * 70}")
                 expected = BASE_DIR / f"output/{apostila_name}/core/{unidade_slug}/{filename}"
                 if expected.exists() and not force:
-                    log_print("[Agente 1] Core já existe — pulando. (--force para regenerar)", indent=1)
+                    log_print("[Agente 1] Core já existe — pulando.", indent=1)
                     core_path = expected
                 else:
                     core_path = run_agente1(
@@ -917,74 +1094,51 @@ def run_pipeline(
                         capitulos_da_unidade, todas_unidades, apostila_name,
                     )
                     if not core_path:
-                        log_print("✗  Agente 1 não produziu output. Pulando agentes posteriores.", indent=1)
+                        log_print("✗  Agente 1 não produziu output. Capítulo descartado.", indent=1)
                         continue
             else:
                 expected = BASE_DIR / f"output/{apostila_name}/core/{unidade_slug}/{filename}"
                 if expected.exists():
                     core_path = expected
 
-            # ─ Agente 2 ─
-            if 2 in agentes:
-                if not core_path:
-                    log_print("✗  Core não disponível. Pulando Agente 2.", indent=1)
-                else:
-                    expected = BASE_DIR / f"output/{apostila_name}/texto/{unidade_slug}/{filename}"
-                    if expected.exists() and not force:
-                        log_print("[Agente 2] Texto já existe — pulando.", indent=1)
-                        texto_path = expected
-                    else:
-                        texto_path = run_agente2(
-                            client, core_path, u_idx, c_idx,
-                            unidade_slug, capitulo, disciplina, apostila_name,
+            # Só enfileira estágios 2-5 se há algo para fazer
+            if any(a in agentes for a in [2, 3, 4, 5]):
+                caps_prontos.append({
+                    "core_path":    core_path,
+                    "u_idx":        u_idx,
+                    "c_idx":        c_idx,
+                    "cap_global":   cap_global,
+                    "total_caps":   total_caps,
+                    "unidade_slug": unidade_slug,
+                    "capitulo":     capitulo,
+                    "disciplina":   disciplina,
+                    "filename":     filename,
+                })
+
+    # ── FASE 2: Agentes 2→5 — paralelo quando workers > 1 ──────────────────
+    if caps_prontos:
+        if workers == 1:
+            for cap_info in caps_prontos:
+                _run_cap_stages_2_5(cap_info, agentes, force, apostila_name)
+        else:
+            log_print(f"\n[Fase 2] Processando {len(caps_prontos)} capítulo(s) em paralelo ({workers} workers)…")
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                futures = {
+                    executor.submit(_run_cap_stages_2_5, cap_info, agentes, force, apostila_name): cap_info
+                    for cap_info in caps_prontos
+                }
+                for future in as_completed(futures):
+                    cap_info = futures[future]
+                    try:
+                        future.result()
+                    except Exception as exc:
+                        log_print(
+                            f"✗  Capítulo [{cap_info['u_idx']}.{cap_info['c_idx']}] "
+                            f"{cap_info['capitulo']} gerou exceção: {exc}",
+                            indent=1,
                         )
-                        if not texto_path:
-                            log_print("✗  Agente 2 não produziu output. Pulando agentes posteriores.", indent=1)
-                            continue
-            else:
-                expected = BASE_DIR / f"output/{apostila_name}/texto/{unidade_slug}/{filename}"
-                if expected.exists():
-                    texto_path = expected
 
-            # ─ Agente 3 — Normalizador de Marcação ─
-            if 3 in agentes:
-                if not texto_path:
-                    log_print("✗  Texto não disponível. Pulando Agente 3.", indent=1)
-                else:
-                    texto_path = run_agente3(
-                        client, texto_path, u_idx, c_idx,
-                        unidade_slug, capitulo, apostila_name,
-                    ) or texto_path
-                    if not texto_path:
-                        log_print("✗  Agente 3 não produziu output. Pulando agentes posteriores.", indent=1)
-                        continue
-
-            # ─ Agente 4 ─
-            if 4 in agentes:
-                if not texto_path:
-                    log_print("✗  Texto não disponível. Pulando Agente 4.", indent=1)
-                else:
-                    resultado4 = run_agente4(
-                        client, texto_path, u_idx, c_idx,
-                        unidade_slug, capitulo, apostila_name,
-                    )
-                    if not resultado4:
-                        log_print("✗  Agente 4 não produziu output. Pulando Agente 5.", indent=1)
-                        continue
-                    texto_path = resultado4
-
-            # ─ Agente 5 ─
-            if 5 in agentes:
-                if not texto_path:
-                    log_print("✗  Texto não disponível. Pulando Agente 5.", indent=1)
-                else:
-                    if not run_agente5(
-                        client, texto_path, u_idx, c_idx,
-                        unidade_slug, capitulo, apostila_name,
-                    ):
-                        log_print("✗  Agente 5 não produziu output.", indent=1)
-
-    # Totaliza usage da execução a partir do CSV gravado nesta sessão
+    # ── Totais de usage ──────────────────────────────────────────────────────
     if USAGE_CSV.exists():
         import csv as _csv
         totals: dict = {}
@@ -1091,6 +1245,14 @@ Exemplos:
         metavar="N",
         help="Processa apenas o capítulo N (número global)",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Nº de capítulos processados em paralelo nos estágios 2–5 (padrão: 1). "
+             "Use 2–3; valores altos podem atingir rate limits.",
+    )
 
     args = parser.parse_args()
 
@@ -1130,7 +1292,7 @@ Exemplos:
             if not csv_path.exists():
                 log_print(f"ERRO: CSV não encontrado: {csv_path}")
                 sys.exit(1)
-            run_pipeline(csv_path, agentes_pipeline, args.force, args.cap, client)
+            run_pipeline(csv_path, agentes_pipeline, args.force, args.cap, client, workers=args.workers)
 
     # ── Modo manual ────────────────────────────────────────────────────────────
     else:
@@ -1147,7 +1309,7 @@ Exemplos:
             sys.exit(1)
 
         client = anthropic.Anthropic(api_key=API_KEY)
-        run_pipeline(csv_path, agentes, args.force, args.cap, client)
+        run_pipeline(csv_path, agentes, args.force, args.cap, client, workers=args.workers)
 
 if __name__ == "__main__":
     main()

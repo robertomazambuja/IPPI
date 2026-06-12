@@ -518,7 +518,8 @@ def render_secao(sec: SecaoNode, sec_id: str, lvl: int) -> str:
     lines.append(f'{pad}</secao>')
     return "\n".join(lines)
 
-def render_bloco(bloco: BlocoNode, lvl: int) -> str:
+def render_bloco(bloco: BlocoNode, lvl: int,
+                 verificacoes: Optional[Dict[int, str]] = None) -> str:
     pad = "  " * lvl
     op = xe(bloco.operacao) if bloco.operacao else ""
     lines = [f'{pad}<bloco id="bloco-{bloco.idx}" palavras="{bloco.palavras}" operacao="{op}">']
@@ -537,11 +538,20 @@ def render_bloco(bloco: BlocoNode, lvl: int) -> str:
         else:
             lines.append(f'{pad}  <nota_fonte>{xe(fonte.texto)}</nota_fonte>')
 
+    # Sidebar de verificação para este bloco (se houver)
+    if verificacoes and bloco.idx in verificacoes:
+        verif_xml = verificacoes[bloco.idx]
+        # Indenta o sidebar para ficar alinhado com o bloco
+        indented = indent(verif_xml, lvl + 1)
+        lines.append(indented)
+
     lines.append(f'{pad}</bloco>')
     return "\n".join(lines)
 
 def render_xml(titulo: str, cap_id: str, contexto: dict,
-               blocos: List[BlocoNode], rodape: RodapeNode) -> str:
+               blocos: List[BlocoNode], rodape: RodapeNode,
+               verificacoes: Optional[Dict[int, str]] = None,
+               aplicar_agora: Optional[str] = None) -> str:
     total_words = sum(b.palavras for b in blocos)
 
     parts = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -564,6 +574,15 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
     parts.append("  </cabecalho>")
     parts.append("")
 
+    # Mapa de progressão — sequência de operações cognitivas do capítulo
+    ops = [(b.idx, b.operacao) for b in blocos if b.operacao]
+    if ops:
+        parts.append("  <mapa-progressao>")
+        for idx, op in ops:
+            parts.append(f'    <passo ordem="{idx}" bloco="bloco-{idx}">{xe(op)}</passo>')
+        parts.append("  </mapa-progressao>")
+        parts.append("")
+
     # Corpo com quebras de pagina
     parts.append("  <corpo>")
     parts.append("")
@@ -577,7 +596,7 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f'    <quebra tipo="pagina" sugestao="{sugestao}"/>')
             parts.append("")
             acum = 0
-        parts.append(render_bloco(bloco, 2))
+        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes))
         parts.append("")
         acum += bloco.palavras
 
@@ -602,6 +621,8 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f"    <sintese>{xe(rodape.sintese)}</sintese>")
         if rodape.encadeamento:
             parts.append(f"    <encadeamento>{xe(rodape.encadeamento)}</encadeamento>")
+        if aplicar_agora:
+            parts.append(indent(aplicar_agora, 2))
     parts.append("  </rodape>")
     parts.append("")
     parts.append("</capitulo>")
@@ -612,15 +633,24 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
 # Public API
 # ---------------------------------------------------------------------------
 
-def formatar_capitulo(texto_path: Path, output_dir: Path) -> Optional[Path]:
+def formatar_capitulo(
+    texto_path: Path,
+    output_dir: Path,
+    verificacoes: Optional[Dict[int, str]] = None,
+    aplicar_agora: Optional[str] = None,
+) -> Optional[Path]:
     """
     Converte texto_path (markdown normalizado) em XML.
     Salva em output_dir/<stem>.xml.
     Retorna o Path do XML gerado, ou None em caso de erro.
+
+    verificacoes: dict {idx_secao: xml_sidebar} gerado por verificador.gerar_verificacoes()
+    aplicar_agora: xml_sidebar do exercício final, ou None
     """
     try:
         titulo, cap_id, contexto, blocos, rodape = parse_document(texto_path)
-        xml_str = render_xml(titulo, cap_id, contexto, blocos, rodape)
+        xml_str = render_xml(titulo, cap_id, contexto, blocos, rodape,
+                             verificacoes=verificacoes, aplicar_agora=aplicar_agora)
 
         output_dir.mkdir(parents=True, exist_ok=True)
         out_path = output_dir / (texto_path.stem + ".xml")
@@ -631,4 +661,3 @@ def formatar_capitulo(texto_path: Path, output_dir: Path) -> Optional[Path]:
     except Exception as e:
         logger.exception("[Formatador] Falha ao formatar %s: %s", texto_path, e)
         return None
-

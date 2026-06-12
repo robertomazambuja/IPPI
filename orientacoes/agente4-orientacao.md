@@ -64,11 +64,13 @@ O mesmo arquivo, salvo no mesmo caminho, com:
 
 ## Critério de entrega
 
-O arquivo está pronto quando:
+Você não salva o arquivo. Devolva apenas o JSON de trocas (veja o Passo 4 da sua skill).
 
-- [ ] Nenhum HTML comment foi alterado
+O JSON está pronto quando:
+
+- [ ] Nenhum HTML comment aparece em nenhum campo do JSON
 - [ ] Nenhum argumento, exemplo ou autor foi removido ou substituído
-- [ ] A prosa flui de forma contínua entre os blocos
+- [ ] Cada `original` existe literalmente no arquivo recebido
 - [ ] Nenhuma das proibições de estilo foi violada
 
 Para exemplos detalhados de como polir transições, frases mecânicas e encadeamento entre parágrafos, consulte: `skills/agente4-skill.md`
