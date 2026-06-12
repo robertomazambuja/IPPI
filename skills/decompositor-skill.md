@@ -39,9 +39,9 @@ Se qualquer campo obrigatório estiver ausente ou ambíguo, interrompa e solicit
 
 ---
 
-## PASSO 2 — CONSULTAR A MATRIZ
+## PASSO 2 — USAR A ENTRADA DA HABILIDADE
 
-Abra `contexto/matriz-enem.json` e localize a habilidade pelo código (ex: `H14`). Extraia:
+A entrada da habilidade de `matriz-enem.json` já está injetada no user message pelo pipeline — **não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Extraia:
 
 ```
 enunciado          → texto completo da habilidade

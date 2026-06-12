@@ -6,7 +6,7 @@ Antes de qualquer decisão, consulte na ordem:
 
 1. `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões estruturais. Prevalece sobre qualquer outro arquivo.
 2. `contexto/disciplinas/[disciplina].md` — convenções e cânones da disciplina do capítulo.
-3. `contexto/matriz-conteudosenem.json` — matriz de conteúdos prioritários por habilidade. Consulte **antes de definir qualquer seção**.
+3. Entrada da habilidade de `matriz-conteudosenem.json` — **já injetada no user message pelo pipeline, não é necessário ler o arquivo**. Use o JSON fornecido diretamente, antes de definir qualquer seção.
 
 Em caso de conflito entre qualquer instrução desta skill e os princípios pedagógicos, os princípios prevalecem.
 
@@ -94,7 +94,7 @@ Verifique se o CSV contém a coluna `conteudos_nucleares`. Se sim e não estiver
 **2. Conteúdos complementares da matriz**
 
 1. Identifique o código da habilidade recebida do CSV (ex: `H14`).
-2. Abra `contexto/matriz-conteudosenem.json` e localize a entrada correspondente.
+2. Use a entrada da habilidade já injetada no user message (não é necessário abrir o arquivo).
 3. Leia o campo `conteudos_por_disciplina` e extraia **apenas** a lista da disciplina do capítulo. Nunca use conteúdos de outra disciplina.
 4. Dentro dessa lista, identifique quais itens também aparecem em `conteudos_prioritarios` — esses têm precedência.
 5. Registre a lista resultante como LISTA_COMPLEMENTAR, ordenada por prioridade:
@@ -297,7 +297,7 @@ Nunca invente tipos de operação fora da lista.
 Verificação final (checklist obrigatório)
 Antes de entregar o core, responda a cada item. Se qualquer resposta for não, corrija.
 
-A consulta ao `contexto/matriz-conteudosenem.json` foi realizada e os conteúdos foram filtrados pela disciplina do capítulo.
+A entrada da habilidade (já injetada no user message) foi consultada e os conteúdos foram filtrados pela disciplina do capítulo.
 
 Os autores do CSV foram distribuídos entre as seções conforme afinidade com o objeto conceitual de cada micro-habilidade (ou, se `autores` for `(nenhum)`, todas as seções têm AUTOR: vazio, BOX_BIOGRAFICO: Não e FONTE_PRIMARIA: vazio).
 

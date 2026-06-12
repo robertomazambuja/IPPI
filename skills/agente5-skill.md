@@ -72,7 +72,7 @@ Arquivo `formatado/01-0X-...xml`:
 
   <corpo>
 
-    <bloco id="bloco-1" palavras="406">
+    <bloco id="bloco-1" palavras="406" operacao="Definir">
       <secao id="sec-1" tipo="definicao">
         <titulo>Título da seção ###</titulo>
         <conteudo>
@@ -90,7 +90,7 @@ Arquivo `formatado/01-0X-...xml`:
 
     <quebra tipo="pagina" sugestao="forte"/>
 
-    <bloco id="bloco-2" palavras="700">
+    <bloco id="bloco-2" palavras="700" operacao="Classificar">
       <secao id="sec-2" tipo="classificacao">
         <titulo>Título da seção ###</titulo>
         <introducao>Parágrafo introdutório da classificação.</introducao>
@@ -110,7 +110,7 @@ Arquivo `formatado/01-0X-...xml`:
       <nota_fonte>SOBRENOME, Nome. Título. Cidade: Editora, Ano.</nota_fonte>
     </bloco>
 
-    <bloco id="bloco-3" palavras="500">
+    <bloco id="bloco-3" palavras="500" operacao="Comparar">
       <secao id="sec-3" tipo="perspectiva">
         <titulo>Título</titulo>
         <conteudo>
@@ -210,6 +210,9 @@ Salve em: `output/{apostila}/formatado/{unidade-slug}/{filename}.xml`
 ## Mapeamento de Tipos de Seção
 
 ```
+<!-- [TIPO_OPERACAO: Operacao] --> → atributo operacao="Operacao" no <bloco> que contém a seção
+                                     (ex: operacao="Definir", "Classificar", "Comparar", "Sequenciar",
+                                          "Mapear causalidade", "Reconhecer perspectiva", "Aplicar")
 <!-- [DEFINICAO] -->               → <secao tipo="definicao">
 <!-- [CLASSIFICACAO] -->           → <secao tipo="classificacao"> com <lista-subtipos> para os SUBTIPO filhos
 <!-- [SUBTIPO: Nome] -->           → <item tipo="subtipo" nome="Nome"> dentro de <lista-subtipos>
@@ -260,6 +263,7 @@ Dois AUTOREs com o mesmo `ref=` geram dois `<sidebar tipo="autor">` dentro da me
 
 - [ ] `palavras_total=` calculado e presente no `<capitulo>`?
 - [ ] Cada `<bloco>` tem `palavras=` calculado?
+- [ ] Cada `<bloco>` tem `operacao=` preenchido com o valor de `TIPO_OPERACAO` da seção?
 - [ ] `<cabecalho>` tem os quatro campos (ou WARNING para ausentes)?
 - [ ] Todo AUTOR está dentro de uma `<secao>`, nunca solto no `<corpo>`?
 - [ ] Toda FONTE está como `<nota_fonte>` filho do `<bloco>`, fora das `<secao>`?

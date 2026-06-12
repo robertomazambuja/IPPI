@@ -58,7 +58,9 @@ LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
 # Logging
-LOG_FILE = LOG_DIR / f"pipeline_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+_RUN_TS = datetime.now().strftime('%Y%m%d_%H%M%S')
+LOG_FILE = LOG_DIR / f"pipeline_{_RUN_TS}.log"
+USAGE_CSV = LOG_DIR / f"usage_{_RUN_TS}.csv"
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(name)s: %(message)s',
@@ -112,6 +114,35 @@ def log_print(msg: str, indent: int = 0):
     """Imprime com indentação opcional."""
     prefix = "  " * indent
     logger.info(f"{prefix}{msg}")
+
+def extract_habilidade(matrix_path: Path, codigo: str) -> str:
+    """Extrai a entrada de uma habilidade de uma matriz JSON e retorna como string JSON.
+    Retorna mensagem de erro clara se a chave não for encontrada."""
+    try:
+        with open(matrix_path, encoding="utf-8") as f:
+            import json as _json
+            data = _json.load(f)
+        habilidades = data.get("habilidades", {})
+        entry = habilidades.get(codigo)
+        if entry is None:
+            return f"ERRO: habilidade '{codigo}' não encontrada em {matrix_path.name}"
+        return _json.dumps(entry, ensure_ascii=False, indent=2)
+    except Exception as e:
+        return f"ERRO ao ler {matrix_path.name}: {e}"
+
+def _write_usage_csv(row: dict):
+    """Grava uma linha no CSV de usage (cria header se necessário)."""
+    import csv as _csv
+    file_exists = USAGE_CSV.exists()
+    with open(USAGE_CSV, "a", encoding="utf-8", newline="") as f:
+        writer = _csv.DictWriter(f, fieldnames=[
+            "timestamp", "apostila", "agente", "capitulo",
+            "iteracoes", "input_tokens", "output_tokens",
+            "cache_creation_tokens", "cache_read_tokens",
+        ])
+        if not file_exists:
+            writer.writeheader()
+        writer.writerow(row)
 
 # ============================================================================
 # FERRAMENTAS DOS AGENTES
@@ -208,6 +239,8 @@ def run_agent(
     user_message: str,
     agent_name: str,
     max_iterations: int = AGENTE_MAX_ITERATIONS,
+    chapter_label: str = "",
+    apostila_label: str = "",
 ) -> Optional[str]:
     """
     Executa um agente em loop até end_turn ou limite de iterações.
@@ -215,6 +248,12 @@ def run_agent(
     """
     messages = [{"role": "user", "content": user_message}]
     iteration = 0
+    usage_total = {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_creation_tokens": 0,
+        "cache_read_tokens": 0,
+    }
 
     while iteration < max_iterations:
         iteration += 1
@@ -251,6 +290,13 @@ def run_agent(
                 log_print(f"⚠  Erro transitório — aguardando {wait}s antes de tentar novamente...", indent=2)
                 time.sleep(wait)
 
+        # Acumula usage desta iteração
+        if response.usage:
+            usage_total["input_tokens"]        += getattr(response.usage, "input_tokens", 0)
+            usage_total["output_tokens"]       += getattr(response.usage, "output_tokens", 0)
+            usage_total["cache_creation_tokens"] += getattr(response.usage, "cache_creation_input_tokens", 0)
+            usage_total["cache_read_tokens"]   += getattr(response.usage, "cache_read_input_tokens", 0)
+
         # Registra resposta no histórico
         messages.append({"role": "assistant", "content": response.content})
 
@@ -260,7 +306,20 @@ def run_agent(
 
         # Agente terminou
         if response.stop_reason == "end_turn":
-            log_print(f"✓  {agent_name} concluiu ({iteration} iteração(ões))", indent=1)
+            log_print(
+                f"✓  {agent_name} concluiu ({iteration} iteração(ões)) | "
+                f"in={usage_total['input_tokens']} out={usage_total['output_tokens']} "
+                f"cache_create={usage_total['cache_creation_tokens']} cache_read={usage_total['cache_read_tokens']}",
+                indent=1,
+            )
+            _write_usage_csv({
+                "timestamp": datetime.now().isoformat(timespec="seconds"),
+                "apostila": apostila_label,
+                "agente": agent_name,
+                "capitulo": chapter_label,
+                "iteracoes": iteration,
+                **{k: usage_total[k] for k in ("input_tokens", "output_tokens", "cache_creation_tokens", "cache_read_tokens")},
+            })
             return final_text
 
         # Uso de ferramentas — executa e continua o loop
@@ -284,9 +343,25 @@ def run_agent(
 
         # Parada inesperada
         log_print(f"⚠  {agent_name} parou: {response.stop_reason}", indent=1)
+        _write_usage_csv({
+            "timestamp": datetime.now().isoformat(timespec="seconds"),
+            "apostila": apostila_label,
+            "agente": agent_name,
+            "capitulo": chapter_label,
+            "iteracoes": iteration,
+            **{k: usage_total[k] for k in ("input_tokens", "output_tokens", "cache_creation_tokens", "cache_read_tokens")},
+        })
         return final_text
 
     log_print(f"⚠  {agent_name} atingiu limite de iterações ({max_iterations})", indent=1)
+    _write_usage_csv({
+        "timestamp": datetime.now().isoformat(timespec="seconds"),
+        "apostila": apostila_label,
+        "agente": agent_name,
+        "capitulo": chapter_label,
+        "iteracoes": iteration,
+        **{k: usage_total[k] for k in ("input_tokens", "output_tokens", "cache_creation_tokens", "cache_read_tokens")},
+    })
     return None
 
 # ============================================================================
@@ -315,24 +390,42 @@ def run_agente0(
 
     system = build_system_prompt("decompositor-orientacao.md", "decompositor-skill.md")
 
+    # Extrair habilidade do briefing e fatiar a matriz — injeta só a entrada relevante
+    habilidade_entry = ""
+    try:
+        import json as _json
+        with open(briefing_path, encoding="utf-8") as _f:
+            briefing_data = _json.load(_f)
+        codigo_hab = briefing_data.get("habilidade_enem", "")
+        if codigo_hab:
+            habilidade_entry = extract_habilidade(BASE_DIR / "contexto" / "matriz-enem.json", codigo_hab)
+    except Exception as _e:
+        habilidade_entry = f"ERRO ao pré-extrair habilidade do briefing: {_e}"
+
+    # Lê o briefing para injetar o conteúdo diretamente
+    briefing_content = read_file_safe(briefing_path)
+
     user_message = f"""Sua tarefa: transformar o briefing do professor em instrucoes.csv válido.
 
-ARQUIVO DE BRIEFING:
-{briefing_rel}
+CONTEÚDO DO BRIEFING:
+{briefing_content}
+
+ENTRADA DA HABILIDADE (de matriz-enem.json — extraia sequencia_pedagogica, enunciado e foco_cognitivo daqui):
+{habilidade_entry}
 
 ONDE SALVAR O OUTPUT:
 {output_rel}
 
-Siga os passos da sua skill (skills/decompositor-skill.md):
-1. Leia o briefing ({briefing_rel})
-2. Consulte contexto/matriz-enem.json para a habilidade identificada — extraia sequencia_pedagogica, enunciado e foco_cognitivo
-3. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
-4. Para cada capítulo: mapeie autores_por_capitulo[capitulo] → coluna autores; mapeie conteudos_por_capitulo[capitulo] → coluna conteudos_nucleares
-5. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
+Siga os passos da sua skill:
+1. Use o briefing e a entrada da habilidade acima (não é necessário ler os arquivos — o conteúdo já está aqui)
+2. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
+3. Para cada capítulo: mapeie autores_por_capitulo[capitulo] → coluna autores; mapeie conteudos_por_capitulo[capitulo] → coluna conteudos_nucleares
+4. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
 """
 
     log_print(f"\n[Agente 0] Decompositor — gerando {output_rel}")
-    run_agent(client, system, user_message, "Agente 0")
+    run_agent(client, system, user_message, "Agente 0",
+              chapter_label="briefing", apostila_label=apostila_name)
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -371,9 +464,19 @@ def run_agente1(
         for u in todas_unidades
     )
 
-    # Cores anteriores
+    # Extrair entrada da habilidade de matriz-conteudosenem.json e injetar
+    codigo_hab = row["habilidade"].split("—")[0].strip().split()[0].strip()
+    matriz_conteudos_entry = extract_habilidade(
+        BASE_DIR / "contexto" / "matriz-conteudosenem.json", codigo_hab
+    )
+
+    # Injetar princípios pedagógicos e contexto disciplinar diretamente
+    principios_content = read_file_safe(BASE_DIR / "contexto" / "principios-pedagogicos-agente1.md")
+    disciplina_content = read_file_safe(BASE_DIR / "contexto" / "disciplinas" / f"{disciplina_slug}.md")
+
+    # Cores anteriores (mantidos como read_file — serão otimizados na Fase 2 com E9)
     cores_anteriores_section = ""
-    arquivos_a_ler = f"1. contexto/principios-pedagogicos-agente1.md\n2. contexto/disciplinas/{disciplina_slug}.md\n"
+    arquivos_cores = ""
 
     if capitulo_idx > 1:
         cores_anteriores = []
@@ -390,7 +493,10 @@ def run_agente1(
             for idx, cap_name, rel_path in cores_anteriores:
                 cores_anteriores_section += f"  - Capítulo {idx}: {cap_name}\n    {rel_path}\n"
             cores_anteriores_section += "\n"
-            arquivos_a_ler += "3. Os cores dos capítulos anteriores (listados acima)\n"
+            arquivos_cores = "ARQUIVOS QUE VOCÊ DEVE LER (cores anteriores — use read_file):\n"
+            for idx, cap_name, rel_path in cores_anteriores:
+                arquivos_cores += f"  - {rel_path}\n"
+            arquivos_cores += "\n"
 
     # Monta andaime de seções
     andaime_secoes = []
@@ -404,6 +510,15 @@ def run_agente1(
     conteudos_str = row.get('conteudos_nucleares', '').strip() or "(Nenhum)"
 
     user_message = f"""Sua tarefa: arquitetar o capítulo abaixo a partir do andaime prescrito pelo professor.
+
+PRINCÍPIOS PEDAGÓGICOS (contexto/principios-pedagogicos-agente1.md):
+{principios_content}
+
+CONTEXTO DISCIPLINAR (contexto/disciplinas/{disciplina_slug}.md):
+{disciplina_content}
+
+ENTRADA DA HABILIDADE (de matriz-conteudosenem.json — use conteudos_prioritarios e conteudos_por_disciplina daqui):
+{matriz_conteudos_entry}
 
 CONTEXTO DA UNIDADE:
 - Unidade {unidade_idx}: {unidade}
@@ -429,13 +544,11 @@ CONTEÚDOS OBRIGATÓRIOS DO PROFESSOR (todos devem aparecer em pelo menos uma se
 AUTORES DISPONÍVEIS PARA ESTE CAPÍTULO (distribua entre as seções por afinidade com o objeto conceitual):
 {row['autores']}
 
-ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR (nesta ordem):
-{arquivos_a_ler}
-
-IMPORTANTE:
+{arquivos_cores}IMPORTANTE:
 - O andaime acima já prescreve as operações e a progressão de micro-habilidades
 - Você NÃO precisa inventar a estrutura — ela já está definida
 - Seu trabalho é CONCRETIZAR: escolher exemplos âncora, pesos das seções, fontes primárias, verificações
+- Os princípios pedagógicos e o contexto disciplinar já estão acima — não é necessário ler esses arquivos
 - Garanta que cada micro-habilidade seja alcançável e progressiva em relação à anterior
 
 ONDE SALVAR O OUTPUT:
@@ -443,7 +556,8 @@ ONDE SALVAR O OUTPUT:
 """
 
     log_print(f"\n[Agente 1] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 1")
+    run_agent(client, system, user_message, "Agente 1",
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -466,18 +580,24 @@ def run_agente2(
 
     system = build_system_prompt("agente2-orientacao.md", "agente2-skill.md")
 
+    core_content = read_file_safe(core_path)
+    disciplina_content_a2 = read_file_safe(BASE_DIR / "contexto" / "disciplinas" / f"{slugify(disciplina)}.md")
+
     user_message = f"""Sua tarefa: escrever o texto funcional do capítulo a partir do core abaixo.
 
-ARQUIVOS QUE VOCÊ DEVE LER ANTES DE INICIAR (nesta ordem):
-1. {core_rel}
-2. contexto/disciplinas/{slugify(disciplina)}.md
+CORE DO CAPÍTULO ({core_rel}):
+{core_content}
+
+CONTEXTO DISCIPLINAR (contexto/disciplinas/{slugify(disciplina)}.md):
+{disciplina_content_a2}
 
 ONDE SALVAR O OUTPUT:
 {output_rel}
 """
 
     log_print(f"\n[Agente 2] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 2")
+    run_agent(client, system, user_message, "Agente 2",
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -497,18 +617,22 @@ def run_agente3(
 
     system = build_system_prompt("agente3-orientacao.md", "agente3-skill.md")
 
+    texto_content_a3 = read_file_safe(texto_path)
+
     user_message = f"""Sua tarefa: normalizar a marcação estrutural HTML do texto do capítulo.
 
-ARQUIVO QUE VOCÊ DEVE NORMALIZAR:
-{texto_rel}
+CONTEÚDO DO ARQUIVO A NORMALIZAR ({texto_rel}):
+{texto_content_a3}
 
-Leia o arquivo, aplique as quatro normalizações (skill/agente3-skill.md) e salve
-de volta no mesmo caminho, sobrescrevendo o original.
-Não altere a prosa nem a ordem das seções.
+Sua skill já está no seu system prompt. Aplique as quatro normalizações ao conteúdo
+acima e salve o resultado de volta em:
+{texto_rel}
+(sobrescrevendo o original — não altere a prosa nem a ordem das seções)
 """
 
     log_print(f"\n[Agente 3] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 3")
+    run_agent(client, system, user_message, "Agente 3",
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
     return texto_path if texto_path.exists() else None
 
@@ -527,20 +651,25 @@ def run_agente4(
 
     system = build_system_prompt("agente4-orientacao.md", "agente4-skill.md")
 
+    texto_content_a4 = read_file_safe(texto_path)
+
     user_message = f"""Sua tarefa: polir a prosa do capítulo para leitura fluida por alunos do Ensino Médio.
 
-ARQUIVO QUE VOCÊ DEVE EDITAR:
-{texto_rel}
+CONTEÚDO DO ARQUIVO A POLIR ({texto_rel}):
+{texto_content_a4}
 
-O Agente 3 já converteu todos os rótulos estruturais em HTML comments — não toque neles.
+Os HTML comments já estão normalizados — não os toque.
 Sua tarefa é exclusivamente melhorar a prosa: adicione transições entre blocos onde soam abruptos,
 reescreva frases mecânicas para que fluam naturalmente, encadeie parágrafos do mesmo bloco.
-Siga o procedimento da skill (skills/agente4-skill.md).
-Salve de volta no mesmo caminho, sobrescrevendo o original.
+Sua skill já está no seu system prompt.
+Salve o resultado de volta em:
+{texto_rel}
+(sobrescrevendo o original)
 """
 
     log_print(f"\n[Agente 4] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 4")
+    run_agent(client, system, user_message, "Agente 4",
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
     return texto_path if texto_path.exists() else None
 
@@ -561,21 +690,24 @@ def run_agente5(
 
     system = build_system_prompt("agente5-orientacao.md", "agente5-skill.md")
 
+    texto_content_a5 = read_file_safe(texto_path)
+
     user_message = f"""Sua tarefa: formatar o texto qualificado em XML estruturado.
 
-ARQUIVO QUE VOCÊ DEVE LER:
-{texto_rel}
+CONTEÚDO DO ARQUIVO MARKDOWN ({texto_rel}):
+{texto_content_a5}
 
 ARQUIVO QUE VOCÊ DEVE SALVAR:
 {output_rel}
 
-Leia o arquivo markdown (com comentários ocultos), extraia estrutura,
-e salve em XML com cabeçalho (pergunta+habilidade), corpo (seções),
-sidebars (verificações com resposta oculta) e rodapé (encadeamento).
+Extraia a estrutura do markdown acima (com HTML comments), monte o XML com cabeçalho
+(pergunta+habilidade), corpo (seções com operacao= nos blocos), sidebars e rodapé,
+e salve em {output_rel}.
 """
 
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 5")
+    run_agent(client, system, user_message, "Agente 5",
+              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
     full_path = BASE_DIR / output_rel
     return full_path if full_path.exists() else None
@@ -861,10 +993,30 @@ def run_pipeline(
                     ):
                         log_print("✗  Agente 5 não produziu output.", indent=1)
 
+    # Totaliza usage da execução a partir do CSV gravado nesta sessão
+    if USAGE_CSV.exists():
+        import csv as _csv
+        totals: dict = {}
+        with open(USAGE_CSV, encoding="utf-8") as f:
+            for row_u in _csv.DictReader(f):
+                if row_u.get("apostila") != apostila_name:
+                    continue
+                for key in ("input_tokens", "output_tokens", "cache_creation_tokens", "cache_read_tokens"):
+                    totals[key] = totals.get(key, 0) + int(row_u.get(key) or 0)
+        if totals:
+            log_print(
+                f"USAGE TOTAL [{apostila_name}] — "
+                f"in={totals.get('input_tokens',0)} "
+                f"out={totals.get('output_tokens',0)} "
+                f"cache_create={totals.get('cache_creation_tokens',0)} "
+                f"cache_read={totals.get('cache_read_tokens',0)}"
+            )
+
     log_print(f"\n{'═' * 70}")
     log_print(f"Pipeline concluído.")
     log_print(f"Outputs em: output/{apostila_name}/")
     log_print(f"Logs em: {LOG_FILE}")
+    log_print(f"CSV de usage: {USAGE_CSV}")
     log_print(f"{'═' * 70}\n")
 
 # ============================================================================
@@ -973,10 +1125,8 @@ Exemplos:
             if not csv_path:
                 log_print("✗  Agente 0 não produziu o CSV. Abortando.")
                 sys.exit(1)
-            # Corrigir alinhamento de colunas antes de validar
             if fix_csv_alignment(csv_path):
                 log_print("⚠  CSV corrigido automaticamente (desalinhamento de colunas).", indent=1)
-            # Validar schema do CSV gerado antes de continuar
             try:
                 parse_csv(csv_path)
                 log_print("✓  Schema do CSV validado.")
@@ -1007,6 +1157,18 @@ Exemplos:
 
         client = anthropic.Anthropic(api_key=API_KEY)
         run_pipeline(csv_path, agentes, args.force, args.cap, client)
+
+if __name__ == "__main__":
+    main()
+
+            sys.exit(1)
+
+        client = anthropic.Anthropic(api_key=API_KEY)
+        run_pipeline(csv_path, agentes, args.force, args.cap, client)
+
+if __name__ == "__main__":
+    main()
+  run_pipeline(csv_path, agentes, args.force, args.cap, client)
 
 if __name__ == "__main__":
     main()

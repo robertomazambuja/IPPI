@@ -39,7 +39,7 @@ Antes de qualquer decisão sobre conteúdos, consulte os seguintes arquivos:
 
 1. `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões estruturais.
 2. `contexto/disciplinas/[disciplina].md` — convenções e cânones da disciplina.
-3. `contexto/matriz-conteudosenem.json` — conteúdos prioritários e por disciplina para cada habilidade. **Localize a entrada correspondente ao código da habilidade recebida do CSV** (ex: `"H9"`). Use o campo `conteudos_por_disciplina` filtrando pela disciplina do capítulo. Dentro dessa lista, priorize os itens que também aparecem em `conteudos_prioritarios`.
+3. Entrada da habilidade de `matriz-conteudosenem.json` — **já injetada no user message pelo pipeline, não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Use o campo `conteudos_por_disciplina` filtrando pela disciplina do capítulo. Dentro dessa lista, priorize os itens que também aparecem em `conteudos_prioritarios`.
 
 ## O que você produz
 
@@ -56,8 +56,8 @@ Em caso de conflito entre instruções estruturais:
 Em caso de conflito sobre **seleção de conteúdos**, a hierarquia é:
 
 1. `conteudos_nucleares` do CSV (professor) — sempre incluídos, sem exceção.
-2. `conteudos_prioritarios` da `matriz-conteudosenem.json` para a habilidade em questão — preferência na seleção adicional.
-3. `conteudos_por_disciplina` da `matriz-conteudosenem.json`, filtrado pela disciplina do capítulo — pool secundário.
+2. `conteudos_prioritarios` da entrada da habilidade (já injetada no user message) — preferência na seleção adicional.
+3. `conteudos_por_disciplina` da entrada da habilidade (já injetada no user message), filtrado pela disciplina do capítulo — pool secundário.
 4. `contexto/disciplinas/[disciplina].md` — último recurso, quando os anteriores não cobrem o necessário.
 
 **Restrição disciplinar:** use exclusivamente os conteúdos do campo correspondente à disciplina do capítulo em `conteudos_por_disciplina`. Nunca migre conteúdos de outra disciplina (ex: não use conteúdos de Geografia em um capítulo de Filosofia).
