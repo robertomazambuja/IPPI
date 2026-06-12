@@ -41,6 +41,8 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
+from normalizador import normalizar_texto
+from formatador import formatar_capitulo
 
 # ============================================================================
 # CONFIGURAÇÃO
@@ -611,30 +613,26 @@ def run_agente3(
     capitulo: str,
     apostila_name: str,
 ) -> Optional[Path]:
-    """Agente 3 — Normalizador de Marcação. Normaliza HTML comments no texto.md."""
+    """Agente 3 — Normalizador de Marcação (determinístico, sem LLM).
 
-    texto_rel = str(texto_path.relative_to(BASE_DIR))
-
-    system = build_system_prompt("agente3-orientacao.md", "agente3-skill.md")
-
-    texto_content_a3 = read_file_safe(texto_path)
-
-    user_message = f"""Sua tarefa: normalizar a marcação estrutural HTML do texto do capítulo.
-
-CONTEÚDO DO ARQUIVO A NORMALIZAR ({texto_rel}):
-{texto_content_a3}
-
-Sua skill já está no seu system prompt. Aplique as quatro normalizações ao conteúdo
-acima e salve o resultado de volta em:
-{texto_rel}
-(sobrescrevendo o original — não altere a prosa nem a ordem das seções)
-"""
-
+    Substitui a chamada ao LLM por normalizar_texto() do normalizador.py,
+    eliminando latência e custo de tokens para esta etapa mecânica.
+    """
     log_print(f"\n[Agente 3] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 3",
-              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
-    return texto_path if texto_path.exists() else None
+    try:
+        modificado, avisos = normalizar_texto(texto_path)
+        if modificado:
+            log_print(f"  ✓ Normalizações aplicadas ({len(avisos)} alteração(ões))", indent=1)
+            for aviso in avisos:
+                log_print(f"    · {aviso}", indent=2)
+        else:
+            log_print("  ✓ Sem alterações necessárias", indent=1)
+        return texto_path
+    except Exception as e:
+        log_print(f"  ✗ Erro no normalizador: {e}", indent=1)
+        logger.exception("[Agente 3] Falha ao normalizar %s", texto_path)
+        return None
 
 def run_agente4(
     client: anthropic.Anthropic,
@@ -682,35 +680,28 @@ def run_agente5(
     capitulo: str,
     apostila_name: str,
 ) -> Optional[Path]:
-    """Agente 5 — Formatador XML. Extrai estrutura + produz XML para InDesign."""
+    """Agente 5 — Formatador XML (determinístico, sem LLM).
 
+    Substitui a chamada ao LLM por formatar_capitulo() do formatador.py,
+    eliminando latência e custo para esta etapa de conversão estrutural.
+    """
     filename = capitulo_filename(unidade_idx, capitulo_idx, capitulo)
-    output_rel = f"output/{apostila_name}/formatado/{unidade_slug}/{filename.replace('.md', '.xml')}"
-    texto_rel = str(texto_path.relative_to(BASE_DIR))
-
-    system = build_system_prompt("agente5-orientacao.md", "agente5-skill.md")
-
-    texto_content_a5 = read_file_safe(texto_path)
-
-    user_message = f"""Sua tarefa: formatar o texto qualificado em XML estruturado.
-
-CONTEÚDO DO ARQUIVO MARKDOWN ({texto_rel}):
-{texto_content_a5}
-
-ARQUIVO QUE VOCÊ DEVE SALVAR:
-{output_rel}
-
-Extraia a estrutura do markdown acima (com HTML comments), monte o XML com cabeçalho
-(pergunta+habilidade), corpo (seções com operacao= nos blocos), sidebars e rodapé,
-e salve em {output_rel}.
-"""
+    output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
 
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
-    run_agent(client, system, user_message, "Agente 5",
-              chapter_label=f"{unidade_idx}.{capitulo_idx} {capitulo}", apostila_label=apostila_name)
 
-    full_path = BASE_DIR / output_rel
-    return full_path if full_path.exists() else None
+    try:
+        out_path = formatar_capitulo(texto_path, output_dir)
+        if out_path:
+            log_print(f"  ✓ XML gerado: {out_path.name}", indent=1)
+            return out_path
+        else:
+            log_print("  ✗ Erro no formatador.", indent=1)
+            return None
+    except Exception as e:
+        log_print(f"  ✗ Erro no formatador: {e}", indent=1)
+        logger.exception("[Agente 5] Falha ao formatar %s", texto_path)
+        return None
 
 # ============================================================================
 # PIPELINE PRINCIPAL
@@ -1157,18 +1148,6 @@ Exemplos:
 
         client = anthropic.Anthropic(api_key=API_KEY)
         run_pipeline(csv_path, agentes, args.force, args.cap, client)
-
-if __name__ == "__main__":
-    main()
-
-            sys.exit(1)
-
-        client = anthropic.Anthropic(api_key=API_KEY)
-        run_pipeline(csv_path, agentes, args.force, args.cap, client)
-
-if __name__ == "__main__":
-    main()
-  run_pipeline(csv_path, agentes, args.force, args.cap, client)
 
 if __name__ == "__main__":
     main()
