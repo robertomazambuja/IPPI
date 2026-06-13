@@ -1,0 +1,30 @@
+2026-06-13 11:49:53,300 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-13 11:49:53,303 [INFO] __main__: Apostila : apostila-teste-historia-em1
+2026-06-13 11:49:53,304 [INFO] __main__: Agentes  : 1
+2026-06-13 11:49:53,306 [INFO] __main__: Workers  : 1
+2026-06-13 11:49:53,307 [INFO] __main__: Forçar   : sim
+2026-06-13 11:49:53,309 [INFO] __main__: Capítulo : 2 (somente)
+2026-06-13 11:49:53,310 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-13 11:49:53,315 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-13 11:49:53,317 [INFO] __main__: Unidades : 1
+2026-06-13 11:49:53,318 [INFO] __main__: Capítulos: 2
+2026-06-13 11:49:53,320 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-13 11:49:53,322 [INFO] __main__: Unidade 1: Unidade 1 — Justiça Estado e Poder no Brasil Imperial
+2026-06-13 11:49:53,323 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-13 11:49:53,324 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-13 11:49:53,326 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Escravidão Direitos e Crise do Império  [Agente 1]
+2026-06-13 11:49:53,327 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-13 11:49:53,343 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão Direitos e Crise do Império
+2026-06-13 11:49:53,387 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.477724 seconds
+2026-06-13 11:49:53,884 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.904222 seconds
+2026-06-13 11:49:54,808 [INFO] __main__:     ⚠  Erro transitório — aguardando 10s antes de tentar novamente...
+2026-06-13 11:50:04,833 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.496231 seconds
+2026-06-13 11:50:05,347 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.969000 seconds
+2026-06-13 11:50:06,331 [INFO] __main__:     ⚠  Erro transitório — aguardando 20s antes de tentar novamente...
+2026-06-13 11:50:26,373 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.499122 seconds
+2026-06-13 11:50:26,886 [INFO] anthropic._base_client: Retrying request to /v1/messages in 0.838286 seconds
+2026-06-13 11:50:27,740 [INFO] __main__:     ⚠  Erro transitório — aguardando 30s antes de tentar novamente...

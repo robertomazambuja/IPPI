@@ -1,0 +1,166 @@
+## Quais são as principais desigualdades estruturais nas condições de trabalho no Brasil contemporâneo e como elas se relacionam com a reestruturação produtiva, a precarização e a uberização?
+
+<!-- [CONTEXTO_OPERACAO] -->
+**Habilidade:** H18 — Analisar diferentes processos de produção ou circulação de riquezas e suas implicações sócio-espaciais.
+**Operação principal:** Comparar
+**Pergunta do capítulo:** Quais são as principais desigualdades estruturais nas condições de trabalho no Brasil contemporâneo e como elas se relacionam com a reestruturação produtiva, a precarização e a uberização?
+**Por que importa:** A análise das desigualdades estruturais no mercado de trabalho brasileiro, especialmente os recortes de gênero, raça e formalidade, abre caminho para investigar como essas desigualdades se articulam com outras dimensões da estratificação social e quais formas de ação coletiva e políticas públicas buscam enfrentá-las.
+<!-- [/CONTEXTO_OPERACAO] -->
+
+---
+
+### Precarização e uberização — formas contemporâneas de trabalho
+
+<!-- [TIPO_OPERACAO: Definir] -->
+
+<!-- [DEFINICAO] -->
+Precarização do trabalho é o processo de deterioração das condições em que o trabalho é realizado. Essa deterioração se manifesta em três dimensões simultâneas: perda de direitos (férias remuneradas, seguro-desemprego, limite de jornada), instabilidade contratual (substituição de contratos formais por vínculos temporários ou inexistentes) e rebaixamento de remuneração (redução do valor pago por hora trabalhada). A precarização não é um fenômeno isolado nem acidental. Ela resulta da reorganização capitalista da produção ocorrida a partir das décadas de 1970 e 1980, quando empresas passaram a buscar formas mais baratas e flexíveis de contratar mão de obra para reduzir custos e restaurar taxas de lucro.
+
+A uberização é uma forma específica de precarização. O termo designa a situação em que o trabalhador presta serviços por meio de plataformas digitais (aplicativos de transporte, entrega, serviços domésticos) sem vínculo empregatício formal. O trabalhador uberizado é classificado como "autônomo" ou "parceiro", mas, na prática, não define o preço do serviço, não controla a distribuição das demandas e pode ser desconectado da plataforma a qualquer momento, sem justificativa ou indenização. A diferença central em relação a outras formas de precarização é que, na uberização, o trabalhador assume individualmente os custos e riscos da atividade (combustível, manutenção do veículo, seguro, alimentação), enquanto a empresa proprietária da plataforma retém uma parcela do valor de cada serviço.
+
+Um exemplo concreto ilustra essa dinâmica: um motorista que trabalha 12 horas por dia usando o aplicativo da empresa 99 não tem carteira assinada, não recebe férias remuneradas, não tem seguro contra acidentes e arca com os custos de combustível e manutenção do veículo. Se o aplicativo o desconectar por baixa avaliação dos passageiros, ele perde sua fonte de renda sem qualquer indenização.
+
+Tanto a precarização quanto a uberização são expressões do capitalismo flexível, um modelo de organização produtiva em que as empresas transferem riscos e custos para os trabalhadores por meio da flexibilização de contratos, da terceirização e da eliminação de vínculos formais. A aparência de autonomia e liberdade do trabalhador de plataforma encobre uma relação de subordinação mediada por algoritmos que definem preços, avaliam desempenho e controlam o acesso ao trabalho.
+<!-- [/DEFINICAO] -->
+
+<!-- [AUTOR: Ricardo Antunes (1953–) Brasil | ref=definicao] -->
+Ricardo Antunes, sociólogo brasileiro e professor da Universidade Estadual de Campinas (Unicamp), analisou essas transformações em *O Privilégio da Servidão: o novo proletariado de serviços na era digital* (2018). Antunes argumenta que a uberização representa uma nova morfologia do trabalho em que a aparência de autonomia e empreendedorismo encobre relações de subordinação e exploração. O trabalhador classificado como "autônomo" pelas plataformas está, na prática, submetido a algoritmos que definem preços, avaliam desempenho e podem excluí-lo sem justificativa.
+<!-- [/AUTOR] -->
+
+<!-- [FONTE] -->
+ANTUNES, Ricardo. *O Privilégio da Servidão: o novo proletariado de serviços na era digital*. São Paulo: Boitempo, 2018.
+<!-- [/FONTE] -->
+
+---
+
+### Das fábricas rígidas ao trabalho por plataformas — transformações do mundo do trabalho
+
+<!-- [TIPO_OPERACAO: Sequenciar] -->
+
+<!-- [SEQUENCIA] -->
+<!-- AVISO_AGENTE5: tipo SEQUENCIA não mapeado — gerar secao tipo="generico" -->
+A precarização e a uberização não surgiram de forma abrupta. Elas resultam de um processo de transformação do mundo do trabalho que se estendeu por décadas e alterou profundamente a relação entre empresas, trabalhadores e Estado. Essa transformação pode ser compreendida em cinco etapas encadeadas.
+
+Entre as décadas de 1940 e 1970, predominou nos países industrializados o modelo fordista-taylorista de produção. Esse modelo se baseava na produção em massa, com linhas de montagem em que cada trabalhador realizava tarefas repetitivas e especializadas. Os contratos de trabalho eram estáveis, com carteira assinada, e os sindicatos tinham poder de negociação para garantir salários e benefícios. A relação entre empregador e empregado era, em regra, direta e de longo prazo.
+
+Esse modelo começou a se desfazer na década de 1970. A crise do petróleo de 1973 elevou os custos de produção e comprimiu as margens de lucro das empresas, que responderam com o início da reestruturação produtiva: automação de processos industriais, terceirização de atividades e redução de postos de trabalho nas fábricas. Posições que antes eram ocupadas por trabalhadores com contrato estável passaram a ser eliminadas ou transferidas para empresas menores, com vínculos mais frágeis.
+
+A etapa seguinte, nas décadas de 1980 e 1990, consolidou um novo modelo de organização: o toyotismo, ou acumulação flexível. Em contraste com a rigidez fordista, esse modelo adotava produção enxuta (sem grandes estoques), polivalência do trabalhador (cada funcionário realizava múltiplas funções), contratos temporários e jornadas variáveis. Os sindicatos perderam poder de barganha à medida que a base de trabalhadores formais se reduziu e os contratos se tornaram mais dispersos e individualizados.
+
+No Brasil, esse processo se aprofundou com a abertura comercial dos anos 1990, quando a expansão do setor de serviços e do trabalho informal passou a absorver os trabalhadores deslocados pela automação e pela terceirização. Trabalhadores expulsos da indústria pela automação e pela terceirização migraram para ocupações sem carteira assinada (comércio ambulante, serviços domésticos, pequenos serviços avulsos) como forma de sobrevivência diante do desemprego estrutural, isto é, da eliminação permanente de postos formais que não se restabeleciam mesmo em períodos de crescimento econômico.
+
+A partir da década de 2010, uma nova etapa se configurou com o surgimento das plataformas digitais de trabalho. A chegada do Uber ao Brasil em 2014 inaugurou um modelo que se expandiu para entregas (iFood, Rappi), serviços domésticos e diversas outras atividades. Os trabalhadores dessas plataformas não têm vínculo empregatício, não recebem benefícios e são geridos por algoritmos. Em 2023, o IBGE registrou aproximadamente 1,5 milhão de motoristas de aplicativo no país, uma categoria que sequer existia uma década antes.
+
+Dados concretos ilustram a dimensão dessa transformação: a montadora Volkswagen em São Bernardo do Campo (SP) empregava cerca de 40 mil trabalhadores com carteira assinada na década de 1980. Em 2020, a mesma unidade empregava cerca de 8 mil, com parte das funções terceirizada para empresas de serviços. Em paralelo, os 1,5 milhão de motoristas de aplicativo registrados em 2023 representam uma forma de inserção no mercado de trabalho que é, simultaneamente, massiva e desprovida de proteção legal.
+<!-- [/SEQUENCIA] -->
+
+<!-- [AUTOR: David Harvey (1935–) Reino Unido | ref=sequencia] -->
+David Harvey, geógrafo e teórico social britânico, professor da City University of New York (CUNY), analisou essa passagem do fordismo ao regime de acumulação flexível em *Condição Pós-Moderna* (1989). Harvey argumenta que a reestruturação produtiva não foi apenas uma mudança tecnológica, mas uma reorganização das relações de trabalho que transferiu riscos e custos das empresas para os trabalhadores. A flexibilização dos contratos, a terceirização e a precarização são, nessa análise, estratégias do capital para restaurar taxas de lucro em contexto de crise.
+<!-- [/AUTOR] -->
+
+<!-- [FONTE] -->
+HARVEY, David. *Condição Pós-Moderna*. São Paulo: Loyola, 1992 [1989].
+<!-- [/FONTE] -->
+
+---
+
+### Reestruturação produtiva, desemprego e aprofundamento das desigualdades de gênero e raça
+
+<!-- [TIPO_OPERACAO: Mapear causalidade] -->
+
+<!-- [CAUSA] -->
+A reestruturação produtiva descrita na seção anterior não afetou todos os trabalhadores da mesma forma. Seus efeitos se distribuíram de maneira desigual conforme a posição que cada grupo já ocupava na estrutura social brasileira.
+
+O ponto de partida é a eliminação de postos formais. A automação industrial e a terceirização reduziram o número de vagas com carteira assinada em setores como metalurgia, têxtil e montagem, e os trabalhadores que perderam essas posições migraram para o setor de serviços e para a informalidade, onde as condições são mais precárias, a remuneração é menor e a proteção legal é inexistente ou parcial.
+
+A esse fator se soma a posição histórica de mulheres e pessoas negras na estrutura ocupacional brasileira. Esses grupos estavam, antes mesmo da reestruturação produtiva, concentrados nas ocupações de menor remuneração e menor proteção: trabalho doméstico, serviços gerais, comércio informal. Quando a reestruturação eliminou postos formais e expandiu a informalidade, esses trabalhadores, já em posições vulneráveis, absorveram desproporcionalmente os efeitos da precarização.
+
+Atua ainda um terceiro elemento: a discriminação estrutural. Racismo e sexismo institucionais limitam o acesso de mulheres e pessoas negras a ocupações formais e qualificadas, mesmo quando há oferta de vagas. Essa barreira não decorre de diferenças individuais de qualificação, mas de mecanismos sociais que reproduzem padrões de exclusão ao longo das gerações.
+<!-- [/CAUSA] -->
+
+<!-- [RELACAO_CAUSAL] -->
+Esses fatores se articulam em cadeia: a reestruturação produtiva eliminou postos formais; os trabalhadores deslocados migraram para a informalidade e para serviços precários; mulheres e pessoas negras, já concentradas em posições vulneráveis por discriminação histórica, absorveram desproporcionalmente os efeitos dessa precarização; a desigualdade de gênero e raça no mercado de trabalho, em vez de recuar, aprofundou-se.
+
+O conceito de exército industrial de reserva, formulado por Karl Marx em *O Capital*, Livro I (1867), ajuda a compreender esse mecanismo. Marx identificou que a existência de uma massa de trabalhadores desempregados pressiona para baixo os salários e as condições de trabalho dos empregados, porque estes podem ser substituídos a qualquer momento. A reestruturação produtiva contemporânea reproduz esse mecanismo ao expandir a informalidade e criar uma reserva permanente de trabalhadores disponíveis. No Brasil, essa reserva tem composição marcada por recortes de gênero e raça herdados da escravidão.
+<!-- [/RELACAO_CAUSAL] -->
+
+<!-- [CONSEQUENCIA] -->
+Os efeitos concretos desse processo aparecem nos dados. O desemprego estrutural mantém uma parcela da população fora do mercado formal independentemente de ciclos de crescimento econômico. Mulheres negras se concentram nas ocupações mais precárias e pior remuneradas, e a distância salarial entre grupos se amplia: em 2022, mulheres negras recebiam em média 46% do rendimento de homens brancos no Brasil (PNAD Contínua, IBGE, 2022). A desigualdade se reproduz entre gerações, pois filhos de trabalhadores informais têm maior probabilidade de ingressar no trabalho informal.
+
+Os números setoriais tornam essa distribuição ainda mais precisa: segundo a PNAD Contínua do IBGE (2022), a taxa de informalidade entre mulheres negras no Brasil era de 47,3%, contra 32,7% entre homens brancos. No trabalho doméstico, uma das ocupações mais precárias do país, 92% dos trabalhadores eram mulheres e 65% eram negras. Esses números evidenciam que os efeitos da reestruturação produtiva e da precarização recaem com maior intensidade sobre os grupos que já ocupavam posições desfavoráveis na estrutura social.
+<!-- [/CONSEQUENCIA] -->
+
+<!-- [FONTE] -->
+MARX, Karl. *O Capital: crítica da economia política*. Livro I. São Paulo: Boitempo, 2013 [1867].
+<!-- [/FONTE] -->
+
+<!-- [FONTE] -->
+IBGE. Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua), 2022.
+<!-- [/FONTE] -->
+
+---
+
+### Condições de trabalho no Brasil contemporâneo — desigualdades entre grupos e formas de inserção
+
+<!-- [TIPO_OPERACAO: Comparar] -->
+
+O mercado de trabalho brasileiro contemporâneo pode ser analisado a partir de dois perfis de trabalhador que ocupam posições opostas na estrutura ocupacional. Comparar esses perfis em quatro aspectos permite identificar onde se concentram as desigualdades e como elas se reproduzem.
+
+<!-- [COMPARACAO] -->
+
+#### Dois perfis de trabalhador no Brasil contemporâneo
+
+O primeiro perfil é o do trabalhador formal com carteira assinada em empresa de médio ou grande porte, predominantemente composto por homens brancos com ensino médio ou superior completo. O segundo é o do trabalhador informal ou por plataforma digital, sem vínculo empregatício, predominantemente composto por mulheres negras e homens negros com ensino médio incompleto ou completo. A distinção entre esses dois perfis vai além do tipo de contrato: envolve diferenças em proteção legal, remuneração, jornada e perspectiva de mobilidade social.
+
+<!-- [ASPECTO: Estabilidade e proteção legal] -->
+<!-- AVISO_AGENTE5: tipo ASPECTO não mapeado — gerar secao tipo="generico" -->
+#### Proteção legal e remuneração — a distância entre formal e informal
+
+O primeiro aspecto de comparação é a estabilidade e a proteção legal. O trabalhador formal tem direito a 30 dias de férias remuneradas, Fundo de Garantia do Tempo de Serviço (FGTS), seguro-desemprego em caso de demissão sem justa causa e licença-maternidade. O trabalhador informal ou uberizado não tem acesso a nenhum desses direitos: um entregador de aplicativo (iFood, Rappi) que sofre acidente durante uma entrega arca sozinho com os custos médicos. Essa diferença define condições de vida radicalmente distintas para os dois grupos.
+
+A remuneração aprofunda ainda mais essa distância. Em 2022, o rendimento médio mensal de trabalhadores formais brancos era de R$ 3.188, enquanto o de trabalhadores informais negros era de R$ 1.352 (PNAD Contínua, IBGE, 2022). A diferença de R$ 1.836 mensais entre os dois perfis reflete a sobreposição de dois tipos de desigualdade: a desigualdade entre trabalho formal e informal, e a desigualdade racial dentro do próprio mercado de trabalho.
+<!-- [/ASPECTO] -->
+
+<!-- [ASPECTO: Jornada e autonomia] -->
+<!-- AVISO_AGENTE5: tipo ASPECTO não mapeado — gerar secao tipo="generico" -->
+#### Jornada, autonomia e subordinação algorítmica
+
+O terceiro aspecto diz respeito à jornada de trabalho e ao grau de autonomia. Trabalhadores formais têm jornada regulamentada por lei (44 horas semanais), com direito a hora extra remunerada. Trabalhadores de plataformas digitais não contam com esse limite. Pesquisa do CEBRAP em parceria com a Associação Brasileira de Mobilidade e Tecnologia (2022) indicou que 36% dos motoristas de aplicativo trabalhavam mais de 9 horas por dia, sem receber hora extra. A autonomia proclamada pelo modelo de plataforma (o trabalhador "escolhe" seus horários) é limitada na prática: o algoritmo define os preços, distribui as corridas ou entregas conforme critérios opacos e avalia o desempenho do trabalhador sem que este possa contestar os parâmetros. A subordinação existe, mas é exercida por meio tecnológico em vez de chefia direta.
+<!-- [/ASPECTO] -->
+
+<!-- [ASPECTO: Mobilidade social] -->
+<!-- AVISO_AGENTE5: tipo ASPECTO não mapeado — gerar secao tipo="generico" -->
+#### Mobilidade social e reprodução da desigualdade
+
+O quarto aspecto é a perspectiva de mobilidade social. Trabalhadores formais em empresas de médio e grande porte têm acesso a planos de carreira, programas de qualificação e promoções, condições de que os trabalhadores informais e de plataformas, em regra, não dispõem. O trabalho por aplicativo não oferece progressão: um motorista com cinco anos de experiência na plataforma realiza a mesma atividade, nas mesmas condições, pelo mesmo tipo de remuneração variável que um motorista recém-cadastrado. Dados da PNAD Contínua indicam que filhos de trabalhadores informais têm probabilidade significativamente maior de ingressar também na informalidade, o que configura a reprodução intergeracional da posição ocupacional.
+<!-- [/ASPECTO] -->
+
+<!-- [/COMPARACAO] -->
+
+<!-- [CONCLUSAO_PARCIAL] -->
+A comparação entre os dois perfis revela que as desigualdades no mercado de trabalho brasileiro não se limitam à diferença de renda. Elas se manifestam em quatro dimensões simultâneas: proteção legal, remuneração, jornada e mobilidade. Essas dimensões se sobrepõem e se reforçam: quem não tem proteção legal tende a receber menos, trabalhar mais horas e ter menor possibilidade de ascensão. O fato de que o perfil desprotegido seja predominantemente composto por pessoas negras e mulheres indica que a precarização e a uberização não distribuem seus efeitos de forma aleatória: reproduzem e aprofundam desigualdades de gênero e raça preexistentes.
+
+Ricardo Antunes, em *Uberização, Trabalho Digital e Indústria 4.0* (2020), argumenta que a expansão do trabalho por plataformas criou um "novo proletariado de serviços", uma massa de trabalhadores sem direitos, sem estabilidade e sem representação sindical, cuja precariedade é mascarada pelo discurso do empreendedorismo individual.
+<!-- [/CONCLUSAO_PARCIAL] -->
+
+<!-- [FONTE] -->
+ANTUNES, Ricardo (org.). *Uberização, Trabalho Digital e Indústria 4.0*. São Paulo: Boitempo, 2020.
+<!-- [/FONTE] -->
+
+<!-- [FONTE] -->
+IBGE. Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD Contínua), 2022.
+<!-- [/FONTE] -->
+
+<!-- [FONTE] -->
+CEBRAP; Associação Brasileira de Mobilidade e Tecnologia. Pesquisa sobre condições de trabalho de motoristas de aplicativo, 2022.
+<!-- [/FONTE] -->
+
+---
+
+<!-- [SINTESE] -->
+As principais desigualdades estruturais nas condições de trabalho no Brasil contemporâneo se manifestam na distância entre trabalhadores formais (predominantemente brancos, com proteção legal, remuneração mais alta e maior estabilidade) e trabalhadores informais ou uberizados (predominantemente negros e mulheres, sem direitos trabalhistas, com remuneração inferior e jornadas mais longas). Essas desigualdades resultam da reestruturação produtiva iniciada nas décadas de 1970 e 1980, que eliminou postos formais e expandiu a informalidade e a precarização, cujos efeitos recaem desproporcionalmente sobre grupos já marginalizados por discriminação histórica de gênero e raça. A precarização e a uberização não são desvios do capitalismo contemporâneo, mas formas estruturais de reorganização do trabalho que aprofundam desigualdades preexistentes.
+<!-- [/SINTESE] -->
+
+<!-- [ENCADEAMENTO] -->
+Este capítulo encerra a Unidade 1. A análise das desigualdades estruturais no mercado de trabalho brasileiro, especialmente os recortes de gênero, raça e formalidade, abre caminho para a próxima unidade investigar como essas desigualdades se articulam com outras dimensões da estratificação social (renda, educação, território) e quais formas de ação coletiva e políticas públicas buscam enfrentá-las.
+<!-- [/ENCADEAMENTO] -->

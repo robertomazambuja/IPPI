@@ -1,0 +1,128 @@
+2026-06-13 10:33:01,723 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-13 10:33:03,444 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:33:28,942 [INFO] __main__:     →  write_file: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-13 10:33:28,945 [INFO] __main__:     ✓  Salvo: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-13 10:33:30,022 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:33:37,388 [INFO] __main__:   ✓  Agente 0 concluiu (2 iteração(ões)) | in=3 out=2800 cache_create=9372 cache_read=7222
+2026-06-13 10:33:37,399 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-13 10:33:37,400 [INFO] __main__: ✓  Schema do CSV validado.
+2026-06-13 10:33:37,401 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-13 10:33:37,402 [INFO] __main__: Apostila : apostila-sociologia-trabalho
+2026-06-13 10:33:37,403 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-13 10:33:37,404 [INFO] __main__: Workers  : 1
+2026-06-13 10:33:37,405 [INFO] __main__: Forçar   : não
+2026-06-13 10:33:37,406 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-13 10:33:37,410 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-13 10:33:37,411 [INFO] __main__: Unidades : 1
+2026-06-13 10:33:37,414 [INFO] __main__: Capítulos: 2
+2026-06-13 10:33:37,416 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-13 10:33:37,417 [INFO] __main__: Unidade 1: Unidade X — O Trabalho na Perspectiva Sociológica
+2026-06-13 10:33:37,418 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-13 10:33:37,419 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-13 10:33:37,420 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho  [Agente 1]
+2026-06-13 10:33:37,421 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-13 10:33:37,443 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho
+2026-06-13 10:33:38,931 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:35:30,207 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/unidade-x-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md
+2026-06-13 10:35:30,215 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/unidade-x-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md
+2026-06-13 10:35:32,337 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:35:42,624 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6476 cache_create=21446 cache_read=15402
+2026-06-13 10:35:42,630 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-13 10:35:42,631 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil  [Agente 1]
+2026-06-13 10:35:42,632 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-13 10:35:42,666 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil
+2026-06-13 10:35:44,613 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:37:35,869 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:37:35,875 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:37:37,758 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:37:48,807 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6529 cache_create=13870 cache_read=23724
+2026-06-13 10:37:49,792 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-13 10:37:49,792 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho  [estágios 2–5]
+2026-06-13 10:37:49,793 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-13 10:37:49,799 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho
+2026-06-13 10:37:51,909 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:37:53,474 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-13 10:37:55,089 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:39:28,176 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/unidade-x-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md
+2026-06-13 10:39:28,181 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/unidade-x-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md
+2026-06-13 10:39:29,734 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:39:46,537 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=5360 cache_create=30762 cache_read=43891
+2026-06-13 10:39:46,539 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho
+2026-06-13 10:39:46,545 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md (3 alteracao(oes))
+2026-06-13 10:39:46,545 [INFO] __main__:     ✓ Normalizações aplicadas (3 alteração(ões))
+2026-06-13 10:39:46,546 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: SEQUENCIA
+2026-06-13 10:39:46,546 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-13 10:39:46,547 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-13 10:39:46,581 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho
+2026-06-13 10:39:47,609 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:39:50,730 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\unidade-x-o-trabalho-na-perspectiva-sociologica\01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md
+2026-06-13 10:39:52,330 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:40:17,501 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=1725 cache_create=12262 cache_read=7636
+2026-06-13 10:40:17,514 [INFO] __main__:     ✓ 8 troca(s) aplicada(s) pelo Agente 4
+2026-06-13 10:40:17,515 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho
+2026-06-13 10:40:52,136 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:40:52,165 [INFO] verificador: [Verificador] 4 verificação(ões) gerada(s), aplicar_agora=sim
+2026-06-13 10:40:52,166 [INFO] __main__:     ✓ Verificações: 4 seção(ões) | aplicar_agora=sim
+2026-06-13 10:40:52,177 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml (0 blocos, 0 palavras)
+2026-06-13 10:40:52,178 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml
+2026-06-13 10:40:53,071 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-13 10:40:53,072 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil  [estágios 2–5]
+2026-06-13 10:40:53,072 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-13 10:40:53,075 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil
+2026-06-13 10:40:55,819 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:40:58,450 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/core/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:40:58,454 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-13 10:41:00,190 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:42:49,421 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:42:49,448 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:42:50,814 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:42:52,756 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/texto/unidade-x-o-trabalho-na-perspectiva-sociologica/01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:42:54,623 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:43:12,318 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=6986 cache_create=28386 cache_read=87668
+2026-06-13 10:43:12,320 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil
+2026-06-13 10:43:12,322 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md (6 alteracao(oes))
+2026-06-13 10:43:12,323 [INFO] __main__:     ✓ Normalizações aplicadas (6 alteração(ões))
+2026-06-13 10:43:12,323 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-13 10:43:12,323 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: SEQUENCIA
+2026-06-13 10:43:12,323 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-13 10:43:12,324 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: ASPECTO
+2026-06-13 10:43:12,324 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: ASPECTO
+2026-06-13 10:43:12,324 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: ASPECTO
+2026-06-13 10:43:12,342 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil
+2026-06-13 10:43:13,416 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:43:16,417 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\unidade-x-o-trabalho-na-perspectiva-sociologica\01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md
+2026-06-13 10:43:17,546 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:44:13,208 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=3768 cache_create=12344 cache_read=11678
+2026-06-13 10:44:13,213 [INFO] __main__:     ✓ 9 troca(s) aplicada(s) pelo Agente 4
+2026-06-13 10:44:13,214 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil
+2026-06-13 10:44:43,856 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-13 10:44:43,859 [INFO] verificador: [Verificador] 4 verificação(ões) gerada(s), aplicar_agora=sim
+2026-06-13 10:44:43,860 [INFO] __main__:     ✓ Verificações: 4 seção(ões) | aplicar_agora=sim
+2026-06-13 10:44:43,867 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.xml (0 blocos, 0 palavras)
+2026-06-13 10:44:43,869 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.xml
+2026-06-13 10:44:43,870 [INFO] __main__: USAGE TOTAL [apostila-sociologia-trabalho] — in=24 out=33644 cache_create=128442 cache_read=197221
+2026-06-13 10:44:43,871 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-13 10:44:43,871 [INFO] __main__: Pipeline concluído.
+2026-06-13 10:44:43,872 [INFO] __main__: Outputs em: output/apostila-sociologia-trabalho/
+2026-06-13 10:44:43,872 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260613_103301.log
+2026-06-13 10:44:43,873 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\IPPI\logs\usage_20260613_103301.csv
+2026-06-13 10:44:43,874 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+

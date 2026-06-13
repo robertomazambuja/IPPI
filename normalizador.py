@@ -7,6 +7,7 @@ Aplica as 4 normalizacoes da agente3-skill.md em Python puro:
   N2. FONTE -- Formato C (tag de abertura sem conteudo embutido)
   N3. AUTOR -- ancoragem com ref= quando solto fora de qualquer bloco
   N4. Tipos desconhecidos -- adicionar AVISO_AGENTE5; remover AVISOs incorretos
+  N5. H2 de titulo -- injetar ## <Pergunta do capitulo> se ausente (contrato com A5)
 
 Uso direto:
     from normalizador import normalizar_texto
@@ -65,6 +66,12 @@ _RE_COMMENT_FIELD = re.compile(r"^<!--\s*(.+?):\s*(.*?)\s*-->$")
 # Campo em markdown bold: **Campo:** valor  (o : fica dentro do bold, antes do **)
 _RE_BOLD_FIELD = re.compile(r"^\*\*(.+?):\*\*\s*(.+)$")
 
+# H2 de titulo (contrato com A5)
+_RE_H2 = re.compile(r"^##\s+\S")
+
+# Pergunta do capitulo dentro do CONTEXTO_OPERACAO
+_RE_PERGUNTA = re.compile(r"^\*\*Pergunta do capítulo:\*\*\s*(.+)$")
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -122,7 +129,7 @@ def _norm_contexto(lines: List[str]) -> List[str]:
 
 def _normalizar(texto: str) -> Tuple[str, List[str]]:
     """
-    Aplica as 4 normalizacoes.
+    Aplica as normalizacoes N1-N5.
     Retorna (texto_normalizado, avisos).
     E idempotente: rodar duas vezes produz o mesmo resultado.
     """
@@ -285,6 +292,20 @@ def _normalizar(texto: str) -> Tuple[str, List[str]]:
         for c in fonte_pending:
             out.append(c)
         out.append("<!-- [/FONTE] -->")
+
+    # N5: garantir H2 de titulo para o A5 (formatador.py espera ## Titulo como primeira linha).
+    # Idempotente: so injeta se nao houver nenhum H2 no output.
+    if not any(_RE_H2.match(l) for l in out):
+        titulo_h2 = ""
+        for l in out:
+            m = _RE_PERGUNTA.match(l.strip())
+            if m:
+                titulo_h2 = m.group(1).strip()
+                break
+        if titulo_h2:
+            out.insert(0, "")
+            out.insert(0, f"## {titulo_h2}")
+            avisos.append("Injetado H2 de titulo a partir de 'Pergunta do capitulo': " + titulo_h2)
 
     return "\n".join(out), avisos
 

@@ -151,6 +151,73 @@ def extract_habilidade(matrix_path: Path, codigo: str) -> str:
     except Exception as e:
         return f"ERRO ao ler {matrix_path.name}: {e}"
 
+def extract_core_summary(core_path: Path, cap_idx: int, cap_name: str) -> str:
+    """Extrai SINTESE_FINAL, ENCADEAMENTO e autores de um core.md (sem LLM).
+
+    Retorna bloco compacto para injetar no user_message do A1, substituindo
+    a leitura do core completo via read_file (E9).
+    Nunca levanta exceção — fallback legível em caso de erro.
+    """
+    try:
+        content = core_path.read_text(encoding="utf-8")
+    except Exception as e:
+        return f"--- Cap. {cap_idx}: {cap_name} ---\n[SUMÁRIO INDISPONÍVEL — erro ao ler: {e}]\n"
+
+    m = re.search(r'SINTESE_FINAL:\s*"(.*?)"', content, re.DOTALL)
+    if not m:
+        m = re.search(r'SINTESE_FINAL:\s*([^\n]+)', content)
+    sintese = m.group(1).strip() if m else "(não encontrado)"
+
+    m = re.search(r'ENCADEAMENTO:\s*"(.*?)"', content, re.DOTALL)
+    if not m:
+        m = re.search(r'ENCADEAMENTO:\s*([^\n]+)', content)
+    encadeamento = m.group(1).strip() if m else "(não encontrado)"
+
+    autores: list = []
+    for m in re.finditer(r'^AUTOR(?:_SECUNDARIO)?:\s*"?([^"\n]+)"?\s*$', content, re.MULTILINE):
+        valor = m.group(1).strip()
+        if valor.lower() == "vazio":
+            continue
+        nome = valor.split("(")[0].strip()
+        if nome and nome not in autores:
+            autores.append(nome)
+
+    autores_str = ", ".join(autores) if autores else "(nenhum)"
+    return (
+        f"--- Cap. {cap_idx}: {cap_name} ---\n"
+        f"SÍNTESE: {sintese}\n"
+        f"ENCADEAMENTO: {encadeamento}\n"
+        f"AUTORES USADOS: {autores_str}\n"
+    )
+
+
+def _with_cache(messages: list) -> list:
+    """Retorna cópia de messages com cache_control:ephemeral no último bloco user (E6).
+
+    Marca o último item 'user' para prompt caching sem modificar o objeto original.
+    Trata string simples (user_message) e lista de blocos (tool_results).
+    A API exige ~1.024 tokens mínimos; blocos menores são ignorados sem erro.
+    """
+    import copy as _copy
+    result = _copy.deepcopy(messages)
+    last_user_idx = None
+    for i in range(len(result) - 1, -1, -1):
+        if result[i].get("role") == "user":
+            last_user_idx = i
+            break
+    if last_user_idx is None:
+        return result
+    msg = result[last_user_idx]
+    content = msg["content"]
+    if isinstance(content, str):
+        msg["content"] = [
+            {"type": "text", "text": content, "cache_control": {"type": "ephemeral"}}
+        ]
+    elif isinstance(content, list) and content:
+        content[-1] = {**content[-1], "cache_control": {"type": "ephemeral"}}
+    return result
+
+
 def _write_usage_csv(row: dict):
     """Grava uma linha no CSV de usage (thread-safe)."""
     import csv as _csv
@@ -295,7 +362,7 @@ def run_agent(
                         }
                     ],
                     tools=TOOLS,
-                    messages=messages,
+                    messages=_with_cache(messages),
                 ) as stream:
                     response = stream.get_final_message()
                 break
@@ -498,29 +565,25 @@ def run_agente1(
     principios_content = read_file_safe(BASE_DIR / "contexto" / "principios-pedagogicos-agente1.md")
     disciplina_content = read_file_safe(BASE_DIR / "contexto" / "disciplinas" / f"{disciplina_slug}.md")
 
-    # Cores anteriores (mantidos como read_file — serão otimizados na Fase 2 com E9)
+    # Cores anteriores — sumário compacto extraído em Python (E9)
+    # Substitui read_file dos cores completos (~1.000-1.600 tokens cada)
+    # por ~250-300 tokens por capítulo com SINTESE_FINAL, ENCADEAMENTO e autores.
+    # Nota: a skill do A1 diz "Leia-os" para cores anteriores — o user_message
+    # abaixo sobrescreve com "não leia os cores completos".
     cores_anteriores_section = ""
-    arquivos_cores = ""
 
     if capitulo_idx > 1:
-        cores_anteriores = []
+        summaries = []
         for prev_c_idx in range(1, capitulo_idx):
             prev_cap_name = capitulos_da_unidade[prev_c_idx - 1]
             prev_filename = capitulo_filename(unidade_idx, prev_c_idx, prev_cap_name)
-            prev_core_rel = f"output/{apostila_name}/core/{unidade_slug}/{prev_filename}"
-            prev_core_path = BASE_DIR / prev_core_rel
+            prev_core_path = BASE_DIR / f"output/{apostila_name}/core/{unidade_slug}/{prev_filename}"
             if prev_core_path.exists():
-                cores_anteriores.append((prev_c_idx, prev_cap_name, prev_core_rel))
+                summaries.append(extract_core_summary(prev_core_path, prev_c_idx, prev_cap_name))
 
-        if cores_anteriores:
-            cores_anteriores_section = "\nCAPÍTULOS ANTERIORES DESTA UNIDADE:\n"
-            for idx, cap_name, rel_path in cores_anteriores:
-                cores_anteriores_section += f"  - Capítulo {idx}: {cap_name}\n    {rel_path}\n"
-            cores_anteriores_section += "\n"
-            arquivos_cores = "ARQUIVOS QUE VOCÊ DEVE LER (cores anteriores — use read_file):\n"
-            for idx, cap_name, rel_path in cores_anteriores:
-                arquivos_cores += f"  - {rel_path}\n"
-            arquivos_cores += "\n"
+        if summaries:
+            cores_anteriores_section = "\nSUMÁRIOS DOS CAPÍTULOS ANTERIORES DESTA UNIDADE:\n"
+            cores_anteriores_section += "\n".join(summaries) + "\n"
 
     # Monta andaime de seções
     andaime_secoes = []
@@ -568,11 +631,12 @@ CONTEÚDOS OBRIGATÓRIOS DO PROFESSOR (todos devem aparecer em pelo menos uma se
 AUTORES DISPONÍVEIS PARA ESTE CAPÍTULO (distribua entre as seções por afinidade com o objeto conceitual):
 {row['autores']}
 
-{arquivos_cores}IMPORTANTE:
+IMPORTANTE:
 - O andaime acima já prescreve as operações e a progressão de micro-habilidades
 - Você NÃO precisa inventar a estrutura — ela já está definida
 - Seu trabalho é CONCRETIZAR: escolher exemplos âncora, pesos das seções, fontes primárias, verificações
 - Os princípios pedagógicos e o contexto disciplinar já estão acima — não é necessário ler esses arquivos
+- Os sumários dos capítulos anteriores já estão acima — não leia os cores completos
 - Garanta que cada micro-habilidade seja alcançável e progressiva em relação à anterior
 
 ONDE SALVAR O OUTPUT:

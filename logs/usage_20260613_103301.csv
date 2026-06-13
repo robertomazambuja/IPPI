@@ -1,0 +1,8 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-13T10:33:37,apostila-sociologia-trabalho,Agente 0,briefing,2,3,2800,9372,7222
+2026-06-13T10:35:42,apostila-sociologia-trabalho,Agente 1,1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho,2,3,6476,21446,15402
+2026-06-13T10:37:48,apostila-sociologia-trabalho,Agente 1,1.2 Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil,2,3,6529,13870,23724
+2026-06-13T10:39:46,apostila-sociologia-trabalho,Agente 2,1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho,3,4,5360,30762,43891
+2026-06-13T10:40:17,apostila-sociologia-trabalho,Agente 4,1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho,2,3,1725,12262,7636
+2026-06-13T10:43:12,apostila-sociologia-trabalho,Agente 2,1.2 Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil,4,5,6986,28386,87668
+2026-06-13T10:44:13,apostila-sociologia-trabalho,Agente 4,1.2 Capítulo 2 — Trabalho contemporâneo: precarização uberização e desigualdade no Brasil,2,3,3768,12344,11678

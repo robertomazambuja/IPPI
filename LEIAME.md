@@ -4,13 +4,15 @@
 
 Pipeline funcional de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades do ENEM. O texto produzido não simula voz humana — é uma interface funcional clara e rastreável, escrita por máquinas para ser lida por humanos.
 
-O foco atual é validar a qualidade didática do output e testar o pipeline completo com capítulos reais.
+As três fases de desenvolvimento estão concluídas. O pipeline está pronto para uso em produção.
 
 ---
 
 ## O que é este projeto
 
-O professor define os parâmetros de cada capítulo em um CSV. O pipeline lê esse CSV e aciona os agentes em sequência. Cada agente produz um output que serve de input para o seguinte. Os agentes são construídos em Python e usam a API da Anthropic (modelo claude-sonnet/opus). Os agentes operam em modo agêntico: leem os arquivos de instrução por conta própria a partir dos caminhos que o pipeline informa.
+O professor define os parâmetros de cada capítulo em um CSV. O pipeline lê esse CSV e aciona os agentes em sequência. Cada agente produz um output que serve de input para o seguinte.
+
+Os agentes LLM (A0, A1, A2, A4) usam a API da Anthropic em modo agêntico. Os agentes A3 e A5 são código Python determinístico — não consomem tokens, não fazem chamadas à API, executam transformações precisas e auditáveis.
 
 ---
 
@@ -36,19 +38,27 @@ As sete operações elementares são:
 
 ```
 pipeline.py                  — orquestrador principal
+normalizador.py              — Agente 3 (Python, sem LLM)
+formatador.py                — Agente 5 (Python, sem LLM)
+verificador.py               — gerador de verificações e "Aplicar agora" (Haiku)
+avaliar.py                   — rubrica de qualidade LLM-judge (Haiku)
 .env                         — chave de API (não versionar)
 
 skills/
+  decompositor-skill.md
   agente1-skill.md
   agente2-skill.md
-  agente3-skill.md
+  agente3-skill.md           — especificação implementada em normalizador.py
   agente4-skill.md
-  agente5-skill.md
-  decompositor-skill.md
+  agente5-skill.md           — especificação implementada em formatador.py
 
 orientacoes/
+  decompositor-orientacao.md
   agente1-orientacao.md
   agente2-orientacao.md
+  agente3-orientacao.md
+  agente4-orientacao.md
+  agente5-orientacao.md
 
 contexto/
   principios-pedagogicos-agente1.md
@@ -67,8 +77,11 @@ output/
     core/[unidade-slug]/[idx]-[capitulo].md
     texto/[unidade-slug]/[idx]-[capitulo].md
     validacao/[unidade-slug]/[idx]-[capitulo].md
-    xml/[unidade-slug]/[idx]-[capitulo].xml
-    estilos-indesign.md
+    formatado/[unidade-slug]/[idx]-[capitulo].xml
+
+logs/
+  uso_YYYYMMDD.csv           — tokens e custo por agente/capítulo
+  qualidade_YYYYMMDD.csv     — notas da rubrica (avaliar.py)
 ```
 
 ---
@@ -99,20 +112,61 @@ Cada linha é um capítulo. Capítulos da mesma unidade compartilham `unidade` e
 python pipeline.py input/teste-sociologia/instrucoes.csv
 
 # Roda apenas agentes específicos
-python pipeline.py input/teste-sociologia/instrucoes.csv --agentes 1,2,3,4
+python pipeline.py input/teste-sociologia/instrucoes.csv --agentes 1,2,4
 
 # Força regeneração mesmo que o output já exista
 python pipeline.py input/teste-sociologia/instrucoes.csv --force
 
 # Roda apenas o capítulo N (por ordem no CSV, começando em 1)
 python pipeline.py input/teste-sociologia/instrucoes.csv --cap 1
+
+# Paraleliza os capítulos (A2-A5 rodam em paralelo, A1 sempre sequencial)
+python pipeline.py input/teste-sociologia/instrucoes.csv --workers 4
+```
+
+**Avaliar qualidade de um capítulo:**
+
+```bash
+python avaliar.py output/apostila-X/texto/unidade-Y/01-01-cap.md
+
+# Avaliar todos os capítulos de uma apostila
+python avaliar.py --apostila apostila-teste-historia-em1
 ```
 
 Chave de API: o pipeline lê automaticamente o arquivo `.env` na raiz do projeto.
 
 ---
 
+## Modelos por agente
+
+Cada agente usa um modelo configurável via variável de ambiente:
+
+| Agente | Padrão | Variável de ambiente |
+|--------|--------|----------------------|
+| A0 — Decompositor | claude-sonnet-4-6 | `IPPI_MODEL_A0` |
+| A1 — Arquiteto | claude-opus-4-6 | `IPPI_MODEL_A1` |
+| A2 — Redator | claude-opus-4-6 | `IPPI_MODEL_A2` |
+| A3 — Normalizador | Python (sem LLM) | — |
+| A4 — Polidor | claude-sonnet-4-6 | `IPPI_MODEL_A4` |
+| A5 — Formatador | Python (sem LLM) | — |
+| Verificador | claude-haiku-4-5-20251001 | — |
+| Avaliador | claude-haiku-4-5-20251001 | `IPPI_AVALIADOR_MODEL` |
+
+`IPPI_MODEL` (sem sufixo) serve de fallback global.
+
+---
+
 ## Os agentes
+
+### Agente 0 — Decompositor
+
+Recebe: parâmetros da apostila (disciplina, unidades, habilidades).
+
+Produz: `instrucoes.csv` completo com todos os capítulos e operações por seção.
+
+Consulta: `skills/decompositor-skill.md` + `orientacoes/decompositor-orientacao.md`
+
+---
 
 ### Agente 1 — Arquiteto Curricular
 
@@ -122,7 +176,9 @@ Consulta: `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[
 
 Produz: `core.md` — estrutura do capítulo com operações elementares, campos específicos por tipo de operação, síntese final e encadeamento. O core é um conjunto de dados estruturados, nunca narrativa.
 
-O campo `VERIFICACAO: Sim/Não` existe no core mas é ignorado pelos agentes subsequentes — a verificação foi removida do pipeline de texto.
+O campo `VERIFICACAO: Sim/Não` no core indica quais seções receberão perguntas de verificação no XML final (geradas pelo `verificador.py`).
+
+**A1 sempre roda sequencialmente** — lê os cores dos capítulos anteriores da mesma apostila para garantir encadeamento.
 
 ---
 
@@ -132,7 +188,7 @@ Recebe: `core.md` do Agente 1.
 
 Consulta: `contexto/disciplinas/[disciplina].md`
 
-Produz: `texto.md` — prosa didática integrada com marcação estrutural em **HTML comments invisíveis**. Não usa rótulos visíveis. Não gera blocos de verificação.
+Produz: `texto.md` — prosa didática integrada com marcação estrutural em **HTML comments invisíveis**. Não usa rótulos visíveis.
 
 Formato obrigatório:
 - Abre com `<!-- [CONTEXTO_OPERACAO] -->` (quatro campos)
@@ -144,19 +200,20 @@ Responsabilidade do Agente 2: **didática e conteúdo**. Formatação exata da m
 
 ---
 
-### Agente 3 — Normalizador de Marcação
+### Agente 3 — Normalizador de Marcação (`normalizador.py`)
+
+**Código Python — não usa LLM.**
 
 Recebe: `texto.md` do Agente 2.
 
-Produz: `texto.md` normalizado — aplica quatro normalizações de marcação e salva de volta no mesmo caminho. **Não altera prosa, não avalia conteúdo, não reordena seções.**
+Produz: `texto.md` normalizado com quatro normalizações aplicadas de forma determinística:
 
-As quatro normalizações:
 1. **CONTEXTO_OPERACAO** — garante os quatro campos em markdown bold, um por linha
 2. **FONTE** — garante citação bibliográfica dentro do bloco, tag de abertura sem conteúdo embutido
 3. **AUTOR** — garante ancoragem ao bloco pai (aninhado ou com `ref=tipo`)
 4. **Tipos desconhecidos** — sinaliza com `AVISO_AGENTE5` sem descartar o conteúdo
 
-O Agente 3 é o contrato de interface entre a zona criativa (Agentes 2 e 4) e a zona estrutural (Agente 5). Ele existe porque modelos de linguagem não são consistentes em formatação — e isso é esperado.
+O A3 é o contrato de interface entre a zona criativa (A2 e A4) e a zona estrutural (A5). Existe porque modelos de linguagem não são consistentes em formatação — e isso é esperado.
 
 ---
 
@@ -164,77 +221,83 @@ O Agente 3 é o contrato de interface entre a zona criativa (Agentes 2 e 4) e a 
 
 Recebe: `texto.md` normalizado pelo Agente 3.
 
-Produz: `texto.md` com prosa aprimorada — melhora transições entre blocos, naturalidade das frases e encadeamento entre parágrafos. **Não toca nos HTML comments. Não cria conteúdo novo.**
+Produz: **uma lista JSON de trocas** no formato `[{"original": "...", "novo": "..."}]`. O pipeline aplica as trocas no arquivo automaticamente via `_apply_diffs()`. O A4 nunca salva o arquivo diretamente.
 
-Responsabilidade do Agente 4: **fluência da prosa**. Estrutura e conteúdo chegam intocados ao Agente 5.
+Melhora transições entre blocos, naturalidade das frases e encadeamento entre parágrafos. **Não toca nos HTML comments. Não cria conteúdo novo.**
 
 ---
 
-### Agente 5 — Diagramador
+### Agente 5 — Formatador (`formatador.py`)
 
-Recebe: `texto.md` (processado pelo Agente 4) + `core.md`.
+**Código Python — não usa LLM.**
 
-Produz:
-- `[capitulo].xml` — capítulo estruturado para InDesign, com tags como `<secao tipo="Definir">`, `<bloco tipo="AUTOR">`, `<indicacao-imagem>`
-- `estilos-indesign.md` — gerado uma vez por apostila; lista os estilos de parágrafo necessários
+Recebe: `texto.md` (processado pelo Agente 4) + verificações geradas pelo `verificador.py`.
+
+Produz: `[capitulo].xml` — capítulo estruturado para InDesign, com:
+- Tags como `<secao tipo="Definir">`, `<bloco tipo="AUTOR">`, `<indicacao-imagem>`
+- `<mapa-progressao>` — mapa visual das operações do capítulo (injetado após `</cabecalho>`)
+- `<sidebar tipo="verificacao">` — pergunta de múltipla escolha ao final de cada seção com `VERIFICACAO: Sim`
+- `<sidebar tipo="aplicar-agora">` — mini-caso no rodapé com resposta oculta para o professor
+
+---
+
+### Verificador (`verificador.py`)
+
+Chamado internamente pelo pipeline antes do Agente 5. Lê o `core.md` de cada capítulo e gera, em uma única chamada ao Haiku:
+
+- Perguntas de verificação fechadas (múltipla escolha, 3 alternativas) para cada seção com `VERIFICACAO: Sim`
+- Mini-exercício "Aplicar agora" com caso concreto novo e resposta comentada
+
+---
+
+### Avaliador (`avaliar.py`)
+
+Ferramenta independente para controle de qualidade. Avalia capítulos com uma rubrica de 6 critérios via LLM-judge (Haiku). Grava os resultados em `logs/qualidade_YYYYMMDD.csv` para série histórica.
+
+**Critérios:**
+1. Operação cognitiva executada
+2. Exemplo âncora específico
+3. Síntese responde à pergunta
+4. Proibições de estilo respeitadas
+5. Marcação estrutural preservada
+6. Fluidez da prosa
+
+Cada critério recebe nota 0-10 (aprovado ≥ 6). O CSV acumula avaliações ao longo do tempo para detectar regressões.
 
 ---
 
 ## Fluxo resumido
 
 ```
-Agente 2  →  conteúdo + HTML comments + prosa aproximada
-Agente 3  →  normaliza marcação, não toca na prosa
-Agente 4  →  aprimora prosa, não toca na marcação
-Agente 5  →  lê marcação limpa, gera XML determinístico
+A0 → instrucoes.csv
+A1 → core.md (sequencial, lê cores anteriores)
+A2 → texto.md (prosa + HTML comments)
+A3 → texto.md normalizado (Python, determinístico)
+A4 → diffs JSON → _apply_diffs() → texto.md com prosa polida
+verificador.py → verificações XML (Haiku)
+A5 → XML formatado para InDesign (Python, determinístico)
 ```
 
----
-
-## Bugs conhecidos e mitigações
-
-**Bug: desalinhamento de colunas no CSV gerado pelo Agente 0**
-O Decompositor (Agente 0) escreve consistentemente 3 campos vazios de trailing após a última seção preenchida. O número correto varia:
-- 4 seções preenchidas → precisa de 4 campos vazios
-- 5 seções preenchidas → precisa de 2 campos vazios
-
-**Mitigação implementada (07/06/2026):** função `fix_csv_alignment()` em `pipeline.py` executa automaticamente após o Agente 0 salvar o CSV. Detecta linhas com contagem de campos errada e corrige antes da validação. O pipeline loga `⚠ CSV corrigido automaticamente` quando a correção é aplicada.
-
----
-
-## Histórico de modificações
-
-**2026-06-08 — Reformulação do Agente 2 e redefinição do Agente 4**
-
-Problema identificado: a skill do Agente 2 pedia formatação exata de AUTOR, FONTE e CONTEXTO_OPERACAO — responsabilidade que pertence ao Agente 3. Além disso, gerava blocos `[VERIFICAÇÃO]` visíveis e usava rótulos explícitos, conflitando com a arquitetura de HTML comments.
-
-Mudanças realizadas:
-- `agente2-skill.md` reescrito: HTML comments diretos, exemplos antes/depois para todas as 7 operações, banco de transições denotativas, sem VERIFICACAO, sem exigências de formatação exata
-- `agente4-skill.md` reescrito: papel redefinido de "conversor de rótulos" para "polidor de prosa"
-- `agente4-skill-v2.md` excluído — um único arquivo por agente
-- Campo `VERIFICACAO: Sim/Não` do core mantido mas ignorado pelo Agente 2
-
-**2026-06-08 — Princípio pedagógico da LISTA_COMPLEMENTAR definido**
-Decisão: trabalhar uma habilidade é aplicá-la a diferentes conteúdos. O Agente 1 deve usar itens da LISTA_COMPLEMENTAR como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal puder ser demonstrada sobre eles com a mesma precisão.
-
-**2026-06-08 — Correção de campo: HABILIDADE_BNCC → HABILIDADE_ENEM**
-Corrigido em `skills/agente1-skill.md` e `contexto/principios-pedagogicos-agente1.md`.
-
-**2026-05-30 — Reformulação para pipeline funcional**
-Abandono da simulação de voz humana. Princípio pedagógico: artificialidade funcional. Substituição dos tipos de seção por sete operações elementares. Skills e orientações do Agente 1 e Agente 2 completamente reescritas.
+A1 roda sequencialmente. A2–A5 podem rodar em paralelo por capítulo com `--workers N`.
 
 ---
 
 ## Decisões de arquitetura
 
-**Separação de responsabilidades entre Agentes 2, 3 e 4**
-O Agente 2 é responsável por conteúdo e didática — não por formatação exata. Pedir ao redator que acerte `ref=tipo` no AUTOR ou o formato exato de FONTE é pedir ao agente errado. O Agente 3 existe precisamente porque modelos de linguagem são inconsistentes em formatação, e isso é esperado. O Agente 4 existe porque fluência de prosa é uma operação separada de estrutura de conteúdo.
+**A3 e A5 como código Python**
+Normalização de marcação e formatação XML são operações estruturais, não criativas. Converter para Python eliminou alucinações, tornou o comportamento auditável e zerou o custo de tokens dessas etapas.
 
-**VERIFICACAO removida do texto**
-A verificação após cada seção foi removida do output do Agente 2. O campo `VERIFICACAO: Sim/Não` permanece no core (gerado pelo Agente 1) mas é ignorado pelos agentes de texto. A decisão pode ser revisitada se houver necessidade pedagógica futura.
+**A4 entrega diffs, não salva arquivo**
+O Agente 4 retorna apenas as substituições que quer fazer (JSON). O pipeline aplica e salva. Isso evita que o agente apague acidentalmente conteúdo ou marcação ao reescrever o arquivo inteiro.
 
-**Processamento capítulo a capítulo**
-Simplicidade e inspeção incremental. O custo de coerência entre capítulos é mitigado pelo Agente 1, que lê cores anteriores, e pelo encadeamento explícito no core.
+**Verificações separadas do texto**
+O `verificador.py` gera as verificações a partir do `core.md` — não do texto. Isso garante que as perguntas estejam alinhadas com a estrutura pedagógica planejada, não com o texto produzido.
+
+**Paralelização de capítulos**
+A1 deve ser sequencial (lê cores anteriores). A2–A5 são independentes por capítulo e rodam em `ThreadPoolExecutor`. Escrita do CSV de uso é thread-safe via `threading.Lock`.
+
+**Separação de responsabilidades entre A2, A3 e A4**
+O Agente 2 é responsável por conteúdo e didática — não por formatação exata. O A3 existe precisamente porque modelos de linguagem são inconsistentes em formatação, e isso é esperado. O A4 existe porque fluência de prosa é uma operação separada de estrutura de conteúdo.
 
 **Prompt caching**
 Reduz custo de input nas iterações internas. Implementado via `cache_control` no system prompt.
@@ -246,21 +309,25 @@ Em caso de conflito, os princípios pedagógicos prevalecem.
 
 ---
 
-## Estado dos componentes
+## Histórico de modificações
 
-**Implementado e integrado:**
-- Agente 1 (Arquiteto Curricular) — `agente1-skill.md`, `agente1-orientacao.md`
-- Agente 2 (Redator Funcional) — `agente2-skill.md`, `agente2-orientacao.md`
-- Agente 3 (Normalizador de Marcação) — `agente3-skill.md`
-- Agente 4 (Polidor de Prosa) — `agente4-skill.md`
-- Agente 5 (Diagramador) — `agente5-skill.md`
-- `pipeline.py` com flags `--agentes`, `--force`, `--cap`
-- Contexto disciplinar completo: `historia.md`, `sociologia.md`, `filosofia.md`, `geografia.md`
+**2026-06-13 — Fase 3: qualidade e eficiência**
+- E7: modelo por agente (`AGENT_MODELS` dict, variáveis de ambiente por agente)
+- E8: A4 entrega diffs JSON; `_apply_diffs()` aplica as trocas em Python
+- E10: paralelização de capítulos com `--workers N` e `ThreadPoolExecutor`
+- R-Q4: verificações fechadas e "Aplicar agora" via `verificador.py` (Haiku), injetados no XML pelo A5
+- R-Q6: `<mapa-progressao>` XML com operações visíveis por seção
+- R-Q7: rubrica de qualidade LLM-judge em `avaliar.py` com série histórica em CSV
 
-**Em avaliação:**
-- Qualidade didática do output do Agente 2 com exemplos reais
-- Precisão do Agente 3 na detecção de variações de marcação não previstas
+**2026-06-10 — Fase 2: A3 e A5 convertidos para Python**
+- `normalizador.py`: A3 como código Python determinístico
+- `formatador.py`: A5 como código Python determinístico
+- Pasta de output renomeada de `xml/` para `formatado/`
 
-**Ainda não existe:**
-- Correção automática a partir do output do Agente 3 (hoje é manual)
-- Interface web para o professor preencher o CSV
+**2026-06-08 — Reformulação do Agente 2 e redefinição do Agente 4**
+Skill do A2 reescrita: HTML comments diretos, exemplos antes/depois para todas as 7 operações, banco de transições denotativas. Skill do A4 reescrita: papel redefinido de "conversor de rótulos" para "polidor de prosa".
+
+**2026-06-08 — Correção de campo: HABILIDADE_BNCC → HABILIDADE_ENEM**
+
+**2026-05-30 — Reformulação para pipeline funcional**
+Abandono da simulação de voz humana. Princípio pedagógico: artificialidade funcional. Substituição dos tipos de seção por sete operações elementares.

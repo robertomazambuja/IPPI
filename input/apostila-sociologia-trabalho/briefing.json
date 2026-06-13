@@ -1,0 +1,38 @@
+{
+  "disciplina": "Sociologia",
+  "habilidade_enem": "H18",
+  "unidade": "Unidade X — O Trabalho na Perspectiva Sociológica",
+  "pergunta_unidade": "Como a Sociologia explica o trabalho — das perspectivas clássicas às transformações do mundo contemporâneo?",
+  "capitulos": [
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho",
+    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho": [
+      "Karl Marx",
+      "Émile Durkheim",
+      "Max Weber"
+    ],
+    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil": [
+      "David Harvey",
+      "Ricardo Antunes",
+      "Karl Marx"
+    ]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho": [
+      "definição sociológica de trabalho",
+      "distinção entre trabalho, emprego e labor",
+      "divisão social do trabalho (Durkheim)",
+      "trabalho, alienação e classe social (Marx)",
+      "trabalho e estratificação social (Weber)"
+    ],
+    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil": [
+      "reestruturação produtiva e capitalismo flexível",
+      "precarização do trabalho",
+      "uberização e trabalho por plataforma",
+      "desemprego estrutural e trabalho informal",
+      "desigualdade de gênero e raça no mercado de trabalho brasileiro"
+    ]
+  }
+}
