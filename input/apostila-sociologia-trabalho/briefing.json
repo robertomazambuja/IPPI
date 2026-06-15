@@ -2,37 +2,59 @@
   "disciplina": "Sociologia",
   "habilidade_enem": "H18",
   "unidade": "Unidade X — O Trabalho na Perspectiva Sociológica",
-  "pergunta_unidade": "Como a Sociologia explica o trabalho — das perspectivas clássicas às transformações do mundo contemporâneo?",
+  "pergunta_unidade": "Como a Sociologia explica o trabalho — das perspectivas clássicas e dos modos de organização da produção às transformações contemporâneas da uberização e das desigualdades de gênero?",
   "capitulos": [
-    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho",
-    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil"
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação",
+    "Capítulo 2 — Modos de organização da produção: do taylorismo ao toyotismo",
+    "Capítulo 3 — Trabalho contemporâneo: uberização, plataformização e divisão sexual do trabalho"
   ],
   "autores_por_capitulo": {
-    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho": [
-      "Karl Marx",
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação": [
       "Émile Durkheim",
-      "Max Weber"
+      "Max Weber",
+      "Karl Marx",
+      "Danièle Linhart"
     ],
-    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil": [
-      "David Harvey",
-      "Ricardo Antunes",
-      "Karl Marx"
+    "Capítulo 2 — Modos de organização da produção: do taylorismo ao toyotismo": [
+      "Frederick Winslow Taylor",
+      "Henry Ford",
+      "Taiichi Ohno",
+      "David Harvey"
+    ],
+    "Capítulo 3 — Trabalho contemporâneo: uberização, plataformização e divisão sexual do trabalho": [
+      "Ludmila Costhek Abilio",
+      "Danièle Kergoat",
+      "Helena Hirata",
+      "Joan Scott",
+      "Heleieth Saffioti",
+      "Cristina Carrasco"
     ]
   },
   "conteudos_por_capitulo": {
-    "Capítulo 1 — O que é trabalho? Perspectivas clássicas e tipos de trabalho": [
-      "definição sociológica de trabalho",
-      "distinção entre trabalho, emprego e labor",
-      "divisão social do trabalho (Durkheim)",
-      "trabalho, alienação e classe social (Marx)",
-      "trabalho e estratificação social (Weber)"
+    "Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação": [
+      "definição sociológica de trabalho: distinção entre trabalho (atividade intencional de transformação), emprego (vínculo formal remunerado) e labor (esforço de manutenção biológica da vida)",
+      "divisão do trabalho e solidariedade social em Durkheim: solidariedade mecânica (coesão pela semelhança) vs. solidariedade orgânica (coesão pela interdependência entre funções especializadas)",
+      "ética protestante e espírito do capitalismo em Weber: ação social orientada por valores religiosos calvinistas (ascetismo, disciplina, poupança) como base cultural do capitalismo moderno",
+      "exploração do trabalho assalariado em Marx: apropriação dos meios de produção pela burguesia e formação do proletariado forçado a vender sua força de trabalho",
+      "força de trabalho e mais-valia: o trabalhador vende força de trabalho e recebe salário equivalente a apenas parte do valor produzido; mais-valia é a diferença apropriada pelo capitalista",
+      "alienação em Marx: separação do trabalhador em relação ao produto (não reconhece o que produziu como seu), ao processo (não controla como trabalha), a si mesmo (trabalho não realiza capacidades humanas) e aos outros trabalhadores (competição substitui cooperação)",
+      "trabalho prescrito vs. trabalho real: diferença entre o que as prescrições empresariais ordenam e o que os trabalhadores realmente fazem; o trabalho real como transgressão coletiva que gera sociabilidade, consciência política e ação sindical"
     ],
-    "Capítulo 2 — Trabalho contemporâneo: precarização, uberização e desigualdade no Brasil": [
-      "reestruturação produtiva e capitalismo flexível",
-      "precarização do trabalho",
-      "uberização e trabalho por plataforma",
-      "desemprego estrutural e trabalho informal",
-      "desigualdade de gênero e raça no mercado de trabalho brasileiro"
+    "Capítulo 2 — Modos de organização da produção: do taylorismo ao toyotismo": [
+      "taylorismo: método de tempos e movimentos de Frederick Winslow Taylor; fragmentação de tarefas entre operários recém-qualificados, controle cronometrado por capatazes, salário por peça, esvaziamento do saber-fazer operário e enfraquecimento da resistência política",
+      "fordismo: esteira mecânica de Henry Ford; produção em massa associada ao consumo em massa; elevação salarial condicionada ao cumprimento de metas e controle do comportamento fora da fábrica; American way of life como modo de vida vinculado à produção fordista",
+      "Estado de bem-estar social (Welfare State): regulamentação da jornada de trabalho e conquistas de direitos trabalhistas como suporte político ao modelo taylor-fordista (início do século XX até os anos 1970)",
+      "crise do fordismo e transição para o Estado neoliberal: queda das taxas de lucratividade no final dos anos 1960; reestruturação produtiva, terceirização, redução de direitos trabalhistas e enfraquecimento sindical a partir dos anos 1970–1980",
+      "toyotismo (modelo ohnoísta): produção por demanda com estoques mínimos; just-in-time; kanban; Círculos de Controle de Qualidade (CCQ); trabalhador polivalente que acumula funções e gerencia a própria atividade; substituição do operário especializado pelo multi-tarefeiro",
+      "trabalho imaterial vs. trabalho material: trabalho cujo produto é intangível (software, aula, telemarketing) vs. material (calçados, peças metálicas); expansão do setor de serviços acompanha o toyotismo; mesma lógica capitalista de extração de mais-valia se aplica ao trabalho imaterial"
+    ],
+    "Capítulo 3 — Trabalho contemporâneo: uberização, plataformização e divisão sexual do trabalho": [
+      "uberização e plataformização: trabalhador just-in-time disponível mas utilizado apenas quando necessário; autogerenciamento subordinado ao algoritmo; transferência de custos e riscos ao trabalhador; ausência total de direitos (FGTS, férias, seguro-desemprego); remuneração e regras opacas e variáveis",
+      "divisão sexual do trabalho: princípio de separação (classificação das atividades como masculinas ou femininas) e princípio de hierarquia (maior remuneração e maior prestígio social para os trabalhos considerados masculinos) — formulação de Danièle Kergoat e Helena Hirata",
+      "gênero como construção social: relações sociais e de poder baseadas em diferenças percebidas entre os sexos (Joan Scott); tradição brasileira de estudos sobre patriarcado como sistema de dominação masculina (Heleieth Saffioti)",
+      "trabalho doméstico e de cuidados: invisibilidade social e econômica; desvalorização; não reconhecimento como trabalho; direcionamento compulsório das mulheres a essas atividades; dados IBGE (2022): mulheres dedicam em média 21,3 horas semanais a serviços domésticos vs. 11 horas dos homens",
+      "economia do cuidado: crítica ao predomínio masculino na produção do conhecimento econômico (Cristina Carrasco); proposta de tornar o trabalho doméstico e de cuidados visível como fundamento social e econômico da vida coletiva",
+      "desigualdade de gênero e raça no mercado de trabalho brasileiro: concentração de mulheres negras nas ocupações mais precárias (trabalho doméstico, serviços gerais); diferença salarial entre grupos por recorte de raça, gênero e formalidade"
     ]
   }
 }

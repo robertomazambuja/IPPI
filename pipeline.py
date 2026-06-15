@@ -1237,6 +1237,102 @@ def run_pipeline(
     log_print(f"CSV de usage: {USAGE_CSV}")
     log_print(f"{'═' * 70}\n")
 
+    # Gera lista de imagens para o professor (se agente 5 rodou)
+    if 5 in agentes:
+        gerar_lista_imagens(OUTPUT_DIR / apostila_name)
+
+
+# ============================================================================
+# GERAÇÃO DA LISTA DE IMAGENS PARA O PROFESSOR
+# ============================================================================
+
+def gerar_lista_imagens(apostila_dir: Path) -> None:
+    """
+    Lê todos os XMLs em output/{apostila}/formatado/**/*.xml,
+    extrai elementos <imagem>, e escreve IMAGENS-NECESSARIAS.txt
+    em linguagem clara para o professor.
+    """
+    import xml.etree.ElementTree as ET
+
+    xml_files = sorted(apostila_dir.glob("formatado/**/*.xml"))
+    if not xml_files:
+        log_print("[Imagens] Nenhum XML encontrado — lista de imagens não gerada.")
+        return
+
+    # Coleta imagens por capítulo
+    capitulos: List[Dict] = []
+    for xml_path in xml_files:
+        try:
+            tree = ET.parse(xml_path)
+            root = tree.getroot()
+        except ET.ParseError as e:
+            log_print(f"[Imagens] AVISO: erro ao parsear {xml_path.name}: {e}")
+            continue
+
+        cap_el = root.find(".//capitulo") if root.tag != "capitulo" else root
+        if cap_el is None:
+            cap_el = root
+
+        cap_id     = cap_el.get("id", xml_path.stem)
+        cap_titulo = cap_el.get("titulo", xml_path.stem)
+
+        imagens: List[Dict] = []
+        for img_el in cap_el.iter("imagem"):
+            ref       = img_el.get("ref", "")
+            desc_el   = img_el.find("descricao")
+            descricao = desc_el.text.strip() if desc_el is not None and desc_el.text else "(sem descrição)"
+            imagens.append({"ref": ref, "descricao": descricao})
+
+        if imagens:
+            capitulos.append({"id": cap_id, "titulo": cap_titulo, "imagens": imagens})
+
+    saida_path = apostila_dir / "IMAGENS-NECESSARIAS.txt"
+    apostila_nome = apostila_dir.name
+    data_hoje = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    linhas: List[str] = []
+    sep = "=" * 65
+
+    linhas.append(f"IMAGENS NECESSÁRIAS — Apostila: {apostila_nome}")
+    linhas.append(f"Gerado em: {data_hoje}")
+    linhas.append("")
+    linhas.append(sep)
+    linhas.append("INSTRUÇÕES")
+    linhas.append(sep)
+    linhas.append("1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.")
+    linhas.append("2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).")
+    linhas.append('3. Coloque todos os arquivos em uma pasta chamada "imagens".')
+    linhas.append('4. Envie a pasta "imagens" para o responsável técnico.')
+    linhas.append(sep)
+
+    if not capitulos:
+        linhas.append("")
+        linhas.append("(Nenhuma imagem necessária nesta apostila.)")
+    else:
+        total = 0
+        for cap in capitulos:
+            linhas.append("")
+            linhas.append(f"CAPÍTULO {cap['id']} — {cap['titulo']}")
+            linhas.append("-" * 65)
+            for img in cap["imagens"]:
+                total += 1
+                linhas.append(f"  NOME DO ARQUIVO : {img['ref']}.jpg")
+                linhas.append(f"  O QUE MOSTRAR   : {img['descricao']}")
+                linhas.append("")
+
+        linhas.append(sep)
+        linhas.append(f"TOTAL: {total} imagem(ns) necessária(s)")
+        linhas.append(sep)
+
+    saida_path.write_text("\n".join(linhas), encoding="utf-8")
+    log_print(f"[Imagens] Lista de imagens salva em: {saida_path}")
+    if capitulos:
+        total_imgs = sum(len(c["imagens"]) for c in capitulos)
+        log_print(f"[Imagens] {total_imgs} imagem(ns) em {len(capitulos)} capítulo(s).")
+    else:
+        log_print("[Imagens] Nenhuma imagem referenciada nos XMLs.")
+
+
 # ============================================================================
 # CLI
 # ============================================================================

@@ -1,0 +1,47 @@
+IMAGENS NECESSÁRIAS — Apostila: apostila-sociologia-trabalho
+Gerado em: 15/06/2026 15:34
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Quais são as categorias centrais, as formas de exploração identificadas e as consequências para a coesão ou o conflito social nas perspectivas de Durkheim, Weber e Marx sobre o trabalho?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: produção artesanal e solidariedade mecânica (antes do séc. XVIII) → Revolução Industrial e divisão técnica do trabalho (séc. XVIII-XIX) → solidariedade orgânica / Durkheim, 1893 → separação proprietários-trabalhadores / Marx, O Capital, 1867 → consolidação do proletariado industrial (final do séc. XIX)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Diagrama de processo com setas: propriedade privada dos meios de produção (causa 1) + trabalhador sem meios próprios (causa 2) → venda da força de trabalho → valor produzido > salário pago → mais-valia apropriada pelo capitalista → alienação em 4 dimensões
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Durkheim / Marx / Weber) e 4 linhas (Categoria central / Problema identificado no trabalho / Consequência para a sociedade / Posição sobre o capitalismo)
+
+
+CAPÍTULO 01-02 — Em que aspectos os modelos taylorista, fordista e toyotista diferem quanto ao controle do trabalho, ao perfil do trabalhador exigido e às implicações para direitos trabalhistas e resistência sindical?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Diagrama de causalidade com duas colunas: à esquerda, quatro causas (queda de lucratividade, resistência operária, crise do petróleo 1973, concorrência toyotista); setas convergindo para bloco central "crise do fordismo"; à direita, quatro consequências (reestruturação produtiva, Estado neoliberal, expansão do trabalho imaterial, precarização)
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Modelo taylor-fordista / Modelo toyotista) e 4 linhas (Controle do trabalho / Perfil do trabalhador / Direitos trabalhistas / Resistência sindical), resumindo os contrastes centrais de cada aspecto
+
+
+CAPÍTULO 01-03 — Como as condições de trabalho contemporâneas diferem entre grupos sociais — por gênero, raça e modalidade de vínculo — quanto à remuneração, proteção legal e reconhecimento social?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-03-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: (1) 1973–1980 crise do petróleo e adoção do toyotismo/terceirização; (2) 1990–2000 reformas neoliberais e informalidade (55% no Brasil em 2000); (3) 2007–2010 popularização dos smartphones; (4) 2009–2015 fundação de Uber, iFood, Rappi; (5) 2020–2023 pandemia e 1,5 milhão de trabalhadores por plataformas (IBGE)
+
+  NOME DO ARQUIVO : fig-01-03-02.jpg
+  O QUE MOSTRAR   : Diagrama de processo com 4 etapas encadeadas por setas: (1) Princípios de separação e hierarquia classificam trabalho doméstico como feminino e inferior → (2) Patriarcado naturaliza a classificação como vocação biológica → (3) Mulheres direcionadas compulsoriamente ao trabalho doméstico e de cuidados → (4) Métricas econômicas (PIB) excluem esse trabalho, tornando-o invisível. Ao lado, dado: mulheres 21,3h/semana vs. homens 11h/semana (IBGE, 2022)
+
+  NOME DO ARQUIVO : fig-01-03-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Homem branco, CLT / Mulher negra, informal ou plataforma) e 4 linhas (Rendimento médio mensal: R$ 3.708 vs. R$ 1.474; Proteção legal: FGTS, férias, 13º, seguro-desemprego vs. nenhum direito; Ocupações típicas: indústria, comércio formal, cargos técnicos vs. trabalho doméstico, limpeza, cuidado, entregas; Horas semanais em trabalho doméstico não remunerado: 11h vs. acima de 21,3h). Fonte: IBGE, PNAD Contínua 2022
+
+=================================================================
+TOTAL: 8 imagem(ns) necessária(s)
+=================================================================

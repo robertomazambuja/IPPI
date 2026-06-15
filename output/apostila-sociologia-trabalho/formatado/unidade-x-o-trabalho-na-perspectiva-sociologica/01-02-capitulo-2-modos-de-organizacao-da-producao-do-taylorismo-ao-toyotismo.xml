@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capitulo id="01-02" titulo="Em que aspectos os modelos taylorista, fordista e toyotista diferem quanto ao controle do trabalho, ao perfil do trabalhador exigido e às implicações para direitos trabalhistas e resistência sindical?" palavras_total="3020">
+  <cabecalho>
+    <habilidade>H18 — Analisar diferentes processos de produção ou circulação de riquezas e suas implicações sócio-espaciais.</habilidade>
+    <operacao_principal>Comparar</operacao_principal>
+    <pergunta_capitulo>Em que aspectos os modelos taylorista, fordista e toyotista diferem quanto ao controle do trabalho, ao perfil do trabalhador exigido e às implicações para direitos trabalhistas e resistência sindical?</pergunta_capitulo>
+    <por_que_importa>Este capítulo fornece a descrição concreta de como a organização da produção se transformou ao longo do século XX, permitindo que o próximo capítulo analise as formas contemporâneas de trabalho (uberização, plataformização, divisão sexual do trabalho) como desdobramentos dessas transformações.</por_que_importa>
+  </cabecalho>
+
+  <mapa-progressao>
+    <passo ordem="1" bloco="bloco-1">Definir</passo>
+    <passo ordem="2" bloco="bloco-2">Sequenciar</passo>
+    <passo ordem="3" bloco="bloco-3">Mapear causalidade</passo>
+    <passo ordem="4" bloco="bloco-4">Comparar</passo>
+  </mapa-progressao>
+
+  <corpo>
+
+    <bloco id="bloco-1" palavras="475" operacao="Definir">
+      <micro-habilidade>Definir modos de organização da produção como sistemas que articulam técnicas, gestão do trabalho e relações entre produção e consumo</micro-habilidade>
+      <secao id="sec-1" tipo="definicao">
+        <titulo>O que são modos de organização da produção</titulo>
+        <conteudo>
+        <paragrafo>Modo de organização da produção é o sistema que articula três elementos em um dado período histórico: técnicas de fabricação (como os objetos são produzidos), formas de gestão e controle do trabalho (como a atividade dos trabalhadores é planejada, vigiada e remunerada) e relações entre produção e consumo (como o que é fabricado se conecta ao que é comprado e por quem). Esses três elementos não operam de forma isolada. Cada modo de organização da produção combina uma técnica específica com uma forma particular de controle sobre o trabalhador e com um padrão de consumo correspondente. Quando um desses elementos se transforma, os demais também se alteram.</paragrafo>
+        <paragrafo>Um exemplo concreto ilustra essa articulação. Na fábrica Bethlehem Steel, na Pensilvânia (EUA), em 1898, o engenheiro Frederick Winslow Taylor cronometrou cada movimento dos operários que carregavam lingotes de ferro. Taylor decompôs a tarefa em etapas mensuráveis, eliminou gestos que considerou desnecessários e atribuiu a cada operário uma sequência fixa de movimentos com tempo máximo de execução. O operário deixou de decidir como executar a tarefa, e essa decisão passou integralmente à gerência. Esse arranjo reunia os três elementos de um modo de organização da produção: a técnica era a cronometragem e a decomposição de movimentos; a gestão consistia no controle exercido pela gerência sobre cada etapa, com o salário pago por peça como incentivo individual; a relação produção-consumo se completava porque a produtividade aumentada visava baratear mercadorias e ampliar mercados.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Frederick Winslow Taylor (1856–1915)</nome>
+          <pais>EUA</pais>
+          <descricao>Frederick Winslow Taylor (1856–1915), engenheiro mecânico estadunidense, é considerado o fundador da administração científica do trabalho. Sua obra principal, *The Principles of Scientific Management* (1911), sistematizou o método de tempos e movimentos e propôs a separação entre planejamento (gerência) e execução (operário) como princípio universal de eficiência.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>TAYLOR, Frederick W. *The Principles of Scientific Management*. Nova York: Harper &amp; Brothers, 1911.</nota_fonte>
+      <sidebar tipo="verificacao">
+        <pergunta>O que caracteriza, fundamentalmente, o modo de organização taylorista da produção?</pergunta>
+        <alternativas>
+          <alternativa letra="A" correta="sim">A decomposição do trabalho em etapas mensuráveis, com a gerência planejando e o operário executando movimentos prescritos.</alternativa>
+          <alternativa letra="B">A autonomia do operário para decidir a melhor sequência de tarefas conforme sua experiência.</alternativa>
+          <alternativa letra="C">A produção em lotes variados para atender diferentes perfis de consumidores ao mesmo tempo.</alternativa>
+        </alternativas>
+        <justificativa>O taylorismo se define exatamente pela separação entre planejamento (gerência) e execução (operário), com cada movimento cronometrado e padronizado para eliminar desperdícios.</justificativa>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-2" palavras="758" operacao="Sequenciar">
+      <micro-habilidade>Sequenciar a sucessão histórica dos modelos de organização produtiva, do taylorismo ao fordismo e ao toyotismo, identificando rupturas e continuidades</micro-habilidade>
+      <secao id="sec-1" tipo="sequencia">
+        <titulo>Do taylorismo ao toyotismo — sucessão histórica dos modelos produtivos</titulo>
+        <conteudo>
+        <paragrafo>A transformação dos modos de organização da produção ao longo do século XX não ocorreu por acaso. Cada modelo surgiu como resposta a condições econômicas, tecnológicas e políticas específicas, e cada transição entre modelos alterou simultaneamente a técnica produtiva, a forma de controle sobre o trabalhador e o padrão de consumo.</paragrafo>
+        <paragrafo>O ponto de partida foi o taylorismo, sistematizado entre 1903 e 1911 nas publicações de Frederick Winslow Taylor. A fragmentação de tarefas e o controle cronometrado já circulavam em fábricas estadunidenses desde o final do século XIX, mas foi Taylor quem lhes conferiu um método formalizado: a gerência assumiu o planejamento, e o operário passou a executar gestos prescritos. Essa lógica se tornou a base sobre a qual o modelo seguinte se construiu.</paragrafo>
+        <paragrafo>Em 1913, Henry Ford instalou a primeira linha de montagem na fábrica de Highland Park, em Michigan. A esteira mecânica fixou o ritmo da produção, retirando do operário até mesmo o controle sobre a velocidade de execução. O fordismo, porém, não se limitou à esteira. Em 1914, Ford introduziu o salário de cinco dólares por dia, valor que na época era significativamente superior à média do setor. Esse aumento, contudo, era condicionado: o operário precisava cumprir metas de produtividade e submeter-se à inspeção de um "departamento sociológico" que verificava seus hábitos pessoais, incluindo consumo de álcool, estado civil e condições de moradia. O barateamento do Model T, viabilizado pela produção em larga escala, permitiu que os próprios operários se tornassem consumidores do que fabricavam. Esse arranjo inaugurou a lógica de produção em massa associada a consumo em massa, base do que ficou conhecido como o *American way of life*, isto é, um padrão de vida centrado no acesso a bens industriais padronizados (automóvel, eletrodomésticos, moradia suburbana) como expressão de prosperidade.</paragrafo>
+        <paragrafo>A etapa seguinte conectou a fábrica ao Estado. Entre o final dos anos 1930 e a década de 1970, os países centrais (sobretudo Europa Ocidental e Estados Unidos) consolidaram o Estado de bem-estar social (Welfare State). Regulamentação da jornada de trabalho, seguro-desemprego, previdência social e salário mínimo compunham um sistema de proteção que garantia a reprodução da força de trabalho e, ao mesmo tempo, sustentava o poder de compra dos trabalhadores. O Welfare State não era, portanto, externo ao modelo taylor-fordista: era seu suporte político. A produção em massa exigia consumo em massa, e o consumo em massa dependia de trabalhadores com renda suficiente e protegida.</paragrafo>
+        <paragrafo>Essa articulação começou a se desgastar no final dos anos 1960. As taxas de lucratividade nos países centrais entraram em declínio, pressionadas pelos custos fixos elevados da produção em massa e pela saturação dos mercados internos. Simultaneamente, a resistência operária organizada, expressa em greves e reivindicações salariais crescentes, pressionava os lucros. A crise do petróleo de 1973 agravou o cenário, elevando custos de produção e transporte. A combinação desses fatores tornou o modelo fordista insustentável em sua forma original.</paragrafo>
+        <paragrafo>A resposta dos governos e das empresas veio por meio de uma reestruturação produtiva articulada a reformas políticas. Entre 1979 e 1981, os governos de Margaret Thatcher no Reino Unido e Ronald Reagan nos Estados Unidos implementaram um programa de reformas neoliberais: privatização de empresas estatais, flexibilização de contratos de trabalho, redução de benefícios trabalhistas e repressão à atividade sindical. No plano produtivo, a organização da produção passou a se apoiar na terceirização, na subcontratação e na redução de estoques, substituindo a rigidez fordista pela flexibilidade.</paragrafo>
+        <paragrafo>Enquanto esse processo avançava nos países ocidentais, um modelo produtivo desenvolvido no Japão desde a década de 1950 ganhava projeção global. Na Toyota, o engenheiro Taiichi Ohno criou o sistema de produção por demanda, baseado em dois pilares: o just-in-time (produzir apenas o necessário, no momento necessário, eliminando estoques) e o kanban (sistema de cartões que sinalizava a necessidade de reposição em cada etapa). O trabalhador toyotista acumulava funções (operação, manutenção, controle de qualidade), participava de Círculos de Controle de Qualidade (CCQ) e era cobrado por resultados globais, não por gestos individuais. Esse modelo se expandiu globalmente entre os anos 1970 e 1980, como alternativa ao fordismo em crise.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Henry Ford (1863–1947)</nome>
+          <pais>EUA</pais>
+          <descricao>Henry Ford (1863–1947), industrial estadunidense, fundou a Ford Motor Company e implementou a primeira linha de montagem em série na indústria automobilística. Em *My Life and Work* (1922), Ford argumentou que o aumento dos salários operários era condição para que os trabalhadores pudessem comprar os produtos que fabricavam, sustentando o ciclo de produção e consumo em massa que viabilizava a redução dos preços unitários.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>FORD, Henry; CROWTHER, Samuel. *My Life and Work*. Garden City: Doubleday, 1922.</nota_fonte>
+      <sidebar tipo="verificacao">
+        <pergunta>Qual a ordem cronológica correta dos marcos que marcam a transição do taylorismo ao toyotismo?</pergunta>
+        <alternativas>
+          <alternativa letra="A" correta="sim">Publicação dos Princípios de Taylor (1911) → introdução da linha de montagem fordista (1914) → consolidação do toyotismo no pós-Segunda Guerra Mundial.</alternativa>
+          <alternativa letra="B">Consolidação do toyotismo → publicação dos Princípios de Taylor → introdução da linha de montagem fordista.</alternativa>
+          <alternativa letra="C">Introdução da linha de montagem fordista (1914) → publicação dos Princípios de Taylor (1911) → consolidação do toyotismo.</alternativa>
+        </alternativas>
+        <justificativa>A sequência histórica correta parte do taylorismo (1911), passa pelo fordismo (a partir de 1914) e chega ao toyotismo no período pós-guerra, refletindo a evolução dos modelos produtivos ao longo do século XX.</justificativa>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-3" palavras="677" operacao="Mapear causalidade">
+      <micro-habilidade>Mapear relações causais entre a crise do fordismo, a reestruturação produtiva neoliberal e a expansão do trabalho imaterial e da produção flexível</micro-habilidade>
+      <secao id="sec-1" tipo="causa">
+        <conteudo>
+        <paragrafo>A crise do modelo fordista resultou da convergência de quatro fatores entre o final dos anos 1960 e o início dos anos 1970.</paragrafo>
+        <paragrafo>O primeiro foi a queda das taxas de lucratividade nos países centrais. A produção em massa exigia investimentos fixos elevados (grandes fábricas, estoques volumosos, maquinário pesado) e, à medida que os mercados internos se aproximavam da saturação, a rentabilidade desses investimentos declinava. O segundo fator foi a resistência operária organizada: as décadas de pleno emprego sob o Welfare State fortaleceram sindicatos e trabalhadores, que pressionavam por salários mais altos e melhores condições, comprimindo ainda mais as margens de lucro. O terceiro fator foi a crise do petróleo de 1973, que elevou abruptamente os custos de energia, transporte e matéria-prima, agravando a queda de lucratividade já em curso. O quarto fator foi a concorrência dos produtos japoneses fabricados sob o modelo toyotista, que chegavam aos mercados ocidentais com custos menores e maior adaptabilidade à demanda do consumidor.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="relacao-causal">
+        <conteudo>
+        <paragrafo>A combinação dessas quatro forças tornou inviável manter a produção em massa com seus custos fixos elevados. Empresas e governos responderam com uma dupla reestruturação: produtiva e política. No plano produtivo, a rigidez fordista foi substituída pela produção flexível (estoques mínimos, terceirização de etapas, subcontratação de fornecedores). No plano político, o Estado de bem-estar social cedeu lugar a reformas neoliberais que reduziram direitos trabalhistas, privatizaram empresas públicas, flexibilizaram contratos e enfraqueceram sindicatos.</paragrafo>
+        <paragrafo>Um caso concreto ilustra essa sequência causal. Na indústria automobilística britânica dos anos 1970, a British Leyland empregava cerca de 170 mil trabalhadores sob o modelo fordista. Com a queda de lucratividade e greves frequentes, o governo Thatcher privatizou a empresa em 1988. A produção foi reorganizada com terceirização de componentes, redução do quadro de funcionários e contratos flexíveis. Em 2005, a sucessora MG Rover faliu com apenas 6 mil empregados diretos. A trajetória da British Leyland condensa a sequência: custos fixos elevados somados à resistência sindical produziram queda de lucratividade, que levou à reestruturação produtiva e à privatização, que resultaram em redução de direitos e empregos.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="consequencia">
+        <conteudo>
+        <paragrafo>A reestruturação produtiva gerou consequências que se desdobraram em duas direções.</paragrafo>
+        <paragrafo>A primeira direção foi a expansão do trabalho imaterial. Com a reorganização das cadeias produtivas, o setor de serviços cresceu ao lado da manufatura. Trabalho imaterial é aquele cujo produto é intangível: o desenvolvimento de software, a aula ministrada por um professor, o atendimento em telemarketing, a consulta médica. Trabalho material, por contraste, é aquele cujo produto é tangível: calçados, peças metálicas, automóveis. Essa expansão acompanhou a reestruturação toyotista e gerou um novo tipo de desigualdade: a desigualdade tecnológica. Trabalhadores com acesso à formação técnica e digital passaram a ocupar posições mais bem remuneradas no setor de serviços, enquanto trabalhadores sem essa formação permaneceram em funções manuais ou foram deslocados para o desemprego. A lógica de exploração, contudo, permaneceu: a extração de valor do trabalho pelo empregador não depende de o produto ser material ou imaterial.</paragrafo>
+        <paragrafo>A segunda direção foi a precarização do trabalho. Contratos temporários, vínculos intermitentes, perda de estabilidade e transferência dos riscos da empresa para o trabalhador individual tornaram-se traços estruturais do mercado de trabalho reestruturado. O trabalhador que antes contava com emprego formal, jornada regulamentada e proteção sindical passou, em muitos setores, a arcar sozinho com custos de saúde, transporte e aposentadoria. Essa precarização abriu caminho para formas ainda mais radicais de flexibilização, como a uberização, em que o trabalhador opera sem vínculo empregatício e arca com todos os custos de sua atividade.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>David Harvey (1935–)</nome>
+          <pais>EUA</pais>
+          <descricao>David Harvey (1935–), geógrafo britânico radicado nos Estados Unidos e professor da City University of New York, analisou a transição do fordismo para a produção flexível. Em *Condição Pós-Moderna* (1989), Harvey argumentou que a passagem para o regime de "acumulação flexível" não representou o fim da lógica capitalista, mas sua reorganização: a rigidez da produção em massa foi substituída pela flexibilidade de contratos, mercados e processos produtivos, e os custos dessa flexibilidade foram transferidos dos empregadores para os trabalhadores.</descricao>
+        </sidebar>
+      </secao>
+      <imagem ref="fig-01-02-01" tipo="sugerida">
+        <descricao>Diagrama de causalidade com duas colunas: à esquerda, quatro causas (queda de lucratividade, resistência operária, crise do petróleo 1973, concorrência toyotista); setas convergindo para bloco central "crise do fordismo"; à direita, quatro consequências (reestruturação produtiva, Estado neoliberal, expansão do trabalho imaterial, precarização)</descricao>
+      </imagem>
+      <nota_fonte>HARVEY, David. *Condição Pós-Moderna*. São Paulo: Loyola, 1992 [orig. 1989].</nota_fonte>
+      <sidebar tipo="verificacao">
+        <pergunta>Qual foi a principal causa da crise do fordismo que impulsionou a adoção da produção flexível?</pergunta>
+        <alternativas>
+          <alternativa letra="A">O aumento excessivo do número de trabalhadores nas fábricas, tornando impossível manter a linha de montagem.</alternativa>
+          <alternativa letra="B" correta="sim">A queda de lucratividade combinada com a rigidez do modelo produtivo diante de mercados instáveis e pressões trabalhistas.</alternativa>
+          <alternativa letra="C">A proibição governamental do trabalho em turnos noturnos, que reduziu drasticamente a capacidade produtiva das indústrias.</alternativa>
+        </alternativas>
+        <justificativa>A crise do fordismo resultou da combinação entre rigidez produtiva, queda de lucratividade e conflitos trabalhistas, levando empresas a adotarem terceirização e modelos flexíveis como resposta estrutural.</justificativa>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-4" palavras="1110" operacao="Comparar">
+      <micro-habilidade>Comparar os modelos de organização da produção quanto ao controle do trabalho, ao perfil do trabalhador exigido e às implicações para direitos e resistência sindical</micro-habilidade>
+      <secao id="sec-1" tipo="comparacao">
+        <conteudo>
+        <paragrafo>As seções anteriores reconstituíram a sucessão histórica dos modelos produtivos e as causas da transição entre eles. A comparação direta entre o modelo taylor-fordista e o modelo toyotista permite identificar o que mudou em quatro aspectos: controle do trabalho, perfil do trabalhador exigido, implicações para direitos trabalhistas e implicações para a resistência sindical. O taylorismo e o fordismo são tratados conjuntamente porque o fordismo incorporou e ampliou o método taylorista, e ambos compartilham a mesma lógica de controle.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="conclusao-parcial">
+        <conteudo>
+        <paragrafo>A comparação revela que a passagem do taylor-fordismo ao toyotismo não representou a eliminação do controle sobre o trabalhador, mas a mudança de sua forma. O controle externo (esteira, capataz, cronômetro) foi substituído pelo controle internalizado (metas, CCQ, autogestão). O operário especializado em tarefa única deu lugar ao trabalhador polivalente que acumula funções. O Welfare State, que protegia o trabalhador fordista e sustentava o consumo em massa, cedeu lugar ao Estado neoliberal, que flexibiliza contratos e transfere riscos para o trabalhador. A organização sindical de massa, possibilitada pela concentração fabril, foi substituída pela dispersão provocada pela terceirização e pela individualização das relações de trabalho.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Taiichi Ohno (1912–1990)</nome>
+          <pais>Japão</pais>
+          <descricao>Taiichi Ohno (1912–1990), engenheiro industrial japonês, criou o Sistema Toyota de Produção. Em *O Sistema Toyota de Produção: Além da Produção em Larga Escala* (1988, original japonês de 1978), Ohno argumentou que a eliminação total do desperdício exige dois pilares, a automação com toque humano (jidoka) e o just-in-time, e que o trabalhador deve ser capaz de operar múltiplas máquinas e identificar defeitos sem depender de supervisão externa.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-3" tipo="sintese">
+        <conteudo>
+        <paragrafo>Os modelos taylorista-fordista e toyotista diferem em três aspectos centrais. Quanto ao controle do trabalho, o taylor-fordismo emprega controle externo e visível (esteira, cronômetro, capataz), enquanto o toyotismo internaliza o controle no próprio trabalhador (metas, CCQ, autogestão). Quanto ao perfil do trabalhador, o taylor-fordismo exige um operário especializado em tarefa única e destituído de poder decisório, enquanto o toyotismo exige um trabalhador polivalente que acumula funções e gerencia sua própria atividade. Quanto às implicações para direitos e resistência sindical, o taylor-fordismo se articula com o Welfare State e a organização sindical de massa em grandes fábricas, enquanto o toyotismo se articula com a reestruturação neoliberal, a terceirização e a dispersão dos trabalhadores, dificultando a organização coletiva autônoma.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-4" tipo="encadeamento">
+        <conteudo>
+        <paragrafo>Estabelecidas as diferenças entre os modelos produtivos do século XX, o próximo capítulo examina como as transformações contemporâneas, incluindo uberização, plataformização e divisão sexual do trabalho, radicalizam e reconfiguram a lógica de controle internalizado, polivalência e precarização identificadas no toyotismo.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-02-02" tipo="sugerida">
+        <descricao>Quadro comparativo com 2 colunas (Modelo taylor-fordista / Modelo toyotista) e 4 linhas (Controle do trabalho / Perfil do trabalhador / Direitos trabalhistas / Resistência sindical), resumindo os contrastes centrais de cada aspecto</descricao>
+      </imagem>
+      <nota_fonte>OHNO, Taiichi. *Toyota Production System: Beyond Large-Scale Production*. Portland: Productivity Press, 1988 [orig. japonês 1978].</nota_fonte>
+      <sidebar tipo="verificacao">
+        <pergunta>Ao comparar fordismo e toyotismo quanto ao perfil do trabalhador exigido, qual afirmação é correta?</pergunta>
+        <alternativas>
+          <alternativa letra="A">Ambos exigem trabalhadores altamente especializados em uma única função, sem necessidade de comunicação entre setores.</alternativa>
+          <alternativa letra="B" correta="sim">O fordismo prioriza o trabalhador especializado em tarefas repetitivas fixas, enquanto o toyotismo demanda um trabalhador polivalente, capaz de executar múltiplas funções.</alternativa>
+          <alternativa letra="C">O toyotismo elimina totalmente a necessidade de qualificação profissional, pois as máquinas automatizam todas as decisões.</alternativa>
+        </alternativas>
+        <justificativa>No fordismo, o trabalhador executa uma tarefa repetitiva e fixa; já no toyotismo, exige-se polivalência — o trabalhador deve dominar diferentes etapas do processo e participar de equipes multifuncionais.</justificativa>
+      </sidebar>
+    </bloco>
+
+  </corpo>
+
+  <rodape>
+    <sidebar tipo="aplicar-agora">
+      <enunciado>Leia a situação abaixo e responda à pergunta.
+
+    Uma grande rede de fast-food opera da seguinte forma: em uma unidade tradicional, cada funcionário tem uma função fixa e imutável — um só frita batatas, outro só monta sanduíches, outro só opera o caixa. O gerente determina o tempo máximo para cada etapa e monitora o desempenho individualmente. Já em uma unidade recém-reformulada, os funcionários são treinados para executar qualquer função do turno, participam de reuniões rápidas diárias para identificar gargalos, e a escala é ajustada semanalmente conforme a demanda prevista.
+
+    **Pergunta:** Compare as duas unidades da rede de fast-food identificando, para cada uma, o modelo produtivo que melhor a representa (taylorismo/fordismo ou toyotismo). Indique pelo menos **duas características** que justifiquem sua escolha em cada caso.</enunciado>
+      <resposta>**Unidade tradicional → Taylorismo/Fordismo**
+    Características identificáveis: (1) divisão rígida de tarefas, com cada trabalhador especializado em uma única função fixa — traço central do taylorismo; (2) controle cronometrado do tempo de execução de cada etapa pela gerência, também típico do taylorismo; (3) ausência de participação do trabalhador nas decisões sobre o processo — a gerência planeja, o operário executa.
+
+    **Unidade reformulada → Toyotismo**
+    Características identificáveis: (1) polivalência dos trabalhadores, que dominam múltiplas funções e podem ser realocados conforme a necessidade — marca registrada do toyotismo; (2) participação dos funcionários na identificação de problemas (reuniões para detectar gargalos), aproximando-se do conceito de 'kaizen' (melhoria contínua); (3) flexibilidade da escala conforme demanda, característica da produção enxuta e just-in-time.
+
+    **Conclusão:** A comparação evidencia que o modelo fordista/taylorista prioriza controle centralizado e especialização rígida, enquanto o toyotismo transfere parte da responsabilidade ao trabalhador, exigindo maior qualificação e envolvimento, mas também intensificando o trabalho de forma mais difusa e menos visível.</resposta>
+    </sidebar>
+  </rodape>
+
+</capitulo>

@@ -1,0 +1,9 @@
+2026-06-15 15:07:28,221 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-15 15:07:30,031 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-15 15:08:34,552 [INFO] __main__:     →  write_file: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-15 15:08:34,601 [INFO] __main__:     ✓  Salvo: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-15 15:08:35,831 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-15 15:08:52,647 [INFO] __main__:   ✓  Agente 0 concluiu (2 iteração(ões)) | in=3 out=5014 cache_create=12679 cache_read=8621
+2026-06-15 15:08:52,661 [INFO] __main__: CSV carregado: 3 capítulos (formato com andaime)
+2026-06-15 15:08:52,672 [INFO] __main__: ✓  Schema do CSV validado.

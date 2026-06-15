@@ -672,6 +672,66 @@ Tomadas em conjunto, essas análises revelam...
 
 ---
 
+## MARCADORES DE IMAGEM
+
+O pipeline não insere imagens no material — o professor as busca e o InDesign as posiciona. Seu papel é indicar **onde** deve haver uma imagem e **o que** ela deve mostrar, inserindo um marcador HTML comment no texto:
+
+```
+<!-- [IMAGEM: Descrição detalhada do que a imagem deve mostrar] -->
+```
+
+### Quando inserir
+
+Insira um marcador **imediatamente após o parágrafo** que o visual ilustraria, nos seguintes casos:
+
+- **Diagrama comparativo**: operação Comparar com 2 ou mais perspectivas → quadro com colunas por autor/perspectiva
+- **Linha do tempo**: operação Sequenciar com 3+ etapas históricas → linha do tempo com marcos e datas
+- **Processo em etapas**: operação Mapear causalidade com encadeamento claro → diagrama causa → efeito
+- **Dados estatísticos**: percentuais, proporções ou evolução numérica ao longo do tempo → gráfico de barras ou linha
+- **Mapa ou distribuição espacial**: fenômeno com dimensão geográfica explícita → mapa temático
+- **Classificação com subtipos**: operação Classificar com 3+ subtipos → quadro ou tabela com critérios e exemplos
+
+### Quando NÃO inserir
+
+- Quando o parágrafo não tem dado visual concreto (apenas prosa argumentativa)
+- Quando a operação não exige visualização (Definir com exemplo simples já é autoexplicativo)
+- Quando já há um marcador no mesmo bloco para o mesmo tipo de visual
+
+### Regras de quantidade e descrição
+
+- **Máximo: 2 marcadores por bloco** (seção delimitada por `###`)
+- **Mínimo de 1 bloco sem imagem** por capítulo — nem tudo precisa de visual
+- A descrição deve ser **específica o suficiente** para o professor saber o que buscar ou criar:
+
+```
+<!-- [IMAGEM: Linha do tempo com 4 marcos: solidariedade mecânica (pré-industrial) → industrialização → solidariedade orgânica (sec. XIX) → sociedades complexas (atual)] -->
+```
+
+```
+<!-- [IMAGEM: Quadro comparativo com 3 colunas (Durkheim / Marx / Weber) e 3 linhas (Foco analítico / Causa da desigualdade / Papel do indivíduo)] -->
+```
+
+```
+<!-- [IMAGEM: Gráfico de barras mostrando proporção da população urbana no Brasil em 1950 (36%) e 1980 (67%)] -->
+```
+
+### Posição no texto
+
+O marcador vai em linha separada, imediatamente **após** o parágrafo que ele ilustra, **antes** de qualquer `<!-- [AUTOR] -->` ou `<!-- [FONTE] -->` da seção:
+
+```markdown
+<!-- [CAUSA] -->
+A urbanização acelerada resultou de dois processos simultâneos...
+<!-- [/CAUSA] -->
+
+<!-- [IMAGEM: Diagrama mostrando seta dupla entre expulsão rural (mecanização) e atração urbana (industrialização), convergindo para crescimento das cidades] -->
+
+<!-- [RELACAO_CAUSAL] -->
+A combinação dessas forças produziu um deslocamento sem paralelo...
+```
+
+---
+
 ## Proibições de estilo
 
 - Travessões para aposto — use vírgulas ou parênteses
@@ -702,4 +762,5 @@ Antes de salvar `texto.md`:
 - [ ] AUTOREs aparecem APÓS suas ideias serem desenvolvidas, nunca antes?
 - [ ] Nenhum bloco VERIFICACAO no texto?
 - [ ] SINTESE_FINAL responde literalmente à pergunta do capítulo?
+- [ ] Inseriu marcadores `<!-- [IMAGEM: ...] -->` nos momentos adequados (máx. 2 por bloco, descrição específica)?
 - [ ] Nenhuma das proibições de estilo foi violada?

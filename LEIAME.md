@@ -231,11 +231,12 @@ Melhora transições entre blocos, naturalidade das frases e encadeamento entre 
 
 **Código Python — não usa LLM.**
 
-Recebe: `texto.md` (processado pelo Agente 4) + verificações geradas pelo `verificador.py`.
+Recebe: `texto.md` (processado pelo Agente 4) + verificações geradas pelo `verificador.py` + micro-habilidades extraídas do CSV pelo pipeline.
 
 Produz: `[capitulo].xml` — capítulo estruturado para InDesign, com:
 - Tags como `<secao tipo="Definir">`, `<bloco tipo="AUTOR">`, `<indicacao-imagem>`
 - `<mapa-progressao>` — mapa visual das operações do capítulo (injetado após `</cabecalho>`)
+- `<micro-habilidade>` — primeiro filho de cada `<bloco>`, declara a micro-habilidade desenvolvida naquela seção (extraída diretamente do CSV, sem custo de LLM)
 - `<sidebar tipo="verificacao">` — pergunta de múltipla escolha ao final de cada seção com `VERIFICACAO: Sim`
 - `<sidebar tipo="aplicar-agora">` — mini-caso no rodapé com resposta oculta para o professor
 
@@ -310,6 +311,12 @@ Em caso de conflito, os princípios pedagógicos prevalecem.
 ---
 
 ## Histórico de modificações
+
+**2026-06-15 — Anúncio de micro-habilidade no XML**
+- `pipeline.py`: `micro_habs` (dict `{idx_seção: texto}`) extraído do CSV em `run_pipeline` e propagado pelo `cap_info` até `run_agente5`
+- `formatador.py`: `formatar_capitulo`, `render_xml` e `render_bloco` recebem `micro_habs`; cada `<bloco>` agora abre com `<micro-habilidade>texto da micro-hab</micro-habilidade>` como primeiro filho
+- Implementação 100% determinística em Python — sem custo de LLM, sem chamada à API; o CSV é a fonte da verdade
+- No InDesign: basta mapear a tag `<micro-habilidade>` ao estilo visual desejado (faixa, ícone de margem, etc.)
 
 **2026-06-13 — Fase 3: qualidade e eficiência**
 - E7: modelo por agente (`AGENT_MODELS` dict, variáveis de ambiente por agente)

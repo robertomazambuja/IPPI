@@ -162,7 +162,7 @@ def collect_block(tokens: List[Token], start: int) -> Tuple[str, str, List[Token
     btype = t.text
     body  = t.body
 
-    if btype == "TIPO_OPERACAO":
+    if btype in ("TIPO_OPERACAO", "IMAGEM"):
         return btype, body, [], start + 1
 
     inner: List[Token] = []
@@ -199,6 +199,10 @@ def collect_until_boundary(tokens: List[Token], start: int) -> Tuple[List[Token]
 # Intermediate representation
 # ---------------------------------------------------------------------------
 
+class ImagemNode:
+    def __init__(self, descricao: str):
+        self.descricao = descricao
+
 class AutorNode:
     def __init__(self, nome, pais, ref, descricao):
         self.nome = nome; self.pais = pais
@@ -231,6 +235,7 @@ class BlocoNode:
         self.operacao = operacao
         self.secoes: List[SecaoNode] = []
         self.fontes:  List[FonteNode] = []
+        self.imagens: List[ImagemNode] = []
         self.palavras = 0
 
 class RodapeNode:
@@ -271,6 +276,10 @@ def parse_section_group(titulo: str, toks: List[Token], bloco_idx: int) -> Bloco
         if btype == "TIPO_OPERACAO":
             if not bloco.operacao:
                 bloco.operacao = body
+            continue
+
+        if btype == "IMAGEM":
+            bloco.imagens.append(ImagemNode(body))
             continue
 
         if btype == "AUTOR":
@@ -522,7 +531,9 @@ def render_secao(sec: SecaoNode, sec_id: str, lvl: int) -> str:
 
 def render_bloco(bloco: BlocoNode, lvl: int,
                  verificacoes: Optional[Dict[int, str]] = None,
-                 micro_habs: Optional[Dict[int, str]] = None) -> str:
+                 micro_habs: Optional[Dict[int, str]] = None,
+                 cap_id: str = "",
+                 img_counter: Optional[List[int]] = None) -> str:
     pad = "  " * lvl
     op = xe(bloco.operacao) if bloco.operacao else ""
     lines = [f'{pad}<bloco id="bloco-{bloco.idx}" palavras="{bloco.palavras}" operacao="{op}">']
@@ -538,6 +549,17 @@ def render_bloco(bloco: BlocoNode, lvl: int,
 
     for sec in bloco.secoes:
         lines.append(render_secao(sec, next_sec_id(), lvl + 1))
+
+    # Referências de imagem para InDesign (posicionadas após as seções do bloco)
+    if bloco.imagens:
+        if img_counter is None:
+            img_counter = [0]
+        for img in bloco.imagens:
+            img_counter[0] += 1
+            ref = f"fig-{cap_id}-{img_counter[0]:02d}" if cap_id else f"fig-{bloco.idx:02d}-{img_counter[0]:02d}"
+            lines.append(f'{pad}  <imagem ref="{ref}" tipo="sugerida">')
+            lines.append(f'{pad}    <descricao>{xe(img.descricao)}</descricao>')
+            lines.append(f'{pad}  </imagem>')
 
     for fonte in bloco.fontes:
         if fonte.tipo:
@@ -596,6 +618,7 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
     parts.append("")
     acum = 0
     LIMIAR = 1300
+    img_counter: List[int] = [0]  # contador global de imagens por capítulo
     for bloco in blocos:
         will_cross = acum + bloco.palavras > LIMIAR
         if will_cross and acum > 0:
@@ -604,7 +627,8 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f'    <quebra tipo="pagina" sugestao="{sugestao}"/>')
             parts.append("")
             acum = 0
-        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes, micro_habs=micro_habs))
+        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes, micro_habs=micro_habs,
+                                  cap_id=cap_id, img_counter=img_counter))
         parts.append("")
         acum += bloco.palavras
 

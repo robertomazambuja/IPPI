@@ -34,6 +34,7 @@ TIPOS_CONHECIDOS: frozenset = frozenset({
     "APLICACAO", "RESULTADO",
     "AUTOR", "FONTE", "FONTE_PRIMARIA", "VERIFICACAO",
     "SINTESE", "ENCADEAMENTO",
+    "IMAGEM",  # marcador de referência de imagem para InDesign (standalone, sem tag de fechamento)
 })
 
 # Quatro campos obrigatorios do CONTEXTO_OPERACAO
@@ -46,7 +47,10 @@ _CAMPOS_CONTEXTO = [
 
 # Tipos que sao marcadores standalone (sem tag de fechamento correspondente).
 # Nao sao empilhados no block_stack.
-TIPOS_STANDALONE: frozenset = frozenset({"TIPO_OPERACAO"})
+TIPOS_STANDALONE: frozenset = frozenset({
+    "TIPO_OPERACAO",
+    "IMAGEM",  # referência de imagem para InDesign — sem tag de fechamento
+})
 
 # ---------------------------------------------------------------------------
 # Regexes
