@@ -521,10 +521,15 @@ def render_secao(sec: SecaoNode, sec_id: str, lvl: int) -> str:
     return "\n".join(lines)
 
 def render_bloco(bloco: BlocoNode, lvl: int,
-                 verificacoes: Optional[Dict[int, str]] = None) -> str:
+                 verificacoes: Optional[Dict[int, str]] = None,
+                 micro_habs: Optional[Dict[int, str]] = None) -> str:
     pad = "  " * lvl
     op = xe(bloco.operacao) if bloco.operacao else ""
     lines = [f'{pad}<bloco id="bloco-{bloco.idx}" palavras="{bloco.palavras}" operacao="{op}">']
+
+    # Micro-habilidade desenvolvida neste bloco (vem do CSV via pipeline)
+    if micro_habs and bloco.idx in micro_habs:
+        lines.append(f'{pad}  <micro-habilidade>{xe(micro_habs[bloco.idx])}</micro-habilidade>')
 
     sec_counter = [0]
     def next_sec_id():
@@ -553,7 +558,8 @@ def render_bloco(bloco: BlocoNode, lvl: int,
 def render_xml(titulo: str, cap_id: str, contexto: dict,
                blocos: List[BlocoNode], rodape: RodapeNode,
                verificacoes: Optional[Dict[int, str]] = None,
-               aplicar_agora: Optional[str] = None) -> str:
+               aplicar_agora: Optional[str] = None,
+               micro_habs: Optional[Dict[int, str]] = None) -> str:
     total_words = sum(b.palavras for b in blocos)
 
     parts = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -598,7 +604,7 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f'    <quebra tipo="pagina" sugestao="{sugestao}"/>')
             parts.append("")
             acum = 0
-        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes))
+        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes, micro_habs=micro_habs))
         parts.append("")
         acum += bloco.palavras
 
@@ -640,6 +646,7 @@ def formatar_capitulo(
     output_dir: Path,
     verificacoes: Optional[Dict[int, str]] = None,
     aplicar_agora: Optional[str] = None,
+    micro_habs: Optional[Dict[int, str]] = None,
 ) -> Optional[Path]:
     """
     Converte texto_path (markdown normalizado) em XML.
@@ -652,8 +659,10 @@ def formatar_capitulo(
     try:
         titulo, cap_id, contexto, blocos, rodape = parse_document(texto_path)
         xml_str = render_xml(titulo, cap_id, contexto, blocos, rodape,
-                             verificacoes=verificacoes, aplicar_agora=aplicar_agora)
+                             verificacoes=verificacoes, aplicar_agora=aplicar_agora,
+                             micro_habs=micro_habs)
 
+ 
         output_dir.mkdir(parents=True, exist_ok=True)
         out_path = output_dir / (texto_path.stem + ".xml")
         out_path.write_text(xml_str, encoding="utf-8")

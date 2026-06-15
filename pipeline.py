@@ -817,6 +817,7 @@ def run_agente5(
     capitulo: str,
     apostila_name: str,
     core_path: Optional[Path] = None,
+    micro_habs: Optional[Dict[int, str]] = None,
 ) -> Optional[Path]:
     """Agente 5 — Formatador XML (determinístico, sem LLM).
 
@@ -844,7 +845,8 @@ def run_agente5(
     try:
         out_path = formatar_capitulo(texto_path, output_dir,
                                      verificacoes=verificacoes,
-                                     aplicar_agora=aplicar_agora)
+                                     aplicar_agora=aplicar_agora,
+                                     micro_habs=micro_habs)
         if out_path:
             log_print(f"  ✓ XML gerado: {out_path.name}", indent=1)
             return out_path
@@ -1061,6 +1063,7 @@ def _run_cap_stages_2_5(
                 client, texto_path, u_idx, c_idx,
                 unidade_slug, capitulo, apostila_name,
                 core_path=core_path,
+                micro_habs=cap_info.get("micro_habs"),
             ):
                 log_print("✗  Agente 5 não produziu output.", indent=1)
 
@@ -1167,6 +1170,11 @@ def run_pipeline(
 
             # Só enfileira estágios 2-5 se há algo para fazer
             if any(a in agentes for a in [2, 3, 4, 5]):
+                micro_habs = {
+                    sec: row.get(f"micro_hab_{sec}", "").strip()
+                    for sec in range(1, 7)
+                    if row.get(f"micro_hab_{sec}", "").strip()
+                }
                 caps_prontos.append({
                     "core_path":    core_path,
                     "u_idx":        u_idx,
@@ -1177,6 +1185,7 @@ def run_pipeline(
                     "capitulo":     capitulo,
                     "disciplina":   disciplina,
                     "filename":     filename,
+                    "micro_habs":   micro_habs,
                 })
 
     # ── FASE 2: Agentes 2→5 — paralelo quando workers > 1 ──────────────────
