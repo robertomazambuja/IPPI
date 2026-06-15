@@ -16,7 +16,7 @@ Trabalho é toda atividade humana intencional que transforma a natureza ou as re
 
 Essa amplitude exige distinguir trabalho de dois termos próximos: emprego e labor. Emprego é um vínculo formal remunerado, regulado por contrato, com jornada, salário e obrigações definidas. Labor é o esforço físico repetitivo voltado à manutenção biológica da vida, orientado pela necessidade imediata de sobrevivência.
 
-Três situações concretas ajudam a separar esses termos. Uma pessoa que cuida diariamente de um familiar idoso em casa realiza trabalho: trata-se de uma atividade intencional que produz bem-estar e reorganiza relações familiares. Essa pessoa, porém, não tem emprego, pois não há contrato nem remuneração. Um operador de caixa de supermercado tem emprego: possui vínculo formal, salário e jornada definida. Um lavrador que capina a terra sob sol para garantir a subsistência da família realiza labor: esforço físico repetitivo orientado à sobrevivência imediata.
+Três situações concretas tornam essa distinção mais precisa. Uma pessoa que cuida diariamente de um familiar idoso em casa realiza trabalho: trata-se de uma atividade intencional que produz bem-estar e reorganiza relações familiares. Essa pessoa, porém, não tem emprego, pois não há contrato nem remuneração. Situação diferente é a do operador de caixa de supermercado, que tem emprego: possui vínculo formal, salário e jornada definida. Já o lavrador que capina a terra sob sol para garantir a subsistência da família realiza labor: esforço físico repetitivo orientado à sobrevivência imediata.
 
 A distinção entre esses três termos importa para a Sociologia porque permite identificar atividades que produzem valor social sem serem reconhecidas como emprego. O cuidado doméstico, por exemplo, é trabalho que sustenta a vida cotidiana, mas não aparece em estatísticas de emprego nem gera remuneração. Sem essa distinção, a análise sociológica se limita ao emprego formal e deixa de fora formas de trabalho que estruturam relações sociais inteiras.
 <!-- [/DEFINICAO] -->
@@ -26,7 +26,6 @@ A distinção entre esses três termos importa para a Sociologia porque permite 
 <!-- [TIPO_OPERACAO: Sequenciar] -->
 
 <!-- [SEQUENCIA] -->
-<!-- AVISO_AGENTE5: tipo SEQUENCIA não mapeado — gerar secao tipo="generico" -->
 A divisão do trabalho nas sociedades humanas não se manteve estável ao longo do tempo. Ela seguiu um processo de complexificação que alterou a forma como as sociedades se mantêm coesas.
 
 Nas sociedades pré-industriais (até o século XVIII), a divisão do trabalho era mínima. Em uma comunidade rural do século XVII, a maioria dos membros plantava, colhia e construía suas próprias ferramentas. As tarefas eram semelhantes e compartilhadas, e a coesão do grupo vinha de crenças, valores e costumes comuns. Essa forma de coesão, baseada na semelhança entre os membros, pode ser chamada de solidariedade mecânica: o grupo se mantém unido porque seus integrantes são parecidos entre si e seguem as mesmas regras morais.
@@ -51,13 +50,13 @@ DURKHEIM, Émile. *Da Divisão do Trabalho Social*. São Paulo: Martins Fontes, 
 <!-- [TIPO_OPERACAO: Mapear causalidade] -->
 
 <!-- [CAUSA] -->
-Uma análise diferente do trabalho parte não da coesão social, mas da estrutura de propriedade. No modo de produção capitalista, o trabalhador está separado dos meios de produção (ferramentas, máquinas, terra). Ele não possui os instrumentos com os quais trabalha. Essa separação tem uma consequência direta: o trabalhador precisa vender sua força de trabalho ao proprietário dos meios de produção em troca de um salário. Além disso, a organização do trabalho industrial fragmenta as tarefas. O trabalhador executa operações repetitivas, sem controle sobre o processo completo de produção nem sobre o produto final. O resultado desse processo é apropriado pelo proprietário, que o vende e retém o lucro.
+Uma análise diferente do trabalho parte não da coesão social, mas da estrutura de propriedade. No modo de produção capitalista, o trabalhador está separado dos meios de produção (ferramentas, máquinas, terra). Ele não possui os instrumentos com os quais trabalha. Essa separação tem uma consequência direta: o trabalhador precisa vender sua força de trabalho ao proprietário dos meios de produção em troca de um salário. A isso se soma outro mecanismo: a organização do trabalho industrial fragmenta as tarefas, de modo que o trabalhador executa operações repetitivas sem controle sobre o processo completo de produção nem sobre o produto final. O resultado desse processo é apropriado pelo proprietário, que o vende e retém o lucro.
 
-O caso de um operário de uma fábrica de calçados em Franca (SP) torna esse mecanismo visível. Esse operário corta couro durante toda a jornada sem participar das demais etapas da produção. Ele não decide o modelo do sapato, não define o preço de venda e não fica com o produto final. O sapato é vendido pela empresa, que retém o lucro. O operário recebe um salário fixo.
+Para tornar esse mecanismo visível, tome-se o caso de um operário de uma fábrica de calçados em Franca (SP). Esse operário corta couro durante toda a jornada sem participar das demais etapas da produção. Ele não decide o modelo do sapato, não define o preço de venda e não fica com o produto final. O sapato é vendido pela empresa, que retém o lucro. O operário recebe um salário fixo.
 <!-- [/CAUSA] -->
 
 <!-- [RELACAO_CAUSAL] -->
-A combinação dessas duas forças — a separação dos meios de produção e a fragmentação do processo de trabalho — produz um fenômeno específico: a alienação. A alienação opera em quatro dimensões simultâneas. O trabalhador se aliena em relação ao produto, porque não reconhece o que produziu como seu. Aliena-se em relação ao processo, porque não controla como trabalha. Aliena-se em relação a si mesmo, porque o trabalho não realiza suas capacidades humanas, tornando-se apenas meio de sobrevivência. E aliena-se em relação aos outros trabalhadores, porque a competição por empregos e salários substitui a cooperação. O operário de Franca está alienado nessas quatro dimensões: não se reconhece no sapato, não controla o processo, trabalha por necessidade (não por realização) e compete com outros operários por sua posição na fábrica.
+A combinação dessas duas forças — a separação dos meios de produção e a fragmentação do processo de trabalho — produz um fenômeno específico: a alienação. A alienação opera em quatro dimensões simultâneas: em relação ao produto, porque o trabalhador não reconhece o que produziu como seu; em relação ao processo, porque não controla como trabalha; em relação a si mesmo, porque o trabalho não realiza suas capacidades humanas, tornando-se apenas meio de sobrevivência; e em relação aos outros trabalhadores, porque a competição por empregos e salários substitui a cooperação. O operário de Franca está alienado nessas quatro dimensões: não se reconhece no sapato, não controla o processo, trabalha por necessidade (não por realização) e compete com outros operários por sua posição na fábrica.
 <!-- [/RELACAO_CAUSAL] -->
 
 <!-- [CONSEQUENCIA] -->
@@ -87,7 +86,7 @@ Para Durkheim, o trabalho e sua divisão social são a base da coesão nas socie
 <!-- [PERSPECTIVA: Karl Marx (1818–1883)] -->
 #### Marx: trabalho como exploração
 
-A análise de Marx parte de um ângulo oposto: o trabalho no capitalismo é, antes de tudo, fonte de exploração e conflito de classes. A divisão do trabalho não produz coesão, mas alienação: o trabalhador perde o controle sobre o processo e o produto de sua atividade, e o resultado é apropriado pelo proprietário dos meios de produção. Isso gera duas classes com interesses antagônicos (burguesia e proletariado) e uma desigualdade estrutural que se reproduz sistematicamente. A causa da desigualdade, nessa perspectiva, é a propriedade privada dos meios de produção. O indivíduo é determinado pela posição de classe que ocupa na estrutura produtiva.
+A análise de Marx parte de um ângulo oposto: o trabalho no capitalismo é, antes de tudo, fonte de exploração e conflito de classes. A divisão do trabalho não produz coesão, mas alienação: o trabalhador perde o controle sobre o processo e o produto de sua atividade, e o resultado é apropriado pelo proprietário dos meios de produção. Desse processo emergem duas classes com interesses antagônicos, burguesia e proletariado, e uma desigualdade estrutural que se reproduz sistematicamente. A causa da desigualdade, nessa perspectiva, é a propriedade privada dos meios de produção. O indivíduo é determinado pela posição de classe que ocupa na estrutura produtiva.
 <!-- [/PERSPECTIVA] -->
 
 <!-- [PERSPECTIVA: Max Weber (1864–1920)] -->
@@ -103,7 +102,7 @@ Max Weber (1864–1920), sociólogo e economista alemão e um dos fundadores da 
 <!-- [/PERSPECTIVA] -->
 
 <!-- [CONCLUSAO_PARCIAL] -->
-**Convergências e divergências:** as três perspectivas convergem em reconhecer que o trabalho organiza a vida social e produz formas de desigualdade. Divergem quanto aos mecanismos. Durkheim enfatiza a função integradora do trabalho e localiza o problema na falta de regulação (anomia). Marx identifica a exploração econômica como motor da desigualdade e vê no conflito de classes a dinâmica central da sociedade. Weber acrescenta que a desigualdade opera em múltiplas dimensões (classe, status, poder) e que o sentido cultural atribuído ao trabalho é parte constitutiva do capitalismo.
+As três perspectivas convergem em reconhecer que o trabalho organiza a vida social e produz formas de desigualdade. Divergem quanto aos mecanismos. Durkheim enfatiza a função integradora do trabalho e localiza o problema na falta de regulação (anomia). Marx identifica a exploração econômica como motor da desigualdade e vê no conflito de classes a dinâmica central da sociedade. Weber acrescenta que a desigualdade opera em múltiplas dimensões (classe, status, poder) e que o sentido cultural atribuído ao trabalho é parte constitutiva do capitalismo.
 
 Cada perspectiva captura algo que as outras deixam em segundo plano. Durkheim explica como a divisão do trabalho pode gerar coesão, mas não analisa a exploração. Marx revela a exploração estrutural, mas reduz a desigualdade à dimensão econômica. Weber mostra que prestígio e poder operam com lógicas próprias e que valores culturais moldam a economia, mas não oferece uma teoria unificada do conflito social.
 
@@ -115,7 +114,7 @@ WEBER, Max. *A Ética Protestante e o Espírito do Capitalismo*. São Paulo: Com
 <!-- [/FONTE] -->
 
 <!-- [SINTESE] -->
-Durkheim, Marx e Weber oferecem perspectivas distintas sobre o trabalho. Para Durkheim, o trabalho e sua divisão social são a base da coesão nas sociedades modernas, gerando solidariedade orgânica pela interdependência entre funções especializadas. Para Marx, o trabalho no capitalismo é fonte de alienação e de formação de classes antagônicas, porque o trabalhador é separado dos meios de produção e do produto de seu esforço. Para Weber, o trabalho é uma ação social orientada por sentido subjetivo e valores culturais, e a desigualdade que dele resulta não se reduz à dimensão econômica, abrangendo também status e poder.
+As três perspectivas analisadas ao longo deste capítulo partem de ângulos distintos para explicar o mesmo fenômeno. Para Durkheim, o trabalho e sua divisão social são a base da coesão nas sociedades modernas, gerando solidariedade orgânica pela interdependência entre funções especializadas. Para Marx, o trabalho no capitalismo é fonte de alienação e de formação de classes antagônicas, porque o trabalhador é separado dos meios de produção e do produto de seu esforço. Para Weber, o trabalho é uma ação social orientada por sentido subjetivo e valores culturais, e a desigualdade que dele resulta não se reduz à dimensão econômica, abrangendo também status e poder.
 <!-- [/SINTESE] -->
 
 <!-- [ENCADEAMENTO] -->

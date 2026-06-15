@@ -39,6 +39,8 @@ TIPO_MAP: Dict[str, str] = {
     "CAUSA": "causa",
     "CONSEQUENCIA": "consequencia",
     "RELACAO_CAUSAL": "relacao-causal",
+    "SEQUENCIA": "sequencia",
+    "ASPECTO": "aspecto",
     "INTRODUCAO_COMPARACAO": "introducao-comparacao",
     "COMPARACAO": "comparacao",
     "APLICACAO": "aplicacao",
@@ -659,5 +661,5 @@ def formatar_capitulo(
                     out_path.name, len(blocos), sum(b.palavras for b in blocos))
         return out_path
     except Exception as e:
-        logger.exception("[Formatador] Falha ao formatar %s: %s", texto_path, e)
+        logger.exception("[Formatador] Falha ao processar %s", texto_path)
         return None
