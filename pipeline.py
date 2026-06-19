@@ -1529,7 +1529,7 @@ def gerar_lista_verificacoes(apostila_dir: Path) -> None:
     linhas.append("   (ex.: verif-01-01-s3.json, aplicar-01-01.json).")
     linhas.append('3. Coloque todos os arquivos numa pasta chamada "verificacoes".')
     linhas.append("4. Use o schema de exemplo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4):")
-    linhas.append('   - tipo "verificacao": {tipo, ref, pergunta, alternativas{A,B,C}, correta, justificativa}')
+    linhas.append('   - tipo "verificacao": {tipo, ref, pergunta, alternativas{A,B,C,D}, correta, justificativa}')
     linhas.append('   - tipo "aplicar-agora": {tipo, ref, enunciado, resposta_comentada}')
     linhas.append("5. Envie a pasta \"verificacoes\" para o responsável técnico.")
     linhas.append(sep)

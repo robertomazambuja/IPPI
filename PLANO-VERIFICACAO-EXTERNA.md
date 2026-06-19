@@ -100,7 +100,8 @@ Um arquivo JSON por `ref`, com o **mesmo schema que o verificador.py já produz*
   "alternativas": {
     "A": "São sinônimos em Durkheim.",
     "B": "A mecânica vem da semelhança; a orgânica, da interdependência.",
-    "C": "Ambas surgem só nas sociedades industriais."
+    "C": "Ambas surgem só nas sociedades industriais.",
+    "D": "A orgânica é típica de sociedades tradicionais; a mecânica, das modernas."
   },
   "correta": "B",
   "justificativa": "A distinção central em Durkheim é o tipo de coesão."

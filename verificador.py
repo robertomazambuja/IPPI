@@ -99,11 +99,11 @@ def parse_core(core_path: Path) -> dict:
 
 _SYSTEM_PROMPT = """Você é um especialista em elaboração de exercícios para apostilas de Ensino Médio.
 Sua tarefa é gerar:
-1. Uma pergunta de verificação fechada (múltipla escolha com 3 alternativas) para cada seção indicada.
+1. Uma pergunta de verificação fechada (múltipla escolha com 4 alternativas) para cada seção indicada.
 2. Um mini-exercício "Aplicar agora" para o fechamento do capítulo.
 
 Regras:
-- Perguntas de verificação: 1 correta + 2 distratores plausíveis. Breves, diretas.
+- Perguntas de verificação: 1 correta + 3 distratores plausíveis. Breves, diretas.
 - "Aplicar agora": apresente um caso concreto novo (diferente dos exemplos do capítulo), peça ao aluno para aplicar a operação cognitiva principal, e forneça a resposta comentada entre tags <resposta> e </resposta> para que o professor possa ocultar no InDesign.
 - Linguagem acessível para alunos do Ensino Médio.
 - Devolva APENAS o JSON pedido, sem texto antes ou depois.
@@ -149,9 +149,10 @@ def _build_prompt(core_data: dict) -> str:
                     "alternativas": {
                         "A": "<alternativa A>",
                         "B": "<alternativa B>",
-                        "C": "<alternativa C>"
+                        "C": "<alternativa C>",
+                        "D": "<alternativa D>"
                     },
-                    "correta": "<A, B ou C>",
+                    "correta": "<A, B, C ou D>",
                     "justificativa": "<uma frase explicando por que é correta>"
                 }
             ],
@@ -180,7 +181,7 @@ def _render_verificacao_xml(v: dict) -> str:
     lines = ['<sidebar tipo="verificacao">']
     lines.append(f'  <pergunta>{xe(v.get("pergunta", ""))}</pergunta>')
     lines.append('  <alternativas>')
-    for letra in ("A", "B", "C"):
+    for letra in ("A", "B", "C", "D"):
         texto = alts.get(letra, "")
         correto_attr = ' correta="sim"' if letra == correta else ""
         lines.append(f'    <alternativa letra="{letra}"{correto_attr}>{xe(texto)}</alternativa>')
