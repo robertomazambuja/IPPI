@@ -45,7 +45,7 @@ from typing import Dict, List, Optional, Tuple
 from dotenv import load_dotenv
 from normalizador import normalizar_texto
 from formatador import formatar_capitulo
-from verificador import gerar_verificacoes
+from verificador import coletar_pontos_verificacao
 
 # ============================================================================
 # CONFIGURAÇÃO
@@ -948,26 +948,27 @@ def run_agente5(
 ) -> Optional[Path]:
     """Agente 5 — Formatador XML (determinístico, sem LLM).
 
-    Se core_path for fornecido, gera verificações fechadas e "Aplicar agora"
-    via verificador.py (chamada Haiku) e os injeta no XML.
+    Se core_path for fornecido, identifica (sem chamada à API) quais seções
+    precisam de verificação externa — ver PLANO-VERIFICACAO-EXTERNA.md.
+    A produção da verificação em si passou a ser um insumo externo, anexado
+    só na hora de montar o PDF (xml_to_pdf.py --verificacoes <pasta>).
     """
     output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
 
-    # Gera verificações se o core estiver disponível
+    # Identifica pontos de verificação no core (sem custo de token)
     verificacoes = None
     aplicar_agora = None
     if core_path and core_path.exists():
         try:
-            verificacoes, aplicar_agora = gerar_verificacoes(core_path, client,
-                model=AGENT_MODELS.get(0, "claude-haiku-4-5-20251001"))
+            pontos, aplicar_agora_ctx = coletar_pontos_verificacao(core_path)
             log_print(
-                f"  ✓ Verificações: {len(verificacoes or {})} seção(ões) | "
-                f"aplicar_agora={'sim' if aplicar_agora else 'não'}",
+                f"  ✓ Pontos de verificação identificados: {len(pontos or {})} seção(ões) | "
+                f"aplicar_agora={'sim' if aplicar_agora_ctx else 'não'}",
                 indent=1,
             )
         except Exception as e:
-            log_print(f"  ⚠  Verificador falhou ({e}) — XML sem verificações", indent=1)
+            log_print(f"  ⚠  Verificador falhou ({e}) — XML sem marcadores de verificação", indent=1)
 
     try:
         out_path = formatar_capitulo(texto_path, output_dir,

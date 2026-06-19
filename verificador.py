@@ -205,7 +205,47 @@ def _render_aplicar_agora_xml(aa: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-# API pública
+# Coleta determinística (sem API) — usada pelo Agente 5 no fluxo de
+# verificação externa (ver PLANO-VERIFICACAO-EXTERNA.md)
+# ---------------------------------------------------------------------------
+
+def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Optional[dict]]:
+    """
+    Versão determinística (zero chamadas à API) do que `gerar_verificacoes()` fazia.
+
+    Lê o core.md e devolve só os dados mínimos para o Agente 5 marcar, no XML,
+    onde a verificação externa deve entrar — sem produzir a verificação em si.
+
+    Retorna:
+      - pontos: dict {idx_secao: {"tipo_operacao": str, "cabecalho": str}}
+        para cada seção com VERIFICACAO: Sim.
+      - aplicar_agora_ctx: dict {"operacao_principal": str, "pergunta_do_capitulo": str},
+        ou None se não houver nenhuma seção elegível no capítulo (mesmo critério
+        que `gerar_verificacoes()` já usava).
+    """
+    try:
+        core_data = parse_core(core_path)
+    except Exception as e:
+        logger.error("[Verificador] Falha ao parsear core %s: %s", core_path, e)
+        return {}, None
+
+    pontos: Dict[int, dict] = {
+        s["idx"]: {"tipo_operacao": s["tipo_operacao"], "cabecalho": s["cabecalho"]}
+        for s in core_data["secoes"] if s["verificacao"]
+    }
+    if not pontos:
+        logger.info("[Verificador] Nenhuma seção elegível em %s", core_path.name)
+        return {}, None
+
+    aplicar_agora_ctx = {
+        "operacao_principal": core_data["operacao_principal"],
+        "pergunta_do_capitulo": core_data["pergunta_do_capitulo"],
+    }
+    return pontos, aplicar_agora_ctx
+
+
+# ---------------------------------------------------------------------------
+# API pública (gerador via Haiku — mantido por ora; ver Fase 5 do plano)
 # ---------------------------------------------------------------------------
 
 def gerar_verificacoes(
