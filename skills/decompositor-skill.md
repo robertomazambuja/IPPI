@@ -11,13 +11,13 @@ Em caso de conflito entre este documento e a orientação, a orientação preval
 
 ## O que você produz
 
-Um arquivo `instrucoes.csv` salvo em:
+Um arquivo `instrucoes.json` salvo em:
 
 ```
-input/[nome-da-apostila]/instrucoes.csv
+input/[nome-da-apostila]/instrucoes.json
 ```
 
-Uma linha por capítulo. O CSV é validado pelo `pipeline.py` antes de acionar o Agente 1.
+Você produz **apenas a parte gerativa**: para cada capítulo, a lista de micro-habilidades com suas operações. O `pipeline.py` faz a serialização determinística para `instrucoes.csv` — ele preenche disciplina, unidade, pergunta, enunciado da habilidade, autores e conteúdos a partir do briefing e da matriz. **Você não escreve CSV e não recopia esses campos.** Isso elimina erros de formatação (vírgulas, aspas, alinhamento de colunas) e garante fidelidade à matriz.
 
 ---
 
@@ -41,14 +41,15 @@ Se qualquer campo obrigatório estiver ausente ou ambíguo, interrompa e solicit
 
 ## PASSO 2 — USAR A ENTRADA DA HABILIDADE
 
-A entrada da habilidade de `matriz-bncc.json` já está injetada no user message pelo pipeline — **não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Extraia:
+A entrada da habilidade de `matriz-bncc.json` já está injetada no user message pelo pipeline — **não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Extraia o que orienta suas micro-habilidades:
 
 ```
-enunciado          → texto completo da habilidade
 foco_cognitivo     → que tipo de pensamento ela exercita
 operacao_predominante → operação que encerrará cada sequência
 sequencia_pedagogica  → lista de operações em ordem (o seu template)
 ```
+
+O `enunciado` **não** precisa ser copiado por você — o pipeline o injeta no CSV direto da matriz (fonte de verdade). Use-o apenas como contexto para escrever micro-habilidades pertinentes.
 
 Você **não** usa `conteudos_por_area`. Esse campo é para o Agente 1. (A matriz BNCC não traz `autores_referencia`; os autores vêm do briefing.)
 
@@ -131,59 +132,59 @@ A `sequencia_pedagogica` é a mesma nos dois capítulos. O que muda é o objeto 
 
 ---
 
-## PASSO 4 — MONTAR CADA LINHA DO CSV
+## PASSO 4 — MONTAR O JSON
 
-Para cada capítulo, monte a linha completa:
+Produza um objeto JSON com uma entrada por capítulo. Para cada capítulo você fornece **somente** o nome do capítulo (exatamente como no briefing) e a lista de seções (micro-habilidade + operação).
 
-| Coluna | Valor |
-|---|---|
-| `disciplina` | do briefing |
-| `unidade` | do briefing |
-| `pergunta_unidade` | do briefing |
-| `capitulo` | do briefing |
-| `habilidade` | código + enunciado completo (ex: `EM13CHS402 — Analisar e comparar indicadores de emprego, trabalho e renda...`) |
-| `micro_hab_1` | micro-habilidade da operação 1 |
-| `operacao_secao_1` | operação 1 (ex: `Definir`) |
-| `micro_hab_2` | micro-habilidade da operação 2 |
-| `operacao_secao_2` | operação 2 |
-| ... | até micro_hab_6 / operacao_secao_6 |
-| `autores` | `autores_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
-| `conteudos_nucleares` | `conteudos_por_capitulo[nome_do_capitulo]`, separada por `; ` (se presente) |
+**Não** inclua `disciplina`, `unidade`, `pergunta_unidade`, `habilidade`/enunciado, `autores` nem `conteudos_nucleares` — o pipeline preenche esses campos a partir do briefing e da matriz. Sua responsabilidade é exclusivamente a arquitetura cognitiva (as micro-habilidades e a ordem das operações).
 
-**Atenção:** `autores` e `conteudos_nucleares` variam por capítulo — cada linha do CSV recebe os dados específicos do seu capítulo, exatamente como o professor definiu. O Agente 1 decide como usar cada item dentro das seções.
+### Formato exato
 
-**CRÍTICO — alinhamento de colunas:** O CSV sempre tem as 6 colunas opcionais (`micro_hab_5`, `operacao_secao_5`, `micro_hab_6`, `operacao_secao_6`), mesmo quando a sequência tem só 4 seções. Quando não usadas, deixe-as vazias com vírgulas explícitas. Exemplo correto para 4 seções:
-
-```
-...,micro_hab_4_valor,Comparar,,,,Karl Marx; Max Weber,capital cultural
-                                ↑↑↑↑
-                     4 vírgulas para os 4 slots vazios
+```json
+{
+  "capitulos": [
+    {
+      "capitulo": "Capítulo 1 — <nome exato do briefing>",
+      "secoes": [
+        {"micro_hab": "Definir estratificação como sistema de hierarquias e posições desiguais", "operacao": "Definir"},
+        {"micro_hab": "Classificar formas de estratificação segundo critérios econômicos, culturais e simbólicos", "operacao": "Classificar"},
+        {"micro_hab": "Sequenciar os processos que produzem e reproduzem a estratificação ao longo do tempo", "operacao": "Sequenciar"},
+        {"micro_hab": "Comparar interpretações sobre estratificação e desigualdade social", "operacao": "Comparar"}
+      ]
+    }
+  ]
+}
 ```
 
-Se escrever apenas 3 vírgulas, `autores` cai em `operacao_secao_6` e o pipeline falha.
+**Regras do JSON:**
+
+- `capitulo` deve ser **idêntico** (caractere a caractere) ao nome no briefing — é a chave de casamento usada pelo pipeline.
+- `secoes` tem entre 4 e 6 itens, na ordem da `sequencia_pedagogica`.
+- `operacao` deve ser uma das 7 operações válidas, com grafia exata.
+- Vírgulas dentro de `micro_hab` são livres — é JSON, não há risco de quebrar colunas.
 
 ---
 
 ## PASSO 5 — VALIDAR ANTES DE SALVAR
 
-Para cada linha do CSV, confirme:
+Antes de salvar o `instrucoes.json`, confirme para cada capítulo:
 
 **Operações:**
-- [ ] Entre 4 e 6 micro-habilidades?
+- [ ] Entre 4 e 6 seções?
 - [ ] Primeira operação é Nível 1 (Definir, Classificar ou Sequenciar)?
 - [ ] Última operação é a `operacao_predominante` da habilidade?
 - [ ] Nenhuma operação repetida em posições consecutivas?
-- [ ] Todas as operações estão na lista das 7 válidas?
+- [ ] Todas as operações estão na lista das 7 válidas (grafia exata)?
 
 **Micro-habilidades:**
 - [ ] Cada micro-habilidade começa com o verbo exato da operação?
 - [ ] Nenhuma micro-habilidade nomeia autores, fontes de dados ou exemplos específicos?
 - [ ] Cada micro-habilidade é específica ao tema do capítulo (não genérica)?
 
-**CSV:**
-- [ ] Nenhuma célula obrigatória está vazia?
-- [ ] Nenhuma célula contém quebra de linha?
-- [ ] `autores` e `conteudos_nucleares` de cada capítulo vieram do dict correto do briefing?
+**JSON:**
+- [ ] É JSON válido (parseável)?
+- [ ] Há um objeto por capítulo do briefing, com `capitulo` idêntico ao briefing?
+- [ ] Cada capítulo do briefing está presente?
 
 Se qualquer validação falhar, corrija antes de salvar.
 
@@ -220,13 +221,14 @@ Certo: copiar a lista completa para todos os capítulos
 
 ## CHECKLIST FINAL
 
-- [ ] Li `contexto/matriz-bncc.json` para a habilidade do briefing?
-- [ ] Usei a `sequencia_pedagogica` como template de operações?
+- [ ] Usei a entrada da habilidade injetada (`sequencia_pedagogica`) como template de operações?
 - [ ] Escrevi micro-habilidades no nível correto (operação + objeto conceitual)?
 - [ ] Nenhuma micro-habilidade nomeia autores ou fontes específicas?
-- [ ] `autores` e `conteudos_nucleares` de cada capítulo foram mapeados corretamente do briefing?
+- [ ] Há um objeto por capítulo, com `capitulo` idêntico ao briefing?
 - [ ] Validei todas as operações e micro-habilidades antes de salvar?
-- [ ] CSV salvo em `input/[apostila]/instrucoes.csv`?
+- [ ] JSON válido salvo em `input/[apostila]/instrucoes.json`?
+
+> Lembre: você **não** escreve CSV nem recopia enunciado, autores ou conteúdos. O pipeline serializa o CSV a partir do seu JSON + briefing + matriz.
 
 ---
 

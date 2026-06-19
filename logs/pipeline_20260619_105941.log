@@ -1,0 +1,8 @@
+2026-06-19 10:59:42,045 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-19 10:59:43,630 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 11:00:41,175 [INFO] __main__:     →  write_file: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-19 11:00:41,180 [INFO] __main__:     ✓  Salvo: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-19 11:00:43,111 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 11:00:54,743 [INFO] __main__:   ✓  Agente 0 concluiu (2 iteração(ões)) | in=3 out=4993 cache_create=13225 cache_read=8870
+2026-06-19 11:00:54,834 [INFO] __main__: ✗  CSV gerado com schema inválido: Operação inválida na linha 2, coluna 'operacao_secao_1': 'grupos'. Deve ser um de: Aplicar, Classificar, Comparar, Definir, Mapear causalidade, Reconhecer perspectiva, Sequenciar.. Abortando.

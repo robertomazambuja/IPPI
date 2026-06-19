@@ -63,6 +63,9 @@ npm-debug.log
 exemplos_apostilas/
 .tmp.driveupload/
 
+# Artefato intermediário do Decompositor (Agente 0) — só o instrucoes.csv é versionado
+input/*/instrucoes.json
+
 # Google Drive / sincronização
 *.gdoc
 *.gsheet

@@ -468,22 +468,134 @@ def build_system_prompt(orientation_file: str, skill_file: str) -> str:
 # AGENTES INDIVIDUAIS
 # ============================================================================
 
+# Cabeçalho canônico do instrucoes.csv (19 colunas) — fonte única da ordem.
+CSV_HEADER = [
+    'disciplina', 'unidade', 'pergunta_unidade', 'capitulo', 'habilidade',
+    'micro_hab_1', 'operacao_secao_1',
+    'micro_hab_2', 'operacao_secao_2',
+    'micro_hab_3', 'operacao_secao_3',
+    'micro_hab_4', 'operacao_secao_4',
+    'micro_hab_5', 'operacao_secao_5',
+    'micro_hab_6', 'operacao_secao_6',
+    'autores', 'conteudos_nucleares',
+]
+
+_OPERACOES_VALIDAS = {
+    'Definir', 'Classificar', 'Comparar', 'Sequenciar',
+    'Mapear causalidade', 'Reconhecer perspectiva', 'Aplicar',
+}
+
+
+def serialize_instrucoes(
+    instrucoes_json: dict,
+    briefing_data: dict,
+    habilidade_entry: str,
+    codigo_hab: str,
+    csv_path: Path,
+) -> None:
+    """Serializa o JSON do Decompositor em instrucoes.csv de forma determinística.
+
+    O agente fornece apenas a parte gerativa (capítulo + seções com micro_hab/operacao).
+    Os campos de contexto (disciplina, unidade, pergunta, enunciado da habilidade,
+    autores, conteudos) vêm do briefing e da matriz — fonte de verdade — e nunca do
+    agente. csv.writer com QUOTE_MINIMAL garante quoting correto de qualquer vírgula.
+    """
+    import json as _json
+
+    # Enunciado vem da matriz (não do agente) — blinda contra divergência/alucinação.
+    enunciado = ""
+    try:
+        entry = _json.loads(habilidade_entry)
+        enunciado = (entry.get("enunciado") or "").strip()
+    except Exception:
+        enunciado = ""
+    habilidade_str = f"{codigo_hab} — {enunciado}" if enunciado else codigo_hab
+
+    disciplina = (briefing_data.get("disciplina") or "").strip()
+    unidade = (briefing_data.get("unidade") or "").strip()
+    pergunta = (briefing_data.get("pergunta_unidade") or "").strip()
+    capitulos = briefing_data.get("capitulos") or []
+    autores_map = briefing_data.get("autores_por_capitulo") or {}
+    conteudos_map = briefing_data.get("conteudos_por_capitulo") or {}
+
+    # Indexa as entradas do agente por nome de capítulo (com fallback posicional).
+    raw_caps = instrucoes_json.get("capitulos") if isinstance(instrucoes_json, dict) else instrucoes_json
+    if not isinstance(raw_caps, list) or not raw_caps:
+        raise ValueError("instrucoes.json não contém uma lista 'capitulos' não-vazia.")
+    by_name = {}
+    for c in raw_caps:
+        nome = (c.get("capitulo") or "").strip()
+        if nome:
+            by_name[nome] = c
+
+    rows = []
+    for idx, cap_nome in enumerate(capitulos):
+        cap_nome = cap_nome.strip()
+        cap = by_name.get(cap_nome)
+        if cap is None:
+            # fallback posicional, caso o agente tenha variado a grafia
+            cap = raw_caps[idx] if idx < len(raw_caps) else None
+        if cap is None:
+            raise ValueError(f"Decompositor não gerou seções para o capítulo: {cap_nome!r}")
+
+        secoes = cap.get("secoes") or []
+        if not (4 <= len(secoes) <= 6):
+            raise ValueError(
+                f"Capítulo {cap_nome!r}: esperado 4–6 seções, recebido {len(secoes)}."
+            )
+
+        micro_ops = []
+        for s in secoes:
+            mh = (s.get("micro_hab") or "").strip()
+            op = (s.get("operacao") or "").strip()
+            if not mh:
+                raise ValueError(f"Capítulo {cap_nome!r}: micro_hab vazia.")
+            if op not in _OPERACOES_VALIDAS:
+                raise ValueError(
+                    f"Capítulo {cap_nome!r}: operação inválida {op!r}. "
+                    f"Válidas: {', '.join(sorted(_OPERACOES_VALIDAS))}."
+                )
+            micro_ops.append((mh, op))
+
+        # Preenche os 6 pares de slots (vazios quando não usados).
+        slots = []
+        for i in range(6):
+            if i < len(micro_ops):
+                slots.extend(micro_ops[i])
+            else:
+                slots.extend(["", ""])
+
+        autores_str = "; ".join(autores_map.get(cap_nome, []))
+        conteudos_str = "; ".join(conteudos_map.get(cap_nome, []))
+
+        row = [disciplina, unidade, pergunta, cap_nome, habilidade_str] + slots + [autores_str, conteudos_str]
+        rows.append(row)
+
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(CSV_HEADER)
+        writer.writerows(rows)
+
+
 def run_agente0(
     client: anthropic.Anthropic,
     briefing_path: Path,
     apostila_name: str,
 ) -> Optional[Path]:
-    """Agente 0 — Decompositor. Produz instrucoes.csv a partir de um briefing JSON."""
+    """Agente 0 — Decompositor. Produz instrucoes.json e serializa instrucoes.csv."""
+    import json as _json
 
-    output_rel = f"input/{apostila_name}/instrucoes.csv"
-    briefing_rel = str(briefing_path.relative_to(BASE_DIR))
+    output_json_rel = f"input/{apostila_name}/instrucoes.json"
+    output_csv_rel = f"input/{apostila_name}/instrucoes.csv"
 
     system = build_system_prompt("decompositor-orientacao.md", "decompositor-skill.md")
 
     # Extrair habilidade do briefing e fatiar a matriz — injeta só a entrada relevante
     habilidade_entry = ""
+    briefing_data = {}
+    codigo_hab = ""
     try:
-        import json as _json
         with open(briefing_path, encoding="utf-8") as _f:
             briefing_data = _json.load(_f)
         codigo_hab = briefing_data.get("habilidade_bncc", "")
@@ -495,31 +607,46 @@ def run_agente0(
     # Lê o briefing para injetar o conteúdo diretamente
     briefing_content = read_file_safe(briefing_path)
 
-    user_message = f"""Sua tarefa: transformar o briefing do professor em instrucoes.csv válido.
+    user_message = f"""Sua tarefa: transformar o briefing do professor em instrucoes.json válido.
 
 CONTEÚDO DO BRIEFING:
 {briefing_content}
 
-ENTRADA DA HABILIDADE (de matriz-bncc.json — extraia sequencia_pedagogica, enunciado e foco_cognitivo daqui):
+ENTRADA DA HABILIDADE (de matriz-bncc.json — extraia sequencia_pedagogica, operacao_predominante e foco_cognitivo daqui):
 {habilidade_entry}
 
 ONDE SALVAR O OUTPUT:
-{output_rel}
+{output_json_rel}
 
 Siga os passos da sua skill:
 1. Use o briefing e a entrada da habilidade acima (não é necessário ler os arquivos — o conteúdo já está aqui)
 2. Para cada capítulo: use a sequencia_pedagogica como template de operações e escreva micro-habilidades no formato (operação + objeto conceitual do capítulo) — sem nomear autores ou fontes específicas
-3. Para cada capítulo: mapeie autores_por_capitulo[capitulo] → coluna autores; mapeie conteudos_por_capitulo[capitulo] → coluna conteudos_nucleares
-4. Monte o CSV, valide (checklist da skill) e salve em {output_rel}
+3. Monte o JSON no formato da skill (apenas capitulo + secoes[].micro_hab/operacao) — NÃO escreva CSV, NÃO copie enunciado, autores ou conteúdos (o pipeline preenche isso a partir do briefing e da matriz)
+4. Valide (checklist da skill) e salve o JSON em {output_json_rel}
 """
 
-    log_print(f"\n[Agente 0] Decompositor — gerando {output_rel}")
+    log_print(f"\n[Agente 0] Decompositor — gerando {output_json_rel}")
     run_agent(client, system, user_message, "Agente 0",
               chapter_label="briefing", apostila_label=apostila_name,
               model=AGENT_MODELS.get(0, _FALLBACK_MODEL))
 
-    full_path = BASE_DIR / output_rel
-    return full_path if full_path.exists() else None
+    json_path = BASE_DIR / output_json_rel
+    csv_path = BASE_DIR / output_csv_rel
+
+    if not json_path.exists():
+        log_print(f"✗  Decompositor não salvou {output_json_rel}.", indent=1)
+        return None
+
+    try:
+        with open(json_path, encoding="utf-8") as _f:
+            instrucoes_json = _json.load(_f)
+        serialize_instrucoes(instrucoes_json, briefing_data, habilidade_entry, codigo_hab, csv_path)
+        log_print(f"✓  CSV serializado a partir do JSON: {output_csv_rel}", indent=1)
+    except (ValueError, _json.JSONDecodeError) as e:
+        log_print(f"✗  Falha ao serializar CSV a partir do JSON do Decompositor: {e}", indent=1)
+        return None
+
+    return csv_path if csv_path.exists() else None
 
 def run_agente1(
     client: anthropic.Anthropic,

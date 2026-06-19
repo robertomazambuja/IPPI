@@ -1,0 +1,10 @@
+2026-06-19 11:33:42,999 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-sociologia-trabalho/instrucoes.json
+2026-06-19 11:33:45,068 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 11:34:11,306 [INFO] __main__:     →  write_file: input/apostila-sociologia-trabalho/instrucoes.json
+2026-06-19 11:34:11,309 [INFO] __main__:     ✓  Salvo: input/apostila-sociologia-trabalho/instrucoes.json
+2026-06-19 11:34:12,462 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 11:34:25,033 [INFO] __main__:   ✓  Agente 0 concluiu (2 iteração(ões)) | in=3 out=2986 cache_create=11310 cache_read=9033
+2026-06-19 11:34:25,092 [INFO] __main__:   ✓  CSV serializado a partir do JSON: input/apostila-sociologia-trabalho/instrucoes.csv
+2026-06-19 11:34:25,116 [INFO] __main__: CSV carregado: 3 capítulos (formato com andaime)
+2026-06-19 11:34:25,116 [INFO] __main__: ✓  Schema do CSV validado.
