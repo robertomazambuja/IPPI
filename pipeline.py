@@ -1563,6 +1563,100 @@ def gerar_lista_verificacoes(apostila_dir: Path) -> None:
 
 
 # ============================================================================
+# VALIDAÇÃO DOS INSUMOS DE VERIFICAÇÃO (antes de montar o PDF)
+# ============================================================================
+
+_ALTS_ESPERADAS = {"A", "B", "C", "D"}
+
+def _validar_schema_verificacao(ref: str, tipo: str, data: dict) -> Tuple[List[str], List[str]]:
+    """Valida um JSON de verificação. Retorna (erros, avisos)."""
+    erros: List[str] = []
+    avisos: List[str] = []
+    if tipo == "verificacao":
+        if not str(data.get("pergunta", "")).strip():
+            erros.append(f"{ref}: falta 'pergunta'")
+        alts = data.get("alternativas") or {}
+        if set(alts.keys()) != _ALTS_ESPERADAS:
+            erros.append(f"{ref}: 'alternativas' devem ser exatamente A,B,C,D "
+                         f"(achei {sorted(alts.keys())})")
+        elif any(not str(v).strip() for v in alts.values()):
+            erros.append(f"{ref}: alguma alternativa está vazia")
+        if data.get("correta") not in _ALTS_ESPERADAS:
+            erros.append(f"{ref}: 'correta' deve ser A, B, C ou D (achei {data.get('correta')!r})")
+        if not str(data.get("justificativa", "")).strip():
+            avisos.append(f"{ref}: sem 'justificativa' (gabarito do professor)")
+    elif tipo == "aplicar-agora":
+        if not str(data.get("enunciado", "")).strip():
+            erros.append(f"{ref}: falta 'enunciado'")
+        if not str(data.get("resposta_comentada", "")).strip():
+            avisos.append(f"{ref}: sem 'resposta_comentada' (resposta modelo do professor)")
+    else:
+        avisos.append(f"{ref}: tipo desconhecido '{tipo}'")
+    return erros, avisos
+
+
+def validar_verificacoes(apostila_dir: Path, verifdir: Optional[Path] = None) -> bool:
+    """
+    Cruza os marcadores <sidebar status="externo"> dos XMLs com os JSON da
+    pasta verificacoes/ e relata pendências (arquivos ausentes, JSON inválido,
+    schema fora do esperado). Retorna True se não houver ERROS bloqueantes.
+    Ver PLANO-VERIFICACAO-EXTERNA.md, Fase 5.
+    """
+    import json
+    import xml.etree.ElementTree as ET
+
+    verifdir = Path(verifdir) if verifdir else (apostila_dir / "verificacoes")
+    xml_files = sorted(apostila_dir.glob("formatado/**/*.xml"))
+    if not xml_files:
+        log_print("[Validação] Nenhum XML encontrado — nada a validar.")
+        return True
+
+    refs: List[Tuple[str, str]] = []
+    for xml_path in xml_files:
+        try:
+            root = ET.parse(xml_path).getroot()
+        except ET.ParseError as e:
+            log_print(f"[Validação] AVISO: erro ao parsear {xml_path.name}: {e}")
+            continue
+        for sb in root.iter("sidebar"):
+            if sb.get("status") == "externo":
+                refs.append((sb.get("ref", ""), sb.get("tipo", "")))
+
+    erros: List[str] = []
+    avisos: List[str] = []
+    ausentes = 0
+    for ref, tipo in refs:
+        p = verifdir / f"{ref}.json"
+        if not p.exists():
+            erros.append(f"{ref}: arquivo ausente ({verifdir.name}/{ref}.json)")
+            ausentes += 1
+            continue
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            erros.append(f"{ref}: JSON inválido ({e})")
+            continue
+        e, a = _validar_schema_verificacao(ref, tipo, data)
+        erros.extend(e)
+        avisos.extend(a)
+
+    sep = "=" * 65
+    log_print(f"\n{sep}")
+    log_print(f"[Validação] Verificações em: {verifdir}")
+    log_print(f"[Validação] {len(refs)} marcador(es) | {ausentes} ausente(s) | "
+              f"{len(erros)} erro(s) | {len(avisos)} aviso(s)")
+    log_print(sep)
+    for e in erros:
+        log_print(f"  ✗ ERRO  : {e}")
+    for a in avisos:
+        log_print(f"  ⚠ aviso : {a}")
+    if not erros and not avisos:
+        log_print("  ✓ Tudo certo: todos os refs têm JSON válido no schema esperado.")
+    log_print(sep + "\n")
+    return len(erros) == 0
+
+
+# ============================================================================
 # CLI
 # ============================================================================
 
@@ -1651,8 +1745,32 @@ Exemplos:
         help="Nº de capítulos processados em paralelo nos estágios 2–5 (padrão: 1). "
              "Use 2–3; valores altos podem atingir rate limits.",
     )
+    parser.add_argument(
+        "--validar-verif",
+        type=str,
+        default=None,
+        metavar="APOSTILA_DIR",
+        help="Só valida os insumos de verificação de output/<apostila>/ contra a "
+             "pasta verificacoes/ e sai (não roda o pipeline).",
+    )
+    parser.add_argument(
+        "--verif-dir",
+        type=str,
+        default=None,
+        metavar="PASTA",
+        help="Pasta dos JSON de verificação (padrão: <apostila_dir>/verificacoes).",
+    )
 
     args = parser.parse_args()
+
+    # ── Modo validação avulsa ────────────────────────────────────────────────────
+    if args.validar_verif:
+        apostila_dir = Path(args.validar_verif)
+        if not apostila_dir.is_absolute():
+            apostila_dir = OUTPUT_DIR / args.validar_verif if not apostila_dir.exists() else apostila_dir
+        verifdir = Path(args.verif_dir) if args.verif_dir else None
+        ok = validar_verificacoes(apostila_dir, verifdir)
+        sys.exit(0 if ok else 1)
 
     # ── Modo briefing ──────────────────────────────────────────────────────────
     if args.briefing:

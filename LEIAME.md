@@ -40,7 +40,8 @@ As sete operações elementares são:
 pipeline.py                  — orquestrador principal
 normalizador.py              — Agente 3 (Python, sem LLM)
 formatador.py                — Agente 5 (Python, sem LLM)
-verificador.py               — gerador de verificações e "Aplicar agora" (Haiku)
+verificador.py               — coleta de pontos de verificação (sem LLM) + gerador de RASCUNHOS opcional (Haiku)
+xml_to_pdf.py                — montagem do PDF (anexa imagens e verificações externas)
 avaliar.py                   — rubrica de qualidade LLM-judge (Haiku)
 .env                         — chave de API (não versionar)
 
@@ -149,7 +150,7 @@ Cada agente usa um modelo configurável via variável de ambiente:
 | A3 — Normalizador | Python (sem LLM) | — |
 | A4 — Polidor | claude-sonnet-4-6 | `IPPI_MODEL_A4` |
 | A5 — Formatador | Python (sem LLM) | — |
-| Verificador | claude-haiku-4-5-20251001 | — |
+| Verificador (rascunho opcional, fora do pipeline) | claude-haiku-4-5-20251001 | — |
 | Avaliador | claude-haiku-4-5-20251001 | `IPPI_AVALIADOR_MODEL` |
 
 `IPPI_MODEL` (sem sufixo) serve de fallback global.
@@ -176,7 +177,7 @@ Consulta: `contexto/principios-pedagogicos-agente1.md` + `contexto/disciplinas/[
 
 Produz: `core.md` — estrutura do capítulo com operações elementares, campos específicos por tipo de operação, síntese final e encadeamento. O core é um conjunto de dados estruturados, nunca narrativa.
 
-O campo `VERIFICACAO: Sim/Não` no core indica quais seções receberão perguntas de verificação no XML final (geradas pelo `verificador.py`).
+O campo `VERIFICACAO: Sim/Não` no core indica quais seções receberão verificação. O Agente 5 marca esses pontos no XML (`<sidebar ... status="externo">`); a verificação em si é um insumo externo, produzido fora do pipeline e anexado na montagem do PDF (ver "Verificação externa").
 
 **A1 sempre roda sequencialmente** — lê os cores dos capítulos anteriores da mesma apostila para garantir encadeamento.
 
@@ -231,23 +232,30 @@ Melhora transições entre blocos, naturalidade das frases e encadeamento entre 
 
 **Código Python — não usa LLM.**
 
-Recebe: `texto.md` (processado pelo Agente 4) + verificações geradas pelo `verificador.py` + micro-habilidades extraídas do CSV pelo pipeline.
+Recebe: `texto.md` (processado pelo Agente 4) + pontos de verificação coletados do `core.md` (sem LLM) + micro-habilidades extraídas do CSV pelo pipeline.
 
 Produz: `[capitulo].xml` — capítulo estruturado para InDesign, com:
 - Tags como `<secao tipo="Definir">`, `<bloco tipo="AUTOR">`, `<indicacao-imagem>`
 - `<mapa-progressao>` — mapa visual das operações do capítulo (injetado após `</cabecalho>`)
 - `<micro-habilidade>` — primeiro filho de cada `<bloco>`, declara a micro-habilidade desenvolvida naquela seção (extraída diretamente do CSV, sem custo de LLM)
-- `<sidebar tipo="verificacao">` — pergunta de múltipla escolha ao final de cada seção com `VERIFICACAO: Sim`
-- `<sidebar tipo="aplicar-agora">` — mini-caso no rodapé com resposta oculta para o professor
+- `<sidebar tipo="verificacao" ref="verif-{cap}-s{n}" status="externo">` — **marcador** (sem conteúdo) ao final de cada seção com `VERIFICACAO: Sim`, com um `<o-que-verificar>` que descreve operação, micro-habilidade, conceito-âncora e exemplo-âncora
+- `<sidebar tipo="aplicar-agora" ref="aplicar-{cap}" status="externo">` — marcador do "Aplicar agora" no rodapé
+
+O Agente 5 **não chama LLM** e **não produz a verificação** — só marca onde ela entra. Zero custo de token na verificação.
 
 ---
 
-### Verificador (`verificador.py`)
+### Verificação externa (`verificador.py`, `xml_to_pdf.py`)
 
-Chamado internamente pelo pipeline antes do Agente 5. Lê o `core.md` de cada capítulo e gera, em uma única chamada ao Haiku:
+A verificação deixou de ser gerada dentro do pipeline (mesmo modelo das imagens):
 
-- Perguntas de verificação fechadas (múltipla escolha, 3 alternativas) para cada seção com `VERIFICACAO: Sim`
-- Mini-exercício "Aplicar agora" com caso concreto novo e resposta comentada
+1. **Coleta (sem LLM):** `verificador.coletar_pontos_verificacao(core.md)` lê quais seções têm `VERIFICACAO: Sim` e seu contexto; o A5 emite os marcadores no XML.
+2. **Briefing:** ao fim do pipeline, `gerar_lista_verificacoes()` escreve `output/<apostila>/VERIFICACOES-NECESSARIAS.txt` listando cada `ref` e o que verificar — o pedido para os agentes externos.
+3. **Produção externa:** agentes qualificados produzem um JSON por `ref` (schema: `verificacao` com `pergunta`, `alternativas` A–D, `correta`, `justificativa`; `aplicar-agora` com `enunciado`, `resposta_comentada`) e devolvem a pasta `verificacoes/`.
+4. **Montagem do PDF:** `xml_to_pdf.py --verificacoes <pasta>` carrega `verificacoes/{ref}.json` e renderiza as sidebars. As flags `--versao-aluno`/`--versao-professor` continuam controlando gabarito/resposta. Ref ausente vira aviso "pendente" só na versão professor.
+5. **Validação:** `python pipeline.py --validar-verif <apostila> [--verif-dir <pasta>]` cruza os refs marcados com os JSON e reporta pendências antes de gerar o PDF.
+
+**Gerador de rascunho (opcional):** `python verificador.py <core.md|glob> --out verificacoes` usa o Haiku para gerar um primeiro rascunho dos JSON no schema externo, para os humanos refinarem. Não faz parte do pipeline.
 
 ---
 
@@ -275,8 +283,11 @@ A1 → core.md (sequencial, lê cores anteriores)
 A2 → texto.md (prosa + HTML comments)
 A3 → texto.md normalizado (Python, determinístico)
 A4 → diffs JSON → _apply_diffs() → texto.md com prosa polida
-verificador.py → verificações XML (Haiku)
-A5 → XML formatado para InDesign (Python, determinístico)
+A5 → XML formatado para InDesign, com MARCADORES de verificação (Python, determinístico)
+   → VERIFICACOES-NECESSARIAS.txt + IMAGENS-NECESSARIAS.txt (briefings externos)
+
+[fora do pipeline] agentes externos → pasta verificacoes/ (um JSON por ref)
+xml_to_pdf.py --imagens ... --verificacoes ... → PDF (aluno/professor)
 ```
 
 A1 roda sequencialmente. A2–A5 podem rodar em paralelo por capítulo com `--workers N`.
@@ -291,8 +302,8 @@ Normalização de marcação e formatação XML são operações estruturais, n�
 **A4 entrega diffs, não salva arquivo**
 O Agente 4 retorna apenas as substituições que quer fazer (JSON). O pipeline aplica e salva. Isso evita que o agente apague acidentalmente conteúdo ou marcação ao reescrever o arquivo inteiro.
 
-**Verificações separadas do texto**
-O `verificador.py` gera as verificações a partir do `core.md` — não do texto. Isso garante que as perguntas estejam alinhadas com a estrutura pedagógica planejada, não com o texto produzido.
+**Verificação como insumo externo**
+A verificação foi externalizada (mesmo padrão das imagens): o pipeline só marca, de forma determinística, onde a verificação entra (a partir do `core.md`) e emite o briefing `VERIFICACOES-NECESSARIAS.txt`. A produção fica a cargo de agentes qualificados e o conteúdo só é anexado na montagem do PDF. Isso desacopla a qualidade da verificação do Haiku e permite revisão humana, mantendo a renderização aluno/professor inalterada.
 
 **Paralelização de capítulos**
 A1 deve ser sequencial (lê cores anteriores). A2–A5 são independentes por capítulo e rodam em `ThreadPoolExecutor`. Escrita do CSV de uso é thread-safe via `threading.Lock`.
@@ -328,7 +339,7 @@ Em caso de conflito, os princípios pedagógicos prevalecem.
 - E7: modelo por agente (`AGENT_MODELS` dict, variáveis de ambiente por agente)
 - E8: A4 entrega diffs JSON; `_apply_diffs()` aplica as trocas em Python
 - E10: paralelização de capítulos com `--workers N` e `ThreadPoolExecutor`
-- R-Q4: verificações fechadas e "Aplicar agora" via `verificador.py` (Haiku), injetados no XML pelo A5
+- R-Q4: verificações fechadas (4 alternativas) e "Aplicar agora" como insumo externo — A5 emite marcadores `status="externo"`; conteúdo anexado por `xml_to_pdf.py --verificacoes`
 - R-Q6: `<mapa-progressao>` XML com operações visíveis por seção
 - R-Q7: rubrica de qualidade LLM-judge em `avaliar.py` com série histórica em CSV
 

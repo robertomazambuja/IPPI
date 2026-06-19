@@ -334,3 +334,141 @@ def gerar_verificacoes(
         len(verificacoes), "sim" if aplicar_agora else "não",
     )
     return verificacoes, aplicar_agora
+
+
+# ---------------------------------------------------------------------------
+# Gerador de RASCUNHOS no schema externo (opcional, sob demanda — Fase 5 do
+# PLANO-VERIFICACAO-EXTERNA.md). NÃO faz parte do pipeline: serve só para
+# produzir um ponto de partida automático (verificacoes/{ref}.json) que os
+# agentes humanos depois refinam. Mesma convenção de ref do formatador:
+# verif-{cap_id}-s{idx} / aplicar-{cap_id}.
+# ---------------------------------------------------------------------------
+
+def _cap_id_from_core(core_path: Path) -> str:
+    m = re.match(r"(\d{2}-\d{2})", core_path.stem)
+    return m.group(1) if m else core_path.stem
+
+
+def _chamar_haiku(core_data: dict, client: anthropic.Anthropic, model: str) -> Optional[dict]:
+    """Faz a chamada Haiku e devolve o dict bruto da resposta (ou None)."""
+    prompt = _build_prompt(core_data)
+    try:
+        response = client.messages.create(
+            model=model, max_tokens=4096,
+            system=_SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = response.content[0].text.strip()
+    except Exception as e:
+        logger.error("[Verificador] Erro na API: %s", e)
+        return None
+    start = raw.find("{")
+    end = raw.rfind("}") + 1
+    if start == -1 or end == 0:
+        logger.warning("[Verificador] Resposta sem JSON válido")
+        return None
+    try:
+        return json.loads(raw[start:end])
+    except json.JSONDecodeError as e:
+        logger.warning("[Verificador] JSON inválido: %s", e)
+        return None
+
+
+def gerar_rascunhos(
+    core_path: Path,
+    client: anthropic.Anthropic,
+    model: str = VERIFICADOR_MODEL,
+) -> Dict[str, dict]:
+    """
+    Gera rascunhos de verificação no schema externo a partir do core.md.
+
+    Retorna {ref: data} pronto para ser salvo como verificacoes/{ref}.json
+    (mesmo schema que xml_to_pdf consome). Uso: ponto de partida automático,
+    a ser refinado por humanos.
+    """
+    try:
+        core_data = parse_core(core_path)
+    except Exception as e:
+        logger.error("[Verificador] Falha ao parsear core %s: %s", core_path, e)
+        return {}
+
+    if not any(s["verificacao"] for s in core_data["secoes"]):
+        logger.info("[Verificador] Nenhuma seção elegível em %s", core_path.name)
+        return {}
+
+    data = _chamar_haiku(core_data, client, model)
+    if not data:
+        return {}
+
+    cap_id = _cap_id_from_core(core_path)
+    out: Dict[str, dict] = {}
+
+    for v in data.get("verificacoes", []):
+        idx = v.get("idx_secao")
+        if idx is None:
+            continue
+        ref = f"verif-{cap_id}-s{int(idx)}"
+        out[ref] = {
+            "tipo": "verificacao",
+            "ref": ref,
+            "pergunta": v.get("pergunta", ""),
+            "alternativas": v.get("alternativas", {}),
+            "correta": v.get("correta", ""),
+            "justificativa": v.get("justificativa", ""),
+        }
+
+    aa = data.get("aplicar_agora")
+    if aa and aa.get("enunciado"):
+        ref = f"aplicar-{cap_id}"
+        out[ref] = {
+            "tipo": "aplicar-agora",
+            "ref": ref,
+            "enunciado": aa.get("enunciado", ""),
+            "resposta_comentada": aa.get("resposta_comentada", ""),
+        }
+
+    logger.info("[Verificador] %d rascunho(s) gerado(s) para %s", len(out), core_path.name)
+    return out
+
+
+def _main() -> None:
+    import argparse
+    import glob
+    import os
+
+    ap = argparse.ArgumentParser(
+        description="Gerador de RASCUNHOS de verificação (opcional, sob demanda). "
+                    "Produz JSON no schema externo para humanos refinarem. "
+                    "NÃO faz parte do pipeline.",
+    )
+    ap.add_argument("core", help="core.md do capítulo (aceita glob, ex.: 'output/**/core/**/*.md').")
+    ap.add_argument("--out", default="verificacoes",
+                    help="Pasta de saída (padrão: verificacoes).")
+    ap.add_argument("--model", default=VERIFICADOR_MODEL)
+    args = ap.parse_args()
+
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        raise SystemExit("ERRO: defina ANTHROPIC_API_KEY no ambiente.")
+    client = anthropic.Anthropic(api_key=key)
+
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    cores = [Path(p) for p in glob.glob(args.core, recursive=True)] or [Path(args.core)]
+    total = 0
+    for core in cores:
+        if not core.exists():
+            print(f"  AVISO: core não encontrado: {core}")
+            continue
+        rasc = gerar_rascunhos(core, client, args.model)
+        for ref, data in rasc.items():
+            (out_dir / f"{ref}.json").write_text(
+                json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+            total += 1
+        print(f"  {core.name}: {len(rasc)} rascunho(s)")
+    print(f"TOTAL: {total} arquivo(s) em {out_dir}/")
+
+
+if __name__ == "__main__":
+    _main()
