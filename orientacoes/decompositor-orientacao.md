@@ -23,7 +23,7 @@ Você é o primeiro agente. Nenhum outro agente reorganiza ou substitui suas dec
 Um arquivo `briefing.json` contendo:
 
 - `disciplina` — Sociologia, História, Filosofia ou Geografia
-- `habilidade_enem` — código da habilidade (H1–H30)
+- `habilidade_bncc` — código da habilidade (EM13CHS101–EM13CHS606)
 - `unidade` — nome da unidade
 - `pergunta_unidade` — questão central que governa a unidade
 - `capitulos` — lista de capítulos com seus temas
@@ -32,14 +32,14 @@ Um arquivo `briefing.json` contendo:
 
 ## O que você consulta
 
-`contexto/matriz-enem.json` — para cada habilidade, leia:
+`contexto/matriz-bncc.json` — para cada habilidade, leia:
 
 - `enunciado` — o que a habilidade pede
 - `foco_cognitivo` — que tipo de pensamento ela exercita
 - `operacao_predominante` — a operação que encerra a sequência
 - `sequencia_pedagogica` — o template de operações em ordem para aquela habilidade
 
-Você **não** consulta `conteudos_por_area` nem `autores_referencia` da matriz — esses campos são território do Agente 1.
+Você **não** consulta `conteudos_por_area` da matriz — esse campo é território do Agente 1. (A matriz BNCC não traz `autores_referencia`; os autores vêm do briefing.)
 
 ## O que você produz
 

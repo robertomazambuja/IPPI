@@ -486,9 +486,9 @@ def run_agente0(
         import json as _json
         with open(briefing_path, encoding="utf-8") as _f:
             briefing_data = _json.load(_f)
-        codigo_hab = briefing_data.get("habilidade_enem", "")
+        codigo_hab = briefing_data.get("habilidade_bncc", "")
         if codigo_hab:
-            habilidade_entry = extract_habilidade(BASE_DIR / "contexto" / "matriz-enem.json", codigo_hab)
+            habilidade_entry = extract_habilidade(BASE_DIR / "contexto" / "matriz-bncc.json", codigo_hab)
     except Exception as _e:
         habilidade_entry = f"ERRO ao pré-extrair habilidade do briefing: {_e}"
 
@@ -500,7 +500,7 @@ def run_agente0(
 CONTEÚDO DO BRIEFING:
 {briefing_content}
 
-ENTRADA DA HABILIDADE (de matriz-enem.json — extraia sequencia_pedagogica, enunciado e foco_cognitivo daqui):
+ENTRADA DA HABILIDADE (de matriz-bncc.json — extraia sequencia_pedagogica, enunciado e foco_cognitivo daqui):
 {habilidade_entry}
 
 ONDE SALVAR O OUTPUT:
@@ -555,10 +555,10 @@ def run_agente1(
         for u in todas_unidades
     )
 
-    # Extrair entrada da habilidade de matriz-conteudosenem.json e injetar
+    # Extrair entrada da habilidade de matriz-conteudosbncc.json e injetar
     codigo_hab = row["habilidade"].split("—")[0].strip().split()[0].strip()
     matriz_conteudos_entry = extract_habilidade(
-        BASE_DIR / "contexto" / "matriz-conteudosenem.json", codigo_hab
+        BASE_DIR / "contexto" / "matriz-conteudosbncc.json", codigo_hab
     )
 
     # Injetar princípios pedagógicos e contexto disciplinar diretamente
@@ -604,7 +604,7 @@ PRINCÍPIOS PEDAGÓGICOS (contexto/principios-pedagogicos-agente1.md):
 CONTEXTO DISCIPLINAR (contexto/disciplinas/{disciplina_slug}.md):
 {disciplina_content}
 
-ENTRADA DA HABILIDADE (de matriz-conteudosenem.json — use conteudos_prioritarios e conteudos_por_disciplina daqui):
+ENTRADA DA HABILIDADE (de matriz-conteudosbncc.json — use conteudos_prioritarios e conteudos_por_disciplina daqui):
 {matriz_conteudos_entry}
 
 CONTEXTO DA UNIDADE:

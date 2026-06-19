@@ -22,8 +22,8 @@ Fluxo atual: 5 chamadas de agente por capítulo (0 é por apostila), todas em Op
 
 | **Agente** | **O que faz** | **Leituras típicas (logs)** | **Natureza da tarefa** |
 | --- | --- | --- | --- |
-| 0 Decompositor | briefing → CSV | briefing + **matriz-enem.json inteira (59 KB)** | Semântica (precisa de LLM) |
-| 1 Arquiteto | CSV → core.md | princípios + disciplina + **matriz-conteudosenem.json inteira (52 KB)** + cores anteriores completos | Semântica (precisa de LLM) |
+| 0 Decompositor | briefing → CSV | briefing + **matriz-bncc.json inteira (59 KB)** | Semântica (precisa de LLM) |
+| 1 Arquiteto | CSV → core.md | princípios + disciplina + **matriz-conteudosbncc.json inteira (52 KB)** + cores anteriores completos | Semântica (precisa de LLM) |
 | 2 Redator | core → texto.md | core + disciplina | Semântica (precisa de LLM) |
 | 3 Normalizador | corrige 4 padrões de marcação | texto completo, reescreve texto completo | **Mecânica (regex/parser)** |
 | 4 Polidor | melhora prosa | texto completo, reescreve texto completo (e releu a própria skill — log 08/06 17:11) | Semântica leve (não precisa de Opus) |
@@ -33,7 +33,7 @@ Fluxo atual: 5 chamadas de agente por capítulo (0 é por apostila), todas em Op
 
 **V1 — Agentes mecânicos rodando em Opus.** O Agente 3 aplica quatro normalizações descritas com precisão de máquina na própria skill (formatos errados → formato correto). Isso é um parser. O Agente 5 extrai HTML comments, monta XML, **conta palavras** e calcula quebras a cada 1.300 palavras — LLMs são notoriamente ruins em contar palavras; Python é exato. Cada um desses agentes custa uma passada completa de Opus por capítulo (ler ~5K tokens, reescrever ~5K tokens, 3 iterações de histórico reenviado) para um trabalho que código faz em milissegundos, com resultado determinístico e XML garantidamente válido.
 
-**V2 — Matrizes lidas inteiras para usar uma entrada.** matriz-enem.json tem 59 KB (~15K tokens) e matriz-conteudosenem.json 52 KB (~13K tokens). A entrada H12, medida, tem **1.200 caracteres** (~300 tokens). O Agente 0 e o Agente 1 pagam ~98% de desperdício em cada leitura — e o Agente 1 faz isso **por capítulo**.
+**V2 — Matrizes lidas inteiras para usar uma entrada.** As matrizes de referência têm dezenas de KB (~15K tokens cada — medições originais com `matriz-enem.json`/`matriz-conteudosenem.json`, hoje substituídas por `matriz-bncc.json`/`matriz-conteudosbncc.json`). A entrada de uma única habilidade, medida, tem **~1.200 caracteres** (~300 tokens). O Agente 0 e o Agente 1 pagam ~98% de desperdício em cada leitura — e o Agente 1 faz isso **por capítulo**.
 
 **V3 — Modo agêntico onde não há decisão a tomar.** O user message já lista os arquivos exatos que o agente deve ler ("ARQUIVOS QUE VOCÊ DEVE LER... 1. ... 2. ..."). Cada read_file custa uma iteração inteira (reenvio de todo o histórico + roundtrip). Injetar o conteúdo diretamente no user message elimina 1–3 iterações por agente sem perda nenhuma — o agente não estava decidindo nada, só obedecendo uma lista.
 
@@ -215,7 +215,7 @@ Critério de sucesso mensurável: custo por capítulo ≤ 35% do atual (medido p
 
 - Contradição do A2: orientacoes/agente2-orientacao.md (linhas 13, 74–79, 137) vs skills/agente2-skill.md (seção "O que você NÃO faz").
 
-- Matrizes: matriz-enem.json 59 KB / matriz-conteudosenem.json 52 KB; entrada H12 = 1.200 caracteres (medido).
+- Matrizes (medições originais ENEM, hoje substituídas pelas matrizes BNCC): ~59 KB / ~52 KB; entrada de uma habilidade ≈ 1.200 caracteres (medido).
 
 - CSV com 20 colunas: input/apostila-teste-historia-em1/instrucoes.csv (header inclui elementos_obrigatorios).
 

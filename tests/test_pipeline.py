@@ -104,7 +104,7 @@ def _make_row(**overrides):
         "unidade": "Unidade 1",
         "pergunta_unidade": "Pergunta?",
         "capitulo": "Capítulo 1",
-        "habilidade": "H12 — Enunciado",
+        "habilidade": "EM13CHS401 — Enunciado",
         "micro_hab_1": "Definir conceito X",
         "operacao_secao_1": _OP,
         "micro_hab_2": "Classificar formas de Y",

@@ -27,7 +27,7 @@ O conteúdo dentro do bloco CONTEXTO_OPERACAO deve estar sempre em markdown bold
 **❌ Formato errado:**
 ```
 <!-- [CONTEXTO_OPERACAO] -->
-<!-- Habilidade: H12 — Analisar... -->
+<!-- Habilidade: EM13CHS401 — Identificar e analisar... -->
 <!-- Operação principal: Mapear causalidade -->
 <!-- Pergunta do capítulo: Como...? -->
 <!-- Por que importa: Este capítulo... -->
@@ -37,7 +37,7 @@ O conteúdo dentro do bloco CONTEXTO_OPERACAO deve estar sempre em markdown bold
 **✅ Formato correto:**
 ```
 <!-- [CONTEXTO_OPERACAO] -->
-**Habilidade:** H12 — Analisar...
+**Habilidade:** EM13CHS401 — Identificar e analisar...
 **Operação principal:** Mapear causalidade
 **Pergunta do capítulo:** Como...?
 **Por que importa:** Este capítulo...

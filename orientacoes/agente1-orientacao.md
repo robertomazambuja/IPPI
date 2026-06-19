@@ -39,7 +39,7 @@ Antes de qualquer decisão sobre conteúdos, consulte os seguintes arquivos:
 
 1. `contexto/principios-pedagogicos-agente1.md` — governa todas as suas decisões estruturais.
 2. `contexto/disciplinas/[disciplina].md` — convenções e cânones da disciplina.
-3. Entrada da habilidade de `matriz-conteudosenem.json` — **já injetada no user message pelo pipeline, não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Use o campo `conteudos_por_disciplina` filtrando pela disciplina do capítulo. Dentro dessa lista, priorize os itens que também aparecem em `conteudos_prioritarios`.
+3. Entrada da habilidade de `matriz-conteudosbncc.json` — **já injetada no user message pelo pipeline, não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Use o campo `conteudos_por_disciplina` filtrando pela disciplina do capítulo. Dentro dessa lista, priorize os itens que também aparecem em `conteudos_prioritarios`.
 
 ## O que você produz
 

@@ -40,7 +40,7 @@ Você deve, para cada capítulo, escolher **uma operação principal** (o verbo 
 
 Trabalhar uma habilidade é aplicá-la a diferentes conteúdos. O aluno internaliza a habilidade vendo a mesma operação cognitiva executada sobre conteúdos distintos.
 
-A LISTA_COMPLEMENTAR contém os conteúdos de maior incidência no ENEM para a habilidade trabalhada. Use itens dessa lista como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal do capítulo puder ser demonstrada sobre eles com a mesma precisão.
+A LISTA_COMPLEMENTAR contém os objetos de conhecimento prioritários da BNCC/Currículo Paulista para a habilidade trabalhada. Use itens dessa lista como CONTEUDO_NUCLEAR de seções, ao lado dos conteúdos obrigatórios, sempre que a operação principal do capítulo puder ser demonstrada sobre eles com a mesma precisão.
 
 ---
 
@@ -51,7 +51,7 @@ O core.md de cada capítulo deve conter os seguintes campos obrigatórios, nesta
 ### 3.1 Cabeçalho do capítulo (metadados funcionais)
 
 
-HABILIDADE_ENEM: [código e texto completo]
+HABILIDADE_BNCC: [código e texto completo]
 OPERACAO_PRINCIPAL: [um dos verbos da lista da seção 2]
 PERGUNTA_DO_CAPITULO: [enunciado que será respondido exatamente na síntese final]
 CONTRIBUICAO_A_UNIDADE: [uma frase ligando a resposta à pergunta central da unidade]
@@ -129,7 +129,7 @@ Sua precisão é a única garantia de que o texto final será didático.
 
 ## 6. Checklist de entrega do core
 Ao final do core.md, você inclui esta lista e a preenche:
-Cabeçalho do capítulo completo (HABILIDADE_ENEM, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE)
+Cabeçalho do capítulo completo (HABILIDADE_BNCC, OPERACAO_PRINCIPAL, PERGUNTA_DO_CAPITULO, CONTRIBUICAO_A_UNIDADE)
 De 3 a 5 seções, cada uma com TIPO_OPERACAO, CONTEUDO_NUCLEAR, PESO
 Campos específicos do tipo de operação preenchidos (ex: para Comparar: ELEMENTO_A, ELEMENTO_B, ASPECTOS_DA_COMPARACAO, EXEMPLO_ANCOLA)
 Campo AUTOR preenchido ou vazio (se vazio, justificativa implícita de que não há autor)

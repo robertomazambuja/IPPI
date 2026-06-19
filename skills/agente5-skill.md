@@ -12,7 +12,7 @@ Arquivo `texto/01-0X-...md` com HTML comments normalizados. Estrutura típica:
 
 ```markdown
 <!-- [CONTEXTO_OPERACAO] -->
-**Habilidade:** H12 — Texto da habilidade.
+**Habilidade:** EM13CHS401 — Texto da habilidade.
 **Operação principal:** Mapear causalidade
 **Pergunta do capítulo:** Como...?
 **Por que importa:** Este capítulo...
@@ -64,7 +64,7 @@ Arquivo `formatado/01-0X-...xml`:
 <capitulo id="01-01" titulo="Título do capítulo" palavras_total="2600">
 
   <cabecalho>
-    <habilidade>H12 — Texto completo.</habilidade>
+    <habilidade>EM13CHS401 — Texto completo.</habilidade>
     <operacao_principal>Mapear causalidade</operacao_principal>
     <pergunta_capitulo>Como...?</pergunta_capitulo>
     <por_que_importa>Este capítulo...</por_que_importa>

@@ -103,7 +103,8 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 
 /* VERIFICACAO */
 .sidebar-verificacao { background: #EEF4FF; border: 1.5pt solid #90CAF9; border-left-width: 4pt;
-    border-radius: 0 6pt 6pt 0; padding: 12pt 14pt; margin: 12pt 0 6pt; font-family: Arial; break-inside: avoid; }
+    border-radius: 0 6pt 6pt 0; padding: 11pt 13pt; margin: 9pt 0 6pt; font-family: Arial;
+    break-inside: avoid; break-before: avoid; }
 .sidebar-verificacao .verif-header { font-size: 8pt; font-weight: 700; color: #1565C0;
     text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6pt; }
 .sidebar-verificacao .verif-pergunta { font-size: 9.5pt; font-weight: 600; margin-bottom: 8pt; line-height: 1.45; }
@@ -120,10 +121,11 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .nota-fonte { font-family: Arial; font-size: 8pt; color: #666; margin: 6pt 0 2pt; padding-left: 10pt;
     border-left: 2pt solid #CCC; break-inside: avoid; }
 
-/* IMAGEM (apenas quando ha arquivo real; no MVP nao ha) */
-.imagem-container { margin: 14pt 0; text-align: center; break-inside: avoid; }
-.imagem-container img { max-width: 100%; height: auto; }
-.imagem-legenda { font-family: Arial; font-size: 8pt; color: #888; margin-top: 4pt; font-style: italic; }
+/* IMAGEM (apenas quando ha arquivo real). Compacta para empacotar com a
+   verificacao na mesma pagina e nao orfanar. break-before:avoid puxa a imagem
+   para junto do texto anterior. */
+.imagem-container { margin: 7pt 0 6pt; text-align: center; break-inside: avoid; break-before: avoid; }
+.imagem-container img { max-width: 100%; max-height: 74mm; width: auto; height: auto; }
 
 /* APLICAR AGORA — nunca quebra entre paginas */
 .aplicar-agora { background: #FFFDE7; border: 2pt solid #F9A825; border-radius: 8pt; padding: 16pt 18pt;
@@ -170,14 +172,14 @@ def conteudo_html(cel):
 
 
 def render_imagem(ref, desc, imagens_dir):
-    # No MVP nao geramos nada; so usamos arquivo real se existir em --imagens.
+    # So usamos arquivo real se existir em --imagens. Sem legenda visivel:
+    # a <descricao> do XML e um briefing de producao, nao texto para o aluno.
     if imagens_dir:
         for ext in ("png", "jpg", "jpeg", "svg"):
-            c = Path(imagens_dir) / f"{ref}.{ext}"
+            c = (Path(imagens_dir) / f"{ref}.{ext}").resolve()
             if c.exists():
-                return (f'<div class="imagem-container"><img src="{c.as_uri()}" '
-                        f'alt="{html_mod.escape(desc)}" />'
-                        f'<p class="imagem-legenda">{html_mod.escape(desc[:100])}</p></div>')
+                return (f'<figure class="imagem-container"><img src="{c.as_uri()}" '
+                        f'alt="{html_mod.escape(desc)}" /></figure>')
     return ""
 
 
@@ -448,7 +450,7 @@ def main():
     if brief_path:
         print(f"  briefing: {brief_path}")
 
-    imdir = args.imagens
+    imdir = str(Path(args.imagens).resolve()) if args.imagens else None
     print(f"  >>> PROCESSO: VERSAO DO {versao.upper()} <<<")
     caps = []
     for xf in xml_files:

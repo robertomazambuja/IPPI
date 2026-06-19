@@ -2,7 +2,7 @@
 
 ## Estado atual do projeto
 
-Pipeline funcional de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades do ENEM. O texto produzido não simula voz humana — é uma interface funcional clara e rastreável, escrita por máquinas para ser lida por humanos.
+Pipeline funcional de geração de apostilas didáticas de ciências humanas para o Ensino Médio brasileiro, orientadas por habilidades da BNCC (Ciências Humanas e Sociais Aplicadas, EM13CHS101–EM13CHS606). O texto produzido não simula voz humana — é uma interface funcional clara e rastreável, escrita por máquinas para ser lida por humanos.
 
 As três fases de desenvolvimento estão concluídas. O pipeline está pronto para uso em produção.
 
@@ -18,7 +18,7 @@ Os agentes LLM (A0, A1, A2, A4) usam a API da Anthropic em modo agêntico. Os ag
 
 ## Princípio pedagógico central
 
-O texto final não conta uma história — ele executa um **algoritmo de ensino**. Cada habilidade do ENEM é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
+O texto final não conta uma história — ele executa um **algoritmo de ensino**. Cada habilidade da BNCC é decomposta em operações elementares. O aluno aprende a habilidade vendo o algoritmo sendo aplicado repetidamente sobre o conteúdo.
 
 As sete operações elementares são:
 
@@ -312,6 +312,12 @@ Em caso de conflito, os princípios pedagógicos prevalecem.
 
 ## Histórico de modificações
 
+**2026-06-17 — Migração da matriz ENEM para a matriz BNCC**
+- Matrizes de referência substituídas: `matriz-enem.json` → `matriz-bncc.json` e `matriz-conteudosenem.json` → `matriz-conteudosbncc.json` (habilidades EM13CHS101–EM13CHS606, competências específicas CHS1–CHS6)
+- Campo do briefing renomeado: `habilidade_enem` → `habilidade_bncc`; `pipeline.py` atualizado para apontar para os novos arquivos
+- Documentação, skills e orientações atualizadas: terminologia ENEM→BNCC, exemplos de código (ex.: H12/H14) substituídos por códigos BNCC reais (ex.: EM13CHS401, EM13CHS402)
+- A matriz BNCC não inclui a camada `autores_referencia`; a indicação de autores passa a ser sempre do professor (campo `autores_por_capitulo`)
+
 **2026-06-15 — Anúncio de micro-habilidade no XML**
 - `pipeline.py`: `micro_habs` (dict `{idx_seção: texto}`) extraído do CSV em `run_pipeline` e propagado pelo `cap_info` até `run_agente5`
 - `formatador.py`: `formatar_capitulo`, `render_xml` e `render_bloco` recebem `micro_habs`; cada `<bloco>` agora abre com `<micro-habilidade>texto da micro-hab</micro-habilidade>` como primeiro filho
@@ -334,7 +340,7 @@ Em caso de conflito, os princípios pedagógicos prevalecem.
 **2026-06-08 — Reformulação do Agente 2 e redefinição do Agente 4**
 Skill do A2 reescrita: HTML comments diretos, exemplos antes/depois para todas as 7 operações, banco de transições denotativas. Skill do A4 reescrita: papel redefinido de "conversor de rótulos" para "polidor de prosa".
 
-**2026-06-08 — Correção de campo: HABILIDADE_BNCC → HABILIDADE_ENEM**
+**2026-06-08 — Correção de campo: HABILIDADE_BNCC → HABILIDADE_ENEM** *(revertido em 2026-06-17, ver entrada acima)*
 
 **2026-05-30 — Reformulação para pipeline funcional**
 Abandono da simulação de voz humana. Princípio pedagógico: artificialidade funcional. Substituição dos tipos de seção por sete operações elementares.

@@ -2,7 +2,7 @@
 
 ## Leitura obrigatória antes de iniciar
 
-1. `contexto/matriz-enem.json` — base de conhecimento H1–H30
+1. `contexto/matriz-bncc.json` — base de conhecimento EM13CHS101–EM13CHS606
 2. `orientacoes/decompositor-orientacao.md` — sua identidade, escopo e proibições
 
 Em caso de conflito entre este documento e a orientação, a orientação prevalece.
@@ -28,7 +28,7 @@ Extraia e normalize as seguintes variáveis:
 | Variável | Campo no JSON | Obrigatório |
 |---|---|---|
 | DISCIPLINA | `disciplina` | Sim |
-| HABILIDADE | `habilidade_enem` | Sim |
+| HABILIDADE | `habilidade_bncc` | Sim |
 | UNIDADE | `unidade` | Sim |
 | PERGUNTA | `pergunta_unidade` | Sim |
 | CAPÍTULOS | `capitulos` | Sim (mínimo 1) |
@@ -41,7 +41,7 @@ Se qualquer campo obrigatório estiver ausente ou ambíguo, interrompa e solicit
 
 ## PASSO 2 — USAR A ENTRADA DA HABILIDADE
 
-A entrada da habilidade de `matriz-enem.json` já está injetada no user message pelo pipeline — **não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Extraia:
+A entrada da habilidade de `matriz-bncc.json` já está injetada no user message pelo pipeline — **não é necessário ler o arquivo**. Use o JSON fornecido diretamente. Extraia:
 
 ```
 enunciado          → texto completo da habilidade
@@ -50,18 +50,18 @@ operacao_predominante → operação que encerrará cada sequência
 sequencia_pedagogica  → lista de operações em ordem (o seu template)
 ```
 
-Você **não** usa `conteudos_por_area` nem `autores_referencia`. Esses campos são para o Agente 1.
+Você **não** usa `conteudos_por_area`. Esse campo é para o Agente 1. (A matriz BNCC não traz `autores_referencia`; os autores vêm do briefing.)
 
-### Exemplo — H14
+### Exemplo — EM13CHS402
 
 ```json
-"enunciado": "Comparar diferentes pontos de vista sobre instituições sociais, políticas e econômicas.",
-"foco_cognitivo": "Comparação de interpretações sobre instituições.",
+"enunciado": "Analisar e comparar indicadores de emprego, trabalho e renda em diferentes espaços, escalas e tempos, associando-os a processos de estratificação e desigualdade socioeconômica.",
+"foco_cognitivo": "Comparação de indicadores de emprego, trabalho e renda associados à estratificação.",
 "operacao_predominante": "Comparar",
 "sequencia_pedagogica": [
   {"ordem": 1, "operacao": "Definir"},
   {"ordem": 2, "operacao": "Classificar"},
-  {"ordem": 3, "operacao": "Reconhecer perspectiva"},
+  {"ordem": 3, "operacao": "Sequenciar"},
   {"ordem": 4, "operacao": "Comparar"}
 ]
 ```
@@ -91,10 +91,10 @@ A micro-habilidade descreve **o que o aluno faz cognitivamente** e **sobre qual 
 | `"Reconhecer perspectivas sobre desigualdade racial"` | `"Reconhecer a perspectiva de Lélia Gonzalez"` |
 | `"Definir raça como categoria socialmente construída"` | `"Entender o conceito de raça"` |
 
-### Exemplo completo — H14, dois capítulos
+### Exemplo completo — EM13CHS402, dois capítulos
 
 **Capítulo 1: Estrutura social e estratificação social**
-*(sequencia_pedagogica de H14: Definir → Classificar → Reconhecer perspectiva → Comparar)*
+*(sequencia_pedagogica de EM13CHS402: Definir → Classificar → Sequenciar → Comparar)*
 
 ```
 micro_hab_1: "Definir estratificação como sistema de hierarquias e posições desiguais"
@@ -103,15 +103,15 @@ operacao_1:  Definir
 micro_hab_2: "Classificar formas de estratificação segundo critérios econômicos, culturais e simbólicos"
 operacao_2:  Classificar
 
-micro_hab_3: "Reconhecer perspectivas teóricas distintas sobre a origem e reprodução da estratificação"
-operacao_3:  Reconhecer perspectiva
+micro_hab_3: "Sequenciar os processos que produzem e reproduzem a estratificação ao longo do tempo"
+operacao_3:  Sequenciar
 
 micro_hab_4: "Comparar interpretações sobre estratificação e desigualdade social"
 operacao_4:  Comparar
 ```
 
 **Capítulo 2: Desigualdade, raça e gênero no Brasil**
-*(mesma sequencia_pedagogica de H14)*
+*(mesma sequencia_pedagogica de EM13CHS402)*
 
 ```
 micro_hab_1: "Definir raça e gênero como categorias socialmente construídas de diferenciação"
@@ -120,8 +120,8 @@ operacao_1:  Definir
 micro_hab_2: "Classificar formas de desigualdade estrutural segundo raça, gênero e classe"
 operacao_2:  Classificar
 
-micro_hab_3: "Reconhecer perspectivas sobre desigualdade racial e de gênero no Brasil"
-operacao_3:  Reconhecer perspectiva
+micro_hab_3: "Sequenciar as etapas históricas de formação das desigualdades de raça e gênero no Brasil"
+operacao_3:  Sequenciar
 
 micro_hab_4: "Comparar condições socioeconômicas de diferentes grupos raciais e de gênero"
 operacao_4:  Comparar
@@ -141,7 +141,7 @@ Para cada capítulo, monte a linha completa:
 | `unidade` | do briefing |
 | `pergunta_unidade` | do briefing |
 | `capitulo` | do briefing |
-| `habilidade` | código + enunciado completo (ex: `H14 — Comparar diferentes pontos de vista...`) |
+| `habilidade` | código + enunciado completo (ex: `EM13CHS402 — Analisar e comparar indicadores de emprego, trabalho e renda...`) |
 | `micro_hab_1` | micro-habilidade da operação 1 |
 | `operacao_secao_1` | operação 1 (ex: `Definir`) |
 | `micro_hab_2` | micro-habilidade da operação 2 |
@@ -203,8 +203,8 @@ Certo: `"Definir estratificação como sistema de hierarquias e posições desig
 
 **Armadilha 3 — Última operação errada**
 
-Errado (para H14): terminar em `Aplicar`
-Certo: terminar em `Comparar` (que é a `operacao_predominante` de H14)
+Errado (para EM13CHS402): terminar em `Aplicar`
+Certo: terminar em `Comparar` (que é a `operacao_predominante` de EM13CHS402)
 
 **Armadilha 4 — Operação consecutiva repetida**
 
@@ -220,7 +220,7 @@ Certo: copiar a lista completa para todos os capítulos
 
 ## CHECKLIST FINAL
 
-- [ ] Li `contexto/matriz-enem.json` para a habilidade do briefing?
+- [ ] Li `contexto/matriz-bncc.json` para a habilidade do briefing?
 - [ ] Usei a `sequencia_pedagogica` como template de operações?
 - [ ] Escrevi micro-habilidades no nível correto (operação + objeto conceitual)?
 - [ ] Nenhuma micro-habilidade nomeia autores ou fontes específicas?

@@ -22,7 +22,7 @@ Todo capítulo começa com este bloco. Escreva os quatro campos livremente; o Ag
 
 ```
 <!-- [CONTEXTO_OPERACAO] -->
-**Habilidade:** [código e texto completo da habilidade ENEM]
+**Habilidade:** [código e texto completo da habilidade BNCC]
 **Operação principal:** [operação cognitiva central do capítulo]
 **Pergunta do capítulo:** [pergunta que a síntese final responde]
 **Por que importa:** [uma frase conectando ao capítulo ou unidade seguinte]
