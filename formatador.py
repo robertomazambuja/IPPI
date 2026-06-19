@@ -529,8 +529,67 @@ def render_secao(sec: SecaoNode, sec_id: str, lvl: int) -> str:
     lines.append(f'{pad}</secao>')
     return "\n".join(lines)
 
+# ---------------------------------------------------------------------------
+# Marcadores de verificação externa (ver PLANO-VERIFICACAO-EXTERNA.md).
+# O A5 NÃO produz a verificação — só marca, de forma determinística, onde ela
+# entra e o que verificar. O conteúdo vem da pasta verificacoes/ na montagem do
+# PDF (xml_to_pdf.py --verificacoes). ref no estilo: verif-{cap_id}-s{idx}.
+# ---------------------------------------------------------------------------
+
+def render_marcador_verificacao(ref: str, ponto: dict) -> str:
+    """Marcador de verificação de seção (sem conteúdo, status=externo)."""
+    op   = ponto.get("tipo_operacao", "")
+    cab  = ponto.get("cabecalho", "")
+    conc = ponto.get("conceito_central", "")
+    ex   = ponto.get("exemplo_ancola", "")
+
+    linhas: List[str] = []
+    if op:
+        linhas.append(f"Operação: {op}.")
+    if cab:
+        linhas.append(f'Micro-habilidade / cabeçalho: "{cab}".')
+    if conc:
+        linhas.append(f"Conceito-âncora: {conc}.")
+    if ex:
+        linhas.append(f"Exemplo-âncora (do capítulo): {ex}")
+    corpo = "\n".join(linhas)
+
+    return (
+        f'<sidebar tipo="verificacao" ref="{xe(ref)}" status="externo">\n'
+        f'  <o-que-verificar>{xe(corpo)}</o-que-verificar>\n'
+        f'</sidebar>'
+    )
+
+
+def render_marcador_aplicar(ref: str, ctx: dict) -> str:
+    """Marcador do 'Aplicar agora' do capítulo (sem conteúdo, status=externo)."""
+    op    = ctx.get("operacao_principal", "")
+    perg  = ctx.get("pergunta_do_capitulo", "")
+    sint  = ctx.get("sintese_final", "")
+    ex    = ctx.get("exemplo_ancola_principal", "")
+
+    linhas: List[str] = []
+    if op:
+        linhas.append(f"Operação principal do capítulo: {op}.")
+    if perg:
+        linhas.append(f'Pergunta do capítulo: "{perg}"')
+    if sint:
+        linhas.append(f"Síntese do capítulo: {sint}")
+    if ex:
+        linhas.append(f"Exemplo-âncora da seção principal: {ex}")
+    linhas.append("Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.")
+    corpo = "\n".join(linhas)
+
+    return (
+        f'<sidebar tipo="aplicar-agora" ref="{xe(ref)}" status="externo">\n'
+        f'  <o-que-verificar>{xe(corpo)}</o-que-verificar>\n'
+        f'</sidebar>'
+    )
+
+
 def render_bloco(bloco: BlocoNode, lvl: int,
                  verificacoes: Optional[Dict[int, str]] = None,
+                 pontos_verif: Optional[Dict[int, dict]] = None,
                  micro_habs: Optional[Dict[int, str]] = None,
                  cap_id: str = "",
                  img_counter: Optional[List[int]] = None) -> str:
@@ -567,8 +626,15 @@ def render_bloco(bloco: BlocoNode, lvl: int,
         else:
             lines.append(f'{pad}  <nota_fonte>{xe(fonte.texto)}</nota_fonte>')
 
-    # Sidebar de verificação para este bloco (se houver)
-    if verificacoes and bloco.idx in verificacoes:
+    # Sidebar de verificação para este bloco.
+    # Fluxo externo (preferencial): emite só o MARCADOR; conteúdo vem da pasta
+    # verificacoes/ na montagem do PDF.
+    if pontos_verif and bloco.idx in pontos_verif:
+        ref = f"verif-{cap_id}-s{bloco.idx}" if cap_id else f"verif-s{bloco.idx}"
+        marcador = render_marcador_verificacao(ref, pontos_verif[bloco.idx])
+        lines.append(indent(marcador, lvl + 1))
+    # Fluxo legado (verificador via Haiku): sidebar já pronta.
+    elif verificacoes and bloco.idx in verificacoes:
         verif_xml = verificacoes[bloco.idx]
         # Indenta o sidebar para ficar alinhado com o bloco
         indented = indent(verif_xml, lvl + 1)
@@ -581,6 +647,8 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
                blocos: List[BlocoNode], rodape: RodapeNode,
                verificacoes: Optional[Dict[int, str]] = None,
                aplicar_agora: Optional[str] = None,
+               pontos_verif: Optional[Dict[int, dict]] = None,
+               aplicar_ctx: Optional[dict] = None,
                micro_habs: Optional[Dict[int, str]] = None) -> str:
     total_words = sum(b.palavras for b in blocos)
 
@@ -627,7 +695,8 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f'    <quebra tipo="pagina" sugestao="{sugestao}"/>')
             parts.append("")
             acum = 0
-        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes, micro_habs=micro_habs,
+        parts.append(render_bloco(bloco, 2, verificacoes=verificacoes,
+                                  pontos_verif=pontos_verif, micro_habs=micro_habs,
                                   cap_id=cap_id, img_counter=img_counter))
         parts.append("")
         acum += bloco.palavras
@@ -653,7 +722,12 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f"    <sintese>{xe(rodape.sintese)}</sintese>")
         if rodape.encadeamento:
             parts.append(f"    <encadeamento>{xe(rodape.encadeamento)}</encadeamento>")
-        if aplicar_agora:
+        # Fluxo externo (preferencial): marcador do "Aplicar agora".
+        if aplicar_ctx:
+            ref = f"aplicar-{cap_id}" if cap_id else "aplicar"
+            parts.append(indent(render_marcador_aplicar(ref, aplicar_ctx), 2))
+        # Fluxo legado (verificador via Haiku): sidebar já pronta.
+        elif aplicar_agora:
             parts.append(indent(aplicar_agora, 2))
     parts.append("  </rodape>")
     parts.append("")
@@ -670,6 +744,8 @@ def formatar_capitulo(
     output_dir: Path,
     verificacoes: Optional[Dict[int, str]] = None,
     aplicar_agora: Optional[str] = None,
+    pontos_verif: Optional[Dict[int, dict]] = None,
+    aplicar_ctx: Optional[dict] = None,
     micro_habs: Optional[Dict[int, str]] = None,
 ) -> Optional[Path]:
     """
@@ -677,13 +753,20 @@ def formatar_capitulo(
     Salva em output_dir/<stem>.xml.
     Retorna o Path do XML gerado, ou None em caso de erro.
 
-    verificacoes: dict {idx_secao: xml_sidebar} gerado por verificador.gerar_verificacoes()
-    aplicar_agora: xml_sidebar do exercício final, ou None
+    Verificação externa (preferencial — ver PLANO-VERIFICACAO-EXTERNA.md):
+      pontos_verif: dict {idx_secao: {tipo_operacao, cabecalho, conceito_central,
+                    exemplo_ancola}} → emite MARCADORES status="externo".
+      aplicar_ctx:  dict de contexto do "Aplicar agora" → marcador no rodapé.
+
+    Fluxo legado (verificador via Haiku, mantido como rascunho):
+      verificacoes: dict {idx_secao: xml_sidebar} pronto.
+      aplicar_agora: xml_sidebar do exercício final, ou None.
     """
     try:
         titulo, cap_id, contexto, blocos, rodape = parse_document(texto_path)
         xml_str = render_xml(titulo, cap_id, contexto, blocos, rodape,
                              verificacoes=verificacoes, aplicar_agora=aplicar_agora,
+                             pontos_verif=pontos_verif, aplicar_ctx=aplicar_ctx,
                              micro_habs=micro_habs)
 
  

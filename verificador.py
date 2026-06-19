@@ -217,11 +217,14 @@ def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Option
     onde a verificação externa deve entrar — sem produzir a verificação em si.
 
     Retorna:
-      - pontos: dict {idx_secao: {"tipo_operacao": str, "cabecalho": str}}
-        para cada seção com VERIFICACAO: Sim.
-      - aplicar_agora_ctx: dict {"operacao_principal": str, "pergunta_do_capitulo": str},
-        ou None se não houver nenhuma seção elegível no capítulo (mesmo critério
-        que `gerar_verificacoes()` já usava).
+      - pontos: dict {idx_secao: {"tipo_operacao", "cabecalho",
+        "conceito_central", "exemplo_ancola"}} para cada seção com
+        VERIFICACAO: Sim. Contexto completo para guiar os agentes externos
+        (ver decisão "granularidade" do PLANO-VERIFICACAO-EXTERNA.md).
+      - aplicar_agora_ctx: dict {"operacao_principal", "pergunta_do_capitulo",
+        "sintese_final", "exemplo_ancola_principal"}, ou None se não houver
+        nenhuma seção elegível no capítulo (mesmo critério que
+        `gerar_verificacoes()` já usava).
     """
     try:
         core_data = parse_core(core_path)
@@ -230,16 +233,30 @@ def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Option
         return {}, None
 
     pontos: Dict[int, dict] = {
-        s["idx"]: {"tipo_operacao": s["tipo_operacao"], "cabecalho": s["cabecalho"]}
+        s["idx"]: {
+            "tipo_operacao": s["tipo_operacao"],
+            "cabecalho": s["cabecalho"],
+            "conceito_central": s["conceito_central"],
+            "exemplo_ancola": s["exemplo_ancola"],
+        }
         for s in core_data["secoes"] if s["verificacao"]
     }
     if not pontos:
         logger.info("[Verificador] Nenhuma seção elegível em %s", core_path.name)
         return {}, None
 
+    # Seção principal (para o "Aplicar agora"): mesma heurística do _build_prompt —
+    # última seção cuja operação == operação principal do capítulo; fallback: última.
+    sec_principal = next(
+        (s for s in reversed(core_data["secoes"])
+         if s["tipo_operacao"] == core_data["operacao_principal"]),
+        core_data["secoes"][-1] if core_data["secoes"] else None,
+    )
     aplicar_agora_ctx = {
         "operacao_principal": core_data["operacao_principal"],
         "pergunta_do_capitulo": core_data["pergunta_do_capitulo"],
+        "sintese_final": core_data["sintese_final"],
+        "exemplo_ancola_principal": sec_principal["exemplo_ancola"] if sec_principal else "",
     }
     return pontos, aplicar_agora_ctx
 

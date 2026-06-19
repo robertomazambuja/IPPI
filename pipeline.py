@@ -956,15 +956,16 @@ def run_agente5(
     output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
 
-    # Identifica pontos de verificação no core (sem custo de token)
-    verificacoes = None
-    aplicar_agora = None
+    # Identifica pontos de verificação no core (sem custo de token).
+    # A produção da verificação é externa; aqui só marcamos onde ela entra.
+    pontos_verif = None
+    aplicar_ctx = None
     if core_path and core_path.exists():
         try:
-            pontos, aplicar_agora_ctx = coletar_pontos_verificacao(core_path)
+            pontos_verif, aplicar_ctx = coletar_pontos_verificacao(core_path)
             log_print(
-                f"  ✓ Pontos de verificação identificados: {len(pontos or {})} seção(ões) | "
-                f"aplicar_agora={'sim' if aplicar_agora_ctx else 'não'}",
+                f"  ✓ Pontos de verificação identificados: {len(pontos_verif or {})} seção(ões) | "
+                f"aplicar_agora={'sim' if aplicar_ctx else 'não'}",
                 indent=1,
             )
         except Exception as e:
@@ -972,8 +973,8 @@ def run_agente5(
 
     try:
         out_path = formatar_capitulo(texto_path, output_dir,
-                                     verificacoes=verificacoes,
-                                     aplicar_agora=aplicar_agora,
+                                     pontos_verif=pontos_verif,
+                                     aplicar_ctx=aplicar_ctx,
                                      micro_habs=micro_habs)
         if out_path:
             log_print(f"  ✓ XML gerado: {out_path.name}", indent=1)
