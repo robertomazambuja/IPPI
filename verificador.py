@@ -94,6 +94,57 @@ def parse_core(core_path: Path) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Coleta de pontos de verificação (determinístico — zero chamadas à API)
+# ---------------------------------------------------------------------------
+#
+# Fase 1 da externalização da verificação (ver PLANO-VERIFICACAO-EXTERNA.md):
+# o Agente 5 deixa de chamar o Haiku para GERAR a verificação. Esta função
+# apenas identifica ONDE ela deve entrar e o que descrever para o agente
+# externo — sem produzir pergunta/alternativas/gabarito.
+#
+# Nesta fase o retorno ainda é mínimo (tipo_operacao + cabeçalho por seção
+# elegível, e um contexto básico de "Aplicar agora"). A Fase 2 amplia
+# pontos_verif/aplicar_ctx com conceito-âncora e exemplo-âncora.
+
+def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Optional[dict]]:
+    """
+    Lê o core.md e devolve, sem chamar a API:
+      - pontos_verif: dict {idx_secao: {"tipo_operacao": str, "cabecalho": str}}
+        para cada seção com VERIFICACAO: Sim
+      - aplicar_ctx: dict com contexto do "Aplicar agora" do capítulo
+        ({"operacao_principal", "pergunta_do_capitulo", "sintese_final"}),
+        ou None se o core não tiver seções
+    """
+    try:
+        core_data = parse_core(core_path)
+    except Exception as e:
+        logger.error("[Verificador] Falha ao parsear core %s: %s", core_path, e)
+        return {}, None
+
+    pontos_verif: Dict[int, dict] = {}
+    for s in core_data["secoes"]:
+        if s["verificacao"]:
+            pontos_verif[s["idx"]] = {
+                "tipo_operacao": s["tipo_operacao"],
+                "cabecalho": s["cabecalho"],
+            }
+
+    aplicar_ctx: Optional[dict] = None
+    if core_data["secoes"]:
+        aplicar_ctx = {
+            "operacao_principal": core_data["operacao_principal"],
+            "pergunta_do_capitulo": core_data["pergunta_do_capitulo"],
+            "sintese_final": core_data["sintese_final"],
+        }
+
+    logger.info(
+        "[Verificador] %d ponto(s) de verificação identificado(s) em %s (sem custo de API)",
+        len(pontos_verif), core_path.name,
+    )
+    return pontos_verif, aplicar_ctx
+
+
+# ---------------------------------------------------------------------------
 # Prompt de geração
 # ---------------------------------------------------------------------------
 

@@ -45,7 +45,7 @@ from typing import Dict, List, Optional, Tuple
 from dotenv import load_dotenv
 from normalizador import normalizar_texto
 from formatador import formatar_capitulo
-from verificador import gerar_verificacoes
+from verificador import coletar_pontos_verificacao
 
 # ============================================================================
 # CONFIGURAÇÃO
@@ -821,26 +821,28 @@ def run_agente5(
 ) -> Optional[Path]:
     """Agente 5 — Formatador XML (determinístico, sem LLM).
 
-    Se core_path for fornecido, gera verificações fechadas e "Aplicar agora"
-    via verificador.py (chamada Haiku) e os injeta no XML.
+    A verificação não é mais gerada aqui (ver PLANO-VERIFICACAO-EXTERNA.md).
+    Se core_path for fornecido, apenas identificamos os pontos onde a
+    verificação externa deve entrar — zero chamadas à API. A emissão dos
+    marcadores no XML (status="externo") é a Fase 2; por ora isso só é
+    identificado e logado.
     """
     output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
 
-    # Gera verificações se o core estiver disponível
+    # Identifica pontos de verificação (sem custo de token — Fase 1 da externalização)
     verificacoes = None
     aplicar_agora = None
     if core_path and core_path.exists():
         try:
-            verificacoes, aplicar_agora = gerar_verificacoes(core_path, client,
-                model=AGENT_MODELS.get(0, "claude-haiku-4-5-20251001"))
+            pontos_verif, aplicar_ctx = coletar_pontos_verificacao(core_path)
             log_print(
-                f"  ✓ Verificações: {len(verificacoes or {})} seção(ões) | "
-                f"aplicar_agora={'sim' if aplicar_agora else 'não'}",
+                f"  ✓ Pontos de verificação identificados: {len(pontos_verif)} seção(ões) | "
+                f"aplicar_agora={'sim' if aplicar_ctx else 'não'} (insumo externo — sem custo de API)",
                 indent=1,
             )
         except Exception as e:
-            log_print(f"  ⚠  Verificador falhou ({e}) — XML sem verificações", indent=1)
+            log_print(f"  ⚠  Falha ao identificar pontos de verificação ({e})", indent=1)
 
     try:
         out_path = formatar_capitulo(texto_path, output_dir,
