@@ -1241,9 +1241,10 @@ def run_pipeline(
     log_print(f"CSV de usage: {USAGE_CSV}")
     log_print(f"{'═' * 70}\n")
 
-    # Gera lista de imagens para o professor (se agente 5 rodou)
+    # Gera listas para o professor / agentes externos (se agente 5 rodou)
     if 5 in agentes:
         gerar_lista_imagens(OUTPUT_DIR / apostila_name)
+        gerar_lista_verificacoes(OUTPUT_DIR / apostila_name)
 
 
 # ============================================================================
@@ -1335,6 +1336,113 @@ def gerar_lista_imagens(apostila_dir: Path) -> None:
         log_print(f"[Imagens] {total_imgs} imagem(ns) em {len(capitulos)} capítulo(s).")
     else:
         log_print("[Imagens] Nenhuma imagem referenciada nos XMLs.")
+
+
+# ============================================================================
+# GERAÇÃO DO BRIEFING DE VERIFICAÇÕES (insumo externo)
+# ============================================================================
+
+def gerar_lista_verificacoes(apostila_dir: Path) -> None:
+    """
+    Lê todos os XMLs em output/{apostila}/formatado/**/*.xml,
+    extrai as sidebars com status="externo" (marcadores de verificação) e
+    escreve VERIFICACOES-NECESSARIAS.txt — o briefing que os agentes externos
+    usam para produzir um JSON por marcador. Espelha gerar_lista_imagens().
+    """
+    import xml.etree.ElementTree as ET
+
+    xml_files = sorted(apostila_dir.glob("formatado/**/*.xml"))
+    if not xml_files:
+        log_print("[Verif] Nenhum XML encontrado — lista de verificações não gerada.")
+        return
+
+    capitulos: List[Dict] = []
+    for xml_path in xml_files:
+        try:
+            tree = ET.parse(xml_path)
+            root = tree.getroot()
+        except ET.ParseError as e:
+            log_print(f"[Verif] AVISO: erro ao parsear {xml_path.name}: {e}")
+            continue
+
+        cap_el = root.find(".//capitulo") if root.tag != "capitulo" else root
+        if cap_el is None:
+            cap_el = root
+
+        cap_id     = cap_el.get("id", xml_path.stem)
+        cap_titulo = cap_el.get("titulo", xml_path.stem)
+
+        verifs: List[Dict] = []
+        for sb in cap_el.iter("sidebar"):
+            if sb.get("status") != "externo":
+                continue
+            ref  = sb.get("ref", "")
+            tipo = sb.get("tipo", "")
+            oqv_el = sb.find("o-que-verificar")
+            if oqv_el is not None and oqv_el.text:
+                oqv = " | ".join(
+                    ln.strip() for ln in oqv_el.text.splitlines() if ln.strip()
+                )
+            else:
+                oqv = "(sem descrição)"
+            verifs.append({"ref": ref, "tipo": tipo, "oqv": oqv})
+
+        if verifs:
+            capitulos.append({"id": cap_id, "titulo": cap_titulo, "verifs": verifs})
+
+    saida_path = apostila_dir / "VERIFICACOES-NECESSARIAS.txt"
+    apostila_nome = apostila_dir.name
+    data_hoje = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    linhas: List[str] = []
+    sep = "=" * 65
+
+    linhas.append(f"VERIFICAÇÕES NECESSÁRIAS — Apostila: {apostila_nome}")
+    linhas.append(f"Gerado em: {data_hoje}")
+    linhas.append("")
+    linhas.append(sep)
+    linhas.append("INSTRUÇÕES")
+    linhas.append(sep)
+    linhas.append("1. Para cada item abaixo, produza a verificação descrita.")
+    linhas.append("2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).")
+    linhas.append('3. Coloque todos os arquivos numa pasta chamada "verificacoes".')
+    linhas.append("4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).")
+    linhas.append("")
+    linhas.append("   tipo 'verificacao':")
+    linhas.append('     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",')
+    linhas.append('      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},')
+    linhas.append('      "correta":"B","justificativa":"..."}')
+    linhas.append("   tipo 'aplicar-agora':")
+    linhas.append('     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",')
+    linhas.append('      "resposta_comentada":"..."}')
+    linhas.append(sep)
+
+    if not capitulos:
+        linhas.append("")
+        linhas.append("(Nenhuma verificação necessária nesta apostila.)")
+    else:
+        total = 0
+        for cap in capitulos:
+            linhas.append("")
+            linhas.append(f"CAPÍTULO {cap['id']} — {cap['titulo']}")
+            linhas.append("-" * 65)
+            for v in cap["verifs"]:
+                total += 1
+                linhas.append(f"  REF             : {v['ref']}   (tipo: {v['tipo']})")
+                linhas.append(f"  O QUE VERIFICAR : {v['oqv']}")
+                linhas.append("")
+
+        linhas.append(sep)
+        linhas.append(f"TOTAL: {total} verificação(ões) necessária(s)")
+        linhas.append(sep)
+
+    saida_path.write_text("\n".join(linhas), encoding="utf-8")
+    log_print(f"[Verif] Lista de verificações salva em: {saida_path}")
+    if capitulos:
+        total_v = sum(len(c["verifs"]) for c in capitulos)
+        log_print(f"[Verif] {total_v} verificação(ões) em {len(capitulos)} capítulo(s).")
+    else:
+        log_print("[Verif] Nenhuma verificação referenciada nos XMLs.")
 
 
 # ============================================================================
