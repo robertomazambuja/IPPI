@@ -1,0 +1,4 @@
+2026-06-20 12:59:48,045 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md (sem custo de API)
+2026-06-20 12:59:48,054 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml (4 blocos, 2100 palavras)
+2026-06-20 12:59:48,061 [INFO] pipeline: [Verif] Lista de verificações salva em: /sessions/friendly-eager-brown/tmp/tmp1kg057b2/VERIFICACOES-NECESSARIAS.txt
+2026-06-20 12:59:48,063 [INFO] pipeline: [Verif] 5 verificação(ões) em 1 capítulo(s).

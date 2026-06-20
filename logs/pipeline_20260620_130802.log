@@ -1,0 +1,15 @@
+2026-06-20 13:08:02,802 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md (sem custo de API)
+2026-06-20 13:08:02,806 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml (4 blocos, 2100 palavras)
+2026-06-20 13:08:02,810 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md (sem custo de API)
+2026-06-20 13:08:02,827 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.xml (4 blocos, 2394 palavras)
+2026-06-20 13:08:02,833 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-modos-de-organizacao-da-producao-do-taylorismo-ao-toyotismo.md (sem custo de API)
+2026-06-20 13:08:02,837 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-modos-de-organizacao-da-producao-do-taylorismo-ao-toyotismo.xml (4 blocos, 3020 palavras)
+2026-06-20 13:08:02,841 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.md (sem custo de API)
+2026-06-20 13:08:02,845 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-trabalho-contemporaneo-precarizacao-uberizacao-e-desigualdade-no-brasil.xml (4 blocos, 2521 palavras)
+2026-06-20 13:08:02,850 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-03-capitulo-3-trabalho-contemporaneo-uberizacao-plataformizacao-e-divisao-sexual-do-trabalho.md (sem custo de API)
+2026-06-20 13:08:02,855 [INFO] formatador: [Formatador] Salvo: 01-03-capitulo-3-trabalho-contemporaneo-uberizacao-plataformizacao-e-divisao-sexual-do-trabalho.xml (4 blocos, 3252 palavras)
+2026-06-20 13:08:02,859 [INFO] pipeline: [Verif] Lista de verificações salva em: /sessions/friendly-eager-brown/tmp/tmp60y0tour/VERIFICACOES-NECESSARIAS.txt
+2026-06-20 13:08:02,860 [INFO] pipeline: [Verif] 25 verificação(ões) em 5 capítulo(s).
+2026-06-20 13:08:02,887 [INFO] pipeline: 
+[Validar] 25 marcador(es) externo(s); 0 erro(s), 0 aviso(s).
+2026-06-20 13:08:02,891 [INFO] pipeline: [Validar] OK — todas as verificações presentes e no schema esperado.

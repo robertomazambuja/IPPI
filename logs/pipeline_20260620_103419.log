@@ -1,0 +1,10 @@
+2026-06-20 10:34:19,612 [INFO] __main__: 
+[Agente 0] Decompositor — gerando input/apostila-historia-unidade1-2serie/instrucoes.csv
+2026-06-20 10:34:21,709 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-20 10:34:51,682 [INFO] __main__:     →  write_file: input/apostila-historia-unidade1-2serie/instrucoes.csv
+2026-06-20 10:34:51,684 [INFO] __main__:     ✓  Salvo: input/apostila-historia-unidade1-2serie/instrucoes.csv
+2026-06-20 10:34:53,289 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-20 10:35:01,970 [INFO] __main__:   ✓  Agente 0 concluiu (2 iteração(ões)) | in=3 out=3139 cache_create=9757 cache_read=7253
+2026-06-20 10:35:01,979 [INFO] __main__:     ⚠  Alinhamento corrigido: linha tinha 23 campos (esperado 19).
+2026-06-20 10:35:01,982 [INFO] __main__:   ⚠  CSV corrigido automaticamente (desalinhamento de colunas).
+2026-06-20 10:35:02,006 [INFO] __main__: ✗  CSV gerado com schema inválido: Operação inválida na linha 2, coluna 'operacao_secao_1': 'Definir Estado imperial como estrutura política centralizada articulada à organização jurídica e à manutenção da ordem'. Deve ser um de: Aplicar, Classificar, Comparar, Definir, Mapear causalidade, Reconhecer perspectiva, Sequenciar. PROVÁVEL CAUSA: desalinhamento de colunas — o Decompositor escreveu 3 vírgulas vazias em vez de 4 para os slots opcionais (micro_hab_5/6, operacao_secao_5/6).. Abortando.

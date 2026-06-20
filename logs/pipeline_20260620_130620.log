@@ -1,0 +1,12 @@
+2026-06-20 13:06:20,372 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.md (sem custo de API)
+2026-06-20 13:06:20,377 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml (4 blocos, 2100 palavras)
+2026-06-20 13:06:20,384 [INFO] pipeline: 
+[Validar] 5 marcador(es) externo(s); 0 erro(s), 0 aviso(s).
+2026-06-20 13:06:20,385 [INFO] pipeline: [Validar] OK — todas as verificações presentes e no schema esperado.
+2026-06-20 13:06:20,405 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-e-tipos-de-trabalho.xml (4 blocos, 2100 palavras)
+2026-06-20 13:06:20,411 [INFO] pipeline: 
+[Validar] 5 marcador(es) externo(s); 3 erro(s), 1 aviso(s).
+2026-06-20 13:06:20,414 [INFO] pipeline:   ⚠  verif-01-01-s3: sem 'justificativa' (gabarito do professor ficará vazio)
+2026-06-20 13:06:20,417 [INFO] pipeline:   ✗  verif-01-01-s1: 'alternativas' deve ter exatamente A,B,C,D (encontrado: ['A', 'B', 'C'])
+2026-06-20 13:06:20,419 [INFO] pipeline:   ✗  verif-01-01-s2: 'correta' deve ser A, B, C ou D (encontrado: 'X')
+2026-06-20 13:06:20,421 [INFO] pipeline:   ✗  verif-01-01-s4: arquivo verif-01-01-s4.json ausente em /sessions/friendly-eager-brown/tmp/tmpck1dawxq/verificacoes

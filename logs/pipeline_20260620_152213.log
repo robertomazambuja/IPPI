@@ -1,0 +1,4 @@
+2026-06-20 15:22:13,800 [INFO] pipeline: [Imagens] Lista de imagens salva em: output/apostila-historia-unidade1-2serie/IMAGENS-NECESSARIAS.txt
+2026-06-20 15:22:13,802 [INFO] pipeline: [Imagens] 6 imagem(ns) em 2 capítulo(s).
+2026-06-20 15:22:13,826 [INFO] pipeline: [Verif] Lista de verificações salva em: output/apostila-historia-unidade1-2serie/VERIFICACOES-NECESSARIAS.txt
+2026-06-20 15:22:13,828 [INFO] pipeline: [Verif] 10 verificação(ões) em 2 capítulo(s).
