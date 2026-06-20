@@ -206,6 +206,39 @@ de uma página e o conteúdo (as 2 colunas) só começa na página seguinte.
 - O filete colorido (`border-top` do `.bloco-multicol`) pode aparecer no topo de
   páginas continuadas quando um bloco atravessa a quebra.
 
+## 9-bis. SESSÃO 2026-06-16 — entrada das imagens reais e compactação
+
+As 3 imagens reais do cap. 01-01 (`fig-01-01-01/02/03`, infográficos em
+paisagem) entraram em `output/apostila-sociologia-trabalho/imagens/`. Com elas,
+apareceu **muito espaço em branco**: cada imagem e cada verificação são
+elementos full-width com `break-inside: avoid`; quando imagem + verificação não
+cabiam juntas, cada uma orfanava numa página (ex.: antiga p.5 com 63% de branco,
+p.8 com 68%). Medição baseline do cap.1: média 22,9% de branco de rodapé.
+
+**O que foi feito nesta sessão (todas no `xml_to_pdf.py`):**
+1. **Bug de caminho corrigido.** `render_imagem()` fazia `Path(...).as_uri()` em
+   caminho relativo → `ValueError`. Agora `.resolve()` + `imdir` absoluto em
+   `main()`.
+2. **Legenda escondida** (decisão do usuário). A `<descricao>` do XML é briefing
+   de produção, não texto para o aluno. `render_imagem()` emite só `<figure><img>`,
+   sem `<p class="imagem-legenda">`. (CSS `.imagem-legenda` ficou órfão, inócuo.)
+3. **Imagem compactada.** `.imagem-container img { max-height: 74mm; max-width:
+   100%; width:auto }` + margens reduzidas (14pt→7pt) + `break-before: avoid`
+   (puxa a imagem para junto do texto anterior).
+4. **Verificação puxada para cima.** `.sidebar-verificacao` ganhou
+   `break-before: avoid` e padding/margem um pouco menores. Continua full-width
+   (decisão do usuário: "verificação segue como está").
+
+**Resultado (cap.1 aluno):** 12→10 páginas; branco médio 22,9%→12,2%; as
+verificações órfãs (p.5/p.8) sumiram e agora empacotam com a imagem/texto.
+Validado por render PNG das páginas + medição programática de branco de rodapé.
+
+**Resíduo conhecido (versão PROFESSOR):** com o box de gabarito, a verificação
+fica mais alta e volta a orfanar em ~2 páginas (branco ~41–47%). Como é uso
+interno, não foi tratado. Se incomodar: reduzir a imagem (`max-height`) só
+quando `incluir_gabarito`, ou permitir a verificação-com-gabarito quebrar entre
+páginas (`break-inside: auto` no `.verif-gabarito`).
+
 ## 10. AVISO técnico (truncamento de arquivo) — CONFIRMADO de novo nesta sessão
 
 A ferramenta de **edição** de arquivos truncou o `xml_to_pdf.py` de novo nesta

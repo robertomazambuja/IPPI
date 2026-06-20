@@ -1,0 +1,18 @@
+{
+  "disciplina": "História",
+  "habilidade_enem": "H12",
+  "unidade": "Unidade 1 — Justiça, Estado e Poder no Brasil Imperial",
+  "pergunta_unidade": "De que maneira as instituições de justiça participaram da organização política e social do Brasil entre a Independência e a Proclamação da República?",
+  "capitulos": [
+    "Capítulo 1 — Formação do Estado Imperial e Organização da Justiça",
+    "Capítulo 2 — Escravidão, Direitos e Crise do Império"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — Formação do Estado Imperial e Organização da Justiça": ["José Murilo de Carvalho", "Boris Fausto", "Emília Viotti da Costa", "Ilmar Rohloff de Mattos", "Lilia Moritz Schwarcz"],
+    "Capítulo 2 — Escravidão, Direitos e Crise do Império": ["Sidney Chalhoub", "João José Reis", "Angela Alonso", "Florestan Fernandes", "Décio Saes", "Lilia Moritz Schwarcz"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — Formação do Estado Imperial e Organização da Justiça": ["Formação do Estado nacional", "Constituição de 1824 e Poder Moderador", "Centralização política e organização jurídica do Império", "Cidadania, voto censitário e exclusão política", "Revoltas regenciais e manutenção da ordem imperial"],
+    "Capítulo 2 — Escravidão, Direitos e Crise do Império": ["Justiça e sociedade escravista no século XIX", "Leis abolicionistas e crise da escravidão", "Resistência negra, quilombos e movimento abolicionista", "Relações entre elite, Exército e poder político", "Crise do Império"]
+  }
+}
