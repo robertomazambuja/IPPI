@@ -529,11 +529,64 @@ def render_secao(sec: SecaoNode, sec_id: str, lvl: int) -> str:
     lines.append(f'{pad}</secao>')
     return "\n".join(lines)
 
+# ---------------------------------------------------------------------------
+# Marcadores de verificação externa (Fase 2 — ver PLANO-VERIFICACAO-EXTERNA.md)
+# O conteúdo da verificação NÃO é gerado aqui; emitimos apenas o marcador com
+# "o que verificar" para os agentes externos. O conteúdo entra na montagem do
+# PDF (xml_to_pdf.py --verificacoes), espelhando o fluxo das imagens.
+# ---------------------------------------------------------------------------
+
+def _o_que_verificar(linhas: List[Tuple[str, str]], lvl: int) -> str:
+    """Monta o bloco <o-que-verificar> a partir de pares (rótulo, valor),
+    ignorando valores vazios."""
+    pad = "  " * lvl
+    out = [f'{pad}<o-que-verificar>']
+    for rotulo, valor in linhas:
+        if valor:
+            out.append(f'{pad}  {xe(rotulo)}: {xe(str(valor).strip())}')
+    out.append(f'{pad}</o-que-verificar>')
+    return "\n".join(out)
+
+
+def render_marcador_verificacao(cap_id: str, idx: int, ctx: dict, lvl: int) -> str:
+    """Marcador de verificação de seção (status="externo")."""
+    pad = "  " * lvl
+    ref = f"verif-{cap_id}-s{idx}" if cap_id else f"verif-s{idx}"
+    linhas = [
+        ("Operação", ctx.get("tipo_operacao", "")),
+        ("Cabeçalho", ctx.get("cabecalho", "")),
+        ("Conceito-âncora", ctx.get("conceito_central", "")),
+        ("Exemplo-âncora", ctx.get("exemplo_ancola", "")),
+    ]
+    lines = [f'{pad}<sidebar tipo="verificacao" ref="{ref}" status="externo">']
+    lines.append(_o_que_verificar(linhas, lvl + 1))
+    lines.append(f'{pad}</sidebar>')
+    return "\n".join(lines)
+
+
+def render_marcador_aplicar(cap_id: str, ctx: dict, lvl: int) -> str:
+    """Marcador do 'Aplicar agora' do capítulo (status="externo")."""
+    pad = "  " * lvl
+    ref = f"aplicar-{cap_id}" if cap_id else "aplicar"
+    linhas = [
+        ("Operação principal", ctx.get("operacao_principal", "")),
+        ("Pergunta do capítulo", ctx.get("pergunta_do_capitulo", "")),
+        ("Síntese final", ctx.get("sintese_final", "")),
+        ("Exemplo-âncora principal", ctx.get("exemplo_ancola_principal", "")),
+        ("Pedir", "um caso novo (diferente dos exemplos) para o aluno aplicar a operação."),
+    ]
+    lines = [f'{pad}<sidebar tipo="aplicar-agora" ref="{ref}" status="externo">']
+    lines.append(_o_que_verificar(linhas, lvl + 1))
+    lines.append(f'{pad}</sidebar>')
+    return "\n".join(lines)
+
+
 def render_bloco(bloco: BlocoNode, lvl: int,
                  verificacoes: Optional[Dict[int, str]] = None,
                  micro_habs: Optional[Dict[int, str]] = None,
                  cap_id: str = "",
-                 img_counter: Optional[List[int]] = None) -> str:
+                 img_counter: Optional[List[int]] = None,
+                 pontos_verif: Optional[Dict[int, dict]] = None) -> str:
     pad = "  " * lvl
     op = xe(bloco.operacao) if bloco.operacao else ""
     lines = [f'{pad}<bloco id="bloco-{bloco.idx}" palavras="{bloco.palavras}" operacao="{op}">']
@@ -567,8 +620,13 @@ def render_bloco(bloco: BlocoNode, lvl: int,
         else:
             lines.append(f'{pad}  <nota_fonte>{xe(fonte.texto)}</nota_fonte>')
 
-    # Sidebar de verificação para este bloco (se houver)
-    if verificacoes and bloco.idx in verificacoes:
+    # Verificação deste bloco.
+    # Preferência: marcador externo (Fase 2). Fallback: sidebar pronta (legado Haiku).
+    if pontos_verif and bloco.idx in pontos_verif:
+        lines.append(
+            render_marcador_verificacao(cap_id, bloco.idx, pontos_verif[bloco.idx], lvl + 1)
+        )
+    elif verificacoes and bloco.idx in verificacoes:
         verif_xml = verificacoes[bloco.idx]
         # Indenta o sidebar para ficar alinhado com o bloco
         indented = indent(verif_xml, lvl + 1)
@@ -581,7 +639,9 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
                blocos: List[BlocoNode], rodape: RodapeNode,
                verificacoes: Optional[Dict[int, str]] = None,
                aplicar_agora: Optional[str] = None,
-               micro_habs: Optional[Dict[int, str]] = None) -> str:
+               micro_habs: Optional[Dict[int, str]] = None,
+               pontos_verif: Optional[Dict[int, dict]] = None,
+               aplicar_ctx: Optional[dict] = None) -> str:
     total_words = sum(b.palavras for b in blocos)
 
     parts = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -628,7 +688,8 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append("")
             acum = 0
         parts.append(render_bloco(bloco, 2, verificacoes=verificacoes, micro_habs=micro_habs,
-                                  cap_id=cap_id, img_counter=img_counter))
+                                  cap_id=cap_id, img_counter=img_counter,
+                                  pontos_verif=pontos_verif))
         parts.append("")
         acum += bloco.palavras
 
@@ -653,7 +714,10 @@ def render_xml(titulo: str, cap_id: str, contexto: dict,
             parts.append(f"    <sintese>{xe(rodape.sintese)}</sintese>")
         if rodape.encadeamento:
             parts.append(f"    <encadeamento>{xe(rodape.encadeamento)}</encadeamento>")
-        if aplicar_agora:
+        # Aplicar agora: marcador externo (Fase 2) tem preferência; fallback legado.
+        if aplicar_ctx:
+            parts.append(render_marcador_aplicar(cap_id, aplicar_ctx, 2))
+        elif aplicar_agora:
             parts.append(indent(aplicar_agora, 2))
     parts.append("  </rodape>")
     parts.append("")
@@ -671,6 +735,8 @@ def formatar_capitulo(
     verificacoes: Optional[Dict[int, str]] = None,
     aplicar_agora: Optional[str] = None,
     micro_habs: Optional[Dict[int, str]] = None,
+    pontos_verif: Optional[Dict[int, dict]] = None,
+    aplicar_ctx: Optional[dict] = None,
 ) -> Optional[Path]:
     """
     Converte texto_path (markdown normalizado) em XML.
@@ -684,7 +750,8 @@ def formatar_capitulo(
         titulo, cap_id, contexto, blocos, rodape = parse_document(texto_path)
         xml_str = render_xml(titulo, cap_id, contexto, blocos, rodape,
                              verificacoes=verificacoes, aplicar_agora=aplicar_agora,
-                             micro_habs=micro_habs)
+                             micro_habs=micro_habs,
+                             pontos_verif=pontos_verif, aplicar_ctx=aplicar_ctx)
 
  
         output_dir.mkdir(parents=True, exist_ok=True)

@@ -830,9 +830,11 @@ def run_agente5(
     output_dir = BASE_DIR / f"output/{apostila_name}/formatado/{unidade_slug}"
     log_print(f"\n[Agente 5] Unidade {unidade_idx} | Capítulo {capitulo_idx}: {capitulo}")
 
-    # Identifica pontos de verificação (sem custo de token — Fase 1 da externalização)
-    verificacoes = None
-    aplicar_agora = None
+    # Identifica pontos de verificação (sem custo de token — externalização).
+    # Fase 2: além de identificar, repassamos o contexto ao formatador para
+    # emitir os marcadores <sidebar status="externo"> no XML.
+    pontos_verif = None
+    aplicar_ctx = None
     if core_path and core_path.exists():
         try:
             pontos_verif, aplicar_ctx = coletar_pontos_verificacao(core_path)
@@ -846,8 +848,8 @@ def run_agente5(
 
     try:
         out_path = formatar_capitulo(texto_path, output_dir,
-                                     verificacoes=verificacoes,
-                                     aplicar_agora=aplicar_agora,
+                                     pontos_verif=pontos_verif,
+                                     aplicar_ctx=aplicar_ctx,
                                      micro_habs=micro_habs)
         if out_path:
             log_print(f"  ✓ XML gerado: {out_path.name}", indent=1)

@@ -108,12 +108,17 @@ def parse_core(core_path: Path) -> dict:
 
 def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Optional[dict]]:
     """
-    Lê o core.md e devolve, sem chamar a API:
-      - pontos_verif: dict {idx_secao: {"tipo_operacao": str, "cabecalho": str}}
-        para cada seção com VERIFICACAO: Sim
+    Lê o core.md e devolve, sem chamar a API, o CONTEXTO COMPLETO que orienta
+    os agentes externos a produzirem a verificação (Fase 2):
+      - pontos_verif: dict {idx_secao: {"tipo_operacao", "cabecalho",
+        "conceito_central", "exemplo_ancola"}} para cada seção com
+        VERIFICACAO: Sim
       - aplicar_ctx: dict com contexto do "Aplicar agora" do capítulo
-        ({"operacao_principal", "pergunta_do_capitulo", "sintese_final"}),
-        ou None se o core não tiver seções
+        ({"operacao_principal", "pergunta_do_capitulo", "sintese_final",
+        "exemplo_ancola_principal"}), ou None se o core não tiver seções.
+        "exemplo_ancola_principal" vem da seção principal segundo a mesma
+        heurística usada por _build_prompt (última seção cuja TIPO_OPERACAO
+        é a operação principal; senão, a última seção).
     """
     try:
         core_data = parse_core(core_path)
@@ -127,14 +132,22 @@ def coletar_pontos_verificacao(core_path: Path) -> Tuple[Dict[int, dict], Option
             pontos_verif[s["idx"]] = {
                 "tipo_operacao": s["tipo_operacao"],
                 "cabecalho": s["cabecalho"],
+                "conceito_central": s["conceito_central"],
+                "exemplo_ancola": s["exemplo_ancola"],
             }
 
     aplicar_ctx: Optional[dict] = None
     if core_data["secoes"]:
+        sec_principal = next(
+            (s for s in reversed(core_data["secoes"])
+             if s["tipo_operacao"] == core_data["operacao_principal"]),
+            core_data["secoes"][-1],
+        )
         aplicar_ctx = {
             "operacao_principal": core_data["operacao_principal"],
             "pergunta_do_capitulo": core_data["pergunta_do_capitulo"],
             "sintese_final": core_data["sintese_final"],
+            "exemplo_ancola_principal": sec_principal.get("exemplo_ancola", ""),
         }
 
     logger.info(
