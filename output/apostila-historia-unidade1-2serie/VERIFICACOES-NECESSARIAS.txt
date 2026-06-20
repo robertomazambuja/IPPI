@@ -1,0 +1,58 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: apostila-historia-unidade1-2serie
+Gerado em: 20/06/2026 15:22
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-01 — Como a Constituição de 1824 e o Poder Moderador organizaram juridicamente o Estado Imperial centralizado, e de que forma essa centralização política gerou exclusão da cidadania e revoltas regionais?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: A Constituição de 1824 e o Poder Moderador | Conceito-âncora: Poder Moderador | Exemplo-âncora: Em novembro de 1823, D. Pedro I dissolveu pela força a Assembleia Constituinte, que resistia a conceder poderes excessivos ao Imperador, e nomeou um Conselho de Estado para redigir uma nova Carta; o texto resultante foi outorgado em 25 de março de 1824, sem votação popular, e instituiu o Poder Moderador exclusivo do Imperador, distinto e superior aos poderes Executivo, Legislativo e Judiciário previstos na mesma Constituição.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Mecanismos de centralização política e jurídica do Império | Exemplo-âncora: A Lei de Reforma do Código de Processo Criminal, de 3 de dezembro de 1841, aprovada na sequência das revoltas regenciais, transferiu da esfera provincial para o governo central a nomeação dos chefes de polícia e ampliou os poderes do recém-criado Conselho de Estado: a resposta política à instabilidade regional foi reforçar, e não reduzir, a centralização jurídico-administrativa do Império.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Quem podia votar e ser votado no Império — critérios de inclusão e exclusão da cidadania política | Exemplo-âncora: A Constituição de 1824 exigia renda mínima de 100 mil-réis anuais para votar nas eleições primárias (votantes paroquiais) e de 200 mil-réis para ser eleitor de província (votação secundária), com exigências ainda maiores para candidatura — 400 mil-réis para deputado e 800 mil-réis para senador. Somado a isso, mulheres não tinham direito ao voto em nenhuma instância, e a população escravizada — cerca de 1,5 milhão de pessoas na década de 1820, em um país com pouco mais de 4 milhões de habitantes — estava juridicamente fora da cidadania política. O resultado era que a cidadania política ativa se restringia a uma fração reduzida da população livre adulta do Império.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Centralização, exclusão política e revoltas regenciais — por que o Império enfrentou contestações | Exemplo-âncora: Na Cabanagem, a repressão e os combates entre 1835 e 1840 resultaram, segundo estimativas historiográficas, na morte de uma proporção significativa da população do Grão-Pará — entre 20% e 30%, conforme diferentes cálculos. O episódio, somado à Sabinada, à Balaiada e à Farroupilha, levou o Parlamento a antecipar, em 1840, a maioridade de D. Pedro II (então com 14 anos) e a aprovar, em 1841, a Reforma do Código de Processo Criminal, devolvendo ao governo central poderes antes delegados às províncias.
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Mapear causalidade | Pergunta do capítulo: Como a Constituição de 1824 e o Poder Moderador organizaram juridicamente o Estado Imperial centralizado, e de que forma essa centralização política gerou exclusão da cidadania e revoltas regionais? | Exemplo-âncora principal: Na Cabanagem, a repressão e os combates entre 1835 e 1840 resultaram, segundo estimativas historiográficas, na morte de uma proporção significativa da população do Grão-Pará — entre 20% e 30%, conforme diferentes cálculos. O episódio, somado à Sabinada, à Balaiada e à Farroupilha, levou o Parlamento a antecipar, em 1840, a maioridade de D. Pedro II (então com 14 anos) e a aprovar, em 1841, a Reforma do Código de Processo Criminal, devolvendo ao governo central poderes antes delegados às províncias. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: A condição jurídica da escravidão e os limites da Lei de 1831 | Conceito-âncora: Duplo estatuto jurídico do escravizado | Exemplo-âncora: A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática: o tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Leis abolicionistas graduais e formas de resistência à escravidão | Exemplo-âncora: A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre indenização do Estado ou os serviços do menor até os 21 anos: a liberdade concedida pela lei era, na prática, diferida por décadas.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Abolicionismo parlamentar e ação direta — estratégias do movimento abolicionista | Exemplo-âncora: Enquanto Joaquim Nabuco defendia, no Parlamento e na imprensa britânica, a aprovação gradual de leis abolicionistas, fundando em 1880 a Sociedade Brasileira Contra a Escravidão, os caifazes, liderados por Antônio Bento em São Paulo entre 1887 e 1888, organizavam fugas coletivas de escravizados diretamente das fazendas, antecipando na prática, mediante desobediência à lei vigente, a abolição que o Parlamento ainda não havia votado.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Crise da escravidão, ruptura entre elite, Exército e poder político, e a queda do Império | Exemplo-âncora: Em 1887, a Questão Militar, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa, gerou um protesto coletivo de oficiais que se sentiram desrespeitados pelo poder civil. Menos de dois anos depois, em 15 de novembro de 1889, foi justamente um conjunto de oficiais do Exército, liderado pelo Marechal Deodoro da Fonseca, que executou o golpe que pôs fim ao Império.
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Mapear causalidade | Pergunta do capítulo: Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889? | Exemplo-âncora principal: Em 1887, a Questão Militar, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa, gerou um protesto coletivo de oficiais que se sentiram desrespeitados pelo poder civil. Menos de dois anos depois, em 15 de novembro de 1889, foi justamente um conjunto de oficiais do Exército, liderado pelo Marechal Deodoro da Fonseca, que executou o golpe que pôs fim ao Império. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 10 verificação(ões) necessária(s)
+=================================================================

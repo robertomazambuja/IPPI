@@ -94,6 +94,12 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .secao p { margin-bottom: 8pt; text-align: justify; }
 .secao p:last-child { margin-bottom: 0; }
 
+/* LISTA DE SUBTIPOS (operacao Classificar: introducao + itens nomeados) */
+.lista-subtipos { margin-top: 2pt; }
+.lista-subtipos .subtipo-item { margin-bottom: 8pt; }
+.lista-subtipos .subtipo-item:last-child { margin-bottom: 0; }
+.subtipo-nome { font-family: Arial; font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 3pt; }
+
 /* SIDEBAR AUTOR */
 .sidebar-autor { width: 100%; margin: 4pt 0 10pt; background: #FFF8F0; border: 1.5pt solid #E8A838;
     border-left-width: 4pt; border-radius: 0 6pt 6pt 0; padding: 9pt 11pt; font-family: Arial; break-inside: avoid; }
@@ -169,6 +175,21 @@ def p_html(el):
 def conteudo_html(cel):
     if cel is None: return ""
     return "".join(p_html(p) for p in cel.findall("paragrafo"))
+
+def lista_subtipos_html(el):
+    """Renderiza <lista-subtipos><item nome="..."><conteudo>...</conteudo></item></lista-subtipos>
+    (usado por secoes tipo="classificacao"). Sem isso, esse conteudo era descartado em
+    silencio porque render_secao so lia <conteudo> direto da secao."""
+    if el is None: return ""
+    items = el.findall("item")
+    if not items: return ""
+    parts = ['<div class="lista-subtipos">']
+    for it in items:
+        nome = it.get("nome", "")
+        nome_h = f'<div class="subtipo-nome">{html_mod.escape(nome)}</div>' if nome else ""
+        parts.append(f'<div class="subtipo-item">{nome_h}{conteudo_html(it.find("conteudo"))}</div>')
+    parts.append('</div>')
+    return "".join(parts)
 
 
 def render_imagem(ref, desc, imagens_dir):
@@ -298,6 +319,9 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
     if te is not None and te.text:
         col_parts.append(f'<div class="secao-titulo">{html_mod.escape(te.text.strip())}</div>')
     col_parts.append(conteudo_html(el.find("conteudo")))
+    # secoes tipo="classificacao" usam <introducao> + <lista-subtipos> em vez de <conteudo>
+    col_parts.append(conteudo_html(el.find("introducao")))
+    col_parts.append(lista_subtipos_html(el.find("lista-subtipos")))
 
     full_parts = []
     for sb in el.findall("sidebar"):

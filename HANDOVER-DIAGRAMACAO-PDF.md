@@ -276,3 +276,84 @@ reportado pela ferramenta de edição em arquivos grandes.
 - Priorizar legibilidade do aluno: hifenização, coluna ~50-60 caracteres,
   contraste alto, hierarquia (barra de operação > seção > corpo).
 - Após qualquer edição grande no `xml_to_pdf.py`: `py_compile` + render visual.
+
+## 13. SESSÃO 2026-06-20 — capítulo 1 de História (unidade 1) + bug grave de perda de conteúdo CORRIGIDO
+
+**Tarefa:** diagramar em PDF a versão ALUNO do cap. 01-01 ("Formação do Estado
+Imperial e organização da justiça", `apostila-historia-unidade1-2serie`), com
+imagens reais (`output/apostila-historia-unidade1-2serie/imagens/`) e
+verificações externas (`output/apostila-historia-unidade1-2serie/verificacao/`,
+modelo Fase 4 do `PLANO-VERIFICACAO-EXTERNA.md`).
+
+**Comando final usado:**
+```bash
+python3 xml_to_pdf.py \
+  output/apostila-historia-unidade1-2serie/formatado/unidade-1-justica-estado-e-poder-no-brasil-imperial/01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica.xml \
+  --versao-aluno \
+  --imagens output/apostila-historia-unidade1-2serie/imagens \
+  --verificacoes output/apostila-historia-unidade1-2serie/verificacao \
+  --output 01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica-aluno.pdf
+```
+
+**BUG NOVO encontrado (mais grave que o §9): perda silenciosa de conteúdo em
+seções `tipo="classificacao"`.** `render_secao()` só lia `<conteudo>` direto da
+seção. Seções com `tipo="classificacao"` (operação "Classificar") usam
+`<introducao>` + `<lista-subtipos><item nome="...">` em vez de `<conteudo>` —
+esse texto era descartado sem erro nenhum. No cap. 01-01 isso apagava quase
+todo o bloco-2 (~300 palavras: "Centralização administrativa/jurídica/militar",
+nomeação de presidentes de província, Código Criminal, Guarda Nacional etc.),
+inflando o branco da página 3 para 33,8% e disfarçado como se fosse só o
+problema do §9. Confirmado **sistêmico**: o mesmo padrão (`<lista-subtipos>`,
+`tipo="classificacao"`) existe no cap. 01-02 (escravidão/crise do Império) —
+não tratado ainda, mas vai precisar do mesmo fix quando esse capítulo for
+diagramado.
+
+**Diagnóstico:** `grep` direto no HTML gerado (`--html-only`) e
+`pdftotext -layout` por página confirmaram a ausência do texto — não foi
+impressão visual, foi perda real de conteúdo.
+
+**Fix aplicado (decisão do usuário: corrigir agora, não só documentar).**
+Patch em `xml_to_pdf.py` feito por script Python (`str.replace` com
+`assert count==1` antes de cada substituição), **não pela ferramenta de
+edição**, por causa do aviso do §10:
+1. Nova função `lista_subtipos_html(el)` — renderiza
+   `<lista-subtipos><item nome="..."><conteudo>` como
+   `<div class="lista-subtipos"><div class="subtipo-item">`.
+2. `render_secao()` passou a chamar também `conteudo_html(el.find("introducao"))`
+   e `lista_subtipos_html(el.find("lista-subtipos"))`, além do `<conteudo>`
+   original.
+3. CSS novo em `build_css()`: `.lista-subtipos`, `.subtipo-item`,
+   `.subtipo-nome` (nome do subtipo em negrito, 9pt, antes do texto).
+
+**Verificação do patch:** `xml_to_pdf.py` foi de 545 → 569 linhas (+24, do
+tamanho esperado). `python3 -m py_compile xml_to_pdf.py` limpo.
+`diff` contra o backup pré-patch (`/tmp/xml_to_pdf.py.before_fix`) mostrou
+exatamente essas três adições, nada mais (sem truncamento).
+
+**Revalidação pós-fix:**
+- `--html-only` confirmou os termos antes ausentes agora presentes
+  ("Centralização administrativa", "Código Criminal", "Guarda Nacional" etc.).
+- PDF regenerado: ainda **9 páginas**.
+- Branco de rodapé por página (medição PIL restrita à área de conteúdo, exclui
+  faixa do `@bottom-center` de ~20mm): p.1=4,1% · p.2=2,8% (era 18,1%) ·
+  p.3=17,6% (era 33,8%) · p.4=2,9% · p.5=45,8% · p.6=45,2% · p.7=5,3% ·
+  p.8=4,1% · p.9=10,8%. Média geral 15,4%.
+- Inspeção visual (render PNG 150dpi de todas as 9 páginas): cabeçalho de bloco
+  "CLASSIFICAR" na p.2 agora emenda direto no conteúdo (o §9 não se manifestou
+  nesta página depois do fix — o bloco passou a ter conteúdo suficiente pra não
+  sobrar header solto). p.3 mostra o infográfico `fig-01-01-02` compacto, sem
+  legenda visível, com o texto de `lista-subtipos` fluindo normalmente nas 2
+  colunas acima dele — sem sobreposição, sem bug visual na CSS nova.
+- **Resíduo conhecido, NÃO é regressão deste fix:** p.5/p.6 (45,8%/45,2% de
+  branco) repetem o limite já registrado no §9-bis — imagem (`fig-01-01-03` da
+  votação censitária) e a verificação que vem depois não cabem juntas na mesma
+  página, cada uma orfana na sua. Já era um problema conhecido antes desta
+  sessão; não foi pedido para corrigir agora.
+- Conformidade de regras: `grep` no HTML confirmou as 16 alternativas (4
+  questões × 4 letras) usam todas a mesma classe (`alternativa`/`alt-letra`),
+  nenhuma classe distinta para a resposta correta. `pdftotext` no PDF aluno
+  confirmou **zero** ocorrência de "gabarito" / "justificativa" /
+  "resposta comentada" — a versão aluno não vaza nenhum gabarito.
+
+**Artefato final:** `01-01-capitulo-1-formacao-do-estado-imperial-e-organizacao-da-justica-aluno.pdf`
+(9 páginas, 1,02 MB), em `C:\Users\Roberto\Desktop\IPPI`.

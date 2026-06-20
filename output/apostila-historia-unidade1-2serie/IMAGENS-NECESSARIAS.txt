@@ -1,0 +1,38 @@
+IMAGENS NECESSÁRIAS — Apostila: apostila-historia-unidade1-2serie
+Gerado em: 20/06/2026 15:22
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Como a Constituição de 1824 e o Poder Moderador organizaram juridicamente o Estado Imperial centralizado, e de que forma essa centralização política gerou exclusão da cidadania e revoltas regionais?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro com 3 colunas (Administrativo / Jurídico-penal / Militar) e, em cada coluna, o mecanismo correspondente — presidentes de província nomeados; Código Criminal (1830), Código de Processo Criminal (1832) e Conselho de Estado (1841); Guarda Nacional (1831)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Quadro com os requisitos de renda mínima anual por categoria (votante paroquial, eleitor de província, candidato a deputado, candidato a senador) ao lado da exclusão de mulheres e de escravizados em todas as categorias
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Diagrama causa-efeito com as quatro causas (centralização político-jurídica, exclusão censitária, vácuo de poder da Regência, tensões regionais) convergindo para as quatro revoltas (Cabanagem, Sabinada, Balaiada, Farroupilha) e estas levando à resposta centralizadora de 1840–1841
+
+
+CAPÍTULO 01-02 — Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com as quatro leis abolicionistas (Eusébio de Queirós 1850, Ventre Livre 1871, Sexagenários 1885, Lei Áurea 1888) e, paralelamente, a Revolta dos Malês (1835) como forma de resistência direta
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro com 2 colunas (Abolicionismo parlamentar / Abolicionismo de ação direta) e 4 linhas (Objetivo / Método / Base social / Relação com a lei vigente), resumindo os contrastes entre as duas vertentes
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Diagrama causa-efeito com as quatro causas (abolição sem indenização, desgaste Exército-poder civil, crescimento republicano, fragilidade de D. Pedro II) convergindo para o golpe de 15 de novembro de 1889 e o fim do Império
+
+=================================================================
+TOTAL: 6 imagem(ns) necessária(s)
+=================================================================

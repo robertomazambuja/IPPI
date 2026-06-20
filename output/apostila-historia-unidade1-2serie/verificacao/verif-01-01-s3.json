@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s3",
+  "pergunta": "A Constituição de 1824 exigia renda mínima de 100 mil-réis anuais para votar nas eleições primárias (votantes paroquiais) e de 200 mil-réis para ser eleitor de província (votação secundária), com exigências ainda maiores para candidatura — 400 mil-réis para deputado e 800 mil-réis para senador. Somado a isso, mulheres não tinham direito ao voto em nenhuma instância, e a população escravizada — cerca de 1,5 milhão de pessoas na década de 1820, em um país com pouco mais de 4 milhões de habitantes — estava juridicamente fora da cidadania política. Comparando os quatro aspectos do acesso à cidadania política no Império (renda, gradação do voto, gênero e condição jurídica), qual afirmação descreve corretamente a relação entre eles?",
+  "alternativas": {
+    "A": "Os quatro aspectos se somavam: a exigência de renda crescente entre os graus de voto restringia o eleitorado masculino livre, enquanto a exclusão de mulheres e da população escravizada eliminava por completo a possibilidade de participação política, independentemente de renda",
+    "B": "A exigência de renda crescia a cada grau de voto, mas mulheres com renda suficiente podiam votar nas eleições primárias, já que o critério de gênero só se aplicava à candidatura a deputado e senador",
+    "C": "A exclusão da população escravizada decorria da exigência de renda mínima, já que a condição de escravizado impedia legalmente o acesso a qualquer patrimônio, tornando o critério de condição jurídica uma consequência direta do critério censitário",
+    "D": "A gradação do voto em dois graus existia apenas para a eleição de deputados, enquanto a eleição de senadores seguia critério de renda único, sem grau intermediário de eleitores de província"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) integra corretamente os quatro aspectos: renda crescente por grau, exclusão de gênero e exclusão jurídica dos escravizados atuando como restrições independentes e cumulativas. O distrator B é vocabulário do rival (tipo 5): atribui ao aspecto de renda uma exceção de gênero que o texto não sustenta, misturando os critérios de renda e gênero como se um anulasse o outro. O distrator C é vocabulário análogo (tipo 2): começa corretamente associando renda e condição jurídica, mas distorce a relação ao tratar a exclusão jurídica dos escravizados como mera consequência da renda, quando o texto a apresenta como critério distinto e autônomo. O distrator D é restrição indevida (tipo 3): isola a gradação do voto como se valesse só para deputados, ignorando que o texto descreve o mesmo sistema de dois graus se aplicando também à eleição de senadores."
+}

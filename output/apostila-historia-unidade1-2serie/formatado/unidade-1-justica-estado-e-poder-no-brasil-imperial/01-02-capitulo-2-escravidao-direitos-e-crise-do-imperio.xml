@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capitulo id="01-02" titulo="Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?" palavras_total="1991">
+  <cabecalho>
+    <habilidade>H12 — Analisar o papel da justiça como instituição na organização das sociedades.</habilidade>
+    <operacao_principal>Mapear causalidade</operacao_principal>
+    <pergunta_capitulo>Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?</pergunta_capitulo>
+    <por_que_importa>Compreender por que a abolição sem indenização e o desgaste acumulado do Exército levaram ao fim do Império permite reconhecer que a ordem jurídico-política construída desde a Constituição de 1824 dependia do equilíbrio entre elite, Exército e poder central, e que a ruptura desse equilíbrio, e não a crise da escravidão isoladamente, explica a queda do regime monárquico.</por_que_importa>
+  </cabecalho>
+
+  <mapa-progressao>
+    <passo ordem="1" bloco="bloco-1">Definir</passo>
+    <passo ordem="2" bloco="bloco-2">Classificar</passo>
+    <passo ordem="3" bloco="bloco-3">Comparar</passo>
+    <passo ordem="4" bloco="bloco-4">Mapear causalidade</passo>
+  </mapa-progressao>
+
+  <corpo>
+
+    <bloco id="bloco-1" palavras="300" operacao="Definir">
+      <micro-habilidade>Definir a justiça escravista como sistema jurídico que regulava a condição social e os direitos da população escravizada no século XIX</micro-habilidade>
+      <secao id="sec-1" tipo="definicao">
+        <titulo>A condição jurídica da escravidão e os limites da Lei de 1831</titulo>
+        <conteudo>
+        <paragrafo>No Brasil do século XIX, a escravidão era organizada por um duplo estatuto jurídico. Nas relações civis, o escravizado era tratado como propriedade: podia ser herdado, hipotecado, comprado e vendido, da mesma forma que qualquer outro bem. Nas relações criminais, no entanto, o mesmo escravizado era reconhecido como sujeito de imputação penal: o Código Criminal do Império, de 1830, previa, para crimes cometidos por escravizados, penas diferenciadas e mais severas do que as aplicadas a pessoas livres, incluindo açoites como pena específica para essa população.</paragrafo>
+        <paragrafo>Esse duplo estatuto não foi alterado pela primeira lei a tratar formalmente do fim do tráfico de escravizados. A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática. O tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva nos portos, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Sidney Chalhoub (1957–)</nome>
+          <pais>Brasil</pais>
+          <descricao>Sidney Chalhoub, historiador brasileiro, professor da Universidade Federal do Rio de Janeiro (UFRJ), demonstra em *A Força da Escravidão: Ilegalidade e Costume no Brasil Oitocentista* (2012) que o tráfico transatlântico de escravizados continuou por quase duas décadas após a Lei de 1831 graças à tolerância de autoridades locais e à cumplicidade do aparato judicial, que tratava a ilegalidade do tráfico como um costume social aceito, e não como crime a ser reprimido.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>CHALHOUB, Sidney. A Força da Escravidão: Ilegalidade e Costume no Brasil Oitocentista. São Paulo: Companhia das Letras, 2012.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-02-s1" status="externo">
+        <o-que-verificar>
+          Operação: Definir
+          Cabeçalho: A condição jurídica da escravidão e os limites da Lei de 1831
+          Conceito-âncora: Duplo estatuto jurídico do escravizado
+          Exemplo-âncora: A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática: o tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-2" palavras="386" operacao="Classificar">
+      <micro-habilidade>Classificar as leis abolicionistas e as formas de resistência negra segundo seus efeitos sobre a manutenção ou a crise da escravidão</micro-habilidade>
+      <secao id="sec-1" tipo="classificacao">
+        <titulo>Leis abolicionistas graduais e formas de resistência à escravidão</titulo>
+        <introducao>
+        <paragrafo>A crise da escravidão no Império avançou por dois mecanismos de natureza distinta: leis graduais aprovadas pelo Parlamento e formas de resistência direta promovidas pelos próprios escravizados e libertos, sem esperar pela aprovação de novas normas.</paragrafo>
+        </introducao>
+        <lista-subtipos>
+          <item tipo="subtipo" nome="Leis abolicionistas graduais">
+            <conteudo>
+            <paragrafo>A primeira lei com efeito real sobre o tráfico foi a Lei Eusébio de Queirós, de 4 de setembro de 1850, aprovada sob pressão diplomática britânica e que encerrou de fato a entrada de novos africanos escravizados no território brasileiro. A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre indenização do Estado ou os serviços do menor até os 21 anos. A Lei dos Sexagenários, de 28 de setembro de 1885, libertava escravizados com mais de 60 anos, mediante a prestação de alguns anos adicionais de serviço como forma de compensação ao antigo proprietário. A Lei Áurea, de 13 de maio de 1888, assinada pela Princesa Isabel, aboliu integralmente a escravidão, sem qualquer indenização aos proprietários.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Resistência direta à escravidão">
+            <conteudo>
+            <paragrafo>Paralelamente ao processo legislativo, a população escravizada resistiu por meios próprios. A Revolta dos Malês, em Salvador, em janeiro de 1835, foi uma insurreição urbana planejada por escravizados e libertos africanos muçulmanos, articulados por redes de solidariedade étnica e religiosa anteriores à escravização. Ao longo de todo o período, fugas individuais e a formação de quilombos constituíram uma forma cotidiana e organizada de resistência, independente de qualquer mudança na legislação vigente.</paragrafo>
+            </conteudo>
+          </item>
+        </lista-subtipos>
+        <sidebar tipo="autor">
+          <nome>João José Reis (1951–)</nome>
+          <pais>Brasil</pais>
+          <descricao>João José Reis, historiador brasileiro, professor da Universidade Federal da Bahia (UFBA), demonstra em *Rebelião Escrava no Brasil: A História do Levante dos Malês em 1835* (1986) que a revolta foi planejada e executada por escravizados e libertos africanos muçulmanos, articulados por redes de solidariedade étnica e religiosa anteriores à escravização, e não por uma reação espontânea e desorganizada às condições de cativeiro.</descricao>
+        </sidebar>
+      </secao>
+      <imagem ref="fig-01-02-01" tipo="sugerida">
+        <descricao>Linha do tempo com as quatro leis abolicionistas (Eusébio de Queirós 1850, Ventre Livre 1871, Sexagenários 1885, Lei Áurea 1888) e, paralelamente, a Revolta dos Malês (1835) como forma de resistência direta</descricao>
+      </imagem>
+      <nota_fonte>REIS, João José. Rebelião Escrava no Brasil: A História do Levante dos Malês em 1835. São Paulo: Companhia das Letras, 2003 [1ª ed. 1986].</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-02-s2" status="externo">
+        <o-que-verificar>
+          Operação: Classificar
+          Cabeçalho: Leis abolicionistas graduais e formas de resistência à escravidão
+          Exemplo-âncora: A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre indenização do Estado ou os serviços do menor até os 21 anos: a liberdade concedida pela lei era, na prática, diferida por décadas.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-3" palavras="385" operacao="Comparar">
+      <micro-habilidade>Comparar estratégias de resistência negra e movimentos abolicionistas quanto aos seus objetivos e impactos sobre a ordem escravista</micro-habilidade>
+      <secao id="sec-1" tipo="comparacao" nome="Aspecto 1 — Objetivo declarado">
+        <conteudo>
+        <paragrafo>Comparar as duas vertentes do movimento abolicionista, a parlamentar e legalista e a de ação direta, exige observar quatro aspectos: o objetivo declarado de cada uma, seu método de atuação, sua base social de apoio e sua relação com a legislação escravista ainda vigente.</paragrafo>
+        <paragrafo>Quanto ao objetivo declarado, a vertente parlamentar buscava uma reforma legislativa gradual e negociada dentro das instituições do Império. A vertente de ação direta, em contraste, buscava a ruptura imediata com a escravidão, sem esperar pela aprovação de novas leis.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Angela Alonso (1968–)</nome>
+          <pais>Brasil</pais>
+          <descricao>Angela Alonso, socióloga e historiadora brasileira, professora da Universidade de São Paulo (USP), argumenta em *Flores, Votos e Balas: O Movimento Abolicionista Brasileiro (1868-88)* (2015) que o movimento abolicionista combinou, em diferentes momentos e regiões, uma vertente parlamentar legalista, voltada à reforma gradual da legislação, e uma vertente de ação direta, voltada a fragilizar a escravidão na prática antes mesmo de sua extinção legal, e que essa segunda vertente foi decisiva para acelerar a crise final do sistema escravista entre 1887 e 1888.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-2" tipo="comparacao" nome="Aspecto 2 — Método de atuação">
+        <conteudo>
+        <paragrafo>Quanto ao método, a vertente parlamentar atuava por discursos no Parlamento, artigos de imprensa e pressão diplomática junto à Grã-Bretanha. A vertente de ação direta atuava pelo auxílio direto a fugas coletivas de escravizados, organizadas a partir das próprias fazendas.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="comparacao" nome="Aspecto 3 — Base social de apoio">
+        <conteudo>
+        <paragrafo>Quanto à base social, a vertente parlamentar se apoiava sobretudo na elite letrada e nos próprios parlamentares. A vertente de ação direta se apoiava em setores urbanos médios e na população escravizada e liberta, que participava diretamente das fugas organizadas.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-4" tipo="comparacao" nome="Aspecto 4 — Relação com a legislação vigente">
+        <conteudo>
+        <paragrafo>Quanto à relação com a legislação vigente, a vertente parlamentar atuava dentro da ordem legal estabelecida, propondo mudanças pelos canais institucionais. A vertente de ação direta desobedecia deliberadamente à legislação escravista ainda em vigor, antecipando na prática uma abolição que o Parlamento ainda não havia votado.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-02-02" tipo="sugerida">
+        <descricao>Quadro com 2 colunas (Abolicionismo parlamentar / Abolicionismo de ação direta) e 4 linhas (Objetivo / Método / Base social / Relação com a lei vigente), resumindo os contrastes entre as duas vertentes</descricao>
+      </imagem>
+      <nota_fonte>ALONSO, Angela. Flores, Votos e Balas: O Movimento Abolicionista Brasileiro (1868-88). São Paulo: Companhia das Letras, 2015.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-02-s3" status="externo">
+        <o-que-verificar>
+          Operação: Comparar
+          Cabeçalho: Abolicionismo parlamentar e ação direta — estratégias do movimento abolicionista
+          Exemplo-âncora: Enquanto Joaquim Nabuco defendia, no Parlamento e na imprensa britânica, a aprovação gradual de leis abolicionistas, fundando em 1880 a Sociedade Brasileira Contra a Escravidão, os caifazes, liderados por Antônio Bento em São Paulo entre 1887 e 1888, organizavam fugas coletivas de escravizados diretamente das fazendas, antecipando na prática, mediante desobediência à lei vigente, a abolição que o Parlamento ainda não havia votado.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-4" palavras="920" operacao="Mapear causalidade">
+      <micro-habilidade>Mapear relações causais entre a crise da escravidão, a ruptura entre elite, Exército e poder político e a crise do Império</micro-habilidade>
+      <secao id="sec-1" tipo="causa">
+        <conteudo>
+        <paragrafo>A queda do Império, em 1889, resultou da combinação de quatro fatores. O primeiro foi a abolição sem indenização, decretada pela Lei Áurea em 1888, que afastou politicamente a elite cafeeira, lesada economicamente pela perda do investimento em mão de obra escravizada sem nenhuma compensação. O segundo foi o desgaste acumulado entre o Exército e o poder civil desde a Guerra do Paraguai, entre 1864 e 1870, agravado pela Questão Militar de 1887, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa. O terceiro foi o crescimento do movimento republicano entre a elite paulista, organizado desde a fundação do Partido Republicano Paulista, em 1873, e fortalecido depois da abolição de 1888. O quarto foi a fragilidade política de D. Pedro II: idade avançada, saúde debilitada, ausência do país entre 1887 e 1888 e incerteza quanto à sucessão pela Princesa Isabel.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="relacao-causal">
+        <conteudo>
+        <paragrafo>A abolição sem indenização rompeu o vínculo político entre a monarquia e a elite cafeeira, que via na manutenção da ordem escravista um interesse econômico direto. Esse afastamento se somou ao desgaste acumulado entre o Exército e o poder civil, e ao crescimento do movimento republicano entre a elite paulista. Sem o apoio da elite cafeeira nem do Exército, e fragilizado pela idade avançada e pela saúde debilitada de D. Pedro II, o Império perdeu sua base de sustentação política, condição que permitiu a execução do golpe militar sem resistência significativa.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="consequencia">
+        <conteudo>
+        <paragrafo>Quatro consequências expressam esse padrão. A primeira foi o isolamento político da monarquia, sem apoio nem da elite cafeeira nem do Exército. A segunda foi o golpe republicano de 15 de novembro de 1889, liderado pelo Marechal Deodoro da Fonseca, com apoio de oficiais do Exército e de setores civis republicanos. A terceira foi o fim do Império e o exílio da família imperial para a Europa. A quarta, de natureza social e não apenas política, foi a ausência de qualquer política de terra, trabalho ou educação para a população liberta, que permaneceu marginalizada economicamente e socialmente depois de 1888.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Décio Saes (1944–)</nome>
+          <pais>Brasil</pais>
+          <descricao>Décio Saes, sociólogo e cientista político brasileiro, professor da Universidade Estadual de Campinas (UNICAMP), argumenta em *A Formação do Estado Burguês no Brasil (1888-1891)* (1985) que a Proclamação da República não resultou de um movimento popular amplo, mas de uma aliança entre setores do Exército descontentes com o poder civil e fileiras da elite cafeeira que haviam rompido com a monarquia depois da abolição sem indenização, configurando uma transição política conduzida pelos próprios setores dirigentes, sem ampla participação social.</descricao>
+        </sidebar>
+        <sidebar tipo="autor">
+          <nome>Florestan Fernandes (1920–1995)</nome>
+          <pais>Brasil</pais>
+          <descricao>Florestan Fernandes, sociólogo brasileiro, professor da Universidade de São Paulo (USP), demonstra em *A Integração do Negro na Sociedade de Classes* (1964) que a abolição de 1888, ao não ser acompanhada de nenhuma política de terra, trabalho ou educação para a população liberta, produziu uma integração apenas formal e incompleta dos ex-escravizados à sociedade de classes que se consolidava com a República, perpetuando desigualdades estruturais de origem racial.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-4" tipo="sintese">
+        <conteudo>
+        <paragrafo>A justiça escravista do século XIX organizava o escravizado como propriedade nas relações civis e como sujeito de imputação penal nas relações criminais, estatuto que a Lei de 1831 não rompeu na prática, já que o tráfico ilegal continuou por quase duas décadas. A crise desse sistema avançou por leis graduais, Eusébio de Queirós, Ventre Livre, Sexagenários e Lei Áurea, e por formas de resistência direta, a Revolta dos Malês, fugas e quilombos e a ação dos caifazes, até a abolição sem indenização em 1888. Essa abolição afastou politicamente a elite cafeeira da monarquia, afastamento que se somou ao desgaste entre Exército e poder civil desde a Guerra do Paraguai e a Questão Militar de 1887, e ao crescimento do movimento republicano paulista. Sem apoio da elite cafeeira nem do Exército, e fragilizado pela idade avançada e pela saúde debilitada de D. Pedro II, o Império perdeu sua base de sustentação política, condição que permitiu o golpe republicano de 15 de novembro de 1889.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-5" tipo="encadeamento">
+        <conteudo>
+        <paragrafo>Estabelecida a queda do Império e a Proclamação da República em 1889, a próxima unidade examina como as novas instituições republicanas reorganizaram a relação entre justiça, cidadania e poder político no Brasil.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-02-03" tipo="sugerida">
+        <descricao>Diagrama causa-efeito com as quatro causas (abolição sem indenização, desgaste Exército-poder civil, crescimento republicano, fragilidade de D. Pedro II) convergindo para o golpe de 15 de novembro de 1889 e o fim do Império</descricao>
+      </imagem>
+      <nota_fonte>SAES, Décio. A Formação do Estado Burguês no Brasil (1888-1891). Rio de Janeiro: Paz e Terra, 1985.</nota_fonte>
+      <nota_fonte>FERNANDES, Florestan. A Integração do Negro na Sociedade de Classes. São Paulo: Dominus/Edusp, 1964.</nota_fonte>
+      <nota_fonte>SCHWARCZ, Lilia Moritz. As Barbas do Imperador: D. Pedro II, um Monarca nos Trópicos. São Paulo: Companhia das Letras, 1998.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-02-s4" status="externo">
+        <o-que-verificar>
+          Operação: Mapear causalidade
+          Cabeçalho: Crise da escravidão, ruptura entre elite, Exército e poder político, e a queda do Império
+          Exemplo-âncora: Em 1887, a Questão Militar, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa, gerou um protesto coletivo de oficiais que se sentiram desrespeitados pelo poder civil. Menos de dois anos depois, em 15 de novembro de 1889, foi justamente um conjunto de oficiais do Exército, liderado pelo Marechal Deodoro da Fonseca, que executou o golpe que pôs fim ao Império.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+  </corpo>
+
+  <rodape>
+    <sidebar tipo="aplicar-agora" ref="aplicar-01-02" status="externo">
+      <o-que-verificar>
+        Operação principal: Mapear causalidade
+        Pergunta do capítulo: Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?
+        Exemplo-âncora principal: Em 1887, a Questão Militar, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa, gerou um protesto coletivo de oficiais que se sentiram desrespeitados pelo poder civil. Menos de dois anos depois, em 15 de novembro de 1889, foi justamente um conjunto de oficiais do Exército, liderado pelo Marechal Deodoro da Fonseca, que executou o golpe que pôs fim ao Império.
+        Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+      </o-que-verificar>
+    </sidebar>
+  </rodape>
+
+</capitulo>

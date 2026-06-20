@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s4",
+  "pergunta": "Na Cabanagem, a repressão e os combates entre 1835 e 1840 resultaram, segundo estimativas historiográficas, na morte de uma proporção significativa da população do Grão-Pará — entre 20% e 30%, conforme diferentes cálculos. O episódio, somado à Sabinada, à Balaiada e à Farroupilha, levou o Parlamento a antecipar, em 1840, a maioridade de D. Pedro II (então com 14 anos) e a aprovar, em 1841, a Reforma do Código de Processo Criminal, devolvendo ao governo central poderes antes delegados às províncias. Nessa cadeia causal, o que as revoltas regenciais provocaram como consequência política central?",
+  "alternativas": {
+    "A": "Provocaram o reforço da centralização político-jurídica do governo central, e não sua redução, por meio da antecipação da maioridade de D. Pedro II e da reforma de 1841",
+    "B": "Provocaram a concessão de maior autonomia às províncias, já que o governo central reconheceu que a centralização anterior havia gerado a instabilidade",
+    "C": "Provocaram exclusivamente a antecipação da maioridade de D. Pedro II, sem qualquer alteração nas leis que regulavam a divisão de poderes entre província e governo central",
+    "D": "Provocaram a ampliação do sistema eleitoral censitário, estendendo o direito de voto a setores da população livre pobre que haviam participado das revoltas"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) identifica a consequência real da cadeia causal: as revoltas levaram ao reforço, e não à redução, da centralização. O distrator B é inversão da tese (tipo 1): apresenta como consequência o oposto exato do que o texto descreve, atribuindo ao governo uma resposta descentralizadora que nunca ocorreu. O distrator C é restrição indevida (tipo 3): isola apenas um dos dois eventos da consequência (a antecipação da maioridade) e nega o outro (a reforma do Código de Processo Criminal), quando o exemplo-âncora apresenta os dois como parte da mesma resposta centralizadora. O distrator D é campo semântico sem ancoragem (tipo 4): usa vocabulário plausível sobre ampliação do direito de voto, mas sem nenhuma relação com o que o exemplo-âncora efetivamente descreve como consequência das revoltas."
+}

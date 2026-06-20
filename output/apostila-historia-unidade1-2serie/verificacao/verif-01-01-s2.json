@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2",
+  "pergunta": "A Lei de Reforma do Código de Processo Criminal, de 3 de dezembro de 1841, aprovada na sequência das revoltas regenciais, transferiu da esfera provincial para o governo central a nomeação dos chefes de polícia e ampliou os poderes do recém-criado Conselho de Estado. Considerando a tipologia de mecanismos de centralização do Império (administrativo, jurídico-penal e militar), em qual categoria essa reforma de 1841 se classifica?",
+  "alternativas": {
+    "A": "Jurídico-penal, pois transfere ao governo central a nomeação de autoridades responsáveis pela ordem pública e amplia um órgão de assessoria jurídica ao Poder Moderador",
+    "B": "Militar, pois reorganiza o comando de forças responsáveis pela repressão às revoltas regionais, substituindo lideranças locais por nomeação central",
+    "C": "Administrativa, pois centraliza exclusivamente a nomeação dos presidentes de província, retirando das províncias a escolha de sua autoridade máxima",
+    "D": "Jurídico-penal, pois a reforma se limitou a unificar o vocabulário penal entre as províncias, sem alterar quem nomeava as autoridades policiais"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) classifica a reforma de 1841 como jurídico-penal, já que ela centraliza a nomeação dos chefes de polícia e amplia o Conselho de Estado, órgão de assessoria jurídica ao Poder Moderador. O distrator B é vocabulário do rival (tipo 5): atribui à reforma de 1841 a função da Guarda Nacional (categoria militar), confundindo as duas categorias da tipologia. O distrator C é campo semântico sem ancoragem (tipo 4): usa um critério real do capítulo (nomeação de presidentes de província) que pertence a outro mecanismo, sem relação com o que a reforma de 1841 efetivamente fez. O distrator D é restrição indevida (tipo 3): reduz a reforma a um único traço (unificação de vocabulário penal) e ignora a mudança efetiva na nomeação dos chefes de polícia, que é o elemento central do exemplo."
+}

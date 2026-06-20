@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s1",
+  "pergunta": "Em novembro de 1823, D. Pedro I dissolveu pela força a Assembleia Constituinte, que resistia a conceder poderes excessivos ao Imperador, e nomeou um Conselho de Estado para redigir uma nova Carta; o texto resultante foi outorgado em 25 de março de 1824, sem votação popular, e instituiu o Poder Moderador exclusivo do Imperador, distinto e superior aos poderes Executivo, Legislativo e Judiciário previstos na mesma Constituição. Por que o Poder Moderador se distingue do Executivo, do Legislativo e do Judiciário, em vez de ser apenas um quarto poder equivalente aos outros três?",
+  "alternativas": {
+    "A": "Porque o Poder Moderador subordinava os demais poderes à vontade do Imperador, em vez de atuar em paridade com eles, organizando o Estado de forma centralizada desde sua origem jurídica",
+    "B": "Porque o Executivo, instituído pela mesma Constituição, também concentrava no Imperador a prerrogativa de nomear e demitir ministros e de dissolver a Câmara dos Deputados",
+    "C": "Porque o Poder Moderador só podia ser exercido em situações de exceção, quando os outros três poderes entrassem em conflito entre si",
+    "D": "Porque o Poder Moderador resultava de eleição direta pelos votantes paroquiais, ao contrário dos demais poderes, nomeados pelo Imperador"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) reproduz o critério definitório do Poder Moderador: ele não atua em paridade com os outros três poderes, mas os subordina à vontade do Imperador. O distrator B é vocabulário do rival (tipo 5): atribui ao Executivo prerrogativas (nomear ministros, dissolver a Câmara) que são, no texto, do próprio Poder Moderador, confundindo os dois poderes vizinhos. O distrator C é restrição indevida (tipo 3): isola uma condição de exceção como se fosse o critério central, quando o texto não condiciona o Poder Moderador a situações de conflito entre poderes. O distrator D é vocabulário análogo (tipo 2): começa corretamente associando o Poder Moderador ao Imperador, mas distorce a segunda parte ao inventar uma origem eletiva inexistente no texto."
+}
