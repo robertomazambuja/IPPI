@@ -341,3 +341,135 @@ def gerar_verificacoes(
         len(verificacoes), "sim" if aplicar_agora else "não",
     )
     return verificacoes, aplicar_agora
+
+
+# ---------------------------------------------------------------------------
+# Gerador de RASCUNHO no schema externo (FORA do pipeline, sob demanda)
+# ---------------------------------------------------------------------------
+#
+# Produz um JSON por marcador no MESMO schema que xml_to_pdf.py consome
+# (verif-{cap_id}-s{idx}.json / aplicar-{cap_id}.json), reusando a chamada
+# Haiku. É só um ponto de partida automático para humanos refinarem — o
+# pipeline NÃO chama isto.
+
+_RE_CAP_ID = re.compile(r"^(\d{2}-\d{2})")
+
+def _cap_id_de(core_path: Path) -> str:
+    m = _RE_CAP_ID.match(core_path.stem)
+    return m.group(1) if m else core_path.stem
+
+
+def gerar_rascunhos(
+    core_path: Path,
+    client: anthropic.Anthropic,
+    out_dir: Path,
+    model: str = VERIFICADOR_MODEL,
+) -> int:
+    """
+    Gera arquivos JSON de rascunho (schema externo) para um capítulo.
+    Salva em out_dir. Retorna o número de arquivos escritos.
+    """
+    try:
+        core_data = parse_core(core_path)
+    except Exception as e:
+        logger.error("[Rascunho] Falha ao parsear core %s: %s", core_path, e)
+        return 0
+
+    secoes_elegiveis = [s for s in core_data["secoes"] if s["verificacao"]]
+    if not secoes_elegiveis:
+        logger.info("[Rascunho] Nenhuma seção elegível em %s", core_path.name)
+        return 0
+
+    prompt = _build_prompt(core_data)
+    try:
+        response = client.messages.create(
+            model=model,
+            max_tokens=4096,
+            system=_SYSTEM_PROMPT,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = response.content[0].text.strip()
+    except Exception as e:
+        logger.error("[Rascunho] Erro na API: %s", e)
+        return 0
+
+    start, end = raw.find("{"), raw.rfind("}") + 1
+    if start == -1 or end == 0:
+        logger.warning("[Rascunho] Resposta sem JSON válido")
+        return 0
+    try:
+        data = json.loads(raw[start:end])
+    except json.JSONDecodeError as e:
+        logger.warning("[Rascunho] JSON inválido: %s", e)
+        return 0
+
+    cap_id = _cap_id_de(core_path)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    escritos = 0
+
+    for v in data.get("verificacoes", []):
+        idx = v.get("idx_secao")
+        if idx is None:
+            continue
+        ref = f"verif-{cap_id}-s{int(idx)}"
+        obj = {
+            "tipo": "verificacao",
+            "ref": ref,
+            "pergunta": v.get("pergunta", ""),
+            "alternativas": {k: v.get("alternativas", {}).get(k, "")
+                             for k in ("A", "B", "C", "D")},
+            "correta": v.get("correta", ""),
+            "justificativa": v.get("justificativa", ""),
+        }
+        (out_dir / f"{ref}.json").write_text(
+            json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+        escritos += 1
+
+    aa = data.get("aplicar_agora")
+    if aa and aa.get("enunciado"):
+        ref = f"aplicar-{cap_id}"
+        obj = {
+            "tipo": "aplicar-agora",
+            "ref": ref,
+            "enunciado": aa.get("enunciado", ""),
+            "resposta_comentada": aa.get("resposta_comentada", ""),
+        }
+        (out_dir / f"{ref}.json").write_text(
+            json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+        escritos += 1
+
+    logger.info("[Rascunho] %d arquivo(s) escrito(s) em %s (cap %s)",
+                escritos, out_dir, cap_id)
+    return escritos
+
+
+def _main():
+    import argparse
+    import glob as _glob
+    import os
+
+    ap = argparse.ArgumentParser(
+        description="Gerador de RASCUNHO de verificações (schema externo). "
+                    "Fora do pipeline; consome API (Haiku). Refine os JSON à mão depois.")
+    ap.add_argument("core", help="core.md de um capítulo, ou glob (ex.: 'output/**/core/**/*.md').")
+    ap.add_argument("--out", default="verificacoes",
+                    help="Pasta de saída dos JSON (padrão: verificacoes).")
+    ap.add_argument("--model", default=VERIFICADOR_MODEL)
+    args = ap.parse_args()
+
+    from dotenv import load_dotenv
+    load_dotenv()
+    client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+
+    paths = [Path(p) for p in _glob.glob(args.core, recursive=True)] or [Path(args.core)]
+    out_dir = Path(args.out)
+    total = 0
+    for cp in paths:
+        if cp.is_file():
+            total += gerar_rascunhos(cp, client, out_dir, args.model)
+    print(f"[Rascunho] {total} arquivo(s) JSON escrito(s) em {out_dir}")
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    _main()

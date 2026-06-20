@@ -1446,6 +1446,97 @@ def gerar_lista_verificacoes(apostila_dir: Path) -> None:
 
 
 # ============================================================================
+# VALIDADOR DAS VERIFICAÇÕES EXTERNAS (antes de montar o PDF)
+# ============================================================================
+
+def validar_verificacoes(apostila_dir: Path, verifdir: Optional[Path] = None) -> bool:
+    """
+    Cruza os marcadores status="externo" dos XMLs com os JSON da pasta de
+    verificações e reporta pendências. Retorna True se está tudo OK (sem erros),
+    False se há erros (arquivo ausente, JSON inválido, schema fora do esperado).
+    Campos recomendados ausentes (justificativa/resposta_comentada) geram apenas
+    AVISO, não erro.
+    """
+    import json
+    import xml.etree.ElementTree as ET
+
+    if verifdir is None:
+        verifdir = apostila_dir / "verificacoes"
+
+    xml_files = sorted(apostila_dir.glob("formatado/**/*.xml"))
+    if not xml_files:
+        log_print("[Validar] Nenhum XML encontrado — nada a validar.")
+        return True
+
+    erros: List[str] = []
+    avisos: List[str] = []
+    total = 0
+
+    for xml_path in xml_files:
+        try:
+            root = ET.parse(xml_path).getroot()
+        except ET.ParseError as e:
+            erros.append(f"{xml_path.name}: XML inválido ({e})")
+            continue
+
+        cap_el = root.find(".//capitulo") if root.tag != "capitulo" else root
+        if cap_el is None:
+            cap_el = root
+
+        for sb in cap_el.iter("sidebar"):
+            if sb.get("status") != "externo":
+                continue
+            total += 1
+            ref  = sb.get("ref", "")
+            tipo = sb.get("tipo", "")
+            if not ref:
+                erros.append(f"{xml_path.name}: marcador sem 'ref'")
+                continue
+
+            jpath = verifdir / f"{ref}.json"
+            if not jpath.is_file():
+                erros.append(f"{ref}: arquivo {ref}.json ausente em {verifdir}")
+                continue
+            try:
+                data = json.loads(jpath.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, ValueError) as e:
+                erros.append(f"{ref}: JSON inválido ({e})")
+                continue
+
+            if tipo == "verificacao":
+                if not (data.get("pergunta") or "").strip():
+                    erros.append(f"{ref}: 'pergunta' vazia")
+                alts = data.get("alternativas") or {}
+                if set(alts.keys()) != {"A", "B", "C", "D"}:
+                    erros.append(f"{ref}: 'alternativas' deve ter exatamente A,B,C,D "
+                                 f"(encontrado: {sorted(alts.keys())})")
+                elif any(not str(alts.get(k, "")).strip() for k in ("A", "B", "C", "D")):
+                    erros.append(f"{ref}: alguma alternativa A-D está vazia")
+                if data.get("correta") not in {"A", "B", "C", "D"}:
+                    erros.append(f"{ref}: 'correta' deve ser A, B, C ou D "
+                                 f"(encontrado: {data.get('correta')!r})")
+                if not (data.get("justificativa") or "").strip():
+                    avisos.append(f"{ref}: sem 'justificativa' (gabarito do professor ficará vazio)")
+            elif tipo == "aplicar-agora":
+                if not (data.get("enunciado") or "").strip():
+                    erros.append(f"{ref}: 'enunciado' vazio")
+                if not (data.get("resposta_comentada") or "").strip():
+                    avisos.append(f"{ref}: sem 'resposta_comentada' (resposta do professor ficará vazia)")
+            else:
+                erros.append(f"{ref}: tipo de marcador desconhecido: {tipo!r}")
+
+    log_print(f"\n[Validar] {total} marcador(es) externo(s); "
+              f"{len(erros)} erro(s), {len(avisos)} aviso(s).")
+    for a in avisos:
+        log_print(f"  ⚠  {a}")
+    for e in erros:
+        log_print(f"  ✗  {e}")
+    if not erros:
+        log_print("[Validar] OK — todas as verificações presentes e no schema esperado.")
+    return not erros
+
+
+# ============================================================================
 # CLI
 # ============================================================================
 
@@ -1534,8 +1625,33 @@ Exemplos:
         help="Nº de capítulos processados em paralelo nos estágios 2–5 (padrão: 1). "
              "Use 2–3; valores altos podem atingir rate limits.",
     )
+    parser.add_argument(
+        "--validar-verif",
+        type=str,
+        default=None,
+        metavar="APOSTILA",
+        help="Valida as verificações externas da apostila (nome ou caminho) e sai. "
+             "Não chama API. Exit code 0 se OK, 1 se há pendências.",
+    )
+    parser.add_argument(
+        "--verif-dir",
+        type=Path,
+        default=None,
+        metavar="PASTA",
+        help="Pasta dos JSON de verificação (padrão: output/<apostila>/verificacoes/).",
+    )
 
     args = parser.parse_args()
+
+    # ── Modo validação (sem API) ────────────────────────────────────────────────
+    if args.validar_verif:
+        alvo = Path(args.validar_verif)
+        apostila_dir = alvo if alvo.is_dir() else OUTPUT_DIR / args.validar_verif
+        if not apostila_dir.is_dir():
+            log_print(f"ERRO: apostila não encontrada: {apostila_dir}")
+            sys.exit(1)
+        ok = validar_verificacoes(apostila_dir, args.verif_dir)
+        sys.exit(0 if ok else 1)
 
     # ── Modo briefing ──────────────────────────────────────────────────────────
     if args.briefing:
