@@ -217,7 +217,74 @@ def sb_aplicar(el, incluir_gabarito=True):
     return (f'<div class="aplicar-agora"><div class="aplicar-agora-header">Aplicar agora</div>'
             f'<div class="aplicar-agora-enunciado">{md(html_mod.escape(enun))}</div>{rh}</div>')
 
-def render_sb(el, incluir_gabarito=True):
+# ---------------------------------------------------------------------------
+# Verificacao externa (status="externo") — conteudo vem da pasta --verificacoes
+# (Fase 4 — ver PLANO-VERIFICACAO-EXTERNA.md). Convertendo o JSON para os
+# MESMOS elementos que sb_verif/sb_aplicar ja consomem, preservamos
+# integralmente a logica aluno/professor.
+# ---------------------------------------------------------------------------
+
+def _json_to_elem_verif(data):
+    """Converte o JSON de verificacao no elemento que sb_verif espera."""
+    el = ET.Element("sidebar", {"tipo": "verificacao"})
+    ET.SubElement(el, "pergunta").text = data.get("pergunta", "")
+    alts = ET.SubElement(el, "alternativas")
+    correta = data.get("correta", "")
+    for letra in sorted((data.get("alternativas") or {}).keys()):
+        attrs = {"letra": letra}
+        if letra == correta:
+            attrs["correta"] = "sim"
+        ET.SubElement(alts, "alternativa", attrs).text = (data["alternativas"].get(letra) or "")
+    just = data.get("justificativa", "")
+    if just:
+        ET.SubElement(el, "justificativa").text = just
+    return el
+
+
+def _json_to_elem_aplicar(data):
+    """Converte o JSON de aplicar-agora no elemento que sb_aplicar espera."""
+    el = ET.Element("sidebar", {"tipo": "aplicar-agora"})
+    ET.SubElement(el, "enunciado").text = data.get("enunciado", "")
+    resp = data.get("resposta_comentada", "")
+    if resp:
+        ET.SubElement(el, "resposta").text = resp
+    return el
+
+
+def _sb_pendente(ref, incluir_gabarito):
+    """Aviso de verificacao pendente — SO na versao professor; nada para o aluno."""
+    if not incluir_gabarito:
+        return ""
+    return (f'<div class="sidebar-verificacao verif-pendente">'
+            f'<div class="verif-header">Verificacao pendente</div>'
+            f'<div class="verif-pergunta">Sem insumo para o marcador '
+            f'<b>{html_mod.escape(ref)}</b> (arquivo {html_mod.escape(ref)}.json '
+            f'ausente ou invalido na pasta de verificacoes).</div></div>')
+
+
+def render_sb_externo(el, verifdir, incluir_gabarito=True):
+    tipo = el.get("tipo", "")
+    ref = el.get("ref", "")
+    if not verifdir or not ref:
+        return _sb_pendente(ref, incluir_gabarito)
+    jpath = os.path.join(verifdir, ref + ".json")
+    if not os.path.isfile(jpath):
+        return _sb_pendente(ref, incluir_gabarito)
+    try:
+        with open(jpath, encoding="utf-8") as f:
+            data = json.load(f)
+    except (json.JSONDecodeError, OSError, ValueError):
+        return _sb_pendente(ref, incluir_gabarito)
+    if tipo == "verificacao":
+        return sb_verif(_json_to_elem_verif(data), incluir_gabarito)
+    if tipo == "aplicar-agora":
+        return sb_aplicar(_json_to_elem_aplicar(data), incluir_gabarito)
+    return _sb_pendente(ref, incluir_gabarito)
+
+
+def render_sb(el, incluir_gabarito=True, verifdir=None):
+    if el.get("status") == "externo":
+        return render_sb_externo(el, verifdir, incluir_gabarito)
     t = el.get("tipo", "")
     if t == "autor": return sb_autor(el)
     if t == "verificacao": return sb_verif(el, incluir_gabarito)
@@ -225,7 +292,7 @@ def render_sb(el, incluir_gabarito=True):
     return ""
 
 
-def render_secao(el, imdir, incluir_gabarito=True):
+def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
     col_parts = []
     te = el.find("titulo")
     if te is not None and te.text:
@@ -238,7 +305,7 @@ def render_secao(el, imdir, incluir_gabarito=True):
         if tipo == "autor":
             col_parts.append(sb_autor(sb))
         else:
-            full_parts.append(render_sb(sb, incluir_gabarito))
+            full_parts.append(render_sb(sb, incluir_gabarito, verifdir))
     for img in el.findall("imagem"):
         ref = img.get("ref", "")
         de = img.find("descricao")
@@ -251,7 +318,7 @@ def render_secao(el, imdir, incluir_gabarito=True):
     out += [('full', h) for h in full_parts]
     return out
 
-def render_bloco(el, imdir, incluir_gabarito=True):
+def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None):
     op = el.get("operacao", "")
     bid = el.get("id", "")
     c = OPERACAO_CORES.get(op, COR_PADRAO)
@@ -270,7 +337,7 @@ def render_bloco(el, imdir, incluir_gabarito=True):
     for ch in el:
         t = ch.tag
         if t == "secao":
-            for kind, html in render_secao(ch, imdir, incluir_gabarito):
+            for kind, html in render_secao(ch, imdir, incluir_gabarito, verifdir):
                 if kind == 'col':
                     buffer.append(html)
                 else:
@@ -280,7 +347,7 @@ def render_bloco(el, imdir, incluir_gabarito=True):
             if tipo == "autor":
                 buffer.append(sb_autor(ch))
             else:
-                flush(); segments.append(render_sb(ch, incluir_gabarito))
+                flush(); segments.append(render_sb(ch, incluir_gabarito, verifdir))
         elif t == "imagem":
             ref = ch.get("ref", "")
             de = ch.find("descricao")
@@ -303,7 +370,7 @@ def split_nome_capitulo(nome_completo):
             return a.strip(), b.strip()
     return "", nome_completo.strip()
 
-def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None):
+def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=None):
     meta = meta or {}
     root = ET.parse(xml_path).getroot()
     cab = root.find("cabecalho")
@@ -344,15 +411,15 @@ def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None):
     if corpo_el is not None:
         for ch in corpo_el:
             t = ch.tag
-            if t == "bloco": corpo.append(render_bloco(ch, imdir, incluir_gabarito))
+            if t == "bloco": corpo.append(render_bloco(ch, imdir, incluir_gabarito, verifdir))
             elif t == "quebra": corpo.append('<div class="quebra-pagina"></div>')
-            elif t == "sidebar": corpo.append(render_sb(ch, incluir_gabarito))
+            elif t == "sidebar": corpo.append(render_sb(ch, incluir_gabarito, verifdir))
             elif t == "nota_fonte": corpo.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
 
     rodape = ""
     re_el = root.find("rodape")
     if re_el is not None:
-        for sb in re_el.findall("sidebar"): rodape += render_sb(sb, incluir_gabarito)
+        for sb in re_el.findall("sidebar"): rodape += render_sb(sb, incluir_gabarito, verifdir)
 
     return capa + "".join(corpo) + rodape
 
@@ -409,6 +476,8 @@ def main():
     g.add_argument("xml", nargs="?")
     g.add_argument("--unidade")
     p.add_argument("--imagens")
+    p.add_argument("--verificacoes",
+                   help="Pasta com os JSON das verificacoes externas ({ref}.json).")
     p.add_argument("--briefing", help="JSON com nomes da unidade e dos capitulos (fora do XML).")
     p.add_argument("--output")
     p.add_argument("--html-only", action="store_true")
@@ -451,14 +520,17 @@ def main():
         print(f"  briefing: {brief_path}")
 
     imdir = str(Path(args.imagens).resolve()) if args.imagens else None
+    verifdir = str(Path(args.verificacoes).resolve()) if args.verificacoes else None
     print(f"  >>> PROCESSO: VERSAO DO {versao.upper()} <<<")
+    if verifdir:
+        print(f"  verificacoes: {verifdir}")
     caps = []
     for xf in xml_files:
         num = numero_capitulo_do_xml(xf)
         meta = meta_por_num.get(num, {"numero": (f"Capitulo {num}" if num else ""),
                                       "nome": "", "unidade": unidade})
         print(f"  {xf.name}  -> {meta.get('numero','?')}")
-        caps.append(render_capitulo(xf, imdir, incluir_gabarito, meta))
+        caps.append(render_capitulo(xf, imdir, incluir_gabarito, meta, verifdir))
 
     html = build_html(caps, versao_label)
     if args.html_only:
