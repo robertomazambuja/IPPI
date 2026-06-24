@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s4",
+  "pergunta": "Em 1888, o Barão de Cotegipe, político conservador e ex-presidente do Conselho de Ministros, declarou à Princesa Isabel após a assinatura da Lei Áurea: \"Vossa Alteza redimiu uma raça, mas perdeu o trono.\" O que essa frase revela sobre a relação causal entre a abolição da escravidão e a queda do Império?",
+  "alternativas": {
+    "A": "A frase identifica que a abolição, ao eliminar a base econômica e social do pacto entre a Coroa e a elite agrária escravista, retirou do Império o apoio do grupo que sustentava sua estabilidade política — sendo, assim, um dos fatores que levaram ao isolamento de D. Pedro II e à proclamação da República.",
+    "B": "A frase mostra que a perda do trono pelo Império foi a causa da abolição da escravidão, que só se tornou possível depois que a monarquia já havia perdido o apoio político da elite agrária.",
+    "C": "A frase revela que a queda do Império resultou exclusivamente do desgaste pessoal da imagem de D. Pedro II perante a opinião pública, sem relação com o apoio de proprietários rurais, militares ou setores do clero.",
+    "D": "A frase indica que a perda do trono decorreu do aumento do preço internacional do café após 1888, fator que teria reduzido drasticamente a receita das elites cafeeiras e seu apoio à monarquia."
+  },
+  "correta": "A",
+  "justificativa": "A alternativa A está correta porque mapeia o mecanismo causal apresentado no capítulo: a abolição sem indenização rompeu o pacto que sustentava a lealdade da elite agrária escravista à Coroa, retirando uma das bases de apoio do regime e contribuindo, junto a outros fatores (Questão Militar, Questão Religiosa, avanço republicano), para a queda do Império. A alternativa B (inversão da tese) inverte a relação causal, tratando a perda do trono como causa da abolição, quando o texto apresenta a abolição como o fator que precipitou a perda de apoio político à monarquia. A alternativa C (restrição indevida) reduz a queda do Império a um único fator (o desgaste pessoal de D. Pedro II), ignorando que o texto atribui o isolamento do imperador à convergência de múltiplos pilares de sustentação rompidos. A alternativa D (campo semântico sem ancoragem) introduz um fator economicamente plausível (preço internacional do café), mas que não está ancorado no texto-base como mecanismo causal da ruptura entre a Coroa e a elite agrária."
+}

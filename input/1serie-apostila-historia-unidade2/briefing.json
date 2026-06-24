@@ -1,0 +1,18 @@
+{
+  "disciplina": "História",
+  "habilidade_enem": "H8",
+  "unidade": "Unidade 2 — Populações, Migrações e Dinâmicas do Capital no Mundo",
+  "pergunta_unidade": "De que maneira os deslocamentos populacionais, a circulação de mercadorias e a expansão do capital transformaram as sociedades ao longo da História e continuam influenciando o mundo contemporâneo?",
+  "capitulos": [
+    "Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais",
+    "Capítulo 2 — Capital, Comércio e Globalização"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais": ["Eric Hobsbawm", "Milton Santos", "Zygmunt Bauman", "Abdelmalek Sayad", "Stuart Hall"],
+    "Capítulo 2 — Capital, Comércio e Globalização": ["Karl Marx", "Immanuel Wallerstein", "David Harvey", "Fernand Braudel", "Giovanni Arrighi"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais": ["Migrações e deslocamentos humanos na História", "Expansão marítima, colonização e diásporas", "Escravidão, tráfico atlântico e mobilidade forçada", "Refugiados, guerras e crises humanitárias", "Urbanização, industrialização e crescimento populacional"],
+    "Capítulo 2 — Capital, Comércio e Globalização": ["Mercantilismo, comércio e expansão marítima", "Revolução Industrial e capitalismo", "Imperialismo e divisão internacional do trabalho", "Globalização e circulação de mercadorias e capitais", "Desigualdades econômicas e fluxos globais contemporâneos"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s3",
+  "pergunta": "Enquanto Joaquim Nabuco defendia, no Parlamento e na imprensa britânica, a aprovação gradual de leis abolicionistas, fundando em 1880 a Sociedade Brasileira Contra a Escravidão, os caifazes, liderados por Antônio Bento em São Paulo entre 1887 e 1888, organizavam fugas coletivas de escravizados diretamente das fazendas, antecipando na prática, mediante desobediência à lei vigente, a abolição que o Parlamento ainda não havia votado. Comparando as vertentes representadas por Joaquim Nabuco e pelos caifazes quanto ao método de atuação e à relação com a legislação vigente, qual alternativa descreve corretamente a diferença entre elas?",
+  "alternativas": {
+    "A": "Nabuco atuava por discursos parlamentares e pressão diplomática, dentro da ordem legal estabelecida, enquanto os caifazes desobedeciam deliberadamente à legislação escravista ainda em vigor, antecipando na prática a abolição",
+    "B": "Os caifazes atuavam por discursos no Parlamento e artigos de imprensa, enquanto Nabuco organizava fugas coletivas de escravizados diretamente das fazendas onde atuava",
+    "C": "Nabuco desobedecia deliberadamente à legislação escravista, organizando fugas pela imprensa britânica, enquanto os caifazes se limitavam a propor reformas legislativas graduais dentro do Parlamento",
+    "D": "Tanto Nabuco quanto os caifazes desobedeciam à legislação vigente, mas Nabuco fazia isso pela via diplomática britânica e os caifazes pela via das fazendas paulistas"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) atribui corretamente cada método e cada relação com a lei vigente à unidade certa: Nabuco dentro da ordem legal, os caifazes em desobediência deliberada a ela. O distrator B é vocabulário do rival (tipo 5): troca integralmente os métodos das duas unidades, atribuindo a Nabuco a ação direta dos caifazes e vice-versa — é o erro mais informativo em Comparar, pois captura quem confunde as duas vertentes. O distrator C é vocabulário análogo (tipo 2): mistura elementos das duas vertentes em afirmações híbridas que nenhuma das duas sustentaria isoladamente (Nabuco não desobedecia à lei, os caifazes não se limitavam ao Parlamento). O distrator D é inversão da tese (tipo 1): afirma que ambas as vertentes desobedeciam à legislação vigente, quando o ponto central da comparação é justamente que apenas uma delas — os caifazes — o fazia, enquanto Nabuco atuava pelos canais institucionais."
+}

@@ -1,0 +1,35 @@
+IMAGENS NECESSÁRIAS — Apostila: 1serie-apostila-historia-unidade1
+Gerado em: 23/06/2026 16:18
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Como historiadores com perspectivas distintas constroem conhecimento histórico a partir das mesmas fontes?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro classificatório com 5 linhas (fonte escrita oficial, fonte escrita não oficial, fonte visual, fonte oral, fonte material) e 3 colunas (natureza do suporte, origem institucional, exemplo concreto)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Ranke / Carr) e 3 linhas (Papel do historiador / Relação com a fonte / Conceito de fato histórico)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Historiografia tradicional / Escola dos Annales) e 4 linhas (Conceito de fonte / Papel do historiador / Sujeitos históricos / Permanências e mudanças)
+
+
+CAPÍTULO 01-02 — Por que narrativas históricas distintas sobre um mesmo evento apresentam versões diferentes do passado, e como identificar os interesses e as escolhas que as constituem?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Reprodução da pintura "Independência ou Morte" (1888), de Pedro Américo, com indicação dos elementos compositivos: Dom Pedro I ao centro, soldados em posição solene, ausência de escravizados e população rural
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Narrativa republicana oficial / Narrativa historiográfica crítica) e 4 linhas (Sujeitos destacados / Motivações atribuídas / Participação popular / Função política da narrativa)
+
+=================================================================
+TOTAL: 5 imagem(ns) necessária(s)
+=================================================================

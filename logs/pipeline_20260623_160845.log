@@ -1,0 +1,127 @@
+2026-06-23 16:08:46,058 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-23 16:08:46,062 [INFO] __main__: Apostila : 1serie-apostila-historia-unidade1
+2026-06-23 16:08:46,062 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-23 16:08:46,063 [INFO] __main__: Workers  : 3
+2026-06-23 16:08:46,063 [INFO] __main__: Forçar   : não
+2026-06-23 16:08:46,064 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-23 16:08:46,067 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-23 16:08:46,067 [INFO] __main__: Unidades : 1
+2026-06-23 16:08:46,068 [INFO] __main__: Capítulos: 2
+2026-06-23 16:08:46,070 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-23 16:08:46,070 [INFO] __main__: Unidade 1: Unidade 1 — A Construção do Conhecimento Histórico
+2026-06-23 16:08:46,071 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-23 16:08:46,071 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-23 16:08:46,072 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico  [Agente 1]
+2026-06-23 16:08:46,072 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-23 16:08:46,180 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico
+2026-06-23 16:08:48,880 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:10:27,137 [INFO] __main__:     →  write_file: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:10:27,147 [INFO] __main__:     ✓  Salvo: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:10:29,739 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:10:38,622 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=5829 cache_create=20990 cache_read=15582
+2026-06-23 16:10:38,624 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-23 16:10:38,625 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Narrativas Históricas e Linguagens  [Agente 1]
+2026-06-23 16:10:38,625 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-23 16:10:38,633 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Narrativas Históricas e Linguagens
+2026-06-23 16:10:40,481 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:12:41,947 [INFO] __main__:     →  write_file: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:12:41,951 [INFO] __main__:     ✓  Salvo: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:12:44,600 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:12:56,539 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6803 cache_create=14325 cache_read=23911
+2026-06-23 16:12:56,542 [INFO] __main__: 
+[Fase 2] Processando 2 capítulo(s) em paralelo (3 workers)…
+2026-06-23 16:12:57,614 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-23 16:12:57,614 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico  [estágios 2–5]
+2026-06-23 16:12:57,615 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-23 16:12:57,642 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-23 16:12:57,645 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Narrativas Históricas e Linguagens  [estágios 2–5]
+2026-06-23 16:12:57,646 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-23 16:12:57,658 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico
+2026-06-23 16:12:57,659 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Narrativas Históricas e Linguagens
+2026-06-23 16:12:59,759 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:13:00,739 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:13:02,283 [INFO] __main__:     →  read_file: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:13:02,288 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-23 16:13:03,138 [INFO] __main__:     →  read_file: output/1serie-apostila-historia-unidade1/core/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:13:03,142 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-23 16:13:04,420 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:13:05,641 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:15:16,695 [INFO] __main__:     →  write_file: output/1serie-apostila-historia-unidade1/texto/unidade-1-a-construcao-do-conhecimento-historico/01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:15:16,701 [INFO] __main__:     ✓  Salvo: output/1serie-apostila-historia-unidade1/texto/unidade-1-a-construcao-do-conhecimento-historico/01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:15:19,591 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:15:31,582 [INFO] __main__:     →  write_file: output/1serie-apostila-historia-unidade1/texto/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:15:31,600 [INFO] __main__:     ✓  Salvo: output/1serie-apostila-historia-unidade1/texto/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:15:36,273 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:15:36,743 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=7128 cache_create=33164 cache_read=45967
+2026-06-23 16:15:36,762 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico
+2026-06-23 16:15:36,772 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md (4 alteracao(oes))
+2026-06-23 16:15:36,773 [INFO] __main__:     ✓ Normalizações aplicadas (4 alteração(ões))
+2026-06-23 16:15:36,773 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-23 16:15:36,774 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-23 16:15:36,774 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-23 16:15:36,775 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como historiadores com perspectivas distintas constroem conhecimento histórico a partir das mesmas fontes?
+2026-06-23 16:15:36,950 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico
+2026-06-23 16:15:38,275 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:15:38,631 [INFO] __main__:     →  read_file: output/1serie-apostila-historia-unidade1/texto/unidade-1-a-construcao-do-conhecimento-historico/01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:15:40,969 [INFO] __main__:     →  read_file: output\1serie-apostila-historia-unidade1\texto\unidade-1-a-construcao-do-conhecimento-historico\01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md
+2026-06-23 16:15:42,316 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:15:42,537 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:16:03,753 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=8155 cache_create=42588 cache_read=84076
+2026-06-23 16:16:03,758 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Narrativas Históricas e Linguagens
+2026-06-23 16:16:03,767 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-narrativas-historicas-e-linguagens.md (7 alteracao(oes))
+2026-06-23 16:16:03,768 [INFO] __main__:     ✓ Normalizações aplicadas (7 alteração(ões))
+2026-06-23 16:16:03,769 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-23 16:16:03,769 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-23 16:16:03,770 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-23 16:16:03,771 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-23 16:16:03,772 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-23 16:16:03,773 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-23 16:16:03,774 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Por que narrativas históricas distintas sobre um mesmo evento apresentam versões diferentes do passado, e como identificar os interesses e as escolhas que as constituem?
+2026-06-23 16:16:03,873 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Narrativas Históricas e Linguagens
+2026-06-23 16:16:05,200 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:16:06,915 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=1856 cache_create=15383 cache_read=9200
+2026-06-23 16:16:06,999 [INFO] __main__:     ✓ 10 troca(s) aplicada(s) pelo Agente 4
+2026-06-23 16:16:07,000 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico
+2026-06-23 16:16:07,011 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.md (sem custo de API)
+2026-06-23 16:16:07,011 [INFO] __main__:     ✓ Pontos de verificação identificados: 4 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-23 16:16:07,057 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.xml (4 blocos, 2727 palavras)
+2026-06-23 16:16:07,057 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-fontes-historicas-e-construcao-do-conhecimento-historico.xml
+2026-06-23 16:16:07,622 [INFO] __main__:     →  read_file: output\1serie-apostila-historia-unidade1\texto\unidade-1-a-construcao-do-conhecimento-historico\01-02-capitulo-2-narrativas-historicas-e-linguagens.md
+2026-06-23 16:16:09,549 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-23 16:18:33,094 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=9194 cache_create=14425 cache_read=12723
+2026-06-23 16:18:33,097 [INFO] __main__:     ✓ 0 troca(s) aplicada(s) pelo Agente 4
+2026-06-23 16:18:33,097 [INFO] __main__:       ⚠  JSON inválido do Agente 4: Expecting ',' delimiter: line 31 column 102 (char 10089) — arquivo não alterado
+2026-06-23 16:18:33,098 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Narrativas Históricas e Linguagens
+2026-06-23 16:18:33,104 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-narrativas-historicas-e-linguagens.md (sem custo de API)
+2026-06-23 16:18:33,105 [INFO] __main__:     ✓ Pontos de verificação identificados: 4 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-23 16:18:33,116 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-narrativas-historicas-e-linguagens.xml (4 blocos, 3083 palavras)
+2026-06-23 16:18:33,117 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-narrativas-historicas-e-linguagens.xml
+2026-06-23 16:18:33,144 [INFO] __main__: USAGE TOTAL [1serie-apostila-historia-unidade1] — in=21 out=38965 cache_create=140875 cache_read=191459
+2026-06-23 16:18:33,145 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-23 16:18:33,145 [INFO] __main__: Pipeline concluído.
+2026-06-23 16:18:33,145 [INFO] __main__: Outputs em: output/1serie-apostila-historia-unidade1/
+2026-06-23 16:18:33,145 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260623_160845.log
+2026-06-23 16:18:33,145 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\IPPI\logs\usage_20260623_160845.csv
+2026-06-23 16:18:33,146 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-23 16:18:33,528 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\IPPI\output\1serie-apostila-historia-unidade1\IMAGENS-NECESSARIAS.txt
+2026-06-23 16:18:33,529 [INFO] __main__: [Imagens] 5 imagem(ns) em 2 capítulo(s).
+2026-06-23 16:18:33,532 [INFO] __main__: [Verif] Lista de verificações salva em: C:\Users\Roberto\Desktop\IPPI\output\1serie-apostila-historia-unidade1\VERIFICACOES-NECESSARIAS.txt
+2026-06-23 16:18:33,533 [INFO] __main__: [Verif] 10 verificação(ões) em 2 capítulo(s).

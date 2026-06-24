@@ -1,0 +1,55 @@
+2026-06-22 13:49:23,333 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 13:49:23,335 [INFO] __main__: Apostila : apostila-historia-unidade1-2serie
+2026-06-22 13:49:23,335 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-22 13:49:23,336 [INFO] __main__: Workers  : 1
+2026-06-22 13:49:23,336 [INFO] __main__: Forçar   : não
+2026-06-22 13:49:23,337 [INFO] __main__: Capítulo : 2 (somente)
+2026-06-22 13:49:23,338 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 13:49:23,407 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-22 13:49:23,408 [INFO] __main__: Unidades : 1
+2026-06-22 13:49:23,408 [INFO] __main__: Capítulos: 2
+2026-06-22 13:49:23,412 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 13:49:23,412 [INFO] __main__: Unidade 1: Unidade 1 — Justiça, Estado e Poder no Brasil Imperial
+2026-06-22 13:49:23,412 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 13:49:23,413 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 13:49:23,413 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Escravidão, Direitos e Crise do Império  [Agente 1]
+2026-06-22 13:49:23,414 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 13:49:23,414 [INFO] __main__:   [Agente 1] Core já existe — pulando.
+2026-06-22 13:49:24,059 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 13:49:24,061 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Escravidão, Direitos e Crise do Império  [estágios 2–5]
+2026-06-22 13:49:24,062 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 13:49:24,064 [INFO] __main__:   [Agente 2] Texto já existe — pulando.
+2026-06-22 13:49:24,064 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Direitos e Crise do Império
+2026-06-22 13:49:24,103 [INFO] normalizador: [Normalizador] Sem alteracoes: 01-02-capitulo-2-escravidao-direitos-e-crise-do-imperio.md
+2026-06-22 13:49:24,112 [INFO] __main__:     ✓ Sem alterações necessárias
+2026-06-22 13:49:24,178 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Direitos e Crise do Império
+2026-06-22 13:49:30,341 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 13:49:33,296 [INFO] __main__:     →  read_file: output\apostila-historia-unidade1-2serie\texto\unidade-1-justica-estado-e-poder-no-brasil-imperial\01-02-capitulo-2-escravidao-direitos-e-crise-do-imperio.md
+2026-06-22 13:49:34,410 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 13:50:10,215 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=2759 cache_create=13274 cache_read=8143
+2026-06-22 13:50:10,270 [INFO] __main__:     ✓ 9 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 13:50:10,270 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Direitos e Crise do Império
+2026-06-22 13:50:10,293 [INFO] verificador: [Verificador] 4 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-escravidao-direitos-e-crise-do-imperio.md (sem custo de API)
+2026-06-22 13:50:10,293 [INFO] __main__:     ✓ Pontos de verificação identificados: 4 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-22 13:50:10,315 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-escravidao-direitos-e-crise-do-imperio.xml (4 blocos, 2025 palavras)
+2026-06-22 13:50:10,316 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-escravidao-direitos-e-crise-do-imperio.xml
+2026-06-22 13:50:10,331 [INFO] __main__: USAGE TOTAL [apostila-historia-unidade1-2serie] — in=3 out=2759 cache_create=13274 cache_read=8143
+2026-06-22 13:50:10,331 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 13:50:10,332 [INFO] __main__: Pipeline concluído.
+2026-06-22 13:50:10,332 [INFO] __main__: Outputs em: output/apostila-historia-unidade1-2serie/
+2026-06-22 13:50:10,332 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260622_134922.log
+2026-06-22 13:50:10,332 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\IPPI\logs\usage_20260622_134922.csv
+2026-06-22 13:50:10,332 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-22 13:50:10,604 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\IPPI\output\apostila-historia-unidade1-2serie\IMAGENS-NECESSARIAS.txt
+2026-06-22 13:50:10,605 [INFO] __main__: [Imagens] 6 imagem(ns) em 2 capítulo(s).
+2026-06-22 13:50:10,609 [INFO] __main__: [Verif] Lista de verificações salva em: C:\Users\Roberto\Desktop\IPPI\output\apostila-historia-unidade1-2serie\VERIFICACOES-NECESSARIAS.txt
+2026-06-22 13:50:10,610 [INFO] __main__: [Verif] 10 verificação(ões) em 2 capítulo(s).

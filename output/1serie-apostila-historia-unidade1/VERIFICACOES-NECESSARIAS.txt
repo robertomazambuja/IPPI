@@ -1,0 +1,58 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: 1serie-apostila-historia-unidade1
+Gerado em: 23/06/2026 16:18
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-01 — Como historiadores com perspectivas distintas constroem conhecimento histórico a partir das mesmas fontes?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: O que é uma fonte histórica | Conceito-âncora: Fonte histórica | Exemplo-âncora: A carta régia de 1808, assinada por D. João VI, determinando a abertura dos portos brasileiros ao comércio internacional, é uma fonte escrita oficial. Um historiador a utiliza não apenas para saber a data do decreto, mas para investigar os interesses econômicos britânicos, as pressões sobre a Coroa portuguesa e as condições do sistema colonial em crise.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Tipos de fontes históricas | Exemplo-âncora: Um historiador que estuda a escravidão no Brasil do século XIX pode classificar as fontes disponíveis da seguinte forma: (1) fonte escrita oficial — registros de compra e venda de pessoas escravizadas em cartórios; (2) fonte escrita não oficial — carta de um viajante europeu descrevendo condições de trabalho nas lavouras de café; (3) fonte material — instrumentos de castigo preservados em museus. Cada tipo de fonte oferece um aspecto distinto do mesmo fenômeno.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva | Cabeçalho: Duas visões sobre o papel do historiador na interpretação das fontes | Exemplo-âncora: Diante de uma ata da Assembleia Constituinte de 1823 no Brasil, um historiador da tradição de Ranke buscaria reconstituir os debates parlamentares registrados no documento, tratando o texto como descrição confiável dos fatos após verificar sua autenticidade. Um historiador da tradição de Carr perguntaria: quem redigiu a ata? Quais discursos foram omitidos? Por que certos temas foram registrados e outros não? A ata, para Carr, revela tanto o que diz quanto o que silencia.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Comparando interpretações sobre a construção do conhecimento histórico | Exemplo-âncora: Sobre a escravidão no Brasil, um historiador da tradição positivista utilizaria prioritariamente leis (como a Lei do Ventre Livre de 1871 e a Lei Áurea de 1888), atas parlamentares e decretos imperiais para reconstituir a sequência de medidas abolicionistas. Um historiador da tradição dos Annales, como aqueles influenciados por Le Goff, utilizaria também inventários de fazendas, objetos de trabalho preservados em museus, relatos orais de comunidades quilombolas e fotografias do período, para investigar como a escravidão era vivida no cotidiano e quais estruturas sociais permaneceram mesmo após a abolição formal. A comparação mostra que as fontes selecionadas e as perguntas formuladas determinam qual conhecimento histórico é produzido.
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Comparar | Pergunta do capítulo: Como historiadores com perspectivas distintas constroem conhecimento histórico a partir das mesmas fontes? | Exemplo-âncora principal: Sobre a escravidão no Brasil, um historiador da tradição positivista utilizaria prioritariamente leis (como a Lei do Ventre Livre de 1871 e a Lei Áurea de 1888), atas parlamentares e decretos imperiais para reconstituir a sequência de medidas abolicionistas. Um historiador da tradição dos Annales, como aqueles influenciados por Le Goff, utilizaria também inventários de fazendas, objetos de trabalho preservados em museus, relatos orais de comunidades quilombolas e fotografias do período, para investigar como a escravidão era vivida no cotidiano e quais estruturas sociais permaneceram mesmo após a abolição formal. A comparação mostra que as fontes selecionadas e as perguntas formuladas determinam qual conhecimento histórico é produzido. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Por que narrativas históricas distintas sobre um mesmo evento apresentam versões diferentes do passado, e como identificar os interesses e as escolhas que as constituem?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: O que é uma narrativa histórica | Conceito-âncora: Narrativa histórica | Exemplo-âncora: Em 1888, a Lei Áurea aboliu a escravidão no Brasil. Uma narrativa pode organizar esse evento como ato de generosidade da princesa Isabel, destacando a assinatura da lei como momento decisivo. Outra narrativa pode organizar o mesmo evento como resultado de décadas de resistência de escravizados (fugas, quilombos, revoltas) e de pressão do movimento abolicionista, tratando a Lei Áurea como desfecho de um processo social. O evento é o mesmo; a narrativa que o organiza é diferente porque seleciona sujeitos, causas e marcos distintos.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Linguagens e suportes das narrativas históricas | Exemplo-âncora: A pintura
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva | Cabeçalho: Vozes presentes e vozes silenciadas nas narrativas históricas | Exemplo-âncora: Em 1835, escravizados muçulmanos organizaram a Revolta dos Malês em Salvador. Na narrativa oficial do Império, registrada em relatórios policiais, o evento foi classificado como
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Comparando narrativas: interesses, ideologia e poder na construção do passado | Exemplo-âncora: |
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Comparar | Pergunta do capítulo: Por que narrativas históricas distintas sobre um mesmo evento apresentam versões diferentes do passado, e como identificar os interesses e as escolhas que as constituem? | Exemplo-âncora principal: | | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 10 verificação(ões) necessária(s)
+=================================================================

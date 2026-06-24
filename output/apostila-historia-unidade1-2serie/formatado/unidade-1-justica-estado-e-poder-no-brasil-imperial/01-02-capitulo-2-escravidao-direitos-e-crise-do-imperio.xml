@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<capitulo id="01-02" titulo="Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?" palavras_total="1991">
+<capitulo id="01-02" titulo="Como a condição jurídica da escravidão e o processo de abolição gradual se relacionam com a ruptura entre elite cafeeira, Exército e poder político que levou à queda do Império em 1889?" palavras_total="2025">
   <cabecalho>
     <habilidade>H12 — Analisar o papel da justiça como instituição na organização das sociedades.</habilidade>
     <operacao_principal>Mapear causalidade</operacao_principal>
@@ -16,13 +16,13 @@
 
   <corpo>
 
-    <bloco id="bloco-1" palavras="300" operacao="Definir">
+    <bloco id="bloco-1" palavras="304" operacao="Definir">
       <micro-habilidade>Definir a justiça escravista como sistema jurídico que regulava a condição social e os direitos da população escravizada no século XIX</micro-habilidade>
       <secao id="sec-1" tipo="definicao">
         <titulo>A condição jurídica da escravidão e os limites da Lei de 1831</titulo>
         <conteudo>
         <paragrafo>No Brasil do século XIX, a escravidão era organizada por um duplo estatuto jurídico. Nas relações civis, o escravizado era tratado como propriedade: podia ser herdado, hipotecado, comprado e vendido, da mesma forma que qualquer outro bem. Nas relações criminais, no entanto, o mesmo escravizado era reconhecido como sujeito de imputação penal: o Código Criminal do Império, de 1830, previa, para crimes cometidos por escravizados, penas diferenciadas e mais severas do que as aplicadas a pessoas livres, incluindo açoites como pena específica para essa população.</paragrafo>
-        <paragrafo>Esse duplo estatuto não foi alterado pela primeira lei a tratar formalmente do fim do tráfico de escravizados. A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática. O tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva nos portos, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida.</paragrafo>
+        <paragrafo>Esse duplo estatuto permaneceu intacto mesmo quando o Parlamento aprovou a primeira lei a tratar formalmente do fim do tráfico de escravizados. A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática. O tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva nos portos, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida.</paragrafo>
         </conteudo>
         <sidebar tipo="autor">
           <nome>Sidney Chalhoub (1957–)</nome>
@@ -41,22 +41,22 @@
       </sidebar>
     </bloco>
 
-    <bloco id="bloco-2" palavras="386" operacao="Classificar">
+    <bloco id="bloco-2" palavras="402" operacao="Classificar">
       <micro-habilidade>Classificar as leis abolicionistas e as formas de resistência negra segundo seus efeitos sobre a manutenção ou a crise da escravidão</micro-habilidade>
       <secao id="sec-1" tipo="classificacao">
         <titulo>Leis abolicionistas graduais e formas de resistência à escravidão</titulo>
         <introducao>
-        <paragrafo>A crise da escravidão no Império avançou por dois mecanismos de natureza distinta: leis graduais aprovadas pelo Parlamento e formas de resistência direta promovidas pelos próprios escravizados e libertos, sem esperar pela aprovação de novas normas.</paragrafo>
+        <paragrafo>A crise da escravidão no Império não seguiu um único caminho. Ela avançou por dois mecanismos de natureza distinta: leis graduais aprovadas pelo Parlamento e formas de resistência direta promovidas pelos próprios escravizados e libertos, sem esperar pela aprovação de novas normas.</paragrafo>
         </introducao>
         <lista-subtipos>
           <item tipo="subtipo" nome="Leis abolicionistas graduais">
             <conteudo>
-            <paragrafo>A primeira lei com efeito real sobre o tráfico foi a Lei Eusébio de Queirós, de 4 de setembro de 1850, aprovada sob pressão diplomática britânica e que encerrou de fato a entrada de novos africanos escravizados no território brasileiro. A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre indenização do Estado ou os serviços do menor até os 21 anos. A Lei dos Sexagenários, de 28 de setembro de 1885, libertava escravizados com mais de 60 anos, mediante a prestação de alguns anos adicionais de serviço como forma de compensação ao antigo proprietário. A Lei Áurea, de 13 de maio de 1888, assinada pela Princesa Isabel, aboliu integralmente a escravidão, sem qualquer indenização aos proprietários.</paragrafo>
+            <paragrafo>A primeira lei com efeito real sobre o tráfico foi a Lei Eusébio de Queirós, de 4 de setembro de 1850, aprovada sob pressão diplomática britânica, que encerrou de fato a entrada de novos africanos escravizados no território brasileiro. A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre receber indenização do Estado ou reter os serviços do menor até os 21 anos. A Lei dos Sexagenários, de 28 de setembro de 1885, libertava escravizados com mais de 60 anos, condicionada à prestação de alguns anos adicionais de serviço como forma de compensação ao antigo proprietário. Por fim, a Lei Áurea, de 13 de maio de 1888, assinada pela Princesa Isabel, aboliu integralmente a escravidão, sem qualquer indenização aos proprietários.</paragrafo>
             </conteudo>
           </item>
           <item tipo="subtipo" nome="Resistência direta à escravidão">
             <conteudo>
-            <paragrafo>Paralelamente ao processo legislativo, a população escravizada resistiu por meios próprios. A Revolta dos Malês, em Salvador, em janeiro de 1835, foi uma insurreição urbana planejada por escravizados e libertos africanos muçulmanos, articulados por redes de solidariedade étnica e religiosa anteriores à escravização. Ao longo de todo o período, fugas individuais e a formação de quilombos constituíram uma forma cotidiana e organizada de resistência, independente de qualquer mudança na legislação vigente.</paragrafo>
+            <paragrafo>Enquanto o Parlamento aprovava leis graduais, a população escravizada resistiu por meios próprios, sem aguardar mudanças na legislação. A Revolta dos Malês, em Salvador, em janeiro de 1835, foi uma insurreição urbana planejada por escravizados e libertos africanos muçulmanos, articulados por redes de solidariedade étnica e religiosa anteriores à escravização. Ao longo de todo o período, fugas individuais e a formação de quilombos constituíram uma forma cotidiana e organizada de resistência, independente de qualquer mudança na legislação vigente.</paragrafo>
             </conteudo>
           </item>
         </lista-subtipos>
@@ -79,11 +79,11 @@
       </sidebar>
     </bloco>
 
-    <bloco id="bloco-3" palavras="385" operacao="Comparar">
+    <bloco id="bloco-3" palavras="388" operacao="Comparar">
       <micro-habilidade>Comparar estratégias de resistência negra e movimentos abolicionistas quanto aos seus objetivos e impactos sobre a ordem escravista</micro-habilidade>
       <secao id="sec-1" tipo="comparacao" nome="Aspecto 1 — Objetivo declarado">
         <conteudo>
-        <paragrafo>Comparar as duas vertentes do movimento abolicionista, a parlamentar e legalista e a de ação direta, exige observar quatro aspectos: o objetivo declarado de cada uma, seu método de atuação, sua base social de apoio e sua relação com a legislação escravista ainda vigente.</paragrafo>
+        <paragrafo>As duas vertentes do movimento abolicionista, a parlamentar e legalista e a de ação direta, se distinguem em quatro aspectos: o objetivo declarado de cada uma, seu método de atuação, sua base social de apoio e sua relação com a legislação escravista ainda vigente.</paragrafo>
         <paragrafo>Quanto ao objetivo declarado, a vertente parlamentar buscava uma reforma legislativa gradual e negociada dentro das instituições do Império. A vertente de ação direta, em contraste, buscava a ruptura imediata com a escravidão, sem esperar pela aprovação de novas leis.</paragrafo>
         </conteudo>
         <sidebar tipo="autor">
@@ -122,7 +122,7 @@
 
     <quebra tipo="pagina" sugestao="forte"/>
 
-    <bloco id="bloco-4" palavras="920" operacao="Mapear causalidade">
+    <bloco id="bloco-4" palavras="931" operacao="Mapear causalidade">
       <micro-habilidade>Mapear relações causais entre a crise da escravidão, a ruptura entre elite, Exército e poder político e a crise do Império</micro-habilidade>
       <secao id="sec-1" tipo="causa">
         <conteudo>
@@ -136,7 +136,7 @@
       </secao>
       <secao id="sec-3" tipo="consequencia">
         <conteudo>
-        <paragrafo>Quatro consequências expressam esse padrão. A primeira foi o isolamento político da monarquia, sem apoio nem da elite cafeeira nem do Exército. A segunda foi o golpe republicano de 15 de novembro de 1889, liderado pelo Marechal Deodoro da Fonseca, com apoio de oficiais do Exército e de setores civis republicanos. A terceira foi o fim do Império e o exílio da família imperial para a Europa. A quarta, de natureza social e não apenas política, foi a ausência de qualquer política de terra, trabalho ou educação para a população liberta, que permaneceu marginalizada economicamente e socialmente depois de 1888.</paragrafo>
+        <paragrafo>Desse processo resultaram quatro consequências. A primeira foi o isolamento político da monarquia, sem apoio nem da elite cafeeira nem do Exército. A segunda foi o golpe republicano de 15 de novembro de 1889, liderado pelo Marechal Deodoro da Fonseca, com apoio de oficiais do Exército e de setores civis republicanos. A terceira foi o fim do Império e o exílio da família imperial para a Europa. A quarta, de natureza social e não apenas política, foi a ausência de qualquer política de terra, trabalho ou educação para a população liberta, que permaneceu marginalizada econômica e socialmente depois de 1888.</paragrafo>
         </conteudo>
         <sidebar tipo="autor">
           <nome>Décio Saes (1944–)</nome>

@@ -1,0 +1,7 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-23T16:10:38,1serie-apostila-historia-unidade1,Agente 1,1.1 Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico,2,3,5829,20990,15582
+2026-06-23T16:12:56,1serie-apostila-historia-unidade1,Agente 1,1.2 Capítulo 2 — Narrativas Históricas e Linguagens,2,3,6803,14325,23911
+2026-06-23T16:15:36,1serie-apostila-historia-unidade1,Agente 2,1.1 Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico,3,4,7128,33164,45967
+2026-06-23T16:16:03,1serie-apostila-historia-unidade1,Agente 2,1.2 Capítulo 2 — Narrativas Históricas e Linguagens,4,5,8155,42588,84076
+2026-06-23T16:16:06,1serie-apostila-historia-unidade1,Agente 4,1.1 Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico,2,3,1856,15383,9200
+2026-06-23T16:18:33,1serie-apostila-historia-unidade1,Agente 4,1.2 Capítulo 2 — Narrativas Históricas e Linguagens,2,3,9194,14425,12723

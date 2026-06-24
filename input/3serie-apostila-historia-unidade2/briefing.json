@@ -1,0 +1,18 @@
+{
+  "disciplina": "História",
+  "habilidade_enem": "H24",
+  "unidade": "Unidade 1 — Cidadania e Democracia",
+  "pergunta_unidade": "De que maneira as relações entre cidadania e democracia influenciam a organização das sociedades ao longo da história, considerando o acesso aos direitos políticos, sociais e civis, os mecanismos de participação popular e as desigualdades que limitam o exercício pleno da cidadania em diferentes contextos históricos e sociais?",
+  "capitulos": [
+    "Capítulo 1 — A Construção Histórica da Cidadania e da Democracia",
+    "Capítulo 2 — Democracia e Participação na Sociedade Contemporânea"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — A Construção Histórica da Cidadania e da Democracia": ["Aristóteles", "John Locke", "Jean-Jacques Rousseau", "T. H. Marshall", "Norberto Bobbio"],
+    "Capítulo 2 — Democracia e Participação na Sociedade Contemporânea": ["Hannah Arendt", "Stuart Hall", "Manuel Castells", "Boaventura de Sousa Santos", "Milton Santos"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — A Construção Histórica da Cidadania e da Democracia": ["Origem da cidadania e da democracia", "Democracia na Antiguidade e nos Estados modernos", "Liberalismo e revoluções burguesas", "Direitos civis, políticos e sociais", "Exclusão social e limites da cidadania"],
+    "Capítulo 2 — Democracia e Participação na Sociedade Contemporânea": ["Desigualdades e cidadania contemporânea", "Movimentos sociais e conquista de direitos", "Estado, participação política e democracia", "Mídia, redes sociais e opinião pública", "Crises da democracia e desafios do século XXI"]
+  }
+}

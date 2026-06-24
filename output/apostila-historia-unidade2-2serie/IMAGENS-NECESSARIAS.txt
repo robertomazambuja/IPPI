@@ -1,0 +1,41 @@
+IMAGENS NECESSÁRIAS — Apostila: apostila-historia-unidade2-2serie
+Gerado em: 22/06/2026 14:55
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Como a disputa entre centralização política e poder regional gerou conflitos que fragilizaram o Império brasileiro ao longo do século XIX?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 9 marcos: (1831) Abdicação de D. Pedro I → (1834) Ato Adicional → (1835) Início da Cabanagem e da Farroupilha → (1837) Sabinada → (1838) Balaiada → (1840) Golpe da Maioridade → (1841) Lei de Interpretação do Ato Adicional → (1845) Fim da Farroupilha → (1849) Fim da Praieira
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Mapa do Brasil com localização das principais revoltas regenciais: Cabanagem (Pará), Farroupilha (Rio Grande do Sul), Sabinada (Bahia), Balaiada (Maranhão), Praieira (Pernambuco)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Elites da Farroupilha / Elites cafeeiras do Vale do Paraíba) e 4 linhas (Relação com o governo central / Base econômica / Resultado político / Papel do poder local)
+
+  NOME DO ARQUIVO : fig-01-01-04.jpg
+  O QUE MOSTRAR   : Diagrama de convergência mostrando quatro setas (Questão Militar, Questão Religiosa, Abolição sem indenização, Movimento republicano) convergindo para um ponto central: Isolamento político de D. Pedro II e queda do Império (1889)
+
+
+CAPÍTULO 01-02 — Como a resistência dos escravizados constituiu um conflito estrutural que contribuiu para a crise do Império e para as transformações sociais na transição republicana?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 7 marcos: 1850 (Lei Eusébio de Queirós) → 1852–1860 (início da imigração subvencionada) → 1871 (Lei do Ventre Livre) → 1880–1888 (crescimento do abolicionismo) → 1885 (Lei dos Sexagenários) → 13 de maio de 1888 (Lei Áurea) → 1888–1900 (expansão do colonato)
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Resistência escrava / Movimento abolicionista) e 4 linhas (Agentes envolvidos / Formas de ação / Objetivos imediatos / Alcance e repercussão)
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Diagrama de causalidade com duas setas convergentes: (1) causas estruturais (fim do tráfico em 1850 → encarecimento da mão de obra → imigração europeia) e (2) causas conjunturais (fugas em massa + pressão abolicionista nos anos 1880), convergindo para "abolição em 1888", com setas de saída para quatro consequências (exclusão dos libertos / ruptura Coroa-elites / marginalização racial / substituição por trabalho imigrante)
+
+=================================================================
+TOTAL: 7 imagem(ns) necessária(s)
+=================================================================

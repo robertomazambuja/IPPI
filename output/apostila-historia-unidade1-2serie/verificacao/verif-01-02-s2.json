@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s2",
+  "pergunta": "A Lei do Ventre Livre, de 28 de setembro de 1871, libertava os filhos nascidos de mulheres escravizadas a partir daquela data, mas os mantinha sob a guarda do senhor da mãe até os oito anos de idade, quando este podia optar entre indenização do Estado ou os serviços do menor até os 21 anos: a liberdade concedida pela lei era, na prática, diferida por décadas. Considerando a tipologia que classifica os mecanismos de crise da escravidão em leis abolicionistas graduais e formas de resistência direta, em qual categoria a Lei do Ventre Livre se classifica?",
+  "alternativas": {
+    "A": "Lei abolicionista gradual, pois foi aprovada pelo Parlamento e concedeu a liberdade de forma diferida no tempo, condicionada a anos de serviço ou indenização, sem que os próprios escravizados precisassem agir para obtê-la",
+    "B": "Forma de resistência direta, pois os filhos libertos pela lei passavam a atuar, já na infância, como agentes de fugas coletivas organizadas a partir das fazendas onde haviam nascido",
+    "C": "Lei abolicionista gradual, pois aboliu integralmente a escravidão sem qualquer forma de compensação ao proprietário, antecipando o que a Lei Áurea faria de modo mais abrangente em 1888",
+    "D": "Lei abolicionista gradual, pois fixou a guarda do menor até os oito anos de idade como única condição da lei, sem prever depois disso qualquer opção de indenização ao Estado ou de serviços do menor ao antigo senhor"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) classifica a Lei do Ventre Livre como lei abolicionista gradual, pois foi uma norma parlamentar que concedeu liberdade diferida, sem exigir ação direta dos escravizados. O distrator B é vocabulário do rival (tipo 5): atribui à lei o comportamento das formas de resistência direta (fugas organizadas pelos próprios escravizados), confundindo as duas categorias da tipologia. O distrator C é campo semântico sem ancoragem (tipo 4): usa um critério real do capítulo (abolição integral sem indenização) que pertence à Lei Áurea, não à Lei do Ventre Livre, que é justamente o caso de liberdade diferida e condicionada. O distrator D é restrição indevida (tipo 3): classifica corretamente a lei como gradual, mas isola apenas o traço da idade de oito anos, ignorando a condição seguinte do exemplo-âncora — a opção entre indenização do Estado ou serviços do menor até os 21 anos."
+}

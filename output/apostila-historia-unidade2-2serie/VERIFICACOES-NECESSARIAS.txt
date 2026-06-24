@@ -1,0 +1,64 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: apostila-historia-unidade2-2serie
+Gerado em: 22/06/2026 14:55
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-01 — Como a disputa entre centralização política e poder regional gerou conflitos que fragilizaram o Império brasileiro ao longo do século XIX?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: Centralização política e poder regional no Império | Conceito-âncora: Centralização política | Exemplo-âncora: Com o Ato Adicional de 1834, as províncias brasileiras ganharam assembleias legislativas próprias e maior autonomia. A partir de 1840, com o Golpe da Maioridade e a Lei de Interpretação do Ato Adicional (1841), o governo imperial retomou o controle sobre a nomeação de presidentes de província e sobre a Guarda Nacional, revertendo a descentralização anterior.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar | Cabeçalho: Do Período Regencial à centralização do Segundo Reinado | Exemplo-âncora: Linha do tempo — (1831) Abdicação de D. Pedro I e início das Regências → (1834) Ato Adicional amplia autonomia provincial → (1835) Início da Cabanagem no Pará e da Farroupilha no Rio Grande do Sul → (1837–1838) Sabinada na Bahia → (1838–1841) Balaiada no Maranhão → (1840) Golpe da Maioridade: D. Pedro II assume o trono aos 14 anos → (1841) Lei de Interpretação do Ato Adicional restringe a autonomia provincial → (1845) Fim da Farroupilha → (1849) Fim da Praieira em Pernambuco, última revolta provincial de grande porte.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Elites regionais contra poder central: formas distintas de disputa | Exemplo-âncora: Na Farroupilha, os estancieiros gaúchos pegaram em armas contra o governo central por conta de disputas sobre taxação do charque e da concorrência com o produto platino, chegando a proclamar a República Rio-Grandense em 1836. Os barões do café do Vale do Paraíba, por outro lado, mantiveram-se leais ao Império: ocuparam o Senado vitalício, elegeram deputados aliados ao gabinete ministerial e garantiram políticas de crédito e mão de obra escravizada favoráveis a seus interesses, sem recorrer a conflito armado.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Crise política e fragilização do poder imperial | Exemplo-âncora: Em 1888, o Barão de Cotegipe, político conservador e ex-presidente do Conselho de Ministros, declarou à Princesa Isabel após a assinatura da Lei Áurea:
+
+  REF             : verif-01-01-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Aplicar | Cabeçalho: Centralização política e a crise do Império — uma análise
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Aplicar | Pergunta do capítulo: Como a disputa entre centralização política e poder regional gerou conflitos que fragilizaram o Império brasileiro ao longo do século XIX? | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Como a resistência dos escravizados constituiu um conflito estrutural que contribuiu para a crise do Império e para as transformações sociais na transição republicana?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: A sociedade escravista no Brasil Imperial | Conceito-âncora: Sociedade escravista | Exemplo-âncora: No Vale do Paraíba fluminense na década de 1850, fazendas de café como as de Vassouras reuniam centenas de escravizados que executavam todas as etapas da produção cafeeira — plantio, colheita, secagem e transporte — enquanto o proprietário acumulava riqueza suficiente para financiar a infraestrutura ferroviária da região. A economia cafeeira dependia estruturalmente do trabalho escravo: em 1872, os escravizados representavam cerca de 30% da população da província do Rio de Janeiro.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar | Cabeçalho: Da escravidão ao trabalho livre — cronologia da transição | Exemplo-âncora: Linha do tempo — 1850: Lei Eusébio de Queirós proíbe o tráfico atlântico, encarecendo o preço dos escravizados e forçando fazendeiros a buscar alternativas de mão de obra. 1871: Lei do Ventre Livre declara livres os filhos de mulheres escravizadas nascidos a partir daquela data, sinalizando o fim gradual da escravidão. 1885: Lei dos Sexagenários liberta escravizados com mais de 60 anos, reduzindo ainda mais o contingente de trabalho escravo. 1888: Lei Áurea abole a escravidão, sem qualquer política de integração dos libertos. De 1888 a 1900, o sistema de colonato — no qual imigrantes europeus trabalhavam nas fazendas de café em troca de salário e lote de terra para subsistência — expandiu-se em São Paulo como principal forma de trabalho nas lavouras cafeeiras.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Resistência escrava e movimento abolicionista — formas distintas de combate à escravidão | Exemplo-âncora: |
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Da crise da escravidão às transformações sociais — causas e consequências | Exemplo-âncora: Entre 1885 e 1888, nas fazendas de café de São Paulo, as fugas de escravizados se multiplicaram a ponto de fazendeiros não conseguirem completar a colheita. Em Campinas, fazendeiros relataram às autoridades que dezenas de escravizados abandonaram as fazendas em direção ao Quilombo do Jabaquara, em Santos. Simultaneamente, o governo provincial de São Paulo subsidiava a vinda de imigrantes italianos para substituir a mão de obra em fuga. Quando a Lei Áurea foi assinada em 13 de maio de 1888, parte significativa dos fazendeiros paulistas já havia substituído escravizados por colonos imigrantes — e, sentindo-se abandonados pela Coroa, aderiram ao movimento republicano que derrubou o Império em 15 de novembro de 1889.
+
+  REF             : verif-01-02-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Aplicar | Cabeçalho: Resistência social na transição para a República — aplicando o conceito
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Aplicar | Pergunta do capítulo: Como a resistência dos escravizados constituiu um conflito estrutural que contribuiu para a crise do Império e para as transformações sociais na transição republicana? | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 12 verificação(ões) necessária(s)
+=================================================================

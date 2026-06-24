@@ -17,6 +17,21 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 import weasyprint
 
+# --- Guarda de contrato: nao deixa o renderizador descartar tag em silencio. ---
+# Toda vez que o formatador emite uma tag que nenhum ramo deste arquivo consome,
+# avisamos em stderr (com de-dup). Foi a ausencia disso que deixou o bug de
+# <introducao>/<lista-subtipos> (classificacao) e <sintese>/<encadeamento>
+# (rodape) passarem despercebidos: o conteudo sumia sem erro algum.
+_TAGS_DESCONHECIDAS = set()
+def avisar_tag_desconhecida(contexto, tag):
+    chave = (contexto, tag)
+    if chave not in _TAGS_DESCONHECIDAS:
+        _TAGS_DESCONHECIDAS.add(chave)
+        sys.stderr.write(
+            f"[xml_to_pdf] AVISO: tag <{tag}> dentro de <{contexto}> nao e "
+            f"renderizada — conteudo descartado. O formatador emitiu algo que o "
+            f"renderizador nao conhece; atualize render_* ou o contrato.\n")
+
 # A4 em mm e inset da moldura (frame com tamanho EXPLICITO)
 PAGE_W_MM, PAGE_H_MM = 210, 297
 FRAME_INSET_MM = 10
@@ -76,6 +91,12 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 
 /* BLOCO */
 .bloco { margin-bottom: 22pt; }
+/* Cada micro-habilidade (bloco) comeca em pagina nova; o primeiro nao recebe a classe. */
+.bloco-quebra { break-before: page; }
+/* Mantem o cabecalho do bloco colado a primeira fatia de conteudo,
+   evitando a faixa de operacao orfa no topo de uma pagina (problema do
+   multicol que ignora break-after:avoid no cabecalho). */
+.bloco-keep { break-inside: avoid; }
 .bloco-header { padding: 9pt 14pt; border-radius: 6pt 6pt 0 0; break-after: avoid; }
 .bloco-header .operacao-nome { font-family: Arial; font-size: 9pt; font-weight: 700;
     text-transform: uppercase; letter-spacing: .08em; color: #fff; }
@@ -110,7 +131,7 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 /* VERIFICACAO */
 .sidebar-verificacao { background: #EEF4FF; border: 1.5pt solid #90CAF9; border-left-width: 4pt;
     border-radius: 0 6pt 6pt 0; padding: 11pt 13pt; margin: 9pt 0 6pt; font-family: Arial;
-    break-inside: avoid; break-before: avoid; }
+    break-inside: avoid; }
 .sidebar-verificacao .verif-header { font-size: 8pt; font-weight: 700; color: #1565C0;
     text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6pt; }
 .sidebar-verificacao .verif-pergunta { font-size: 9.5pt; font-weight: 600; margin-bottom: 8pt; line-height: 1.45; }
@@ -127,11 +148,19 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .nota-fonte { font-family: Arial; font-size: 8pt; color: #666; margin: 6pt 0 2pt; padding-left: 10pt;
     border-left: 2pt solid #CCC; break-inside: avoid; }
 
+/* RODAPE do capitulo: sintese final e encadeamento para o proximo capitulo */
+.sintese-final { background: #F5F5F5; border-left: 4pt solid #555; padding: 10pt 14pt;
+    margin-top: 14pt; break-inside: avoid; }
+.sintese-final .rotulo { display: block; font-family: Arial; font-size: 8.5pt; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.5pt; color: #555; margin-bottom: 4pt; }
+.encadeamento { font-family: Arial; font-style: italic; font-size: 9pt; color: #666;
+    margin-top: 10pt; padding-left: 10pt; border-left: 2pt solid #CCC; break-inside: avoid; }
+
 /* IMAGEM (apenas quando ha arquivo real). Compacta para empacotar com a
    verificacao na mesma pagina e nao orfanar. break-before:avoid puxa a imagem
    para junto do texto anterior. */
-.imagem-container { margin: 7pt 0 6pt; text-align: center; break-inside: avoid; break-before: avoid; }
-.imagem-container img { max-width: 100%; max-height: 74mm; width: auto; height: auto; }
+.imagem-container { margin: 9pt 0 8pt; text-align: center; break-inside: avoid; }
+.imagem-container img { max-width: 100%; max-height: 140mm; width: auto; height: auto; }
 
 /* APLICAR AGORA — nunca quebra entre paginas */
 .aplicar-agora { background: #FFFDE7; border: 2pt solid #F9A825; border-radius: 8pt; padding: 16pt 18pt;
@@ -338,11 +367,16 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
         if h:
             full_parts.append(h)
 
+    _CONHECIDAS_SECAO = {"titulo", "conteudo", "introducao", "lista-subtipos", "sidebar", "imagem"}
+    for ch in el:
+        if ch.tag not in _CONHECIDAS_SECAO:
+            avisar_tag_desconhecida("secao", ch.tag)
+
     out = [('col', f'<div class="secao">{"".join(col_parts)}</div>')]
     out += [('full', h) for h in full_parts]
     return out
 
-def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None):
+def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina=False):
     op = el.get("operacao", "")
     bid = el.get("id", "")
     c = OPERACAO_CORES.get(op, COR_PADRAO)
@@ -381,8 +415,18 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None):
                 flush(); segments.append(h)
         elif t == "nota_fonte":
             buffer.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
+        elif t == "micro-habilidade":
+            pass  # ja lido acima via find(); ignorar no loop
+        else:
+            avisar_tag_desconhecida("bloco", t)
     flush()
-    return f'<div class="bloco" id="{bid}">{header}{"".join(segments)}</div>'
+    cls = "bloco bloco-quebra" if quebrar_pagina else "bloco"
+    if segments:
+        corpo_bloco = (f'<div class="bloco-keep">{header}{segments[0]}</div>'
+                       + "".join(segments[1:]))
+    else:
+        corpo_bloco = header
+    return f'<div class="{cls}" id="{bid}">{corpo_bloco}</div>'
 
 
 def split_nome_capitulo(nome_completo):
@@ -433,17 +477,40 @@ def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=
     corpo_el = root.find("corpo")
     corpo = []
     if corpo_el is not None:
-        for ch in corpo_el:
+        children = list(corpo_el)
+        primeiro_bloco = True
+        for i, ch in enumerate(children):
             t = ch.tag
-            if t == "bloco": corpo.append(render_bloco(ch, imdir, incluir_gabarito, verifdir))
-            elif t == "quebra": corpo.append('<div class="quebra-pagina"></div>')
+            if t == "bloco":
+                # Quebra de pagina antes de cada bloco (cada micro-habilidade comeca
+                # em pagina nova), exceto o primeiro, que segue logo apos a capa.
+                corpo.append(render_bloco(ch, imdir, incluir_gabarito, verifdir,
+                                          quebrar_pagina=not primeiro_bloco))
+                primeiro_bloco = False
+            elif t == "quebra":
+                # Com a quebra automatica por bloco, uma <quebra> seguida de <bloco>
+                # geraria pagina em branco dupla. So emite se o proximo nao for bloco.
+                prox = children[i + 1] if i + 1 < len(children) else None
+                if prox is None or prox.tag != "bloco":
+                    corpo.append('<div class="quebra-pagina"></div>')
             elif t == "sidebar": corpo.append(render_sb(ch, incluir_gabarito, verifdir))
             elif t == "nota_fonte": corpo.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
+            else: avisar_tag_desconhecida("corpo", t)
 
     rodape = ""
     re_el = root.find("rodape")
     if re_el is not None:
-        for sb in re_el.findall("sidebar"): rodape += render_sb(sb, incluir_gabarito, verifdir)
+        for ch in re_el:
+            t = ch.tag
+            if t == "sidebar":
+                rodape += render_sb(ch, incluir_gabarito, verifdir)
+            elif t == "sintese":
+                rodape += (f'<div class="sintese-final"><span class="rotulo">Síntese</span>'
+                           f'{md(html_mod.escape(txt(ch)))}</div>')
+            elif t == "encadeamento":
+                rodape += f'<div class="encadeamento">{md(html_mod.escape(txt(ch)))}</div>'
+            else:
+                avisar_tag_desconhecida("rodape", t)
 
     return capa + "".join(corpo) + rodape
 

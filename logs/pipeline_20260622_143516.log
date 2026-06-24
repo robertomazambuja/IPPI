@@ -1,0 +1,128 @@
+2026-06-22 14:35:17,735 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 14:35:17,739 [INFO] __main__: Apostila : apostila-historia-unidade2-2serie
+2026-06-22 14:35:17,740 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-22 14:35:17,741 [INFO] __main__: Workers  : 1
+2026-06-22 14:35:17,742 [INFO] __main__: Forçar   : não
+2026-06-22 14:35:17,744 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 14:35:17,746 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-22 14:35:17,747 [INFO] __main__: Unidades : 1
+2026-06-22 14:35:17,747 [INFO] __main__: Capítulos: 2
+2026-06-22 14:35:17,752 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 14:35:17,752 [INFO] __main__: Unidade 1: Unidade 2 — Conflitos e Transformações no Brasil do Século XIX
+2026-06-22 14:35:17,753 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 14:35:17,754 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 14:35:17,755 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial  [Agente 1]
+2026-06-22 14:35:17,755 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 14:35:17,867 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial
+2026-06-22 14:35:20,230 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:37:13,489 [INFO] __main__:     →  write_file: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:37:13,499 [INFO] __main__:     ✓  Salvo: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:37:15,428 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:37:24,757 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6480 cache_create=21654 cache_read=15557
+2026-06-22 14:37:24,762 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 14:37:24,763 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Escravidão, Resistência e Transformações Sociais  [Agente 1]
+2026-06-22 14:37:24,764 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 14:37:24,802 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Resistência e Transformações Sociais
+2026-06-22 14:37:28,251 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:39:33,980 [INFO] __main__:     →  write_file: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:39:33,988 [INFO] __main__:     ✓  Salvo: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:39:37,009 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:39:46,947 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=7352 cache_create=14905 cache_read=23870
+2026-06-22 14:39:47,709 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 14:39:47,710 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial  [estágios 2–5]
+2026-06-22 14:39:47,710 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 14:39:47,778 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial
+2026-06-22 14:39:50,095 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:39:53,144 [INFO] __main__:     →  read_file: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:39:53,150 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-22 14:39:53,158 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-22 14:39:56,990 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:42:44,143 [INFO] __main__:     →  write_file: output/apostila-historia-unidade2-2serie/texto/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:42:44,149 [INFO] __main__:     ✓  Salvo: output/apostila-historia-unidade2-2serie/texto/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:42:47,198 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:43:08,768 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=8830 cache_create=44825 cache_read=56552
+2026-06-22 14:43:08,787 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial
+2026-06-22 14:43:08,811 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md (7 alteracao(oes))
+2026-06-22 14:43:08,812 [INFO] __main__:     ✓ Normalizações aplicadas (7 alteração(ões))
+2026-06-22 14:43:08,812 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-22 14:43:08,812 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-22 14:43:08,813 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-22 14:43:08,813 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-22 14:43:08,814 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-22 14:43:08,814 [INFO] __main__:         · Adicionado ref=resultado ao AUTOR solto apos RESULTADO
+2026-06-22 14:43:08,814 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como a disputa entre centralização política e poder regional gerou conflitos que fragilizaram o Império brasileiro ao longo do século XIX?
+2026-06-22 14:43:08,840 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial
+2026-06-22 14:43:10,053 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:43:13,076 [INFO] __main__:     →  read_file: output\apostila-historia-unidade2-2serie\texto\unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix\01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md
+2026-06-22 14:43:15,000 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:44:14,841 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=4165 cache_create=18620 cache_read=10817
+2026-06-22 14:44:14,863 [INFO] __main__:     ✓ 15 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 14:44:14,865 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial
+2026-06-22 14:44:14,876 [INFO] verificador: [Verificador] 5 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.md (sem custo de API)
+2026-06-22 14:44:14,877 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-22 14:44:14,924 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.xml (5 blocos, 3536 palavras)
+2026-06-22 14:44:14,925 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-revoltas-poder-e-disputas-no-brasil-imperial.xml
+2026-06-22 14:44:15,708 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 14:44:15,708 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Escravidão, Resistência e Transformações Sociais  [estágios 2–5]
+2026-06-22 14:44:15,709 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 14:44:15,713 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Resistência e Transformações Sociais
+2026-06-22 14:44:17,900 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:44:20,379 [INFO] __main__:     →  read_file: output/apostila-historia-unidade2-2serie/core/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:44:20,385 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-22 14:44:22,518 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:44:23,837 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-22 14:44:26,644 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:51:24,424 [INFO] __main__:     ⚠  Erro transitório — aguardando 10s antes de tentar novamente...
+2026-06-22 14:51:37,408 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:54:01,539 [INFO] __main__:     →  write_file: output/apostila-historia-unidade2-2serie/texto/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:54:01,549 [INFO] __main__:     ✓  Salvo: output/apostila-historia-unidade2-2serie/texto/unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix/01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:54:03,993 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:54:26,168 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=8205 cache_create=65221 cache_read=70633
+2026-06-22 14:54:26,173 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Resistência e Transformações Sociais
+2026-06-22 14:54:26,186 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md (5 alteracao(oes))
+2026-06-22 14:54:26,187 [INFO] __main__:     ✓ Normalizações aplicadas (5 alteração(ões))
+2026-06-22 14:54:26,188 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-22 14:54:26,189 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-22 14:54:26,189 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-22 14:54:26,189 [INFO] __main__:         · Adicionado ref=resultado ao AUTOR solto apos RESULTADO
+2026-06-22 14:54:26,190 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como a resistência dos escravizados constituiu um conflito estrutural que contribuiu para a crise do Império e para as transformações sociais na transição republicana?
+2026-06-22 14:54:26,229 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Resistência e Transformações Sociais
+2026-06-22 14:54:28,096 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:54:30,899 [INFO] __main__:     →  read_file: output\apostila-historia-unidade2-2serie\texto\unidade-2-conflitos-e-transformacoes-no-brasil-do-seculo-xix\01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md
+2026-06-22 14:54:32,247 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 14:55:10,681 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=2830 cache_create=16740 cache_read=9875
+2026-06-22 14:55:10,691 [INFO] __main__:     ✓ 7 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 14:55:10,692 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Escravidão, Resistência e Transformações Sociais
+2026-06-22 14:55:10,704 [INFO] verificador: [Verificador] 5 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.md (sem custo de API)
+2026-06-22 14:55:10,705 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-22 14:55:10,744 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.xml (5 blocos, 2809 palavras)
+2026-06-22 14:55:10,744 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-escravidao-resistencia-e-transformacoes-sociais.xml
+2026-06-22 14:55:10,766 [INFO] __main__: USAGE TOTAL [apostila-historia-unidade2-2serie] — in=21 out=37862 cache_create=181965 cache_read=187304
+2026-06-22 14:55:10,767 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 14:55:10,767 [INFO] __main__: Pipeline concluído.
+2026-06-22 14:55:10,768 [INFO] __main__: Outputs em: output/apostila-historia-unidade2-2serie/
+2026-06-22 14:55:10,768 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260622_143516.log
+2026-06-22 14:55:10,768 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\IPPI\logs\usage_20260622_143516.csv
+2026-06-22 14:55:10,769 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-22 14:55:10,952 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\IPPI\output\apostila-historia-unidade2-2serie\IMAGENS-NECESSARIAS.txt
+2026-06-22 14:55:10,952 [INFO] __main__: [Imagens] 7 imagem(ns) em 2 capítulo(s).
+2026-06-22 14:55:10,960 [INFO] __main__: [Verif] Lista de verificações salva em: C:\Users\Roberto\Desktop\IPPI\output\apostila-historia-unidade2-2serie\VERIFICACOES-NECESSARIAS.txt
+2026-06-22 14:55:10,960 [INFO] __main__: [Verif] 12 verificação(ões) em 2 capítulo(s).

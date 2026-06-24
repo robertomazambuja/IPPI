@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1",
+  "pergunta": "No Vale do Paraíba fluminense, na década de 1850, fazendas de café como as de Vassouras reuniam centenas de escravizados que executavam todas as etapas da produção cafeeira — plantio, colheita, secagem e transporte — enquanto o proprietário acumulava riqueza suficiente para financiar a infraestrutura ferroviária da região. A economia cafeeira dependia estruturalmente do trabalho escravo: em 1872, os escravizados representavam cerca de 30% da população da província do Rio de Janeiro. Por que esse caso caracteriza uma sociedade escravista, e não apenas uma economia agroexportadora que recorria à mão de obra escrava como um de seus insumos?",
+  "alternativas": {
+    "A": "Porque o trabalho escravo não era um insumo entre outros, mas a base que organizava a produção, as hierarquias sociais e o acesso à riqueza e ao poder político — estruturava o conjunto da vida social, e não apenas a atividade econômica.",
+    "B": "Porque a produção cafeeira do Vale do Paraíba dependia da exportação para mercados internacionais, e é esse direcionamento ao mercado externo que define uma sociedade escravista.",
+    "C": "Porque os escravizados representavam cerca de 30% da população da província, e é esse percentual demográfico elevado que define uma sociedade escravista.",
+    "D": "Porque o trabalho escravo sustentava a produção cafeeira, mas a hierarquia social do período resultava exclusivamente da riqueza pessoal acumulada pelos proprietários, e não da condição de escravizado em si."
+  },
+  "correta": "A",
+  "justificativa": "A alternativa A está correta porque retoma o critério definitório de sociedade escravista: o trabalho escravo como base da produção, das hierarquias sociais e das relações de poder — não um traço isolado, mas um princípio organizador geral. A alternativa B (vocabulário do conceito rival) descreve corretamente um traço da economia cafeeira (orientação exportadora), mas esse é o critério de 'economia agroexportadora', um conceito vizinho, não o critério de sociedade escravista. A alternativa C (restrição indevida) isola o percentual demográfico como se fosse a condição suficiente e necessária da definição, quando o texto trata a centralidade estrutural — e não a proporção populacional — como critério decisivo. A alternativa D (vocabulário análogo) começa corretamente ao afirmar a centralidade econômica do trabalho escravo, mas distorce na segunda parte, ao isolar a hierarquia social da condição escrava, quando o texto afirma explicitamente que a hierarquia racial e social era 'parte constitutiva' dessa mesma organização."
+}

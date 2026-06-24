@@ -1,0 +1,7 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-22T14:37:24,apostila-historia-unidade2-2serie,Agente 1,"1.1 Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial",2,3,6480,21654,15557
+2026-06-22T14:39:46,apostila-historia-unidade2-2serie,Agente 1,"1.2 Capítulo 2 — Escravidão, Resistência e Transformações Sociais",2,3,7352,14905,23870
+2026-06-22T14:43:08,apostila-historia-unidade2-2serie,Agente 2,"1.1 Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial",3,4,8830,44825,56552
+2026-06-22T14:44:14,apostila-historia-unidade2-2serie,Agente 4,"1.1 Capítulo 1 — Revoltas, Poder e Disputas no Brasil Imperial",2,3,4165,18620,10817
+2026-06-22T14:54:26,apostila-historia-unidade2-2serie,Agente 2,"1.2 Capítulo 2 — Escravidão, Resistência e Transformações Sociais",4,5,8205,65221,70633
+2026-06-22T14:55:10,apostila-historia-unidade2-2serie,Agente 4,"1.2 Capítulo 2 — Escravidão, Resistência e Transformações Sociais",2,3,2830,16740,9875

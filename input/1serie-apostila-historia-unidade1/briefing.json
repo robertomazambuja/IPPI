@@ -1,0 +1,18 @@
+{
+  "disciplina": "História",
+  "habilidade_enem": "H14",
+  "unidade": "Unidade 1 — A Construção do Conhecimento Histórico",
+  "pergunta_unidade": "Como diferentes fontes e narrativas ajudam a compreender os processos e acontecimentos históricos?",
+  "capitulos": [
+    "Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico",
+    "Capítulo 2 — Narrativas Históricas e Linguagens"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico": ["Marc Bloch", "Jacques Le Goff", "Peter Burke", "E. H. Carr", "Leopold von Ranke"],
+    "Capítulo 2 — Narrativas Históricas e Linguagens": ["Michel de Certeau", "Roger Chartier", "Walter Benjamin", "Stuart Hall", "Michel Foucault", "Lilia Moritz Schwarcz"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — Fontes Históricas e Construção do Conhecimento Histórico": ["Conceito de História e trabalho do historiador", "Tipos de fontes históricas", "Análise e interpretação de documentos históricos", "Memória, patrimônio e cultura material", "Permanências e mudanças históricas"],
+    "Capítulo 2 — Narrativas Históricas e Linguagens": ["Narrativas históricas e interpretação do passado", "História oficial e grupos silenciados", "Linguagens históricas: imagens, cinema, música e mídia", "Ideologia, poder e construção das narrativas", "Fake news, negacionismo e uso político da História"]
+  }
+}

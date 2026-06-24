@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2",
+  "pergunta": "Linha do tempo — (1831) Abdicação de D. Pedro I e início das Regências → (1834) Ato Adicional amplia autonomia provincial → (1835) Início da Cabanagem no Pará e da Farroupilha no Rio Grande do Sul → (1837–1838) Sabinada na Bahia → (1838–1841) Balaiada no Maranhão → (1840) Golpe da Maioridade: D. Pedro II assume o trono aos 14 anos → (1841) Lei de Interpretação do Ato Adicional restringe a autonomia provincial → (1845) Fim da Farroupilha → (1849) Fim da Praieira em Pernambuco, última revolta provincial de grande porte. O que explica a passagem do ciclo de revoltas provinciais (1835–1838) para o Golpe da Maioridade e a Lei de Interpretação do Ato Adicional (1840–1841)?",
+  "alternativas": {
+    "A": "A multiplicação das revoltas provinciais após 1835 gerou, entre setores da elite política, a percepção de que a descentralização havia produzido instabilidade, levando-os a antecipar a maioridade de D. Pedro II e a restringir a autonomia das províncias para restaurar a autoridade central.",
+    "B": "O Golpe da Maioridade e a Lei de Interpretação do Ato Adicional de 1841 foram a causa do início das revoltas provinciais, que passaram a ocorrer com maior intensidade depois que o governo central retomou o controle das províncias.",
+    "C": "A Cabanagem, por si só, foi o único fator que levou à antecipação da maioridade de D. Pedro II, sem relação com as demais revoltas provinciais do período regencial.",
+    "D": "O Ato Adicional de 1834 ampliou a autonomia provincial, mas o Golpe da Maioridade de 1840 ocorreu independentemente desse processo, como decisão pessoal de D. Pedro II de assumir o trono antes da idade prevista."
+  },
+  "correta": "A",
+  "justificativa": "A alternativa A está correta porque explica a transição entre as duas etapas adjacentes pelo mecanismo apresentado no capítulo: a instabilidade gerada pelo ciclo de revoltas provinciais (Cabanagem, Farroupilha, Sabinada, Balaiada) levou setores da elite política a buscar a recentralização como condição de sobrevivência do Império. A alternativa B (inversão da tese) inverte a relação causal, tratando a recentralização de 1840–1841 como causa das revoltas que, na verdade, ocorreram antes e motivaram essa recentralização. A alternativa C (restrição indevida) reduz a um único evento (a Cabanagem) um processo que o texto atribui à convergência de várias revoltas provinciais simultâneas. A alternativa D (vocabulário análogo) descreve corretamente o Ato Adicional de 1834, mas erra o mecanismo da passagem ao tratar o Golpe da Maioridade como decisão pessoal isolada de D. Pedro II, desconectada do ciclo de instabilidade que o texto apresenta como sua causa política."
+}

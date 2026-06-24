@@ -1,0 +1,18 @@
+{
+  "disciplina": "História",
+  "habilidade_enem": "H21",
+  "unidade": "Unidade 2 — Mídia, Sociedade e Democracia",
+  "pergunta_unidade": "Como os meios de comunicação influenciam a forma como as pessoas compreendem a realidade e participam da vida em sociedade?",
+  "capitulos": [
+    "Capítulo 1 — Comunicação, cultura e poder",
+    "Capítulo 2 — Mídia, tecnologia e cidadania no século XXI"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — Comunicação, cultura e poder": ["Marshall McLuhan", "Theodor Adorno", "Max Horkheimer", "Jürgen Habermas", "Antonio Gramsci"],
+    "Capítulo 2 — Mídia, tecnologia e cidadania no século XXI": ["Manuel Castells", "Pierre Bourdieu", "Stuart Hall", "Noam Chomsky", "Zygmunt Bauman"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — Comunicação, cultura e poder": ["Comunicação e vida social", "Linguagem, símbolos e construção de significados", "Evolução histórica dos meios de comunicação", "Comunicação de massa", "Indústria Cultural", "Cultura de massa e consumo cultural", "Opinião pública", "Esfera pública", "Mídia e poder", "Hegemonia cultural"],
+    "Capítulo 2 — Mídia, tecnologia e cidadania no século XXI": ["Sociedade em rede", "Internet e comunicação digital", "Redes sociais", "Produção e circulação de informações", "Fake news e desinformação", "Pós-verdade", "Algoritmos e bolhas informacionais", "Movimentos sociais e ativismo digital", "Inteligência artificial e comunicação", "Democracia e cidadania digital"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1",
+  "pergunta": "A Lei de 7 de novembro de 1831 declarava livres todos os africanos importados ilegalmente para o Brasil a partir daquela data, mas não foi cumprida na prática: o tráfico transatlântico continuou por quase duas décadas, sustentado pela tolerância de autoridades locais e pela ausência de fiscalização efetiva, o que lhe garantiu, na historiografia, a designação corrente de lei que existia para não ser cumprida. Por que esse caso ilustra o duplo estatuto jurídico do escravizado, e não simplesmente um fracasso pontual de fiscalização?",
+  "alternativas": {
+    "A": "Porque o duplo estatuto definia o escravizado como propriedade nas relações civis e como sujeito de imputação penal nas relações criminais, e a Lei de 1831 não alterou esse estatuto: mesmo formalmente livres, os africanos traficados continuaram sendo tratados como propriedade na prática cotidiana",
+    "B": "Porque o Código Criminal do Império, de 1830, previa açoites como pena específica para escravizados, e foi exatamente essa pena que deixou de ser aplicada aos africanos traficados depois de 1831",
+    "C": "Porque a lei de 1831 só não foi cumprida nas relações criminais, já que nas relações civis o comércio de africanos importados ilegalmente foi de fato interrompido pelas autoridades portuárias",
+    "D": "Porque o duplo estatuto jurídico só passou a existir depois de 1831, quando a lei criou simultaneamente a condição de propriedade e a condição de sujeito de imputação penal para os africanos recém-chegados"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) explica o caso pelo critério definitório do duplo estatuto: a Lei de 1831 não rompeu o tratamento do escravizado como propriedade nas relações civis, por isso o tráfico continuou na prática apesar da lei. O distrator B é vocabulário do rival (tipo 5): traz corretamente um traço do Código Criminal de 1830 (açoites como pena), mas o conecta de forma equivocada ao não cumprimento da lei de 1831, que o texto não relaciona a essa pena específica. O distrator C é restrição indevida (tipo 3): isola apenas as relações criminais como ponto de fracasso da lei, quando o texto mostra que foi exatamente nas relações civis — manutenção do tráfico e da condição de propriedade — que a lei não foi cumprida. O distrator D é vocabulário análogo (tipo 2): nomeia corretamente os dois componentes do duplo estatuto, mas distorce a cronologia ao afirmar que ele só surgiu em 1831, quando o texto o descreve como estrutura jurídica já vigente, que a lei de 1831 não alterou."
+}

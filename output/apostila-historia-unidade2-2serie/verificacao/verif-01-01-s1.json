@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s1",
+  "pergunta": "Com o Ato Adicional de 1834, as províncias brasileiras ganharam assembleias legislativas próprias e maior autonomia. A partir de 1840, com o Golpe da Maioridade e a Lei de Interpretação do Ato Adicional (1841), o governo imperial retomou o controle sobre a nomeação de presidentes de província e sobre a Guarda Nacional, revertendo a descentralização anterior. Por que o episódio de 1840–1841 caracteriza um movimento de centralização política, e não apenas uma mudança nas regras de nomeação de cargos provinciais?",
+  "alternativas": {
+    "A": "Porque o governo central retomou para si decisões sobre quem governava as províncias e sobre o controle da força armada local, concentrando novamente em si o poder que antes havia sido distribuído — e não apenas alterou um procedimento administrativo isolado.",
+    "B": "Porque, ao retomar a nomeação de presidentes de província, o governo imperial devolveu a essas elites regionais maior autonomia para legislar sobre suas questões locais, fortalecendo o poder regional.",
+    "C": "Porque o governo imperial passou a nomear os presidentes de província, e é exclusivamente esse ato de nomeação — independentemente de qualquer outro controle — que define a centralização política.",
+    "D": "Porque o Ato Adicional de 1834 concentrou no governo central o controle sobre a nomeação de autoridades provinciais, mas a Guarda Nacional permaneceu sob comando exclusivo das elites regionais durante todo o período."
+  },
+  "correta": "A",
+  "justificativa": "A alternativa A está correta porque reproduz o critério definitório de centralização política: a concentração, pelo governo central, das decisões sobre nomeação de autoridades e sobre o uso da força armada, reduzindo a autonomia provincial — um processo amplo, não um ajuste administrativo pontual. A alternativa B (vocabulário do conceito rival) descreve o efeito oposto ao que ocorreu, atribuindo ao episódio o fortalecimento do poder regional, quando o texto afirma que o governo imperial revertia justamente essa autonomia. A alternativa C (restrição indevida) isola a nomeação de presidentes de província como se fosse o único critério suficiente da centralização, ignorando que o texto também trata do controle sobre a Guarda Nacional como parte do mesmo processo. A alternativa D (vocabulário análogo) começa corretamente ao identificar o Ato Adicional de 1834, mas distorce o fato ao inverter a cronologia: foi a partir de 1840–1841 que o governo central retomou o controle sobre a Guarda Nacional, e não as elites regionais que o mantiveram durante todo o período."
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s4",
+  "pergunta": "Em 1887, a Questão Militar, quando os oficiais Sena Madureira e Cunha Matos foram publicamente repreendidos pelo governo por criticarem o Ministério da Guerra na imprensa, gerou um protesto coletivo de oficiais que se sentiram desrespeitados pelo poder civil. Menos de dois anos depois, em 15 de novembro de 1889, foi justamente um conjunto de oficiais do Exército, liderado pelo Marechal Deodoro da Fonseca, que executou o golpe que pôs fim ao Império. Na cadeia causal que liga esses dois episódios, qual é a relação entre a Questão Militar de 1887 e o golpe de 1889?",
+  "alternativas": {
+    "A": "A Questão Militar expressou um desgaste entre o Exército e o poder civil que, somado a outros fatores como a abolição sem indenização e o crescimento republicano, contribuiu para que o golpe de 1889 fosse executado justamente por oficiais do Exército",
+    "B": "O golpe de 1889 foi a causa da Questão Militar de 1887, já que a instabilidade política gerada pela Proclamação da República levou o governo a repreender publicamente os oficiais Sena Madureira e Cunha Matos",
+    "C": "A Questão Militar foi o único fator que explica o golpe de 1889, já que a repreensão pública aos dois oficiais foi suficiente, isoladamente, para motivar a ação de Deodoro da Fonseca",
+    "D": "A Questão Militar expressou a insatisfação da elite cafeeira com a abolição sem indenização, manifestada por meio de oficiais do Exército que defendiam os interesses econômicos dos antigos proprietários de escravizados"
+  },
+  "correta": "A",
+  "justificativa": "A correta (A) situa a Questão Militar como um dos fatores que, combinados, levaram ao golpe — desgaste entre Exército e poder civil somado à abolição sem indenização e ao crescimento republicano. O distrator B é inversão da tese (tipo 1): inverte a ordem causal, apresentando o golpe de 1889 como causa de um episódio (1887) que na verdade o antecedeu e contribuiu para ele. O distrator C é restrição indevida (tipo 3): reduz a cadeia causal multicausal do golpe a um único fator (a Questão Militar), ignorando a abolição sem indenização, o crescimento republicano e a fragilidade de D. Pedro II, todos apresentados no texto como fatores conjuntos. O distrator D é campo semântico sem ancoragem (tipo 4): atribui à Questão Militar uma motivação (defesa dos interesses da elite cafeeira) que o texto não associa a esse episódio, misturando-o de forma plausível mas infundada com outro fator da cadeia causal."
+}
