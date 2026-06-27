@@ -176,14 +176,35 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .imagem-container { margin: 9pt 0 8pt; text-align: center; break-inside: avoid; }
 .imagem-container img { max-width: 100%; max-height: 140mm; width: auto; height: auto; }
 
-/* APLICAR AGORA — nunca quebra entre paginas */
-.aplicar-agora { background: #FFFDE7; border: 2pt solid #F9A825; border-radius: 8pt; padding: 16pt 18pt;
-    margin-top: 20pt; break-inside: avoid; }
-.aplicar-agora-header { font-family: Arial; font-size: 10pt; font-weight: 700; color: #F57F17;
-    text-transform: uppercase; margin-bottom: 10pt; }
-.aplicar-agora-enunciado { font-size: 9.5pt; line-height: 1.6; margin-bottom: 12pt; white-space: pre-wrap; }
+/* VERIFICACAO — SECAO SEPARADA. Cada pagina reune ate 2 quadros de
+   verificacao sozinhos; a primeira quebra antes (break-before:page) e o que
+   vem depois (proximo bloco / aplicar-agora) tambem comeca em pagina nova,
+   garantindo a "quebra antes e depois" da secao. */
+.verif-page { break-before: page; }
+.verif-secao-titulo { font-family: Arial; font-size: 9pt; font-weight: 700; color: #1565C0;
+    text-transform: uppercase; letter-spacing: .08em; padding-bottom: 5pt; margin-bottom: 12pt;
+    border-bottom: 2pt solid #90CAF9; }
+.verif-page > .sidebar-verificacao { min-height: 112mm; margin: 0 0 14pt; }
+.verif-page > .sidebar-verificacao:last-child { margin-bottom: 0; }
+
+/* APLICAR AGORA — pagina propria: comando em cima + quadro de trabalho abaixo.
+   Aluno: quadro grande em branco ocupando o resto da pagina.
+   Professor: quadro menor + resposta comentada. */
+.aplicar-page { break-before: page; break-inside: avoid; display: flex; flex-direction: column;
+    height: 255mm; }
+.aplicar-page-prof { break-before: page; display: flex; flex-direction: column; }
+.aplicar-comando { background: #FFFDE7; border: 2pt solid #F9A825; border-radius: 8pt;
+    padding: 14pt 18pt; flex: 0 0 auto; }
+.aplicar-comando-header { font-family: Arial; font-size: 11pt; font-weight: 700; color: #F57F17;
+    text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8pt; }
+.aplicar-comando-enunciado { font-size: 10pt; line-height: 1.55; white-space: pre-wrap; }
+.aplicar-trabalho { flex: 1 1 auto; border: 1.5pt dashed #C9A227; border-radius: 8pt;
+    margin-top: 12pt; padding: 9pt 12pt; min-height: 50mm; }
+.aplicar-trabalho-menor { flex: 0 0 95mm; }
+.aplicar-trabalho-label { font-family: Arial; font-size: 8pt; color: #B0982E;
+    text-transform: uppercase; letter-spacing: .05em; }
 .aplicar-agora-resposta { background: #FFF8E1; border: 1pt solid #FFE082; border-radius: 4pt;
-    padding: 10pt 12pt; font-size: 8.5pt; line-height: 1.55; color: #3a2a00; }
+    margin-top: 12pt; padding: 10pt 12pt; font-size: 8.5pt; line-height: 1.55; color: #3a2a00; }
 .aplicar-agora-resposta-header { font-family: Arial; font-size: 8pt; font-weight: 700; color: #F57F17;
     text-transform: uppercase; margin-bottom: 6pt; }
 
@@ -274,12 +295,22 @@ def sb_verif(el, incluir_gabarito=True):
 def sb_aplicar(el, incluir_gabarito=True):
     enun = txt(el.find("enunciado"))
     resp = txt(el.find("resposta"))
-    rh = ""
-    if resp and incluir_gabarito:
-        rh = (f'<div class="aplicar-agora-resposta"><div class="aplicar-agora-resposta-header">'
-              f'Resposta modelo (uso do professor)</div>{md(html_mod.escape(resp))}</div>')
-    return (f'<div class="aplicar-agora"><div class="aplicar-agora-header">Aplicar agora</div>'
-            f'<div class="aplicar-agora-enunciado">{md(html_mod.escape(enun))}</div>{rh}</div>')
+    comando = (f'<div class="aplicar-comando">'
+               f'<div class="aplicar-comando-header">Aplicar agora</div>'
+               f'<div class="aplicar-comando-enunciado">{md(html_mod.escape(enun))}</div></div>')
+    label = ('<div class="aplicar-trabalho-label">Espaço de trabalho — '
+             'mapas mentais, gráficos, quadros comparativos</div>')
+    if incluir_gabarito:
+        # Versao PROFESSOR: comando + quadro menor de trabalho + resposta comentada.
+        rh = ""
+        if resp:
+            rh = (f'<div class="aplicar-agora-resposta"><div class="aplicar-agora-resposta-header">'
+                  f'Resposta modelo (uso do professor)</div>{md(html_mod.escape(resp))}</div>')
+        return (f'<div class="aplicar-page-prof">{comando}'
+                f'<div class="aplicar-trabalho aplicar-trabalho-menor">{label}</div>{rh}</div>')
+    # Versao ALUNO: comando em cima + quadro grande em branco ocupando o resto da pagina.
+    return (f'<div class="aplicar-page">{comando}'
+            f'<div class="aplicar-trabalho">{label}</div></div>')
 
 # ---------------------------------------------------------------------------
 # Verificacao externa (status="externo") — conteudo vem da pasta --verificacoes
@@ -367,10 +398,13 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
     col_parts.append(lista_subtipos_html(el.find("lista-subtipos")))
 
     full_parts = []
+    verif_parts = []
     for sb in el.findall("sidebar"):
         tipo = sb.get("tipo", "")
         if tipo == "autor":
             col_parts.append(sb_autor(sb))
+        elif tipo == "verificacao":
+            verif_parts.append(render_sb(sb, incluir_gabarito, verifdir))
         else:
             full_parts.append(render_sb(sb, incluir_gabarito, verifdir))
     for img in el.findall("imagem"):
@@ -388,6 +422,7 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
 
     out = [('col', f'<div class="secao">{"".join(col_parts)}</div>')]
     out += [('full', h) for h in full_parts]
+    out += [('verif', h) for h in verif_parts]
     return out
 
 def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina=False):
@@ -399,7 +434,7 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina
     header = (f'<div class="bloco-header" style="background:{c["destaque"]}">'
               f'<span class="operacao-nome">{html_mod.escape(op)}</span>{mh}</div>')
 
-    segments, buffer = [], []
+    segments, buffer, verifs = [], [], []
     def flush():
         if buffer:
             segments.append(f'<div class="bloco-multicol" style="border-top-color:{c["destaque"]}">'
@@ -412,12 +447,16 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina
             for kind, html in render_secao(ch, imdir, incluir_gabarito, verifdir):
                 if kind == 'col':
                     buffer.append(html)
+                elif kind == 'verif':
+                    verifs.append(html)
                 else:
                     flush(); segments.append(html)
         elif t == "sidebar":
             tipo = ch.get("tipo", "")
             if tipo == "autor":
                 buffer.append(sb_autor(ch))
+            elif tipo == "verificacao":
+                verifs.append(render_sb(ch, incluir_gabarito, verifdir))
             else:
                 flush(); segments.append(render_sb(ch, incluir_gabarito, verifdir))
         elif t == "imagem":
@@ -440,7 +479,15 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina
                        + "".join(segments[1:]))
     else:
         corpo_bloco = header
-    return f'<div class="{cls}" id="{bid}">{corpo_bloco}</div>'
+
+    # Secao separada de verificacao: paginas proprias com ATE 2 quadros cada,
+    # quebra de pagina antes (e o que vem depois ja comeca em pagina nova).
+    verif_html = ""
+    for i in range(0, len(verifs), 2):
+        par = verifs[i:i + 2]
+        verif_html += '<div class="verif-page">' + "".join(par) + '</div>'
+
+    return f'<div class="{cls}" id="{bid}">{corpo_bloco}{verif_html}</div>'
 
 
 def split_nome_capitulo(nome_completo):

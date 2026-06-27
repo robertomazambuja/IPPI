@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s5-b",
+  "pergunta": "Os movimentos sociais pressionam por duas vias: pela via institucional atuam dentro do Estado (lobby junto a parlamentares, conselhos, projetos de lei); pela via extrainstitucional atuam sobre a opinião pública (protestos, campanhas na imprensa, greves de fome). O capítulo afirma que sem a pressão institucional as demandas não chegavam ao legislativo e que sem a extrainstitucional não havia incentivo político para aprová-las. O que aconteceria se faltasse uma das vias?",
+  "alternativas": {
+    "A": "As duas vias são complementares: sem a institucional, as demandas não chegariam ao legislativo; sem a extrainstitucional, faltaria pressão para aprová-las — faltando uma delas, a conquista do direito fica comprometida.",
+    "B": "É a resposta do Estado que gera a mobilização: primeiro o legislativo aprova os direitos e só então os movimentos se organizam, de modo que a falta de qualquer uma das vias não afetaria a aprovação que o legislativo já havia decidido.",
+    "C": "O que decide a conquista é apenas a cobertura da imprensa: havendo repercussão midiática, o direito é aprovado independentemente da atuação institucional ou da mobilização de rua dos movimentos sociais.",
+    "D": "Basta a pressão institucional, o lobby junto aos parlamentares, para garantir a aprovação dos direitos; a via extrainstitucional é dispensável, pois protestos e campanhas não influenciam a decisão legislativa."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque mapeia a relação causal entre as duas vias e a resposta do Estado: cada uma é necessária e a falta de qualquer uma compromete a conquista. B inverte a relação, tratando a resposta do Estado como causa da mobilização. C é campo semântico sem ancoragem: isola a cobertura midiática como mecanismo único, quando ela apenas acompanha a via extrainstitucional. D é restrição indevida: reduz a cadeia a uma só via (a institucional), descartando a extrainstitucional que o capítulo apresenta como indispensável."
+}

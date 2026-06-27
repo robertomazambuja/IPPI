@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s3-b",
+  "pergunta": "O processo europeu de formação do Estado é descrito em etapas encadeadas: (1) fragmentação feudal; (2) centralização militar e tributária, com monarcas financiando exércitos permanentes por tributação centralizada; (3) burocratização administrativa, com funcionários assalariados substituindo a administração pessoal do senhor feudal; (4) monopólio legítimo da força. Por que a etapa (2) precede e viabiliza a etapa (3)?",
+  "alternativas": {
+    "A": "Porque foi a burocratização administrativa que, ao criar um corpo de funcionários assalariados, permitiu antes a centralização militar e tributária, já que sem burocracia não se sustentaria um exército permanente.",
+    "B": "Porque a tributação centralizada para custear o exército permanente exigiu um corpo estável de funcionários para arrecadar e administrar de forma contínua, e é essa exigência que dá origem à burocratização.",
+    "C": "Porque a passagem de uma etapa à outra se deveu unicamente à publicação de O Príncipe em 1532, que, ao separar a política da moral religiosa, foi a causa isolada da criação da burocracia estatal moderna.",
+    "D": "Porque a centralização militar concentrou o poder bélico nas mãos dos monarcas, e foi essa concentração de armas, e não a necessidade de arrecadação contínua, que gerou diretamente a burocracia assalariada do Estado."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque identifica o mecanismo da passagem: a tributação centralizada para manter o exército permanente exigiu funcionários estáveis para arrecadar e administrar de forma contínua — e essa exigência origina a burocratização. A inverte a relação, fazendo a burocratização (etapa 3) anteceder e explicar a centralização (etapa 2). C é restrição indevida: atribui a transição a um único fator (a publicação de O Príncipe), que no capítulo é marco intelectual, não causa da burocracia. D descreve corretamente a etapa (2), mas erra o mecanismo da passagem, atribuindo-o à concentração de armas em vez da necessidade de arrecadação contínua (vocabulário análogo)."
+}

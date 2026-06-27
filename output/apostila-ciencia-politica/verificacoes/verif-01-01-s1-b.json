@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s1-b",
+  "pergunta": "Quando o assalto termina e o assaltante vai embora, a vítima deixa de obedecer; já a ordem dada por um juiz continua sendo cumprida mesmo depois de encerrada a audiência. Nos dois casos houve imposição de vontade. Por que o caso do assaltante é apenas poder (Macht), e não dominação (Herrschaft)?",
+  "alternativas": {
+    "A": "Porque o poder simples é coerção momentânea, que se sustenta apenas enquanto a força está presente; já a dominação se estabiliza porque quem obedece reconhece a autoridade de quem manda como legítima.",
+    "B": "Porque o assaltante não consegue impor sua vontade contra qualquer resistência da vítima, e é essa capacidade de vencer a resistência alheia que define propriamente a relação de dominação. que disputam o mesmo objeto.",
+    "C": "Porque o assaltante não exerce uma força institucionalizada, e somente o uso de uma força institucional, e não pessoal, poderia transformar a relação entre eles num caso de dominação.",
+    "D": "Porque a vítima não reconhece a autoridade do assaltante como legítima, o que mostra que a dominação exige que o comandado concorde pessoalmente com cada ordem específica que recebe."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque distingue os dois conceitos pelo critério certo: o poder (Macht) é coerção instável que cessa com a força; a dominação (Herrschaft) se mantém porque a obediência é estabilizada pelo reconhecimento da autoridade como legítima. B é vocabulário do conceito rival: descreve a definição de poder (impor a vontade mesmo contra resistência) como se fosse a marca da dominação. C é restrição indevida: isola 'força institucionalizada' como condição obrigatória, quando o capítulo admite dominação tradicional e carismática, sem institucionalização. D nomeia o critério correto (reconhecimento da autoridade) mas o distorce, confundindo-o com a concordância pessoal do comandado com cada ordem."
+}

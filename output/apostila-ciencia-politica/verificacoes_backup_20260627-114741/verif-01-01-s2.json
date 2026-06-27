@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2",
+  "pergunta": "Três autoridades brasileiras ilustram os três tipos de dominação legítima propostos por Weber: o presidente da República, eleito conforme a Constituição de 1988; um pajé yanomami, cuja autoridade é transmitida pelo costume do grupo; e o Padre Cícero (1844–1934), a quem seus seguidores no sertão nordestino atribuíam poderes pessoais de cura e profecia. Qual alternativa classifica corretamente os três casos quanto ao tipo de dominação que exercem?",
+  "alternativas": {
+    "A": "O presidente exerce dominação racional-legal, pois sua autoridade decorre do cargo conforme normas constitucionais; o pajé exerce dominação tradicional, pois sua autoridade vem do costume do grupo; o Padre Cícero exerceu dominação carismática, pois a obediência dependia das qualidades pessoais extraordinárias que lhe eram atribuídas.",
+    "B": "O presidente exerce dominação carismática, pois depende do apoio popular conquistado nas eleições; o pajé exerce dominação racional-legal, pois ocupa um cargo reconhecido pela comunidade; o Padre Cícero exerceu dominação tradicional, pois sua autoridade vinha da religião praticada há séculos no sertão.",
+    "C": "Os três exercem o mesmo tipo de dominação, racional-legal, porque em qualquer um dos três casos a comunidade reconhece formalmente a posição de autoridade que cada um ocupa.",
+    "D": "O que diferencia os três casos é apenas a época em que cada autoridade viveu: autoridades contemporâneas, como o presidente, são racional-legais, e autoridades de outras épocas, como o pajé e o Padre Cícero, são sempre tradicionais."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica o critério oficial da tipologia — a fonte que sustenta a obediência — a cada caso: norma impessoal (presidente), costume ancestral (pajé) e qualidades pessoais extraordinárias (Padre Cícero). B é vocabulário do conceito rival: atribui cada caso à categoria vizinha errada, trocando exatamente as fontes de legitimidade entre os três. C é campo semântico sem ancoragem: usa 'reconhecimento formal da posição' como se fosse o critério da tipologia, mas esse reconhecimento existe nos três casos por razões diferentes (lei, tradição, carisma), e tratá-los como idênticos apaga a distinção que o capítulo estabelece. D é uma restrição indevida: reduz a classificação a um único traço (a época histórica), ignorando que o critério oficial é a fonte de legitimidade, e por isso funde pajé e Padre Cícero na mesma categoria quando o capítulo os trata como tipos distintos (tradicional e carismático, respectivamente)."
+}

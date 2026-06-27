@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s1",
+  "pergunta": "Uma trabalhadora doméstica brasileira em 2013 possuía direito civil de ir e vir e direito político de votar e ser votada, mas só passou a ter direito social à jornada de trabalho regulamentada com a Emenda Constitucional nº 72/2013 — antes disso, a categoria estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde 1943. Por que, antes de 2013, essa trabalhadora tinha uma cidadania incompleta, e não simplesmente a ausência de cidadania?",
+  "alternativas": {
+    "A": "Porque a cidadania, na definição de Marshall, é um conjunto articulado de três tipos de direitos (civis, políticos e sociais); a trabalhadora já possuía dois desses componentes, faltando apenas o terceiro, e essa ausência parcial é o que caracteriza uma cidadania incompleta, não inexistente.",
+    "B": "Porque a trabalhadora doméstica não possuía nacionalidade brasileira plena antes de 2013, e é a posse do documento de identidade nacional, não o conjunto de direitos civis, políticos e sociais, que define a cidadania completa.",
+    "C": "Porque o único requisito para a cidadania plena é estar formalmente empregada com carteira assinada, sendo esse o critério decisivo, e não a posse articulada de direitos civis, políticos e sociais.",
+    "D": "Porque a trabalhadora possuía direitos civis e políticos antes de 2013, e isso significa que seus direitos sociais já estavam garantidos de fato, ainda que não estivessem previstos em lei."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica o critério definitório de Marshall: a cidadania plena depende da presença articulada de três tipos de direito, e a falta de apenas um deles produz uma cidadania incompleta, não a ausência total de cidadania. B é vocabulário do conceito rival: atribui à nacionalidade/documento de identidade o critério que define cidadania, quando o próprio capítulo abre afirmando que cidadania 'não se limita à posse de um documento de identidade ou à nacionalidade registrada em um passaporte'. C é uma restrição indevida: isola 'emprego formal com carteira assinada' como único requisito, quando o critério oficial é a posse articulada dos três tipos de direitos. D nomeia corretamente os direitos que a trabalhadora possuía (civis e políticos), mas distorce a conclusão: o capítulo mostra exatamente o contrário — que o direito social não estava garantido de fato, e essa ausência concreta é o ponto central do exemplo."
+}

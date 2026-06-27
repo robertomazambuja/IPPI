@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s2",
+  "pergunta": "Um grupo de pessoas náufragas se encontra em uma ilha sem leis. Qual alternativa classifica corretamente o comportamento previsto para esse grupo segundo as três concepções de estado de natureza apresentadas no capítulo?",
+  "alternativas": {
+    "A": "Para Hobbes, as pessoas disputariam recursos pela força e viveriam sob ameaça constante de morte, pela ausência de um juiz comum; para Locke, elas reconheceriam mutuamente direitos à vida e à propriedade do que cada uma produzisse, mas conflitos sobre limites de terras exigiriam um árbitro; para Rousseau, viveriam inicialmente em paz, sem propriedade, e o conflito surgiria apenas quando alguém cercasse um terreno e o declarasse seu.",
+    "B": "Para Hobbes, as pessoas viveriam em paz por não haver propriedade privada a disputar; para Locke, elas guerreariam pela ausência de qualquer juiz comum; para Rousseau, reconheceriam mutuamente direitos à vida e à propriedade desde o início.",
+    "C": "As três concepções concordam que o comportamento dos náufragos dependeria apenas do número de pessoas no grupo, pois grupos maiores tenderiam à cooperação e grupos menores ao conflito, independentemente de existirem ou não direitos naturais ou propriedade.",
+    "D": "A única diferença entre as três concepções está no grau de conflito previsto (alto em Hobbes, moderado em Locke, baixo em Rousseau), sendo irrelevante para a classificação se os náufragos possuem ou não direitos naturais antes de qualquer acordo."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica aos náufragos os dois critérios que classificam as três concepções: o grau de conflito (alto, moderado, baixo) e a presença ou ausência de direitos naturais pré-contrato. B é vocabulário do conceito rival: troca as previsões entre os três autores, atribuindo a Hobbes a paz, a Locke a guerra generalizada e a Rousseau os direitos pré-contrato que na verdade pertencem a Locke. C é campo semântico sem ancoragem: propõe um critério plausível à primeira vista (tamanho do grupo) que não tem qualquer base nas três teorias, todas centradas no grau de conflito e na existência ou não de direitos naturais, não no número de pessoas. D é uma restrição indevida: reconhece corretamente o critério do grau de conflito, mas descarta o segundo critério oficial da classificação (a presença de direitos naturais antes do contrato), que é exatamente o que distingue Locke de Hobbes e de Rousseau."
+}

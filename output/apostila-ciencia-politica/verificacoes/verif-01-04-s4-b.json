@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-04-s4-b",
+  "pergunta": "A cadeia geral do bloco — repressão → reorganização da sociedade civil → pressão acumulada → abertura → institucionalização — aparece na abertura política: o AI-2 (1965) impôs o bipartidarismo e o AI-5 (1968) fechou o Congresso, mas a sociedade civil se reorganizou (CEBs, imprensa alternativa, movimentos), e a pressão forçou concessões — Lei da Anistia e fim do bipartidarismo (1979), eleições diretas para governadores (1982), Diretas Já (1983–1984) —, culminando na Constituição de 1988. Qual alternativa mapeia corretamente essa relação causal?",
+  "alternativas": {
+    "A": "As concessões do regime — Anistia, fim do bipartidarismo, Diretas Já — foram decisões espontâneas dos militares, e foi essa abertura voluntária que, ao permitir mais liberdade, deu origem à reorganização da sociedade civil que antes não existia de forma alguma.",
+    "B": "A repressão (AI-2 e AI-5) não eliminou a sociedade civil, que se reorganizou fora do controle estatal; a pressão acumulada forçou as concessões do regime (Anistia, fim do bipartidarismo, Diretas Já), institucionalizadas na Constituição de 1988.",
+    "C": "O fator determinante da redemocratização foi a crise econômica internacional do período, que, ao reduzir a arrecadação do Estado, tornou inevitável a abertura política, independentemente da reorganização da sociedade civil.",
+    "D": "A redemocratização resultou exclusivamente da campanha das Diretas Já, único fator responsável pela abertura, sendo secundários a Lei da Anistia, o fim do bipartidarismo e a reorganização anterior da sociedade civil."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque mapeia a cadeia na ordem certa: a repressão não eliminou a sociedade civil → reorganização fora do controle estatal → pressão acumulada → concessões do regime → institucionalização na Constituição de 1988. A inverte a relação, tratando as concessões como decisão espontânea do regime e causa da reorganização, quando são seu efeito. C é campo semântico sem ancoragem: introduz um fator (crise econômica internacional) ausente do texto como mecanismo causal. D é restrição indevida: reduz a redemocratização a um único fator (as Diretas Já), descartando a Anistia, o fim do bipartidarismo e a reorganização anterior."
+}

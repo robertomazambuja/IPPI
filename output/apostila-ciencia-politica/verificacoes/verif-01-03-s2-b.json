@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s2-b",
+  "pergunta": "Classifique três situações pela natureza do direito e pela instituição que o garante: um cidadão que recorre ao Judiciário contra uma detenção arbitrária; um cidadão que vota nas eleições municipais e pode formar um partido; e um cidadão que matricula os filhos em escola pública gratuita e recebe salário mínimo.",
+  "alternativas": {
+    "A": "Recorrer ao Judiciário é direito político (garantido pelo parlamento); votar e formar partido é direito civil (garantido pelos tribunais); matricular os filhos em escola e receber salário mínimo é direito social (garantido pelos serviços sociais do Estado de bem-estar).",
+    "B": "Os três se distinguem pela seriedade do problema enfrentado: o caso da detenção é o mais grave, o do voto é intermediário e o da escola é o mais cotidiano, e é essa gradação, e não a instituição, que define cada tipo.",
+    "C": "Recorrer ao Judiciário é direito civil (tribunais); votar e formar partido é direito político (parlamento e sistema eleitoral); matricular os filhos na escola e receber salário mínimo é direito social (serviços sociais do Estado).",
+    "D": "Como os três casos envolvem um cidadão exercendo um direito, todos pertencem à mesma categoria de direitos civis, bastando o traço comum 'ser titular de um direito' para classificá-los igualmente."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque classifica cada caso pela natureza do direito e pela instituição garantidora: tribunais (civil), parlamento/sistema eleitoral (político) e serviços sociais (social). A é categoria vizinha (vocabulário do rival): troca civil e político entre os casos do Judiciário e do voto. B é campo semântico sem ancoragem: usa a 'seriedade do problema' como critério, estranho à tipologia, cujo critério é a esfera e a instituição. D é restrição indevida: olha um só traço ('ser titular de um direito') e funde os três numa única categoria, ignorando a instituição garantidora."
+}

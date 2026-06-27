@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s3-b",
+  "pergunta": "A ordem histórica de Marshall encadeia três tipos de direito, cada etapa dependendo da anterior: (1) direitos civis (séc. XVII–XVIII), liberdades que protegem o indivíduo e servem de base para reivindicar os direitos seguintes; (2) direitos políticos (séc. XIX), ampliação do sufrágio por grupos já protegidos por direitos civis; (3) direitos sociais (séc. XX), educação, saúde e previdência universais. Por que os direitos políticos só puderam ser reivindicados após a consolidação dos direitos civis?",
+  "alternativas": {
+    "A": "Porque foram os direitos sociais que vieram primeiro e fundaram os direitos civis, e só depois disso surgiram os direitos políticos, invertendo-se a ordem proposta por Marshall.",
+    "B": "Porque os direitos civis estabeleceram liberdades como a de expressão, associação e reunião, que deram aos excluídos a proteção para se organizar e reivindicar a participação política.",
+    "C": "Porque a passagem dos direitos civis aos políticos se deveu unicamente ao crescimento da renda dos trabalhadores, único fator que tornou possível a ampliação do sufrágio no século XIX.",
+    "D": "Porque os direitos civis garantiram liberdades individuais no século XVIII, e por isso os direitos sociais foram conquistados logo em seguida, antes mesmo dos direitos políticos serem reivindicados pelos grupos excluídos."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque identifica o mecanismo da dependência: as liberdades civis (expressão, associação, reunião) deram aos grupos excluídos a proteção necessária para se organizar e reivindicar o direito de participar da política. A inverte a ordem, fazendo os direitos sociais fundarem os civis. C é restrição indevida: atribui a passagem a um único fator (crescimento da renda), ignorando o papel das liberdades civis. D descreve corretamente a etapa civil, mas erra o mecanismo seguinte ao colocar os direitos sociais antes dos políticos, contra a sequência de Marshall (vocabulário análogo)."
+}

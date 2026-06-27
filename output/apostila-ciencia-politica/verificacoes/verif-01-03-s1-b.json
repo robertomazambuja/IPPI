@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s1-b",
+  "pergunta": "O capítulo afirma que a cidadania não se limita à posse de um documento de identidade ou à nacionalidade registrada no passaporte: é o pertencimento pleno a uma comunidade política, expresso na articulação de direitos civis, políticos e sociais. Uma trabalhadora doméstica com documento e título de eleitor, mas sem o direito social à jornada regulamentada antes de 2013, tinha cidadania incompleta. Por que ter documento e nacionalidade não equivale a ter cidadania plena?",
+  "alternativas": {
+    "A": "Porque a cidadania plena é o pertencimento à comunidade política expresso na articulação dos três tipos de direitos; o documento apenas registra a nacionalidade e não garante, por si só, os direitos civis, políticos e sociais.",
+    "B": "Porque ter cidadania plena é exatamente possuir o documento de identidade e a nacionalidade registrada; quem tem passaporte válido já é, por definição, um cidadão pleno, independentemente dos direitos que exerça na prática cotidiana.",
+    "C": "Porque basta possuir o direito político de votar e ser votado para se ter cidadania plena, sendo os direitos civis e sociais apenas complementos dispensáveis para que alguém seja considerado cidadão pleno.",
+    "D": "Porque a cidadania é o pertencimento a uma comunidade política, e esse pertencimento se reduz a ter nascido no território do país, o que já assegura automaticamente a condição de cidadão pleno."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque distingue cidadania de nacionalidade/documento: a cidadania plena é o pertencimento expresso na articulação dos três tipos de direitos, e o documento apenas registra a nacionalidade. B é vocabulário do conceito rival: trata documento/nacionalidade como se fossem a definição de cidadania. C é restrição indevida: isola um único tipo de direito (o político) como suficiente para a cidadania plena. D nomeia corretamente 'pertencimento à comunidade política', mas o distorce ao reduzi-lo a ter nascido no país (vocabulário análogo)."
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s4-b",
+  "pergunta": "A formação do monopólio estatal da violência é descrita como uma cadeia: a competição militar entre unidades políticas europeias forçou os governantes a manter exércitos permanentes; isso exigiu a extração fiscal centralizada, retirada dos senhores locais; a manutenção desses aparatos levou ao desarmamento dos poderes rivais internos; o resultado foi a concentração do uso legítimo da força em uma única autoridade territorial. Qual alternativa mapeia corretamente essa relação causal?",
+  "alternativas": {
+    "A": "O monopólio estatal da violência foi a causa que desencadeou a competição militar entre as unidades políticas europeias, pois somente um poder já concentrado seria capaz de iniciar guerras prolongadas dessa escala e intensidade.",
+    "B": "O fator determinante de toda a cadeia foi o crescimento demográfico das cidades europeias no período, que tornou disponível a mão de obra necessária para compor os exércitos permanentes dos governantes.",
+    "C": "A competição militar levou aos exércitos permanentes, que exigiram a extração fiscal centralizada e o desarmamento dos rivais internos; o encadeamento desses processos resultou no monopólio da força em uma só autoridade.",
+    "D": "A concentração do uso da força resultou exclusivamente da extração fiscal centralizada, único fator determinante, sendo a competição militar e o desarmamento dos rivais apenas circunstâncias secundárias do processo."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque segue a cadeia na ordem certa: competição militar → exércitos permanentes → extração fiscal centralizada → desarmamento dos rivais → monopólio da força. A inverte a tese, tratando o monopólio (consequência final) como causa da competição militar que o antecede. B é campo semântico sem ancoragem: introduz um fator (crescimento demográfico) que não consta do texto como mecanismo causal, embora soe plausível. D é restrição indevida: reduz a cadeia multicausal a um único fator (a extração fiscal), descartando os demais elos que o próprio exemplo apresenta."
+}

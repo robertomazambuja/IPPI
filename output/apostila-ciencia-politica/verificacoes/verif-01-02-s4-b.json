@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s4-b",
+  "pergunta": "Comparando Hobbes, Locke e Rousseau quanto a quanto poder é transferido ao Estado e que forma de governo resulta, qual alternativa atribui corretamente a posição de cada autor?",
+  "alternativas": {
+    "A": "Hobbes: transferência total e irrevogável ao soberano, resultando em soberania absoluta; Locke: transferência parcial e revogável, com retenção dos direitos naturais, resultando em governo representativo; Rousseau: poder dado ao corpo coletivo dos cidadãos, resultando em democracia direta.",
+    "B": "Hobbes: transferência parcial e revogável, com separação de poderes e retenção dos direitos naturais; Locke: poder dado ao corpo coletivo dos cidadãos, em democracia direta; Rousseau: transferência total e irrevogável ao soberano, em soberania absoluta e indivisível. que exerce poder sobre todos os súditos do território.",
+    "C": "Os três autores defendem uma transferência parcial e revogável do poder, com retenção de parte da liberdade, diferenciando-se apenas pela forma de governo: absoluta em Hobbes, representativa em Locke e direta em Rousseau.",
+    "D": "Hobbes defende uma transferência parcial e revogável da liberdade, podendo o povo retomá-la quando quiser, ao passo que Locke exige a entrega total e irrevogável dos direitos naturais ao soberano absoluto."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque atribui a cada autor a extensão da transferência e a forma de governo corretas: total/absoluta (Hobbes), parcial-revogável/representativa (Locke) e ao corpo coletivo/democracia direta (Rousseau). B é vocabulário do autor rival: descreve corretamente cada posição, mas as atribui aos autores trocados. C é alternativa híbrida: uniformiza os três como 'transferência parcial e revogável', misturando a categoria de Locke com as dos demais. D inverte a tese: faz de Hobbes a transferência revogável e de Locke a entrega total e irrevogável, exatamente o oposto do capítulo."
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s2-b",
+  "pergunta": "Cada contratualista aponta uma causa diferente que torna o estado de natureza insustentável. Associe cada autor à sua causa: o medo da morte violenta na guerra de todos contra todos; a insegurança da propriedade, porque cada um é juiz em causa própria e falta um juiz imparcial; e o surgimento da desigualdade quando alguém cerca um terreno e declara 'isto é meu', instituindo a propriedade privada.",
+  "alternativas": {
+    "A": "Em Hobbes, a causa é a insegurança da propriedade por falta de juiz imparcial; em Locke, a desigualdade gerada pela propriedade privada; em Rousseau, o medo da morte violenta na guerra de todos contra todos.",
+    "B": "O que distingue os três autores é o grau de religiosidade de cada concepção: Hobbes parte de uma visão laica, Locke de uma visão moderadamente religiosa e Rousseau de uma visão fortemente espiritual do estado de natureza.",
+    "C": "Os três autores dizem o mesmo: o estado de natureza é insustentável simplesmente porque nele há conflito, sendo a presença de conflito o único critério necessário para classificar cada uma das concepções.",
+    "D": "Em Hobbes, a causa é o medo da morte violenta; em Locke, a insegurança da propriedade por faltar um juiz imparcial; em Rousseau, a desigualdade que surge com a instituição da propriedade privada."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque associa cada autor à causa que o capítulo atribui: o medo da morte violenta (Hobbes), a insegurança da propriedade por falta de juiz imparcial (Locke) e a desigualdade da propriedade privada (Rousseau). A é categoria vizinha (vocabulário do rival): troca as causas entre os três autores. B é campo semântico sem ancoragem: usa 'grau de religiosidade' como critério, plausível mas estranho ao texto, cujo critério é a causa da insustentabilidade. C é restrição indevida: classifica olhando um só traço ('há ou não conflito'), ignorando a causa específica e os direitos pré-contrato que diferenciam os autores."
+}

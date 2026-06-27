@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-04-s1-b",
+  "pergunta": "O capítulo afirma que a dominação política não se sustenta só pela força: um governo pode controlar o exército e a polícia, mas sem o consentimento de parte da população enfrenta resistência permanente. A hegemonia é a construção desse consentimento — quando um grupo faz sua visão de mundo ser aceita como natural. Durante a ditadura (1964–1985), a Igreja, pelas CEBs, disputava essa hegemonia na sociedade civil, sem ocupar cargos no governo nem deter a coerção. Por que a ação da Igreja é disputa de hegemonia na sociedade civil, e não exercício de coerção estatal?",
+  "alternativas": {
+    "A": "Porque a Igreja, ao organizar as CEBs, exercia uma forma de coerção direta sobre a população, e é exatamente esse poder de impor condutas pela força que o conceito de hegemonia descreve na obra de Gramsci sobre o Estado ampliado. e o conjunto de suas instituições de poder.",
+    "B": "Porque, para disputar a direção da sociedade, é indispensável ocupar cargos no governo, e foi por não os ocupar que a Igreja se limitou a uma atuação sem qualquer efeito sobre a hegemonia da sociedade.",
+    "C": "Porque a Igreja não controlava o exército nem a polícia (a coerção da sociedade política), mas atuava sobre o consentimento da população para fazer prevalecer sua visão de mundo — e essa disputa pelo consentimento é a hegemonia na sociedade civil.",
+    "D": "Porque a Igreja construía o consentimento da população, o que se reduz a fazer propaganda a favor do regime, sem qualquer disputa real sobre qual visão de mundo deveria prevalecer na sociedade."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque distingue hegemonia (atuação sobre o consentimento na sociedade civil) de coerção (controle do aparelho repressivo na sociedade política): a Igreja não detinha a coerção, mas disputava o consentimento. A é vocabulário do conceito rival: descreve a coerção como se fosse a hegemonia. B é restrição indevida: exige ocupar cargos no governo para haver disputa pela direção da sociedade, condição que o conceito não impõe. D nomeia corretamente 'construção do consentimento', mas o distorce ao reduzi-lo a propaganda, sem disputa de visão de mundo (vocabulário análogo)."
+}

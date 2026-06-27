@@ -1,0 +1,148 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: apostila-ciencia-politica
+Gerado em: 26/06/2026 12:41
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF indicado
+   (ex.: verif-01-01-s3.json, aplicar-01-01.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema de exemplo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4):
+   - tipo "verificacao": {tipo, ref, pergunta, alternativas{A,B,C,D}, correta, justificativa}
+   - tipo "aplicar-agora": {tipo, ref, enunciado, resposta_comentada}
+5. Envie a pasta "verificacoes" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "Poder e dominação: categorias centrais da vida política".
+      Conceito-âncora: Poder (Macht) e dominação (Herrschaft).
+      Exemplo-âncora (do capítulo): Um assaltante armado impõe sua vontade à vítima (poder sem legitimidade). Um juiz ordena a prisão de um condenado e o réu obedece porque reconhece a autoridade do tribunal (dominação legítima). Nos dois casos há imposição de vontade, mas apenas no segundo há aceitação da autoridade como válida.
+
+  REF             : verif-01-01-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "Poder e dominação: categorias centrais da vida política".
+      Conceito-âncora: Poder (Macht) e dominação (Herrschaft).
+      Exemplo-âncora (do capítulo): Quando o assalto termina e o assaltante vai embora, a vítima deixa de obedecer; já a ordem do juiz continua sendo cumprida mesmo depois de encerrada a audiência. Nos dois casos houve imposição de vontade, mas só num deles a obediência se sustenta sem a presença imediata da força, porque o comandado reconhece a autoridade de quem comanda como válida.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três tipos de dominação legítima".
+      Exemplo-âncora (do capítulo): Critério de classificação aplicado ao Brasil contemporâneo: o presidente da República exerce dominação racional-legal (eleito conforme a Constituição de 1988); um pajé yanomami exerce dominação tradicional (autoridade transmitida por costume do grupo); um líder religioso como Padre Cícero (1844–1934) exerceu dominação carismática (seguidores atribuíam a ele poderes pessoais de cura e profecia).
+
+  REF             : verif-01-01-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três tipos de dominação legítima".
+      Exemplo-âncora (do capítulo): Outro conjunto de casos do próprio bloco, segundo a fonte que sustenta a obediência: um chefe tribal hereditário, cuja autoridade provém do costume e da crença de que "sempre foi assim"; um delegado de polícia, que exerce autoridade porque foi nomeado conforme a legislação vigente, permanecendo a autoridade na função e não na pessoa; e Getúlio Vargas, entre 1930 e 1945, que mobilizava a adesão pessoal de trabalhadores urbanos que o identificavam como protetor, independentemente do cargo formal.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Da fragmentação feudal ao Estado moderno: etapas da centralização política".
+      Exemplo-âncora (do capítulo): Linha do tempo da formação do Estado francês: (1) Séculos IX–XIII — dezenas de senhores feudais controlam exércitos próprios e cobram tributos no território que viria a ser a França. (2) 1337–1453 — a Guerra dos Cem Anos força os reis franceses a criar um exército permanente financiado por impostos reais, concentrando o poder militar. (3) Século XVI — a monarquia francesa passa a nomear intendentes (funcionários reais) para administrar as províncias, substituindo os poderes locais. (4) 1789 em diante — após a Revolução, o Estado francês consolida o monopólio da violência legítima com uma força policial nacional, um código legal unificado e um exército sob comando central.
+
+  REF             : verif-01-01-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Da fragmentação feudal ao Estado moderno: etapas da centralização política".
+      Exemplo-âncora (do capítulo): A sequência europeia geral descrita no bloco, em cinco etapas encadeadas: (1) séculos V–XIII — fragmentação feudal, com múltiplos senhores exercendo coerção armada e cobrando tributos em seus domínios; (2) séculos XIV–XVI — centralização militar e tributária, com monarcas financiando exércitos permanentes por tributação centralizada; (3) 1532 — a publicação de O Príncipe, de Maquiavel, separa a análise do poder político da moral religiosa; (4) séculos XVI–XVIII — burocratização administrativa, com funcionários assalariados substituindo a administração pessoal do senhor feudal; (5) séculos XIX–XX — consolidação do Estado moderno como detentor do monopólio legítimo da força.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Centralização do poder e monopólio estatal da violência: relações causais".
+      Exemplo-âncora (do capítulo): Na Inglaterra dos séculos XV–XVI, a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada. A dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Resultado: ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa — o monopólio da violência estava consolidado no poder central.
+
+  REF             : verif-01-01-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Centralização do poder e monopólio estatal da violência: relações causais".
+      Exemplo-âncora (do capítulo): A cadeia causal abstrata descrita no bloco, independentemente do caso inglês: a competição militar entre unidades políticas europeias (séc. XIV–XVII) forçou os governantes a concentrar recursos bélicos, o que gerou a necessidade de exércitos permanentes; isso exigiu a extração fiscal centralizada (tributação retirada dos senhores locais); a manutenção desses aparatos levou ao desarmamento dos poderes rivais internos (milícias senhoriais, ordens armadas, bandos mercenários); e o resultado foi a concentração do uso legítimo da força em uma única autoridade territorial — o monopólio estatal da violência legítima.
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
+    Pergunta do capítulo: "Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?"
+    Síntese do capítulo: A centralização do poder político na Europa resultou de um processo causal em que a competição militar forçou governantes a concentrar recursos bélicos e tributários, desarmando poderes locais rivais. Esse processo produziu o Estado moderno como entidade que detém o monopólio legítimo do uso da força física em um território — conceito definido por Weber a partir da análise histórica sistematizada por autores como Tilly e antecipada pela ruptura analítica de Maquiavel. Uma vez consolidado esse monopólio, tornou-se necessário definir formas, sistemas e regimes de governo para organizar o poder centralizado.
+    Exemplo-âncora da seção principal: Na Inglaterra dos séculos XV–XVI, a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada. A dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Resultado: ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa — o monopólio da violência estava consolidado no poder central.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Quais são as diferenças entre Hobbes, Locke e Rousseau quanto aos fundamentos, limites e finalidades do poder estatal?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O contrato social como fundamento da autoridade política".
+      Conceito-âncora: Contrato social.
+      Exemplo-âncora (do capítulo): Na Inglaterra do século XVII, durante a Guerra Civil (1642–1651), defensores do Parlamento e defensores do rei disputavam quem tinha o direito legítimo de governar. Hobbes, escrevendo em 1651, respondeu que nenhum dos dois tinha direito 'natural': o poder do soberano só se justifica porque os indivíduos, para escapar da violência mútua, concordaram em transferir sua liberdade a ele.
+
+  REF             : verif-01-02-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O contrato social como fundamento da autoridade política".
+      Conceito-âncora: Contrato social.
+      Exemplo-âncora (do capítulo): Na Guerra Civil Inglesa, os realistas justificavam o poder de governar pelo direito divino dos reis, e os parlamentaristas, pela representação dos proprietários. Hobbes recusou as duas fontes e ofereceu uma terceira resposta: nenhum dos lados possuía direito "natural" ao poder; a autoridade do soberano só se justifica porque os indivíduos, para escapar da violência mútua do estado de natureza, teriam concordado em transferir sua liberdade a ele.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três concepções de estado de natureza".
+      Exemplo-âncora (do capítulo): Classificação aplicada a uma situação concreta — um grupo de pessoas náufragas em uma ilha sem leis: Para Hobbes, elas disputariam recursos pela força e viveriam sob ameaça constante de morte. Para Locke, elas reconheceriam mutuamente o direito à vida e à propriedade do que cada uma produzisse, mas conflitos sobre limites de terras gerariam a necessidade de um árbitro. Para Rousseau, elas viveriam inicialmente em paz enquanto os recursos fossem abundantes e não houvesse propriedade privada; o conflito surgiria quando alguém cercasse um terreno e dissesse 'isto é meu'.
+
+  REF             : verif-01-02-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três concepções de estado de natureza".
+      Exemplo-âncora (do capítulo): Critério de classificação aplicado à causa que torna o estado de natureza insustentável em cada autor: em Hobbes, o medo da morte violenta na guerra de todos contra todos; em Locke, a insegurança da propriedade, porque cada um é juiz em causa própria e falta um juiz imparcial; em Rousseau, o surgimento da desigualdade quando alguém cerca um terreno e declara "isto é meu", instituindo a propriedade privada.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Do estado de natureza à instituição do governo: a lógica contratualista".
+      Exemplo-âncora (do capítulo): Sequência lógica em Locke: (1) No estado de natureza, indivíduos possuem direitos naturais — vida, liberdade, propriedade. (2) Sem um juiz imparcial, cada um é juiz em causa própria, o que gera parcialidade e insegurança. (3) Os indivíduos percebem que um poder comum seria mais confiável do que a autotutela. (4) Firmam um contrato criando uma sociedade política e delegando ao governo o poder de legislar e julgar. (5) O governo resultante é limitado: deve proteger os direitos naturais e pode ser destituído se os violar — fundamento da forma republicana com separação de poderes.
+
+  REF             : verif-01-02-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Do estado de natureza à instituição do governo: a lógica contratualista".
+      Exemplo-âncora (do capítulo): A sequência lógica (não cronológica) comum aos três contratualistas, descrita no bloco: (1) condição pré-política — indivíduos vivem sem autoridade comum, cada um regulando sua conduta; (2) um problema torna essa condição insustentável (violência em Hobbes, insegurança da propriedade em Locke, desigualdade em Rousseau); (3) deliberação racional — os indivíduos calculam que é mais vantajoso ceder parte da liberdade do que permanecer na condição pré-política; (4) pacto fundador — firma-se o contrato que transfere poderes a uma autoridade, com escopo variável (total em Hobbes, parcial e revogável em Locke, coletivo em Rousseau); (5) instituição de uma forma de governo com regras sobre quem governa e seus limites.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Hobbes, Locke e Rousseau: limites do poder estatal e direitos dos governados".
+      Exemplo-âncora (do capítulo): Aspecto: direito de resistência. Hobbes: durante a Guerra Civil Inglesa, Hobbes argumentou que a rebelião do Parlamento contra o rei era ilegítima — uma vez instituído o soberano, resistir a ele equivale a retornar ao estado de guerra. Locke: após a Revolução Gloriosa de 1688, Locke argumentou que o Parlamento tinha o direito de depor Jaime II porque o rei violou os direitos dos súditos — o contrato foi rompido pelo governante, não pelos governados. Rousseau: na Revolução Francesa (1789), os revolucionários invocaram a soberania popular — o povo não resistia ao soberano, pois o povo era o soberano; destituíam um governo que deixara de representar a vontade geral.
+
+  REF             : verif-01-02-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Hobbes, Locke e Rousseau: extensão do poder transferido e forma de governo resultante".
+      Exemplo-âncora (do capítulo): Dimensão de comparação: quanto poder é transferido ao Estado e que forma de governo resulta. Hobbes: transferência total e irrevogável da liberdade ao soberano, resultando em soberania absoluta e indivisível. Locke: transferência parcial e revogável (delega-se apenas legislar e julgar, retendo-se os direitos naturais), resultando em governo representativo com separação de poderes. Rousseau: o poder não é transferido a um governante separado, mas ao corpo coletivo dos cidadãos (soberania inalienável), resultando em república democrática direta.
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Comparar.
+    Pergunta do capítulo: "Quais são as diferenças entre Hobbes, Locke e Rousseau quanto aos fundamentos, limites e finalidades do poder estatal?"
+    Síntese do capítulo: Hobbes, Locke e Rousseau partem da mesma estrutura argumentativa — estado de natureza, contrato, governo — mas chegam a conclusões opostas sobre os limites do poder estatal. Hobbes fundamenta um soberano absoluto cuja autoridade não pode ser contestada; Locke fundamenta um governo limitado pelos direitos naturais dos cidadãos, que podem destituí-lo se os violar; Rousseau fundamenta uma república em que a soberania pertence ao povo e o governo é apenas executor da vontade geral. Essas três respostas à pergunta 'o que justifica o poder do Estado?' produziram modelos distintos de relação entre governante e governados, que condicionam até hoje os debates sobre democracia, autoritarismo e direitos civis.
+    Exemplo-âncora da seção principal: Aspecto: direito de resistência. Hobbes: durante a Guerra Civil Inglesa, Hobbes argumentou que a rebelião do Parlamento contra o rei era ilegítima — uma vez instituído o soberano, resistir a ele equivale a retornar ao estado de guerra. Locke: após a Revolução Gloriosa de 1688, Locke argumentou que o Parlamento tinha o direito de depor Jaime II porque o rei violou os direitos dos súditos — o contrato foi rompido pelo governante, não pelos governados. Rousseau: na Revolução Francesa (1789), os revolucionários invocaram a soberania popular — o povo não resistia ao soberano, pois o povo era o soberano; destituíam um governo que deixara de representar a vontade geral.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-03 — Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?
+-----------------------------------------------------------------
+  REF             : verif-01-03-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é cidadania".
+      Conceito-âncora: Cidadania.
+      Exemplo-âncora (do capítulo): Uma trabalhadora doméstica brasileira em 2013: ela possuía direito civil de ir e vir (liberdade individual), direito político de votar e ser votada (participação eleitoral), mas só passou a ter direito social à jornada de trabalho regulamentada com a Emenda Constitucional nº 72/2013 — antes disso, a categoria estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde 1943.
+
+  REF             : verif-01-03-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é cidadania".
+      Conceito-âncora: Cidadania.
+      Exemplo-âncora (do capítulo): O capítulo afirma que a cidadania não se limita à posse de um documento de identidade ou à nacionalidade registrada em um passaporte: é o pertencimento pleno a uma comunidade política, expresso na articulação de três tipos de direitos (civis, políticos e sociais), de modo que a ausência de um deles compromete o exercício pleno dos demais. Por isso a trabalhadora doméstica brasileira que tinha direitos civis e políticos, mas não o direito social à jornada regulamentada antes de 2013, possuía uma cidadania incompleta — mesmo com documento e título de eleitor.
+
+  REF             : verif-01-03-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
+      Exemplo-âncora (do capítulo): Em um regime democrático como o Brasil pós-1988, um cidadão exerce os três tipos simultaneamente: invoca direito civil ao recorrer ao Judiciário contra uma detenção arbitrária; exerce direito político ao votar nas eleições municipais; e acessa direito social ao matricular os filhos em escola pública gratuita. Em um regime autoritário como o Brasil entre 1968 e 1978 (vigência do AI-5), direitos políticos foram suprimidos (cassação de mandatos, suspensão de eleições diretas), direitos civis foram restringidos (censura, prisão sem mandado judicial), enquanto alguns direitos sociais foram mantidos ou ampliados (expansão do FGTS, criação do PIS).
+
+  REF             : verif-01-03-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
+      Exemplo-âncora (do capítulo): Casos concretos e a instituição que garante cada direito: um cidadão que recorre ao Judiciário contra uma detenção arbitrária (garantia dos tribunais de justiça); um cidadão que vota nas eleições municipais e pode formar um partido (garantia do parlamento e do sistema eleitoral); um cidadão que matricula os filhos em escola pública gratuita e recebe salário mínimo (garantia do sistema de serviços sociais do Estado).
+
+  REF             : verif-01-03-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
+    

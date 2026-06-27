@@ -22,20 +22,41 @@ CAPÍTULO 01-01 — Que relação causal existe entre a centralização do poder
       Conceito-âncora: Poder (Macht) e dominação (Herrschaft).
       Exemplo-âncora (do capítulo): Um assaltante armado impõe sua vontade à vítima (poder sem legitimidade). Um juiz ordena a prisão de um condenado e o réu obedece porque reconhece a autoridade do tribunal (dominação legítima). Nos dois casos há imposição de vontade, mas apenas no segundo há aceitação da autoridade como válida.
 
+  REF             : verif-01-01-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "Poder e dominação: categorias centrais da vida política".
+      Conceito-âncora: Poder (Macht) e dominação (Herrschaft).
+      Exemplo-âncora (do capítulo): Quando o assalto termina e o assaltante vai embora, a vítima deixa de obedecer; já a ordem do juiz continua sendo cumprida mesmo depois de encerrada a audiência. Nos dois casos houve imposição de vontade, mas só num deles a obediência se sustenta sem a presença imediata da força, porque o comandado reconhece a autoridade de quem comanda como válida.
+
   REF             : verif-01-01-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Três tipos de dominação legítima".
       Exemplo-âncora (do capítulo): Critério de classificação aplicado ao Brasil contemporâneo: o presidente da República exerce dominação racional-legal (eleito conforme a Constituição de 1988); um pajé yanomami exerce dominação tradicional (autoridade transmitida por costume do grupo); um líder religioso como Padre Cícero (1844–1934) exerceu dominação carismática (seguidores atribuíam a ele poderes pessoais de cura e profecia).
+
+  REF             : verif-01-01-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três tipos de dominação legítima".
+      Exemplo-âncora (do capítulo): Outro conjunto de casos do próprio bloco, segundo a fonte que sustenta a obediência: um chefe tribal hereditário, cuja autoridade provém do costume e da crença de que "sempre foi assim"; um delegado de polícia, que exerce autoridade porque foi nomeado conforme a legislação vigente, permanecendo a autoridade na função e não na pessoa; e Getúlio Vargas, entre 1930 e 1945, que mobilizava a adesão pessoal de trabalhadores urbanos que o identificavam como protetor, independentemente do cargo formal.
 
   REF             : verif-01-01-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "Da fragmentação feudal ao Estado moderno: etapas da centralização política".
       Exemplo-âncora (do capítulo): Linha do tempo da formação do Estado francês: (1) Séculos IX–XIII — dezenas de senhores feudais controlam exércitos próprios e cobram tributos no território que viria a ser a França. (2) 1337–1453 — a Guerra dos Cem Anos força os reis franceses a criar um exército permanente financiado por impostos reais, concentrando o poder militar. (3) Século XVI — a monarquia francesa passa a nomear intendentes (funcionários reais) para administrar as províncias, substituindo os poderes locais. (4) 1789 em diante — após a Revolução, o Estado francês consolida o monopólio da violência legítima com uma força policial nacional, um código legal unificado e um exército sob comando central.
 
+  REF             : verif-01-01-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Da fragmentação feudal ao Estado moderno: etapas da centralização política".
+      Exemplo-âncora (do capítulo): A sequência europeia geral descrita no bloco, em cinco etapas encadeadas: (1) séculos V–XIII — fragmentação feudal, com múltiplos senhores exercendo coerção armada e cobrando tributos em seus domínios; (2) séculos XIV–XVI — centralização militar e tributária, com monarcas financiando exércitos permanentes por tributação centralizada; (3) 1532 — a publicação de O Príncipe, de Maquiavel, separa a análise do poder político da moral religiosa; (4) séculos XVI–XVIII — burocratização administrativa, com funcionários assalariados substituindo a administração pessoal do senhor feudal; (5) séculos XIX–XX — consolidação do Estado moderno como detentor do monopólio legítimo da força.
+
   REF             : verif-01-01-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Centralização do poder e monopólio estatal da violência: relações causais".
       Exemplo-âncora (do capítulo): Na Inglaterra dos séculos XV–XVI, a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada. A dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Resultado: ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa — o monopólio da violência estava consolidado no poder central.
+
+  REF             : verif-01-01-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Centralização do poder e monopólio estatal da violência: relações causais".
+      Exemplo-âncora (do capítulo): A cadeia causal abstrata descrita no bloco, independentemente do caso inglês: a competição militar entre unidades políticas europeias (séc. XIV–XVII) forçou os governantes a concentrar recursos bélicos, o que gerou a necessidade de exércitos permanentes; isso exigiu a extração fiscal centralizada (tributação retirada dos senhores locais); a manutenção desses aparatos levou ao desarmamento dos poderes rivais internos (milícias senhoriais, ordens armadas, bandos mercenários); e o resultado foi a concentração do uso legítimo da força em uma única autoridade territorial — o monopólio estatal da violência legítima.
 
   REF             : aplicar-01-01   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
@@ -53,20 +74,41 @@ CAPÍTULO 01-02 — Quais são as diferenças entre Hobbes, Locke e Rousseau qua
       Conceito-âncora: Contrato social.
       Exemplo-âncora (do capítulo): Na Inglaterra do século XVII, durante a Guerra Civil (1642–1651), defensores do Parlamento e defensores do rei disputavam quem tinha o direito legítimo de governar. Hobbes, escrevendo em 1651, respondeu que nenhum dos dois tinha direito 'natural': o poder do soberano só se justifica porque os indivíduos, para escapar da violência mútua, concordaram em transferir sua liberdade a ele.
 
+  REF             : verif-01-02-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O contrato social como fundamento da autoridade política".
+      Conceito-âncora: Contrato social.
+      Exemplo-âncora (do capítulo): Na Guerra Civil Inglesa, os realistas justificavam o poder de governar pelo direito divino dos reis, e os parlamentaristas, pela representação dos proprietários. Hobbes recusou as duas fontes e ofereceu uma terceira resposta: nenhum dos lados possuía direito "natural" ao poder; a autoridade do soberano só se justifica porque os indivíduos, para escapar da violência mútua do estado de natureza, teriam concordado em transferir sua liberdade a ele.
+
   REF             : verif-01-02-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Três concepções de estado de natureza".
       Exemplo-âncora (do capítulo): Classificação aplicada a uma situação concreta — um grupo de pessoas náufragas em uma ilha sem leis: Para Hobbes, elas disputariam recursos pela força e viveriam sob ameaça constante de morte. Para Locke, elas reconheceriam mutuamente o direito à vida e à propriedade do que cada uma produzisse, mas conflitos sobre limites de terras gerariam a necessidade de um árbitro. Para Rousseau, elas viveriam inicialmente em paz enquanto os recursos fossem abundantes e não houvesse propriedade privada; o conflito surgiria quando alguém cercasse um terreno e dissesse 'isto é meu'.
+
+  REF             : verif-01-02-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três concepções de estado de natureza".
+      Exemplo-âncora (do capítulo): Critério de classificação aplicado à causa que torna o estado de natureza insustentável em cada autor: em Hobbes, o medo da morte violenta na guerra de todos contra todos; em Locke, a insegurança da propriedade, porque cada um é juiz em causa própria e falta um juiz imparcial; em Rousseau, o surgimento da desigualdade quando alguém cerca um terreno e declara "isto é meu", instituindo a propriedade privada.
 
   REF             : verif-01-02-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "Do estado de natureza à instituição do governo: a lógica contratualista".
       Exemplo-âncora (do capítulo): Sequência lógica em Locke: (1) No estado de natureza, indivíduos possuem direitos naturais — vida, liberdade, propriedade. (2) Sem um juiz imparcial, cada um é juiz em causa própria, o que gera parcialidade e insegurança. (3) Os indivíduos percebem que um poder comum seria mais confiável do que a autotutela. (4) Firmam um contrato criando uma sociedade política e delegando ao governo o poder de legislar e julgar. (5) O governo resultante é limitado: deve proteger os direitos naturais e pode ser destituído se os violar — fundamento da forma republicana com separação de poderes.
 
+  REF             : verif-01-02-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Do estado de natureza à instituição do governo: a lógica contratualista".
+      Exemplo-âncora (do capítulo): A sequência lógica (não cronológica) comum aos três contratualistas, descrita no bloco: (1) condição pré-política — indivíduos vivem sem autoridade comum, cada um regulando sua conduta; (2) um problema torna essa condição insustentável (violência em Hobbes, insegurança da propriedade em Locke, desigualdade em Rousseau); (3) deliberação racional — os indivíduos calculam que é mais vantajoso ceder parte da liberdade do que permanecer na condição pré-política; (4) pacto fundador — firma-se o contrato que transfere poderes a uma autoridade, com escopo variável (total em Hobbes, parcial e revogável em Locke, coletivo em Rousseau); (5) instituição de uma forma de governo com regras sobre quem governa e seus limites.
+
   REF             : verif-01-02-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Comparar.
       Micro-habilidade / cabeçalho: "Hobbes, Locke e Rousseau: limites do poder estatal e direitos dos governados".
       Exemplo-âncora (do capítulo): Aspecto: direito de resistência. Hobbes: durante a Guerra Civil Inglesa, Hobbes argumentou que a rebelião do Parlamento contra o rei era ilegítima — uma vez instituído o soberano, resistir a ele equivale a retornar ao estado de guerra. Locke: após a Revolução Gloriosa de 1688, Locke argumentou que o Parlamento tinha o direito de depor Jaime II porque o rei violou os direitos dos súditos — o contrato foi rompido pelo governante, não pelos governados. Rousseau: na Revolução Francesa (1789), os revolucionários invocaram a soberania popular — o povo não resistia ao soberano, pois o povo era o soberano; destituíam um governo que deixara de representar a vontade geral.
+
+  REF             : verif-01-02-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Hobbes, Locke e Rousseau: extensão do poder transferido e forma de governo resultante".
+      Exemplo-âncora (do capítulo): Dimensão de comparação: quanto poder é transferido ao Estado e que forma de governo resulta. Hobbes: transferência total e irrevogável da liberdade ao soberano, resultando em soberania absoluta e indivisível. Locke: transferência parcial e revogável (delega-se apenas legislar e julgar, retendo-se os direitos naturais), resultando em governo representativo com separação de poderes. Rousseau: o poder não é transferido a um governante separado, mas ao corpo coletivo dos cidadãos (soberania inalienável), resultando em república democrática direta.
 
   REF             : aplicar-01-02   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Comparar.
@@ -84,29 +126,60 @@ CAPÍTULO 01-03 — Como a cidadania — entendida como conjunto de direitos civ
       Conceito-âncora: Cidadania.
       Exemplo-âncora (do capítulo): Uma trabalhadora doméstica brasileira em 2013: ela possuía direito civil de ir e vir (liberdade individual), direito político de votar e ser votada (participação eleitoral), mas só passou a ter direito social à jornada de trabalho regulamentada com a Emenda Constitucional nº 72/2013 — antes disso, a categoria estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde 1943.
 
+  REF             : verif-01-03-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é cidadania".
+      Conceito-âncora: Cidadania.
+      Exemplo-âncora (do capítulo): O capítulo afirma que a cidadania não se limita à posse de um documento de identidade ou à nacionalidade registrada em um passaporte: é o pertencimento pleno a uma comunidade política, expresso na articulação de três tipos de direitos (civis, políticos e sociais), de modo que a ausência de um deles compromete o exercício pleno dos demais. Por isso a trabalhadora doméstica brasileira que tinha direitos civis e políticos, mas não o direito social à jornada regulamentada antes de 2013, possuía uma cidadania incompleta — mesmo com documento e título de eleitor.
+
   REF             : verif-01-03-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
       Exemplo-âncora (do capítulo): Em um regime democrático como o Brasil pós-1988, um cidadão exerce os três tipos simultaneamente: invoca direito civil ao recorrer ao Judiciário contra uma detenção arbitrária; exerce direito político ao votar nas eleições municipais; e acessa direito social ao matricular os filhos em escola pública gratuita. Em um regime autoritário como o Brasil entre 1968 e 1978 (vigência do AI-5), direitos políticos foram suprimidos (cassação de mandatos, suspensão de eleições diretas), direitos civis foram restringidos (censura, prisão sem mandado judicial), enquanto alguns direitos sociais foram mantidos ou ampliados (expansão do FGTS, criação do PIS).
+
+  REF             : verif-01-03-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
+      Exemplo-âncora (do capítulo): Casos concretos e a instituição que garante cada direito: um cidadão que recorre ao Judiciário contra uma detenção arbitrária (garantia dos tribunais de justiça); um cidadão que vota nas eleições municipais e pode formar um partido (garantia do parlamento e do sistema eleitoral); um cidadão que matricula os filhos em escola pública gratuita e recebe salário mínimo (garantia do sistema de serviços sociais do Estado).
 
   REF             : verif-01-03-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
       Exemplo-âncora (do capítulo): Linha do tempo da expansão do sufrágio na Inglaterra: 1689 — Bill of Rights garante liberdades civis básicas (petição, julgamento por júri); 1832 — Reform Act amplia o voto masculino a setores da classe média urbana; 1903 — fundação da WSPU por Emmeline Pankhurst, que adota ações diretas (greves de fome, manifestações de rua, desobediência civil); 1918 — Representation of the People Act concede voto a mulheres acima de 30 anos com propriedade; 1928 — Equal Franchise Act iguala a idade de voto entre homens e mulheres (21 anos); 1948 — National Health Service Act cria o sistema público de saúde britânico (NHS), consolidando direitos sociais.
 
+  REF             : verif-01-03-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
+      Exemplo-âncora (do capítulo): A ordem de Marshall entre os três tipos de direito, com cada etapa dependendo da anterior: (1) direitos civis (séc. XVII–XVIII) — liberdades individuais que estabeleceram uma esfera de proteção contra o poder do Estado e serviram de base para reivindicar os direitos seguintes; (2) direitos políticos (séc. XIX) — ampliação do sufrágio sob pressão de grupos que, já protegidos por direitos civis, estavam excluídos da participação política; (3) direitos sociais (séc. XX, após 1945) — educação, saúde e previdência transformados em direitos universais garantidos pelo Estado de bem-estar social.
+
   REF             : verif-01-03-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Reconhecer perspectiva.
       Micro-habilidade / cabeçalho: "Quem é reconhecido como cidadão: perspectivas em disputa".
       Exemplo-âncora (do capítulo): Caso dos apátridas após a Primeira Guerra Mundial: milhões de pessoas (russos brancos emigrados, armênios, judeus desnacionalizados pela Alemanha nazista) perderam a nacionalidade de seus Estados de origem e não foram aceitas como cidadãos em nenhum outro Estado. Não tinham a quem recorrer para reivindicar liberdade, voto ou proteção social — não porque esses direitos não existissem em alguma constituição, mas porque nenhum Estado se considerava responsável por garanti-los a essas pessoas. A condição de apátrida revelou que os 'direitos humanos universais' dependiam, na prática, de um Estado disposto a reconhecê-los.
+
+  REF             : verif-01-03-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Quem é reconhecido como cidadão: perspectivas em disputa".
+      Exemplo-âncora (do capítulo): A leitura segundo a qual a exclusão se resolve estendendo progressivamente os mesmos direitos ao grupo excluído — as mulheres são incluídas pelo sufrágio, os trabalhadores pelos direitos sociais — e o Estado-nação funciona como o espaço inclusivo onde a cidadania se amplia. Essa leitura ilumina a conquista gradual de direitos, mas deixa em segundo plano uma forma mais radical de exclusão.
 
   REF             : verif-01-03-s5   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Movimentos sociais e a ampliação dos direitos".
       Exemplo-âncora (do capítulo): O movimento sufragista britânico ilustra a cadeia causal completa: (1) mulheres eram excluídas do direito de voto; (2) organizaram-se na WSPU (1903) e em outras associações; (3) adotaram repertórios que incluíam marchas, greves de fome, interrupção de sessões parlamentares e desobediência civil; (4) geraram pressão sobre o parlamento e cobertura intensa na imprensa, alterando a opinião pública ao longo de duas décadas; (5) o parlamento aprovou o voto feminino parcial em 1918 e pleno em 1928. No Brasil, o movimento liderado por Bertha Lutz seguiu trajetória análoga: organização da Federação Brasileira pelo Progresso Feminino (1922), petições ao legislativo, campanha pública, e conquista do voto feminino no Código Eleitoral de 1932.
 
+  REF             : verif-01-03-s5-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Movimentos sociais e a ampliação dos direitos".
+      Exemplo-âncora (do capítulo): O mecanismo de pressão em duas vias descrito no bloco: por via institucional, os movimentos atuam dentro das estruturas do Estado (lobby junto a parlamentares, conselhos consultivos, apresentação de projetos de lei); por via extrainstitucional, atuam sobre a opinião pública (protestos de rua, campanhas na imprensa, greves de fome). O capítulo afirma que sem a pressão institucional as demandas não chegavam ao legislativo e que sem a pressão extrainstitucional não havia incentivo político para que parlamentares as aprovassem.
+
   REF             : verif-01-03-s6   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Aplicar.
       Micro-habilidade / cabeçalho: "Aplicando o conceito de cidadania: a luta das trabalhadoras domésticas por direitos".
+
+  REF             : verif-01-03-s6-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Aplicar.
+      Micro-habilidade / cabeçalho: "Aplicando o conceito de cidadania: a luta das trabalhadoras domésticas por direitos".
+      Exemplo-âncora (do capítulo): O mesmo caso das trabalhadoras domésticas, sob outra integração de conceitos: a categoria possuía os componentes civil e político da cidadania, mas não o social (jornada regulamentada, hora extra, FGTS, seguro-desemprego) — uma cidadania formalmente incompleta na classificação de Marshall. A aprovação da Emenda Constitucional nº 72/2013 e da Lei Complementar nº 150/2015 incluiu o componente social, ilustrando a tese de Marshall de que a cidadania se amplia por etapas: a categoria passou de uma cidadania incompleta para uma cidadania mais ampla.
 
   REF             : aplicar-01-03   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Aplicar.
@@ -123,24 +196,50 @@ CAPÍTULO 01-04 — Como a relação entre sociedade civil e Estado determina se
       Conceito-âncora: Estado ampliado (Gramsci).
       Exemplo-âncora (do capítulo): Durante a ditadura militar brasileira (1964–1985), o governo controlava o aparelho coercitivo (sociedade política), mas a Igreja Católica — por meio das Comunidades Eclesiais de Base (CEBs) — organizava trabalhadores rurais e urbanos, produzia cartilhas sobre direitos e abrigava reuniões de oposição. A Igreja operava na sociedade civil, disputando a hegemonia cultural contra o regime sem ocupar cargos no governo.
 
+  REF             : verif-01-04-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é o Estado ampliado".
+      Conceito-âncora: Hegemonia (na sociedade civil) × coerção (na sociedade política).
+      Exemplo-âncora (do capítulo): O capítulo afirma que a dominação política não se sustenta apenas pela força: um governo pode controlar o exército e a polícia, mas, sem o consentimento de parcelas significativas da população, enfrenta resistência permanente. A hegemonia é exatamente esse processo de construção do consentimento — quando um grupo consegue apresentar seus interesses particulares como interesses de toda a sociedade, fazendo sua visão de mundo ser aceita como natural. Durante a ditadura militar (1964–1985), a Igreja, pelas CEBs, disputava essa hegemonia na sociedade civil, sem ocupar cargos no governo nem deter a coerção.
+
   REF             : verif-01-04-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Formas de organização da sociedade civil".
       Exemplo-âncora (do capítulo): Tocqueville, ao observar os Estados Unidos na década de 1830, registrou que os americanos formavam associações para quase tudo — construir hospitais, fundar escolas, organizar bibliotecas. Uma associação de moradores de um bairro que se reúne para pressionar a prefeitura a instalar saneamento básico é uma organização associativa: seu papel é reunir indivíduos que isoladamente não teriam força para influenciar o governo. Já uma rádio comunitária que transmite informações sobre direitos trabalhistas no mesmo bairro é uma organização comunicativa: seu papel é fazer circular informação que alimenta o debate público.
 
+  REF             : verif-01-04-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Formas de organização da sociedade civil".
+      Exemplo-âncora (do capítulo): Casos do bloco que incluem o tipo cultural-educativo: uma escola pública que inclui o estudo dos direitos humanos no currículo e uma igreja que organiza grupos de reflexão sobre desigualdade social são organizações culturais e educativas, cuja função predominante é produzir e difundir valores e visões de mundo (espaços de disputa pela hegemonia cultural); um sindicato ou uma associação de moradores é uma organização associativa (reunir indivíduos para a ação coletiva); um jornal ou uma rádio comunitária é uma organização comunicativa (fazer circular informação e debate público).
+
   REF             : verif-01-04-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Comparar.
       Micro-habilidade / cabeçalho: "Tocqueville, Gramsci e Habermas — três concepções de sociedade civil".
-      Exemplo-âncora (do capítulo): |
+      Exemplo-âncora (do capítulo): Uma associação de moradores que se organiza e participa de um conselho municipal. Para Tocqueville, ela é um contrapeso externo ao Estado — escola de hábitos cívicos que o limita desde fora. Para Gramsci, ela é parte do próprio Estado ampliado, arena onde se disputa a hegemonia (o consentimento), e não apenas cooperação cívica. Para Habermas (e Arato e Cohen), ela integra a esfera pública: espaço de deliberação racional que medeia entre os cidadãos e o sistema político, sem se confundir com o Estado nem com o mercado.
+
+  REF             : verif-01-04-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Tocqueville, Gramsci e Habermas — relação com o Estado e tipo de ação".
+      Exemplo-âncora (do capítulo): Dimensões de comparação: a relação da sociedade civil com o Estado e o tipo de ação característica. Para Tocqueville, ela é um contrapeso externo ao poder, e a ação típica é a associação voluntária para fins comuns. Para Gramsci, ela é parte constitutiva do Estado ampliado, e a ação típica é a luta cultural por hegemonia travada dentro das instituições. Para Habermas (e Arato e Cohen), ela é a esfera pública que medeia entre o mundo da vida dos cidadãos e o sistema político-administrativo, e a ação típica é a comunicação argumentativa — influenciando o sistema sem se confundir com o Estado nem com o mercado.
 
   REF             : verif-01-04-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Sociedade civil, autoritarismo e redemocratização no Brasil".
       Exemplo-âncora (do capítulo): As greves do ABC paulista (1978–1980) ilustram a cadeia causal completa. A ditadura havia colocado sindicatos sob intervenção estatal desde 1964. Operários metalúrgicos de São Bernardo do Campo, sob liderança de Luiz Inácio Lula da Silva, organizaram paralisações sem autorização do Ministério do Trabalho, usando assembleias no Estádio de Vila Euclides. O governo reagiu com intervenção no sindicato e prisão de líderes, mas a mobilização persistiu com apoio de CEBs, advogados e imprensa alternativa. O resultado foi a criação do Partido dos Trabalhadores (1980) e da Central Única dos Trabalhadores (1983), que se tornaram atores centrais na campanha pela redemocratização e na Assembleia Constituinte de 1987–1988.
 
+  REF             : verif-01-04-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Sociedade civil, autoritarismo e redemocratização no Brasil".
+      Exemplo-âncora (do capítulo): A cadeia geral descrita no bloco, ilustrada pela abertura política: a repressão do regime (AI-2 de 1965, que impôs o bipartidarismo; AI-5 de 1968, que fechou o Congresso e restringiu reunião e associação) não eliminou a sociedade civil, que se reorganizou em espaços fora do controle direto do Estado (CEBs, imprensa alternativa, movimentos sociais); a acumulação dessa pressão forçou concessões — a Lei da Anistia e o fim do bipartidarismo (1979), as eleições diretas para governadores (1982) e a campanha das Diretas Já (1983–1984) — culminando na institucionalização da participação da sociedade civil na Constituição de 1988.
+
   REF             : verif-01-04-s5   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Aplicar.
       Micro-habilidade / cabeçalho: "Aplicando o conceito de Estado ampliado — conselhos municipais de saúde".
+
+  REF             : verif-01-04-s5-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Aplicar.
+      Micro-habilidade / cabeçalho: "Aplicando o conceito de Estado ampliado — conselhos municipais de saúde".
+      Exemplo-âncora (do capítulo): O mesmo caso dos Conselhos Municipais de Saúde, sob outra integração de conceitos: a regra de paridade (50% representantes de usuários do SUS — associações de moradores, movimentos de pacientes — e 50% profissionais, gestores e prestadores) faz do conselho o ponto de encontro institucionalizado entre a sociedade política (a Secretaria Municipal de Saúde, parte do aparelho governamental) e a sociedade civil (as entidades de usuários). Nele, as associações influenciam decisões do Estado sobre prioridades de saúde sem buscar tomar o poder estatal diretamente.
 
   REF             : aplicar-01-04   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Aplicar.
@@ -148,5 +247,5 @@ CAPÍTULO 01-04 — Como a relação entre sociedade civil e Estado determina se
     Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
 
 =================================================================
-TOTAL: 23 verificação(ões) necessária(s)
+TOTAL: 42 verificação(ões) necessária(s)
 =================================================================

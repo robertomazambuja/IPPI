@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1-b",
+  "pergunta": "Na Guerra Civil Inglesa, os realistas justificavam o poder de governar pelo direito divino dos reis, e os parlamentaristas, pela representação dos proprietários. Hobbes recusou as duas fontes: a autoridade do soberano só se justifica porque os indivíduos, para escapar da violência do estado de natureza, teriam concordado em transferir-lhe sua liberdade. Por que essa é uma resposta de contrato social, e não um apelo ao direito divino nem à representação dos proprietários?",
+  "alternativas": {
+    "A": "Porque a resposta de Hobbes apenas atualiza o direito divino dos reis: a autoridade continua vindo de uma fonte superior e externa aos indivíduos, sendo essa origem superior o que caracteriza o contrato social.",
+    "B": "Porque a autoridade do soberano não é deduzida de uma vontade divina nem da posição social dos proprietários, mas de um acordo entre os próprios indivíduos, que transferem liberdade em troca de segurança.",
+    "C": "Porque, para haver contrato social, é preciso que ele tenha sido um documento real, assinado em data determinada pelos indivíduos, o que o diferencia do caráter apenas declarado do direito divino.",
+    "D": "Porque há um acordo entre indivíduos, mas sua finalidade, em Hobbes, é distribuir igualmente a propriedade entre todos, e não escapar da violência mútua do estado de natureza."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque distingue o fundamento contratualista das fontes rivais: a autoridade vem de um acordo entre os próprios indivíduos, não da vontade divina nem da posição social dos proprietários. A é vocabulário do conceito rival: apresenta o direito divino (fonte superior e externa) como se fosse o fundamento do contrato social. C é restrição indevida: exige que o contrato seja um documento real assinado, quando o capítulo o trata como argumento lógico-filosófico, real ou hipotético. D nomeia corretamente 'acordo entre indivíduos' mas distorce a finalidade na segunda parte, trocando a fuga da violência pela distribuição igualitária da propriedade (vocabulário análogo)."
+}

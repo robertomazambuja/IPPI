@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-04-s2-b",
+  "pergunta": "Classifique três organizações da sociedade civil pela função predominante: uma escola pública que estuda direitos humanos e uma igreja que organiza grupos de reflexão sobre desigualdade; um sindicato e uma associação de moradores; um jornal e uma rádio comunitária.",
+  "alternativas": {
+    "A": "A escola e a igreja são organizações comunicativas, pois fazem circular informação; o sindicato e a associação são culturais e educativas, pois formam visões de mundo; o jornal e a rádio são associativas, pois reúnem pessoas para a ação coletiva em torno de interesses comuns.",
+    "B": "A classificação depende da aparência institucional de cada uma: por ser uma instituição religiosa, a igreja é cultural; por usar equipamentos, a rádio é comunicativa; por ter sede própria, o sindicato é associativo, qualquer que seja a função que exerçam.",
+    "C": "Como todas as organizações reúnem pessoas em algum grau, todas devem ser classificadas como associativas, bastando esse traço comum para enquadrá-las na mesma categoria, sem distinguir a função predominante de cada uma.",
+    "D": "A escola e a igreja são culturais e educativas (difundem valores e visões de mundo); o sindicato e a associação são associativos (reúnem indivíduos para a ação coletiva); o jornal e a rádio são comunicativos (fazem circular informação e debate)."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque classifica os três pares pela função predominante: difundir valores (cultural e educativa), reunir para agir (associativa) e fazer circular informação (comunicativa). A é categoria vizinha (vocabulário do rival): troca as três categorias entre os pares de organizações. B é campo semântico sem ancoragem: usa a aparência institucional (ser religiosa, usar equipamentos, ter sede) como critério, em vez da função. C é restrição indevida: olha um só traço ('reúnem pessoas') e classifica todas como associativas, apagando as funções distintas."
+}

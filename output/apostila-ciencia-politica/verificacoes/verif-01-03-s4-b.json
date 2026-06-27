@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s4-b",
+  "pergunta": "Há uma leitura segundo a qual a exclusão se resolve estendendo progressivamente os mesmos direitos ao grupo excluído — as mulheres pelo sufrágio, os trabalhadores pelos direitos sociais —, sendo o Estado-nação o espaço onde a cidadania se amplia. Essa leitura ilumina a conquista gradual de direitos, mas deixa algo em segundo plano. De qual perspectiva ela parte e o que ela não capta?",
+  "alternativas": {
+    "A": "Parte de uma descrição neutra e factual da exclusão, sem nenhum ponto de vista situado, e por isso capta integralmente todas as formas de exclusão, inclusive a forma radical vivida pelos que perdem qualquer pertencimento político a uma comunidade estatal.",
+    "B": "Parte da perspectiva de Hannah Arendt, que, a partir da experiência dos apátridas, descreve a exclusão como simples extensão gradual de direitos dentro do Estado-nação já existente.",
+    "C": "Parte de um 'viés ideológico' genérico, comum a qualquer autor do século XX, sem que se possa identificar a quem especificamente pertence a posição ou a que experiência concreta ela se liga.",
+    "D": "Parte da perspectiva de Marshall, que vê a exclusão como problema de extensão de direitos dentro do Estado-nação, e deixa em segundo plano a exclusão radical dos apátridas, que perdem o próprio 'direito a ter direitos' descrito por Arendt."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque identifica a perspectiva de onde a leitura parte (Marshall, exclusão como extensão dentro do Estado-nação) e o que ela deixa em segundo plano (a exclusão radical dos apátridas, o 'direito a ter direitos' de Arendt). A trata a leitura como neutra/factual, negando que ela seja situada, e afirma falsamente que capta todas as formas de exclusão. B é vocabulário do sujeito rival: atribui a leitura a Arendt, quando ela é de Marshall. C usa 'viés ideológico' genérico sem ancorar a quem a posição pertence."
+}

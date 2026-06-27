@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s6-b",
+  "pergunta": "As trabalhadoras domésticas possuíam os componentes civil e político da cidadania, mas não o social (jornada regulamentada, hora extra, FGTS, seguro-desemprego) — uma cidadania incompleta na classificação de Marshall. A Emenda Constitucional nº 72/2013 e a Lei Complementar nº 150/2015 incluíram o componente social. Qual alternativa aplica, de forma integrada, a classificação de Marshall e a tese da expansão da cidadania por etapas?",
+  "alternativas": {
+    "A": "A categoria tinha uma lacuna no componente social da cidadania, faltando-lhe jornada e FGTS; isso basta para entender o caso, sem necessidade de recorrer à tese de que a cidadania se amplia historicamente por etapas.",
+    "B": "A inclusão da jornada e do FGTS ampliou o componente político da cidadania das trabalhadoras, mostrando como a cidadania se expande por etapas ao acrescentar novos direitos políticos à categoria.",
+    "C": "A categoria tinha cidadania incompleta por faltar o componente social (Marshall); a inclusão desse componente pela EC 72/2013 ilustra a tese da expansão por etapas, tornando a cidadania mais ampla.",
+    "D": "O caso é de apatridia no sentido de Arendt: as trabalhadoras não pertenciam a nenhuma comunidade política e por isso não tinham acesso a direito algum, situação superada apenas em 2013."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque integra os dois conceitos: a classificação de Marshall (faltava o componente social) e a tese da expansão por etapas (a inclusão desse componente tornou a cidadania mais ampla). A é restrição indevida: aplica só a classificação (aponta a lacuna social) sem a tese da expansão por etapas. B é vocabulário análogo: parece integrar, mas é contraditório — trata jornada e FGTS como componente político, quando são sociais. D é vocabulário do conceito rival: enquadra o caso como apatridia de Arendt, quando a categoria sempre pertenceu à comunidade política e tinha direitos civis e políticos."
+}

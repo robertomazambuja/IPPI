@@ -40,6 +40,12 @@
       Conceito-âncora: Cidadania.
       Exemplo-âncora (do capítulo): Uma trabalhadora doméstica brasileira em 2013: ela possuía direito civil de ir e vir (liberdade individual), direito político de votar e ser votada (participação eleitoral), mas só passou a ter direito social à jornada de trabalho regulamentada com a Emenda Constitucional nº 72/2013 — antes disso, a categoria estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde 1943.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s1-b" status="externo">
+        <o-que-verificar>Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é cidadania".
+      Conceito-âncora: Cidadania.
+      Exemplo-âncora (do capítulo): O capítulo afirma que a cidadania não se limita à posse de um documento de identidade ou à nacionalidade registrada em um passaporte: é o pertencimento pleno a uma comunidade política, expresso na articulação de três tipos de direitos (civis, políticos e sociais), de modo que a ausência de um deles compromete o exercício pleno dos demais. Por isso a trabalhadora doméstica brasileira que tinha direitos civis e políticos, mas não o direito social à jornada regulamentada antes de 2013, possuía uma cidadania incompleta — mesmo com documento e título de eleitor.</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <bloco id="bloco-2" palavras="408" operacao="Classificar">
@@ -84,6 +90,11 @@
       Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
       Exemplo-âncora (do capítulo): Em um regime democrático como o Brasil pós-1988, um cidadão exerce os três tipos simultaneamente: invoca direito civil ao recorrer ao Judiciário contra uma detenção arbitrária; exerce direito político ao votar nas eleições municipais; e acessa direito social ao matricular os filhos em escola pública gratuita. Em um regime autoritário como o Brasil entre 1968 e 1978 (vigência do AI-5), direitos políticos foram suprimidos (cassação de mandatos, suspensão de eleições diretas), direitos civis foram restringidos (censura, prisão sem mandado judicial), enquanto alguns direitos sociais foram mantidos ou ampliados (expansão do FGTS, criação do PIS).</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s2-b" status="externo">
+        <o-que-verificar>Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
+      Exemplo-âncora (do capítulo): Casos concretos e a instituição que garante cada direito: um cidadão que recorre ao Judiciário contra uma detenção arbitrária (garantia dos tribunais de justiça); um cidadão que vota nas eleições municipais e pode formar um partido (garantia do parlamento e do sistema eleitoral); um cidadão que matricula os filhos em escola pública gratuita e recebe salário mínimo (garantia do sistema de serviços sociais do Estado).</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <bloco id="bloco-3" palavras="504" operacao="Sequenciar">
@@ -112,6 +123,11 @@
         <o-que-verificar>Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
       Exemplo-âncora (do capítulo): Linha do tempo da expansão do sufrágio na Inglaterra: 1689 — Bill of Rights garante liberdades civis básicas (petição, julgamento por júri); 1832 — Reform Act amplia o voto masculino a setores da classe média urbana; 1903 — fundação da WSPU por Emmeline Pankhurst, que adota ações diretas (greves de fome, manifestações de rua, desobediência civil); 1918 — Representation of the People Act concede voto a mulheres acima de 30 anos com propriedade; 1928 — Equal Franchise Act iguala a idade de voto entre homens e mulheres (21 anos); 1948 — National Health Service Act cria o sistema público de saúde britânico (NHS), consolidando direitos sociais.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s3-b" status="externo">
+        <o-que-verificar>Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
+      Exemplo-âncora (do capítulo): A ordem de Marshall entre os três tipos de direito, com cada etapa dependendo da anterior: (1) direitos civis (séc. XVII–XVIII) — liberdades individuais que estabeleceram uma esfera de proteção contra o poder do Estado e serviram de base para reivindicar os direitos seguintes; (2) direitos políticos (séc. XIX) — ampliação do sufrágio sob pressão de grupos que, já protegidos por direitos civis, estavam excluídos da participação política; (3) direitos sociais (séc. XX, após 1945) — educação, saúde e previdência transformados em direitos universais garantidos pelo Estado de bem-estar social.</o-que-verificar>
       </sidebar>
     </bloco>
 
@@ -153,6 +169,11 @@
       Micro-habilidade / cabeçalho: "Quem é reconhecido como cidadão: perspectivas em disputa".
       Exemplo-âncora (do capítulo): Caso dos apátridas após a Primeira Guerra Mundial: milhões de pessoas (russos brancos emigrados, armênios, judeus desnacionalizados pela Alemanha nazista) perderam a nacionalidade de seus Estados de origem e não foram aceitas como cidadãos em nenhum outro Estado. Não tinham a quem recorrer para reivindicar liberdade, voto ou proteção social — não porque esses direitos não existissem em alguma constituição, mas porque nenhum Estado se considerava responsável por garanti-los a essas pessoas. A condição de apátrida revelou que os 'direitos humanos universais' dependiam, na prática, de um Estado disposto a reconhecê-los.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s4-b" status="externo">
+        <o-que-verificar>Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Quem é reconhecido como cidadão: perspectivas em disputa".
+      Exemplo-âncora (do capítulo): A leitura segundo a qual a exclusão se resolve estendendo progressivamente os mesmos direitos ao grupo excluído — as mulheres são incluídas pelo sufrágio, os trabalhadores pelos direitos sociais — e o Estado-nação funciona como o espaço inclusivo onde a cidadania se amplia. Essa leitura ilumina a conquista gradual de direitos, mas deixa em segundo plano uma forma mais radical de exclusão.</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <bloco id="bloco-5" palavras="526" operacao="Mapear causalidade">
@@ -189,6 +210,11 @@
         <o-que-verificar>Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Movimentos sociais e a ampliação dos direitos".
       Exemplo-âncora (do capítulo): O movimento sufragista britânico ilustra a cadeia causal completa: (1) mulheres eram excluídas do direito de voto; (2) organizaram-se na WSPU (1903) e em outras associações; (3) adotaram repertórios que incluíam marchas, greves de fome, interrupção de sessões parlamentares e desobediência civil; (4) geraram pressão sobre o parlamento e cobertura intensa na imprensa, alterando a opinião pública ao longo de duas décadas; (5) o parlamento aprovou o voto feminino parcial em 1918 e pleno em 1928. No Brasil, o movimento liderado por Bertha Lutz seguiu trajetória análoga: organização da Federação Brasileira pelo Progresso Feminino (1922), petições ao legislativo, campanha pública, e conquista do voto feminino no Código Eleitoral de 1932.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s5-b" status="externo">
+        <o-que-verificar>Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Movimentos sociais e a ampliação dos direitos".
+      Exemplo-âncora (do capítulo): O mecanismo de pressão em duas vias descrito no bloco: por via institucional, os movimentos atuam dentro das estruturas do Estado (lobby junto a parlamentares, conselhos consultivos, apresentação de projetos de lei); por via extrainstitucional, atuam sobre a opinião pública (protestos de rua, campanhas na imprensa, greves de fome). O capítulo afirma que sem a pressão institucional as demandas não chegavam ao legislativo e que sem a pressão extrainstitucional não havia incentivo político para que parlamentares as aprovassem.</o-que-verificar>
       </sidebar>
     </bloco>
 
@@ -235,6 +261,11 @@
       <sidebar tipo="verificacao" ref="verif-01-03-s6" status="externo">
         <o-que-verificar>Operação: Aplicar.
       Micro-habilidade / cabeçalho: "Aplicando o conceito de cidadania: a luta das trabalhadoras domésticas por direitos".</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s6-b" status="externo">
+        <o-que-verificar>Operação: Aplicar.
+      Micro-habilidade / cabeçalho: "Aplicando o conceito de cidadania: a luta das trabalhadoras domésticas por direitos".
+      Exemplo-âncora (do capítulo): O mesmo caso das trabalhadoras domésticas, sob outra integração de conceitos: a categoria possuía os componentes civil e político da cidadania, mas não o social (jornada regulamentada, hora extra, FGTS, seguro-desemprego) — uma cidadania formalmente incompleta na classificação de Marshall. A aprovação da Emenda Constitucional nº 72/2013 e da Lei Complementar nº 150/2015 incluiu o componente social, ilustrando a tese de Marshall de que a cidadania se amplia por etapas: a categoria passou de uma cidadania incompleta para uma cidadania mais ampla.</o-que-verificar>
       </sidebar>
     </bloco>
 

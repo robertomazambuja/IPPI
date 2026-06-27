@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-04-s5-b",
+  "pergunta": "Nos Conselhos Municipais de Saúde, a paridade (50% representantes de usuários do SUS — associações de moradores, movimentos de pacientes — e 50% profissionais, gestores e prestadores) faz do conselho o ponto de encontro entre a Secretaria Municipal de Saúde e as entidades de usuários, que influenciam decisões sobre prioridades de saúde sem buscar tomar o poder estatal. Qual alternativa aplica, de forma integrada, o conceito de Estado ampliado e o ponto de Arato e Cohen?",
+  "alternativas": {
+    "A": "O conselho é o encontro institucionalizado entre sociedade política (a Secretaria) e sociedade civil (as entidades de usuários), na paridade (Estado ampliado); nele as associações influenciam as decisões do Estado sem buscar tomar o poder estatal (Arato e Cohen).",
+    "B": "O conselho é apenas o ponto de encontro institucionalizado entre a Secretaria e as entidades de usuários, na lógica do Estado ampliado; o fato de as associações influenciarem sem tomar o poder estatal não acrescenta nada relevante à compreensão do funcionamento do conselho.",
+    "C": "Na paridade do conselho, a sociedade civil encontra a sociedade política e, ao influenciar as decisões, toma diretamente para si o poder da Secretaria de Saúde, exercendo o controle estatal que define o Estado ampliado de Gramsci.",
+    "D": "O conselho é uma resposta de mobilização a um regime autoritário, em que as associações de usuários, como os metalúrgicos do ABC, pressionam pela queda do governo por meio da paralisação dos serviços de saúde."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque integra os dois conceitos: o Estado ampliado (encontro institucionalizado entre sociedade política e civil, materializado na paridade) e o ponto de Arato e Cohen (a sociedade civil influencia o sistema sem buscar tomar o poder estatal). B é restrição indevida: aplica só o Estado ampliado e descarta o ponto de Arato e Cohen como irrelevante. C é vocabulário análogo: parece integrar, mas é contraditório, ao tratar a influência como tomada direta do poder estatal. D é vocabulário do conceito rival: enquadra o conselho como resposta de mobilização a um regime autoritário (cadeia do ABC), que pertence a outro bloco."
+}

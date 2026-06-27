@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capitulo id="01-01" titulo="Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?" palavras_total="2091">
+  <cabecalho>
+    <habilidade>EM13CHS603 — Analisar a formação de diferentes países, povos e nações e de suas experiências políticas e de exercício da cidadania, aplicando conceitos políticos básicos (Estado, poder, formas, sistemas e regimes de governo, soberania etc.).</habilidade>
+    <operacao_principal>Mapear causalidade</operacao_principal>
+    <pergunta_capitulo>Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?</pergunta_capitulo>
+    <por_que_importa>Este capítulo fornece os conceitos de poder, dominação e Estado que são pré-requisitos para responder por que obedecemos ao Estado, mostrando como a centralização política produziu o monopólio estatal da violência legítima.</por_que_importa>
+  </cabecalho>
+
+  <mapa-progressao>
+    <passo ordem="1" bloco="bloco-1">Definir</passo>
+    <passo ordem="2" bloco="bloco-2">Classificar</passo>
+    <passo ordem="3" bloco="bloco-3">Sequenciar</passo>
+    <passo ordem="4" bloco="bloco-4">Mapear causalidade</passo>
+  </mapa-progressao>
+
+  <corpo>
+
+    <bloco id="bloco-1" palavras="338" operacao="Definir">
+      <micro-habilidade>Definir poder e dominação como categorias centrais da vida política</micro-habilidade>
+      <resumo-aluno>Você vai entender a diferença entre impor sua vontade pela força e ser obedecido porque sua autoridade é considerada legítima, distinção que explica por que o Estado funciona de modo diferente de uma simples imposição.</resumo-aluno>
+      <secao id="sec-1" tipo="definicao">
+        <titulo>Poder e dominação: categorias centrais da vida política</titulo>
+        <conteudo>
+        <paragrafo>Poder (*Macht*) é a capacidade de um indivíduo ou grupo de impor sua vontade em uma relação social, mesmo contra resistência. Essa capacidade pode se manifestar em situações passageiras e instáveis, nas quais quem impõe sua vontade não conta necessariamente com a aceitação de quem obedece. A obediência, nesses casos, resulta de coerção direta, de ameaça ou de circunstâncias momentâneas, sem que o comandado reconheça a autoridade de quem comanda.</paragrafo>
+        <paragrafo>Dominação (*Herrschaft*) é um conceito distinto. Trata-se do poder estabilizado, aquele em que os comandados aceitam a autoridade de quem comanda como legítima. Diferentemente do poder simples, a obediência na dominação não depende apenas da força imediata: ela se sustenta porque os subordinados reconhecem que quem dá ordens tem o direito de fazê-lo. Essa aceitação pode se fundar em diferentes bases (tradição, legalidade ou qualidades pessoais do líder), mas o elemento comum é que os comandados consideram a autoridade válida.</paragrafo>
+        <paragrafo>A diferença entre poder e dominação se torna clara em situações concretas. Um assaltante armado impõe sua vontade à vítima: há poder, porque a vontade de um prevalece sobre a do outro, mas não há legitimidade, porque a vítima não reconhece o direito do assaltante de comandá-la. Um juiz, por outro lado, ordena a prisão de um condenado, e o réu obedece porque reconhece a autoridade do tribunal como válida. Nos dois casos há imposição de vontade, mas apenas no segundo há aceitação da autoridade como legítima. Para a análise política, essa distinção é decisiva: o Estado funciona com base na dominação, não apenas no poder bruto.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Max Weber (1864–1920)</nome>
+          <pais>Alemanha</pais>
+          <descricao>Max Weber (1864–1920), sociólogo alemão e professor na Universidade de Munique, formulou essas definições em *Economia e Sociedade* (1922, publicação póstuma). Weber define poder como "toda probabilidade de impor a própria vontade numa relação social, mesmo contra resistências" e distingue esse conceito de dominação, que pressupõe a probabilidade de encontrar obediência a uma ordem de determinado conteúdo entre pessoas identificáveis.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>WEBER, Max. *Economia e Sociedade*. Brasília: Editora UnB, 2004, vol. 1, cap. I, §16.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s1" status="externo">
+        <o-que-verificar>Operação: Definir.
+      Micro-habilidade / cabeçalho: "Poder e dominação: categorias centrais da vida política".
+      Conceito-âncora: Poder (Macht) e dominação (Herrschaft).
+      Exemplo-âncora (do capítulo): Um assaltante armado impõe sua vontade à vítima (poder sem legitimidade). Um juiz ordena a prisão de um condenado e o réu obedece porque reconhece a autoridade do tribunal (dominação legítima). Nos dois casos há imposição de vontade, mas apenas no segundo há aceitação da autoridade como válida.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-2" palavras="513" operacao="Classificar">
+      <micro-habilidade>Classificar tipos de dominação legítima segundo a fonte de legitimação do poder</micro-habilidade>
+      <resumo-aluno>Você vai aprender a separar diferentes formas de autoridade política segundo a razão que leva as pessoas a obedecer, seja o costume, a regra impessoal ou a admiração por qualidades pessoais de quem comanda.</resumo-aluno>
+      <secao id="sec-1" tipo="classificacao">
+        <introducao>
+        <paragrafo>Se a dominação se distingue do poder simples por envolver aceitação da autoridade como legítima, uma pergunta decorre dessa definição: de onde vem essa legitimidade? Weber classifica as formas de dominação legítima segundo um critério principal: a fonte que sustenta a obediência dos comandados. Essa fonte pode ser a tradição, a legalidade ou o carisma, e cada uma delas define um tipo diferente de dominação. Weber os apresenta como tipos puros, modelos analíticos que não existem isolados na realidade, mas permitem identificar qual fonte de legitimidade predomina em cada arranjo político.</paragrafo>
+        </introducao>
+        <lista-subtipos>
+          <item tipo="subtipo" nome="Dominação tradicional">
+            <conteudo>
+            <paragrafo>**Dominação tradicional**</paragrafo>
+            <paragrafo>O primeiro tipo é a dominação tradicional, em que a obediência se funda no costume e na crença na santidade das tradições ancestrais. A autoridade de quem comanda provém do fato de que "sempre foi assim": a legitimidade está enraizada na repetição histórica de práticas e na convicção de que alterá-las seria uma violação da ordem estabelecida. Um exemplo concreto é o poder de um chefe tribal hereditário, cuja autoridade não depende de eleições nem de qualidades pessoais extraordinárias, mas da tradição que confere ao seu cargo um caráter quase sagrado.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Dominação racional-legal">
+            <conteudo>
+            <paragrafo>**Dominação racional-legal**</paragrafo>
+            <paragrafo>O segundo tipo é a dominação racional-legal, em que a obediência se dirige às regras impessoais estabelecidas por procedimento reconhecido, não à pessoa do governante. O que confere legitimidade ao comando é a lei: quem ocupa a posição de autoridade o faz porque foi investido do cargo conforme normas previamente definidas. Um delegado de polícia, por exemplo, exerce autoridade não por suas qualidades pessoais nem por herança familiar, mas porque foi nomeado segundo a legislação vigente. Se deixar o cargo, a autoridade permanece na função, não na pessoa.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Dominação carismática">
+            <conteudo>
+            <paragrafo>**Dominação carismática**</paragrafo>
+            <paragrafo>O terceiro tipo, distinto dos anteriores, é a dominação carismática, em que a obediência decorre das qualidades pessoais extraordinárias atribuídas ao líder. Enquanto a dominação tradicional se funda no costume e a racional-legal se funda na norma impessoal, a carismática se sustenta na devoção pessoal dos seguidores a alguém que consideram portador de capacidades excepcionais. Getúlio Vargas, entre 1930 e 1945, mobilizava adesão pessoal de trabalhadores urbanos que o identificavam como protetor, independentemente do cargo formal que ocupava. A legitimidade, nesse caso, residia na figura do líder, não na tradição nem na legalidade.</paragrafo>
+            </conteudo>
+          </item>
+        </lista-subtipos>
+      </secao>
+      <secao id="sec-2" tipo="conclusao-parcial">
+        <conteudo>
+        <paragrafo>Os três tipos se reconhecem em casos concretos do Brasil. O presidente da República exerce dominação racional-legal: foi eleito conforme a Constituição de 1988, e sua autoridade decorre do cargo, não de sua pessoa. Um pajé yanomami exerce dominação tradicional: sua autoridade é transmitida pelo costume do grupo e reconhecida pela comunidade como parte da ordem ancestral. Padre Cícero (1844–1934) exerceu dominação carismática no sertão nordestino: seus seguidores lhe atribuíam poderes pessoais de cura e profecia, e a obediência que prestavam dependia dessas qualidades extraordinárias percebidas, não de um cargo formal nem de uma tradição hereditária. Os três tipos coexistem em qualquer sociedade; o que varia é qual fonte de legitimidade predomina em cada relação de autoridade.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-01-01" tipo="sugerida">
+        <descricao>Quadro comparativo com 3 colunas (Dominação tradicional / Dominação racional-legal / Dominação carismática) e 3 linhas (Fonte de legitimidade / Base da obediência / Exemplo concreto no Brasil)</descricao>
+      </imagem>
+      <nota_fonte>WEBER, Max. *Economia e Sociedade*. Brasília: Editora UnB, 2004, vol. 1, cap. III.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s2" status="externo">
+        <o-que-verificar>Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três tipos de dominação legítima".
+      Exemplo-âncora (do capítulo): Critério de classificação aplicado ao Brasil contemporâneo: o presidente da República exerce dominação racional-legal (eleito conforme a Constituição de 1988); um pajé yanomami exerce dominação tradicional (autoridade transmitida por costume do grupo); um líder religioso como Padre Cícero (1844–1934) exerceu dominação carismática (seguidores atribuíam a ele poderes pessoais de cura e profecia).</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="fraca"/>
+
+    <bloco id="bloco-3" palavras="500" operacao="Sequenciar">
+      <micro-habilidade>Sequenciar as etapas de formação histórica do Estado moderno até a consolidação do monopólio da violência legítima</micro-habilidade>
+      <resumo-aluno>Você vai colocar em ordem as etapas que levaram de um poder político fragmentado entre vários senhores locais até a concentração da força em uma única autoridade central reconhecida em todo o território.</resumo-aluno>
+      <secao id="sec-1" tipo="sequencia">
+        <titulo>Da fragmentação feudal ao Estado moderno: etapas da centralização política</titulo>
+        <conteudo>
+        <paragrafo>O Estado moderno, tal como existe hoje, não surgiu de uma vez. Ele resultou de um processo longo, com etapas encadeadas ao longo de séculos, em que o poder político migrou de uma situação de fragmentação extrema para uma concentração progressiva nas mãos de uma autoridade central.</paragrafo>
+        <paragrafo>Entre os séculos V e XIII, o poder político na Europa estava fragmentado. No período feudal, múltiplos senhores exerciam coerção armada e cobravam tributos em seus próprios domínios, sem que existisse uma autoridade central unificada. Cada senhor feudal controlava um exército próprio, administrava a justiça local e extraía recursos dos camponeses sob sua proteção. O território que viria a ser a França, por exemplo, era governado por dezenas de senhores com poderes autônomos entre os séculos IX e XIII.</paragrafo>
+        <paragrafo>A etapa seguinte foi impulsionada pela pressão militar. Entre os séculos XIV e XVI, monarcas europeus passaram a concentrar forças militares, financiando exércitos permanentes com recursos extraídos por tributação centralizada. A Guerra dos Cem Anos (1337–1453) ilustra esse processo: o conflito prolongado forçou os reis franceses a criar um exército permanente sustentado por impostos reais, reunindo sob comando central o poder militar que antes estava disperso entre senhores locais.</paragrafo>
+        <paragrafo>Nesse mesmo período, a reflexão sobre o poder político ganhou autonomia intelectual. Em 1532, Nicolau Maquiavel publicou *O Príncipe*, obra que separou a análise do poder político da moral religiosa e descreveu as condições práticas para a conquista e manutenção do Estado. Maquiavel argumentou que o poder deveria ser examinado pelo que é, não pelo que deveria ser segundo critérios morais ou teológicos. Essa ruptura é considerada o marco de fundação da Ciência Política como campo de estudo autônomo.</paragrafo>
+        <paragrafo>A transformação seguinte veio da administração. Entre os séculos XVI e XVIII, formaram-se burocracias profissionais que substituíram a administração pessoal do senhor feudal por funcionários assalariados vinculados a regras impessoais. Na França, a monarquia passou a nomear intendentes (funcionários reais) para administrar as províncias, retirando poder dos senhores locais e submetendo o território a uma autoridade administrativa unificada.</paragrafo>
+        <paragrafo>Esse processo culminou, entre os séculos XIX e XX, na consolidação do Estado moderno como entidade que detém o monopólio legítimo do uso da força física dentro de um território definido. A partir de 1789, após a Revolução Francesa, o Estado francês consolidou esse monopólio por meio de uma força policial nacional, um código legal unificado e um exército sob comando central. Nenhum grupo privado podia exercer coerção armada sem autorização estatal. Weber sintetizou esse percurso histórico, no início do século XX, em uma definição analítica precisa.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Charles Tilly (1929–2008)</nome>
+          <pais>Estados Unidos</pais>
+          <descricao>Charles Tilly (1929–2008), sociólogo e cientista político norte-americano, professor na Universidade de Columbia, sistematizou essa análise em *Coerção, Capital e Estados Europeus* (1990). Tilly argumenta que os Estados modernos europeus se formaram por meio da combinação entre acumulação de meios de coerção (exércitos) e extração de recursos (tributação), num processo em que a guerra foi o principal motor da centralização política.</descricao>
+        </sidebar>
+      </secao>
+      <imagem ref="fig-01-01-02" tipo="sugerida">
+        <descricao>Linha do tempo com 5 marcos: fragmentação feudal (séc. V–XIII) → centralização militar e tributária (séc. XIV–XVI) → O Príncipe de Maquiavel (1532) → burocratização administrativa (séc. XVI–XVIII) → consolidação do Estado moderno com monopólio da violência legítima (séc. XIX–XX)</descricao>
+      </imagem>
+      <nota_fonte>TILLY, Charles. *Coerção, Capital e Estados Europeus (990–1992)*. São Paulo: Edusp, 1996.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s3" status="externo">
+        <o-que-verificar>Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Da fragmentação feudal ao Estado moderno: etapas da centralização política".
+      Exemplo-âncora (do capítulo): Linha do tempo da formação do Estado francês: (1) Séculos IX–XIII — dezenas de senhores feudais controlam exércitos próprios e cobram tributos no território que viria a ser a França. (2) 1337–1453 — a Guerra dos Cem Anos força os reis franceses a criar um exército permanente financiado por impostos reais, concentrando o poder militar. (3) Século XVI — a monarquia francesa passa a nomear intendentes (funcionários reais) para administrar as províncias, substituindo os poderes locais. (4) 1789 em diante — após a Revolução, o Estado francês consolida o monopólio da violência legítima com uma força policial nacional, um código legal unificado e um exército sob comando central.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-4" palavras="740" operacao="Mapear causalidade">
+      <micro-habilidade>Mapear relações causais entre a centralização do poder político e o monopólio estatal da violência</micro-habilidade>
+      <resumo-aluno>Você vai entender por que a disputa militar entre territórios levou à criação de exércitos permanentes, à cobrança centralizada de impostos e à concentração do uso legítimo da força em uma única autoridade.</resumo-aluno>
+      <secao id="sec-1" tipo="causa">
+        <conteudo>
+        <paragrafo>A formação do Estado moderno resultou de três processos causais interligados. O primeiro foi a competição militar entre unidades políticas europeias entre os séculos XIV e XVII. A necessidade de sobreviver a guerras constantes forçou governantes a concentrar recursos bélicos: quem não conseguia reunir forças suficientes era absorvido ou destruído por vizinhos mais organizados.</paragrafo>
+        <paragrafo>Desse primeiro processo derivou o segundo: a extração fiscal centralizada. Para financiar exércitos permanentes, governantes criaram aparatos burocráticos de cobrança de impostos, retirando esse poder dos senhores locais. A tributação deixou de ser prerrogativa dispersa entre múltiplos senhores e passou a ser monopólio do poder central.</paragrafo>
+        <paragrafo>O terceiro processo foi o desarmamento de poderes rivais internos. Milícias senhoriais, ordens religiosas armadas e bandos mercenários foram progressivamente eliminados ou absorvidos pelo poder central, de modo que nenhum grupo dentro do território pudesse manter capacidade militar autônoma sem autorização do governante.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="relacao-causal">
+        <conteudo>
+        <paragrafo>A combinação dessas três forças produziu um encadeamento causal preciso: competição militar entre unidades políticas gerou a necessidade de exércitos permanentes, que por sua vez exigiu centralização da tributação, que levou ao desarmamento de poderes locais, que resultou na concentração do uso legítimo da força nas mãos de uma única autoridade territorial. Na Inglaterra dos séculos XV e XVI, esse encadeamento é visível: a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada, e a dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa. O monopólio da violência estava consolidado no poder central.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="consequencia">
+        <conteudo>
+        <paragrafo>A consequência central desse processo foi o surgimento do monopólio estatal da violência legítima: apenas o Estado passou a ter o direito reconhecido de usar a força física para impor a ordem dentro de seu território. Esse monopólio não significa que o Estado nunca recorra à violência de modo ilegítimo; o conceito descreve uma pretensão institucional, não uma garantia empírica. Significa que somente o Estado reivindica para si o direito exclusivo ao uso da força, amparado não necessariamente em um consenso ativo, mas na crença socialmente difundida em sua legitimidade — crença que pode se fundar tanto no reconhecimento quanto na tradição, no hábito ou mesmo no temor.</paragrafo>
+        <paragrafo>Uma vez consolidado esse monopólio, outras questões se impuseram. A concentração do poder exigiu novas regras para definir quem governa e como se governa, dando origem a formas de governo organizadas: monarquias centralizadas, em que o poder se concentra em um soberano hereditário, e repúblicas, em que o governante é escolhido por procedimentos definidos. Essas formas passaram a se organizar em sistemas distintos, como o presidencialismo (em que o chefe de Estado é também chefe de governo, eleito diretamente) e o parlamentarismo (em que o chefe de governo depende da maioria no parlamento). A concentração do poder estatal abriu, ao mesmo tempo, a possibilidade de diferentes graus de participação popular, gerando a distinção entre regimes democráticos (com participação ampla e limites ao poder), autoritários (com restrição à participação e concentração de poder sem controles efetivos) e totalitários (com controle estatal sobre todas as esferas da vida social).</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Nicolau Maquiavel (1469–1527)</nome>
+          <pais>Itália</pais>
+          <descricao>Nicolau Maquiavel (1469–1527), diplomata e pensador político florentino, secretário da Segunda Chancelaria da República de Florença, antecipou a lógica desse processo em *O Príncipe* (1532). Maquiavel argumenta que a manutenção do Estado depende da capacidade do governante de concentrar os meios de força e utilizá-los com eficácia, independentemente de justificativas morais ou religiosas. O poder político deve ser analisado pelo que é, não pelo que deveria ser.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-4" tipo="sintese">
+        <conteudo>
+        <paragrafo>A centralização do poder político na Europa resultou de um processo causal em que a competição militar forçou governantes a concentrar recursos bélicos e tributários, desarmando poderes locais rivais. Esse processo produziu o Estado moderno como entidade que detém o monopólio legítimo do uso da força física em um território, conceito definido por Weber a partir da análise histórica sistematizada por autores como Tilly e antecipada pela ruptura analítica de Maquiavel. Uma vez consolidado esse monopólio, tornou-se necessário definir formas, sistemas e regimes de governo para organizar o poder centralizado.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-5" tipo="encadeamento">
+        <conteudo>
+        <paragrafo>O capítulo seguinte examinará como os pensadores contratualistas (Hobbes, Locke, Rousseau) responderam à pergunta que este capítulo deixa em aberto: se o Estado concentra o monopólio da violência legítima, o que fundamenta o direito de ele exercer esse poder sobre os indivíduos?</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-01-03" tipo="sugerida">
+        <descricao>Diagrama de processo causal com setas encadeadas: competição militar → necessidade de exércitos permanentes → centralização da tributação → desarmamento de poderes locais → monopólio da violência legítima → organização em formas e regimes de governo</descricao>
+      </imagem>
+      <nota_fonte>MAQUIAVEL, Nicolau. *O Príncipe*. São Paulo: Penguin-Companhia, 2010, caps. VI–VII.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s4" status="externo">
+        <o-que-verificar>Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Centralização do poder e monopólio estatal da violência: relações causais".
+      Exemplo-âncora (do capítulo): Na Inglaterra dos séculos XV–XVI, a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada. A dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Resultado: ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa — o monopólio da violência estava consolidado no poder central.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+  </corpo>
+
+  <rodape>
+    <sidebar tipo="aplicar-agora" ref="aplicar-01-01" status="externo">
+      <o-que-verificar>Operação principal do capítulo: Mapear causalidade.
+    Pergunta do capítulo: "Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?"
+    Síntese do capítulo: A centralização do poder político na Europa resultou de um processo causal em que a competição militar forçou governantes a concentrar recursos bélicos e tributários, desarmando poderes locais rivais. Esse processo produziu o Estado moderno como entidade que detém o monopólio legítimo do uso da força física em um território — conceito definido por Weber a partir da análise histórica sistematizada por autores como Tilly e antecipada pela ruptura analítica de Maquiavel. Uma vez consolidado esse monopólio, tornou-se necessário definir formas, sistemas e regimes de governo para organizar o poder centralizado.
+    Exemplo-âncora da seção principal: Na Inglaterra dos séculos XV–XVI, a Guerra das Rosas (1455–1487) enfraqueceu a nobreza feudal armada. A dinastia Tudor (1485–1603) aproveitou esse enfraquecimento para concentrar o controle militar, criar uma marinha real permanente e estabelecer tribunais reais que substituíram as justiças senhoriais. Resultado: ao final do período Tudor, nenhum nobre inglês podia manter exército próprio sem autorização da Coroa — o monopólio da violência estava consolidado no poder central.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.</o-que-verificar>
+    </sidebar>
+  </rodape>
+
+</capitulo>

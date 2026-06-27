@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-04-s3-b",
+  "pergunta": "Comparando Tocqueville, Gramsci e Habermas (com Arato e Cohen) quanto à relação da sociedade civil com o Estado e ao tipo de ação característica, qual alternativa atribui corretamente a posição de cada autor?",
+  "alternativas": {
+    "A": "Para Tocqueville, a sociedade civil é um contrapeso externo ao poder, e a ação típica é a associação voluntária; para Gramsci, é parte do Estado ampliado, e a ação típica é a luta cultural por hegemonia; para Habermas, é a esfera pública, e a ação típica é a comunicação argumentativa.",
+    "B": "Para Gramsci, a sociedade civil é um contrapeso externo ao poder, com a associação voluntária como ação típica; para Tocqueville, é a esfera pública da comunicação argumentativa entre os cidadãos; para Habermas, é parte do Estado ampliado, com a luta cultural por hegemonia como ação típica.",
+    "C": "Para os três autores, a sociedade civil é a esfera pública que medeia entre cidadãos e Estado por meio da comunicação argumentativa, distinguindo-se apenas pelo grau de proximidade que cada um vê entre essa esfera e o aparelho estatal.",
+    "D": "Para Gramsci, a sociedade civil é um contrapeso externo ao Estado, separado dele, cuja função é limitá-lo desde fora pela associação voluntária, e não uma arena interna de disputa pela hegemonia dentro do Estado ampliado."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque atribui a cada autor a relação com o Estado e o tipo de ação corretos: contrapeso externo/associação voluntária (Tocqueville), parte do Estado ampliado/luta por hegemonia (Gramsci) e esfera pública/comunicação argumentativa (Habermas). B é vocabulário do autor rival: descreve corretamente as posições, mas as atribui aos autores trocados. C é alternativa híbrida: uniformiza os três como 'esfera pública', apagando as diferenças. D inverte a tese de Gramsci, fazendo dele um contrapeso externo, quando para ele a sociedade civil é arena interna de disputa no Estado ampliado."
+}

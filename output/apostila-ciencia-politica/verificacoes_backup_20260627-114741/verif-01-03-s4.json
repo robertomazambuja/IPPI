@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s4",
+  "pergunta": "O caso dos apátridas após a Primeira Guerra Mundial — milhões de pessoas (russos brancos emigrados, armênios, judeus desnacionalizados pela Alemanha nazista) que perderam a nacionalidade de seus Estados de origem e não foram aceitas como cidadãs em nenhum outro Estado — revela os limites da extensão progressiva de direitos proposta por Marshall. Por que esse caso é mais bem explicado pela perspectiva de Hannah Arendt do que pela de Marshall, e a partir de que posição Arendt elabora essa perspectiva?",
+  "alternativas": {
+    "A": "Porque a perspectiva de Marshall pressupõe que a exclusão é um problema de extensão de direitos dentro de um Estado-nação já existente, enquanto os apátridas estavam fora de qualquer comunidade política que os reconhecesse; Arendt elabora o conceito de 'direito a ter direitos' a partir de sua própria experiência como apátrida sob o regime nazista, o que lhe permite identificar uma forma de exclusão mais radical do que a falta de extensão de um direito específico.",
+    "B": "Porque Arendt analisa o caso dos apátridas como uma fonte neutra de dados estatísticos sobre migração, sem qualquer relação entre sua biografia pessoal e a teoria que formula, o que tornaria sua perspectiva intercambiável com a de qualquer outro autor que estudasse o mesmo fenômeno.",
+    "C": "Porque a perspectiva mais adequada ao caso dos apátridas é a de Marshall, elaborada a partir da experiência histórica inglesa de expansão gradual de direitos dentro do Estado-nação, e não a de Arendt, que nunca vivenciou diretamente a condição de exclusão política que descreve.",
+    "D": "Porque a perspectiva de Arendt seria apenas um 'viés ideológico' próprio de pensadores europeus do século XX, sem relação específica com nenhuma experiência ou posição social concreta que se possa identificar no capítulo."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque relaciona o conteúdo da teoria de Arendt à posição de onde ela fala: sua condição de apátrida sob o nazismo é o que lhe permite ver uma exclusão que a extensão progressiva de Marshall não capta. B trata a fonte como neutra, negando exatamente o que o capítulo afirma — que a teoria de Arendt nasce de sua experiência situada, não de uma análise estatística desinteressada. C é vocabulário do sujeito rival: atribui a Arendt uma ausência de experiência pessoal com a exclusão que o capítulo explicitamente nega, e desloca para Marshall uma adequação ao caso que pertence a Arendt. D usa um termo plausível ('viés ideológico') sem ancorá-lo à posição específica e nomeada que o capítulo atribui a Arendt — sua experiência concreta como apátrida —, tratando a perspectiva como genérica e não situada."
+}

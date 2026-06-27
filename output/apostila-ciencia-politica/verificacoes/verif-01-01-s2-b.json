@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2-b",
+  "pergunta": "Classifique três autoridades quanto aos três tipos de dominação legítima de Weber: um chefe tribal hereditário, cuja autoridade provém do costume e da crença de que 'sempre foi assim'; um delegado de polícia nomeado conforme a legislação vigente, cuja autoridade está na função e não na pessoa; e Getúlio Vargas (1930–1945), que mobilizava a adesão pessoal de trabalhadores urbanos que o identificavam como protetor, independentemente do cargo formal.",
+  "alternativas": {
+    "A": "O critério decisivo é ter ou não cargo público: o delegado e Vargas, por ocuparem posições no aparelho do Estado, exercem dominação racional-legal, enquanto o chefe tribal, sem cargo oficial, exerce dominação tradicional.",
+    "B": "O chefe tribal exerce dominação racional-legal, pois sua autoridade é formalmente reconhecida pelo grupo; o delegado, dominação carismática, ligada à sua competência pessoal; e Vargas, dominação tradicional, por governar conforme costumes antigos e herdados.",
+    "C": "Os três casos são de dominação tradicional, pois em todos a obediência se apoia em hábitos enraizados na população, sendo a antiguidade do vínculo o único traço que importa para classificá-los.",
+    "D": "O chefe tribal exerce dominação tradicional (fonte: o costume); o delegado, dominação racional-legal (fonte: a norma que o nomeou para a função); e Vargas, dominação carismática (fonte: a adesão pessoal de quem o via como protetor)."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque classifica cada caso pelo critério oficial — a fonte de legitimidade —: costume (chefe tribal), norma impessoal (delegado) e adesão pessoal a qualidades extraordinárias (Vargas). A é campo semântico sem ancoragem: usa 'ter ou não cargo público' como critério, traço aparente que não corresponde à fonte de legitimidade e funde delegado e Vargas. B é categoria vizinha (vocabulário do rival): troca as fontes entre os três, atribuindo a cada um a categoria de outro. C é restrição indevida: olha um único traço (a antiguidade do vínculo) e classifica os três como tradicionais, ignorando norma e carisma."
+}

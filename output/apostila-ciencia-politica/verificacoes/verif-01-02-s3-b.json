@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s3-b",
+  "pergunta": "A lógica contratualista comum aos três autores segue uma sequência lógica (não cronológica): (1) condição pré-política, em que cada um regula sua própria conduta; (2) um problema torna essa condição insustentável; (3) deliberação racional, em que os indivíduos calculam ser vantajoso ceder parte da liberdade; (4) pacto fundador, que transfere poderes a uma autoridade; (5) instituição de uma forma de governo. Por que a etapa (3) só faz sentido depois da etapa (2)?",
+  "alternativas": {
+    "A": "Porque é a deliberação racional da etapa (3) que cria o problema insustentável da etapa (2): apenas depois de decidir ceder liberdade os indivíduos passam a enxergar a condição pré-política como um problema a ser resolvido.",
+    "B": "Porque a passagem de uma etapa à outra depende exclusivamente do medo da morte violenta, único fator capaz de mover os indivíduos, tal como descreve especificamente a teoria de Hobbes.",
+    "C": "Porque ceder parte da liberdade só é uma escolha racional se já houver um problema concreto a resolver; é o problema que torna a condição pré-política insustentável (etapa 2) que dá sentido ao cálculo da etapa (3).",
+    "D": "Porque na etapa (2) a condição pré-política se torna insustentável, e por isso os indivíduos, na etapa seguinte, transferem de imediato todo o poder a um soberano, sem nenhuma deliberação racional prévia."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque identifica o mecanismo da passagem lógica: a deliberação de ceder liberdade só é racional quando já existe um problema a resolver — é a etapa (2) que dá sentido à etapa (3). A inverte a relação, fazendo a deliberação (3) criar o problema (2). B é restrição indevida: atribui a passagem a um único fator (o medo da morte violenta), específico de Hobbes, e não comum aos três. D descreve corretamente a etapa (2), mas erra o mecanismo seguinte ao saltar a deliberação racional e ir direto à transferência total do poder (vocabulário análogo)."
+}
