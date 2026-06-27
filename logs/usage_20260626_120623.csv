@@ -1,0 +1,13 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-26T12:08:26,apostila-ciencia-politica,Agente 1,"1.1 Capítulo 1 — Poder, dominação e Estado",2,3,6029,5649,31224
+2026-06-26T12:10:33,apostila-ciencia-politica,Agente 1,1.2 Capítulo 2 — Contratualismo e fundamentos do Estado moderno,2,3,6361,13838,23909
+2026-06-26T12:12:54,apostila-ciencia-politica,Agente 1,1.3 Capítulo 3 — Cidadania e luta por direitos,2,3,7646,15563,24326
+2026-06-26T12:15:36,apostila-ciencia-politica,Agente 1,1.4 Capítulo 4 — Sociedade civil e o Estado ampliado,2,3,7749,15894,24678
+2026-06-26T12:17:59,apostila-ciencia-politica,Agente 2,"1.1 Capítulo 1 — Poder, dominação e Estado",3,4,5903,31652,45686
+2026-06-26T12:18:20,apostila-ciencia-politica,Agente 2,1.2 Capítulo 2 — Contratualismo e fundamentos do Estado moderno,4,5,6861,42521,83684
+2026-06-26T12:18:37,apostila-ciencia-politica,Agente 2,1.3 Capítulo 3 — Cidadania e luta por direitos,3,4,8217,37687,51267
+2026-06-26T12:18:53,apostila-ciencia-politica,Agente 4,1.2 Capítulo 2 — Contratualismo e fundamentos do Estado moderno,2,3,1663,11388,11200
+2026-06-26T12:19:28,apostila-ciencia-politica,Agente 4,"1.1 Capítulo 1 — Poder, dominação e Estado",2,3,5508,12821,7925
+2026-06-26T12:21:13,apostila-ciencia-politica,Agente 4,1.3 Capítulo 3 — Cidadania e luta por direitos,2,3,10232,14653,12843
+2026-06-26T12:39:58,apostila-ciencia-politica,Agente 2,1.4 Capítulo 4 — Sociedade civil e o Estado ampliado,3,4,8312,56890,31643
+2026-06-26T12:41:25,apostila-ciencia-politica,Agente 4,1.4 Capítulo 4 — Sociedade civil e o Estado ampliado,2,3,5419,17886,10458

@@ -1,0 +1,68 @@
+IMAGENS NECESSÁRIAS — Apostila: apostila-sociologia-trabalho
+Gerado em: 22/06/2026 15:44
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Quais relações causais as teorias sociológicas clássicas identificam entre a organização do trabalho e as formas de coesão, exploração e desigualdade nas sociedades capitalistas?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 etapas: (1) Cercamentos na Inglaterra, séc. XVI-XVIII — separação dos meios de produção; (2) Formação do mercado de trabalho — força de trabalho como mercadoria; (3) Sistema fabril, séc. XVIII-XIX — contratação e subordinação; (4) Produção de mais-valia — valor excedente apropriado; (5) Alienação — perda de controle sobre produto, processo, relações e criatividade
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Durkheim / Weber / Marx) e 3 linhas (Função do trabalho na sociedade / O que o trabalho produz além de bens / Como explica a desigualdade ligada ao trabalho)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Diagrama de bifurcação causal: no centro, "Divisão do trabalho"; seta para cima com condição "regulação moral e direitos" levando a "Solidariedade orgânica (Durkheim)"; seta para baixo com condição "propriedade privada + ausência de regulação" levando a "Exploração e alienação (Marx)", que se conecta a "Precarização contemporânea"
+
+
+CAPÍTULO 01-02 — Como as transformações técnicas e tecnológicas na organização da produção causaram o surgimento de novas formas de trabalho — da fábrica taylorista-fordista ao trabalho por plataformas digitais?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 4 colunas (Taylorismo / Fordismo / Toyotismo / Plataformização) e 3 linhas (Mecanismo de controle / Grau de controle sobre gestos / Grau de flexibilização do vínculo), com exemplos concretos em cada célula
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Fordismo / Toyotismo) e 4 linhas (Controle do ritmo / Perfil do trabalhador / Tipo de vínculo / Relação com o Estado), com dados concretos: Ford River Rouge 100 mil operários vs. Toyota Takaoka 30% efetivos
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Linha do tempo horizontal com 7 marcos: 1911 (taylorismo) → 1913 (linha de montagem Ford) → 1945–1973 (fordismo + Estado de bem-estar) → 1973–1979 (crise do petróleo) → década de 1980 (toyotismo + neoliberalismo) → década de 1990 (flexibilização no Brasil) → 2009 em diante (plataformas digitais)
+
+  NOME DO ARQUIVO : fig-01-02-04.jpg
+  O QUE MOSTRAR   : Diagrama de causa e efeito com 4 setas de causa (digitalização/smartphones, algoritmos de gestão, flexibilização trabalhista, desemprego estrutural) convergindo para um resultado central (trabalho por plataforma), que se desdobra em 3 consequências (transferência de custos ao trabalhador, eliminação de direitos, subordinação algorítmica)
+
+
+CAPÍTULO 01-03 — Como a divisão sexual do trabalho causa desigualdade de prestígio e remuneração entre ocupações exercidas por homens e mulheres?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-03-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 4 linhas (trabalho doméstico e de cuidados / engenharia civil / enfermagem / entrega por aplicativo) e 3 colunas (princípio de separação: masculino ou feminino / princípio de hierarquia: valorização alta ou baixa / exemplo concreto)
+
+  NOME DO ARQUIVO : fig-01-03-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: décadas de 1960–1970 (estudos descritivos sobre "trabalho feminino") → década de 1970 (identificação da "dupla jornada") → décadas de 1980–1990 (incorporação do conceito de gênero) → décadas de 1990–2000 (gênero e precarização na globalização) → décadas de 2010–2020 (plataformização e divisão sexual do trabalho digital)
+
+  NOME DO ARQUIVO : fig-01-03-03.jpg
+  O QUE MOSTRAR   : Diagrama comparativo com 2 colunas (Kergoat: consubstancialidade / Saffioti: nó patriarcado-capitalismo-racismo) e 3 linhas (como gênero, classe e raça se relacionam / conceito central / análise do caso das empregadas domésticas)
+
+  NOME DO ARQUIVO : fig-01-03-04.jpg
+  O QUE MOSTRAR   : Diagrama de cadeia causal circular com 4 etapas: separação ocupacional + hierarquia → concentração em ocupações desvalorizadas + sobrecarga doméstica → jornada parcial e informalidade → menor remuneração e autonomia → (seta de retorno) reforço da desvalorização das ocupações femininas
+
+
+CAPÍTULO 01-01 — Quais são as diferenças entre as perspectivas de Durkheim, Weber e Marx sobre o significado social do trabalho, suas formas de vínculo e de dominação?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro com 3 colunas (Durkheim / Weber / Marx) e 3 linhas (Motor do trabalho / Relação indivíduo-estrutura / Exemplo na fábrica de 1910), sintetizando os três subtipos da classificação
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 6 marcos: divisão do trabalho pré-capitalista (antes do séc. XVI) → separação trabalhador/meios de produção (séc. XVI–XVIII) → trabalho assalariado (séc. XVIII–XIX) → mais-valia (séc. XIX, O Capital, 1867) → alienação (séc. XIX, Manuscritos, 1844) → trabalho prescrito vs. real (séc. XX–XXI, Linhart)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Durkheim / Weber / Marx) e 4 linhas (Significado social do trabalho / Forma de vínculo trabalhador-sociedade / Forma de dominação identificada / O que faz o trabalhador permanecer trabalhando)
+
+=================================================================
+TOTAL: 14 imagem(ns) necessária(s)
+=================================================================

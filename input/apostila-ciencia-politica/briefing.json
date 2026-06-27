@@ -1,0 +1,48 @@
+{
+  "disciplina": "Sociologia",
+  "habilidade_bncc": "EM13CHS603",
+  "unidade": "Política, poder e Estado",
+  "pergunta_unidade": "Por que obedecemos ao Estado, e como conquistamos o direito de participar dele?",
+  "capitulos": [
+    "Capítulo 1 — Poder, dominação e Estado",
+    "Capítulo 2 — Contratualismo e fundamentos do Estado moderno",
+    "Capítulo 3 — Cidadania e luta por direitos",
+    "Capítulo 4 — Sociedade civil e o Estado ampliado"
+  ],
+  "autores_por_capitulo": {
+    "Capítulo 1 — Poder, dominação e Estado": ["Max Weber", "Charles Tilly", "Nicolau Maquiavel"],
+    "Capítulo 2 — Contratualismo e fundamentos do Estado moderno": ["Thomas Hobbes", "John Locke", "Jean-Jacques Rousseau"],
+    "Capítulo 3 — Cidadania e luta por direitos": ["T. H. Marshall", "Hannah Arendt"],
+    "Capítulo 4 — Sociedade civil e o Estado ampliado": ["Alexis de Tocqueville", "Antonio Gramsci", "Jürgen Habermas"]
+  },
+  "conteudos_por_capitulo": {
+    "Capítulo 1 — Poder, dominação e Estado": [
+      "conceito weberiano de poder e política",
+      "tipos de dominação legítima (tradicional, racional-legal, carismática)",
+      "Estado como monopólio da violência legítima",
+      "formação histórica dos Estados modernos",
+      "Maquiavel e a fundação da Ciência Política"
+    ],
+    "Capítulo 2 — Contratualismo e fundamentos do Estado moderno": [
+      "estado de natureza em Hobbes, Locke e Rousseau",
+      "contrato social como fundamento da autoridade política",
+      "papel do Estado na garantia da ordem e da liberdade",
+      "direitos naturais e limites do poder estatal",
+      "diferenças entre as visões contratualistas de governo"
+    ],
+    "Capítulo 3 — Cidadania e luta por direitos": [
+      "conceito de cidadania e seus elementos (direitos civis, políticos e sociais)",
+      "o \"direito a ter direitos\" em Hannah Arendt",
+      "luta histórica pelo sufrágio feminino",
+      "movimentos sociais e repertórios de ação coletiva",
+      "influência dos movimentos sociais sobre o Estado e a opinião pública"
+    ],
+    "Capítulo 4 — Sociedade civil e o Estado ampliado": [
+      "conceito ampliado de Estado (sociedade civil e sociedade política)",
+      "associações civis e vida democrática em Tocqueville",
+      "hegemonia e luta cultural em Gramsci",
+      "esfera pública em Habermas, Arato e Cohen",
+      "sociedade civil em contextos de autoritarismo e redemocratização no Brasil"
+    ]
+  }
+}

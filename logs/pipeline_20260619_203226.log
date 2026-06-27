@@ -1,0 +1,8 @@
+2026-06-19 20:32:26,818 [INFO] __main__: 
+=================================================================
+2026-06-19 20:32:26,823 [INFO] __main__: [Validação] Verificações em: /sessions/vigilant-pensive-fermat/mnt/NOVO - IPPI - BNCC/output/apostila-sociologia-trabalho/verificacoes
+2026-06-19 20:32:26,828 [INFO] __main__: [Validação] 5 marcador(es) | 0 ausente(s) | 0 erro(s) | 0 aviso(s)
+2026-06-19 20:32:26,831 [INFO] __main__: =================================================================
+2026-06-19 20:32:26,834 [INFO] __main__:   ✓ Tudo certo: todos os refs têm JSON válido no schema esperado.
+2026-06-19 20:32:26,866 [INFO] __main__: =================================================================
+

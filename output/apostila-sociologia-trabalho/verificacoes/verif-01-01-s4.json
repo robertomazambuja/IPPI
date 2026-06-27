@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s4",
+  "pergunta": "Aspecto: Explicação da desigualdade — Durkheim: quando a divisão do trabalho não é acompanhada de regulação moral adequada, surge anomia (desorganização). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, que não se reduzem uns aos outros. Marx: a desigualdade é estrutural — decorre da propriedade privada dos meios de produção. Quanto à explicação da desigualdade ligada ao trabalho, como Durkheim, Weber e Marx diferem entre si?",
+  "alternativas": {
+    "A": "Durkheim atribui a desigualdade à propriedade privada dos meios de produção; Weber à anomia decorrente da falta de regulação moral da divisão do trabalho; Marx à combinação irredutível de classe, prestígio e poder político.",
+    "B": "Durkheim atribui a desigualdade à falta de regulação moral da divisão do trabalho (anomia); Weber à combinação irredutível de classe econômica, prestígio social e poder político; Marx à propriedade privada dos meios de produção, o que torna a desigualdade estrutural.",
+    "C": "Durkheim explica a desigualdade pela anomia, que, segundo ele, resulta da apropriação da mais-valia pelo proprietário das fábricas sobre o trabalhador especializado.",
+    "D": "Para Marx, a desigualdade decorrente do trabalho assalariado não é estrutural, mas um efeito temporário que tende a desaparecer à medida que a regulação trabalhista avança — de modo semelhante ao que ocorre com a anomia em Durkheim."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque atribui corretamente cada explicação ao autor que a formulou: anomia (Durkheim), combinação irredutível de classe/prestígio/poder (Weber) e propriedade privada dos meios de produção como causa estrutural (Marx). A é um distrator de vocabulário do autor rival: troca as três explicações entre os três autores, atribuindo cada ideia correta ao autor errado. C é vocabulário análogo: a primeira parte está correta (Durkheim e a anomia), mas a segunda mistura indevidamente o mecanismo de Marx (mais-valia) na explicação de Durkheim, criando uma afirmação internamente contraditória. D é uma inversão da tese: nega justamente o que Marx defende — que a desigualdade decorrente da propriedade privada dos meios de produção é estrutural, não temporária ou superável apenas por regulação."
+}

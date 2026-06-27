@@ -1,0 +1,24 @@
+2026-06-19 20:19:24,535 [INFO] pipeline: 
+=================================================================
+2026-06-19 20:19:24,540 [INFO] pipeline: [Validação] Verificações em: /tmp/ap5/verificacoes
+2026-06-19 20:19:24,544 [INFO] pipeline: [Validação] 5 marcador(es) | 1 ausente(s) | 5 erro(s) | 0 aviso(s)
+2026-06-19 20:19:24,547 [INFO] pipeline: =================================================================
+2026-06-19 20:19:24,550 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s1: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,553 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s2: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,557 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s3: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,560 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s4: arquivo ausente (verificacoes/verif-01-01-s4.json)
+2026-06-19 20:19:24,563 [INFO] pipeline:   ✗ ERRO  : aplicar-01-01: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,566 [INFO] pipeline: =================================================================
+
+2026-06-19 20:19:24,572 [INFO] pipeline: 
+=================================================================
+2026-06-19 20:19:24,576 [INFO] pipeline: [Validação] Verificações em: /tmp/ap5/verificacoes
+2026-06-19 20:19:24,579 [INFO] pipeline: [Validação] 5 marcador(es) | 0 ausente(s) | 5 erro(s) | 0 aviso(s)
+2026-06-19 20:19:24,583 [INFO] pipeline: =================================================================
+2026-06-19 20:19:24,586 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s1: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,590 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s2: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,593 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s3: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,596 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s4: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,599 [INFO] pipeline:   ✗ ERRO  : aplicar-01-01: JSON inválido (name 'json' is not defined)
+2026-06-19 20:19:24,601 [INFO] pipeline: =================================================================
+

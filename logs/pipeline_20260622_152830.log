@@ -1,0 +1,168 @@
+2026-06-22 15:28:30,624 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 15:28:30,625 [INFO] __main__: Apostila : apostila-sociologia-trabalho
+2026-06-22 15:28:30,625 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-22 15:28:30,626 [INFO] __main__: Workers  : 3
+2026-06-22 15:28:30,626 [INFO] __main__: Forçar   : não
+2026-06-22 15:28:30,626 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 15:28:30,628 [INFO] __main__: CSV carregado: 3 capítulos (formato com andaime)
+2026-06-22 15:28:30,628 [INFO] __main__: Unidades : 1
+2026-06-22 15:28:30,629 [INFO] __main__: Capítulos: 3
+2026-06-22 15:28:30,631 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 15:28:30,632 [INFO] __main__: Unidade 1: O mundo do trabalho
+2026-06-22 15:28:30,633 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-22 15:28:30,635 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:28:30,636 [INFO] __main__: Cap. 1/3  [1.1] Capítulo 1 — O trabalho nas teorias clássicas da Sociologia  [Agente 1]
+2026-06-22 15:28:30,636 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:28:30,803 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — O trabalho nas teorias clássicas da Sociologia
+2026-06-22 15:28:33,364 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:30:46,378 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:30:46,383 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:30:49,056 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:30:59,682 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=7780 cache_create=22988 cache_read=15753
+2026-06-22 15:30:59,688 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:30:59,689 [INFO] __main__: Cap. 2/3  [1.2] Capítulo 2 — Transformações técnicas e tecnológicas do trabalho  [Agente 1]
+2026-06-22 15:30:59,690 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:30:59,746 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Transformações técnicas e tecnológicas do trabalho
+2026-06-22 15:31:02,086 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:36:30,637 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:36:30,667 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:36:33,644 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:36:46,665 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=7188 cache_create=30965 cache_read=7961
+2026-06-22 15:36:46,668 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:36:46,668 [INFO] __main__: Cap. 3/3  [1.3] Capítulo 3 — Trabalho, gênero e desigualdade  [Agente 1]
+2026-06-22 15:36:46,669 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:36:46,723 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 3: Capítulo 3 — Trabalho, gênero e desigualdade
+2026-06-22 15:36:48,635 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:36:51,393 [INFO] __main__:     →  read_file: contexto/principios-pedagogicos-agente1.md
+2026-06-22 15:36:51,400 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-22 15:36:55,841 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:09,424 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:39:09,427 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:39:11,369 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:25,138 [INFO] __main__:   ✓  Agente 1 concluiu (3 iteração(ões)) | in=4 out=8036 cache_create=21589 cache_read=46844
+2026-06-22 15:39:25,147 [INFO] __main__: 
+[Fase 2] Processando 3 capítulo(s) em paralelo (3 workers)…
+2026-06-22 15:39:25,796 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,796 [INFO] __main__: Cap. 3/3  [1.3] Capítulo 3 — Trabalho, gênero e desigualdade  [estágios 2–5]
+2026-06-22 15:39:25,796 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,802 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,802 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,802 [INFO] __main__: Cap. 1/3  [1.1] Capítulo 1 — O trabalho nas teorias clássicas da Sociologia  [estágios 2–5]
+2026-06-22 15:39:25,802 [INFO] __main__: Cap. 2/3  [1.2] Capítulo 2 — Transformações técnicas e tecnológicas do trabalho  [estágios 2–5]
+2026-06-22 15:39:25,802 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,803 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-22 15:39:25,835 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 3: Capítulo 3 — Trabalho, gênero e desigualdade
+2026-06-22 15:39:25,836 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Transformações técnicas e tecnológicas do trabalho
+2026-06-22 15:39:25,836 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — O trabalho nas teorias clássicas da Sociologia
+2026-06-22 15:39:27,947 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:28,047 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:28,081 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:29,951 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:39:29,954 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-22 15:39:30,279 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:39:30,281 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-22 15:39:30,477 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/core/o-mundo-do-trabalho/01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:39:30,479 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-22 15:39:31,719 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:32,540 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:32,952 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-22 15:39:33,077 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:39:35,070 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:41:53,654 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:41:53,662 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:41:55,499 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:02,818 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:42:02,827 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:42:04,800 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:05,575 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:42:05,580 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/o-mundo-do-trabalho/01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:42:07,114 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:10,875 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=7852 cache_create=36969 cache_read=50454
+2026-06-22 15:42:10,876 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — O trabalho nas teorias clássicas da Sociologia
+2026-06-22 15:42:10,903 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md (3 alteracao(oes))
+2026-06-22 15:42:10,903 [INFO] __main__:     ✓ Normalizações aplicadas (3 alteração(ões))
+2026-06-22 15:42:10,903 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-22 15:42:10,904 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-22 15:42:10,904 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Quais relações causais as teorias sociológicas clássicas identificam entre a organização do trabalho e as formas de coesão, exploração e desigualdade nas sociedades capitalistas?
+2026-06-22 15:42:10,976 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — O trabalho nas teorias clássicas da Sociologia
+2026-06-22 15:42:13,960 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:15,441 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\o-mundo-do-trabalho\01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.md
+2026-06-22 15:42:19,533 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:24,686 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=8354 cache_create=44965 cache_read=86041
+2026-06-22 15:42:24,688 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Transformações técnicas e tecnológicas do trabalho
+2026-06-22 15:42:24,693 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md (2 alteracao(oes))
+2026-06-22 15:42:24,694 [INFO] __main__:     ✓ Normalizações aplicadas (2 alteração(ões))
+2026-06-22 15:42:24,694 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-22 15:42:24,694 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como as transformações técnicas e tecnológicas na organização da produção causaram o surgimento de novas formas de trabalho — da fábrica taylorista-fordista ao trabalho por plataformas digitais?
+2026-06-22 15:42:24,716 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Transformações técnicas e tecnológicas do trabalho
+2026-06-22 15:42:27,427 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:28,462 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=8916 cache_create=37748 cache_read=50392
+2026-06-22 15:42:28,468 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 3: Capítulo 3 — Trabalho, gênero e desigualdade
+2026-06-22 15:42:28,471 [INFO] normalizador: [Normalizador] Modificado: 01-03-capitulo-3-trabalho-genero-e-desigualdade.md (5 alteracao(oes))
+2026-06-22 15:42:28,471 [INFO] __main__:     ✓ Normalizações aplicadas (5 alteração(ões))
+2026-06-22 15:42:28,472 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-22 15:42:28,472 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-22 15:42:28,472 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-22 15:42:28,472 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-22 15:42:28,473 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como a divisão sexual do trabalho causa desigualdade de prestígio e remuneração entre ocupações exercidas por homens e mulheres?
+2026-06-22 15:42:28,500 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 3: Capítulo 3 — Trabalho, gênero e desigualdade
+2026-06-22 15:42:29,852 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\o-mundo-do-trabalho\01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.md
+2026-06-22 15:42:30,286 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:31,502 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:31,549 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\o-mundo-do-trabalho\01-03-capitulo-3-trabalho-genero-e-desigualdade.md
+2026-06-22 15:42:32,898 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-22 15:42:52,361 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=2354 cache_create=16736 cache_read=9883
+2026-06-22 15:42:52,368 [INFO] __main__:     ✓ 13 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 15:42:52,369 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — O trabalho nas teorias clássicas da Sociologia
+2026-06-22 15:42:52,379 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim
+2026-06-22 15:42:52,411 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.xml (5 blocos, 2973 palavras)
+2026-06-22 15:42:52,412 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-o-trabalho-nas-teorias-classicas-da-sociologia.xml
+2026-06-22 15:43:16,796 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=3160 cache_create=14905 cache_read=12959
+2026-06-22 15:43:16,827 [INFO] __main__:     ✓ 0 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 15:43:16,828 [INFO] __main__:       ⚠  JSON inválido do Agente 4: Expecting value: line 1 column 2 (char 1) — arquivo não alterado
+2026-06-22 15:43:16,828 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Transformações técnicas e tecnológicas do trabalho
+2026-06-22 15:43:16,832 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim
+2026-06-22 15:43:16,841 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.xml (5 blocos, 3023 palavras)
+2026-06-22 15:43:16,841 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-transformacoes-tecnicas-e-tecnologicas-do-trabalho.xml
+2026-06-22 15:44:40,201 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=8297 cache_create=15867 cache_read=13450
+2026-06-22 15:44:40,208 [INFO] __main__:     ✓ 22 troca(s) aplicada(s) pelo Agente 4
+2026-06-22 15:44:40,208 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 3: Capítulo 3 — Trabalho, gênero e desigualdade
+2026-06-22 15:44:40,215 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim
+2026-06-22 15:44:40,245 [INFO] formatador: [Formatador] Salvo: 01-03-capitulo-3-trabalho-genero-e-desigualdade.xml (5 blocos, 3137 palavras)
+2026-06-22 15:44:40,246 [INFO] __main__:     ✓ XML gerado: 01-03-capitulo-3-trabalho-genero-e-desigualdade.xml
+2026-06-22 15:44:40,265 [INFO] __main__: USAGE TOTAL [apostila-sociologia-trabalho] — in=32 out=61937 cache_create=242732 cache_read=293737
+2026-06-22 15:44:40,266 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-22 15:44:40,266 [INFO] __main__: Pipeline concluído.
+2026-06-22 15:44:40,267 [INFO] __main__: Outputs em: output/apostila-sociologia-trabalho/
+2026-06-22 15:44:40,267 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\pipeline_20260622_152830.log
+2026-06-22 15:44:40,267 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\usage_20260622_152830.csv
+2026-06-22 15:44:40,267 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-22 15:44:40,957 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\output\apostila-sociologia-trabalho\IMAGENS-NECESSARIAS.txt
+2026-06-22 15:44:40,958 [INFO] __main__: [Imagens] 14 imagem(ns) em 4 capítulo(s).
+2026-06-22 15:44:40,964 [INFO] __main__: [Verificações] Lista salva em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\output\apostila-sociologia-trabalho\VERIFICACOES-NECESSARIAS.txt
+2026-06-22 15:44:40,964 [INFO] __main__: [Verificações] 23 marcador(es) em 4 capítulo(s).

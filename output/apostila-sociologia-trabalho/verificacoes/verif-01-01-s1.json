@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s1",
+  "pergunta": "Um operador de caixa de supermercado utiliza o scanner, o uniforme e o terminal de pagamento fornecidos pela empresa. Ele não é dono de nenhum desses instrumentos. Ao final do mês, recebe um salário fixo, independentemente do lucro que a loja obteve com as vendas que ele processou. A diferença entre o valor que seu trabalho gerou para a empresa e o salário que recebeu é apropriada pelo proprietário. Por que essa situação configura trabalho assalariado, e não trabalho autônomo?",
+  "alternativas": {
+    "A": "Porque ele não é proprietário dos instrumentos que utiliza no trabalho, o que lhe garante uma participação proporcional nos lucros gerados pelas vendas que processa.",
+    "B": "Porque ele vende sua força de trabalho em troca de um salário fixo sem ser proprietário dos meios de produção que emprega, e a diferença entre o valor que gera e o salário recebido é apropriada pelo proprietário — não pelo próprio trabalhador.",
+    "C": "Porque, como o trabalhador autônomo, ele decide seu próprio ritmo de trabalho e vende diretamente ao consumidor o produto de sua atividade, sem que um empregador se aproprie da diferença entre o valor produzido e o que recebe.",
+    "D": "Porque ele recebe um salário mensal fixo, e essa remuneração periódica já é, por si só, o critério suficiente para caracterizar qualquer relação de trabalho assalariado."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque reúne os três elementos da definição de trabalho assalariado apresentados no capítulo: a força de trabalho vendida como mercadoria, a não-propriedade dos meios de produção (scanner, uniforme, terminal) e a apropriação, pelo proprietário, da diferença entre o valor produzido e o salário pago (mais-valia). A é um distrator de vocabulário análogo: a primeira parte está correta (ele não é proprietário dos instrumentos), mas a segunda distorce o que realmente ocorre — essa não-propriedade não gera participação nos lucros, e sim o oposto, a apropriação do excedente pelo proprietário. C é um distrator de vocabulário do conceito rival: descreve corretamente o trabalho autônomo (decidir o próprio ritmo, vender diretamente o produto), mas atribui essa descrição ao caso do operador de caixa, que é exatamente o oposto disso. D é uma restrição indevida: isola 'receber salário fixo' como critério suficiente, ignorando que a definição exige também a não-propriedade dos meios de produção e a apropriação do excedente — sem esses dois elementos, salário fixo isoladamente não basta para caracterizar trabalho assalariado."
+}

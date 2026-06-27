@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1",
+  "pergunta": "Na Inglaterra do século XVII, durante a Guerra Civil (1642–1651), defensores do Parlamento e defensores do rei disputavam quem tinha o direito legítimo de governar: os realistas invocavam o direito divino dos reis; os parlamentaristas, a representação dos proprietários. Hobbes, escrevendo em 1651, ofereceu uma resposta diferente de ambas: o poder do soberano só se justifica porque os indivíduos, para escapar da violência mútua, concordaram em transferir sua liberdade a ele. Por que essa resposta de Hobbes é um argumento de contrato social, e não uma terceira variação dos argumentos de direito divino ou de representação dos proprietários?",
+  "alternativas": {
+    "A": "Porque a legitimidade do soberano, em Hobbes, não decorre de uma qualidade superior do governante (como a vontade divina) nem da posição social de quem governa (como a propriedade), mas de um acordo racional entre os próprios indivíduos, que cedem liberdade em troca de segurança.",
+    "B": "Porque, assim como os realistas, Hobbes defende que o poder do soberano vem de uma autoridade superior aos próprios indivíduos, sendo a vontade de Deus apenas substituída pela vontade do filósofo que escreve a teoria.",
+    "C": "Porque o contrato social, nesse caso, depende apenas do fato de ter sido formulado por escrito em uma obra publicada em 1651, o que distingue a teoria de Hobbes das tradições orais do direito divino e da representação dos proprietários.",
+    "D": "Porque os indivíduos, segundo Hobbes, concordam racionalmente em ceder parte de sua liberdade ao soberano, e esse acordo precisa ser renovado periodicamente por todos os cidadãos para continuar válido, como ocorre nas eleições parlamentares."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque identifica o critério definitório do contrato social: a legitimidade nasce de um acordo entre os próprios indivíduos, não de uma fonte externa a eles (Deus) nem de uma posição social específica (propriedade). B é vocabulário do conceito rival: atribui a Hobbes a mesma estrutura do direito divino (uma autoridade externa e superior aos indivíduos), apenas trocando Deus pelo filósofo — o que contradiz a lógica contratualista. C é uma restrição indevida: isola um traço não essencial (o registro escrito) como se fosse o critério que define contrato social, quando o que importa é a estrutura do argumento, não o suporte material em que foi formulado. D nomeia corretamente o critério (cessão racional de liberdade) mas distorce sua aplicação: em Hobbes esse pacto é único e irrevogável, não um acordo renovado periodicamente como uma eleição."
+}

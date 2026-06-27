@@ -1,0 +1,154 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: apostila-sociologia-trabalho
+Gerado em: 22/06/2026 15:44
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF indicado
+   (ex.: verif-01-01-s3.json, aplicar-01-01.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema de exemplo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4):
+   - tipo "verificacao": {tipo, ref, pergunta, alternativas{A,B,C,D}, correta, justificativa}
+   - tipo "aplicar-agora": {tipo, ref, enunciado, resposta_comentada}
+5. Envie a pasta "verificacoes" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Quais relações causais as teorias sociológicas clássicas identificam entre a organização do trabalho e as formas de coesão, exploração e desigualdade nas sociedades capitalistas?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O trabalho assalariado como relação social".
+      Conceito-âncora: Trabalho assalariado.
+      Exemplo-âncora (do capítulo): Um operador de caixa de supermercado utiliza o scanner, o uniforme e o terminal de pagamento fornecidos pela empresa. Ele não é dono de nenhum desses instrumentos. Ao final do mês, recebe um salário fixo, independentemente do lucro que a loja obteve com as vendas que ele processou. A diferença entre o valor que seu trabalho gerou para a empresa e o salário que recebeu é apropriada pelo proprietário.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Dimensões do trabalho assalariado: funcional, ética e econômica".
+      Exemplo-âncora (do capítulo): Uma professora de escola pública: (a) dimensão funcional — seu cargo prevê carga horária, currículo a seguir e diário de classe a preencher (trabalho prescrito), mas na sala ela adapta o conteúdo ao contexto dos alunos e lida com situações imprevistas (trabalho real); (b) dimensão ética — ela pode entender seu ofício como vocação de formar cidadãos; (c) dimensão econômica — ela recebe um salário mensal pago pelo Estado, que é financiado por impostos sobre a produção.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Etapas da relação de exploração no trabalho assalariado".
+      Exemplo-âncora (do capítulo): Linha do tempo da relação de exploração segundo Marx: (1) Cercamentos na Inglaterra (séc. XVI-XVIII) — camponeses expulsos da terra; (2) Formação do mercado de trabalho — ex-camponeses migram para cidades e vendem sua força de trabalho; (3) Sistema fabril (séc. XVIII-XIX) — o industrial contrata operários por salário e define jornadas de 14-16 horas; (4) Produção de mais-valia — um tecelão produz, em 6 horas, tecido suficiente para pagar seu salário, mas trabalha 14 horas; as 8 horas restantes geram lucro para o dono da fábrica; (5) Alienação — o tecelão não escolhe o que produz, não define o ritmo, não é dono do tecido e repete os mesmos gestos mecânicos indefinidamente.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Três interpretações clássicas sobre a centralidade do trabalho".
+      Exemplo-âncora (do capítulo): Aspecto: Função do trabalho — Durkheim: a especialização de médicos, engenheiros e agricultores torna cada um dependente dos outros, gerando solidariedade orgânica. Weber: um comerciante calvinista do século XVII trabalha metodicamente não apenas para lucrar, mas porque acredita que o sucesso profissional é sinal de salvação divina. Marx: um operário de fábrica têxtil no século XIX trabalha 14 horas e recebe salário equivalente a 6 horas de trabalho; as 8 horas restantes são mais-valia apropriada pelo dono da fábrica. | Aspecto: O que o trabalho produz além de bens — Durkheim: interdependência funcional entre profissões. Weber: um modo de vida racional e disciplinado. Marx: acumulação de capital para o proprietário e alienação para o trabalhador. | Aspecto: Explicação da desigualdade — Durkheim: quando a divisão do trabalho não é acompanhada de regulação moral adequada, surge anomia (desorganização). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, que não se reduzem uns aos outros. Marx: a desigualdade é estrutural — decorre da propriedade privada dos meios de produção.
+
+  REF             : verif-01-01-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão do trabalho: coesão social e exploração como efeitos".
+      Exemplo-âncora (do capítulo): Uma montadora de automóveis emprega centenas de trabalhadores, cada um responsável por uma tarefa específica (soldar portas, instalar painel, testar freios). Efeito-Durkheim: a especialização torna cada trabalhador dependente dos outros, criando cooperação funcional — nenhum deles produz um carro sozinho. Efeito-Marx: o operário que solda portas oito horas por dia não decide o design do carro, não define o ritmo da esteira, não é dono do veículo finalizado e recebe um salário que representa uma fração do valor do automóvel vendido. Efeito contemporâneo: se a montadora terceiriza parte da produção para empresas menores com contratos temporários, os trabalhadores terceirizados perdem estabilidade e benefícios — a fragmentação se converte em precarização.
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
+    Pergunta do capítulo: "Quais relações causais as teorias sociológicas clássicas identificam entre a organização do trabalho e as formas de coesão, exploração e desigualdade nas sociedades capitalistas?"
+    Síntese do capítulo: As teorias sociológicas clássicas identificam que a organização do trabalho nas sociedades capitalistas produz simultaneamente coesão e exploração. Para Durkheim, a divisão do trabalho gera solidariedade orgânica quando regulada moralmente, mas anomia quando não regulada. Para Weber, o trabalho adquire centralidade no capitalismo porque certas tradições religiosas lhe atribuíram o sentido de vocação, racionalizando a conduta econômica. Para Marx, o trabalho assalariado é a relação pela qual o capitalista extrai mais-valia, produzindo alienação e desigualdade de classe. A divisão do trabalho é, portanto, a causa comum cujos efeitos — coesão ou exploração — dependem das condições sociais e institucionais em que opera.
+    Exemplo-âncora da seção principal: Uma montadora de automóveis emprega centenas de trabalhadores, cada um responsável por uma tarefa específica (soldar portas, instalar painel, testar freios). Efeito-Durkheim: a especialização torna cada trabalhador dependente dos outros, criando cooperação funcional — nenhum deles produz um carro sozinho. Efeito-Marx: o operário que solda portas oito horas por dia não decide o design do carro, não define o ritmo da esteira, não é dono do veículo finalizado e recebe um salário que representa uma fração do valor do automóvel vendido. Efeito contemporâneo: se a montadora terceiriza parte da produção para empresas menores com contratos temporários, os trabalhadores terceirizados perdem estabilidade e benefícios — a fragmentação se converte em precarização.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Como as transformações técnicas e tecnológicas na organização da produção causaram o surgimento de novas formas de trabalho — da fábrica taylorista-fordista ao trabalho por plataformas digitais?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "Reestruturação produtiva".
+      Conceito-âncora: Reestruturação produtiva.
+      Exemplo-âncora (do capítulo): Na década de 1990, montadoras de automóveis instaladas no ABC paulista (São Bernardo do Campo, Santo André, Diadema) substituíram linhas de montagem com operários fixos por células de produção flexível com trabalhadores polivalentes e terceirizados; o número de metalúrgicos na região caiu de 200 mil em 1989 para cerca de 100 mil em 1999 (DIEESE).
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Modelos de organização da produção".
+      Exemplo-âncora (do capítulo): Um operário da fábrica Ford de Highland Park (1913) repetia um único gesto a cada 1 min 19 s, ditado pela velocidade da esteira; um entregador do iFood em São Paulo (2023) escolhe quando ligar o aplicativo, mas o algoritmo define o valor da corrida, o tempo de entrega e a nota de desempenho — nos dois casos há controle, mas o mecanismo e o grau de flexibilização são distintos.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Fordismo e toyotismo: dois modelos de produção".
+      Exemplo-âncora (do capítulo): Na fábrica Ford de River Rouge (Detroit, anos 1940), 100 mil operários com carteira assinada produziam um único modelo de carro (padronizado); na fábrica Toyota de Takaoka (Japão, anos 1980), equipes de 5 a 8 trabalhadores produziam modelos variados sob demanda, e a empresa mantinha apenas 30% dos trabalhadores como efetivos, terceirizando o restante.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Fases históricas da reestruturação produtiva".
+      Exemplo-âncora (do capítulo): Linha do tempo: 1911 (taylorismo) → 1913 (fordismo) → 1945-1973 (Estado de bem-estar e fordismo dominante) → 1973-1979 (crise do petróleo) → anos 1980 (toyotismo global + neoliberalismo) → anos 1990 (flexibilização trabalhista no Brasil) → 2009 em diante (uberização e plataformas digitais).
+
+  REF             : verif-01-02-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Transformações tecnológicas e o surgimento de novas formas de trabalho".
+      Exemplo-âncora (do capítulo): Em 2022, o Brasil tinha 1,7 milhão de motoristas e entregadores cadastrados em plataformas como Uber, 99 e iFood (IPEA, 2023). Esses trabalhadores não têm contrato formal, não recebem férias nem 13º salário, e têm sua remuneração definida por algoritmo. Ao mesmo tempo, não podem recusar corridas abaixo de certo limiar sem que sua nota caia e sua oferta de trabalho diminua. A causa direta — o algoritmo de gestão — gera a consequência: subordinação sem vínculo.
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
+    Pergunta do capítulo: "Como as transformações técnicas e tecnológicas na organização da produção causaram o surgimento de novas formas de trabalho — da fábrica taylorista-fordista ao trabalho por plataformas digitais?"
+    Exemplo-âncora da seção principal: Em 2022, o Brasil tinha 1,7 milhão de motoristas e entregadores cadastrados em plataformas como Uber, 99 e iFood (IPEA, 2023). Esses trabalhadores não têm contrato formal, não recebem férias nem 13º salário, e têm sua remuneração definida por algoritmo. Ao mesmo tempo, não podem recusar corridas abaixo de certo limiar sem que sua nota caia e sua oferta de trabalho diminua. A causa direta — o algoritmo de gestão — gera a consequência: subordinação sem vínculo.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-03 — Como a divisão sexual do trabalho causa desigualdade de prestígio e remuneração entre ocupações exercidas por homens e mulheres?
+-----------------------------------------------------------------
+  REF             : verif-01-03-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é gênero".
+      Conceito-âncora: Gênero.
+      Exemplo-âncora (do capítulo): No Brasil do século XIX, costurar era considerado trabalho feminino adequado, enquanto a medicina era reservada a homens. No início do século XXI, mulheres são maioria entre formandos em medicina (INEP, Censo da Educação Superior, 2021), mas continuam sendo maioria absoluta no trabalho de costura industrial em condições precárias. Os papéis mudaram em parte, o que evidencia que a distribuição de ocupações por sexo não decorre de aptidão biológica, mas de normas sociais historicamente variáveis.
+
+  REF             : verif-01-03-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Formas de divisão sexual do trabalho".
+      Exemplo-âncora (do capítulo): Uma auxiliar de limpeza em um hospital realiza trabalho classificado como feminino (princípio de separação: limpeza é associada ao trabalho doméstico) e recebe salário inferior ao de um técnico de manutenção do mesmo hospital, cujo trabalho é classificado como masculino (princípio de hierarquia: o trabalho técnico-mecânico é socialmente mais valorizado que o trabalho de limpeza). Ambos exigem formação técnica, mas a remuneração e o prestígio diferem.
+
+  REF             : verif-01-03-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A incorporação do conceito de gênero aos estudos do trabalho".
+      Exemplo-âncora (do capítulo): Linha do tempo — (1) Décadas de 1960–1970: pesquisas descrevem que mulheres trabalham em fábricas têxteis e no serviço doméstico, sem perguntar por que essas ocupações são femininas. (2) Década de 1970: pesquisadoras identificam a
+
+  REF             : verif-01-03-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Perspectivas sobre gênero e trabalho".
+      Exemplo-âncora (do capítulo): Sobre a situação das empregadas domésticas no Brasil — Kergoat analisaria que a concentração de mulheres negras nessa ocupação resulta da produção simultânea de relações de gênero (trabalho doméstico como feminino), classe (baixa remuneração) e raça (herança da escravidão). Saffioti analisaria a mesma situação identificando que o patriarcado atribui o trabalho doméstico às mulheres, o capitalismo o desvaloriza economicamente, e o racismo direciona mulheres negras para essa posição — três sistemas que formam um nó, não uma soma.
+
+  REF             : verif-01-03-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão sexual do trabalho como causa de desigualdade de prestígio e remuneração".
+      Exemplo-âncora (do capítulo): No Brasil, mulheres dedicam em média 21,4 horas semanais ao trabalho doméstico e de cuidados, enquanto homens dedicam 11,0 horas (PNAD Contínua, IBGE, 2022). Essa diferença de 10,4 horas semanais reduz o tempo disponível das mulheres para o trabalho remunerado. Consequência direta: 28,2% das mulheres ocupadas trabalham em regime de tempo parcial (até 30 horas semanais), contra 14,7% dos homens (PNAD Contínua, IBGE, 2022). O trabalho parcial, por sua vez, implica menor remuneração total e menor acesso a direitos trabalhistas. A cadeia causal é: sobrecarga doméstica → jornada parcial → menor renda → menor autonomia econômica.
+
+  REF             : aplicar-01-03   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
+    Pergunta do capítulo: "Como a divisão sexual do trabalho causa desigualdade de prestígio e remuneração entre ocupações exercidas por homens e mulheres?"
+    Exemplo-âncora da seção principal: No Brasil, mulheres dedicam em média 21,4 horas semanais ao trabalho doméstico e de cuidados, enquanto homens dedicam 11,0 horas (PNAD Contínua, IBGE, 2022). Essa diferença de 10,4 horas semanais reduz o tempo disponível das mulheres para o trabalho remunerado. Consequência direta: 28,2% das mulheres ocupadas trabalham em regime de tempo parcial (até 30 horas semanais), contra 14,7% dos homens (PNAD Contínua, IBGE, 2022). O trabalho parcial, por sua vez, implica menor remuneração total e menor acesso a direitos trabalhistas. A cadeia causal é: sobrecarga doméstica → jornada parcial → menor renda → menor autonomia econômica.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-01 — Quais são as diferenças entre as perspectivas de Durkheim, Weber e Marx sobre o significado social do trabalho, suas formas de vínculo e de dominação?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é trabalho — e o que não é".
+      Conceito-âncora: Trabalho (definição sociológica) — e sua distinção em relação a emprego e labor.
+      Exemplo-âncora (do capítulo): Uma costureira que desenha e costura um vestido sob encomenda realiza trabalho (atividade intencional de transformação com produto identificável). Quando essa mesma costureira é contratada com carteira assinada por uma fábrica têxtil, ela tem um emprego (vínculo formal remunerado). Quando ela lava a louça e cozinha em casa ao final do expediente para manter sua subsistência diária, ela executa labor (esforço de manutenção biológica).
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Três perspectivas clássicas sobre o trabalho".
+      Exemplo-âncora (do capítulo): Uma fábrica de automóveis em 1910. Durkheim explicaria a existência dessa fábrica pela interdependência funcional: cada operário executa uma tarefa especializada (montar rodas, soldar chassis, pintar carroceria) e a coesão social resulta dessa divisão (solidariedade orgânica). Weber perguntaria qual sentido os proprietários atribuem à acumulação de riqueza — e identificaria valores calvinistas como a disciplina e o reinvestimento dos lucros como dever moral. Marx identificaria que os operários não possuem as máquinas nem a matéria-prima, são forçados a vender suas horas de trabalho e recebem apenas uma fração do valor que produzem, enquanto o lucro é apropriado pelo dono da fábrica.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Da divisão do trabalho ao trabalho alienado".
+      Exemplo-âncora (do capítulo): Um tecelão inglês em 1750 trabalhava em casa com seu próprio tear, comprava a lã, decidia o ritmo de trabalho e vendia o tecido no mercado local (evento 1). Com os cercamentos e a industrialização, ele perdeu o acesso ao tear e à lã (evento 2) e passou a trabalhar em uma fábrica têxtil de Manchester por um salário diário (evento 3). Em 12 horas de trabalho, ele produzia tecidos que eram vendidos por 10 xelins, mas recebia 3 xelins de salário — a diferença de 7 xelins era apropriada pelo dono da fábrica como lucro (evento 4). Ele repetia a mesma tarefa mecânica (operar a máquina), não escolhia o que produzir, competia com outros operários por manter o emprego e não via sentido na atividade além da sobrevivência (evento 5). Em uma fábrica contemporânea, a gerência determina que cada operário execute exatamente 47 movimentos por minuto na linha de montagem, mas os operários desenvolvem entre si atalhos e ajustes informais para dar conta da produção real, e essa cooperação clandestina se torna base de vínculos de solidariedade e, eventualmente, de organização sindical (evento 6).
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Durkheim, Weber e Marx — três respostas sobre trabalho, vínculo social e dominação".
+      Exemplo-âncora (do capítulo): Uma professora do ensino público brasileiro. Para Durkheim, ela ocupa uma função especializada (educação) que é interdependente com outras funções (saúde, administração pública, produção de alimentos) — sua atividade contribui para a coesão do todo social. Para Weber, ela atribui sentido ao seu trabalho — talvez o veja como vocação, como forma de transformar a sociedade, ou como meio de sustento — e essa atribuição de sentido é o que orienta sua ação cotidiana. Para Marx, ela vende sua força de trabalho ao Estado em troca de um salário que não corresponde ao valor social que produz; ela não controla o currículo que ensina (alienação do processo), não decide as condições de trabalho (superlotação de salas, falta de material) e compete com colegas por vagas e promoções (alienação dos outros trabalhadores).
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal do capítulo: Comparar.
+    Pergunta do capítulo: "Quais são as diferenças entre as perspectivas de Durkheim, Weber e Marx sobre o significado social do trabalho, suas formas de vínculo e de dominação?"
+    Exemplo-âncora da seção principal: Uma professora do ensino público brasileiro. Para Durkheim, ela ocupa uma função especializada (educação) que é interdependente com outras funções (saúde, administração pública, produção de alimentos) — sua atividade contribui para a coesão do todo social. Para Weber, ela atribui sentido ao seu trabalho — talvez o veja como vocação, como forma de transformar a sociedade, ou como meio de sustento — e essa atribuição de sentido é o que orienta sua ação cotidiana. Para Marx, ela vende sua força de trabalho ao Estado em troca de um salário que não corresponde ao valor social que produz; ela não controla o currículo que ensina (alienação do processo), não decide as condições de trabalho (superlotação de salas, falta de material) e compete com colegas por vagas e promoções (alienação dos outros trabalhadores).
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 23 verificação(ões) necessária(s)
+=================================================================

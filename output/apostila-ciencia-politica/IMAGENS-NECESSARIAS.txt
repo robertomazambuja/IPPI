@@ -1,0 +1,62 @@
+IMAGENS NECESSÁRIAS — Apostila: apostila-ciencia-politica
+Gerado em: 26/06/2026 12:41
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Dominação tradicional / Dominação racional-legal / Dominação carismática) e 3 linhas (Fonte de legitimidade / Base da obediência / Exemplo concreto no Brasil)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: fragmentação feudal (séc. V–XIII) → centralização militar e tributária (séc. XIV–XVI) → O Príncipe de Maquiavel (1532) → burocratização administrativa (séc. XVI–XVIII) → consolidação do Estado moderno com monopólio da violência legítima (séc. XIX–XX)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Diagrama de processo causal com setas encadeadas: competição militar → necessidade de exércitos permanentes → centralização da tributação → desarmamento de poderes locais → monopólio da violência legítima → organização em formas e regimes de governo
+
+
+CAPÍTULO 01-02 — Quais são as diferenças entre Hobbes, Locke e Rousseau quanto aos fundamentos, limites e finalidades do poder estatal?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Hobbes / Locke / Rousseau) e 3 linhas (Grau de conflito / Direitos naturais pré-contrato / Causa da insustentabilidade)
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Diagrama em 6 etapas mostrando a sequência lógica contratualista: (1) Estado de natureza → (2) Problema (violência / insegurança / desigualdade) → (3) Deliberação racional → (4) Pacto fundador → (5) Instituição do governo → (6) Forma de governo resultante, com indicação de que a variação entre autores ocorre nos passos 2, 4 e 6
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Hobbes / Locke / Rousseau) e 4 linhas (Extensão da transferência de poder / Direitos retidos pelos governados / Possibilidade de resistência / Forma de governo resultante)
+
+
+CAPÍTULO 01-03 — Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-03-01.jpg
+  O QUE MOSTRAR   : Quadro com 3 colunas (Direitos civis / Direitos políticos / Direitos sociais) e 3 linhas (Exemplos de direitos / Instituição que garante / Situação no Brasil durante o AI-5), mostrando a classificação e a interdependência dos três tipos
+
+  NOME DO ARQUIVO : fig-01-03-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 6 marcos: 1689 (Bill of Rights) → 1832 (Reform Act) → 1903 (fundação da WSPU) → 1918/1928 (voto feminino na Inglaterra) → 1932 (voto feminino no Brasil) → 1948 (criação do NHS)
+
+  NOME DO ARQUIVO : fig-01-03-03.jpg
+  O QUE MOSTRAR   : Diagrama de fluxo com 5 etapas encadeadas por setas: Exclusão do pacto de cidadania → Organização coletiva (movimentos sociais) → Repertórios de ação (petições, greves, manifestações) → Pressão sobre Estado e opinião pública → Novos direitos e novas instituições
+
+
+CAPÍTULO 01-04 — Como a relação entre sociedade civil e Estado determina se um regime político se torna autoritário, se democratiza ou se mantém democrático?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-04-01.jpg
+  O QUE MOSTRAR   : Quadro com 3 colunas (Organizações associativas / Organizações culturais e educativas / Organizações comunicativas) e 3 linhas (Função predominante / Exemplos / Papel na sociedade civil)
+
+  NOME DO ARQUIVO : fig-01-04-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Tocqueville / Gramsci / Habermas, Arato e Cohen) e 3 linhas (Função principal da sociedade civil / Relação com o Estado / Tipo de ação característica)
+
+  NOME DO ARQUIVO : fig-01-04-03.jpg
+  O QUE MOSTRAR   : Linha do tempo com 7 marcos: AI-2 (1965) → AI-5 (1968) → greves do ABC (1978–1980) → Lei da Anistia e fim do bipartidarismo (1979) → Diretas Já (1983–1984) → Assembleia Constituinte (1987–1988) → Constituição de 1988
+
+=================================================================
+TOTAL: 12 imagem(ns) necessária(s)
+=================================================================

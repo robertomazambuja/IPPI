@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s2",
+  "pergunta": "Uma auxiliar de limpeza em um hospital realiza trabalho classificado como feminino e recebe salário inferior ao de um técnico de manutenção do mesmo hospital, cujo trabalho é classificado como masculino. Ambos exigem formação técnica, mas a remuneração e o prestígio diferem. Como esse caso deve ser classificado de acordo com os dois princípios da divisão sexual do trabalho apresentados no capítulo?",
+  "alternativas": {
+    "A": "Pelo princípio de separação, a limpeza é classificada como trabalho feminino e a manutenção como masculino; pelo princípio de hierarquia, o trabalho classificado como masculino (manutenção) é socialmente mais valorizado, o que explica o salário superior mesmo havendo formação técnica equivalente nos dois casos.",
+    "B": "A diferença salarial decorre do princípio de separação isoladamente: como ocorre no caso do trabalho em plataformas de entrega, em que a separação masculina por si só já garante maior valorização da ocupação, basta que um trabalho seja classificado como masculino para que receba salário mais alto.",
+    "C": "A diferença salarial se explica porque a manutenção exige maior esforço físico e exposição a riscos do que a limpeza, sendo essa diferença de exigência técnica e física — e não a classificação social do trabalho como masculino ou feminino — o critério que determina a remuneração.",
+    "D": "A diferença salarial é explicada apenas pelo princípio de separação: como limpeza e manutenção são trabalhos diferentes entre si, é natural que tenham remunerações diferentes, sem que o princípio de hierarquia tenha qualquer papel nessa diferença."
+  },
+  "correta": "A",
+  "justificativa": "O caso ilustra os dois princípios atuando em conjunto: separação (classifica os trabalhos por gênero) e hierarquia (valoriza desigualmente o que foi classificado como masculino). A alternativa B é um vocabulário do conceito rival: importa indevidamente a lógica do caso da entrega por aplicativo (onde separação masculina não garante valorização, pois a hierarquia de classe também pesa) para este caso, tratando separação e hierarquia como equivalentes. A alternativa C é campo semântico sem ancoragem: usa um critério plausível (esforço físico, risco) que não é o critério oficial da tipologia do capítulo (separação/hierarquia), mas parece pertencer a ela. A alternativa D é restrição indevida: reconhece a separação, mas nega qualquer papel à hierarquia, quando o capítulo afirma que os dois princípios operam sempre em conjunto."
+}

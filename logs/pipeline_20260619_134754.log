@@ -1,0 +1,75 @@
+2026-06-19 13:47:54,462 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-19 13:47:54,463 [INFO] __main__: Apostila : apostila-sociologia-trabalho
+2026-06-19 13:47:54,463 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-19 13:47:54,463 [INFO] __main__: Workers  : 1
+2026-06-19 13:47:54,464 [INFO] __main__: Forçar   : não
+2026-06-19 13:47:54,464 [INFO] __main__: Capítulo : 1 (somente)
+2026-06-19 13:47:54,464 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-19 13:47:54,465 [INFO] __main__: CSV carregado: 3 capítulos (formato com andaime)
+2026-06-19 13:47:54,465 [INFO] __main__: Unidades : 1
+2026-06-19 13:47:54,465 [INFO] __main__: Capítulos: 3
+2026-06-19 13:47:54,468 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-19 13:47:54,469 [INFO] __main__: Unidade 1: Unidade 4 — O Trabalho na Perspectiva Sociológica
+2026-06-19 13:47:54,469 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-19 13:47:54,469 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-19 13:47:54,469 [INFO] __main__: Cap. 1/3  [1.1] Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação  [Agente 1]
+2026-06-19 13:47:54,469 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-19 13:47:54,555 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação
+2026-06-19 13:47:57,228 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 13:50:24,822 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/core/unidade-4-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 13:50:24,827 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/core/unidade-4-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 13:50:27,332 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 13:50:38,080 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=8499 cache_create=24207 cache_read=16179
+2026-06-19 13:50:38,543 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-19 13:50:38,543 [INFO] __main__: Cap. 1/3  [1.1] Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação  [estágios 2–5]
+2026-06-19 13:50:38,544 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-19 13:50:38,572 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação
+2026-06-19 13:50:41,226 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 13:50:45,619 [INFO] __main__:     →  read_file: output/apostila-sociologia-trabalho/core/unidade-4-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 13:50:45,623 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-19 13:50:45,625 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-19 13:50:48,438 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 13:59:16,300 [INFO] __main__:     ⚠  Erro transitório — aguardando 10s antes de tentar novamente...
+2026-06-19 13:59:29,215 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 14:01:51,665 [INFO] __main__:     →  write_file: output/apostila-sociologia-trabalho/texto/unidade-4-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 14:01:51,692 [INFO] __main__:     ✓  Salvo: output/apostila-sociologia-trabalho/texto/unidade-4-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 14:01:54,508 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 14:02:17,969 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=8125 cache_create=68382 cache_read=40227
+2026-06-19 14:02:17,982 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação
+2026-06-19 14:02:17,997 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md (3 alteracao(oes))
+2026-06-19 14:02:17,998 [INFO] __main__:     ✓ Normalizações aplicadas (3 alteração(ões))
+2026-06-19 14:02:17,998 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-19 14:02:17,999 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-19 14:02:17,999 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Quais são as diferenças entre as perspectivas de Durkheim, Weber e Marx sobre o significado social do trabalho, suas formas de vínculo e de dominação?
+2026-06-19 14:02:18,056 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação
+2026-06-19 14:02:19,727 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 14:02:22,558 [INFO] __main__:     →  read_file: output\apostila-sociologia-trabalho\texto\unidade-4-o-trabalho-na-perspectiva-sociologica\01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.md
+2026-06-19 14:02:23,891 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 14:02:56,643 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=2198 cache_create=16470 cache_read=9742
+2026-06-19 14:02:56,700 [INFO] __main__:     ✓ 12 troca(s) aplicada(s) pelo Agente 4
+2026-06-19 14:02:56,708 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação
+2026-06-19 14:03:27,870 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-19 14:03:28,292 [INFO] verificador: [Verificador] 4 verificação(ões) gerada(s), aplicar_agora=sim
+2026-06-19 14:03:28,292 [INFO] __main__:     ✓ Verificações: 4 seção(ões) | aplicar_agora=sim
+2026-06-19 14:03:28,309 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.xml (4 blocos, 2965 palavras)
+2026-06-19 14:03:28,310 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao.xml
+2026-06-19 14:03:28,313 [INFO] __main__: USAGE TOTAL [apostila-sociologia-trabalho] — in=10 out=18822 cache_create=109059 cache_read=66148
+2026-06-19 14:03:28,313 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-19 14:03:28,314 [INFO] __main__: Pipeline concluído.
+2026-06-19 14:03:28,314 [INFO] __main__: Outputs em: output/apostila-sociologia-trabalho/
+2026-06-19 14:03:28,315 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\pipeline_20260619_134754.log
+2026-06-19 14:03:28,315 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\usage_20260619_134754.csv
+2026-06-19 14:03:28,316 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-19 14:03:29,363 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\output\apostila-sociologia-trabalho\IMAGENS-NECESSARIAS.txt
+2026-06-19 14:03:29,365 [INFO] __main__: [Imagens] 3 imagem(ns) em 1 capítulo(s).

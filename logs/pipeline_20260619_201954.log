@@ -1,0 +1,18 @@
+2026-06-19 20:19:54,951 [INFO] pipeline: 
+=================================================================
+2026-06-19 20:19:54,954 [INFO] pipeline: [Validação] Verificações em: /tmp/ap5/verificacoes
+2026-06-19 20:19:54,955 [INFO] pipeline: [Validação] 5 marcador(es) | 1 ausente(s) | 3 erro(s) | 0 aviso(s)
+2026-06-19 20:19:54,957 [INFO] pipeline: =================================================================
+2026-06-19 20:19:54,959 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s2: 'alternativas' devem ser exatamente A,B,C,D (achei ['A', 'B', 'C'])
+2026-06-19 20:19:54,961 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s3: 'correta' deve ser A, B, C ou D (achei 'E')
+2026-06-19 20:19:54,964 [INFO] pipeline:   ✗ ERRO  : verif-01-01-s4: arquivo ausente (verificacoes/verif-01-01-s4.json)
+2026-06-19 20:19:54,967 [INFO] pipeline: =================================================================
+
+2026-06-19 20:19:54,973 [INFO] pipeline: 
+=================================================================
+2026-06-19 20:19:54,977 [INFO] pipeline: [Validação] Verificações em: /tmp/ap5/verificacoes
+2026-06-19 20:19:54,980 [INFO] pipeline: [Validação] 5 marcador(es) | 0 ausente(s) | 0 erro(s) | 0 aviso(s)
+2026-06-19 20:19:54,984 [INFO] pipeline: =================================================================
+2026-06-19 20:19:54,987 [INFO] pipeline:   ✓ Tudo certo: todos os refs têm JSON válido no schema esperado.
+2026-06-19 20:19:54,990 [INFO] pipeline: =================================================================
+

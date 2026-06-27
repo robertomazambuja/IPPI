@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capitulo id="01-03" titulo="Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?" palavras_total="3078">
+  <cabecalho>
+    <habilidade>EM13CHS603 — Analisar a formação de diferentes países, povos e nações e de suas experiências políticas e de exercício da cidadania, aplicando conceitos políticos básicos (Estado, poder, formas, sistemas e regimes de governo, soberania etc.).</habilidade>
+    <operacao_principal>Aplicar</operacao_principal>
+    <pergunta_capitulo>Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?</pergunta_capitulo>
+    <por_que_importa>Se a cidadania se expande pela luta de movimentos sociais que pressionam o Estado, o próximo capítulo investigará como a relação entre sociedade civil e Estado se organiza de forma mais ampla, configurando o que Gramsci chamou de "Estado ampliado".</por_que_importa>
+  </cabecalho>
+
+  <mapa-progressao>
+    <passo ordem="1" bloco="bloco-1">Definir</passo>
+    <passo ordem="2" bloco="bloco-2">Classificar</passo>
+    <passo ordem="3" bloco="bloco-3">Sequenciar</passo>
+    <passo ordem="4" bloco="bloco-4">Reconhecer perspectiva</passo>
+    <passo ordem="5" bloco="bloco-5">Mapear causalidade</passo>
+    <passo ordem="6" bloco="bloco-6">Aplicar</passo>
+  </mapa-progressao>
+
+  <corpo>
+
+    <bloco id="bloco-1" palavras="320" operacao="Definir">
+      <micro-habilidade>Definir cidadania como conjunto articulado de direitos civis, políticos e sociais</micro-habilidade>
+      <resumo-aluno>Você vai entender que pertencer plenamente a uma comunidade política depende de três tipos de direitos combinados, e que a ausência de apenas um deles deixa essa cidadania incompleta, mesmo com os outros dois garantidos.</resumo-aluno>
+      <secao id="sec-1" tipo="definicao">
+        <titulo>O que é cidadania</titulo>
+        <conteudo>
+        <paragrafo>Cidadania é a condição de pertencimento pleno a uma comunidade política. Essa condição não se limita à posse de um documento de identidade ou à nacionalidade registrada em um passaporte. Na formulação do sociólogo britânico T. H. Marshall, ela se expressa como um conjunto articulado de três tipos de direitos: direitos civis (liberdades individuais, como ir e vir, expressar-se e professar uma religião), direitos políticos (participação no poder, como votar e ser votado) e direitos sociais (acesso a condições materiais de vida digna, como educação, saúde e proteção trabalhista). Esses três elementos não funcionam de forma isolada: a ausência de um deles compromete o exercício pleno dos demais.</paragrafo>
+        <paragrafo>Um exemplo concreto dessa articulação é o caso de uma trabalhadora doméstica brasileira em 2013. Essa trabalhadora possuía direito civil de ir e vir e direito político de votar e ser votada. No entanto, até a aprovação da Emenda Constitucional nº 72/2013, ela não tinha direito social à jornada de trabalho regulamentada. A categoria das trabalhadoras domésticas estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde a Consolidação das Leis do Trabalho (CLT) de 1943. Sua cidadania, portanto, era incompleta: dois dos três elementos estavam formalmente presentes, mas o terceiro, o social, permanecia negado.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>T. H. Marshall (1893–1981)</nome>
+          <pais>Reino Unido</pais>
+          <descricao>T. H. Marshall (1893–1981), sociólogo britânico e professor na London School of Economics, formulou essa definição tripartite da cidadania a partir da análise da experiência histórica inglesa. Sua contribuição foi identificar que a cidadania não é um conceito abstrato e unitário, mas um status que se compõe de direitos de naturezas distintas, conquistados em momentos históricos diferentes.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>Marshall, T. H. *Citizenship and Social Class*. Cambridge University Press, 1950.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-03-s1" status="externo">
+        <o-que-verificar>Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é cidadania".
+      Conceito-âncora: Cidadania.
+      Exemplo-âncora (do capítulo): Uma trabalhadora doméstica brasileira em 2013: ela possuía direito civil de ir e vir (liberdade individual), direito político de votar e ser votada (participação eleitoral), mas só passou a ter direito social à jornada de trabalho regulamentada com a Emenda Constitucional nº 72/2013 — antes disso, a categoria estava excluída de direitos trabalhistas garantidos aos demais trabalhadores desde 1943.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-2" palavras="408" operacao="Classificar">
+      <micro-habilidade>Classificar direitos de cidadania segundo sua natureza civil, política ou social</micro-habilidade>
+      <resumo-aluno>Você vai separar tipos de direitos segundo a esfera da vida que cada um protege e a instituição que o garante, percebendo como a falta de um tipo pode coexistir com a presença de outros.</resumo-aluno>
+      <secao id="sec-1" tipo="classificacao">
+        <introducao>
+        <paragrafo>Os direitos de cidadania podem ser classificados segundo dois critérios: a natureza do direito (qual esfera da vida do indivíduo ele protege ou viabiliza) e a instituição responsável por garanti-lo. Cada combinação desses critérios define um tipo específico de direito. Marshall identificou três tipos, que correspondem a três dimensões da vida em comunidade política.</paragrafo>
+        </introducao>
+        <lista-subtipos>
+          <item tipo="subtipo" nome="Direitos civis">
+            <conteudo>
+            <paragrafo>**Direitos civis: proteção da liberdade individual**</paragrafo>
+            <paragrafo>Um primeiro tipo são os direitos civis, que protegem a esfera da liberdade individual. Incluem a liberdade de expressão, o direito de propriedade, a liberdade religiosa e o direito ao devido processo legal (ou seja, o direito de não ser preso ou julgado de forma arbitrária). A instituição responsável por garanti-los são os tribunais de justiça. Quando um cidadão recorre ao Judiciário contra uma detenção arbitrária, está exercendo um direito civil.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Direitos políticos">
+            <conteudo>
+            <paragrafo>**Direitos políticos: participação no poder**</paragrafo>
+            <paragrafo>Um segundo tipo são os direitos políticos, que garantem a participação do indivíduo nas decisões coletivas. Incluem o direito de votar, de ser votado, de formar partidos políticos e de participar de plebiscitos. As instituições responsáveis por garanti-los são o parlamento e o sistema eleitoral. Quando um cidadão vota nas eleições municipais, está exercendo um direito político.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Direitos sociais">
+            <conteudo>
+            <paragrafo>**Direitos sociais: acesso a condições materiais de vida digna**</paragrafo>
+            <paragrafo>Um terceiro tipo são os direitos sociais, que asseguram o acesso a condições materiais consideradas necessárias para uma vida digna. Incluem o direito à educação pública, à saúde, à previdência social e ao salário mínimo. A instituição responsável por garanti-los é o sistema de serviços sociais do Estado. Quando um cidadão matricula os filhos em escola pública gratuita, está acessando um direito social.</paragrafo>
+            </conteudo>
+          </item>
+        </lista-subtipos>
+      </secao>
+      <secao id="sec-2" tipo="conclusao-parcial">
+        <conteudo>
+        <paragrafo>**A interdependência dos três tipos**</paragrafo>
+        <paragrafo>Os três tipos de direitos não operam de forma independente. A relação entre eles pode ser observada ao se comparar regimes políticos diferentes. Em um regime democrático como o Brasil pós-1988, um cidadão pode exercer os três tipos simultaneamente. Em um regime autoritário como o Brasil entre 1968 e 1978 (período de vigência do Ato Institucional nº 5), direitos políticos foram suprimidos (cassação de mandatos, suspensão de eleições diretas para o Executivo), direitos civis foram restringidos (censura à imprensa, prisão sem mandado judicial), enquanto alguns direitos sociais foram mantidos ou ampliados (expansão do FGTS, criação do PIS). Essa combinação revela que a supressão de um tipo de direito pode coexistir com a manutenção de outro, e que a cidadania plena depende da presença articulada dos três.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-03-01" tipo="sugerida">
+        <descricao>Quadro com 3 colunas (Direitos civis / Direitos políticos / Direitos sociais) e 3 linhas (Exemplos de direitos / Instituição que garante / Situação no Brasil durante o AI-5), mostrando a classificação e a interdependência dos três tipos</descricao>
+      </imagem>
+      <sidebar tipo="verificacao" ref="verif-01-03-s2" status="externo">
+        <o-que-verificar>Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Tipos de direitos de cidadania".
+      Exemplo-âncora (do capítulo): Em um regime democrático como o Brasil pós-1988, um cidadão exerce os três tipos simultaneamente: invoca direito civil ao recorrer ao Judiciário contra uma detenção arbitrária; exerce direito político ao votar nas eleições municipais; e acessa direito social ao matricular os filhos em escola pública gratuita. Em um regime autoritário como o Brasil entre 1968 e 1978 (vigência do AI-5), direitos políticos foram suprimidos (cassação de mandatos, suspensão de eleições diretas), direitos civis foram restringidos (censura, prisão sem mandado judicial), enquanto alguns direitos sociais foram mantidos ou ampliados (expansão do FGTS, criação do PIS).</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-3" palavras="504" operacao="Sequenciar">
+      <micro-habilidade>Sequenciar as etapas históricas da conquista de direitos de cidadania</micro-habilidade>
+      <resumo-aluno>Você vai colocar em ordem cronológica os diferentes tipos de direitos conforme foram conquistados, percebendo que cada conquista dependeu da anterior e resultou da pressão de grupos que ainda estavam excluídos da participação plena.</resumo-aluno>
+      <secao id="sec-1" tipo="sequencia">
+        <titulo>A conquista histórica dos direitos de cidadania</titulo>
+        <conteudo>
+        <paragrafo>A cidadania, tal como definida por Marshall, não surgiu pronta. Na experiência inglesa, os três tipos de direitos foram conquistados em sequência histórica, e cada etapa dependeu da consolidação da anterior para se tornar viável. Essa sequência revela que a cidadania é uma construção política, não uma concessão natural.</paragrafo>
+        <paragrafo>**Direitos civis: séculos XVII–XVIII**</paragrafo>
+        <paragrafo>O processo teve início entre os séculos XVII e XVIII, com a consolidação dos direitos civis na Inglaterra. Em 1689, o Bill of Rights garantiu liberdades civis básicas, como o direito de petição e o julgamento por júri. Ao longo do século XVIII, consolidaram-se o habeas corpus (proteção contra prisão arbitrária), a liberdade de expressão, a liberdade religiosa e o direito à propriedade e ao contrato. Esses direitos estabeleceram uma esfera de proteção individual contra o poder do Estado e foram a base sobre a qual os direitos seguintes seriam reivindicados.</paragrafo>
+        <paragrafo>**Direitos políticos: século XIX**</paragrafo>
+        <paragrafo>A etapa seguinte resultou da pressão de grupos que, embora protegidos por direitos civis, estavam excluídos da participação política. Ao longo do século XIX, o sufrágio masculino foi progressivamente ampliado na Inglaterra. Inicialmente restrito a proprietários de terra, o direito de voto passou a incluir setores mais amplos da população masculina. O Reform Act de 1832 é um marco desse processo: ele estendeu o voto a setores da classe média urbana que antes não tinham representação parlamentar. Essa ampliação, contudo, manteve a exclusão de mulheres e de trabalhadores sem propriedade.</paragrafo>
+        <paragrafo>**Sufrágio feminino: a luta por inclusão no pacto político**</paragrafo>
+        <paragrafo>A exclusão das mulheres do direito de voto gerou uma das lutas mais significativas pela expansão da cidadania política. Em 1903, Emmeline Pankhurst fundou a Women's Social and Political Union (WSPU) na Inglaterra, adotando repertórios de ação que incluíam manifestações de rua, greves de fome e desobediência civil. Após duas décadas de pressão, o parlamento britânico aprovou o Representation of the People Act de 1918, que concedeu voto a mulheres acima de 30 anos com propriedade. Dez anos depois, em 1928, o Equal Franchise Act igualou a idade de voto entre homens e mulheres (21 anos), completando a inclusão feminina no sufrágio britânico.</paragrafo>
+        <paragrafo>No Brasil, o movimento pelo sufrágio feminino seguiu trajetória própria. A Federação Brasileira pelo Progresso Feminino, organizada por Bertha Lutz a partir de 1922, realizou petições ao legislativo e campanhas públicas que resultaram na conquista do voto feminino no Código Eleitoral de 1932.</paragrafo>
+        <paragrafo>**Direitos sociais: século XX**</paragrafo>
+        <paragrafo>A última etapa da sequência descrita por Marshall consolidou-se no século XX, especialmente após 1945. O Estado de bem-estar social, construído em países como a Inglaterra, transformou educação pública, saúde e previdência em direitos universais, garantidos pelo sistema de serviços sociais do Estado. O National Health Service Act de 1948, que criou o sistema público de saúde britânico (NHS), é um exemplo concreto dessa consolidação: pela primeira vez, o acesso à saúde deixou de depender da capacidade de pagamento individual e passou a ser tratado como direito de todo cidadão.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-03-02" tipo="sugerida">
+        <descricao>Linha do tempo com 6 marcos: 1689 (Bill of Rights) → 1832 (Reform Act) → 1903 (fundação da WSPU) → 1918/1928 (voto feminino na Inglaterra) → 1932 (voto feminino no Brasil) → 1948 (criação do NHS)</descricao>
+      </imagem>
+      <nota_fonte>Marshall, T. H. *Citizenship and Social Class*. Cambridge University Press, 1950.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-03-s3" status="externo">
+        <o-que-verificar>Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A conquista histórica dos direitos de cidadania".
+      Exemplo-âncora (do capítulo): Linha do tempo da expansão do sufrágio na Inglaterra: 1689 — Bill of Rights garante liberdades civis básicas (petição, julgamento por júri); 1832 — Reform Act amplia o voto masculino a setores da classe média urbana; 1903 — fundação da WSPU por Emmeline Pankhurst, que adota ações diretas (greves de fome, manifestações de rua, desobediência civil); 1918 — Representation of the People Act concede voto a mulheres acima de 30 anos com propriedade; 1928 — Equal Franchise Act iguala a idade de voto entre homens e mulheres (21 anos); 1948 — National Health Service Act cria o sistema público de saúde britânico (NHS), consolidando direitos sociais.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-4" palavras="640" operacao="Reconhecer perspectiva">
+      <micro-habilidade>Reconhecer perspectivas em disputa sobre quem é reconhecido como sujeito pleno de direitos</micro-habilidade>
+      <resumo-aluno>Você vai perceber que duas visões diferentes explicam de modo distinto o que acontece quando alguém é excluído de uma comunidade política, e que cada uma revela um aspecto diferente desse problema da exclusão.</resumo-aluno>
+      <secao id="sec-1" tipo="perspectiva" nome="T. H. Marshall (1893–1981)">
+        <titulo>Marshall: cidadania como extensão progressiva</titulo>
+        <conteudo>
+        <paragrafo>Reconhecer uma perspectiva é identificar não apenas o que um autor defende, mas de onde parte sua análise e o que essa posição permite ver ou deixa em segundo plano. Duas perspectivas sobre a cidadania oferecem respostas diferentes para uma mesma pergunta: o que acontece quando uma pessoa é excluída do pacto de cidadania.</paragrafo>
+        <paragrafo>Para Marshall, a cidadania se expande gradualmente dentro do Estado-nação. Os direitos são acumulados em etapas históricas (civis, políticos, sociais), e o pertencimento à comunidade política nacional é o critério de inclusão. Quando um grupo é excluído, o problema é resolvido pela extensão progressiva dos mesmos direitos a esse grupo: as mulheres são incluídas pelo sufrágio, os trabalhadores são incluídos pelos direitos sociais. Nessa perspectiva, a exclusão é um problema de extensão. O Estado-nação é o espaço onde a cidadania se constrói e se amplia.</paragrafo>
+        <paragrafo>O argumento de Marshall pressupõe que o Estado-nação funciona como espaço inclusivo: basta ampliar o status de cidadania para incorporar os excluídos. Essa perspectiva ilumina o processo de conquista gradual de direitos, mas deixa em segundo plano uma possibilidade mais radical de exclusão.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Hannah Arendt (1906–1975)</nome>
+          <pais>Alemanha/Estados Unidos</pais>
+          <descricao>Hannah Arendt (1906–1975), filósofa e teórica política nascida na Alemanha e naturalizada estadunidense, desenvolveu essa análise a partir de sua própria experiência como apátrida durante o regime nazista. Em *Origens do Totalitarismo* (1951), argumentou que "o direito fundamental é o direito a ter direitos", ou seja, o direito a pertencer a uma comunidade política organizada, sem o qual todos os demais direitos se tornam inoperantes.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-2" tipo="perspectiva" nome="Hannah Arendt (1906–1975)">
+        <titulo>Arendt: o direito a ter direitos</titulo>
+        <conteudo>
+        <paragrafo>Diferindo dessa análise, Hannah Arendt propõe que a cidadania não é garantida pela simples existência de direitos em um texto constitucional. Ela depende do pertencimento efetivo a uma comunidade política que reconheça a pessoa como sujeito de direitos. Quando uma pessoa é expulsa de toda comunidade política, ela perde não um direito específico (voto, liberdade de expressão, acesso à saúde), mas a própria condição de reivindicar qualquer direito. Arendt chama essa condição fundamental de "direito a ter direitos".</paragrafo>
+        <paragrafo>O caso dos apátridas após a Primeira Guerra Mundial torna visível essa distinção. Milhões de pessoas (russos brancos emigrados, armênios, judeus desnacionalizados pela Alemanha nazista) perderam a nacionalidade de seus Estados de origem e não foram aceitas como cidadãos em nenhum outro Estado. Essas pessoas não tinham a quem recorrer para reivindicar liberdade, voto ou proteção social. A razão não era a inexistência desses direitos em alguma constituição, mas o fato de que nenhum Estado se considerava responsável por garanti-los a essas pessoas. A condição de apátrida revelou que os "direitos humanos universais" dependiam, na prática, de um Estado disposto a reconhecê-los.</paragrafo>
+        <paragrafo>O argumento de Arendt mostra que o Estado-nação pode ser ele próprio o agente da exclusão, ao desnacionalizar populações inteiras. Em regimes totalitários, como a Alemanha nazista, o Estado não apenas deixou de proteger determinados grupos, mas ativamente os privou de toda comunidade política. Nessas condições, a ideia de extensão progressiva proposta por Marshall se revela insuficiente: não há status a estender quando a pessoa não pertence a nenhuma comunidade que a reconheça.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="conclusao-parcial">
+        <conteudo>
+        <paragrafo>**O que cada perspectiva revela e o que deixa de fora**</paragrafo>
+        <paragrafo>As duas perspectivas convergem em reconhecer que a cidadania depende de um vínculo com uma comunidade política organizada. Divergem quanto à natureza da exclusão: Marshall trata a exclusão como um problema de extensão, resolvível pela ampliação progressiva dos direitos dentro do Estado-nação; Arendt identifica uma forma mais radical de exclusão, em que a pessoa é privada do próprio pertencimento político, e nenhum direito pode ser reivindicado. A perspectiva de Marshall explica bem como a cidadania se expande em democracias estáveis; a de Arendt revela os limites dessa explicação quando o Estado é o agente da exclusão.</paragrafo>
+        </conteudo>
+      </secao>
+      <nota_fonte>Arendt, H. *The Origins of Totalitarianism*. Harcourt, Brace and Company, 1951.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-03-s4" status="externo">
+        <o-que-verificar>Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Quem é reconhecido como cidadão: perspectivas em disputa".
+      Exemplo-âncora (do capítulo): Caso dos apátridas após a Primeira Guerra Mundial: milhões de pessoas (russos brancos emigrados, armênios, judeus desnacionalizados pela Alemanha nazista) perderam a nacionalidade de seus Estados de origem e não foram aceitas como cidadãos em nenhum outro Estado. Não tinham a quem recorrer para reivindicar liberdade, voto ou proteção social — não porque esses direitos não existissem em alguma constituição, mas porque nenhum Estado se considerava responsável por garanti-los a essas pessoas. A condição de apátrida revelou que os 'direitos humanos universais' dependiam, na prática, de um Estado disposto a reconhecê-los.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-5" palavras="526" operacao="Mapear causalidade">
+      <micro-habilidade>Mapear relações causais entre a mobilização de movimentos sociais e a ampliação dos direitos de cidadania</micro-habilidade>
+      <resumo-aluno>Você vai entender por que a exclusão de um grupo leva à organização coletiva, que gera formas de pressão sobre o Estado e a opinião pública, resultando no reconhecimento de novos direitos e novas instituições.</resumo-aluno>
+      <secao id="sec-1" tipo="causa">
+        <conteudo>
+        <paragrafo>**Da exclusão à organização coletiva**</paragrafo>
+        <paragrafo>A ampliação da cidadania descrita nas seções anteriores não ocorreu por concessão espontânea do Estado. Em cada etapa, a conquista de novos direitos foi precedida por um mesmo fator: a exclusão de grupos específicos do pacto de cidadania vigente. Trabalhadores, mulheres e populações racializadas, entre outros, encontravam-se formalmente ou materialmente fora do conjunto de direitos reconhecidos pelo Estado. Essa exclusão funcionou como condição inicial de um processo que se repetiu em contextos históricos distintos.</paragrafo>
+        <paragrafo>A partir da percepção coletiva da exclusão, os grupos afetados organizaram-se em movimentos sociais. Esses movimentos não surgiram de forma espontânea: dependeram da criação de associações, federações e redes de articulação capazes de coordenar a ação de indivíduos dispersos. A organização transformou demandas individuais em reivindicações coletivas dirigidas ao Estado e à sociedade.</paragrafo>
+        <paragrafo>**Repertórios de ação coletiva**</paragrafo>
+        <paragrafo>Os movimentos sociais adotaram repertórios de ação coletiva, ou seja, conjuntos de formas de protesto e pressão disponíveis em cada contexto histórico. Entre os repertórios mais recorrentes estavam petições, greves, manifestações de rua, desobediência civil e ocupações de espaços públicos. A escolha do repertório dependia das condições políticas do momento: em contextos de maior abertura, prevaleciam petições e lobby parlamentar; em contextos de maior restrição, a desobediência civil e as manifestações de rua tornavam-se mais frequentes.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="relacao-causal">
+        <conteudo>
+        <paragrafo>**Como os movimentos pressionam o Estado e a opinião pública**</paragrafo>
+        <paragrafo>A pressão exercida pelos movimentos operava em duas direções simultâneas. Por via institucional, os movimentos atuavam dentro das estruturas do Estado: lobby junto a parlamentares, participação em conselhos consultivos, apresentação de projetos de lei. Por via extrainstitucional, os movimentos atuavam sobre a opinião pública: protestos de rua, campanhas na imprensa, greves de fome e outras formas de visibilização da causa geravam cobertura midiática e alteravam a percepção social sobre a legitimidade das demandas.</paragrafo>
+        <paragrafo>A combinação dessas duas vias de pressão (institucional e extrainstitucional) criou as condições para que o Estado respondesse às reivindicações. Sem pressão institucional, as demandas não chegavam ao legislativo; sem pressão extrainstitucional, não havia incentivo político para que parlamentares as aprovassem.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="consequencia">
+        <conteudo>
+        <paragrafo>**Resultados: novos direitos e novas instituições**</paragrafo>
+        <paragrafo>O resultado direto dessa cadeia foi triplo. Primeiro, o reconhecimento formal de novos direitos por meio de legislação ou emendas constitucionais. Segundo, a criação de instituições para garantir esses direitos na prática (tribunais trabalhistas, órgãos de defesa de direitos humanos, cotas eleitorais). Terceiro, a alteração da percepção pública sobre quem é sujeito legítimo de direitos, o que por sua vez abriu espaço para novas reivindicações de outros grupos excluídos.</paragrafo>
+        <paragrafo>O movimento sufragista britânico ilustra essa cadeia causal completa. Mulheres eram excluídas do direito de voto. Organizaram-se na WSPU (1903) e em outras associações. Adotaram repertórios que incluíam marchas, greves de fome, interrupção de sessões parlamentares e desobediência civil. Ao longo de duas décadas, geraram pressão sobre o parlamento e cobertura intensa na imprensa, alterando a opinião pública. O resultado foi a aprovação do voto feminino parcial em 1918 e pleno em 1928.</paragrafo>
+        <paragrafo>No Brasil, o movimento liderado por Bertha Lutz seguiu trajetória análoga: organização da Federação Brasileira pelo Progresso Feminino (1922), petições ao legislativo, campanha pública e conquista do voto feminino no Código Eleitoral de 1932.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-03-03" tipo="sugerida">
+        <descricao>Diagrama de fluxo com 5 etapas encadeadas por setas: Exclusão do pacto de cidadania → Organização coletiva (movimentos sociais) → Repertórios de ação (petições, greves, manifestações) → Pressão sobre Estado e opinião pública → Novos direitos e novas instituições</descricao>
+      </imagem>
+      <sidebar tipo="verificacao" ref="verif-01-03-s5" status="externo">
+        <o-que-verificar>Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Movimentos sociais e a ampliação dos direitos".
+      Exemplo-âncora (do capítulo): O movimento sufragista britânico ilustra a cadeia causal completa: (1) mulheres eram excluídas do direito de voto; (2) organizaram-se na WSPU (1903) e em outras associações; (3) adotaram repertórios que incluíam marchas, greves de fome, interrupção de sessões parlamentares e desobediência civil; (4) geraram pressão sobre o parlamento e cobertura intensa na imprensa, alterando a opinião pública ao longo de duas décadas; (5) o parlamento aprovou o voto feminino parcial em 1918 e pleno em 1928. No Brasil, o movimento liderado por Bertha Lutz seguiu trajetória análoga: organização da Federação Brasileira pelo Progresso Feminino (1922), petições ao legislativo, campanha pública, e conquista do voto feminino no Código Eleitoral de 1932.</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-6" palavras="680" operacao="Aplicar">
+      <micro-habilidade>Aplicar o conceito de cidadania à análise de uma luta contemporânea por direitos</micro-habilidade>
+      <resumo-aluno>Você vai usar o conceito de cidadania e a cadeia entre exclusão, organização coletiva e pressão sobre o Estado para analisar um caso real e concreto de um grupo que conquistou direitos sociais negados.</resumo-aluno>
+      <secao id="sec-1" tipo="generico" aviso="tipo CASO nao mapeado">
+        <conteudo>
+        <paragrafo>**O caso: trabalhadoras domésticas e a exclusão de direitos sociais**</paragrafo>
+        <paragrafo>Até 2013, as trabalhadoras domésticas brasileiras constituíam uma categoria composta majoritariamente por mulheres negras que possuía direitos civis e políticos formais, mas estava excluída de direitos sociais trabalhistas garantidos às demais categorias desde a CLT de 1943. Trabalhadoras domésticas não tinham direito a jornada de trabalho regulamentada, hora extra, FGTS obrigatório nem seguro-desemprego. Essa exclusão durou sete décadas: enquanto operários, bancários e comerciários acumulavam proteções trabalhistas ao longo do século XX, as trabalhadoras domésticas permaneciam fora do alcance dessas garantias.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="perspectiva" nome="Marshall aplicada">
+        <titulo>Aplicando a classificação de Marshall</titulo>
+        <conteudo>
+        <paragrafo>Jornada regulamentada, hora extra, FGTS e seguro-desemprego são direitos sociais. Na classificação de Marshall, pertencem ao terceiro elemento da cidadania: o acesso a condições materiais de vida digna, garantido pelo sistema de serviços sociais do Estado. A exclusão das trabalhadoras domésticas significava que sua cidadania era formalmente incompleta: possuíam o componente civil (liberdade de ir e vir, acesso ao Judiciário) e o componente político (direito de votar e ser votada), mas não o componente social no que se refere à proteção trabalhista. A classificação de Marshall permite identificar com precisão qual dimensão da cidadania estava ausente e por que essa ausência comprometia o pertencimento pleno da categoria à comunidade política.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="perspectiva" nome="Cadeia causal aplicada">
+        <titulo>Aplicando a cadeia causal: do movimento ao direito</titulo>
+        <conteudo>
+        <paragrafo>A cadeia causal descrita na seção anterior permite analisar como essa exclusão foi revertida. A Federação Nacional das Trabalhadoras Domésticas (FENATRAD), fundada em 1997, organizou a categoria e utilizou repertórios de ação que combinaram vias institucional e extrainstitucional. Por via institucional, a FENATRAD participou de conferências nacionais, realizou lobby parlamentar e apresentou depoimentos em audiências legislativas no Congresso Nacional. Por via extrainstitucional, articulou campanhas públicas e cobertura midiática que expuseram a desigualdade de tratamento legal entre trabalhadoras domésticas e as demais categorias, alterando a percepção pública de que o trabalho doméstico seria "diferente" dos demais.</paragrafo>
+        <paragrafo>O resultado dessa pressão foi a aprovação da Emenda Constitucional nº 72/2013, que estendeu aos trabalhadores domésticos direitos como jornada de 44 horas semanais, hora extra e adicional noturno. A Lei Complementar nº 150/2015 regulamentou o FGTS obrigatório e o seguro-desemprego para a categoria.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-4" tipo="resultado">
+        <titulo>O que o caso revela sobre cidadania</titulo>
+        <conteudo>
+        <paragrafo>A luta das trabalhadoras domésticas confirma duas proposições centrais do capítulo. Primeiro, a tese de Marshall de que a cidadania se expande por etapas: a categoria passou de uma cidadania incompleta (com direitos civis e políticos, mas sem direitos sociais trabalhistas) para uma cidadania mais ampla, com a inclusão do componente social. Segundo, a cadeia causal entre movimentos sociais e ampliação de direitos: exclusão de direitos sociais → organização coletiva (FENATRAD) → repertórios de ação (lobby parlamentar, campanhas públicas, audiências legislativas) → pressão sobre o Estado e a opinião pública → reconhecimento legal de novos direitos (EC nº 72/2013 e LC nº 150/2015). O caso demonstra que o mecanismo de expansão da cidadania descrito para o contexto histórico inglês opera também na contemporaneidade brasileira, embora com atores, repertórios e cronologias próprios.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-5" tipo="sintese">
+        <conteudo>
+        <paragrafo>Cidadania é o pertencimento pleno a uma comunidade política, expresso em três tipos de direitos (civis, políticos e sociais) que foram conquistados em etapas históricas pela ação organizada de grupos excluídos do pacto original. Essa expansão não ocorreu por concessão espontânea do Estado, mas pela pressão de movimentos sociais que utilizaram repertórios de ação coletiva (petições, greves, manifestações, desobediência civil) para forçar o reconhecimento legal de novos direitos e a criação de instituições que os garantissem. O caso das trabalhadoras domésticas brasileiras demonstra que o mesmo mecanismo opera na contemporaneidade: exclusão de direitos sociais → organização coletiva (FENATRAD) → repertórios de pressão → aprovação da EC nº 72/2013 e LC nº 150/2015 → ampliação da cidadania.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-6" tipo="encadeamento">
+        <conteudo>
+        <paragrafo>Se a cidadania se expande pela luta de movimentos sociais que pressionam o Estado, o próximo capítulo investigará como a relação entre sociedade civil e Estado se organiza de forma mais ampla: como as organizações da sociedade civil disputam a direção do Estado e como o Estado incorpora ou resiste a essas demandas, configurando o que Gramsci chamou de "Estado ampliado".</paragrafo>
+        </conteudo>
+      </secao>
+      <sidebar tipo="verificacao" ref="verif-01-03-s6" status="externo">
+        <o-que-verificar>Operação: Aplicar.
+      Micro-habilidade / cabeçalho: "Aplicando o conceito de cidadania: a luta das trabalhadoras domésticas por direitos".</o-que-verificar>
+      </sidebar>
+    </bloco>
+
+  </corpo>
+
+  <rodape>
+    <sidebar tipo="aplicar-agora" ref="aplicar-01-03" status="externo">
+      <o-que-verificar>Operação principal do capítulo: Aplicar.
+    Pergunta do capítulo: "Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?"
+    Síntese do capítulo: Cidadania é o pertencimento pleno a uma comunidade política, expresso em três tipos de direitos — civis, políticos e sociais — que foram conquistados em etapas históricas pela ação organizada de grupos excluídos do pacto original. Essa expansão não ocorreu por concessão espontânea do Estado, mas pela pressão de movimentos sociais que utilizaram repertórios de ação coletiva (petições, greves, manifestações, desobediência civil) para forçar o reconhecimento legal de novos direitos e a criação de instituições que os garantissem. O caso das trabalhadoras domésticas brasileiras demonstra que o mesmo mecanismo opera na contemporaneidade: exclusão de direitos sociais → organização coletiva (FENATRAD) → repertórios de pressão → aprovação da EC nº 72/2013 e LC nº 150/2015 → ampliação da cidadania.
+    Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.</o-que-verificar>
+    </sidebar>
+  </rodape>
+
+</capitulo>

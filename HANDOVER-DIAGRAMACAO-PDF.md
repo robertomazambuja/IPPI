@@ -266,6 +266,77 @@ reportado pela ferramenta de edição em arquivos grandes.
   ser sobrescritos — por isso os sufixos `-v2`/`-v3`. Quando os PDFs estiverem
   fechados, consolidar nos nomes finais.
 
+## 13. Sessão 2026-06-19 — geração com imagens reais (cap. 1) e confirmação do bug do §9
+
+Rodado no sandbox Linux: `pip install weasyprint --break-system-packages` (limpo) +
+`python3 xml_to_pdf.py 01-01-...xml --versao-aluno --imagens output/apostila-sociologia-trabalho/imagens`.
+PDF de 11 páginas, sem erros. Validado com `pdftoppm -png -r 150` + medição programática
+de branco de rodapé por página (PIL, ignorando os últimos 6% de cada página onde fica
+o rodapé).
+
+**Confirmado, e pior do que o §9 registrava:** o cabeçalho de bloco órfão não fica só
+"isolado no pé da página" — na p.5 (header "SEQUENCIAR" do bloco-3, que vem logo após
+`<quebra tipo="pagina" sugestao="forte"/>`) o header fica SOZINHO no TOPO da página e o
+resto (95% dela, **85,1% de branco** medido) fica vazio; o conteúdo (multicol) só
+aparece na p.6. A p.4 (verificação do bloco-2, sem forçar quebra) também orfanou:
+**65,0% de branco**. Demais páginas do capítulo ficaram entre 1,2% e 38,8% de branco
+(dentro do esperado; capa e a última página do rodapé "Aplicar agora" naturalmente têm
+mais espaço livre).
+
+Note-se que bloco-4, que também vem após uma `<quebra tipo="pagina">` (a `sugestao="fraca"`
+antes dele), NÃO orfanou — header e conteúdo ficaram juntos na mesma página (p.8). Ou seja,
+o bug é intermitente: depende de quanto conteúdo já caiu na página antes do `break-before:page`
+forçado, não do atributo `sugestao`. Reforça a hipótese do §9 (header e `.bloco-multicol`
+são irmãos soltos, sem `break-inside:avoid` os amarrando).
+
+**Decisão do usuário nesta sessão:** não corrigir agora. PDF entregue como está, com a
+falha documentada. Próxima sessão: usar as direções do §9 (em especial a opção 1 — emitir
+o `.bloco-header` dentro do primeiro `.bloco-multicol`, unidade com `break-inside:avoid`)
+e validar de novo com o mesmo método (render PNG + % de branco por página) antes/depois.
+
+Artefato desta sessão: `output/apostila-sociologia-trabalho/formatado/unidade-1-o-trabalho-na-perspectiva-sociologica/01-01-capitulo-1-o-que-e-trabalho-perspectivas-classicas-forca-de-trabalho-e-alienacao-aluno.pdf`.
+
+## 14. Sessão 2026-06-26 — diagramação do cap. 01-01 de apostila-ciencia-politica
+
+Pedido: gerar o PDF (aluno + professor) do capítulo `01-01` de
+`output/apostila-ciencia-politica/formatado/politica-poder-e-estado/`.
+
+**Dois arquivos truncados encontrados e corrigidos antes de rodar:**
+1. `xml_to_pdf.py` estava cortado no meio do `main()` (linha ~620, no meio de
+   `action="store_true"`) — o mesmo bug de truncamento por ferramenta de edição
+   já registrado nos §10/§7 anteriores. Reparado completando o `main()` a partir
+   de `xml_to_pdf.bak-pre-quadro.py` (a feature "quadro-resumo" do corpo do
+   arquivo, anterior ao `main()`, não foi afetada). `py_compile` limpo depois.
+2. O XML do capítulo `01-01` também estava truncado, cortando no meio do
+   `<rodape>`/`<o-que-verificar>` do `aplicar-01-01`, sem fechar as tags. Texto
+   reconstituído por completo a partir da versão íntegra (a mesma vista pelas
+   ferramentas de arquivo "diretas"); `ET.parse` limpo depois. **Atenção para
+   próximas sessões:** o mount do sandbox Linux pode ficar com uma cópia
+   desatualizada/truncada de um arquivo que já está correto no disco real — se
+   `ET.parse`/`wc -l` no shell discordar do que se vê por leitura direta do
+   arquivo, desconfie do shell, não do conteúdo.
+
+**Rodado:** aluno (12 páginas) e professor (13 páginas), com `--imagens`,
+`--verificacoes` e `--briefing` apontando para as pastas de
+`apostila-ciencia-politica`. Validado: 0 vazamento de gabarito/justificativa/
+resposta-modelo no aluno; gabaritos presentes no professor; nenhuma alternativa
+marcada visualmente; `py_compile` limpo.
+
+**Achado de diagramação (NÃO corrigido nesta sessão, por decisão do usuário):**
+o bug do §9 (caixa full-width — aqui principalmente `sidebar-autor` dentro da
+`secao` e `sidebar-verificacao`/`aplicar-agora` — "orfanando" sozinha numa
+página) está presente neste capítulo de forma muito mais severa que o baseline
+documentado no §9-bis: **75–90% de branco por página** (vs. 12,2% após a
+otimização do cap. 1 de sociologia-trabalho), em praticamente todas as 12
+páginas do aluno. Hipótese: este capítulo tem mais elementos full-width por
+bloco (até 3: sidebar-autor + imagem + verificação) que o capítulo usado para
+calibrar o motor, então o bug do §9 — que lá era intermitente — aqui dispara
+quase sempre. O fix já parcialmente tentado (`bloco-keep` amarrando header + 1º
+segmento, linha ~438 de `xml_to_pdf.py`) não resolve o caso em que o elemento
+full-width é o que sobra sozinho depois do flush, não o header. Próxima sessão:
+revisitar as direções do §9 com este capítulo como caso de teste (é o pior caso
+visto até agora).
+
 ## 12. Princípios a manter
 
 - Não voltar para o motor ReportLab (`apostila_pdf.py`) nesta linha de trabalho.

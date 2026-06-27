@@ -17,21 +17,6 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 import weasyprint
 
-# --- Guarda de contrato: nao deixa o renderizador descartar tag em silencio. ---
-# Toda vez que o formatador emite uma tag que nenhum ramo deste arquivo consome,
-# avisamos em stderr (com de-dup). Foi a ausencia disso que deixou o bug de
-# <introducao>/<lista-subtipos> (classificacao) e <sintese>/<encadeamento>
-# (rodape) passarem despercebidos: o conteudo sumia sem erro algum.
-_TAGS_DESCONHECIDAS = set()
-def avisar_tag_desconhecida(contexto, tag):
-    chave = (contexto, tag)
-    if chave not in _TAGS_DESCONHECIDAS:
-        _TAGS_DESCONHECIDAS.add(chave)
-        sys.stderr.write(
-            f"[xml_to_pdf] AVISO: tag <{tag}> dentro de <{contexto}> nao e "
-            f"renderizada — conteudo descartado. O formatador emitiu algo que o "
-            f"renderizador nao conhece; atualize render_* ou o contrato.\n")
-
 # A4 em mm e inset da moldura (frame com tamanho EXPLICITO)
 PAGE_W_MM, PAGE_H_MM = 210, 297
 FRAME_INSET_MM = 10
@@ -39,13 +24,12 @@ FRAME_W_MM = PAGE_W_MM - 2 * FRAME_INSET_MM   # 190
 FRAME_H_MM = PAGE_H_MM - 2 * FRAME_INSET_MM   # 277
 
 OPERACAO_CORES = {
-    "Definir":                {"fundo": "#E3F2FD", "destaque": "#1565C0"},  # Nivel 1
-    "Classificar":            {"fundo": "#E0F7FA", "destaque": "#00838F"},  # Nivel 1
-    "Sequenciar":             {"fundo": "#E8F5E9", "destaque": "#2E7D32"},  # Nivel 1
-    "Comparar":               {"fundo": "#F3E5F5", "destaque": "#6A1B9A"},  # Nivel 2
-    "Mapear causalidade":     {"fundo": "#FFF3E0", "destaque": "#E65100"},  # Nivel 2
-    "Reconhecer perspectiva": {"fundo": "#FCE4EC", "destaque": "#AD1457"},  # Nivel 3
-    "Aplicar":                {"fundo": "#EFEBE9", "destaque": "#4E342E"},  # Nivel 3
+    "Definir":            {"fundo": "#E3F2FD", "destaque": "#1565C0"},
+    "Sequenciar":         {"fundo": "#E8F5E9", "destaque": "#2E7D32"},
+    "Mapear causalidade": {"fundo": "#FFF3E0", "destaque": "#E65100"},
+    "Comparar":           {"fundo": "#F3E5F5", "destaque": "#6A1B9A"},
+    "Analisar":           {"fundo": "#FCE4EC", "destaque": "#AD1457"},
+    "Avaliar":            {"fundo": "#FFFDE7", "destaque": "#F57F17"},
 }
 COR_PADRAO = {"fundo": "#F5F5F5", "destaque": "#424242"}
 
@@ -90,27 +74,8 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .mapa-passo:last-child { border-right: none; }
 .mapa-passo .num { display: block; font-size: 7pt; color: #999; margin-bottom: 3pt; font-weight: 400; }
 
-/* QUADRO RESUMO — "o que voce vai aprender", logo apos o stepper.
-   Uma linha por micro-habilidade, com barra na cor da operacao. */
-.quadro-resumo { margin: 12pt 0 4pt; border: 1pt solid #D0D6DC; border-radius: 6pt;
-    overflow: hidden; break-inside: avoid; }
-.quadro-resumo-titulo { background: #F5F7F9; font-family: Arial; font-size: 8.5pt;
-    font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #3A4654;
-    padding: 7pt 12pt; border-bottom: 1pt solid #E2E7EC; }
-.quadro-resumo-item { display: flex; align-items: stretch; border-bottom: 1pt solid #EEF1F4; }
-.quadro-resumo-item:last-child { border-bottom: none; }
-.quadro-resumo-barra { width: 4pt; flex: 0 0 4pt; }
-.quadro-resumo-texto { padding: 7pt 12pt; font-size: 10pt; line-height: 1.45; color: #3A4654; }
-.quadro-resumo-op { font-family: Arial; font-weight: 700; }
-
 /* BLOCO */
 .bloco { margin-bottom: 22pt; }
-/* Cada micro-habilidade (bloco) comeca em pagina nova; o primeiro nao recebe a classe. */
-.bloco-quebra { break-before: page; }
-/* Mantem o cabecalho do bloco colado a primeira fatia de conteudo,
-   evitando a faixa de operacao orfa no topo de uma pagina (problema do
-   multicol que ignora break-after:avoid no cabecalho). */
-.bloco-keep { break-inside: avoid; }
 .bloco-header { padding: 9pt 14pt; border-radius: 6pt 6pt 0 0; break-after: avoid; }
 .bloco-header .operacao-nome { font-family: Arial; font-size: 9pt; font-weight: 700;
     text-transform: uppercase; letter-spacing: .08em; color: #fff; }
@@ -129,12 +94,6 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .secao p { margin-bottom: 8pt; text-align: justify; }
 .secao p:last-child { margin-bottom: 0; }
 
-/* LISTA DE SUBTIPOS (operacao Classificar: introducao + itens nomeados) */
-.lista-subtipos { margin-top: 2pt; }
-.lista-subtipos .subtipo-item { margin-bottom: 8pt; }
-.lista-subtipos .subtipo-item:last-child { margin-bottom: 0; }
-.subtipo-nome { font-family: Arial; font-size: 9pt; font-weight: 700; color: #333; margin-bottom: 3pt; }
-
 /* SIDEBAR AUTOR */
 .sidebar-autor { width: 100%; margin: 4pt 0 10pt; background: #FFF8F0; border: 1.5pt solid #E8A838;
     border-left-width: 4pt; border-radius: 0 6pt 6pt 0; padding: 9pt 11pt; font-family: Arial; break-inside: avoid; }
@@ -145,7 +104,7 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 /* VERIFICACAO */
 .sidebar-verificacao { background: #EEF4FF; border: 1.5pt solid #90CAF9; border-left-width: 4pt;
     border-radius: 0 6pt 6pt 0; padding: 11pt 13pt; margin: 9pt 0 6pt; font-family: Arial;
-    break-inside: avoid; }
+    break-inside: avoid; break-before: avoid; }
 .sidebar-verificacao .verif-header { font-size: 8pt; font-weight: 700; color: #1565C0;
     text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6pt; }
 .sidebar-verificacao .verif-pergunta { font-size: 9.5pt; font-weight: 600; margin-bottom: 8pt; line-height: 1.45; }
@@ -162,19 +121,11 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .nota-fonte { font-family: Arial; font-size: 8pt; color: #666; margin: 6pt 0 2pt; padding-left: 10pt;
     border-left: 2pt solid #CCC; break-inside: avoid; }
 
-/* RODAPE do capitulo: sintese final e encadeamento para o proximo capitulo */
-.sintese-final { background: #F5F5F5; border-left: 4pt solid #555; padding: 10pt 14pt;
-    margin-top: 14pt; break-inside: avoid; }
-.sintese-final .rotulo { display: block; font-family: Arial; font-size: 8.5pt; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.5pt; color: #555; margin-bottom: 4pt; }
-.encadeamento { font-family: Arial; font-style: italic; font-size: 9pt; color: #666;
-    margin-top: 10pt; padding-left: 10pt; border-left: 2pt solid #CCC; break-inside: avoid; }
-
 /* IMAGEM (apenas quando ha arquivo real). Compacta para empacotar com a
    verificacao na mesma pagina e nao orfanar. break-before:avoid puxa a imagem
    para junto do texto anterior. */
-.imagem-container { margin: 9pt 0 8pt; text-align: center; break-inside: avoid; }
-.imagem-container img { max-width: 100%; max-height: 140mm; width: auto; height: auto; }
+.imagem-container { margin: 7pt 0 6pt; text-align: center; break-inside: avoid; break-before: avoid; }
+.imagem-container img { max-width: 100%; max-height: 74mm; width: auto; height: auto; }
 
 /* APLICAR AGORA — nunca quebra entre paginas */
 .aplicar-agora { background: #FFFDE7; border: 2pt solid #F9A825; border-radius: 8pt; padding: 16pt 18pt;
@@ -218,21 +169,6 @@ def p_html(el):
 def conteudo_html(cel):
     if cel is None: return ""
     return "".join(p_html(p) for p in cel.findall("paragrafo"))
-
-def lista_subtipos_html(el):
-    """Renderiza <lista-subtipos><item nome="..."><conteudo>...</conteudo></item></lista-subtipos>
-    (usado por secoes tipo="classificacao"). Sem isso, esse conteudo era descartado em
-    silencio porque render_secao so lia <conteudo> direto da secao."""
-    if el is None: return ""
-    items = el.findall("item")
-    if not items: return ""
-    parts = ['<div class="lista-subtipos">']
-    for it in items:
-        nome = it.get("nome", "")
-        nome_h = f'<div class="subtipo-nome">{html_mod.escape(nome)}</div>' if nome else ""
-        parts.append(f'<div class="subtipo-item">{nome_h}{conteudo_html(it.find("conteudo"))}</div>')
-    parts.append('</div>')
-    return "".join(parts)
 
 
 def render_imagem(ref, desc, imagens_dir):
@@ -282,75 +218,65 @@ def sb_aplicar(el, incluir_gabarito=True):
             f'<div class="aplicar-agora-enunciado">{md(html_mod.escape(enun))}</div>{rh}</div>')
 
 # ---------------------------------------------------------------------------
-# Verificacao externa (status="externo") — conteudo vem da pasta --verificacoes
-# (Fase 4 — ver PLANO-VERIFICACAO-EXTERNA.md). Convertendo o JSON para os
-# MESMOS elementos que sb_verif/sb_aplicar ja consomem, preservamos
-# integralmente a logica aluno/professor.
+# Verificacao externa: conteudo vem da pasta verificacoes/{ref}.json e e
+# convertido para os mesmos elementos que sb_verif/sb_aplicar ja consomem,
+# preservando a logica aluno/professor (ver PLANO-VERIFICACAO-EXTERNA.md).
 # ---------------------------------------------------------------------------
 
 def _json_to_elem_verif(data):
-    """Converte o JSON de verificacao no elemento que sb_verif espera."""
-    el = ET.Element("sidebar", {"tipo": "verificacao"})
-    ET.SubElement(el, "pergunta").text = data.get("pergunta", "")
-    alts = ET.SubElement(el, "alternativas")
+    sb = ET.Element("sidebar", tipo="verificacao")
+    p = ET.SubElement(sb, "pergunta"); p.text = data.get("pergunta", "")
+    alts = ET.SubElement(sb, "alternativas")
     correta = data.get("correta", "")
-    for letra in sorted((data.get("alternativas") or {}).keys()):
-        attrs = {"letra": letra}
-        if letra == correta:
-            attrs["correta"] = "sim"
-        ET.SubElement(alts, "alternativa", attrs).text = (data["alternativas"].get(letra) or "")
+    for letra, texto in (data.get("alternativas") or {}).items():
+        a = ET.SubElement(alts, "alternativa", letra=str(letra))
+        if str(letra) == str(correta):
+            a.set("correta", "sim")
+        a.text = texto
     just = data.get("justificativa", "")
     if just:
-        ET.SubElement(el, "justificativa").text = just
-    return el
-
+        j = ET.SubElement(sb, "justificativa"); j.text = just
+    return sb
 
 def _json_to_elem_aplicar(data):
-    """Converte o JSON de aplicar-agora no elemento que sb_aplicar espera."""
-    el = ET.Element("sidebar", {"tipo": "aplicar-agora"})
-    ET.SubElement(el, "enunciado").text = data.get("enunciado", "")
+    sb = ET.Element("sidebar", tipo="aplicar-agora")
+    e = ET.SubElement(sb, "enunciado"); e.text = data.get("enunciado", "")
     resp = data.get("resposta_comentada", "")
     if resp:
-        ET.SubElement(el, "resposta").text = resp
-    return el
+        r = ET.SubElement(sb, "resposta"); r.text = resp
+    return sb
 
-
-def _sb_pendente(ref, incluir_gabarito):
-    """Aviso de verificacao pendente — SO na versao professor; nada para o aluno."""
+def _sb_pendente(ref, motivo, incluir_gabarito):
+    # Aviso visivel SO na versao professor; nada na do aluno.
     if not incluir_gabarito:
         return ""
-    return (f'<div class="sidebar-verificacao verif-pendente">'
-            f'<div class="verif-header">Verificacao pendente</div>'
-            f'<div class="verif-pergunta">Sem insumo para o marcador '
-            f'<b>{html_mod.escape(ref)}</b> (arquivo {html_mod.escape(ref)}.json '
-            f'ausente ou invalido na pasta de verificacoes).</div></div>')
+    return (f'<div class="sidebar-verificacao" style="background:#FFF3E0;'
+            f'border:1pt dashed #E65100;border-left-width:4pt;">'
+            f'<div class="verif-header" style="color:#E65100;">Verificacao pendente</div>'
+            f'<div class="verif-pergunta" style="color:#E65100;font-weight:600;">'
+            f'{html_mod.escape(ref)} — {html_mod.escape(motivo)}</div></div>')
 
-
-def render_sb_externo(el, verifdir, incluir_gabarito=True):
-    tipo = el.get("tipo", "")
+def render_sb_externo(el, tipo, incluir_gabarito, verifdir):
     ref = el.get("ref", "")
-    if not verifdir or not ref:
-        return _sb_pendente(ref, incluir_gabarito)
-    jpath = os.path.join(verifdir, ref + ".json")
-    if not os.path.isfile(jpath):
-        return _sb_pendente(ref, incluir_gabarito)
+    path = (Path(verifdir) / f"{ref}.json") if verifdir else None
+    if path is None or not path.exists():
+        return _sb_pendente(ref, f"arquivo verificacoes/{ref}.json nao encontrado", incluir_gabarito)
     try:
-        with open(jpath, encoding="utf-8") as f:
-            data = json.load(f)
-    except (json.JSONDecodeError, OSError, ValueError):
-        return _sb_pendente(ref, incluir_gabarito)
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as e:
+        return _sb_pendente(ref, f"JSON invalido ({e})", incluir_gabarito)
     if tipo == "verificacao":
         return sb_verif(_json_to_elem_verif(data), incluir_gabarito)
     if tipo == "aplicar-agora":
         return sb_aplicar(_json_to_elem_aplicar(data), incluir_gabarito)
-    return _sb_pendente(ref, incluir_gabarito)
+    return ""
 
 
 def render_sb(el, incluir_gabarito=True, verifdir=None):
-    if el.get("status") == "externo":
-        return render_sb_externo(el, verifdir, incluir_gabarito)
     t = el.get("tipo", "")
     if t == "autor": return sb_autor(el)
+    if el.get("status") == "externo":
+        return render_sb_externo(el, t, incluir_gabarito, verifdir)
     if t == "verificacao": return sb_verif(el, incluir_gabarito)
     if t == "aplicar-agora": return sb_aplicar(el, incluir_gabarito)
     return ""
@@ -362,9 +288,6 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
     if te is not None and te.text:
         col_parts.append(f'<div class="secao-titulo">{html_mod.escape(te.text.strip())}</div>')
     col_parts.append(conteudo_html(el.find("conteudo")))
-    # secoes tipo="classificacao" usam <introducao> + <lista-subtipos> em vez de <conteudo>
-    col_parts.append(conteudo_html(el.find("introducao")))
-    col_parts.append(lista_subtipos_html(el.find("lista-subtipos")))
 
     full_parts = []
     for sb in el.findall("sidebar"):
@@ -381,16 +304,11 @@ def render_secao(el, imdir, incluir_gabarito=True, verifdir=None):
         if h:
             full_parts.append(h)
 
-    _CONHECIDAS_SECAO = {"titulo", "conteudo", "introducao", "lista-subtipos", "sidebar", "imagem"}
-    for ch in el:
-        if ch.tag not in _CONHECIDAS_SECAO:
-            avisar_tag_desconhecida("secao", ch.tag)
-
     out = [('col', f'<div class="secao">{"".join(col_parts)}</div>')]
     out += [('full', h) for h in full_parts]
     return out
 
-def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina=False):
+def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None):
     op = el.get("operacao", "")
     bid = el.get("id", "")
     c = OPERACAO_CORES.get(op, COR_PADRAO)
@@ -429,18 +347,8 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina
                 flush(); segments.append(h)
         elif t == "nota_fonte":
             buffer.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
-        elif t in ("micro-habilidade", "resumo-aluno"):
-            pass  # lidos via find() (cabecalho do bloco / quadro resumo); ignorar no loop
-        else:
-            avisar_tag_desconhecida("bloco", t)
     flush()
-    cls = "bloco bloco-quebra" if quebrar_pagina else "bloco"
-    if segments:
-        corpo_bloco = (f'<div class="bloco-keep">{header}{segments[0]}</div>'
-                       + "".join(segments[1:]))
-    else:
-        corpo_bloco = header
-    return f'<div class="{cls}" id="{bid}">{corpo_bloco}</div>'
+    return f'<div class="bloco" id="{bid}">{header}{"".join(segments)}</div>'
 
 
 def split_nome_capitulo(nome_completo):
@@ -451,32 +359,6 @@ def split_nome_capitulo(nome_completo):
             a, b = nome_completo.split(sep, 1)
             return a.strip(), b.strip()
     return "", nome_completo.strip()
-
-def render_quadro_resumo(corpo_el):
-    """Quadro 'O que voce vai aprender' na capa: uma linha por micro-habilidade,
-    com a cor da operacao. O texto vem de <resumo-aluno> (escrito pelo Agente 1);
-    se ausente, faz fallback para a <micro-habilidade> ja existente no bloco."""
-    if corpo_el is None:
-        return ""
-    linhas = []
-    for bl in corpo_el.findall("bloco"):
-        op = bl.get("operacao", "")
-        texto = txt(bl.find("resumo-aluno")) or txt(bl.find("micro-habilidade"))
-        if not texto:
-            continue
-        c = OPERACAO_CORES.get(op, COR_PADRAO)
-        op_h = (f'<span class="quadro-resumo-op" style="color:{c["destaque"]}">'
-                f'{html_mod.escape(op)}</span> — ') if op else ""
-        linhas.append(
-            f'<div class="quadro-resumo-item">'
-            f'<div class="quadro-resumo-barra" style="background:{c["destaque"]}"></div>'
-            f'<div class="quadro-resumo-texto">{op_h}{md(html_mod.escape(texto))}</div>'
-            f'</div>')
-    if not linhas:
-        return ""
-    return ('<div class="quadro-resumo">'
-            '<div class="quadro-resumo-titulo">O que você vai aprender neste capítulo</div>'
-            + "".join(linhas) + '</div>')
 
 def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=None):
     meta = meta or {}
@@ -512,49 +394,22 @@ def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=
         mapa_html = f'<div class="mapa-progressao">{items}</div>'
 
     pqh = f'<div class="por-que-importa">Por que importa: {html_mod.escape(pq)}</div>' if pq else ""
-    # Quadro resumo "o que voce vai aprender", logo apos o stepper (mapa-progressao).
+    capa = f'<div class="capa-capitulo">{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}{pqh}{mapa_html}</div>'
+
     corpo_el = root.find("corpo")
-    quadro_html = render_quadro_resumo(corpo_el)
-
-    capa = (f'<div class="capa-capitulo">{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}'
-            f'{pqh}{mapa_html}{quadro_html}</div>')
-
     corpo = []
     if corpo_el is not None:
-        children = list(corpo_el)
-        primeiro_bloco = True
-        for i, ch in enumerate(children):
+        for ch in corpo_el:
             t = ch.tag
-            if t == "bloco":
-                # Quebra de pagina antes de cada bloco (cada micro-habilidade comeca
-                # em pagina nova), exceto o primeiro, que segue logo apos a capa.
-                corpo.append(render_bloco(ch, imdir, incluir_gabarito, verifdir,
-                                          quebrar_pagina=not primeiro_bloco))
-                primeiro_bloco = False
-            elif t == "quebra":
-                # Com a quebra automatica por bloco, uma <quebra> seguida de <bloco>
-                # geraria pagina em branco dupla. So emite se o proximo nao for bloco.
-                prox = children[i + 1] if i + 1 < len(children) else None
-                if prox is None or prox.tag != "bloco":
-                    corpo.append('<div class="quebra-pagina"></div>')
+            if t == "bloco": corpo.append(render_bloco(ch, imdir, incluir_gabarito, verifdir))
+            elif t == "quebra": corpo.append('<div class="quebra-pagina"></div>')
             elif t == "sidebar": corpo.append(render_sb(ch, incluir_gabarito, verifdir))
             elif t == "nota_fonte": corpo.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
-            else: avisar_tag_desconhecida("corpo", t)
 
     rodape = ""
     re_el = root.find("rodape")
     if re_el is not None:
-        for ch in re_el:
-            t = ch.tag
-            if t == "sidebar":
-                rodape += render_sb(ch, incluir_gabarito, verifdir)
-            elif t == "sintese":
-                rodape += (f'<div class="sintese-final"><span class="rotulo">Síntese</span>'
-                           f'{md(html_mod.escape(txt(ch)))}</div>')
-            elif t == "encadeamento":
-                rodape += f'<div class="encadeamento">{md(html_mod.escape(txt(ch)))}</div>'
-            else:
-                avisar_tag_desconhecida("rodape", t)
+        for sb in re_el.findall("sidebar"): rodape += render_sb(sb, incluir_gabarito, verifdir)
 
     return capa + "".join(corpo) + rodape
 
@@ -611,8 +466,7 @@ def main():
     g.add_argument("xml", nargs="?")
     g.add_argument("--unidade")
     p.add_argument("--imagens")
-    p.add_argument("--verificacoes",
-                   help="Pasta com os JSON das verificacoes externas ({ref}.json).")
+    p.add_argument("--verificacoes", help="Pasta com os JSON de verificacao externa ({ref}.json).")
     p.add_argument("--briefing", help="JSON com nomes da unidade e dos capitulos (fora do XML).")
     p.add_argument("--output")
     p.add_argument("--html-only", action="store_true")

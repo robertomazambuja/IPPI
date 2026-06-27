@@ -1,0 +1,4 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-19T11:58:29,apostila-sociologia-trabalho,Agente 1,"1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação",3,4,8229,29559,38241
+2026-06-19T12:01:21,apostila-sociologia-trabalho,Agente 2,"1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação",3,4,7145,35518,49636
+2026-06-19T12:02:02,apostila-sociologia-trabalho,Agente 4,"1.1 Capítulo 1 — O que é trabalho? Perspectivas clássicas, força de trabalho e alienação",2,3,2199,15081,9046

@@ -1,0 +1,213 @@
+2026-06-26 12:06:23,774 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-26 12:06:23,798 [INFO] __main__: Apostila : apostila-ciencia-politica
+2026-06-26 12:06:23,799 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-26 12:06:23,799 [INFO] __main__: Workers  : 3
+2026-06-26 12:06:23,799 [INFO] __main__: Forçar   : não
+2026-06-26 12:06:23,800 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-26 12:06:23,818 [INFO] __main__: CSV carregado: 4 capítulos (formato com andaime)
+2026-06-26 12:06:23,819 [INFO] __main__: Unidades : 1
+2026-06-26 12:06:23,819 [INFO] __main__: Capítulos: 4
+2026-06-26 12:06:23,821 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-26 12:06:23,821 [INFO] __main__: Unidade 1: Política, poder e Estado
+2026-06-26 12:06:23,821 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-26 12:06:23,823 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:06:23,824 [INFO] __main__: Cap. 1/4  [1.1] Capítulo 1 — Poder, dominação e Estado  [Agente 1]
+2026-06-26 12:06:23,824 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:06:23,835 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — Poder, dominação e Estado
+2026-06-26 12:06:27,018 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:08:12,352 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:08:12,358 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:08:17,486 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:08:26,182 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6029 cache_create=5649 cache_read=31224
+2026-06-26 12:08:26,187 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:08:26,188 [INFO] __main__: Cap. 2/4  [1.2] Capítulo 2 — Contratualismo e fundamentos do Estado moderno  [Agente 1]
+2026-06-26 12:08:26,189 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:08:26,238 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Contratualismo e fundamentos do Estado moderno
+2026-06-26 12:08:29,268 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:10:19,404 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:10:19,408 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:10:22,888 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:10:33,221 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6361 cache_create=13838 cache_read=23909
+2026-06-26 12:10:33,225 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:10:33,226 [INFO] __main__: Cap. 3/4  [1.3] Capítulo 3 — Cidadania e luta por direitos  [Agente 1]
+2026-06-26 12:10:33,227 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:10:33,242 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 3: Capítulo 3 — Cidadania e luta por direitos
+2026-06-26 12:10:36,212 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:12:40,110 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:12:40,112 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:12:42,862 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:12:54,617 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=7646 cache_create=15563 cache_read=24326
+2026-06-26 12:12:54,621 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:12:54,622 [INFO] __main__: Cap. 4/4  [1.4] Capítulo 4 — Sociedade civil e o Estado ampliado  [Agente 1]
+2026-06-26 12:12:54,622 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:12:54,629 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 4: Capítulo 4 — Sociedade civil e o Estado ampliado
+2026-06-26 12:13:02,461 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:20,650 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:15:20,655 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:15:23,364 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:36,067 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=7749 cache_create=15894 cache_read=24678
+2026-06-26 12:15:36,071 [INFO] __main__: 
+[Fase 2] Processando 4 capítulo(s) em paralelo (3 workers)…
+2026-06-26 12:15:37,484 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,485 [INFO] __main__: Cap. 2/4  [1.2] Capítulo 2 — Contratualismo e fundamentos do Estado moderno  [estágios 2–5]
+2026-06-26 12:15:37,485 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,509 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,510 [INFO] __main__: Cap. 1/4  [1.1] Capítulo 1 — Poder, dominação e Estado  [estágios 2–5]
+2026-06-26 12:15:37,510 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,540 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,540 [INFO] __main__: Cap. 3/4  [1.3] Capítulo 3 — Cidadania e luta por direitos  [estágios 2–5]
+2026-06-26 12:15:37,541 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:15:37,553 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Contratualismo e fundamentos do Estado moderno
+2026-06-26 12:15:37,554 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 3: Capítulo 3 — Cidadania e luta por direitos
+2026-06-26 12:15:37,565 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — Poder, dominação e Estado
+2026-06-26 12:15:39,971 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:40,186 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:41,727 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:42,422 [INFO] __main__:     →  read_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:15:42,427 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-26 12:15:42,498 [INFO] __main__:     →  read_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:15:42,500 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-26 12:15:44,008 [INFO] __main__:     →  read_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:15:44,011 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-26 12:15:44,841 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:45,038 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:46,224 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-26 12:15:46,314 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:15:48,941 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:17:34,889 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:17:34,895 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:17:38,789 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:17:55,124 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:17:55,138 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:17:58,974 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:17:59,998 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=5903 cache_create=31652 cache_read=45686
+2026-06-26 12:18:00,002 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — Poder, dominação e Estado
+2026-06-26 12:18:00,021 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-poder-dominacao-e-estado.md (4 alteracao(oes))
+2026-06-26 12:18:00,022 [INFO] __main__:     ✓ Normalizações aplicadas (4 alteração(ões))
+2026-06-26 12:18:00,023 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-26 12:18:00,024 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-26 12:18:00,025 [INFO] __main__:         · Adicionado ref=consequencia ao AUTOR solto apos CONSEQUENCIA
+2026-06-26 12:18:00,025 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?
+2026-06-26 12:18:00,058 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — Poder, dominação e Estado
+2026-06-26 12:18:01,779 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:03,119 [INFO] __main__:     →  read_file: output\apostila-ciencia-politica\texto\politica-poder-e-estado\01-01-capitulo-1-poder-dominacao-e-estado.md
+2026-06-26 12:18:04,632 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:11,632 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:18:11,636 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:18:15,294 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:20,650 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=6861 cache_create=42521 cache_read=83684
+2026-06-26 12:18:20,654 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Contratualismo e fundamentos do Estado moderno
+2026-06-26 12:18:20,663 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md (4 alteracao(oes))
+2026-06-26 12:18:20,664 [INFO] __main__:     ✓ Normalizações aplicadas (4 alteração(ões))
+2026-06-26 12:18:20,665 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-26 12:18:20,665 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-26 12:18:20,666 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-26 12:18:20,667 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Quais são as diferenças entre Hobbes, Locke e Rousseau quanto aos fundamentos, limites e finalidades do poder estatal?
+2026-06-26 12:18:20,721 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Contratualismo e fundamentos do Estado moderno
+2026-06-26 12:18:21,998 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:24,488 [INFO] __main__:     →  read_file: output\apostila-ciencia-politica\texto\politica-poder-e-estado\01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.md
+2026-06-26 12:18:27,890 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:37,742 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=8217 cache_create=37687 cache_read=51267
+2026-06-26 12:18:37,747 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 3: Capítulo 3 — Cidadania e luta por direitos
+2026-06-26 12:18:37,755 [INFO] normalizador: [Normalizador] Modificado: 01-03-capitulo-3-cidadania-e-luta-por-direitos.md (3 alteracao(oes))
+2026-06-26 12:18:37,756 [INFO] __main__:     ✓ Normalizações aplicadas (3 alteração(ões))
+2026-06-26 12:18:37,757 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-26 12:18:37,758 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-26 12:18:37,759 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?
+2026-06-26 12:18:37,806 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 3: Capítulo 3 — Cidadania e luta por direitos
+2026-06-26 12:18:40,145 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:41,345 [INFO] __main__:     →  read_file: output\apostila-ciencia-politica\texto\politica-poder-e-estado\01-03-capitulo-3-cidadania-e-luta-por-direitos.md
+2026-06-26 12:18:42,650 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:53,188 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=1663 cache_create=11388 cache_read=11200
+2026-06-26 12:18:53,203 [INFO] __main__:     ✓ 6 troca(s) aplicada(s) pelo Agente 4
+2026-06-26 12:18:53,205 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Contratualismo e fundamentos do Estado moderno
+2026-06-26 12:18:53,226 [INFO] __main__:     ✓ Pontos de verificação identificados: 4 seção(ões) | aplicar_agora=sim
+2026-06-26 12:18:53,277 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.xml (4 blocos, 2341 palavras)
+2026-06-26 12:18:53,278 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-contratualismo-e-fundamentos-do-estado-moderno.xml
+2026-06-26 12:18:54,070 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-26 12:18:54,070 [INFO] __main__: Cap. 4/4  [1.4] Capítulo 4 — Sociedade civil e o Estado ampliado  [estágios 2–5]
+2026-06-26 12:18:54,071 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-26 12:18:54,074 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 4: Capítulo 4 — Sociedade civil e o Estado ampliado
+2026-06-26 12:18:56,495 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:18:58,840 [INFO] __main__:     →  read_file: output/apostila-ciencia-politica/core/politica-poder-e-estado/01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:18:58,843 [INFO] __main__:     →  read_file: contexto/disciplinas/sociologia.md
+2026-06-26 12:19:01,425 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:19:28,703 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=5508 cache_create=12821 cache_read=7925
+2026-06-26 12:19:28,729 [INFO] __main__:     ✓ 16 troca(s) aplicada(s) pelo Agente 4
+2026-06-26 12:19:28,731 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — Poder, dominação e Estado
+2026-06-26 12:19:28,741 [INFO] __main__:     ✓ Pontos de verificação identificados: 4 seção(ões) | aplicar_agora=sim
+2026-06-26 12:19:28,894 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-poder-dominacao-e-estado.xml (4 blocos, 2068 palavras)
+2026-06-26 12:19:28,894 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-poder-dominacao-e-estado.xml
+2026-06-26 12:21:13,685 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=10232 cache_create=14653 cache_read=12843
+2026-06-26 12:21:13,690 [INFO] __main__:     ✓ 0 troca(s) aplicada(s) pelo Agente 4
+2026-06-26 12:21:13,691 [INFO] __main__:       ⚠  JSON inválido do Agente 4: Expecting ',' delimiter: line 11 column 103 (char 2570) — arquivo não alterado
+2026-06-26 12:21:13,692 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 3: Capítulo 3 — Cidadania e luta por direitos
+2026-06-26 12:21:13,701 [INFO] __main__:     ✓ Pontos de verificação identificados: 6 seção(ões) | aplicar_agora=sim
+2026-06-26 12:21:13,716 [INFO] formatador: [Formatador] Salvo: 01-03-capitulo-3-cidadania-e-luta-por-direitos.xml (6 blocos, 3078 palavras)
+2026-06-26 12:21:13,717 [INFO] __main__:     ✓ XML gerado: 01-03-capitulo-3-cidadania-e-luta-por-direitos.xml
+2026-06-26 12:22:13,057 [INFO] __main__:     →  write_file: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:22:13,061 [INFO] __main__:     ✓  Salvo: output/apostila-ciencia-politica/texto/politica-poder-e-estado/01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:22:17,090 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:39:27,031 [INFO] __main__:     ⚠  Erro transitório — aguardando 10s antes de tentar novamente...
+2026-06-26 12:39:41,893 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:39:58,063 [INFO] __main__:   ✓  Agente 2 concluiu (3 iteração(ões)) | in=4 out=8312 cache_create=56890 cache_read=31643
+2026-06-26 12:39:58,104 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 4: Capítulo 4 — Sociedade civil e o Estado ampliado
+2026-06-26 12:39:58,126 [INFO] normalizador: [Normalizador] Modificado: 01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md (4 alteracao(oes))
+2026-06-26 12:39:58,126 [INFO] __main__:     ✓ Normalizações aplicadas (4 alteração(ões))
+2026-06-26 12:39:58,127 [INFO] __main__:         · Adicionado ref=fonte ao AUTOR solto apos FONTE
+2026-06-26 12:39:58,127 [INFO] __main__:         · Adicionado ref=subtipo ao AUTOR solto apos SUBTIPO
+2026-06-26 12:39:58,127 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-26 12:39:58,127 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como a relação entre sociedade civil e Estado determina se um regime político se torna autoritário, se democratiza ou se mantém democrático?
+2026-06-26 12:39:58,265 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 4: Capítulo 4 — Sociedade civil e o Estado ampliado
+2026-06-26 12:40:00,317 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:40:01,342 [INFO] __main__:     →  read_file: output\apostila-ciencia-politica\texto\politica-poder-e-estado\01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.md
+2026-06-26 12:40:03,386 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-26 12:41:25,250 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=5419 cache_create=17886 cache_read=10458
+2026-06-26 12:41:25,263 [INFO] __main__:     ✓ 17 troca(s) aplicada(s) pelo Agente 4
+2026-06-26 12:41:25,266 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 4: Capítulo 4 — Sociedade civil e o Estado ampliado
+2026-06-26 12:41:25,280 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim
+2026-06-26 12:41:25,337 [INFO] formatador: [Formatador] Salvo: 01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.xml (5 blocos, 3227 palavras)
+2026-06-26 12:41:25,337 [INFO] __main__:     ✓ XML gerado: 01-04-capitulo-4-sociedade-civil-e-o-estado-ampliado.xml
+2026-06-26 12:41:25,407 [INFO] __main__: USAGE TOTAL [apostila-ciencia-politica] — in=41 out=79900 cache_create=276442 cache_read=358843
+2026-06-26 12:41:25,408 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-26 12:41:25,408 [INFO] __main__: Pipeline concluído.
+2026-06-26 12:41:25,408 [INFO] __main__: Outputs em: output/apostila-ciencia-politica/
+2026-06-26 12:41:25,408 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\pipeline_20260626_120623.log
+2026-06-26 12:41:25,409 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\logs\usage_20260626_120623.csv
+2026-06-26 12:41:25,409 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-26 12:41:26,418 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\output\apostila-ciencia-politica\IMAGENS-NECESSARIAS.txt
+2026-06-26 12:41:26,419 [INFO] __main__: [Imagens] 12 imagem(ns) em 4 capítulo(s).
+2026-06-26 12:41:26,497 [INFO] __main__: [Verificações] Lista salva em: C:\Users\Roberto\Desktop\NOVO - IPPI - BNCC\output\apostila-ciencia-politica\VERIFICACOES-NECESSARIAS.txt
+2026-06-26 12:41:26,497 [INFO] __main__: [Verificações] 23 marcador(es) em 4 capítulo(s).
