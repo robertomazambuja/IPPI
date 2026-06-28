@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s1-b",
+  "pergunta": "No trabalho assalariado, o que o trabalhador vende ao empregador é sua força de trabalho — a capacidade física e mental que ele emprega durante a jornada —, e não o trabalho já executado. Ao comprar essa força de trabalho, o empregador adquire o direito de utilizá-la por um período, durante o qual o trabalhador produz mercadorias cujo valor total excede o salário pago, diferença que Marx denomina mais-valia. Por que essa relação caracteriza trabalho assalariado, no sentido de Marx, e não a leitura neoclássica (Marshall, Clark), em que o salário é fixado pela oferta e pela procura e pela produtividade, sem exploração?",
+  "alternativas": {
+    "A": "Porque, como na leitura neoclássica, o salário corresponde exatamente ao valor que a produtividade do trabalhador adiciona à empresa, de modo que não há diferença entre o valor produzido e o valor pago.",
+    "B": "Porque o trabalhador vende sua força de trabalho, não o trabalho já feito, e o empregador fica com a diferença entre o valor que ela produz e o salário (mais-valia) — apropriação do excedente que os neoclássicos negam haver.",
+    "C": "Porque o trabalhador vende seu trabalho já executado por um preço justo combinado livremente, e a remuneração corresponde integralmente ao que ele produziu, o que torna a relação equilibrada e sem excedente apropriado.",
+    "D": "Porque o trabalhador recebe um salário em dinheiro, e o pagamento em moeda, por si só, é o critério que distingue o trabalho assalariado de qualquer outra forma de trabalho, independentemente de quem fica com o valor produzido."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque mobiliza o critério definitório do capítulo: o que se vende é a força de trabalho (capacidade), não o trabalho executado, e o empregador se apropria do excedente (mais-valia) — é essa apropriação que configura a exploração que a leitura neoclássica nega. A é um distrator de vocabulário do conceito rival: descreve corretamente a tese neoclássica (Marshall, Clark) — salário igual à produtividade, sem excedente — mas a apresenta como se fosse a definição marxista de trabalho assalariado, que é justamente o oposto. C é um vocabulário análogo: começa de modo plausível ('o trabalhador vende' por 'um preço'), mas distorce o critério ao dizer que se vende o trabalho já executado por valor integral, negando a distinção força de trabalho/trabalho e a mais-valia. D é uma restrição indevida: isola um traço não-essencial (o pagamento em dinheiro) como se fosse o critério suficiente, ignorando a venda da força de trabalho e a apropriação do excedente, que são os elementos definitórios."
+}

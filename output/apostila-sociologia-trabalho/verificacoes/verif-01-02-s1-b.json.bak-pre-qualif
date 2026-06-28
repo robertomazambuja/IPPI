@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1-b",
+  "pergunta": "Segundo Danièle Linhart, em A desmedida do capital (2007), a reestruturação produtiva contemporânea não elimina o controle sobre o trabalhador, mas o desloca: em vez de controlar os gestos e o tempo (como no taylorismo), as empresas passam a controlar a subjetividade do trabalhador, exigindo adesão pessoal aos objetivos da empresa — o controle muda de forma, mas não desaparece. Por que esse deslocamento ainda caracteriza uma reestruturação produtiva, e não uma libertação do trabalhador em relação ao controle?",
+  "alternativas": {
+    "A": "Porque a reestruturação produtiva é uma reorganização do modo de produzir e de controlar o trabalho — e aqui o controle não desaparece, apenas muda de objeto, dos gestos e do tempo para a subjetividade e a adesão pessoal aos objetivos da empresa.",
+    "B": "Porque, ao deixar de controlar os gestos e o tempo, a empresa abre mão de qualquer forma de controle, e a reestruturação produtiva se define justamente pela eliminação do controle sobre o trabalhador.",
+    "C": "Porque a empresa passou a controlar a subjetividade do trabalhador, e o controle da subjetividade, por ser mais brando que o controle taylorista dos gestos, representa uma forma de autonomia conquistada pelo trabalhador no processo produtivo.",
+    "D": "Porque a reestruturação produtiva se define unicamente pela substituição de trabalhadores por máquinas automatizadas, e foi essa automação que dispensou o controle direto sobre os gestos na linha de produção."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica o critério definitório do capítulo: a reestruturação produtiva reorganiza o modo de produzir e de controlar; em Linhart, o controle não desaparece, apenas se desloca dos gestos e do tempo para a subjetividade — por isso continua sendo controle. B é uma inversão da tese: afirma exatamente o oposto do argumento de Linhart, tratando a mudança de forma do controle como sua eliminação, quando o ponto da autora é que o controle persiste. C é um vocabulário análogo: parte de um elemento correto (o controle passou à subjetividade), mas distorce na segunda metade ao concluir que isso é autonomia, quando o capítulo o apresenta como uma forma mais intensa de controle, não como libertação. D é campo semântico sem ancoragem: importa um critério plausível (a substituição de trabalhadores por máquinas) que não é o que define a reestruturação no argumento de Linhart, cujo foco é o deslocamento do controle, não a automação."
+}

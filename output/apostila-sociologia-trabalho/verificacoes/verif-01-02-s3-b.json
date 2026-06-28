@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s3-b",
+  "pergunta": "O fordismo consolidou-se entre 1945 e 1973 junto ao Estado de bem-estar social, com contratos estáveis, previdência, seguro-desemprego e negociação coletiva entre sindicatos e empregadores. O toyotismo expandiu-se a partir da década de 1980 em um contexto de políticas neoliberais (Thatcher, Reagan), com flexibilização das leis trabalhistas, terceirização, redução de encargos e enfraquecimento dos sindicatos. Quanto à relação com o Estado e à proteção social, qual alternativa compara corretamente os dois modelos?",
+  "alternativas": {
+    "A": "O fordismo expandiu-se em contexto neoliberal de flexibilização e enfraquecimento sindical, enquanto o toyotismo se consolidou junto ao Estado de bem-estar social, com contratos estáveis, previdência e negociação coletiva.",
+    "B": "Tanto o fordismo quanto o toyotismo se desenvolveram junto ao Estado de bem-estar social, com contratos estáveis e sindicatos fortes, diferindo apenas no formato da linha de produção e no número de modelos fabricados.",
+    "C": "O fordismo combinava contratos estáveis com flexibilização das leis trabalhistas e terceirização; o toyotismo combinava previdência e seguro-desemprego com enfraquecimento dos sindicatos e redução de encargos.",
+    "D": "O fordismo articulou-se ao Estado de bem-estar social (1945-1973), com contratos estáveis e negociação coletiva; o toyotismo expandiu-se nos anos 1980 em contexto neoliberal, com flexibilização trabalhista, terceirização e sindicatos enfraquecidos."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque atribui a cada modelo a configuração que de fato lhe corresponde: bem-estar social e estabilidade ao fordismo (1945-1973), neoliberalismo e flexibilização ao toyotismo (anos 1980 em diante). A é uma inversão da tese: troca as duas configurações entre os modelos, atribuindo ao fordismo o contexto neoliberal e ao toyotismo o Estado de bem-estar — exatamente o oposto do que o capítulo afirma. B é uma restrição indevida que apaga a dimensão comparada: nivela os dois modelos como se ambos pertencessem ao bem-estar social, reduzindo a diferença a um detalhe de linha de produção e ignorando a oposição central entre os contextos estatais. C é um vocabulário análogo: mistura, em cada modelo, categorias das duas unidades (contratos estáveis do fordismo com flexibilização do toyotismo, e vice-versa), criando descrições híbridas que nenhum dos modelos sustenta isoladamente."
+}

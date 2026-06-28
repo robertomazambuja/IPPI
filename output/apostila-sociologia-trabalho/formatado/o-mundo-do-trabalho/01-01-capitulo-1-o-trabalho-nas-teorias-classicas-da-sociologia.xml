@@ -40,6 +40,12 @@
       Conceito-âncora: Trabalho assalariado.
       Exemplo-âncora (do capítulo): Um operador de caixa de supermercado utiliza o scanner, o uniforme e o terminal de pagamento fornecidos pela empresa. Ele não é dono de nenhum desses instrumentos. Ao final do mês, recebe um salário fixo, independentemente do lucro que a loja obteve com as vendas que ele processou. A diferença entre o valor que seu trabalho gerou para a empresa e o salário que recebeu é apropriada pelo proprietário.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-01-s1-b" status="externo">
+        <o-que-verificar>Operação: Definir.
+      Micro-habilidade / cabeçalho: "O trabalho assalariado como relação social".
+      Conceito-âncora: Trabalho assalariado (distinção entre força de trabalho e trabalho).
+      Exemplo-âncora (do capítulo): A força de trabalho é a capacidade física e mental que o trabalhador emprega durante a jornada e é o que se vende no mercado; o trabalho é o que se executa na produção. Quando o empregador compra a força de trabalho, adquire o direito de utilizá-la por um período, durante o qual o trabalhador produz mercadorias cujo valor total excede o salário pago — diferença que Marx denomina mais-valia. Verificar por que isso caracteriza trabalho assalariado, e não a leitura neoclássica (Marshall, Clark), em que o salário é fixado pela oferta e procura e pela produtividade, sem exploração.</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <bloco id="bloco-2" palavras="745" operacao="Classificar">
@@ -91,6 +97,11 @@
       Micro-habilidade / cabeçalho: "Dimensões do trabalho assalariado: funcional, ética e econômica".
       Exemplo-âncora (do capítulo): Uma professora de escola pública: (a) dimensão funcional — seu cargo prevê carga horária, currículo a seguir e diário de classe a preencher (trabalho prescrito), mas na sala ela adapta o conteúdo ao contexto dos alunos e lida com situações imprevistas (trabalho real); (b) dimensão ética — ela pode entender seu ofício como vocação de formar cidadãos; (c) dimensão econômica — ela recebe um salário mensal pago pelo Estado, que é financiado por impostos sobre a produção.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-01-s2-b" status="externo">
+        <o-que-verificar>Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Dimensões do trabalho assalariado: funcional, ética e econômica".
+      Exemplo-âncora (do capítulo): Um atendente de uma rede de fast food. (a) Dimensão funcional / trabalho prescrito — o manual de atendimento determina cada frase a dizer ao cliente, o tempo máximo de espera e a sequência de montagem dos pedidos. (b) Dimensão funcional e ética / trabalho real — diante de um cliente com restrição alimentar não prevista no protocolo, ele improvisa uma solução consultando a cozinha, mobilizando iniciativa e responsabilidade pessoal. Verificar a classificação correta de cada situação na dimensão (e no subtipo prescrito/real) que a tipologia define, sem reduzir o caso a um único traço.</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <quebra tipo="pagina" sugestao="forte"/>
@@ -116,6 +127,11 @@
         <o-que-verificar>Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "Etapas da relação de exploração no trabalho assalariado".
       Exemplo-âncora (do capítulo): Linha do tempo da relação de exploração segundo Marx: (1) Cercamentos na Inglaterra (séc. XVI-XVIII) — camponeses expulsos da terra; (2) Formação do mercado de trabalho — ex-camponeses migram para cidades e vendem sua força de trabalho; (3) Sistema fabril (séc. XVIII-XIX) — o industrial contrata operários por salário e define jornadas de 14-16 horas; (4) Produção de mais-valia — um tecelão produz, em 6 horas, tecido suficiente para pagar seu salário, mas trabalha 14 horas; as 8 horas restantes geram lucro para o dono da fábrica; (5) Alienação — o tecelão não escolhe o que produz, não define o ritmo, não é dono do tecido e repete os mesmos gestos mecânicos indefinidamente.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-01-s3-b" status="externo">
+        <o-que-verificar>Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Etapas da relação de exploração no trabalho assalariado".
+      Exemplo-âncora (do capítulo): Foco na transição da 1ª para a 2ª etapa. Etapa 1 — entre os séculos XVI e XVIII, na Inglaterra, os cercamentos (enclosures) transformam terras comunais em propriedade privada, expulsando camponeses, e artesãos urbanos perdem o controle sobre ferramentas e oficinas. Etapa 2 — sem meios próprios de subsistência, esses ex-camponeses e ex-artesãos tornam-se obrigados a vender a única coisa que possuem, sua força de trabalho, que passa a circular como mercadoria. Verificar por que a separação dos meios de produção (etapa 1) é a condição que torna possível a transformação da força de trabalho em mercadoria (etapa 2), e não o contrário.</o-que-verificar>
       </sidebar>
     </bloco>
 
@@ -162,6 +178,11 @@
       Micro-habilidade / cabeçalho: "Três interpretações clássicas sobre a centralidade do trabalho".
       Exemplo-âncora (do capítulo): Aspecto: Função do trabalho — Durkheim: a especialização de médicos, engenheiros e agricultores torna cada um dependente dos outros, gerando solidariedade orgânica. Weber: um comerciante calvinista do século XVII trabalha metodicamente não apenas para lucrar, mas porque acredita que o sucesso profissional é sinal de salvação divina. Marx: um operário de fábrica têxtil no século XIX trabalha 14 horas e recebe salário equivalente a 6 horas de trabalho; as 8 horas restantes são mais-valia apropriada pelo dono da fábrica. | Aspecto: O que o trabalho produz além de bens — Durkheim: interdependência funcional entre profissões. Weber: um modo de vida racional e disciplinado. Marx: acumulação de capital para o proprietário e alienação para o trabalhador. | Aspecto: Explicação da desigualdade — Durkheim: quando a divisão do trabalho não é acompanhada de regulação moral adequada, surge anomia (desorganização). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, que não se reduzem uns aos outros. Marx: a desigualdade é estrutural — decorre da propriedade privada dos meios de produção.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-01-s4-b" status="externo">
+        <o-que-verificar>Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Três interpretações clássicas sobre a centralidade do trabalho".
+      Exemplo-âncora (do capítulo): Comparar as três perspectivas na dimensão "como cada autor explica a desigualdade ligada ao trabalho". Durkheim: a desigualdade surge quando a divisão do trabalho avança sem regulação moral adequada — é o estado de anomia (desorganização e perda de referências coletivas). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, dimensões que não se reduzem umas às outras. Marx: a desigualdade é estrutural, inscrita na propriedade privada dos meios de produção, e decorre do conflito entre capital e trabalho. Verificar a atribuição correta de cada explicação ao autor certo, sem trocar as posições entre Durkheim, Weber e Marx.</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <quebra tipo="pagina" sugestao="forte"/>
@@ -204,6 +225,11 @@
         <o-que-verificar>Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Divisão do trabalho: coesão social e exploração como efeitos".
       Exemplo-âncora (do capítulo): Uma montadora de automóveis emprega centenas de trabalhadores, cada um responsável por uma tarefa específica (soldar portas, instalar painel, testar freios). Efeito-Durkheim: a especialização torna cada trabalhador dependente dos outros, criando cooperação funcional — nenhum deles produz um carro sozinho. Efeito-Marx: o operário que solda portas oito horas por dia não decide o design do carro, não define o ritmo da esteira, não é dono do veículo finalizado e recebe um salário que representa uma fração do valor do automóvel vendido. Efeito contemporâneo: se a montadora terceiriza parte da produção para empresas menores com contratos temporários, os trabalhadores terceirizados perdem estabilidade e benefícios — a fragmentação se converte em precarização.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-01-s5-b" status="externo">
+        <o-que-verificar>Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão do trabalho: coesão social e exploração como efeitos".
+      Exemplo-âncora (do capítulo): A divisão do trabalho é uma causa comum cujos efeitos divergem conforme o contexto institucional, segundo o esquema de bifurcação do capítulo: divisão do trabalho somada a regulação moral e direitos trabalhistas tende a produzir cooperação e solidariedade orgânica (Durkheim); divisão do trabalho somada a propriedade privada dos meios de produção e ausência de regulação tende a produzir exploração e alienação (Marx), que por sua vez gera precarização. Verificar (de forma hipotética) o que mudaria no efeito caso a condição "regulação moral e direitos" fosse substituída pela condição "ausência de regulação + propriedade privada" — isto é, identificar qual condição da cadeia bifurca o resultado entre coesão e exploração.</o-que-verificar>
       </sidebar>
     </bloco>
 

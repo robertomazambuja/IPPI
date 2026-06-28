@@ -38,6 +38,12 @@
       Conceito-âncora: Gênero.
       Exemplo-âncora (do capítulo): No Brasil do século XIX, costurar era considerado trabalho feminino adequado, enquanto a medicina era reservada a homens. No início do século XXI, mulheres são maioria entre formandos em medicina (INEP, Censo da Educação Superior, 2021), mas continuam sendo maioria absoluta no trabalho de costura industrial em condições precárias. Os papéis mudaram em parte, o que evidencia que a distribuição de ocupações por sexo não decorre de aptidão biológica, mas de normas sociais historicamente variáveis.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s1-b" status="externo">
+        <o-que-verificar>Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é gênero".
+      Conceito-âncora: Gênero (distinção entre sexo biológico e gênero).
+      Exemplo-âncora (do capítulo): O sexo biológico se refere a atributos corporais (características anatômicas e fisiológicas); gênero designa o conjunto de papéis, comportamentos, expectativas e relações de poder que cada sociedade organiza a partir da diferença sexual percebida. Gênero é categoria relacional (define o "masculino" sempre em referência ao "feminino") e histórica (essas definições mudam ao longo do tempo): se a biologia determinasse as ocupações, a distribuição seria estável ao longo dos séculos — e não é. Verificar por que a distribuição de ocupações por sexo é explicada por gênero (construção social), e não por sexo biológico (aptidão corporal).</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <bloco id="bloco-2" palavras="761" operacao="Classificar">
@@ -88,6 +94,11 @@
       Micro-habilidade / cabeçalho: "Formas de divisão sexual do trabalho".
       Exemplo-âncora (do capítulo): Uma auxiliar de limpeza em um hospital realiza trabalho classificado como feminino (princípio de separação: limpeza é associada ao trabalho doméstico) e recebe salário inferior ao de um técnico de manutenção do mesmo hospital, cujo trabalho é classificado como masculino (princípio de hierarquia: o trabalho técnico-mecânico é socialmente mais valorizado que o trabalho de limpeza). Ambos exigem formação técnica, mas a remuneração e o prestígio diferem.</o-que-verificar>
       </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s2-b" status="externo">
+        <o-que-verificar>Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Formas de divisão sexual do trabalho".
+      Exemplo-âncora (do capítulo): A enfermagem é classificada como feminina pelo princípio de separação (associada ao cuidado) e, pelo princípio de hierarquia, ocupa posição subordinada à medicina dentro do mesmo campo da saúde — menor remuneração e menor autonomia profissional —, com a ocupação associada ao cuidado subordinada à ocupação associada à decisão técnica. Verificar a classificação correta desse caso segundo os dois princípios (separação e hierarquia), reconhecendo que aqui a hierarquia opera dentro de um mesmo campo profissional, e não entre campos distintos — sem confundir com a engenharia civil (separação masculina + valorização) nem com a entrega por aplicativo (separação masculina + ocupação precária).</o-que-verificar>
+      </sidebar>
     </bloco>
 
     <quebra tipo="pagina" sugestao="forte"/>
@@ -118,6 +129,11 @@
         <o-que-verificar>Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "A incorporação do conceito de gênero aos estudos do trabalho".
       Exemplo-âncora (do capítulo): Linha do tempo — (1) Décadas de 1960–1970: pesquisas descrevem que mulheres trabalham em fábricas têxteis e no serviço doméstico, sem perguntar por que essas ocupações são femininas. (2) Década de 1970: pesquisadoras identificam a</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s3-b" status="externo">
+        <o-que-verificar>Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A incorporação do conceito de gênero aos estudos do trabalho".
+      Exemplo-âncora (do capítulo): Foco na transição entre as etapas posteriores. Etapa anterior — nas décadas de 1980 e 1990, a categoria de gênero (formulada por Scott em 1986) é incorporada à sociologia do trabalho, e a pergunta passa de "o que as mulheres fazem no mercado?" para "por que o trabalho é dividido dessa forma e com essa hierarquia?", tratando a divisão sexual como relação de poder. Etapa seguinte — nas décadas de 1990 e 2000, pesquisas sobre globalização e reestruturação produtiva usam gênero como variável central e mostram que a precarização (terceirização, trabalho parcial, informalidade) atinge desproporcionalmente as mulheres. Verificar por que dispor da categoria de gênero como relação de poder (etapa anterior) é a condição que permite analisar a precarização da globalização como reconfiguração da segregação (etapa seguinte), e não o contrário.</o-que-verificar>
       </sidebar>
     </bloco>
 
@@ -172,6 +188,11 @@
         <o-que-verificar>Operação: Reconhecer perspectiva.
       Micro-habilidade / cabeçalho: "Perspectivas sobre gênero e trabalho".
       Exemplo-âncora (do capítulo): Sobre a situação das empregadas domésticas no Brasil — Kergoat analisaria que a concentração de mulheres negras nessa ocupação resulta da produção simultânea de relações de gênero (trabalho doméstico como feminino), classe (baixa remuneração) e raça (herança da escravidão). Saffioti analisaria a mesma situação identificando que o patriarcado atribui o trabalho doméstico às mulheres, o capitalismo o desvaloriza economicamente, e o racismo direciona mulheres negras para essa posição — três sistemas que formam um nó, não uma soma.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s4-b" status="externo">
+        <o-que-verificar>Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Perspectivas sobre gênero e trabalho".
+      Exemplo-âncora (do capítulo): Sobre a maior concentração de mulheres em ocupações de menor remuneração e em jornada parcial — a socióloga britânica Catherine Hakim, na teoria da preferência, desloca a explicação da estrutura social para a preferência individual: em sociedades ricas e com legislação antidiscriminatória consolidada, as mulheres teriam escolha real entre priorizar a carreira, a vida familiar ou combinar as duas, e essa distribuição resultaria, em boa parte, de escolhas heterogêneas. Verificar de que posição analítica essa explicação parte (escolha individual em contexto de igualdade legal já consolidada) e por que ela diverge das leituras estruturais de Kergoat (consubstancialidade) e Saffioti (nó patriarcado-capitalismo-racismo) — sem atribuir a teoria da preferência ao sujeito/autor errado nem tratá-la como leitura neutra e não situada (lembrando o debate aberto das "preferências adaptativas").</o-que-verificar>
       </sidebar>
     </bloco>
 
@@ -229,6 +250,11 @@
         <o-que-verificar>Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Divisão sexual do trabalho como causa de desigualdade de prestígio e remuneração".
       Exemplo-âncora (do capítulo): No Brasil, mulheres dedicam em média 21,4 horas semanais ao trabalho doméstico e de cuidados, enquanto homens dedicam 11,0 horas (PNAD Contínua, IBGE, 2022). Essa diferença de 10,4 horas semanais reduz o tempo disponível das mulheres para o trabalho remunerado. Consequência direta: 28,2% das mulheres ocupadas trabalham em regime de tempo parcial (até 30 horas semanais), contra 14,7% dos homens (PNAD Contínua, IBGE, 2022). O trabalho parcial, por sua vez, implica menor remuneração total e menor acesso a direitos trabalhistas. A cadeia causal é: sobrecarga doméstica → jornada parcial → menor renda → menor autonomia econômica.</o-que-verificar>
+      </sidebar>
+      <sidebar tipo="verificacao" ref="verif-01-03-s5-b" status="externo">
+        <o-que-verificar>Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão sexual do trabalho como causa de desigualdade de prestígio e remuneração".
+      Exemplo-âncora (do capítulo): A cadeia causal da divisão sexual do trabalho tem dinâmica circular e se retroalimenta: a separação e a hierarquia concentram mulheres em ocupações desvalorizadas e as sobrecarregam com trabalho doméstico não remunerado; isso reduz seu tempo e suas oportunidades no mercado formal, resultando em menor remuneração e menor prestígio; e a desvalorização das ocupações femininas reforça a percepção de que "o trabalho de mulher vale menos", o que mantém a hierarquia em funcionamento. Verificar a direção dessa retroalimentação — por que a menor remuneração não é apenas efeito final, mas alimenta de volta a desvalorização que a originou —, distinguindo a causa estrutural (separação + hierarquia) das consequências, sem inverter causa e efeito nem reduzir a cadeia a um único mecanismo.</o-que-verificar>
       </sidebar>
     </bloco>
 

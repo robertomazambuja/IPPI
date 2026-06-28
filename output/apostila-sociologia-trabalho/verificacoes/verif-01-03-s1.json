@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s1",
+  "pergunta": "No Brasil do século XIX, costurar era considerado trabalho feminino adequado, enquanto a medicina era reservada a homens. No início do século XXI, mulheres são maioria entre os formandos em medicina (INEP, Censo da Educação Superior, 2021), mas continuam sendo maioria absoluta no trabalho de costura industrial em condições precárias. Os papéis mudaram em parte ao longo do tempo. Por que a distribuição de ocupações por sexo é explicada por gênero (construção social), e não por sexo biológico (aptidão corporal)?",
+  "alternativas": {
+    "A": "Porque a distribuição de ocupações por sexo decorre de diferenças anatômicas e fisiológicas estáveis entre homens e mulheres, e o gênero apenas descreve, com outro nome, essas mesmas aptidões corporais.",
+    "B": "Porque a medicina sempre exigiu maior esforço intelectual e a costura maior delicadeza manual, de modo que a distribuição reflete capacidades naturais distintas, ainda que socialmente reconhecidas.",
+    "C": "Porque, se decorresse de aptidão biológica, a distribuição seria estável ao longo dos séculos; como os papéis mudaram (mulheres já são maioria na medicina), a explicação está no gênero — construção social e histórica —, não no sexo biológico.",
+    "D": "Porque gênero e sexo biológico são sinônimos, e a mudança observada ao longo do tempo se deve a uma alteração nas próprias características corporais das mulheres entre o século XIX e o XXI."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque mobiliza o critério definitório do capítulo: gênero é categoria histórica (as definições mudam ao longo do tempo), e é justamente a mudança na distribuição de ocupações que prova que ela não decorre da biologia, estável, mas de construção social. A é um vocabulário do conceito rival: descreve o sexo biológico (atributos anatômicos e fisiológicos) e o apresenta como se fosse a definição de gênero, colapsando os dois conceitos que o capítulo distingue. B é campo semântico sem ancoragem: usa um critério plausível (esforço intelectual vs. delicadeza manual) que naturaliza a divisão, justamente a explicação biológica que o argumento da estabilidade refuta. D é uma inversão da tese: nega a distinção central do capítulo ao igualar gênero e sexo e ao atribuir a mudança histórica a uma alteração das características corporais, quando o ponto é que os corpos não mudaram — mudaram as normas sociais."
+}

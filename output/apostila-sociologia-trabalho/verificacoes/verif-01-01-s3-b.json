@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s3-b",
+  "pergunta": "Segundo Marx, a relação de exploração começa por uma separação. Etapa 1 — entre os séculos XVI e XVIII, na Inglaterra, os cercamentos (enclosures) transformam terras comunais em propriedade privada e expulsam os camponeses, enquanto artesãos urbanos perdem o controle sobre suas ferramentas e oficinas. Etapa 2 — sem meios próprios de subsistência, esses ex-camponeses e ex-artesãos tornam-se obrigados a vender a única coisa que ainda possuem, sua força de trabalho, que passa a circular como mercadoria. Na transição da Etapa 1 para a Etapa 2, o que mudou e por que a mudança ocorreu nesse sentido?",
+  "alternativas": {
+    "A": "A transformação da força de trabalho em mercadoria (Etapa 2) é o que provocou os cercamentos (Etapa 1): foi porque os trabalhadores começaram a vender sua força de trabalho que os senhores de terra decidiram cercar as terras comunais e expulsar os camponeses.",
+    "B": "A transição ocorreu exclusivamente porque os camponeses preferiram a vida urbana à rural, escolhendo migrar para as cidades em busca de melhores salários, sem qualquer relação com os cercamentos ou com a perda dos meios de subsistência.",
+    "C": "Na Etapa 1, os camponeses perderam o acesso à terra; isso os levou a vender sua força de trabalho porque, ao chegarem às cidades, encontraram fábricas que ofereciam salários mais altos que a renda da terra — atraídos pelo incentivo, não forçados pela falta de alternativa.",
+    "D": "A separação dos trabalhadores de seus meios de produção (terra, ferramentas) na Etapa 1 é a condição da Etapa 2: sem meios de subsistência, só lhes resta vender a força de trabalho, que passa a circular como mercadoria — a perda dos meios precede e força essa venda."
+  },
+  "correta": "D",
+  "justificativa": "D é correta porque identifica o mecanismo da transição: a separação dos meios de produção (Etapa 1) é a condição que obriga os trabalhadores a vender a força de trabalho (Etapa 2) — sem perder terra e ferramentas, não haveria por que vendê-la. A é uma inversão da tese: troca causa e efeito, fazendo a venda da força de trabalho causar os cercamentos, quando o capítulo apresenta a sequência oposta. B é uma restrição indevida: atribui a transição a um único fator (preferência por morar na cidade), desconectando-o da perda dos meios de subsistência, que é o que de fato força a venda da força de trabalho. C é um vocabulário análogo: descreve corretamente a Etapa 1 (perda do acesso à terra), mas erra o mecanismo da passagem, inventando uma atração por salários mais altos em fábricas prontas, quando o que opera é a coação da falta de alternativa, não o incentivo salarial."
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s3-b",
+  "pergunta": "Etapa anterior — nas décadas de 1980 e 1990, a categoria de gênero (formulada por Scott em 1986) é incorporada à sociologia do trabalho, e a pergunta passa de 'o que as mulheres fazem no mercado?' para 'por que o trabalho é dividido dessa forma e com essa hierarquia?', tratando a divisão sexual como relação de poder. Etapa seguinte — nas décadas de 1990 e 2000, pesquisas sobre globalização e reestruturação produtiva usam gênero como variável central e mostram que a precarização (terceirização, trabalho parcial, informalidade) atinge desproporcionalmente as mulheres. Na transição entre essas duas etapas, o que mudou e por que a mudança ocorreu nesse sentido?",
+  "alternativas": {
+    "A": "As pesquisas sobre globalização e precarização dos anos 1990-2000 vieram primeiro e, a partir delas, foi formulada depois a categoria de gênero como relação de poder, que só então passou a orientar a análise.",
+    "B": "A transição ocorreu somente porque aumentou o número de mulheres no mercado de trabalho durante a globalização, sem relação com o fato de a sociologia já dispor da categoria de gênero como relação de poder.",
+    "C": "Ter a categoria de gênero como relação de poder permite, depois, ler a precarização da globalização como reconfiguração da segregação sexual; sem ela, a desproporção entre mulheres e homens seria vista como mera distribuição.",
+    "D": "A incorporação da categoria de gênero nos anos 1980-1990 levou diretamente, já nessa mesma etapa, à análise da plataformização e do trabalho digital, pulando a fase das pesquisas sobre globalização e reestruturação produtiva."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque identifica o mecanismo da transição: ter a categoria de gênero como relação de poder (etapa anterior) é a condição que torna possível ler a precarização da globalização como reconfiguração da segregação (etapa seguinte) — a ferramenta conceitual precede e habilita a análise. A é uma inversão da tese: troca a ordem das etapas, fazendo as pesquisas sobre globalização precederem e gerarem a categoria de gênero, quando o capítulo apresenta a sequência oposta. B é uma restrição indevida: atribui a transição a um único fator (o aumento do número de mulheres no mercado), desconectando-o da disponibilidade da categoria de gênero, que é o que permite interpretar o fenômeno como relação de poder. D é um vocabulário análogo: descreve corretamente a etapa anterior (incorporação de gênero nos anos 1980-1990), mas erra o mecanismo da passagem, saltando direto para a plataformização e omitindo a etapa intermediária das pesquisas sobre globalização e precarização."
+}

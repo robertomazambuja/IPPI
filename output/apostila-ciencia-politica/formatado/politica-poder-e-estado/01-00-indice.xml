@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indice titulo_unidade="Política, Poder e Estado"
+        habilidade="EM13CHS603 — Analisar a formação de diferentes países, povos e nações e de suas experiências políticas e de exercício da cidadania, aplicando conceitos políticos básicos (Estado, poder, formas, sistemas e regimes de governo, soberania etc.).">
+
+  <capitulo ref="01-01" numero="Capítulo 1" nome="Poder, dominação e Estado">
+    <pergunta>Que relação causal existe entre a centralização do poder político e o surgimento do Estado como detentor do monopólio da violência legítima?</pergunta>
+  </capitulo>
+
+  <capitulo ref="01-02" numero="Capítulo 2" nome="Contratualismo e fundamentos do Estado moderno">
+    <pergunta>Quais são as diferenças entre Hobbes, Locke e Rousseau quanto aos fundamentos, limites e finalidades do poder estatal?</pergunta>
+  </capitulo>
+
+  <capitulo ref="01-03" numero="Capítulo 3" nome="Cidadania e luta por direitos">
+    <pergunta>Como a cidadania — entendida como conjunto de direitos civis, políticos e sociais — se expandiu historicamente pela ação de grupos excluídos, e como esse conceito pode ser aplicado para analisar lutas contemporâneas por direitos?</pergunta>
+  </capitulo>
+
+  <capitulo ref="01-04" numero="Capítulo 4" nome="Sociedade civil e o Estado ampliado">
+    <pergunta>Como a relação entre sociedade civil e Estado determina se um regime político se torna autoritário, se democratiza ou se mantém democrático?</pergunta>
+  </capitulo>
+
+</indice>

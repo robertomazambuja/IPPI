@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indice titulo_unidade="O Mundo do Trabalho"
+        habilidade="EM13CHS401 — Identificar e analisar as relações entre sujeitos, grupos, classes sociais e sociedades com culturas distintas diante das transformações técnicas, tecnológicas e informacionais e das novas formas de trabalho ao longo do tempo, em diferentes espaços (urbanos e rurais) e contextos.">
+
+  <capitulo ref="01-01" numero="Capítulo 1" nome="O trabalho nas teorias clássicas da Sociologia">
+    <pergunta>Quais relações causais as teorias sociológicas clássicas identificam entre a organização do trabalho e as formas de coesão, exploração e desigualdade nas sociedades capitalistas?</pergunta>
+  </capitulo>
+
+  <capitulo ref="01-02" numero="Capítulo 2" nome="Transformações técnicas e tecnológicas do trabalho">
+    <pergunta>Como as transformações técnicas e tecnológicas na organização da produção causaram o surgimento de novas formas de trabalho — da fábrica taylorista-fordista ao trabalho por plataformas digitais?</pergunta>
+  </capitulo>
+
+  <capitulo ref="01-03" numero="Capítulo 3" nome="Trabalho, gênero e desigualdade">
+    <pergunta>Como a divisão sexual do trabalho causa desigualdade de prestígio e remuneração entre ocupações exercidas por homens e mulheres?</pergunta>
+  </capitulo>
+
+</indice>

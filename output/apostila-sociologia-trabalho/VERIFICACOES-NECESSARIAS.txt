@@ -22,25 +22,51 @@ CAPÍTULO 01-01 — Quais relações causais as teorias sociológicas clássicas
       Conceito-âncora: Trabalho assalariado.
       Exemplo-âncora (do capítulo): Um operador de caixa de supermercado utiliza o scanner, o uniforme e o terminal de pagamento fornecidos pela empresa. Ele não é dono de nenhum desses instrumentos. Ao final do mês, recebe um salário fixo, independentemente do lucro que a loja obteve com as vendas que ele processou. A diferença entre o valor que seu trabalho gerou para a empresa e o salário que recebeu é apropriada pelo proprietário.
 
+  REF             : verif-01-01-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O trabalho assalariado como relação social".
+      Conceito-âncora: Trabalho assalariado (distinção entre força de trabalho e trabalho).
+      Exemplo-âncora (do capítulo): A força de trabalho é a capacidade física e mental que o trabalhador emprega durante a jornada e é o que se vende no mercado; o trabalho é o que se executa na produção. Quando o empregador compra a força de trabalho, adquire o direito de utilizá-la por um período, durante o qual o trabalhador produz mercadorias cujo valor total excede o salário pago — diferença que Marx denomina mais-valia. Verificar por que isso caracteriza trabalho assalariado, e não a leitura neoclássica (Marshall, Clark), em que o salário é fixado pela oferta e procura e pela produtividade, sem exploração.
+
   REF             : verif-01-01-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Dimensões do trabalho assalariado: funcional, ética e econômica".
       Exemplo-âncora (do capítulo): Uma professora de escola pública: (a) dimensão funcional — seu cargo prevê carga horária, currículo a seguir e diário de classe a preencher (trabalho prescrito), mas na sala ela adapta o conteúdo ao contexto dos alunos e lida com situações imprevistas (trabalho real); (b) dimensão ética — ela pode entender seu ofício como vocação de formar cidadãos; (c) dimensão econômica — ela recebe um salário mensal pago pelo Estado, que é financiado por impostos sobre a produção.
+
+  REF             : verif-01-01-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Dimensões do trabalho assalariado: funcional, ética e econômica".
+      Exemplo-âncora (do capítulo): Um atendente de uma rede de fast food. (a) Dimensão funcional / trabalho prescrito — o manual de atendimento determina cada frase a dizer ao cliente, o tempo máximo de espera e a sequência de montagem dos pedidos. (b) Dimensão funcional e ética / trabalho real — diante de um cliente com restrição alimentar não prevista no protocolo, ele improvisa uma solução consultando a cozinha, mobilizando iniciativa e responsabilidade pessoal. Verificar a classificação correta de cada situação na dimensão (e no subtipo prescrito/real) que a tipologia define, sem reduzir o caso a um único traço.
 
   REF             : verif-01-01-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "Etapas da relação de exploração no trabalho assalariado".
       Exemplo-âncora (do capítulo): Linha do tempo da relação de exploração segundo Marx: (1) Cercamentos na Inglaterra (séc. XVI-XVIII) — camponeses expulsos da terra; (2) Formação do mercado de trabalho — ex-camponeses migram para cidades e vendem sua força de trabalho; (3) Sistema fabril (séc. XVIII-XIX) — o industrial contrata operários por salário e define jornadas de 14-16 horas; (4) Produção de mais-valia — um tecelão produz, em 6 horas, tecido suficiente para pagar seu salário, mas trabalha 14 horas; as 8 horas restantes geram lucro para o dono da fábrica; (5) Alienação — o tecelão não escolhe o que produz, não define o ritmo, não é dono do tecido e repete os mesmos gestos mecânicos indefinidamente.
 
+  REF             : verif-01-01-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Etapas da relação de exploração no trabalho assalariado".
+      Exemplo-âncora (do capítulo): Foco na transição da 1ª para a 2ª etapa. Etapa 1 — entre os séculos XVI e XVIII, na Inglaterra, os cercamentos (enclosures) transformam terras comunais em propriedade privada, expulsando camponeses, e artesãos urbanos perdem o controle sobre ferramentas e oficinas. Etapa 2 — sem meios próprios de subsistência, esses ex-camponeses e ex-artesãos tornam-se obrigados a vender a única coisa que possuem, sua força de trabalho, que passa a circular como mercadoria. Verificar por que a separação dos meios de produção (etapa 1) é a condição que torna possível a transformação da força de trabalho em mercadoria (etapa 2), e não o contrário.
+
   REF             : verif-01-01-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Comparar.
       Micro-habilidade / cabeçalho: "Três interpretações clássicas sobre a centralidade do trabalho".
       Exemplo-âncora (do capítulo): Aspecto: Função do trabalho — Durkheim: a especialização de médicos, engenheiros e agricultores torna cada um dependente dos outros, gerando solidariedade orgânica. Weber: um comerciante calvinista do século XVII trabalha metodicamente não apenas para lucrar, mas porque acredita que o sucesso profissional é sinal de salvação divina. Marx: um operário de fábrica têxtil no século XIX trabalha 14 horas e recebe salário equivalente a 6 horas de trabalho; as 8 horas restantes são mais-valia apropriada pelo dono da fábrica. | Aspecto: O que o trabalho produz além de bens — Durkheim: interdependência funcional entre profissões. Weber: um modo de vida racional e disciplinado. Marx: acumulação de capital para o proprietário e alienação para o trabalhador. | Aspecto: Explicação da desigualdade — Durkheim: quando a divisão do trabalho não é acompanhada de regulação moral adequada, surge anomia (desorganização). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, que não se reduzem uns aos outros. Marx: a desigualdade é estrutural — decorre da propriedade privada dos meios de produção.
 
+  REF             : verif-01-01-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Três interpretações clássicas sobre a centralidade do trabalho".
+      Exemplo-âncora (do capítulo): Comparar as três perspectivas na dimensão "como cada autor explica a desigualdade ligada ao trabalho". Durkheim: a desigualdade surge quando a divisão do trabalho avança sem regulação moral adequada — é o estado de anomia (desorganização e perda de referências coletivas). Weber: a desigualdade resulta da combinação de classe econômica, prestígio social e poder político, dimensões que não se reduzem umas às outras. Marx: a desigualdade é estrutural, inscrita na propriedade privada dos meios de produção, e decorre do conflito entre capital e trabalho. Verificar a atribuição correta de cada explicação ao autor certo, sem trocar as posições entre Durkheim, Weber e Marx.
+
   REF             : verif-01-01-s5   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Divisão do trabalho: coesão social e exploração como efeitos".
       Exemplo-âncora (do capítulo): Uma montadora de automóveis emprega centenas de trabalhadores, cada um responsável por uma tarefa específica (soldar portas, instalar painel, testar freios). Efeito-Durkheim: a especialização torna cada trabalhador dependente dos outros, criando cooperação funcional — nenhum deles produz um carro sozinho. Efeito-Marx: o operário que solda portas oito horas por dia não decide o design do carro, não define o ritmo da esteira, não é dono do veículo finalizado e recebe um salário que representa uma fração do valor do automóvel vendido. Efeito contemporâneo: se a montadora terceiriza parte da produção para empresas menores com contratos temporários, os trabalhadores terceirizados perdem estabilidade e benefícios — a fragmentação se converte em precarização.
+
+  REF             : verif-01-01-s5-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão do trabalho: coesão social e exploração como efeitos".
+      Exemplo-âncora (do capítulo): A divisão do trabalho é uma causa comum cujos efeitos divergem conforme o contexto institucional, segundo o esquema de bifurcação do capítulo: divisão do trabalho somada a regulação moral e direitos trabalhistas tende a produzir cooperação e solidariedade orgânica (Durkheim); divisão do trabalho somada a propriedade privada dos meios de produção e ausência de regulação tende a produzir exploração e alienação (Marx), que por sua vez gera precarização. Verificar (de forma hipotética) o que mudaria no efeito caso a condição "regulação moral e direitos" fosse substituída pela condição "ausência de regulação + propriedade privada" — isto é, identificar qual condição da cadeia bifurca o resultado entre coesão e exploração.
 
   REF             : aplicar-01-01   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
@@ -58,25 +84,51 @@ CAPÍTULO 01-02 — Como as transformações técnicas e tecnológicas na organi
       Conceito-âncora: Reestruturação produtiva.
       Exemplo-âncora (do capítulo): Na década de 1990, montadoras de automóveis instaladas no ABC paulista (São Bernardo do Campo, Santo André, Diadema) substituíram linhas de montagem com operários fixos por células de produção flexível com trabalhadores polivalentes e terceirizados; o número de metalúrgicos na região caiu de 200 mil em 1989 para cerca de 100 mil em 1999 (DIEESE).
 
+  REF             : verif-01-02-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "Reestruturação produtiva".
+      Conceito-âncora: Reestruturação produtiva (deslocamento do controle sobre o trabalhador).
+      Exemplo-âncora (do capítulo): Segundo Danièle Linhart, em A desmedida do capital (2007), a reestruturação produtiva contemporânea não elimina o controle sobre o trabalhador, mas o desloca: em vez de controlar os gestos e o tempo (como no taylorismo), as empresas passam a controlar a subjetividade do trabalhador, exigindo adesão pessoal aos objetivos da empresa — o controle muda de forma, mas não desaparece. Verificar por que isso ainda caracteriza reestruturação produtiva (reorganização do modo de produzir e de controlar o trabalho), e não uma simples "libertação" ou ausência de controle pela troca de máquinas.
+
   REF             : verif-01-02-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Modelos de organização da produção".
       Exemplo-âncora (do capítulo): Um operário da fábrica Ford de Highland Park (1913) repetia um único gesto a cada 1 min 19 s, ditado pela velocidade da esteira; um entregador do iFood em São Paulo (2023) escolhe quando ligar o aplicativo, mas o algoritmo define o valor da corrida, o tempo de entrega e a nota de desempenho — nos dois casos há controle, mas o mecanismo e o grau de flexibilização são distintos.
+
+  REF             : verif-01-02-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Modelos de organização da produção".
+      Exemplo-âncora (do capítulo): No toyotismo, o operário é polivalente — opera múltiplas máquinas, participa de decisões de equipe e pode interromper a linha ao detectar defeitos (jidoka); o ritmo não vem da esteira, mas de metas de equipe e do sistema just-in-time, e parte dos trabalhadores é terceirizada (controle médio, flexibilização média). Verificar a classificação correta desse caso, distinguindo-o do taylorismo/fordismo (controle alto, flexibilização baixa, gesto único ditado pelo cronômetro ou pela esteira) e da plataformização (controle direto baixo, controle algorítmico alto, flexibilização máxima), usando os dois critérios oficiais — grau de controle sobre os gestos e grau de flexibilização do vínculo — e não um traço superficial.
 
   REF             : verif-01-02-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Comparar.
       Micro-habilidade / cabeçalho: "Fordismo e toyotismo: dois modelos de produção".
       Exemplo-âncora (do capítulo): Na fábrica Ford de River Rouge (Detroit, anos 1940), 100 mil operários com carteira assinada produziam um único modelo de carro (padronizado); na fábrica Toyota de Takaoka (Japão, anos 1980), equipes de 5 a 8 trabalhadores produziam modelos variados sob demanda, e a empresa mantinha apenas 30% dos trabalhadores como efetivos, terceirizando o restante.
 
+  REF             : verif-01-02-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar.
+      Micro-habilidade / cabeçalho: "Fordismo e toyotismo: dois modelos de produção".
+      Exemplo-âncora (do capítulo): Comparar fordismo e toyotismo na dimensão "relação com o Estado e proteção social". O fordismo consolidou-se entre 1945 e 1973 junto ao Estado de bem-estar social, com contratos estáveis, previdência, seguro-desemprego e negociação coletiva entre sindicatos e empregadores. O toyotismo expandiu-se a partir da década de 1980 em contexto de políticas neoliberais (Thatcher, Reagan), com flexibilização das leis trabalhistas, terceirização, redução de encargos e enfraquecimento dos sindicatos. Verificar a atribuição correta de cada configuração ao modelo certo, sem trocar bem-estar social e neoliberalismo entre fordismo e toyotismo.
+
   REF             : verif-01-02-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "Fases históricas da reestruturação produtiva".
       Exemplo-âncora (do capítulo): Linha do tempo: 1911 (taylorismo) → 1913 (fordismo) → 1945-1973 (Estado de bem-estar e fordismo dominante) → 1973-1979 (crise do petróleo) → anos 1980 (toyotismo global + neoliberalismo) → anos 1990 (flexibilização trabalhista no Brasil) → 2009 em diante (uberização e plataformas digitais).
 
+  REF             : verif-01-02-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "Fases históricas da reestruturação produtiva".
+      Exemplo-âncora (do capítulo): Foco na transição da crise para o toyotismo. Etapa anterior — entre 1973 e 1979, os choques do petróleo elevaram os custos de produção, as economias centrais enfrentaram estagflação e a taxa de lucro caiu, pondo em questão o modelo fordista de produção em massa com altos salários. Etapa seguinte — na década de 1980, essa crise abriu espaço para dois processos simultâneos: a difusão internacional do Sistema Toyota de Produção (produção enxuta, trabalhador polivalente) e a ascensão de políticas neoliberais de flexibilização. Verificar por que a crise dos anos 1970 é a condição que precede e viabiliza a difusão do toyotismo e do neoliberalismo nos anos 1980, e não o inverso.
+
   REF             : verif-01-02-s5   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Transformações tecnológicas e o surgimento de novas formas de trabalho".
       Exemplo-âncora (do capítulo): Em 2022, o Brasil tinha 1,7 milhão de motoristas e entregadores cadastrados em plataformas como Uber, 99 e iFood (IPEA, 2023). Esses trabalhadores não têm contrato formal, não recebem férias nem 13º salário, e têm sua remuneração definida por algoritmo. Ao mesmo tempo, não podem recusar corridas abaixo de certo limiar sem que sua nota caia e sua oferta de trabalho diminua. A causa direta — o algoritmo de gestão — gera a consequência: subordinação sem vínculo.
+
+  REF             : verif-01-02-s5-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Transformações tecnológicas e o surgimento de novas formas de trabalho".
+      Exemplo-âncora (do capítulo): O surgimento do trabalho por plataformas resulta da convergência de quatro fatores: (1) digitalização e barateamento dos smartphones, que conecta oferta e demanda em tempo real; (2) algoritmos de gestão, que distribuem corridas, definem preços e avaliam trabalhadores sem gerência humana presencial; (3) flexibilização das leis trabalhistas acumulada desde as reformas neoliberais; (4) desemprego estrutural, que empurra trabalhadores para vínculos informais. Verificar que os dois fatores tecnológicos (1 e 2) não explicam sozinhos o fenômeno — fornecem a infraestrutura técnica, mas é a combinação com o contexto institucional e o desemprego (3 e 4) que torna possível coordenar trabalho em larga escala sem contrato formal —, evitando reduzir a cadeia multicausal a um único fator (a tecnologia).
 
   REF             : aplicar-01-02   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
@@ -93,25 +145,51 @@ CAPÍTULO 01-03 — Como a divisão sexual do trabalho causa desigualdade de pre
       Conceito-âncora: Gênero.
       Exemplo-âncora (do capítulo): No Brasil do século XIX, costurar era considerado trabalho feminino adequado, enquanto a medicina era reservada a homens. No início do século XXI, mulheres são maioria entre formandos em medicina (INEP, Censo da Educação Superior, 2021), mas continuam sendo maioria absoluta no trabalho de costura industrial em condições precárias. Os papéis mudaram em parte, o que evidencia que a distribuição de ocupações por sexo não decorre de aptidão biológica, mas de normas sociais historicamente variáveis.
 
+  REF             : verif-01-03-s1-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir.
+      Micro-habilidade / cabeçalho: "O que é gênero".
+      Conceito-âncora: Gênero (distinção entre sexo biológico e gênero).
+      Exemplo-âncora (do capítulo): O sexo biológico se refere a atributos corporais (características anatômicas e fisiológicas); gênero designa o conjunto de papéis, comportamentos, expectativas e relações de poder que cada sociedade organiza a partir da diferença sexual percebida. Gênero é categoria relacional (define o "masculino" sempre em referência ao "feminino") e histórica (essas definições mudam ao longo do tempo): se a biologia determinasse as ocupações, a distribuição seria estável ao longo dos séculos — e não é. Verificar por que a distribuição de ocupações por sexo é explicada por gênero (construção social), e não por sexo biológico (aptidão corporal).
+
   REF             : verif-01-03-s2   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Classificar.
       Micro-habilidade / cabeçalho: "Formas de divisão sexual do trabalho".
       Exemplo-âncora (do capítulo): Uma auxiliar de limpeza em um hospital realiza trabalho classificado como feminino (princípio de separação: limpeza é associada ao trabalho doméstico) e recebe salário inferior ao de um técnico de manutenção do mesmo hospital, cujo trabalho é classificado como masculino (princípio de hierarquia: o trabalho técnico-mecânico é socialmente mais valorizado que o trabalho de limpeza). Ambos exigem formação técnica, mas a remuneração e o prestígio diferem.
+
+  REF             : verif-01-03-s2-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar.
+      Micro-habilidade / cabeçalho: "Formas de divisão sexual do trabalho".
+      Exemplo-âncora (do capítulo): A enfermagem é classificada como feminina pelo princípio de separação (associada ao cuidado) e, pelo princípio de hierarquia, ocupa posição subordinada à medicina dentro do mesmo campo da saúde — menor remuneração e menor autonomia profissional —, com a ocupação associada ao cuidado subordinada à ocupação associada à decisão técnica. Verificar a classificação correta desse caso segundo os dois princípios (separação e hierarquia), reconhecendo que aqui a hierarquia opera dentro de um mesmo campo profissional, e não entre campos distintos — sem confundir com a engenharia civil (separação masculina + valorização) nem com a entrega por aplicativo (separação masculina + ocupação precária).
 
   REF             : verif-01-03-s3   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Sequenciar.
       Micro-habilidade / cabeçalho: "A incorporação do conceito de gênero aos estudos do trabalho".
       Exemplo-âncora (do capítulo): Linha do tempo — (1) Décadas de 1960–1970: pesquisas descrevem que mulheres trabalham em fábricas têxteis e no serviço doméstico, sem perguntar por que essas ocupações são femininas. (2) Década de 1970: pesquisadoras identificam a
 
+  REF             : verif-01-03-s3-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar.
+      Micro-habilidade / cabeçalho: "A incorporação do conceito de gênero aos estudos do trabalho".
+      Exemplo-âncora (do capítulo): Foco na transição entre as etapas posteriores. Etapa anterior — nas décadas de 1980 e 1990, a categoria de gênero (formulada por Scott em 1986) é incorporada à sociologia do trabalho, e a pergunta passa de "o que as mulheres fazem no mercado?" para "por que o trabalho é dividido dessa forma e com essa hierarquia?", tratando a divisão sexual como relação de poder. Etapa seguinte — nas décadas de 1990 e 2000, pesquisas sobre globalização e reestruturação produtiva usam gênero como variável central e mostram que a precarização (terceirização, trabalho parcial, informalidade) atinge desproporcionalmente as mulheres. Verificar por que dispor da categoria de gênero como relação de poder (etapa anterior) é a condição que permite analisar a precarização da globalização como reconfiguração da segregação (etapa seguinte), e não o contrário.
+
   REF             : verif-01-03-s4   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Reconhecer perspectiva.
       Micro-habilidade / cabeçalho: "Perspectivas sobre gênero e trabalho".
       Exemplo-âncora (do capítulo): Sobre a situação das empregadas domésticas no Brasil — Kergoat analisaria que a concentração de mulheres negras nessa ocupação resulta da produção simultânea de relações de gênero (trabalho doméstico como feminino), classe (baixa remuneração) e raça (herança da escravidão). Saffioti analisaria a mesma situação identificando que o patriarcado atribui o trabalho doméstico às mulheres, o capitalismo o desvaloriza economicamente, e o racismo direciona mulheres negras para essa posição — três sistemas que formam um nó, não uma soma.
 
+  REF             : verif-01-03-s4-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva.
+      Micro-habilidade / cabeçalho: "Perspectivas sobre gênero e trabalho".
+      Exemplo-âncora (do capítulo): Sobre a maior concentração de mulheres em ocupações de menor remuneração e em jornada parcial — a socióloga britânica Catherine Hakim, na teoria da preferência, desloca a explicação da estrutura social para a preferência individual: em sociedades ricas e com legislação antidiscriminatória consolidada, as mulheres teriam escolha real entre priorizar a carreira, a vida familiar ou combinar as duas, e essa distribuição resultaria, em boa parte, de escolhas heterogêneas. Verificar de que posição analítica essa explicação parte (escolha individual em contexto de igualdade legal já consolidada) e por que ela diverge das leituras estruturais de Kergoat (consubstancialidade) e Saffioti (nó patriarcado-capitalismo-racismo) — sem atribuir a teoria da preferência ao sujeito/autor errado nem tratá-la como leitura neutra e não situada (lembrando o debate aberto das "preferências adaptativas").
+
   REF             : verif-01-03-s5   (tipo: verificacao)
   O QUE VERIFICAR : Operação: Mapear causalidade.
       Micro-habilidade / cabeçalho: "Divisão sexual do trabalho como causa de desigualdade de prestígio e remuneração".
       Exemplo-âncora (do capítulo): No Brasil, mulheres dedicam em média 21,4 horas semanais ao trabalho doméstico e de cuidados, enquanto homens dedicam 11,0 horas (PNAD Contínua, IBGE, 2022). Essa diferença de 10,4 horas semanais reduz o tempo disponível das mulheres para o trabalho remunerado. Consequência direta: 28,2% das mulheres ocupadas trabalham em regime de tempo parcial (até 30 horas semanais), contra 14,7% dos homens (PNAD Contínua, IBGE, 2022). O trabalho parcial, por sua vez, implica menor remuneração total e menor acesso a direitos trabalhistas. A cadeia causal é: sobrecarga doméstica → jornada parcial → menor renda → menor autonomia econômica.
+
+  REF             : verif-01-03-s5-b   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade.
+      Micro-habilidade / cabeçalho: "Divisão sexual do trabalho como causa de desigualdade de prestígio e remuneração".
+      Exemplo-âncora (do capítulo): A cadeia causal da divisão sexual do trabalho tem dinâmica circular e se retroalimenta: a separação e a hierarquia concentram mulheres em ocupações desvalorizadas e as sobrecarregam com trabalho doméstico não remunerado; isso reduz seu tempo e suas oportunidades no mercado formal, resultando em menor remuneração e menor prestígio; e a desvalorização das ocupações femininas reforça a percepção de que "o trabalho de mulher vale menos", o que mantém a hierarquia em funcionamento. Verificar a direção dessa retroalimentação — por que a menor remuneração não é apenas efeito final, mas alimenta de volta a desvalorização que a originou —, distinguindo a causa estrutural (separação + hierarquia) das consequências, sem inverter causa e efeito nem reduzir a cadeia a um único mecanismo.
 
   REF             : aplicar-01-03   (tipo: aplicar-agora)
   O QUE VERIFICAR : Operação principal do capítulo: Mapear causalidade.
@@ -150,5 +228,5 @@ CAPÍTULO 01-01 — Quais são as diferenças entre as perspectivas de Durkheim,
     Pedir um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
 
 =================================================================
-TOTAL: 23 verificação(ões) necessária(s)
+TOTAL: 38 verificação(ões) necessária(s)
 =================================================================

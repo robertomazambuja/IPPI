@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s2-b",
+  "pergunta": "A enfermagem é associada ao cuidado e, dentro do campo da saúde, ocupa posição subordinada à medicina: menor remuneração e menor autonomia profissional, com a ocupação associada ao cuidado subordinada à ocupação associada à decisão técnica. Classifique corretamente esse caso segundo os dois princípios da divisão sexual do trabalho — separação e hierarquia —, atentando para o fato de que aqui a hierarquia opera dentro de um mesmo campo profissional (a saúde).",
+  "alternativas": {
+    "A": "Pelo princípio de separação, a enfermagem é classificada como trabalho feminino (associado ao cuidado); pelo princípio de hierarquia, ela é subordinada à medicina dentro do próprio campo da saúde — menor remuneração e autonomia —, com a ocupação do cuidado subordinada à da decisão técnica.",
+    "B": "O caso se classifica como a engenharia civil: separação masculina somada à valorização da ocupação, de modo que a enfermagem recebe prestígio elevado por estar associada ao cuidado especializado.",
+    "C": "A subordinação da enfermagem se explica apenas porque a medicina exige curso mais longo e maior complexidade técnica, sendo essa diferença de formação — e não a classificação de gênero das ocupações — o que determina remuneração e autonomia.",
+    "D": "O caso se classifica unicamente pelo princípio de separação: como enfermagem e medicina são ocupações distintas, é natural que tenham remunerações diferentes, sem que o princípio de hierarquia desempenhe qualquer papel."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica os dois princípios oficiais ao caso: separação (a enfermagem é classificada como feminina, associada ao cuidado) e hierarquia (subordinação à medicina dentro do mesmo campo da saúde, com menor remuneração e autonomia). B é um distrator de vocabulário do conceito rival: transporta para a enfermagem o perfil da engenharia civil (separação masculina + valorização), classificando o caso na categoria vizinha errada da tipologia. C é campo semântico sem ancoragem: usa um critério plausível (duração do curso, complexidade técnica) que não é o critério oficial da tipologia (separação/hierarquia de gênero), embora pareça pertencer a ela. D é uma restrição indevida: reconhece a separação, mas nega qualquer papel à hierarquia, quando o capítulo afirma que os dois princípios operam sempre em conjunto — aqui, inclusive, dentro de um mesmo campo profissional."
+}

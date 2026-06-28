@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s4-b",
+  "pergunta": "Etapa anterior — entre 1973 e 1979, os choques do petróleo elevaram os custos de produção, as economias centrais enfrentaram estagflação e a taxa de lucro caiu, pondo em questão o modelo fordista de produção em massa com altos salários. Etapa seguinte — na década de 1980, essa crise abriu espaço para dois processos simultâneos: a difusão internacional do Sistema Toyota de Produção (produção enxuta, trabalhador polivalente) e a ascensão de políticas neoliberais de flexibilização. Na transição da crise dos anos 1970 para a reestruturação dos anos 1980, o que mudou e por que a mudança ocorreu nesse sentido?",
+  "alternativas": {
+    "A": "A difusão do toyotismo e do neoliberalismo nos anos 1980 foi a causa dos choques do petróleo e da estagflação dos anos 1970: foi a flexibilização que desorganizou a economia e provocou a crise anterior.",
+    "B": "A transição se deveu somente à decisão das montadoras japonesas de exportar o Sistema Toyota, sem relação com a queda da taxa de lucro nem com a ascensão das políticas neoliberais nas economias centrais.",
+    "C": "A crise dos anos 1970 (choques do petróleo, estagflação, queda da taxa de lucro) tornou insustentável o modelo fordista de produção em massa com altos salários; por isso ela é a condição que precede e viabiliza, nos anos 1980, tanto a difusão do toyotismo quanto a ascensão das políticas neoliberais de flexibilização.",
+    "D": "A crise dos anos 1970 elevou os custos de produção, e a resposta dos anos 1980 foi o fortalecimento do Estado de bem-estar social e a ampliação dos contratos estáveis, para proteger os trabalhadores fordistas da instabilidade."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque reconstitui o mecanismo da transição: a crise dos anos 1970 derrubou a taxa de lucro e tornou insustentável o fordismo, criando a condição que viabiliza, na década seguinte, a difusão simultânea do toyotismo e do neoliberalismo. A é uma inversão da tese: troca causa e efeito, fazendo a reestruturação dos anos 1980 provocar a crise dos anos 1970, quando o capítulo apresenta a sequência oposta. B é uma restrição indevida: atribui a transição a um único fator (a decisão japonesa de exportar o Sistema Toyota), desconectando-o da queda da taxa de lucro e das políticas neoliberais, que o capítulo apresenta como processos simultâneos. D é um vocabulário análogo: descreve corretamente a crise dos anos 1970 (alta de custos), mas erra o mecanismo da passagem, afirmando um fortalecimento do bem-estar social, quando o capítulo aponta justamente a flexibilização e a redução da proteção social."
+}

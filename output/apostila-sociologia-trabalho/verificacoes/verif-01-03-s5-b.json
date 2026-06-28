@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s5-b",
+  "pergunta": "O capítulo descreve a cadeia causal da divisão sexual do trabalho como circular e retroalimentada: a separação e a hierarquia concentram mulheres em ocupações desvalorizadas e as sobrecarregam com trabalho doméstico não remunerado; isso reduz seu tempo e suas oportunidades no mercado formal, resultando em menor remuneração e menor prestígio; e a desvalorização das ocupações femininas reforça a percepção de que 'o trabalho de mulher vale menos', o que mantém a hierarquia em funcionamento. Qual alternativa descreve corretamente a direção dessa cadeia?",
+  "alternativas": {
+    "A": "A menor remuneração das mulheres é apenas o efeito final da cadeia, sem nenhum papel sobre as causas iniciais: uma vez fixado o salário mais baixo, ele não influencia de volta a separação nem a hierarquia que o originaram, que permanecem intactas.",
+    "B": "A menor remuneração das mulheres é a causa primeira de toda a cadeia: é por ganharem menos que elas passam a ser associadas ao cuidado e direcionadas ao trabalho doméstico não remunerado, e não o contrário, como diz o capítulo.",
+    "C": "A causa estrutural é a separação somada à hierarquia, que concentra mulheres em ocupações desvalorizadas; a menor remuneração realimenta a ideia de que 'o trabalho de mulher vale menos', reforçando a desvalorização inicial — daí o caráter circular da cadeia.",
+    "D": "A desigualdade de remuneração se explica exclusivamente pela diferença de escolaridade entre homens e mulheres, fator que determinaria sozinho tanto a separação das ocupações por sexo quanto a hierarquia salarial entre elas."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque mapeia a cadeia circular do capítulo: a causa estrutural (separação + hierarquia) gera menor remuneração e prestígio, que por sua vez realimentam a percepção de que 'o trabalho de mulher vale menos', mantendo a hierarquia — efeito e causa se retroalimentam. A é uma restrição indevida que quebra a circularidade: trata a menor remuneração só como efeito final, negando a retroalimentação que o capítulo descreve como central. B é uma inversão da tese: inverte a direção da cadeia, fazendo a menor remuneração ser a causa primeira da separação e da hierarquia, quando o capítulo as apresenta como a causa estrutural inicial. D é campo semântico sem ancoragem: introduz um fator (escolaridade) que não consta da cadeia descrita no capítulo e o trata como determinante único, ignorando o mecanismo de separação e hierarquia que de fato a estrutura."
+}

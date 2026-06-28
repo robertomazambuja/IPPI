@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s5-b",
+  "pergunta": "Segundo o capítulo, o surgimento do trabalho por plataformas resulta da convergência de quatro fatores: (1) digitalização e barateamento dos smartphones, que conecta oferta e demanda em tempo real; (2) algoritmos de gestão, que distribuem corridas, definem preços e avaliam trabalhadores sem gerência humana presencial; (3) flexibilização das leis trabalhistas acumulada desde as reformas neoliberais; (4) desemprego estrutural, que empurra trabalhadores para vínculos informais. Qual alternativa descreve corretamente a relação causal entre esses fatores e o fenômeno?",
+  "alternativas": {
+    "A": "Os fatores tecnológicos (1 e 2) fornecem a infraestrutura técnica, mas não explicam sozinhos o fenômeno: é a sua combinação com o contexto institucional (3, flexibilização das leis) e com o desemprego estrutural (4) que torna possível coordenar trabalho em larga escala sem contrato formal.",
+    "B": "O fenômeno se explica exclusivamente pela digitalização e pelos algoritmos de gestão (fatores 1 e 2): bastam a tecnologia e o aplicativo para que o trabalho por plataforma exista, independentemente das leis trabalhistas e do nível de emprego.",
+    "C": "O desemprego estrutural (fator 4) é a única causa real do trabalho por plataforma; a digitalização, os algoritmos e a flexibilização das leis são apenas circunstâncias que acompanham o fenômeno, sem participar de sua produção.",
+    "D": "A flexibilização das leis trabalhistas (fator 3) é consequência do trabalho por plataforma: foi o surgimento dos aplicativos que levou os governos a flexibilizar a legislação, e não o contrário."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque mapeia a cadeia multicausal do capítulo: os fatores tecnológicos são infraestrutura necessária, mas insuficiente; é a convergência deles com o contexto institucional (flexibilização) e com o desemprego estrutural que produz o trabalho em larga escala sem contrato formal. B é uma restrição indevida: reduz a cadeia a um único bloco de fatores (a tecnologia), ignorando que o capítulo trata os quatro fatores como necessários em conjunto. C é também uma redução a um fator, mas opera como campo semântico sem ancoragem: trata digitalização, algoritmos e flexibilização como meras circunstâncias que 'acompanham' o fenômeno, esvaziando o papel causal que o capítulo lhes atribui, em vez de reconhecê-los como parte da convergência. D é uma inversão da tese: troca causa e efeito ao fazer a flexibilização das leis ser consequência das plataformas, quando o capítulo a apresenta como um fator anterior, acumulado desde as reformas neoliberais, que viabiliza o fenômeno."
+}

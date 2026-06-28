@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1",
+  "pergunta": "Na década de 1990, montadoras de automóveis instaladas no ABC paulista (São Bernardo do Campo, Santo André, Diadema) substituíram linhas de montagem com operários fixos por células de produção flexível, com trabalhadores polivalentes e terceirizados; o número de metalúrgicos na região caiu de 200 mil em 1989 para cerca de 100 mil em 1999 (DIEESE). Por que esse processo caracteriza uma reestruturação produtiva, e não uma simples crise passageira de um setor?",
+  "alternativas": {
+    "A": "Porque houve redução do número de empregos no setor metalúrgico, e a reestruturação produtiva se define exclusivamente pela queda no total de postos de trabalho de uma região em um período.",
+    "B": "Porque as montadoras adotaram novas tecnologias mais modernas, e a reestruturação produtiva consiste apenas na troca de máquinas antigas por equipamentos automatizados, independentemente da forma de organizar e contratar o trabalho.",
+    "C": "Porque houve uma reorganização do próprio modo de produzir e de contratar — da linha com operários fixos para células flexíveis com trabalhadores polivalentes e terceirizados —, e é essa transformação na organização do trabalho, e não a mera oscilação de um setor, que define a reestruturação produtiva.",
+    "D": "Porque a região do ABC paulista perdeu importância econômica para outras regiões do país, e a reestruturação produtiva se caracteriza pelo deslocamento geográfico das indústrias de um território para outro."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque mobiliza o critério definitório do capítulo: reestruturação produtiva é a reorganização do modo de produzir e de organizar/contratar o trabalho (da linha fixa para células flexíveis, polivalência e terceirização), não um evento conjuntural. A é uma restrição indevida: isola um traço não-essencial (a queda no número de empregos) como se fosse a definição, quando a redução de postos é consequência, não o critério da reestruturação. B é um vocabulário análogo: parte de um elemento plausível (adoção de novas tecnologias), mas distorce ao reduzir a reestruturação à mera troca de máquinas, ignorando a reorganização da forma de organizar e contratar o trabalho que é o núcleo do conceito. D é campo semântico sem ancoragem: usa um vocabulário plausível (deslocamento geográfico das indústrias) que não corresponde ao critério do capítulo, deslocando a definição para um fenômeno que não é o que está em jogo no exemplo."
+}

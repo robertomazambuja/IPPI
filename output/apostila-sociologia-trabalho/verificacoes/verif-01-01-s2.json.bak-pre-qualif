@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2",
+  "pergunta": "Uma professora de escola pública: seu cargo prevê carga horária, currículo a seguir e diário de classe a preencher (trabalho prescrito), mas na sala de aula ela adapta o conteúdo ao contexto dos alunos e lida com situações imprevistas (trabalho real); ela pode entender seu ofício como vocação de formar cidadãos; ela recebe um salário mensal pago pelo Estado, financiado por impostos sobre a produção. Classifique corretamente os elementos desse caso segundo as três dimensões do trabalho assalariado (funcional, ética e econômica).",
+  "alternativas": {
+    "A": "A carga horária, o currículo e a adaptação às situações da sala de aula pertencem à dimensão funcional; entender o ofício como vocação pertence à dimensão ética; o salário pago pelo Estado pertence à dimensão econômica.",
+    "B": "Adaptar o conteúdo aos alunos e lidar com imprevistos pertence à dimensão ética, pois exige sensibilidade pessoal; já a vocação de formar cidadãos pertence à dimensão funcional, pois orienta o papel do cargo dentro da organização escolar.",
+    "C": "A dimensão funcional é definida pelo quanto a professora gosta de ensinar, a dimensão ética por seu nível de formação acadêmica, e a dimensão econômica pelo prestígio social da profissão docente.",
+    "D": "Como ela recebe salário mensal do Estado, todo o caso se encaixa apenas na dimensão econômica; a carga horária, o currículo e a vocação de formar cidadãos são apenas consequências secundárias dessa relação econômica."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque aplica o critério oficial das três dimensões: funcional (papel do trabalho na organização — carga horária, currículo, trabalho prescrito e real), ética (sentido/valor atribuído ao trabalho — vocação) e econômica (articulação com produção de riqueza e remuneração — salário financiado por impostos). B é um distrator de vocabulário do conceito rival: troca os elementos entre as dimensões funcional e ética, atribuindo cada traço à categoria vizinha errada. C é campo semântico sem ancoragem: usa critérios que parecem sociológicos (gostar de ensinar, formação acadêmica, prestígio) mas não são os critérios oficiais que definem cada dimensão no capítulo. D é uma restrição indevida: reduz todo o caso a uma única dimensão (econômica) por causa de um único traço (o salário), ignorando que as três dimensões coexistem na mesma atividade, como o capítulo explicita."
+}

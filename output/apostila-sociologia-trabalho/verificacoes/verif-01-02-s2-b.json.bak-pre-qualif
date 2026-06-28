@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s2-b",
+  "pergunta": "No toyotismo, o operário é polivalente — opera múltiplas máquinas, participa de decisões de equipe e pode interromper a linha ao detectar defeitos (jidoka); o ritmo não vem de uma esteira fixa, mas de metas de equipe e do sistema just-in-time, e parte dos trabalhadores é terceirizada. Considerando os dois critérios oficiais — grau de controle sobre os gestos do trabalhador e grau de flexibilização do vínculo —, a qual modelo de organização da produção esse caso corresponde, e como se distingue do taylorismo/fordismo e da plataformização?",
+  "alternativas": {
+    "A": "Taylorismo/fordismo, pois o gesto do operário é único e ditado pelo cronômetro ou pela esteira, e o vínculo é integralmente estável, sem terceirização.",
+    "B": "Toyotismo: o controle sobre os gestos é intermediário (o operário é polivalente e pode interromper a linha pelo jidoka, em vez de repetir um gesto único ditado pela esteira) e a flexibilização do vínculo é média (parte dos trabalhadores é terceirizada) — situando-se entre o taylorismo/fordismo (controle alto, flexibilização baixa) e a plataformização (controle algorítmico alto, flexibilização máxima).",
+    "C": "Plataformização, pois a presença de terceirização e a ausência de uma esteira fixa indicam vínculo sem contrato formal e controle exercido por algoritmo, como ocorre no trabalho por aplicativo.",
+    "D": "Toyotismo, mas pela única razão de que parte dos trabalhadores é terceirizada — bastando a presença de terceirização, independentemente de como o controle sobre os gestos é exercido na produção."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque aplica os dois critérios oficiais ao caso: controle intermediário sobre os gestos (polivalência e jidoka, em vez do gesto único da esteira) e flexibilização média do vínculo (terceirização parcial), o que situa o toyotismo entre o taylorismo/fordismo e a plataformização. A é um distrator de vocabulário do conceito rival: descreve corretamente o taylorismo/fordismo (gesto único pelo cronômetro/esteira, vínculo estável) e atribui esse perfil ao caso, que é justamente o do modelo vizinho. C é outro vocabulário do conceito rival, dirigido à plataformização: transfere para o caso o controle algorítmico e a ausência de contrato formal, que pertencem ao trabalho por aplicativo, não ao toyotismo. D acerta o nome do modelo, mas por restrição indevida: classifica olhando só um traço (a terceirização) e ignora o segundo critério exigido pela tipologia — o grau de controle sobre os gestos."
+}

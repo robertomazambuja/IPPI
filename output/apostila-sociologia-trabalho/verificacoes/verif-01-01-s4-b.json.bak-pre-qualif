@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s4-b",
+  "pergunta": "Os três clássicos explicam de modos distintos a desigualdade ligada ao trabalho. Durkheim: ela surge quando a divisão do trabalho avança sem regulação moral adequada — é o estado de anomia (desorganização e perda de referências coletivas). Weber: ela resulta da combinação de classe econômica, prestígio social e poder político, dimensões que não se reduzem umas às outras. Marx: ela é estrutural, inscrita na propriedade privada dos meios de produção, e decorre do conflito entre capital e trabalho. Quanto à explicação da desigualdade ligada ao trabalho, qual alternativa atribui corretamente cada posição ao autor que a formulou?",
+  "alternativas": {
+    "A": "Durkheim explica a desigualdade pela anomia (divisão do trabalho sem regulação moral); Weber, pela combinação irredutível de classe econômica, prestígio social e poder político; Marx, pela propriedade privada dos meios de produção e pelo conflito entre capital e trabalho.",
+    "B": "Durkheim explica a desigualdade pela propriedade privada dos meios de produção; Weber, pela anomia decorrente da ausência de regulação moral; Marx, pela combinação irredutível de classe, prestígio e poder.",
+    "C": "Durkheim explica a desigualdade pela combinação de classe econômica, prestígio e poder político; Weber, pela propriedade privada dos meios de produção; Marx, pela anomia gerada quando a divisão do trabalho não é regulada moralmente.",
+    "D": "Para Weber, a desigualdade se reduz inteiramente à classe econômica, exatamente como em Marx, de modo que prestígio social e poder político são apenas consequências da posição de classe, e não dimensões irredutíveis."
+  },
+  "correta": "A",
+  "justificativa": "A é correta porque atribui cada explicação ao autor certo: anomia (Durkheim), combinação irredutível de classe/prestígio/poder (Weber) e propriedade privada dos meios de produção (Marx). B é um distrator de vocabulário do autor rival: troca as três explicações entre os três autores, dando a cada um a tese de outro. C é outra permutação do mesmo tipo, mas a regra proíbe repetir o tipo de erro; por isso ela funciona aqui como inversão da tese parcial sobre Durkheim e Marx — atribui a Durkheim a tese de Weber e a Marx a de Durkheim, negando o que cada um efetivamente sustenta. D é um vocabulário análogo: parte de um traço weberiano correto (a classe econômica), mas o distorce ao reduzir Weber a Marx, eliminando a irredutibilidade entre classe, prestígio e poder que é justamente o que distingue as duas posições."
+}

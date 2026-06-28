@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s1-b",
+  "pergunta": "O sexo biológico refere-se a atributos corporais (características anatômicas e fisiológicas); gênero designa o conjunto de papéis, comportamentos, expectativas e relações de poder que cada sociedade organiza a partir da diferença sexual percebida. O capítulo destaca ainda que gênero é uma categoria relacional (define o 'masculino' sempre em referência ao 'feminino') e histórica (essas definições mudam ao longo do tempo). Por que isso caracteriza gênero como construção social, e não como mero reflexo do sexo biológico?",
+  "alternativas": {
+    "A": "Porque gênero designa as características anatômicas e fisiológicas do corpo, enquanto o sexo biológico designa os papéis, comportamentos e expectativas sociais atribuídos a cada pessoa ao longo da vida.",
+    "B": "Porque gênero é categoria relacional e histórica — define o masculino em referência ao feminino e muda no tempo — e organiza socialmente papéis e relações de poder a partir da diferença sexual percebida, não derivando do corpo.",
+    "C": "Porque gênero é o nome técnico que a sociologia dá ao sexo biológico, de modo que descrever os atributos corporais de uma pessoa equivale a determinar seu gênero e os papéis sociais que ela exercerá.",
+    "D": "Porque o gênero de uma pessoa é fixado de uma vez por todas a partir de seus atributos anatômicos no nascimento e, por ser determinado pela biologia, permanece imutável em qualquer época e sociedade."
+  },
+  "correta": "B",
+  "justificativa": "B é correta porque reúne os critérios definitórios do capítulo: gênero é relacional (masculino definido em referência ao feminino) e histórico (varia no tempo), e organiza socialmente papéis e relações de poder a partir da diferença sexual percebida — não deriva direto do corpo. A é um vocabulário análogo invertido: troca as definições de gênero e de sexo biológico entre si, atribuindo a cada termo o conteúdo do outro. C é um vocabulário do conceito rival: descreve o sexo biológico (os atributos do corpo) e o apresenta como se fosse a definição de gênero, colapsando os dois conceitos que o capítulo separa. D é uma restrição indevida: isola um traço não-essencial (a fixação biológica no nascimento) como se fosse a definição, negando o caráter relacional e histórico que o capítulo aponta como central em gênero."
+}

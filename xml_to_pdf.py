@@ -82,6 +82,32 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
 .por-que-importa { background: #EEF4FF; border-left: 4pt solid #1565C0; padding: 10pt 14pt;
     font-size: 9.5pt; font-style: italic; color: #1a3566; border-radius: 0 6pt 6pt 0; margin-top: 10pt; }
 
+/* CAPA DO INDICE — sumario da unidade (primeira pagina, gerada a partir de
+   um XML <indice> dentro da pasta --unidade). O numero de pagina de cada
+   capitulo e calculado automaticamente pelo PDF via CSS target-counter,
+   apontando para a ancora id="capa-{ref}" emitida em capa-capitulo abaixo —
+   nao precisa ser mantido manualmente quando o conteudo mudar de tamanho. */
+.capa-indice { padding: 6pt 0 18pt; break-after: page; }
+.indice-eyebrow { font-family: Arial; font-size: 8pt; font-weight: 700; letter-spacing: .10em;
+    text-transform: uppercase; color: #5B7AA8; margin-bottom: 10pt; }
+.indice-titulo-unidade { font-family: Arial; font-size: 20pt; font-weight: 700; color: #0d2b6e;
+    line-height: 1.25; margin-bottom: 10pt; }
+.indice-habilidade { display: inline-block; background: #1565C0; color: #fff; font-family: Arial;
+    font-size: 8.5pt; font-weight: 700; padding: 4pt 10pt; border-radius: 12pt; margin-bottom: 20pt; }
+.indice-sumario-label { font-family: Arial; font-size: 10pt; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: #243b66; border-bottom: 2pt solid #1565C0; padding-bottom: 6pt;
+    margin-bottom: 18pt; }
+.indice-item { margin-bottom: 18pt; break-inside: avoid; }
+.indice-item:last-child { margin-bottom: 0; }
+.indice-link { display: flex; align-items: baseline; text-decoration: none; color: #1a1a1a; }
+.indice-link::after { content: target-counter(attr(href), page); font-family: Arial; font-size: 11pt;
+    font-weight: 700; color: #1565C0; margin-left: auto; padding-left: 10pt; }
+.indice-numero { font-family: Arial; font-size: 9pt; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: #1565C0; flex: 0 0 auto; margin-right: 12pt; white-space: nowrap; }
+.indice-nome { font-family: Arial; font-size: 12.5pt; font-weight: 700; color: #243b66; }
+.indice-pergunta { font-family: Georgia, serif; font-size: 9pt; font-style: italic; color: #666;
+    margin: 4pt 0 0 0; line-height: 1.5; }
+
 /* MAPA PROGRESSAO */
 .mapa-progressao { display: flex; margin: 18pt 0 4pt; background: #F8F9FA; border: 1pt solid #DEE2E6;
     border-radius: 8pt; overflow: hidden; }
@@ -525,6 +551,50 @@ def render_quadro_resumo(corpo_el):
             '<div class="quadro-resumo-titulo">O que você vai aprender neste capítulo</div>'
             + "".join(linhas) + '</div>')
 
+def render_indice(root):
+    """Renderiza a pagina de sumario da unidade a partir de um XML <indice>.
+
+    Formato esperado:
+        <indice titulo_unidade="..." habilidade="...">
+          <capitulo ref="01-01" numero="Capitulo 1" nome="...">
+            <pergunta>...</pergunta>   (opcional)
+          </capitulo>
+          ...
+        </indice>
+
+    O "ref" de cada <capitulo> deve ser igual ao atributo id="" do XML do
+    capitulo correspondente (ex.: id="01-01"), pois render_capitulo() emite
+    a ancora id="capa-{id}" usada aqui. O numero de pagina exibido no PDF e
+    calculado pelo proprio motor de paginacao (CSS target-counter), entao o
+    sumario continua correto mesmo que o conteudo dos capitulos mude de
+    tamanho — nao ha numero de pagina fixado a mao neste arquivo.
+    """
+    unidade = root.get("titulo_unidade", "") or root.get("titulo", "")
+    habilidade = root.get("habilidade", "")
+    eyebrow = '<div class="indice-eyebrow">Sumário da unidade</div>'
+    titulo_h = f'<h1 class="indice-titulo-unidade">{html_mod.escape(unidade)}</h1>' if unidade else ""
+    hab_h = f'<div class="indice-habilidade">{html_mod.escape(habilidade)}</div>' if habilidade else ""
+
+    itens = []
+    for cap in root.findall("capitulo"):
+        ref = cap.get("ref", "")
+        numero = cap.get("numero", "")
+        nome = cap.get("nome", "")
+        pergunta = txt(cap.find("pergunta"))
+        num_h = f'<span class="indice-numero">{html_mod.escape(numero)}</span>' if numero else ""
+        nome_h = f'<span class="indice-nome">{html_mod.escape(nome)}</span>'
+        if ref:
+            link = f'<a class="indice-link" href="#capa-{html_mod.escape(ref)}">{num_h}{nome_h}</a>'
+        else:
+            link = f'<div class="indice-link">{num_h}{nome_h}</div>'
+        perg_h = f'<div class="indice-pergunta">{html_mod.escape(pergunta)}</div>' if pergunta else ""
+        itens.append(f'<div class="indice-item">{link}{perg_h}</div>')
+
+    return (f'<div class="capa-indice">{eyebrow}{titulo_h}{hab_h}'
+            f'<div class="indice-sumario-label">Sumário</div>'
+            f'<div class="indice-lista">{"".join(itens)}</div></div>')
+
+
 def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=None):
     meta = meta or {}
     root = ET.parse(xml_path).getroot()
@@ -563,7 +633,9 @@ def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=
     corpo_el = root.find("corpo")
     quadro_html = render_quadro_resumo(corpo_el)
 
-    capa = (f'<div class="capa-capitulo">{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}'
+    cap_id = root.get("id", "")
+    capa_id_attr = f' id="capa-{html_mod.escape(cap_id)}"' if cap_id else ""
+    capa = (f'<div class="capa-capitulo"{capa_id_attr}>{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}'
             f'{pqh}{mapa_html}{quadro_html}</div>')
 
     corpo = []
@@ -708,6 +780,14 @@ def main():
         print(f"  verificacoes: {verifdir}")
     caps = []
     for xf in xml_files:
+        root_el = ET.parse(xf).getroot()
+        if root_el.tag == "indice":
+            # Pagina de sumario da unidade (deve ordenar antes dos capitulos,
+            # ex.: 01-00-indice.xml). Os numeros de pagina sao calculados
+            # automaticamente no PDF; nao ha necessidade de meta/briefing aqui.
+            print(f"  {xf.name}  -> indice (sumario da unidade)")
+            caps.append(render_indice(root_el))
+            continue
         num = numero_capitulo_do_xml(xf)
         meta = meta_por_num.get(num, {"numero": (f"Capitulo {num}" if num else ""),
                                       "nome": "", "unidade": unidade})

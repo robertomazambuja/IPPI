@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-01-s2-b",
+  "pergunta": "Um atendente de uma rede de fast food vive duas situações no mesmo turno. Situação 1: o manual de atendimento determina cada frase a dizer ao cliente, o tempo máximo de espera e a sequência exata de montagem dos pedidos. Situação 2: diante de um cliente com restrição alimentar não prevista no protocolo, ele improvisa uma solução consultando a cozinha, mobilizando iniciativa e responsabilidade pessoal. Classifique corretamente cada situação dentro da dimensão funcional do trabalho assalariado, segundo a distinção entre trabalho prescrito e trabalho real.",
+  "alternativas": {
+    "A": "A Situação 1 é trabalho real, porque o atendente está de fato executando suas tarefas; a Situação 2 é trabalho prescrito, porque improvisar diante do imprevisto já estava previsto como uma atribuição do cargo.",
+    "B": "As duas situações pertencem à dimensão ética, pois tanto seguir o manual quanto improvisar exigem comprometimento moral do trabalhador com o seu ofício.",
+    "C": "A Situação 1 é trabalho prescrito — o que o manual determina que o atendente faça (frases, tempos, sequência) —, e a Situação 2 é trabalho real — o que ele efetivamente faz ao enfrentar o imprevisto não previsto no protocolo, mobilizando iniciativa pessoal.",
+    "D": "Como ambas ocorrem durante a jornada remunerada, as duas situações se classificam apenas na dimensão econômica; a distinção entre seguir o manual e improvisar é um detalhe operacional sem relevância para a classificação."
+  },
+  "correta": "C",
+  "justificativa": "C é correta porque aplica o critério oficial da distinção prescrito/real dentro da dimensão funcional: trabalho prescrito é o que a organização determina (manual, frases, tempos), e trabalho real é o que o trabalhador efetivamente faz diante do imprevisto (a improvisação para a restrição alimentar). A é um distrator de vocabulário do conceito rival: inverte os rótulos da própria tipologia, chamando de 'real' o que é prescrito e de 'prescrito' o que é real, trocando as categorias vizinhas. B é campo semântico sem ancoragem: desloca o caso para a dimensão ética usando um critério plausível (comprometimento moral) que não é o critério que a tipologia exige aqui, que é a distinção prescrito/real dentro da dimensão funcional. D é uma restrição indevida: reduz o caso a um único traço (ocorrer na jornada remunerada) e o joga inteiro na dimensão econômica, ignorando os demais traços que a tipologia manda considerar."
+}

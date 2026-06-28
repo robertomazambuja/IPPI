@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-03-s5",
+  "pergunta": "No Brasil, mulheres dedicam em média 21,4 horas semanais ao trabalho doméstico e de cuidados, enquanto homens dedicam 11,0 horas (PNAD Contínua, IBGE, 2022). Essa diferença de 10,4 horas semanais reduz o tempo disponível das mulheres para o trabalho remunerado. Consequência direta: 28,2% das mulheres ocupadas trabalham em regime de tempo parcial (até 30 horas semanais), contra 14,7% dos homens (PNAD Contínua, IBGE, 2022). O trabalho parcial, por sua vez, implica menor remuneração total e menor acesso a direitos trabalhistas. Qual alternativa descreve corretamente a cadeia causal que liga esses dados?",
+  "alternativas": {
+    "A": "A cadeia causal é: sobrecarga doméstica (10,4 horas semanais a mais) reduz o tempo disponível das mulheres para o trabalho remunerado, o que leva a maior proporção de jornada parcial entre mulheres, que por sua vez implica menor remuneração total e menor acesso a direitos trabalhistas, reduzindo sua autonomia econômica.",
+    "B": "A maior proporção de mulheres em jornada parcial é que faz com que elas dediquem mais horas ao trabalho doméstico, já que o tempo livre gerado pela jornada parcial é naturalmente direcionado ao cuidado da casa e dos filhos.",
+    "C": "A diferença de remuneração entre homens e mulheres decorre da menor escolaridade média das mulheres ocupadas em regime de tempo parcial, fator que explica por que elas aceitam jornadas reduzidas e salários mais baixos.",
+    "D": "A diferença de renda entre homens e mulheres decorre exclusivamente da escolha pessoal das mulheres por jornada parcial, sem qualquer relação com a sobrecarga de trabalho doméstico e de cuidados apontada pelos dados do PNAD Contínua."
+  },
+  "correta": "A",
+  "justificativa": "A cadeia causal correta segue a ordem apresentada no capítulo: sobrecarga doméstica → menor tempo disponível → jornada parcial → menor remuneração e autonomia. A alternativa B é uma inversão da tese: inverte causa e consequência, fazendo a jornada parcial causar a sobrecarga doméstica, quando o capítulo apresenta a relação no sentido oposto. A alternativa C é campo semântico sem ancoragem: introduz um fator plausível do ponto de vista sociológico (escolaridade) mas que não aparece na cadeia causal descrita no capítulo, tratando uma correlação não mencionada como se fosse o mecanismo real. A alternativa D é uma restrição indevida: reduz a cadeia multicausal a um único fator (escolha pessoal), negando explicitamente o papel da sobrecarga doméstica que os dados do PNAD Contínua evidenciam como causa estrutural."
+}

@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s3",
+  "pergunta": "Na fábrica Ford de River Rouge (Detroit, anos 1940), 100 mil operários com carteira assinada produziam um único modelo de carro padronizado; na fábrica Toyota de Takaoka (Japão, anos 1980), equipes de 5 a 8 trabalhadores produziam modelos variados sob demanda, e a empresa mantinha apenas 30% dos trabalhadores como efetivos, terceirizando o restante. Quanto ao perfil do trabalhador e ao tipo de vínculo empregatício, qual alternativa compara corretamente os dois casos?",
+  "alternativas": {
+    "A": "Na Ford, os trabalhadores eram polivalentes e participavam de decisões coletivas sobre a linha (jidoka); na Toyota, eram especializados em uma única tarefa repetitiva e tinham vínculo estável por carteira assinada.",
+    "B": "Na Ford, 100 mil operários com vínculo formal executavam tarefas variadas conforme metas de equipe; na Toyota, pequenas equipes executavam uma única tarefa repetitiva imposta pela velocidade da esteira.",
+    "C": "Na Ford, o vínculo era predominantemente terceirizado, com apenas 30% de efetivos produzindo modelos variados; na Toyota, 100 mil operários tinham carteira assinada e produziam um único modelo padronizado.",
+    "D": "Na Ford, os trabalhadores eram especializados em uma única tarefa repetitiva e majoritariamente vinculados por carteira assinada; na Toyota, eram polivalentes e majoritariamente terceirizados, com apenas 30% de efetivos."
+  },
+  "correta": "D",
+  "justificativa": "A correta (D) atribui a cada fábrica o perfil e o vínculo que de fato lhe correspondem: especialização e vínculo formal na Ford, polivalência e terceirização predominante na Toyota. A é o distrator de vocabulário do autor rival: troca as características entre as duas fábricas, atribuindo à Ford traços que pertencem à Toyota (polivalência, jidoka) e vice-versa. B mistura categorias das duas unidades em afirmações híbridas que nenhuma delas sustenta isoladamente (vínculo formal da Ford combinado com 'metas de equipe', mecanismo que é da Toyota; pequenas equipes da Toyota combinadas com 'esteira', mecanismo que é da Ford) — vocabulário análogo. C inverte a relação entre cada fábrica e seus dados reais (vínculo e tipo de produção), tratando o oposto do que o texto afirma como verdadeiro — inversão da tese."
+}
