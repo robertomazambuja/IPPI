@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capitulo id="01-01" titulo="Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais?" palavras_total="2573">
+  <cabecalho>
+    <habilidade>H8 — Analisar a ação dos estados nacionais no que se refere à dinâmica dos fluxos populacionais e no enfrentamento de problemas de ordem econômico-social.</habilidade>
+    <operacao_principal>Mapear causalidade</operacao_principal>
+    <pergunta_capitulo>Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais?</pergunta_capitulo>
+    <por_que_importa>Este capítulo fornece a cadeia causal que explica como os deslocamentos populacionais produziram transformações sociais e urbanas; o próximo capítulo examina como a circulação de mercadorias e a expansão do capital se articulam com esses mesmos fluxos.</por_que_importa>
+  </cabecalho>
+
+  <mapa-progressao>
+    <passo ordem="1" bloco="bloco-1">Definir</passo>
+    <passo ordem="2" bloco="bloco-2">Classificar</passo>
+    <passo ordem="3" bloco="bloco-3">Sequenciar</passo>
+    <passo ordem="4" bloco="bloco-4">Mapear causalidade</passo>
+  </mapa-progressao>
+
+  <corpo>
+
+    <bloco id="bloco-1" palavras="409" operacao="Definir">
+      <micro-habilidade>Definir migração como fenômeno de deslocamento populacional voluntário ou forçado</micro-habilidade>
+      <secao id="sec-1" tipo="definicao">
+        <titulo>O que é migração</titulo>
+        <conteudo>
+        <paragrafo>Migração é o deslocamento de indivíduos ou grupos de uma região para outra, com mudança de residência por período prolongado. Esse deslocamento pode ser voluntário, quando motivado pela busca de trabalho, estudo ou melhores condições de vida, ou forçado, quando causado por guerras, perseguições, escravização ou catástrofes ambientais. A distinção entre voluntário e forçado é central para compreender a migração como fenômeno histórico, porque o grau de escolha do migrante condiciona as circunstâncias da partida, da viagem e da chegada.</paragrafo>
+        <paragrafo>Um mesmo fenômeno, o deslocamento, adquire significados diferentes conforme as condições em que ocorre. Um colono português que embarcava para o Brasil no século XVI em busca de enriquecimento e um africano escravizado transportado no porão de um navio negreiro no mesmo período realizavam ambos uma travessia atlântica, mas sob condições radicalmente distintas de agência e liberdade. Essa diferença revela por que os termos emigração (saída do lugar de origem) e imigração (entrada no lugar de destino) não são apenas rótulos administrativos: são faces do mesmo processo, e todo emigrante é, ao chegar, um imigrante. Compreender a migração exige considerar os dois lados desse deslocamento.</paragrafo>
+        <paragrafo>Um exemplo concreto disso é a emigração irlandesa para os Estados Unidos entre 1845 e 1852. Nesse período, cerca de 1 milhão de irlandeses deixaram a Irlanda em consequência da Grande Fome, provocada pela praga que destruiu as plantações de batata, base alimentar da população pobre do país. Esse deslocamento foi forçado pela fome, não por escolha espontânea, e alterou a composição demográfica tanto da Irlanda (que perdeu parcela significativa de sua população) quanto das cidades norte-americanas que receberam os imigrantes.</paragrafo>
+        <paragrafo>A migração, portanto, não pode ser compreendida apenas pelo ponto de vista do país receptor. É preciso considerar as condições de partida e as relações de poder entre a sociedade de origem e a sociedade de destino. Essa abordagem foi desenvolvida por Abdelmalek Sayad (1933–1998), sociólogo argelino radicado na França, em *A Imigração ou os Paradoxos da Alteridade* (1991). Sayad sustenta que tratar o imigrante apenas como alguém que "chega" a um novo país é ignorar as forças econômicas, políticas e sociais que o fizeram partir.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Abdelmalek Sayad (1933–1998)</nome>
+          <pais>Argélia/França</pais>
+          <descricao>Abdelmalek Sayad (1933–1998), sociólogo argelino radicado na França e pesquisador do Centre de Sociologie Européenne, dedicou sua carreira ao estudo das condições sociais da migração, analisando tanto a experiência dos que partem quanto a dos que ficam.</descricao>
+        </sidebar>
+      </secao>
+      <nota_fonte>SAYAD, Abdelmalek. *A Imigração ou os Paradoxos da Alteridade*. São Paulo: Edusp, 1998.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s1" status="externo">
+        <o-que-verificar>
+          Operação: Definir
+          Cabeçalho: O que é migração
+          Conceito-âncora: Migração
+          Exemplo-âncora: Entre 1845 e 1852, cerca de 1 milhão de irlandeses emigraram para os Estados Unidos devido à Grande Fome causada pela praga da batata; esse deslocamento foi forçado pela fome, não por escolha espontânea.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <bloco id="bloco-2" palavras="682" operacao="Classificar">
+      <micro-habilidade>Classificar tipos de deslocamento populacional segundo causas, voluntariedade e contexto histórico</micro-habilidade>
+      <secao id="sec-1" tipo="classificacao">
+        <titulo>Tipos de deslocamento populacional</titulo>
+        <introducao>
+        <paragrafo>Os deslocamentos populacionais ao longo da História podem ser classificados segundo três critérios: o grau de voluntariedade (se o deslocamento foi voluntário, forçado ou compulsório), a causa principal que o motivou (econômica, política, religiosa, ambiental ou bélica) e o contexto histórico em que ocorreu (o período e a estrutura de poder vigente). A combinação desses critérios permite distinguir tipos de deslocamento que, embora compartilhem o fato de envolver mudança de lugar, diferem em suas causas, condições e consequências.</paragrafo>
+        </introducao>
+        <lista-subtipos>
+          <item tipo="subtipo" nome="Colonização portuguesa na América">
+            <conteudo>
+            <paragrafo>**Colonização portuguesa na América (séculos XVI a XVIII)**</paragrafo>
+            <paragrafo>Um primeiro tipo de deslocamento é a colonização, em que o critério de voluntariedade varia conforme o grupo social envolvido. No caso da colonização portuguesa na América, colonos voluntários embarcavam motivados pela expectativa de enriquecimento e de ascensão social, enquanto degredados eram enviados compulsoriamente como forma de punição. A causa principal era econômico-política: a Coroa portuguesa buscava explorar os recursos da colônia e consolidar o domínio territorial. O contexto histórico era o da expansão marítima europeia dos séculos XV e XVI, em que as monarquias ibéricas disputavam o controle de rotas comerciais e territórios ultramarinos.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Tráfico atlântico de africanos escravizados">
+            <conteudo>
+            <paragrafo>**Tráfico atlântico de africanos escravizados (séculos XVI a XIX)**</paragrafo>
+            <paragrafo>Um segundo tipo, radicalmente distinto do anterior quanto à voluntariedade, é o tráfico atlântico de africanos escravizados. Nesse caso, o deslocamento era inteiramente forçado: africanos eram capturados e transportados sem consentimento para as Américas. A causa principal era econômica, vinculada à demanda por mão de obra nas plantations de açúcar, tabaco e, posteriormente, café e algodão. O contexto histórico era o sistema mercantilista e colonial, que organizava a produção no Novo Mundo com base no trabalho escravo. Estima-se que, entre os séculos XVI e XIX, cerca de 12,5 milhões de africanos foram embarcados no tráfico atlântico. Aplicando os três critérios definidos anteriormente: a voluntariedade era forçada; a causa principal era econômica, ligada ao abastecimento de mão de obra para a economia colonial; e o contexto histórico era o do sistema mercantilista e colonial.</paragrafo>
+            <paragrafo>O deslocamento forçado de milhões de africanos não foi apenas uma transferência geográfica. Ele produziu identidades culturais novas, que não pertenciam inteiramente à sociedade de origem nem à de destino. Essa dimensão cultural da diáspora foi analisada por Stuart Hall (1932–2014), teórico cultural jamaicano radicado na Grã-Bretanha, em *Da Diáspora: Identidades e Mediações Culturais* (2003). Hall sustenta que a diáspora não se reduz ao deslocamento geográfico: ela gera identidades híbridas, formadas na tensão entre o que se deixou para trás e o que se encontrou no lugar de chegada.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Diáspora judaica na Segunda Guerra Mundial">
+            <conteudo>
+            <paragrafo>**Diáspora judaica na Segunda Guerra Mundial (de 1933 a 1945)**</paragrafo>
+            <paragrafo>Um terceiro tipo de deslocamento é a diáspora forçada por perseguição político-religiosa. Entre 1933 e 1945, milhões de judeus foram forçados a deixar seus países de origem na Europa em razão da perseguição promovida pelo regime nazista. A causa principal foi político-religiosa: a ideologia nazista classificava judeus como grupo racial indesejável e promoveu sua exclusão sistemática da vida social, econômica e política. O contexto histórico era o dos regimes totalitários europeus do período entreguerras, que subordinaram direitos individuais à lógica do Estado.</paragrafo>
+            </conteudo>
+          </item>
+          <item tipo="subtipo" nome="Refugiados sírios a partir de 2011">
+            <conteudo>
+            <paragrafo>**Refugiados sírios (a partir de 2011)**</paragrafo>
+            <paragrafo>Contrastando com os casos anteriores quanto ao contexto histórico, mas semelhante quanto ao grau de voluntariedade, o deslocamento de refugiados sírios a partir de 2011 constitui um quarto tipo. O deslocamento é forçado, causado pela guerra civil que fragmentou o país. A causa principal é bélica e política: o conflito armado entre o governo, grupos de oposição e organizações extremistas tornou inviável a permanência de milhões de pessoas em suas regiões de origem. O contexto é o das crises humanitárias contemporâneas, em que os deslocamentos forçados atingem escala global e desafiam a capacidade de resposta dos Estados e de organismos internacionais. Mais de 6 milhões de sírios tornaram-se refugiados desde o início do conflito.</paragrafo>
+            </conteudo>
+          </item>
+        </lista-subtipos>
+        <sidebar tipo="autor">
+          <nome>Stuart Hall (1932–2014)</nome>
+          <pais>Jamaica/Grã-Bretanha</pais>
+          <descricao>Stuart Hall (1932–2014), teórico cultural jamaicano radicado na Grã-Bretanha e professor da Open University, desenvolveu o conceito de identidade diaspórica para explicar as transformações culturais produzidas pelos deslocamentos forçados.</descricao>
+        </sidebar>
+      </secao>
+      <imagem ref="fig-01-01-01" tipo="sugerida">
+        <descricao>Quadro classificatório com 4 colunas (Colonização portuguesa / Tráfico atlântico / Diáspora judaica / Refugiados sírios) e 3 linhas (Voluntariedade / Causa principal / Contexto histórico)</descricao>
+      </imagem>
+      <nota_fonte>HALL, Stuart. *Da Diáspora: Identidades e Mediações Culturais*. Belo Horizonte: Editora UFMG, 2003.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s2" status="externo">
+        <o-que-verificar>
+          Operação: Classificar
+          Cabeçalho: Tipos de deslocamento populacional
+          Exemplo-âncora: Aplicando os critérios ao tráfico atlântico — voluntariedade: forçado (africanos capturados e transportados sem consentimento); causa principal: econômica (abastecimento de mão de obra para economia colonial); contexto histórico: sistema mercantilista e colonial, séculos XVI a XIX.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-3" palavras="627" operacao="Sequenciar">
+      <micro-habilidade>Sequenciar processos históricos de deslocamento e mobilidade populacional, da expansão marítima às crises humanitárias contemporâneas</micro-habilidade>
+      <secao id="sec-1" tipo="sequencia">
+        <titulo>Cronologia dos grandes deslocamentos populacionais</titulo>
+        <conteudo>
+        <paragrafo>Os grandes deslocamentos populacionais não ocorreram de forma isolada. Cada onda migratória esteve conectada a transformações políticas e econômicas que condicionaram a seguinte, formando um processo de longa duração.</paragrafo>
+        <paragrafo>O ponto de partida pode ser situado em 1415, quando Portugal tomou Ceuta, no norte da África, inaugurando a expansão marítima europeia. Ao longo do século XV, navegadores portugueses avançaram pela costa africana e, em 1500, chegaram ao território que viria a ser o Brasil. Essa expansão marítima deslocou contingentes de colonos, missionários, soldados e degredados da Europa para territórios na África, na Ásia e nas Américas, estabelecendo redes de comércio e dominação que redefiniram as relações entre continentes.</paragrafo>
+        <paragrafo>Dessa expansão derivou o encadeamento seguinte: a consolidação do tráfico atlântico de africanos escravizados, que se intensificou a partir do século XVI. A colonização das Américas criou uma demanda por mão de obra que as populações locais, dizimadas por doenças e pela violência da conquista, não podiam suprir. Estima-se que entre os séculos XVI e XIX cerca de 12,5 milhões de africanos foram embarcados à força para as Américas, constituindo o maior deslocamento forçado da História.</paragrafo>
+        <paragrafo>A etapa seguinte foi desencadeada pela Revolução Industrial e pela transformação das economias europeias. Entre 1850 e 1914, aproximadamente 55 milhões de europeus migraram para as Américas, impulsionados pela pobreza rural, pelo crescimento demográfico e pela expectativa de trabalho nas economias em expansão do continente americano. Italianos, alemães, espanhóis e portugueses compuseram a maior parte desse fluxo, alterando a composição social de países como Brasil, Argentina e Estados Unidos.</paragrafo>
+        <paragrafo>Esse fluxo migratório em massa ocorreu em paralelo com a formação dos Estados nacionais, que, ao longo do século XIX, passaram a definir fronteiras, criar leis de imigração e estabelecer critérios de cidadania. Na América Latina, as independências do início do século XIX geraram novos Estados que adotaram políticas de atração de imigrantes europeus, em muitos casos com o objetivo explícito de modificar a composição étnica da população. Na Europa, a consolidação dos Estados nacionais reforçou a distinção entre cidadãos e estrangeiros, regulando quem podia entrar e permanecer.</paragrafo>
+        <paragrafo>A convergência desses processos culminou nos deslocamentos forçados provocados pelas duas Guerras Mundiais. Entre 1914 e 1945, milhões de pessoas foram deslocadas por conflitos, perseguições e redefinições de fronteiras. A Primeira Guerra Mundial gerou ondas de refugiados nos Bálcãs e no Império Otomano. A Segunda Guerra Mundial produziu deslocamentos em escala ainda maior: judeus perseguidos pelo regime nazista, populações civis deslocadas pela destruição de cidades e prisioneiros de guerra compuseram um contingente de dezenas de milhões de pessoas sem lugar fixo de residência.</paragrafo>
+        <paragrafo>A partir de 2011, a guerra civil na Síria inaugurou uma nova fase de deslocamentos forçados em grande escala. Mais de 6 milhões de sírios tornaram-se refugiados, buscando abrigo em países vizinhos e na Europa. Essa crise humanitária expôs as dificuldades dos Estados contemporâneos em conciliar controle de fronteiras com obrigações de acolhimento.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Eric Hobsbawm (1917–2012)</nome>
+          <pais>Grã-Bretanha</pais>
+          <descricao>Eric Hobsbawm (1917–2012), historiador britânico nascido no Egito e professor do Birkbeck College da Universidade de Londres, é autor de uma das mais abrangentes análises dos processos sociais e políticos dos séculos XIX e XX.</descricao>
+        </sidebar>
+      </secao>
+      <imagem ref="fig-01-01-02" tipo="sugerida">
+        <descricao>Linha do tempo com 6 marcos: 1415 (tomada de Ceuta, início da expansão marítima) → séculos XVI–XIX (tráfico atlântico, 12,5 milhões de africanos) → 1850–1914 (55 milhões de europeus migram para as Américas) → século XIX (formação de Estados nacionais e definição de fronteiras) → 1914–1945 (guerras mundiais e milhões de refugiados) → 2011 em diante (guerra na Síria, mais de 6 milhões de refugiados)</descricao>
+      </imagem>
+      <nota_fonte>HOBSBAWM, Eric. *A Era dos Extremos: O Breve Século XX — 1914–1991*. São Paulo: Companhia das Letras, 1995.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s3" status="externo">
+        <o-que-verificar>
+          Operação: Sequenciar
+          Cabeçalho: Cronologia dos grandes deslocamentos populacionais
+          Exemplo-âncora: Linha do tempo — 1415: Portugal toma Ceuta, início da expansão marítima → séculos XVI–XIX: tráfico atlântico desloca cerca de 12,5 milhões de africanos → 1850–1914: cerca de 55 milhões de europeus migram para as Américas → século XIX: Estados nacionais definem fronteiras e políticas de entrada → 1914–1945: guerras mundiais geram milhões de refugiados e apátridas → 2011 em diante: guerra na Síria força o deslocamento de mais de 6 milhões de refugiados.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+    <quebra tipo="pagina" sugestao="forte"/>
+
+    <bloco id="bloco-4" palavras="855" operacao="Mapear causalidade">
+      <micro-habilidade>Mapear relações causais entre deslocamentos populacionais, urbanização e transformações sociais</micro-habilidade>
+      <secao id="sec-1" tipo="causa">
+        <conteudo>
+        <paragrafo>A urbanização acelerada que marcou os séculos XIX e XX resultou da articulação de múltiplas forças que empurraram populações para fora do campo e as atraíram para as cidades. Na Europa, a industrialização dos séculos XVIII e XIX criou uma demanda crescente por trabalhadores nas fábricas, concentradas em centros urbanos como Manchester, Birmingham e Liverpool. Simultaneamente, no campo, a mecanização agrícola e a concentração da propriedade fundiária reduziram a necessidade de mão de obra rural, tornando insustentável a permanência de grandes contingentes de trabalhadores nas áreas agrícolas. Esses dois processos, expulsão rural e atração urbana, operaram em conjunto.</paragrafo>
+        <paragrafo>Na América Latina, fatores econômicos e políticos tornaram esse movimento ainda mais complexo. Ao longo das décadas de 1960 a 1980, ditaduras militares instaladas em países como Brasil, Argentina, Chile e Uruguai perseguiram opositores políticos, intelectuais e trabalhadores sindicalizados, forçando o exílio de milhares de pessoas. Conflitos armados e colapsos econômicos em diversas regiões do continente também empurraram populações para centros urbanos, tanto dentro dos próprios países quanto para o exterior.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-2" tipo="relacao-causal">
+        <conteudo>
+        <paragrafo>A combinação dessas forças produziu um crescimento urbano que superou a capacidade de planejamento e de oferta de serviços das cidades receptoras. Na Inglaterra do século XIX, Manchester passou de cerca de 25 mil habitantes em 1772 para mais de 300 mil em 1850, crescimento diretamente vinculado à concentração industrial. No Brasil, entre 1940 e 1980, a proporção da população urbana saltou de 31% para 68% do total, segundo o IBGE. O êxodo rural, causado pela mecanização da agricultura e pela concentração de terras, direcionou milhões de migrantes internos para cidades como São Paulo, que se expandiu sem planejamento urbano capaz de absorver esse contingente.</paragrafo>
+        <paragrafo>A cadeia se fechava da seguinte forma: a industrialização gerou demanda por trabalho nas cidades; trabalhadores rurais e imigrantes deslocaram-se para esses centros; o crescimento urbano acelerado superou a capacidade de oferta de habitação, saneamento e transporte; formaram-se, como resultado, periferias com condições precárias e desigualdade acentuada.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-3" tipo="consequencia">
+        <conteudo>
+        <paragrafo>O resultado direto foi o crescimento de cidades fragmentadas. Nas periferias urbanas, a ausência de infraestrutura adequada (saneamento, transporte, habitação) concentrou a pobreza em áreas distantes dos centros onde se localizavam os serviços e os empregos. Essa segregação socioespacial, em que investimentos públicos privilegiam áreas centrais enquanto as periferias acumulam déficits estruturais, tornou-se uma marca das cidades latino-americanas. São Paulo é um caso representativo: ao longo do século XX, a cidade recebeu milhões de migrantes internos, formando periferias com infraestrutura insuficiente e condições de vida precárias.</paragrafo>
+        <paragrafo>Ao fluxo econômico somou-se, na América Latina, um componente político. As ditaduras militares forçaram ao exílio intelectuais, artistas, sindicalistas e militantes de países como Brasil, Argentina e Chile, que se estabeleceram em cidades como Paris, Cidade do México e Lisboa, alterando a composição social e cultural dessas comunidades receptoras. Esse exílio não foi apenas individual: reconfigurou redes de solidariedade e de produção intelectual em escala transnacional.</paragrafo>
+        <paragrafo>Essa análise da urbanização como processo condicionado pelos interesses do capital foi desenvolvida por Milton Santos (1926–2001), geógrafo brasileiro e professor da Universidade de São Paulo, em *A Urbanização Brasileira* (1993). Santos argumenta que a urbanização no Brasil foi um processo corporativo, orientado pelos interesses econômicos dominantes, que produziu cidades fragmentadas onde a pobreza se concentra nas periferias enquanto os investimentos públicos privilegiam áreas centrais.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Milton Santos (1926–2001)</nome>
+          <pais>Brasil</pais>
+          <descricao>Milton Santos (1926–2001), geógrafo brasileiro e professor da Universidade de São Paulo, produziu uma das análises mais sistemáticas da urbanização no Brasil e na América Latina, articulando processos econômicos globais com transformações espaciais locais.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-4" tipo="conclusao-parcial">
+        <conteudo>
+        <paragrafo>Os fluxos contemporâneos de refugiados prolongam esse processo em escala global. Zygmunt Bauman (1925–2017), sociólogo polonês radicado na Grã-Bretanha, argumenta em *Estranhos à Nossa Porta* (2016) que os deslocamentos atuais expõem a incapacidade dos Estados nacionais de oferecer segurança e acolhimento de forma simultânea. As políticas migratórias oscilam entre solidariedade e rejeição, reproduzindo em âmbito internacional a lógica de inclusão e exclusão que Santos identificou na urbanização brasileira.</paragrafo>
+        </conteudo>
+        <sidebar tipo="autor">
+          <nome>Zygmunt Bauman (1925–2017)</nome>
+          <pais>Polônia/Grã-Bretanha</pais>
+          <descricao>Zygmunt Bauman (1925–2017), sociólogo polonês radicado na Grã-Bretanha e professor emérito da Universidade de Leeds, analisou as condições sociais dos deslocamentos contemporâneos e as respostas dos Estados a esses fluxos.</descricao>
+        </sidebar>
+      </secao>
+      <secao id="sec-5" tipo="sintese">
+        <conteudo>
+        <paragrafo>Os grandes deslocamentos populacionais, da expansão marítima e do tráfico atlântico às crises humanitárias contemporâneas, foram causados por fatores econômicos, políticos e bélicos articulados entre si. A expansão marítima deslocou colonos e escravizados para as Américas; a industrialização atraiu trabalhadores rurais para as cidades; as guerras e as ditaduras forçaram o exílio de milhões de pessoas. Esses deslocamentos provocaram a urbanização acelerada, a formação de periferias precárias e a segregação socioespacial, transformando as estruturas sociais tanto nas regiões de origem quanto nas de destino. A ação dos Estados, ao definir fronteiras, políticas migratórias e prioridades de investimento urbano, foi determinante para configurar essas transformações.</paragrafo>
+        </conteudo>
+      </secao>
+      <secao id="sec-6" tipo="encadeamento">
+        <conteudo>
+        <paragrafo>Identificadas as cadeias causais entre deslocamentos populacionais e transformações sociais, o próximo capítulo examina como a circulação de mercadorias e a expansão do capital se articulam com esses mesmos fluxos, completando a segunda dimensão da pergunta central da unidade.</paragrafo>
+        </conteudo>
+      </secao>
+      <imagem ref="fig-01-01-03" tipo="sugerida">
+        <descricao>Diagrama de processo com setas mostrando: industrialização + mecanização agrícola → êxodo rural e migração → crescimento urbano acelerado → periferias precárias e segregação socioespacial. Incluir dados: Brasil, população urbana de 31% (1940) para 68% (1980)</descricao>
+      </imagem>
+      <nota_fonte>SANTOS, Milton. *A Urbanização Brasileira*. São Paulo: Hucitec, 1993.</nota_fonte>
+      <nota_fonte>BAUMAN, Zygmunt. *Estranhos à Nossa Porta*. Rio de Janeiro: Zahar, 2017.</nota_fonte>
+      <sidebar tipo="verificacao" ref="verif-01-01-s4" status="externo">
+        <o-que-verificar>
+          Operação: Mapear causalidade
+          Cabeçalho: Deslocamentos populacionais, urbanização e transformações sociais
+          Exemplo-âncora: Entre 1940 e 1980, a população urbana do Brasil passou de 31% para 68% do total. O êxodo rural foi causado pela mecanização da agricultura e pela concentração de terras; a consequência foi o crescimento de cidades como São Paulo, que recebeu milhões de migrantes internos e passou a concentrar periferias com infraestrutura insuficiente, resultando em segregação socioespacial.
+        </o-que-verificar>
+      </sidebar>
+    </bloco>
+
+  </corpo>
+
+  <rodape>
+    <sidebar tipo="aplicar-agora" ref="aplicar-01-01" status="externo">
+      <o-que-verificar>
+        Operação principal: Mapear causalidade
+        Pergunta do capítulo: Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais?
+        Exemplo-âncora principal: Entre 1940 e 1980, a população urbana do Brasil passou de 31% para 68% do total. O êxodo rural foi causado pela mecanização da agricultura e pela concentração de terras; a consequência foi o crescimento de cidades como São Paulo, que recebeu milhões de migrantes internos e passou a concentrar periferias com infraestrutura insuficiente, resultando em segregação socioespacial.
+        Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+      </o-que-verificar>
+    </sidebar>
+  </rodape>
+
+</capitulo>

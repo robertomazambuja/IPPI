@@ -1,0 +1,7 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-24T12:07:00,3serie-apostila-historia-unidade1,Agente 1,1.1 Capítulo 1 — A Construção Histórica da Cidadania e da Democracia,2,3,6797,21998,15729
+2026-06-24T12:09:50,3serie-apostila-historia-unidade1,Agente 1,1.2 Capítulo 2 — Democracia e Participação na Sociedade Contemporânea,2,3,9256,16829,24061
+2026-06-24T12:12:52,3serie-apostila-historia-unidade1,Agente 2,1.1 Capítulo 1 — A Construção Histórica da Cidadania e da Democracia,4,5,8226,44264,84637
+2026-06-24T12:13:01,3serie-apostila-historia-unidade1,Agente 2,1.2 Capítulo 2 — Democracia e Participação na Sociedade Contemporânea,4,5,8985,48553,92708
+2026-06-24T12:13:22,3serie-apostila-historia-unidade1,Agente 4,1.1 Capítulo 1 — A Construção Histórica da Cidadania e da Democracia,2,3,1925,16901,9962
+2026-06-24T12:15:29,3serie-apostila-historia-unidade1,Agente 4,1.2 Capítulo 2 — Democracia e Participação na Sociedade Contemporânea,2,3,9304,16804,13919

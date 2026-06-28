@@ -1,0 +1,58 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: 1serie-apostila-historia-unidade2
+Gerado em: 28/06/2026 11:07
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-01 — Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: O que é migração | Conceito-âncora: Migração | Exemplo-âncora: Entre 1845 e 1852, cerca de 1 milhão de irlandeses emigraram para os Estados Unidos devido à Grande Fome causada pela praga da batata; esse deslocamento foi forçado pela fome, não por escolha espontânea.
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Tipos de deslocamento populacional | Exemplo-âncora: Aplicando os critérios ao tráfico atlântico — voluntariedade: forçado (africanos capturados e transportados sem consentimento); causa principal: econômica (abastecimento de mão de obra para economia colonial); contexto histórico: sistema mercantilista e colonial, séculos XVI a XIX.
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar | Cabeçalho: Cronologia dos grandes deslocamentos populacionais | Exemplo-âncora: Linha do tempo — 1415: Portugal toma Ceuta, início da expansão marítima → séculos XVI–XIX: tráfico atlântico desloca cerca de 12,5 milhões de africanos → 1850–1914: cerca de 55 milhões de europeus migram para as Américas → século XIX: Estados nacionais definem fronteiras e políticas de entrada → 1914–1945: guerras mundiais geram milhões de refugiados e apátridas → 2011 em diante: guerra na Síria força o deslocamento de mais de 6 milhões de refugiados.
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Deslocamentos populacionais, urbanização e transformações sociais | Exemplo-âncora: Entre 1940 e 1980, a população urbana do Brasil passou de 31% para 68% do total. O êxodo rural foi causado pela mecanização da agricultura e pela concentração de terras; a consequência foi o crescimento de cidades como São Paulo, que recebeu milhões de migrantes internos e passou a concentrar periferias com infraestrutura insuficiente, resultando em segregação socioespacial.
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Mapear causalidade | Pergunta do capítulo: Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais? | Exemplo-âncora principal: Entre 1940 e 1980, a população urbana do Brasil passou de 31% para 68% do total. O êxodo rural foi causado pela mecanização da agricultura e pela concentração de terras; a consequência foi o crescimento de cidades como São Paulo, que recebeu milhões de migrantes internos e passou a concentrar periferias com infraestrutura insuficiente, resultando em segregação socioespacial. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — Como a expansão do capital e do comércio, do mercantilismo à globalização, produziu a divisão internacional do trabalho e as desigualdades econômicas globais?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: O que é capital | Conceito-âncora: Capital | Exemplo-âncora: No século XVIII, um comerciante inglês comprava tecidos de algodão produzidos em Manchester por 2 libras a peça e os vendia na Costa da Mina (atual Gana) por mercadorias equivalentes a 6 libras. O lucro de 4 libras por peça não era gasto em consumo pessoal: era reinvestido na compra de mais tecidos e na ampliação da rota comercial. Essa diferença entre gastar e reinvestir é o que distingue riqueza de capital.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Formas de circulação do capital e das mercadorias | Exemplo-âncora: Em 1602, a Companhia Holandesa das Índias Orientais (VOC) operava sob monopólio concedido pelo Estado holandês, comprando pimenta em Batávia (atual Jacarta) e vendendo em Amsterdã — circulação intercontinental regulada pelo Estado, com mercadoria agrícola. Em 2008, a crise financeira iniciada nos Estados Unidos se propagou em horas para bolsas de valores na Europa e na Ásia por meio de derivativos e títulos hipotecários — circulação global e instantânea, com capital financeiro, e Estados nacionais incapazes de bloquear a transmissão.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar | Cabeçalho: Do mercantilismo à globalização — etapas da expansão do comércio e do capitalismo | Exemplo-âncora: Linha do tempo — (1) Em 1500, a Coroa portuguesa detinha o monopólio do comércio de especiarias com a Ásia pelo Cabo da Boa Esperança. (2) Em 1785, Edmund Cartwright patenteou o tear mecânico, multiplicando a produção de tecidos na Inglaterra. (3) Em 1884–1885, a Conferência de Berlim dividiu o continente africano entre potências europeias sem consultar as populações locais. (4) Em 1933, o presidente Franklin Roosevelt lançou o New Deal, programa de intervenção estatal na economia para conter os efeitos da Crise de 1929. (5) Em 1995, a criação da Organização Mundial do Comércio (OMC) institucionalizou regras de livre-comércio em escala global.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Expansão do capital, divisão internacional do trabalho e desigualdades globais | Exemplo-âncora: No século XIX, o Brasil exportava café para a Inglaterra e importava máquinas e tecidos ingleses. O preço do café no mercado internacional era determinado em Londres, não no Rio de Janeiro. Em 1860, o Brasil tinha superávit em volume de exportação, mas déficit em valor, porque o preço das manufaturas importadas subia mais rápido que o preço do café exportado. Em 2020, o Brasil continuava como um dos maiores exportadores mundiais de soja, minério de ferro e petróleo bruto — produtos primários — e importador de semicondutores, medicamentos e equipamentos de telecomunicação. A estrutura centro-periferia descrita por Wallerstein permanece reconhecível nessa relação comercial.
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Mapear causalidade | Pergunta do capítulo: Como a expansão do capital e do comércio, do mercantilismo à globalização, produziu a divisão internacional do trabalho e as desigualdades econômicas globais? | Exemplo-âncora principal: No século XIX, o Brasil exportava café para a Inglaterra e importava máquinas e tecidos ingleses. O preço do café no mercado internacional era determinado em Londres, não no Rio de Janeiro. Em 1860, o Brasil tinha superávit em volume de exportação, mas déficit em valor, porque o preço das manufaturas importadas subia mais rápido que o preço do café exportado. Em 2020, o Brasil continuava como um dos maiores exportadores mundiais de soja, minério de ferro e petróleo bruto — produtos primários — e importador de semicondutores, medicamentos e equipamentos de telecomunicação. A estrutura centro-periferia descrita por Wallerstein permanece reconhecível nessa relação comercial. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 10 verificação(ões) necessária(s)
+=================================================================

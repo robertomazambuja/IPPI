@@ -1,0 +1,58 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: 3serie-apostila-historia-unidade2
+Gerado em: 28/06/2026 11:21
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-01 — Como diferentes perspectivas teóricas explicam o papel dos meios de comunicação na construção do poder e da vida social?
+-----------------------------------------------------------------
+  REF             : verif-01-01-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: O que é comunicação como processo social | Conceito-âncora: Comunicação como processo social | Exemplo-âncora: Durante a Era Vargas (1930–1945), o governo brasileiro utilizou o programa de rádio
+
+  REF             : verif-01-01-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Meios de comunicação de massa — tipos e funções ao longo da história | Exemplo-âncora: Na ditadura militar brasileira (1964–1985), a televisão (suporte eletrônico, alcance nacional, fluxo unidirecional) foi utilizada como principal veículo de propaganda do regime. A TV Globo, inaugurada em 1965, transmitia o noticiário oficial e telenovelas para milhões de lares. Ao mesmo tempo, jornais alternativos como
+
+  REF             : verif-01-01-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Como a indústria cultural molda a opinião pública e a esfera pública | Exemplo-âncora: Durante a Era Vargas (1937–1945, Estado Novo), o Departamento de Imprensa e Propaganda (DIP), criado em 1939, centralizou o controle sobre rádio, cinema, imprensa e teatro. O DIP determinava o conteúdo veiculado pela
+
+  REF             : verif-01-01-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva | Cabeçalho: Duas perspectivas sobre mídia e poder — indústria cultural e hegemonia | Exemplo-âncora: Durante a redemocratização brasileira (1974–1985), a Rede Globo transmitia a novela
+
+  REF             : aplicar-01-01   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Reconhecer perspectiva | Pergunta do capítulo: Como diferentes perspectivas teóricas explicam o papel dos meios de comunicação na construção do poder e da vida social? | Exemplo-âncora principal: Durante a redemocratização brasileira (1974–1985), a Rede Globo transmitia a novela | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+
+CAPÍTULO 01-02 — As tecnologias digitais e as redes sociais alteram ou reproduzem as dinâmicas de poder sobre a informação identificadas no capítulo anterior?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: Sociedade em rede — uma nova configuração social | Conceito-âncora: Sociedade em rede | Exemplo-âncora: Durante os protestos de junho de 2013 no Brasil, convocatórias publicadas em redes sociais como Facebook e Twitter mobilizaram milhões de pessoas em mais de 350 cidades em poucos dias, sem coordenação de partidos ou sindicatos — o que seria inviável em uma sociedade organizada exclusivamente por meios de comunicação de massa tradicionais (jornal, rádio, televisão).
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Classificar | Cabeçalho: Fenômenos da comunicação digital — efeitos sobre a informação e a participação cidadã | Exemplo-âncora: Durante a ditadura militar brasileira (1964–1985), a censura estatal controlava a circulação de informações por meios centralizados (jornais, rádio, televisão). Na redemocratização, a imprensa recuperou liberdade editorial, mas o controle permaneceu concentrado em poucos grupos de mídia. Com a comunicação digital, a partir dos anos 2000, cidadãos passaram a produzir e circular informações sem mediação editorial — o que simultaneamente ampliou o acesso (ex: blogs de denúncia, mídia independente) e abriu espaço para a distorção organizada (ex: disseminação em massa de notícias falsas via WhatsApp nas eleições de 2018). A classificação acima permite distinguir esses fenômenos em vez de tratá-los como um único efeito.
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Mapear causalidade | Cabeçalho: Algoritmos, bolhas informacionais e desinformação — uma cadeia causal | Exemplo-âncora: Nas eleições presidenciais brasileiras de 2018, pesquisas do Instituto Reuters e da Universidade de Oxford identificaram que correntes de WhatsApp disseminaram notícias falsas sobre candidatos, programas de governo e instituições (como o TSE e a imprensa). O algoritmo do WhatsApp não filtra conteúdo por veracidade, e a arquitetura de grupos fechados facilita a circulação de informações sem verificação. O resultado documentado por pesquisadores da UFMG (projeto Eleições Sem Fake) foi a formação de bolhas informacionais partidárias nas quais usuários recebiam versões incompatíveis dos mesmos fatos, comprometendo a capacidade de deliberação informada.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva | Cabeçalho: Tecnologias digitais e democracia — duas perspectivas | Exemplo-âncora: O caso brasileiro permite observar as duas perspectivas em operação simultânea. De um lado, movimentos como o Movimento dos Trabalhadores Sem Teto (MTST) e coletivos periféricos utilizam redes sociais desde os anos 2010 para denunciar violações de direitos, organizar ações e disputar a representação midiática — função antes monopolizada por grandes veículos de comunicação. De outro lado, as eleições de 2018 e 2022 registraram disseminação massiva de desinformação via plataformas digitais, com efeitos documentados sobre a confiança nas instituições democráticas (TSE, STF, imprensa). O mesmo conjunto de tecnologias produziu, simultaneamente, ampliação e fragilização da participação cidadã.
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Reconhecer perspectiva | Pergunta do capítulo: As tecnologias digitais e as redes sociais alteram ou reproduzem as dinâmicas de poder sobre a informação identificadas no capítulo anterior? | Exemplo-âncora principal: O caso brasileiro permite observar as duas perspectivas em operação simultânea. De um lado, movimentos como o Movimento dos Trabalhadores Sem Teto (MTST) e coletivos periféricos utilizam redes sociais desde os anos 2010 para denunciar violações de direitos, organizar ações e disputar a representação midiática — função antes monopolizada por grandes veículos de comunicação. De outro lado, as eleições de 2018 e 2022 registraram disseminação massiva de desinformação via plataformas digitais, com efeitos documentados sobre a confiança nas instituições democráticas (TSE, STF, imprensa). O mesmo conjunto de tecnologias produziu, simultaneamente, ampliação e fragilização da participação cidadã. | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 10 verificação(ões) necessária(s)
+=================================================================

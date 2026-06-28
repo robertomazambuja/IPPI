@@ -1,0 +1,7 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-28T11:01:14,1serie-apostila-historia-unidade2,Agente 1,"1.1 Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais",2,3,5905,21098,15662
+2026-06-28T11:03:34,1serie-apostila-historia-unidade2,Agente 1,"1.2 Capítulo 2 — Capital, Comércio e Globalização",2,3,7152,14628,23933
+2026-06-28T11:06:19,1serie-apostila-historia-unidade2,Agente 2,"1.1 Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais",4,5,7423,41616,80146
+2026-06-28T11:06:38,1serie-apostila-historia-unidade2,Agente 2,"1.2 Capítulo 2 — Capital, Comércio e Globalização",4,5,7945,44270,85195
+2026-06-28T11:07:01,1serie-apostila-historia-unidade2,Agente 4,"1.1 Capítulo 1 — Migrações, Povos e Dinâmicas Populacionais",2,3,2570,15568,9295
+2026-06-28T11:07:21,1serie-apostila-historia-unidade2,Agente 4,"1.2 Capítulo 2 — Capital, Comércio e Globalização",2,3,2339,13545,12283

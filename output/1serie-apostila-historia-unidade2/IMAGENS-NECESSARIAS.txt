@@ -1,0 +1,38 @@
+IMAGENS NECESSÁRIAS — Apostila: 1serie-apostila-historia-unidade2
+Gerado em: 28/06/2026 11:07
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Quais relações causais conectam os grandes deslocamentos populacionais na História a processos de urbanização e a transformações nas estruturas sociais?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro classificatório com 4 colunas (Colonização portuguesa / Tráfico atlântico / Diáspora judaica / Refugiados sírios) e 3 linhas (Voluntariedade / Causa principal / Contexto histórico)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 6 marcos: 1415 (tomada de Ceuta, início da expansão marítima) → séculos XVI–XIX (tráfico atlântico, 12,5 milhões de africanos) → 1850–1914 (55 milhões de europeus migram para as Américas) → século XIX (formação de Estados nacionais e definição de fronteiras) → 1914–1945 (guerras mundiais e milhões de refugiados) → 2011 em diante (guerra na Síria, mais de 6 milhões de refugiados)
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Diagrama de processo com setas mostrando: industrialização + mecanização agrícola → êxodo rural e migração → crescimento urbano acelerado → periferias precárias e segregação socioespacial. Incluir dados: Brasil, população urbana de 31% (1940) para 68% (1980)
+
+
+CAPÍTULO 01-02 — Como a expansão do capital e do comércio, do mercantilismo à globalização, produziu a divisão internacional do trabalho e as desigualdades econômicas globais?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 3 colunas (Comércio mercantilista / Comércio industrial livre-cambista / Circulação financeira globalizada) e 3 linhas (Escala geográfica / Papel do Estado / Mercadoria ou ativo predominante), com exemplos em cada célula
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: expansão marítima e mercantilismo (séculos XV–XVIII) → Revolução Industrial (1760–1850) → imperialismo e partilha colonial (1870–1914) → crise e intervenção estatal (1929–1945) → globalização e financeirização (1970 em diante), com eventos-chave indicados em cada marco
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Diagrama mostrando a estrutura centro-periferia: no centro, países industrializados (Europa Ocidental, EUA, Japão) com setas indicando exportação de manufaturas e capital; na periferia, países da América Latina, África e Ásia com setas indicando exportação de matérias-primas e commodities; setas de retorno indicando remessa de lucros, pagamento de dívida e dependência tecnológica
+
+=================================================================
+TOTAL: 6 imagem(ns) necessária(s)
+=================================================================

@@ -751,3 +751,130 @@ pontual final, não para descrever página por página.
   `grep -o 'ref="[^"]*"' <xml>` × `ls verificacoes/` ANTES de rodar, para
   pegar refs ausentes antes da diagramação (lição repetida do §16 — vale
   reforçar como checklist fixo, não só lição pontual).
+
+## 18. SESSÃO 2026-06-24 — 3ª série, UNIDADE 1: caps. 01-01 e 01-02 ALUNO + quadro-resumo (resumo-aluno) + motor reparado
+
+**Tarefa:** diagramar a versão **ALUNO** dos caps. **01-01** ("A Construção
+Histórica da Cidadania e da Democracia") e **01-02** ("Democracia e Participação
+na Sociedade Contemporânea") de `output/3serie-apostila-historia-unidade1`, com
+imagens reais, verificações externas e, pela 1ª vez nesta linha, o **quadro-resumo
+da capa** alimentado pelos `<resumo-aluno>` (pasta `resumo-aluno/`). Dois PDFs
+separados, só ALUNO.
+
+**ENGINE QUEBRADO AO ABRIR A SESSÃO (bug do §10, em forma grave):** `xml_to_pdf.py`
+chegou **truncado** no fim — `main()` cortado na ~linha 620 no meio de uma string
+(`p.add_argument("--briefing", help="JSON com nome`). `python3 -m py_compile`
+falhava (`SyntaxError: unterminated string literal`); o motor não rodava de jeito
+nenhum. Esta versão já tinha o recurso novo de **quadro-resumo** (`render_quadro_resumo`,
+`OPERACAO_CORES` com as 7 operações, CSS `.quadro-resumo*`) intacto até a linha 611 —
+só o `main()` estava decepado. **Não havia git para restaurar** (`xml_to_pdf.py`
+está como `??` untracked) e o `.bak` é antigo demais (sem `--versao-professor`,
+`--verificacoes`, `--briefing`). **Reparo:** reescrevi só o `main()` via heredoc no
+shell (`head -n 611` + `cat >> <<'EOF'`), reconstruindo as flags a partir das
+assinaturas reais já presentes no arquivo (`render_capitulo(xml, imdir,
+incluir_gabarito, meta, verifdir)`, `carregar_briefing`→`(meta_por_num, unidade)`,
+`build_html(caps, versao_label)`, `numero_capitulo_do_xml`). Backup pré-reparo em
+`/tmp/xml_to_pdf.py.before_main_repair` (sandbox; some entre sessões). Resultado:
+**682 linhas, `py_compile` limpo.** O `main()` reconstruído mantém: grupo
+`--versao-aluno`/`--versao-professor` **obrigatório** (§6), `--imagens`/`--verificacoes`
+resolvidos para caminho absoluto (§9-bis), `--briefing` (auto-detecta só em modo
+`--unidade`; em modo XML único, passar manualmente — lição do §17), sufixo
+`-aluno`/`-professor` só quando `--output` não é dado, e rótulo de versão no rodapé.
+**Pendência para a ORIGEM:** descobrir o que está truncando `xml_to_pdf.py` (3ª
+recorrência: §10, §15-XML, agora o próprio motor) — o reparo é rede de segurança.
+
+**BRIEFINGS TROCADOS (dado quebrado na origem):**
+`input/3serie-apostila-historia-unidade1/briefing.json` na verdade contém a
+**Unidade 2 (Mídia, Sociedade e Democracia)**; o briefing correto de "Cidadania e
+Democracia" (com `"Unidade 1 — Cidadania e Democracia"`, "Capítulo 1 — A Construção
+Histórica…", "Capítulo 2 — Democracia e Participação…", habilidade H24) está em
+`input/3serie-apostila-historia-unidade2/briefing.json`. Para a capa sair certa usei
+`--briefing input/3serie-apostila-historia-unidade2/briefing.json`. **Pendência para
+a ORIGEM: trocar/renomear os dois briefing.json** (estão invertidos entre unidade1 e
+unidade2 da 3ª série).
+
+**resumo-aluno (recurso novo do quadro-resumo) — entrada dos dados:** o motor lê
+`<resumo-aluno>` de **dentro de cada `<bloco>`** (via `render_quadro_resumo`→
+`bl.find("resumo-aluno")`), mas os textos vinham num arquivo **separado**
+(`resumo-aluno/unidade-1-cidadania-e-democracia/<cap>.xml`). Inseri cada
+`<resumo-aluno>` logo após a `<micro-habilidade>` do bloco correspondente, nos dois
+XMLs formatados (script Python em **binário**, preservando CRLF; backups em
+`/tmp/01-0{1,2}.before_edits.xml`). **Pegadinha:** o cabeçalho-comentário do arquivo
+de resumo contém um literal `<resumo-aluno> … <micro-habilidade>` na frase de
+instrução — um `re.findall` ingênuo captura esse lixo como 1º match e corrompe o XML
+(deu `mismatched tag`). Fix: `re.sub(r'<!--.*?-->','')` antes de extrair. Validado:
+5 `<resumo-aluno>` por capítulo, `ET.parse` OK, CRLF preservado. Resultado visível:
+a capa agora traz o box **"O que você vai aprender neste capítulo"** com as 5 frases,
+cada uma na cor da operação (DEFINIR/SEQUENCIAR/COMPARAR/RECONHECER PERSPECTIVA/APLICAR).
+
+**Cap 01-01 não tinha NENHUMA verificação no XML (gap de conteúdo, não bug):** ao
+abrir, o XML do 01-01 tinha `<rodape>` **vazio** e **zero** `<sidebar tipo="verificacao">`
+(só os 5 sidebars de autor e 2 imagens). Diferente do "buraco mudo" do §16/§17 (JSON
+faltando): aqui as verificações **não existiam nem como referência**. Sinalizei ao
+Beto; ele **forneceu os 6 JSON** (`verif-01-01-s1..s5` + `aplicar-01-01`, validados
+`json.load` OK, schema certo, `correta` A/B/C/D/B). Como o XML ainda não referenciava
+nenhum, **inseri** (script Python binário, CRLF) 5 `<sidebar tipo="verificacao"
+ref="verif-01-01-sN" status="externo">` (uma ao fim de cada bloco, s1→bloco-1 …
+s5→bloco-5, mapeamento conferido por operação) + 1 `<sidebar tipo="aplicar-agora"
+ref="aplicar-01-01" status="externo">` no `<rodape>`. `ET.parse` OK. (O cap. 01-02 já
+vinha completo: 5 verif + aplicar, todos os JSON presentes.)
+
+**Comandos finais usados:**
+```bash
+BASE=output/3serie-apostila-historia-unidade1
+XMLDIR=$BASE/formatado/unidade-1-cidadania-e-democracia
+BRIEF=input/3serie-apostila-historia-unidade2/briefing.json   # briefing CORRETO (trocado na origem)
+# cap 01-01
+python3 xml_to_pdf.py "$XMLDIR/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.xml" \
+  --versao-aluno --imagens $BASE/imagens --verificacoes $BASE/verificacao --briefing $BRIEF \
+  --output apostilas/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia-aluno.pdf
+# cap 01-02
+python3 xml_to_pdf.py "$XMLDIR/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.xml" \
+  --versao-aluno --imagens $BASE/imagens --verificacoes $BASE/verificacao --briefing $BRIEF \
+  --output apostilas/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea-aluno.pdf
+```
+
+**Verificação (ambos, versão aluno):**
+- **Conformidade (via `--html-only` + grep):** cada capítulo = **20** `class="alternativa"`
+  (5×4), **5** sidebars de verificação, **1** "Aplicar agora", **0** `verif-pendente`,
+  **0** `imagem-legenda`, **5** itens no `quadro-resumo` (resumo-aluno ativo). Capa
+  (briefing corrigido): eyebrow "Unidade 1 — Cidadania e Democracia", "Capítulo 1/2",
+  nome certo, sem "AVISO: briefing.json invalido".
+- **Regras invioláveis:** `correta="` como atributo = **0** nos dois HTML (as únicas
+  ocorrências de "correta" são "corretamente" no texto das perguntas). `pdftotext` nos
+  PDFs = **0** de gabarito/justificativa/"resposta comentada"/"resposta modelo"/"uso do
+  professor". Nenhuma marcação visual da alternativa correta.
+- **Imagens (`pdfimages -list`):** 01-01 = **2** (`fig-01-01-01/02`), 01-02 = **3**
+  (`fig-01-02-01/02/03`) — bate com os refs; sem legenda; `nota_fonte` abaixo.
+- **Estrutura por página (`pdftotext -layout` 1ª linha + nº de chars):**
+  - 01-01 = **13 páginas**. Capa p1; DEFINIR p2 · SEQUENCIAR p4 · COMPARAR p7 ·
+    RECONHECER PERSPECTIVA p10 · APLICAR p12 — todo cabeçalho de bloco seguido de
+    2800+ chars na MESMA página: **ZERO cabeçalho órfão (§9 não se manifestou;
+    `bloco-keep` do §14 segura)**. **ZERO página em branco** (mínimo 420 chars).
+  - 01-02 = **17 páginas**. DEFINIR p2 · SEQUENCIAR p4 · COMPARAR p7 · RECONHECER
+    PERSPECTIVA p10 · APLICAR p13 · "Aplicar agora" p17. Mesmo resultado: zero header
+    órfão, zero página em branco (mínimo 303 chars).
+- **Branco de rodapé por página (PIL, exclui faixa ~20mm do `@bottom-center`):**
+  - 01-01: 9·3·45·1·6·40·1·35·43·1·15·3·2 → **média 15,9%.**
+  - 01-02: 5·2·45·2·4·41·1·8·29·2·37·38·2·2·35·36·55 → **média 20,3%.**
+  - Picos (~35–55%) são o **resíduo conhecido e aceito do §14**: imagem grande
+    (140mm, full-width, `break-inside: avoid`) e/ou verificação full-width não cabem
+    juntas e cada uma orfana com branco abaixo. **Nenhuma** página chega ao nível
+    grave "quase inteiramente em branco" do §13 — todas com texto real substancial.
+
+**Artefatos finais (em `C:\Users\Roberto\Desktop\IPPI\apostilas`):**
+- `01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia-aluno.pdf`
+  (13 páginas, ~1,10 MB) — **completo** (verificações inseridas nesta sessão).
+- `01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea-aluno.pdf`
+  (17 páginas, ~1,64 MB) — **completo**.
+
+**Pendências herdadas / a fazer quando pedirem:**
+- **ORIGEM:** (a) corrigir o que trunca `xml_to_pdf.py` (3ª recorrência do §10);
+  (b) destrocar os `briefing.json` de unidade1/unidade2 da 3ª série; (c) gerar as
+  verificações do 01-01 já dentro do XML/pipeline (nesta sessão foram inseridas à mão);
+  (d) o motor reparado **não está em git** (`??`) — versionar para ter restauro real.
+- Gerar a **versão PROFESSOR** dos dois capítulos (atenção ao resíduo do §9-bis: box
+  de gabarito sobe a verificação e interage com as imagens 140mm).
+- Sobraram dois PNGs auxiliares de capa (`_capa01-01.png`, `_capa01-02.png`) na pasta
+  `output/3serie-apostila-historia-unidade1/` — a remoção pelo sandbox deu "Operation
+  not permitted"; apagar manualmente se incomodar.

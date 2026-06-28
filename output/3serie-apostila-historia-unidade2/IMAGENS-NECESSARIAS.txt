@@ -1,0 +1,38 @@
+IMAGENS NECESSÁRIAS — Apostila: 3serie-apostila-historia-unidade2
+Gerado em: 28/06/2026 11:21
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Como diferentes perspectivas teóricas explicam o papel dos meios de comunicação na construção do poder e da vida social?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 4 colunas (Imprensa escrita / Rádio / Televisão / Internet e redes sociais) e 4 linhas (Suporte tecnológico / Alcance / Fluxo comunicativo / Função social predominante)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Diagrama de processo com três causas à esquerda (concentração da propriedade dos meios, padronização da produção cultural, redução de espaços de debate independente) convergindo por setas para duas consequências à direita (opinião pública orientada, enfraquecimento da esfera pública), com seta circular indicando o ciclo de retroalimentação
+
+  NOME DO ARQUIVO : fig-01-01-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Gramsci — Hegemonia cultural / Adorno e Horkheimer — Indústria cultural) e 3 linhas (Papel da mídia / Possibilidade de contestação / Relação do público com os meios)
+
+
+CAPÍTULO 01-02 — As tecnologias digitais e as redes sociais alteram ou reproduzem as dinâmicas de poder sobre a informação identificadas no capítulo anterior?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Quadro classificatório com 5 linhas (ativismo digital / jornalismo colaborativo / fake news / pós-verdade / inteligência artificial) e 3 colunas (Fenômeno / Efeito sobre a informação / Efeito sobre a participação cidadã)
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Diagrama de cadeia causal com 5 etapas conectadas por setas: (1) Algoritmos selecionam por engajamento → (2) Formação de bolhas informacionais → (3) Conteúdo emocional circula mais que factual → (4) IA produz desinformação em escala → (5) Fragmentação do debate público (pós-verdade)
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Perspectiva da ampliação democrática / Perspectiva da fragilização democrática) e 4 linhas (Argumento central / Autor de referência / Exemplo empírico / Pressuposto sobre democracia)
+
+=================================================================
+TOTAL: 6 imagem(ns) necessária(s)
+=================================================================

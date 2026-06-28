@@ -1,0 +1,43 @@
+VERIFICAÇÕES NECESSÁRIAS — Apostila: 3serie-apostila-historia-unidade1
+Gerado em: 24/06/2026 12:15
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada item abaixo, produza a verificação descrita.
+2. Salve um arquivo JSON nomeado EXATAMENTE como o REF (ex.: verif-01-01-s1.json).
+3. Coloque todos os arquivos numa pasta chamada "verificacoes".
+4. Use o schema abaixo (ver PLANO-VERIFICACAO-EXTERNA.md, seção 4).
+
+   tipo 'verificacao':
+     {"tipo":"verificacao","ref":"<ref>","pergunta":"...",
+      "alternativas":{"A":"...","B":"...","C":"...","D":"..."},
+      "correta":"B","justificativa":"..."}
+   tipo 'aplicar-agora':
+     {"tipo":"aplicar-agora","ref":"<ref>","enunciado":"...",
+      "resposta_comentada":"..."}
+=================================================================
+
+CAPÍTULO 01-02 — De que modo os mecanismos contemporâneos de participação política enfrentam ou reproduzem as desigualdades que limitam o exercício pleno da cidadania democrática?
+-----------------------------------------------------------------
+  REF             : verif-01-02-s1   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Definir | Cabeçalho: Participação política como exercício da cidadania contemporânea | Conceito-âncora: Participação política | Exemplo-âncora: Na eleição municipal de Porto Alegre em 1989, a prefeitura implementou o Orçamento Participativo, mecanismo em que moradores de bairros periféricos deliberavam em assembleias sobre a alocação de parte do orçamento público. Em 1990, cerca de 1.000 pessoas participaram das assembleias regionais; em 2002, esse número ultrapassou 20.000, e as comunidades passaram a decidir sobre pavimentação, saneamento e construção de escolas em seus bairros.
+
+  REF             : verif-01-02-s2   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Sequenciar | Cabeçalho: Mobilização social e conquista de direitos no Brasil contemporâneo | Exemplo-âncora: A Lei da Ficha Limpa (Lei Complementar n.º 135/2010) seguiu o percurso constitucional de iniciativa popular: o Movimento de Combate à Corrupção Eleitoral coletou cerca de 1,6 milhão de assinaturas entre 2008 e 2009. O projeto foi apresentado à Câmara dos Deputados, aprovado em ambas as casas do Congresso e sancionado em 4 de junho de 2010. A partir de sua vigência, candidatos condenados por órgão colegiado passaram a ser inelegíveis por oito anos. Esse caso demonstra o uso concreto de um instrumento de participação direta previsto na Constituição de 1988 (art. 61, §2º).
+
+  REF             : verif-01-02-s3   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Comparar | Cabeçalho: Participação institucional e participação em rede: dois modelos em ação | Exemplo-âncora: Em 2011, o movimento Occupy Wall Street ocupou o Zuccotti Park em Nova York durante dois meses, organizando-se por assembleias abertas e redes sociais, sem liderança formal e sem pauta legislativa específica. O movimento pressionou o debate público sobre desigualdade econômica nos Estados Unidos, mas não gerou legislação ou política pública vinculante. Em contraste, o Conselho Nacional de Saúde do Brasil, criado em 1937 e reformulado pela Lei n.º 8.142/1990, reúne representantes do governo, profissionais de saúde e usuários do SUS em reuniões mensais, produzindo resoluções que orientam a política nacional de saúde — como a Resolução n.º 453/2012, que definiu diretrizes para a composição dos conselhos de saúde em todo o país.
+
+  REF             : verif-01-02-s4   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Reconhecer perspectiva | Cabeçalho: Dois diagnósticos sobre a crise da democracia no século XXI | Exemplo-âncora: Em 2016, o impeachment da presidente Dilma Rousseff no Brasil foi interpretado de formas distintas conforme a perspectiva adotada. Pela perspectiva institucionalista, o processo seguiu os trâmites constitucionais previstos (votação na Câmara e julgamento no Senado) e representou o funcionamento das instituições democráticas. Pela perspectiva da democracia de baixa intensidade, o impeachment revelou como o sistema representativo pode ser instrumentalizado por elites políticas e econômicas contra um governo eleito, sem participação efetiva da maioria da população na decisão, evidenciando os limites da democracia representativa como mecanismo de soberania popular.
+
+  REF             : verif-01-02-s5   (tipo: verificacao)
+  O QUE VERIFICAR : Operação: Aplicar | Cabeçalho: Cidadania, desigualdade e participação política no Brasil do século XXI
+
+  REF             : aplicar-01-02   (tipo: aplicar-agora)
+  O QUE VERIFICAR : Operação principal: Aplicar | Pergunta do capítulo: De que modo os mecanismos contemporâneos de participação política enfrentam ou reproduzem as desigualdades que limitam o exercício pleno da cidadania democrática? | Pedir: um caso novo (diferente dos exemplos) para o aluno aplicar a operação.
+
+=================================================================
+TOTAL: 6 verificação(ões) necessária(s)
+=================================================================

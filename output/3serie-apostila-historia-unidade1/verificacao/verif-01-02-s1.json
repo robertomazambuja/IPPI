@@ -1,0 +1,13 @@
+{
+  "tipo": "verificacao",
+  "ref": "verif-01-02-s1",
+  "pergunta": "Na eleição municipal de Porto Alegre em 1989, a prefeitura implementou o Orçamento Participativo, mecanismo em que moradores de bairros periféricos deliberavam em assembleias sobre a alocação de parte do orçamento público. Em 1990, cerca de 1.000 pessoas participaram das assembleias regionais; em 2002, esse número ultrapassou 20.000, e as comunidades passaram a decidir sobre pavimentação, saneamento e construção de escolas em seus bairros. O capítulo apresenta esse caso como exemplo do conceito de participação política. Por que o Orçamento Participativo se classifica como participação política, e não apenas como exercício do voto?",
+  "alternativas": {
+    "A": "Porque o Orçamento Participativo constitui, sobretudo, um mecanismo de exercício do voto: ao deliberarem nas assembleias regionais, os moradores estão votando periodicamente em representantes que decidirão, em seu lugar, a alocação do orçamento público.",
+    "B": "Porque participação política compreende todas as formas de intervenção dos cidadãos nos assuntos coletivos, dentro ou fora das instituições formais; o voto é apenas um dos canais possíveis, e o Orçamento Participativo amplia essa intervenção por meio de deliberação direta sobre o orçamento, sem depender do momento eleitoral.",
+    "C": "Porque o Orçamento Participativo qualifica-se como participação política apenas por tratar da alocação de recursos financeiros públicos; mecanismos que não envolvam decisões sobre orçamento, como protestos ou conselhos deliberativos, não seriam formas de participação política.",
+    "D": "Porque o Orçamento Participativo amplia a intervenção dos cidadãos nas decisões coletivas, mas isso só ocorre porque o mecanismo substitui definitivamente a necessidade de eleições periódicas para cargos executivos no município."
+  },
+  "correta": "B",
+  "justificativa": "A alternativa B aplica corretamente a definição do capítulo: participação política não se reduz ao voto, e o Orçamento Participativo é um canal complementar de intervenção direta. A alternativa A é o distrator de vocabulário do conceito rival: descreve o voto periódico (um conceito real do capítulo) e o atribui indevidamente ao Orçamento Participativo, que é deliberação direta, não eleição de representantes. A alternativa C é restrição indevida: isola o traço 'tratar de orçamento' como se fosse condição obrigatória da participação política, quando o capítulo lista vários outros canais (protestos, conselhos, fiscalização). A alternativa D é vocabulário análogo: a primeira parte está correta (amplia a intervenção), mas a segunda distorce, afirmando que o mecanismo substitui as eleições, quando na verdade ele as complementa."
+}

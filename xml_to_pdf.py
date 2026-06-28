@@ -38,13 +38,17 @@ FRAME_INSET_MM = 10
 FRAME_W_MM = PAGE_W_MM - 2 * FRAME_INSET_MM   # 190
 FRAME_H_MM = PAGE_H_MM - 2 * FRAME_INSET_MM   # 277
 
+# As 7 operacoes cognitivas validas do projeto (matriz-enem + decompositor).
+# Cada uma com cor propria; usado tanto no stepper (mapa-progressao) quanto no
+# quadro resumo da capa. NAO inventar operacoes fora desta lista.
 OPERACAO_CORES = {
-    "Definir":            {"fundo": "#E3F2FD", "destaque": "#1565C0"},
-    "Sequenciar":         {"fundo": "#E8F5E9", "destaque": "#2E7D32"},
-    "Mapear causalidade": {"fundo": "#FFF3E0", "destaque": "#E65100"},
-    "Comparar":           {"fundo": "#F3E5F5", "destaque": "#6A1B9A"},
-    "Analisar":           {"fundo": "#FCE4EC", "destaque": "#AD1457"},
-    "Avaliar":            {"fundo": "#FFFDE7", "destaque": "#F57F17"},
+    "Definir":                {"fundo": "#E3F2FD", "destaque": "#1565C0"},  # Nivel 1
+    "Classificar":            {"fundo": "#E0F7FA", "destaque": "#00838F"},  # Nivel 1
+    "Sequenciar":             {"fundo": "#E8F5E9", "destaque": "#2E7D32"},  # Nivel 1
+    "Comparar":               {"fundo": "#F3E5F5", "destaque": "#6A1B9A"},  # Nivel 2
+    "Mapear causalidade":     {"fundo": "#FFF3E0", "destaque": "#E65100"},  # Nivel 2
+    "Reconhecer perspectiva": {"fundo": "#FCE4EC", "destaque": "#AD1457"},  # Nivel 3
+    "Aplicar":                {"fundo": "#EFEBE9", "destaque": "#4E342E"},  # Nivel 3
 }
 COR_PADRAO = {"fundo": "#F5F5F5", "destaque": "#424242"}
 
@@ -88,6 +92,19 @@ body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.65; color:
     font-weight: 700; border-right: 1pt solid #DEE2E6; }
 .mapa-passo:last-child { border-right: none; }
 .mapa-passo .num { display: block; font-size: 7pt; color: #999; margin-bottom: 3pt; font-weight: 400; }
+
+/* QUADRO RESUMO — "o que voce vai aprender", logo apos o stepper.
+   Uma linha por micro-habilidade, com barra na cor da operacao. */
+.quadro-resumo { margin: 12pt 0 4pt; border: 1pt solid #D0D6DC; border-radius: 6pt;
+    overflow: hidden; break-inside: avoid; }
+.quadro-resumo-titulo { background: #F5F7F9; font-family: Arial; font-size: 8.5pt;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #3A4654;
+    padding: 7pt 12pt; border-bottom: 1pt solid #E2E7EC; }
+.quadro-resumo-item { display: flex; align-items: stretch; border-bottom: 1pt solid #EEF1F4; }
+.quadro-resumo-item:last-child { border-bottom: none; }
+.quadro-resumo-barra { width: 4pt; flex: 0 0 4pt; }
+.quadro-resumo-texto { padding: 7pt 12pt; font-size: 10pt; line-height: 1.45; color: #3A4654; }
+.quadro-resumo-op { font-family: Arial; font-weight: 700; }
 
 /* BLOCO */
 .bloco { margin-bottom: 22pt; }
@@ -415,8 +432,8 @@ def render_bloco(el, imdir, incluir_gabarito=True, verifdir=None, quebrar_pagina
                 flush(); segments.append(h)
         elif t == "nota_fonte":
             buffer.append(f'<div class="nota-fonte">{md(html_mod.escape(txt(ch)))}</div>')
-        elif t == "micro-habilidade":
-            pass  # ja lido acima via find(); ignorar no loop
+        elif t in ("micro-habilidade", "resumo-aluno"):
+            pass  # lidos via find() (cabecalho do bloco / quadro resumo); ignorar no loop
         else:
             avisar_tag_desconhecida("bloco", t)
     flush()
@@ -437,6 +454,33 @@ def split_nome_capitulo(nome_completo):
             a, b = nome_completo.split(sep, 1)
             return a.strip(), b.strip()
     return "", nome_completo.strip()
+
+def render_quadro_resumo(corpo_el):
+    """Quadro 'O que voce vai aprender' na capa: uma linha por micro-habilidade,
+    com a cor da operacao. O texto vem de <resumo-aluno> (escrito pelo Agente 1);
+    se ausente, faz fallback para a <micro-habilidade> ja existente no bloco."""
+    if corpo_el is None:
+        return ""
+    linhas = []
+    for bl in corpo_el.findall("bloco"):
+        op = bl.get("operacao", "")
+        texto = txt(bl.find("resumo-aluno")) or txt(bl.find("micro-habilidade"))
+        if not texto:
+            continue
+        c = OPERACAO_CORES.get(op, COR_PADRAO)
+        op_h = (f'<span class="quadro-resumo-op" style="color:{c["destaque"]}">'
+                f'{html_mod.escape(op)}</span> — ') if op else ""
+        linhas.append(
+            f'<div class="quadro-resumo-item">'
+            f'<div class="quadro-resumo-barra" style="background:{c["destaque"]}"></div>'
+            f'<div class="quadro-resumo-texto">{op_h}{md(html_mod.escape(texto))}</div>'
+            f'</div>')
+    if not linhas:
+        return ""
+    return ('<div class="quadro-resumo">'
+            '<div class="quadro-resumo-titulo">O que você vai aprender neste capítulo</div>'
+            + "".join(linhas) + '</div>')
+
 
 def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=None):
     meta = meta or {}
@@ -472,9 +516,13 @@ def render_capitulo(xml_path, imdir, incluir_gabarito=True, meta=None, verifdir=
         mapa_html = f'<div class="mapa-progressao">{items}</div>'
 
     pqh = f'<div class="por-que-importa">Por que importa: {html_mod.escape(pq)}</div>' if pq else ""
-    capa = f'<div class="capa-capitulo">{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}{pqh}{mapa_html}</div>'
 
+    # Quadro resumo "o que voce vai aprender", logo apos o stepper (mapa-progressao).
     corpo_el = root.find("corpo")
+    quadro_html = render_quadro_resumo(corpo_el)
+
+    capa = (f'<div class="capa-capitulo">{eyebrow}{numero_h}{nome_h}{hab_h}{perg_h}'
+            f'{pqh}{mapa_html}{quadro_html}</div>')
     corpo = []
     if corpo_el is not None:
         children = list(corpo_el)
@@ -569,58 +617,56 @@ def main():
     p.add_argument("--imagens")
     p.add_argument("--verificacoes",
                    help="Pasta com os JSON das verificacoes externas ({ref}.json).")
-    p.add_argument("--briefing", help="JSON com nomes da unidade e dos capitulos (fora do XML).")
+    p.add_argument("--briefing",
+                   help="JSON com nome/numero/unidade dos capitulos (capa).")
     p.add_argument("--output")
     p.add_argument("--html-only", action="store_true")
-    vg = p.add_mutually_exclusive_group()
+    vg = p.add_mutually_exclusive_group(required=True)
     vg.add_argument("--versao-aluno", action="store_true",
-                    help="Processo do ALUNO: omite gabaritos e respostas modelo.")
+                    help="Sem gabarito/justificativa nem resposta-modelo.")
     vg.add_argument("--versao-professor", action="store_true",
-                    help="Processo do PROFESSOR: inclui gabaritos e respostas modelo.")
+                    help="Com gabarito/justificativa e resposta-modelo.")
     args = p.parse_args()
 
-    if not args.versao_aluno and not args.versao_professor:
-        sys.exit("ERRO: escolha o processo. Use --versao-aluno OU --versao-professor (rode um de cada vez).")
     incluir_gabarito = args.versao_professor
-    versao = "professor" if args.versao_professor else "aluno"
-    versao_label = ("Versao do professor - contem gabaritos (uso interno)"
-                    if incluir_gabarito else "Versao do aluno")
+    versao_label = "Versao do professor" if incluir_gabarito else "Versao do aluno"
+    sufixo = "professor" if incluir_gabarito else "aluno"
 
     if args.xml:
         xml_files = [Path(args.xml)]
-        base = Path(args.xml).with_suffix("")
+        default_out = Path(args.xml).with_suffix(".pdf")
     else:
         xml_files = sorted(Path(args.unidade).glob("*.xml"))
-        if not xml_files: sys.exit(f"Nenhum XML em {args.unidade}")
-        base = Path(args.unidade) / "apostila"
+        if not xml_files:
+            sys.exit(f"Nenhum XML em {args.unidade}")
+        default_out = Path(args.unidade) / "apostila.pdf"
 
-    if args.output:
-        out = Path(args.output)
-    else:
-        out = base.with_name(f"{base.name}-{versao}.pdf")
-    if args.html_only: out = out.with_suffix(".html")
+    out = Path(args.output) if args.output else default_out
+    if not args.output:
+        out = out.with_name(out.stem + f"-{sufixo}" + out.suffix)
+    if args.html_only:
+        out = out.with_suffix(".html")
 
-    brief_path = args.briefing
-    if not brief_path and args.unidade:
-        for cand in Path(args.unidade).resolve().parents:
-            g2 = list(cand.glob("input/**/briefing.json"))
-            if g2:
-                brief_path = str(g2[0]); break
-    meta_por_num, unidade = carregar_briefing(brief_path)
-    if brief_path:
-        print(f"  briefing: {brief_path}")
+    # Briefing: usa --briefing; se ausente e houver --unidade, tenta auto-detectar.
+    briefing_path = args.briefing
+    if not briefing_path and args.unidade:
+        cur = Path(args.unidade).resolve()
+        for _ in range(6):
+            cand = cur / "briefing.json"
+            if cand.exists():
+                briefing_path = str(cand)
+                break
+            cur = cur.parent
+    meta_por_num, _ = carregar_briefing(briefing_path) if briefing_path else ({}, "")
 
     imdir = str(Path(args.imagens).resolve()) if args.imagens else None
     verifdir = str(Path(args.verificacoes).resolve()) if args.verificacoes else None
-    print(f"  >>> PROCESSO: VERSAO DO {versao.upper()} <<<")
-    if verifdir:
-        print(f"  verificacoes: {verifdir}")
+
     caps = []
     for xf in xml_files:
+        print(f"  {xf.name}")
         num = numero_capitulo_do_xml(xf)
-        meta = meta_por_num.get(num, {"numero": (f"Capitulo {num}" if num else ""),
-                                      "nome": "", "unidade": unidade})
-        print(f"  {xf.name}  -> {meta.get('numero','?')}")
+        meta = meta_por_num.get(num) if num else None
         caps.append(render_capitulo(xf, imdir, incluir_gabarito, meta, verifdir))
 
     html = build_html(caps, versao_label)
@@ -629,7 +675,7 @@ def main():
         print(f"HTML: {out}")
     else:
         weasyprint.HTML(string=html).write_pdf(str(out))
-        print(f"PDF ({versao}): {out}")
+        print(f"PDF: {out}")
 
 
 if __name__ == "__main__":

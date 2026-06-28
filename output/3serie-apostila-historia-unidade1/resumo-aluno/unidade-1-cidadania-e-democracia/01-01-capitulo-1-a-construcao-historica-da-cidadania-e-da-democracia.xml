@@ -1,0 +1,25 @@
+<!--
+  RESUMO-ALUNO — Capítulo 01-01: A construção histórica da cidadania e da democracia
+  Gerado pelo Agente Resumo-Aluno a partir das micro-habilidades do XML formatado.
+  Cole cada <resumo-aluno> como filho do <bloco> correspondente, logo após a <micro-habilidade>.
+-->
+
+<!-- bloco-1 | operacao="Definir" -->
+<!-- micro-habilidade: Definir cidadania e democracia como formas históricas de organização política e social -->
+<resumo-aluno>Você vai entender o que são cidadania e democracia, por que esses conceitos não são naturais e como cada sociedade define quem pertence à comunidade política e quem fica de fora.</resumo-aluno>
+
+<!-- bloco-2 | operacao="Sequenciar" -->
+<!-- micro-habilidade: Sequenciar processos históricos de construção da cidadania e da democracia, da Antiguidade aos Estados modernos -->
+<resumo-aluno>Você vai colocar em ordem os principais momentos da construção histórica da cidadania e da democracia, percebendo como cada etapa ampliou direitos e por que algumas exclusões persistiram ao longo do tempo.</resumo-aluno>
+
+<!-- bloco-3 | operacao="Comparar" -->
+<!-- micro-habilidade: Comparar diferentes concepções de cidadania e democracia ao longo da história -->
+<resumo-aluno>Você vai comparar diferentes formas de organizar a participação política ao longo da história, identificando o que muda na relação entre indivíduo e comunidade e quais critérios de inclusão se transformam.</resumo-aluno>
+
+<!-- bloco-4 | operacao="Reconhecer perspectiva" -->
+<!-- micro-habilidade: Reconhecer perspectivas teóricas distintas sobre os limites e a exclusão social na conquista da cidadania -->
+<resumo-aluno>Você vai perceber que existem interpretações diferentes sobre como a cidadania foi conquistada, identificando de que ponto de vista cada uma parte e o que cada uma revela ou deixa de mostrar.</resumo-aluno>
+
+<!-- bloco-5 | operacao="Aplicar" -->
+<!-- micro-habilidade: Aplicar os conceitos de cidadania e democracia à análise de situações históricas de exclusão e conquista de direitos -->
+<resumo-aluno>Você vai usar os conceitos de cidadania e democracia para analisar uma situação concreta, distinguindo entre os direitos garantidos por lei e o que esses direitos realmente significam na prática das pessoas.</resumo-aluno>

@@ -1,0 +1,130 @@
+2026-06-24 12:03:46,232 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-24 12:03:46,237 [INFO] __main__: Apostila : 3serie-apostila-historia-unidade1
+2026-06-24 12:03:46,237 [INFO] __main__: Agentes  : 1, 2, 3, 4, 5
+2026-06-24 12:03:46,238 [INFO] __main__: Workers  : 3
+2026-06-24 12:03:46,238 [INFO] __main__: Forçar   : não
+2026-06-24 12:03:46,238 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-24 12:03:46,241 [INFO] __main__: CSV carregado: 2 capítulos (formato com andaime)
+2026-06-24 12:03:46,241 [INFO] __main__: Unidades : 1
+2026-06-24 12:03:46,241 [INFO] __main__: Capítulos: 2
+2026-06-24 12:03:46,245 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-24 12:03:46,245 [INFO] __main__: Unidade 1: Unidade 1 — Cidadania e Democracia
+2026-06-24 12:03:46,245 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+2026-06-24 12:03:46,247 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-24 12:03:46,247 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — A Construção Histórica da Cidadania e da Democracia  [Agente 1]
+2026-06-24 12:03:46,247 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-24 12:03:46,334 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 1: Capítulo 1 — A Construção Histórica da Cidadania e da Democracia
+2026-06-24 12:03:49,966 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:06:48,952 [INFO] __main__:     →  write_file: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:06:48,962 [INFO] __main__:     ✓  Salvo: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:06:50,891 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:07:00,664 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=6797 cache_create=21998 cache_read=15729
+2026-06-24 12:07:00,666 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-24 12:07:00,667 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Democracia e Participação na Sociedade Contemporânea  [Agente 1]
+2026-06-24 12:07:00,667 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-24 12:07:00,682 [INFO] __main__: 
+[Agente 1] Unidade 1 | Capítulo 2: Capítulo 2 — Democracia e Participação na Sociedade Contemporânea
+2026-06-24 12:07:02,810 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:37,601 [INFO] __main__:     →  write_file: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:09:37,606 [INFO] __main__:     ✓  Salvo: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:09:39,542 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:50,316 [INFO] __main__:   ✓  Agente 1 concluiu (2 iteração(ões)) | in=3 out=9256 cache_create=16829 cache_read=24061
+2026-06-24 12:09:50,322 [INFO] __main__: 
+[Fase 2] Processando 2 capítulo(s) em paralelo (3 workers)…
+2026-06-24 12:09:51,594 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-24 12:09:51,595 [INFO] __main__: Cap. 1/2  [1.1] Capítulo 1 — A Construção Histórica da Cidadania e da Democracia  [estágios 2–5]
+2026-06-24 12:09:51,595 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-24 12:09:51,615 [INFO] __main__: 
+──────────────────────────────────────────────────────────────────────
+2026-06-24 12:09:51,617 [INFO] __main__: Cap. 2/2  [1.2] Capítulo 2 — Democracia e Participação na Sociedade Contemporânea  [estágios 2–5]
+2026-06-24 12:09:51,618 [INFO] __main__: ──────────────────────────────────────────────────────────────────────
+2026-06-24 12:09:51,626 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 1: Capítulo 1 — A Construção Histórica da Cidadania e da Democracia
+2026-06-24 12:09:51,626 [INFO] __main__: 
+[Agente 2] Unidade 1 | Capítulo 2: Capítulo 2 — Democracia e Participação na Sociedade Contemporânea
+2026-06-24 12:09:53,685 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:54,266 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:55,927 [INFO] __main__:     →  read_file: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:09:55,933 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-24 12:09:56,802 [INFO] __main__:     →  read_file: output/3serie-apostila-historia-unidade1/core/unidade-1-cidadania-e-democracia/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:09:56,812 [INFO] __main__:     →  read_file: contexto/disciplinas/historia.md
+2026-06-24 12:09:57,757 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:58,640 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:09:59,056 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-24 12:10:00,005 [INFO] __main__:     →  read_file: skills/agente2-skill.md
+2026-06-24 12:10:02,014 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:10:02,454 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:12:25,478 [INFO] __main__:     →  write_file: output/3serie-apostila-historia-unidade1/texto/unidade-1-cidadania-e-democracia/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:12:25,485 [INFO] __main__:     ✓  Salvo: output/3serie-apostila-historia-unidade1/texto/unidade-1-cidadania-e-democracia/01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:12:31,517 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:12:45,712 [INFO] __main__:     →  write_file: output/3serie-apostila-historia-unidade1/texto/unidade-1-cidadania-e-democracia/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:12:45,718 [INFO] __main__:     ✓  Salvo: output/3serie-apostila-historia-unidade1/texto/unidade-1-cidadania-e-democracia/01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:12:47,921 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:12:52,160 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=8226 cache_create=44264 cache_read=84637
+2026-06-24 12:12:52,164 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 1: Capítulo 1 — A Construção Histórica da Cidadania e da Democracia
+2026-06-24 12:12:52,174 [INFO] normalizador: [Normalizador] Modificado: 01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md (6 alteracao(oes))
+2026-06-24 12:12:52,174 [INFO] __main__:     ✓ Normalizações aplicadas (6 alteração(ões))
+2026-06-24 12:12:52,174 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-24 12:12:52,174 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-24 12:12:52,175 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-24 12:12:52,175 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-24 12:12:52,175 [INFO] __main__:         · Adicionado ref=resultado ao AUTOR solto apos RESULTADO
+2026-06-24 12:12:52,176 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': Como os conceitos de cidadania e democracia foram construídos historicamente e de que forma essa construção revela tanto conquistas quanto exclusões no acesso aos direitos políticos, civis e sociais?
+2026-06-24 12:12:52,204 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 1: Capítulo 1 — A Construção Histórica da Cidadania e da Democracia
+2026-06-24 12:12:53,294 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:12:55,613 [INFO] __main__:     →  read_file: output\3serie-apostila-historia-unidade1\texto\unidade-1-cidadania-e-democracia\01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md
+2026-06-24 12:12:57,006 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:13:01,883 [INFO] __main__:   ✓  Agente 2 concluiu (4 iteração(ões)) | in=5 out=8985 cache_create=48553 cache_read=92708
+2026-06-24 12:13:01,885 [INFO] __main__: 
+[Agente 3] Unidade 1 | Capítulo 2: Capítulo 2 — Democracia e Participação na Sociedade Contemporânea
+2026-06-24 12:13:01,889 [INFO] normalizador: [Normalizador] Modificado: 01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md (7 alteracao(oes))
+2026-06-24 12:13:01,890 [INFO] __main__:     ✓ Normalizações aplicadas (7 alteração(ões))
+2026-06-24 12:13:01,890 [INFO] __main__:         · Adicionado ref=definicao ao AUTOR solto apos DEFINICAO
+2026-06-24 12:13:01,890 [INFO] __main__:         · Adicionado ref=sequencia ao AUTOR solto apos SEQUENCIA
+2026-06-24 12:13:01,891 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-24 12:13:01,891 [INFO] __main__:         · Adicionado ref=conclusao-parcial ao AUTOR solto apos CONCLUSAO_PARCIAL
+2026-06-24 12:13:01,892 [INFO] __main__:         · Adicionado AVISO para tipo desconhecido: CASO
+2026-06-24 12:13:01,892 [INFO] __main__:         · Adicionado ref=resultado ao AUTOR solto apos RESULTADO
+2026-06-24 12:13:01,893 [INFO] __main__:         · Injetado H2 de titulo a partir de 'Pergunta do capitulo': De que modo os mecanismos contemporâneos de participação política enfrentam ou reproduzem as desigualdades que limitam o exercício pleno da cidadania democrática?
+2026-06-24 12:13:01,926 [INFO] __main__: 
+[Agente 4] Unidade 1 | Capítulo 2: Capítulo 2 — Democracia e Participação na Sociedade Contemporânea
+2026-06-24 12:13:04,183 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:13:05,621 [INFO] __main__:     →  read_file: output\3serie-apostila-historia-unidade1\texto\unidade-1-cidadania-e-democracia\01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md
+2026-06-24 12:13:07,045 [INFO] httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-06-24 12:13:22,847 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=1925 cache_create=16901 cache_read=9962
+2026-06-24 12:13:22,855 [INFO] __main__:     ✓ 8 troca(s) aplicada(s) pelo Agente 4
+2026-06-24 12:13:22,856 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 1: Capítulo 1 — A Construção Histórica da Cidadania e da Democracia
+2026-06-24 12:13:22,871 [INFO] verificador: [Verificador] 0 ponto(s) de verificação identificado(s) em 01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.md (sem custo de API)
+2026-06-24 12:13:22,871 [INFO] __main__:     ✓ Pontos de verificação identificados: 0 seção(ões) | aplicar_agora=não (insumo externo — sem custo de API)
+2026-06-24 12:13:22,921 [INFO] formatador: [Formatador] Salvo: 01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.xml (5 blocos, 2968 palavras)
+2026-06-24 12:13:22,922 [INFO] __main__:     ✓ XML gerado: 01-01-capitulo-1-a-construcao-historica-da-cidadania-e-da-democracia.xml
+2026-06-24 12:15:29,068 [INFO] __main__:   ✓  Agente 4 concluiu (2 iteração(ões)) | in=3 out=9304 cache_create=16804 cache_read=13919
+2026-06-24 12:15:29,081 [INFO] __main__:     ✓ 27 troca(s) aplicada(s) pelo Agente 4
+2026-06-24 12:15:29,082 [INFO] __main__: 
+[Agente 5] Unidade 1 | Capítulo 2: Capítulo 2 — Democracia e Participação na Sociedade Contemporânea
+2026-06-24 12:15:29,125 [INFO] verificador: [Verificador] 5 ponto(s) de verificação identificado(s) em 01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.md (sem custo de API)
+2026-06-24 12:15:29,125 [INFO] __main__:     ✓ Pontos de verificação identificados: 5 seção(ões) | aplicar_agora=sim (insumo externo — sem custo de API)
+2026-06-24 12:15:29,168 [INFO] formatador: [Formatador] Salvo: 01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.xml (5 blocos, 3562 palavras)
+2026-06-24 12:15:29,169 [INFO] __main__:     ✓ XML gerado: 01-02-capitulo-2-democracia-e-participacao-na-sociedade-contemporanea.xml
+2026-06-24 12:15:29,202 [INFO] __main__: USAGE TOTAL [3serie-apostila-historia-unidade1] — in=22 out=44493 cache_create=165349 cache_read=241016
+2026-06-24 12:15:29,203 [INFO] __main__: 
+══════════════════════════════════════════════════════════════════════
+2026-06-24 12:15:29,203 [INFO] __main__: Pipeline concluído.
+2026-06-24 12:15:29,203 [INFO] __main__: Outputs em: output/3serie-apostila-historia-unidade1/
+2026-06-24 12:15:29,204 [INFO] __main__: Logs em: C:\Users\Roberto\Desktop\IPPI\logs\pipeline_20260624_120345.log
+2026-06-24 12:15:29,204 [INFO] __main__: CSV de usage: C:\Users\Roberto\Desktop\IPPI\logs\usage_20260624_120345.csv
+2026-06-24 12:15:29,204 [INFO] __main__: ══════════════════════════════════════════════════════════════════════
+
+2026-06-24 12:15:30,546 [INFO] __main__: [Imagens] Lista de imagens salva em: C:\Users\Roberto\Desktop\IPPI\output\3serie-apostila-historia-unidade1\IMAGENS-NECESSARIAS.txt
+2026-06-24 12:15:30,547 [INFO] __main__: [Imagens] 5 imagem(ns) em 2 capítulo(s).
+2026-06-24 12:15:30,554 [INFO] __main__: [Verif] Lista de verificações salva em: C:\Users\Roberto\Desktop\IPPI\output\3serie-apostila-historia-unidade1\VERIFICACOES-NECESSARIAS.txt
+2026-06-24 12:15:30,554 [INFO] __main__: [Verif] 6 verificação(ões) em 1 capítulo(s).

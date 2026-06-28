@@ -1,0 +1,7 @@
+timestamp,apostila,agente,capitulo,iteracoes,input_tokens,output_tokens,cache_creation_tokens,cache_read_tokens
+2026-06-28T11:14:40,3serie-apostila-historia-unidade2,Agente 1,"1.1 Capítulo 1 — Comunicação, cultura e poder",2,3,6869,21869,15508
+2026-06-28T11:17:04,3serie-apostila-historia-unidade2,Agente 1,"1.2 Capítulo 2 — Mídia, tecnologia e cidadania no século XXI",2,3,7530,14913,23853
+2026-06-28T11:19:32,3serie-apostila-historia-unidade2,Agente 2,"1.1 Capítulo 1 — Comunicação, cultura e poder",3,4,7045,33631,46855
+2026-06-28T11:20:14,3serie-apostila-historia-unidade2,Agente 2,"1.2 Capítulo 2 — Mídia, tecnologia e cidadania no século XXI",4,5,8879,46449,88417
+2026-06-28T11:20:27,3serie-apostila-historia-unidade2,Agente 4,"1.1 Capítulo 1 — Comunicação, cultura e poder",2,3,3111,15240,9125
+2026-06-28T11:21:41,3serie-apostila-historia-unidade2,Agente 4,"1.2 Capítulo 2 — Mídia, tecnologia e cidadania no século XXI",2,3,5485,15358,13196

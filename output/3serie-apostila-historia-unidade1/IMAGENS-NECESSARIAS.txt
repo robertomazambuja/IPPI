@@ -1,0 +1,35 @@
+IMAGENS NECESSÁRIAS — Apostila: 3serie-apostila-historia-unidade1
+Gerado em: 24/06/2026 12:15
+
+=================================================================
+INSTRUÇÕES
+=================================================================
+1. Para cada imagem listada abaixo, encontre ou crie o visual descrito.
+2. Nomeie o arquivo EXATAMENTE como indicado (use .jpg, .png ou .pdf).
+3. Coloque todos os arquivos em uma pasta chamada "imagens".
+4. Envie a pasta "imagens" para o responsável técnico.
+=================================================================
+
+CAPÍTULO 01-01 — Como os conceitos de cidadania e democracia foram construídos historicamente e de que forma essa construção revela tanto conquistas quanto exclusões no acesso aos direitos políticos, civis e sociais?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-01-01.jpg
+  O QUE MOSTRAR   : Linha do tempo horizontal com 6 marcos: (508 a.C.) Reformas de Clístenes em Atenas → (509 a.C. a 27 a.C.) República Romana → (1689) Bill of Rights na Inglaterra → (1776) Independência dos EUA → (1789) Revolução Francesa → (séculos XIX–XX) Ampliação do sufrágio (Nova Zelândia 1893, Brasil 1932)
+
+  NOME DO ARQUIVO : fig-01-01-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Antiguidade ateniense / Modernidade liberal) e 3 linhas (Forma de participação: direta na assembleia vs. indireta por representantes / Critérios de inclusão: nascimento e status vs. propriedade, raça e sexo, com ampliação gradual / Relação indivíduo-comunidade: cidadão subordinado à pólis vs. indivíduo com direitos naturais anteriores ao Estado)
+
+
+CAPÍTULO 01-02 — De que modo os mecanismos contemporâneos de participação política enfrentam ou reproduzem as desigualdades que limitam o exercício pleno da cidadania democrática?
+-----------------------------------------------------------------
+  NOME DO ARQUIVO : fig-01-02-01.jpg
+  O QUE MOSTRAR   : Linha do tempo com 5 marcos: Diretas Já (1983–1984) → Constituição de 1988 (5 de outubro de 1988) → MST e ocupações de terra (anos 1990) → Lei da Ficha Limpa (2010) → Jornadas de Junho (2013)
+
+  NOME DO ARQUIVO : fig-01-02-02.jpg
+  O QUE MOSTRAR   : Quadro comparativo com 2 colunas (Participação institucional / Participação em rede) e 4 linhas (Organização e liderança / Alcance e velocidade / Capacidade de produzir decisões vinculantes / Controle social e prestação de contas), com exemplos: Conselho Nacional de Saúde e Occupy Wall Street
+
+  NOME DO ARQUIVO : fig-01-02-03.jpg
+  O QUE MOSTRAR   : Gráfico de barras comparativo com 3 grupos: proporção de pretos e pardos na população brasileira (55,5%), proporção nas candidaturas à Câmara (49%) e proporção nas cadeiras eleitas (26%), eleições de 2022
+
+=================================================================
+TOTAL: 5 imagem(ns) necessária(s)
+=================================================================
